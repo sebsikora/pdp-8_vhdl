@@ -1,0 +1,189 @@
+# do 12_bit_register_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /home/sebsikora/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /home/sebsikora/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity NAND_3_gate
+# -- Compiling architecture rtl of NAND_3_gate
+# -- Compiling entity NAND_gate
+# -- Compiling architecture rtl of NAND_gate
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ms_jk_ff
+# -- Compiling architecture gates of ms_jk_ff
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/12_bit_register/register_12_bit_split.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity register_12_bit_split
+# -- Compiling architecture rtl of register_12_bit_split
+# 
+vsim -voptargs=+acc work.register_12_bit_split
+# vsim -voptargs=+acc work.register_12_bit_split 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.register_12_bit_split(rtl)
+# Loading work.ms_jk_ff(gates)
+# Loading work.nand_3_gate(rtl)
+# Loading work.nand_gate(rtl)
+wave create -driver freeze -pattern constant -value 00000 -range 4 0 -starttime 0ns -endtime 200ns sim:/register_12_bit_split/input_lo
+wave modify -driver freeze -pattern counter -startvalue 00000 -endvalue 11111 -type Range -direction Up -period 200ns -step 1 -repeat forever -range 4 0 -starttime 200ns -endtime 2000ns Edit:/register_12_bit_split/input_lo
+# Can't move the Now cursor.
+wave create -driver freeze -pattern constant -value 0000000 -range 6 0 -starttime 0ns -endtime 200ns sim:/register_12_bit_split/input_hi
+wave modify -driver freeze -pattern counter -startvalue 0000000 -endvalue 1111111 -type Range -direction Up -period 200ns -step 1 -repeat forever -range 6 0 -starttime 200ns -endtime 2000ns Edit:/register_12_bit_split/input_hi
+wave create -driver freeze -pattern constant -value 1 -starttime 0ns -endtime 2000ns sim:/register_12_bit_split/not_reset
+wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 200ns Edit:/register_12_bit_split/not_reset
+wave create -driver freeze -pattern clock -initialvalue 0 -period 200ns -dutycycle 50 -starttime 0ns -endtime 2000ns sim:/register_12_bit_split/clk
+wave create -driver freeze -pattern constant -value 1 -starttime 0ns -endtime 2000ns sim:/register_12_bit_split/load_hi
+wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 200ns Edit:/register_12_bit_split/load_hi
+wave modify -driver freeze -pattern constant -value 0 -starttime 1600ns -endtime 1800ns Edit:/register_12_bit_split/load_hi
+wave create -driver freeze -pattern constant -value 1 -starttime 0ns -endtime 2000ns sim:/register_12_bit_split/load_lo
+wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 200ns Edit:/register_12_bit_split/load_lo
+wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 2000ns sim:/register_12_bit_split/clear_hi
+wave modify -driver freeze -pattern constant -value 1 -starttime 1600ns -endtime 1800ns Edit:/register_12_bit_split/clear_hi
+wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 2000ns sim:/register_12_bit_split/clear_lo
+add wave  \
+sim:/register_12_bit_split/output_hi
+add wave  \
+sim:/register_12_bit_split/output_lo
+restart
+run
+run
+restart
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/12_bit_register/simulation/modelsim/register_12_bit_split_test_wave.do
+wave editwrite -file /home/sebsikora/altera/projects/pdp-8/12_bit_register/simulation/modelsim/register_12_bit_split_test_wave.do -append
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+run
+run
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+wave modify -driver freeze -pattern counter -startvalue 00000 -endvalue 11111 -type Range -direction Up -period 200ns -step 1 -repeat forever -range 4 0 -starttime 200ns -endtime 2200ns Edit:/register_12_bit_split/input_lo
+wave modify -driver freeze -pattern counter -startvalue 0000000 -endvalue 1111111 -type Range -direction Up -period 200ns -step 1 -repeat forever -range 6 0 -starttime 200ns -endtime 2200ns Edit:/register_12_bit_split/input_hi
+wave modify -driver freeze -pattern constant -value 1 -starttime 200ns -endtime 2200ns Edit:/register_12_bit_split/not_reset
+wave modify -driver freeze -pattern clock -initialvalue 0 -period 200ns -dutycycle 50 -starttime 0ns -endtime 2200ns Edit:/register_12_bit_split/clk
+wave modify -driver freeze -pattern constant -value 1 -starttime 2000ns -endtime 2200ns Edit:/register_12_bit_split/load_hi
+wave modify -driver freeze -pattern constant -value 0 -starttime 2000ns -endtime 2200ns Edit:/register_12_bit_split/load_lo
+wave modify -driver freeze -pattern constant -value 0 -starttime 2000ns -endtime 2200ns Edit:/register_12_bit_split/clear_hi
+wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 2200ns Edit:/register_12_bit_split/clear_lo
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/12_bit_register/simulation/modelsim/register_12_bit_split_test_wave.do
+wave editwrite -file /home/sebsikora/altera/projects/pdp-8/12_bit_register/simulation/modelsim/register_12_bit_split_test_wave.do -append

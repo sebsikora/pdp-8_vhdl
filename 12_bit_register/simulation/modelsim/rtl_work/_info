@@ -1,0 +1,145 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/sebsikora/altera/projects/pdp-8/12_bit_register/simulation/modelsim
+Ems_jk_ff
+Z1 w1483460033
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 d/home/sebsikora/altera/projects/pdp-8/12_bit_register/simulation/modelsim
+Z5 8/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd
+Z6 F/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd
+l0
+L5
+V]IeQOc`NS8zUgmDdNA0FN0
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1483465038.310471
+Z9 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd|
+Z10 !s107 /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 _T@d>kQcQ2d2TY@AYYDZ`2
+!i10b 1
+Agates
+R2
+R3
+DEx4 work 8 ms_jk_ff 0 22 ]IeQOc`NS8zUgmDdNA0FN0
+l42
+L15
+VXDYIG4Zm^TF=:9PP`B?6`1
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 c:L``LDONKL`SD=6IAB:72
+!i10b 1
+Enand_3_gate
+Z13 w1483457791
+R2
+R3
+R4
+Z14 8/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd
+Z15 F/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd
+l0
+L6
+VhPLDeZMmigm5a_I>3bzSO2
+R7
+31
+Z16 !s108 1483465038.276243
+Z17 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd|
+Z18 !s107 /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd|
+R11
+R12
+!s100 [zEa0ICkC5kKTLiNeHNdX3
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 11 nand_3_gate 0 22 hPLDeZMmigm5a_I>3bzSO2
+l15
+L14
+VGhE7VUafLYQHX<;UnJYKK2
+R7
+31
+R16
+R17
+R18
+R11
+R12
+!s100 T@3DIG3J6`:=6HoBP`nl80
+!i10b 1
+Enand_gate
+R13
+R2
+R3
+R4
+R14
+R15
+l0
+L25
+VHfnD41a:TQ[MMH7PM@eDU1
+R7
+31
+R16
+R17
+R18
+R11
+R12
+!s100 XA7[cDHVX2oD9[iLW<?AX0
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 9 nand_gate 0 22 HfnD41a:TQ[MMH7PM@eDU1
+l33
+L32
+VVf@VKI3K3QFBj_E`?YWn80
+R7
+31
+R16
+R17
+R18
+R11
+R12
+!s100 C]G3INn=CA`PcQJ81Afoa1
+!i10b 1
+Eregister_12_bit_split
+Z19 w1483464407
+R2
+R3
+R4
+Z20 8/home/sebsikora/altera/projects/pdp-8/12_bit_register/register_12_bit_split.vhd
+Z21 F/home/sebsikora/altera/projects/pdp-8/12_bit_register/register_12_bit_split.vhd
+l0
+L4
+V21_J_BiN=2a>h8VFV;F3o1
+!s100 zHS6^ng4V39<Y[dB0D`^F1
+R7
+31
+!i10b 1
+Z22 !s108 1483465038.338988
+Z23 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/12_bit_register/register_12_bit_split.vhd|
+Z24 !s107 /home/sebsikora/altera/projects/pdp-8/12_bit_register/register_12_bit_split.vhd|
+R11
+R12
+Artl
+R2
+R3
+DEx4 work 21 register_12_bit_split 0 22 21_J_BiN=2a>h8VFV;F3o1
+l35
+L18
+V3i]Ae?V@f[LiY6F=nGM=O3
+!s100 9l[O1b?@Ik4=Vn?djVc1c3
+R7
+31
+!i10b 1
+R22
+R23
+R24
+R11
+R12

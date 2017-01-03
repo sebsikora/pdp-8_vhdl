@@ -1,0 +1,111 @@
+|alu_clear
+input[0] => AND_gate:and_0.inputB
+input[1] => AND_gate:and_1.inputB
+input[2] => AND_gate:and_2.inputB
+input[3] => AND_gate:and_3.inputB
+input[4] => AND_gate:and_4.inputB
+input[5] => AND_gate:and_5.inputB
+input[6] => AND_gate:and_6.inputB
+input[7] => AND_gate:and_7.inputB
+input[8] => AND_gate:and_8.inputB
+input[9] => AND_gate:and_9.inputB
+input[10] => AND_gate:and_10.inputB
+input[11] => AND_gate:and_11.inputB
+output[0] <= AND_gate:and_0.output
+output[1] <= AND_gate:and_1.output
+output[2] <= AND_gate:and_2.output
+output[3] <= AND_gate:and_3.output
+output[4] <= AND_gate:and_4.output
+output[5] <= AND_gate:and_5.output
+output[6] <= AND_gate:and_6.output
+output[7] <= AND_gate:and_7.output
+output[8] <= AND_gate:and_8.output
+output[9] <= AND_gate:and_9.output
+output[10] <= AND_gate:and_10.output
+output[11] <= AND_gate:and_11.output
+alu_clear => AND_gate:and_0.inputA
+alu_clear => AND_gate:and_1.inputA
+alu_clear => AND_gate:and_2.inputA
+alu_clear => AND_gate:and_3.inputA
+alu_clear => AND_gate:and_4.inputA
+alu_clear => AND_gate:and_5.inputA
+alu_clear => AND_gate:and_6.inputA
+alu_clear => AND_gate:and_7.inputA
+alu_clear => AND_gate:and_8.inputA
+alu_clear => AND_gate:and_9.inputA
+alu_clear => AND_gate:and_10.inputA
+alu_clear => AND_gate:and_11.inputA
+
+
+|alu_clear|AND_gate:and_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_clear|AND_gate:and_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_clear|AND_gate:and_2
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_clear|AND_gate:and_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_clear|AND_gate:and_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_clear|AND_gate:and_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_clear|AND_gate:and_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_clear|AND_gate:and_7
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_clear|AND_gate:and_8
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_clear|AND_gate:and_9
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_clear|AND_gate:and_10
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_clear|AND_gate:and_11
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,35 @@
+-- 3 input NAND gate
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity NAND_3_gate is
+	port( inputA: 	in std_logic;
+			inputB:	in std_logic;
+			inputC:	in std_logic;
+			output:	out std_logic
+	);
+end NAND_3_gate;
+
+architecture rtl of NAND_3_gate is
+begin
+	output <= not (inputA and inputB and inputC);
+end rtl;
+
+
+-- NAND gate
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity NAND_gate is
+	port( inputA: 	in std_logic;
+			inputB:	in std_logic;
+			output:	out std_logic
+	);
+end NAND_gate;
+
+architecture rtl of NAND_gate is
+begin
+	output <= not (inputA and inputB);
+end rtl;

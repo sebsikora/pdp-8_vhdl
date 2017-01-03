@@ -1,0 +1,68 @@
+# do alu_shifter_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /home/sebsikora/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /home/sebsikora/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_shifter/alu_shifter.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_shifter
+# -- Compiling architecture rtl of alu_shifter
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity NAND_3_gate
+# -- Compiling architecture rtl of NAND_3_gate
+# -- Compiling entity NAND_gate
+# -- Compiling architecture rtl of NAND_gate
+# -- Compiling entity AND_gate
+# -- Compiling architecture rtl of AND_gate
+# -- Compiling entity OR_3_gate
+# -- Compiling architecture rtl of OR_3_gate
+# -- Compiling entity XOR_gate
+# -- Compiling architecture rtl of XOR_gate
+# 
+vsim -voptargs=+acc work.alu_shifter
+# vsim -voptargs=+acc work.alu_shifter 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.alu_shifter(rtl)
+# Loading work.and_gate(rtl)
+# Loading work.or_3_gate(rtl)
+wave create -driver freeze -pattern constant -value 011111111110 -range 11 0 -starttime 0ns -endtime 1000ns sim:/alu_shifter/input
+wave create -driver freeze -pattern constant -value 1 -starttime 0ns -endtime 1000ns sim:/alu_shifter/link_input
+wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 1000ns sim:/alu_shifter/alu_rot_1
+wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 1000ns sim:/alu_shifter/alu_rot_2
+wave create -driver freeze -pattern constant -value 1 -starttime 333ns -endtime 666ns sim:/alu_shifter/alu_rot_1
+# /alu_shifter/alu_rot_1 already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+wave modify -driver freeze -pattern constant -value 1 -starttime 333ns -endtime 666ns Edit:/alu_shifter/alu_rot_1
+wave modify -driver freeze -pattern constant -value 1 -starttime 666ns -endtime 1000ns Edit:/alu_shifter/alu_rot_2
+add wave  \
+sim:/alu_shifter/output
+add wave  \
+sim:/alu_shifter/link_output
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/alu_shifter/simulation/modelsim/alu_shifter_test_wave.do
+wave editwrite -file /home/sebsikora/altera/projects/pdp-8/alu_shifter/simulation/modelsim/alu_shifter_test_wave.do -append
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run

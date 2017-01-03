@@ -1,0 +1,498 @@
+|alu_inc
+input[0] => AND_gate:and_0.inputA
+input[0] => XOR_gate:xor_0.inputA
+input[1] => AND_gate:and_1.inputA
+input[1] => XOR_gate:xor_1.inputA
+input[2] => AND_gate:and_2.inputA
+input[2] => XOR_gate:xor_2.inputA
+input[3] => AND_gate:and_3.inputA
+input[3] => XOR_gate:xor_3.inputA
+input[4] => AND_gate:and_4.inputA
+input[4] => XOR_gate:xor_4.inputA
+input[5] => AND_gate:and_5.inputA
+input[5] => XOR_gate:xor_5.inputA
+input[6] => AND_gate:and_6.inputA
+input[6] => XOR_gate:xor_6.inputA
+input[7] => AND_gate:and_7.inputA
+input[7] => XOR_gate:xor_7.inputA
+input[8] => AND_gate:and_8.inputA
+input[8] => XOR_gate:xor_8.inputA
+input[9] => AND_gate:and_9.inputA
+input[9] => XOR_gate:xor_9.inputA
+input[10] => AND_gate:and_10.inputA
+input[10] => XOR_gate:xor_10.inputA
+input[11] => AND_gate:and_11.inputA
+input[11] => XOR_gate:xor_11.inputA
+output[0] <= XOR_gate:xor_0.output
+output[1] <= XOR_gate:xor_1.output
+output[2] <= XOR_gate:xor_2.output
+output[3] <= XOR_gate:xor_3.output
+output[4] <= XOR_gate:xor_4.output
+output[5] <= XOR_gate:xor_5.output
+output[6] <= XOR_gate:xor_6.output
+output[7] <= XOR_gate:xor_7.output
+output[8] <= XOR_gate:xor_8.output
+output[9] <= XOR_gate:xor_9.output
+output[10] <= XOR_gate:xor_10.output
+output[11] <= XOR_gate:xor_11.output
+alu_inc => AND_gate:and_0.inputB
+alu_inc => XOR_gate:xor_0.inputB
+carry_out <= AND_gate:and_11.output
+
+
+|alu_inc|AND_gate:and_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|AND_gate:and_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|AND_gate:and_2
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|AND_gate:and_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|AND_gate:and_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|AND_gate:and_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|AND_gate:and_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|AND_gate:and_7
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|AND_gate:and_8
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|AND_gate:and_9
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|AND_gate:and_10
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|AND_gate:and_11
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_0
+inputA => NAND_gate:nand_0.inputA
+inputA => NAND_gate:nand_1.inputA
+inputB => NAND_gate:nand_0.inputB
+inputB => NAND_gate:nand_2.inputB
+output <= NAND_gate:nand_3.output
+
+
+|alu_inc|XOR_gate:xor_0|NAND_gate:nand_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_0|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_0|NAND_gate:nand_2
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_0|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_1
+inputA => NAND_gate:nand_0.inputA
+inputA => NAND_gate:nand_1.inputA
+inputB => NAND_gate:nand_0.inputB
+inputB => NAND_gate:nand_2.inputB
+output <= NAND_gate:nand_3.output
+
+
+|alu_inc|XOR_gate:xor_1|NAND_gate:nand_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_1|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_1|NAND_gate:nand_2
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_1|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_2
+inputA => NAND_gate:nand_0.inputA
+inputA => NAND_gate:nand_1.inputA
+inputB => NAND_gate:nand_0.inputB
+inputB => NAND_gate:nand_2.inputB
+output <= NAND_gate:nand_3.output
+
+
+|alu_inc|XOR_gate:xor_2|NAND_gate:nand_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_2|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_2|NAND_gate:nand_2
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_2|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_3
+inputA => NAND_gate:nand_0.inputA
+inputA => NAND_gate:nand_1.inputA
+inputB => NAND_gate:nand_0.inputB
+inputB => NAND_gate:nand_2.inputB
+output <= NAND_gate:nand_3.output
+
+
+|alu_inc|XOR_gate:xor_3|NAND_gate:nand_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_3|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_3|NAND_gate:nand_2
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_3|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_4
+inputA => NAND_gate:nand_0.inputA
+inputA => NAND_gate:nand_1.inputA
+inputB => NAND_gate:nand_0.inputB
+inputB => NAND_gate:nand_2.inputB
+output <= NAND_gate:nand_3.output
+
+
+|alu_inc|XOR_gate:xor_4|NAND_gate:nand_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_4|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_4|NAND_gate:nand_2
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_4|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_5
+inputA => NAND_gate:nand_0.inputA
+inputA => NAND_gate:nand_1.inputA
+inputB => NAND_gate:nand_0.inputB
+inputB => NAND_gate:nand_2.inputB
+output <= NAND_gate:nand_3.output
+
+
+|alu_inc|XOR_gate:xor_5|NAND_gate:nand_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_5|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_5|NAND_gate:nand_2
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_5|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_6
+inputA => NAND_gate:nand_0.inputA
+inputA => NAND_gate:nand_1.inputA
+inputB => NAND_gate:nand_0.inputB
+inputB => NAND_gate:nand_2.inputB
+output <= NAND_gate:nand_3.output
+
+
+|alu_inc|XOR_gate:xor_6|NAND_gate:nand_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_6|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_6|NAND_gate:nand_2
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_6|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_7
+inputA => NAND_gate:nand_0.inputA
+inputA => NAND_gate:nand_1.inputA
+inputB => NAND_gate:nand_0.inputB
+inputB => NAND_gate:nand_2.inputB
+output <= NAND_gate:nand_3.output
+
+
+|alu_inc|XOR_gate:xor_7|NAND_gate:nand_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_7|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_7|NAND_gate:nand_2
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_7|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_8
+inputA => NAND_gate:nand_0.inputA
+inputA => NAND_gate:nand_1.inputA
+inputB => NAND_gate:nand_0.inputB
+inputB => NAND_gate:nand_2.inputB
+output <= NAND_gate:nand_3.output
+
+
+|alu_inc|XOR_gate:xor_8|NAND_gate:nand_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_8|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_8|NAND_gate:nand_2
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_8|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_9
+inputA => NAND_gate:nand_0.inputA
+inputA => NAND_gate:nand_1.inputA
+inputB => NAND_gate:nand_0.inputB
+inputB => NAND_gate:nand_2.inputB
+output <= NAND_gate:nand_3.output
+
+
+|alu_inc|XOR_gate:xor_9|NAND_gate:nand_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_9|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_9|NAND_gate:nand_2
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_9|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_10
+inputA => NAND_gate:nand_0.inputA
+inputA => NAND_gate:nand_1.inputA
+inputB => NAND_gate:nand_0.inputB
+inputB => NAND_gate:nand_2.inputB
+output <= NAND_gate:nand_3.output
+
+
+|alu_inc|XOR_gate:xor_10|NAND_gate:nand_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_10|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_10|NAND_gate:nand_2
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_10|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_11
+inputA => NAND_gate:nand_0.inputA
+inputA => NAND_gate:nand_1.inputA
+inputB => NAND_gate:nand_0.inputB
+inputB => NAND_gate:nand_2.inputB
+output <= NAND_gate:nand_3.output
+
+
+|alu_inc|XOR_gate:xor_11|NAND_gate:nand_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_11|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_11|NAND_gate:nand_2
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_inc|XOR_gate:xor_11|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+

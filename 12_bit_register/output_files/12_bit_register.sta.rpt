@@ -1,0 +1,948 @@
+TimeQuest Timing Analyzer report for 12_bit_register
+Tue Jan  3 19:17:55 2017
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk'
+ 12. Slow Model Hold: 'clk'
+ 13. Slow Model Minimum Pulse Width: 'clk'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'clk'
+ 24. Fast Model Hold: 'clk'
+ 25. Fast Model Minimum Pulse Width: 'clk'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; 12_bit_register                                                   ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C5AT144A7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 292.57 MHz ; 292.57 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -2.418 ; -24.859       ;
++-------+--------+---------------+
+
+
++--------------------------------+
+; Slow Model Hold Summary        ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -0.491 ; -1.843        ;
++-------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.631 ; -1.631                ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                                                        ;
++--------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                      ; To Node                                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.418 ; ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.649      ;
+; -2.403 ; ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.660      ;
+; -2.151 ; ms_jk_ff:ms_jk_ff_11|NAND_gate:nand_5|output~1 ; ms_jk_ff:ms_jk_ff_11|NAND_gate:nand_5|output~1 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.656      ;
+; -2.149 ; ms_jk_ff:ms_jk_ff_10|NAND_gate:nand_5|output~1 ; ms_jk_ff:ms_jk_ff_10|NAND_gate:nand_5|output~1 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.486      ;
+; -2.111 ; ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.837      ;
+; -2.029 ; ms_jk_ff:ms_jk_ff_9|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_9|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.824      ;
+; -1.983 ; ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.495      ;
+; -1.962 ; ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.488      ;
+; -1.926 ; ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.670      ;
+; -1.925 ; ms_jk_ff:ms_jk_ff_8|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_8|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.665      ;
+; -1.923 ; ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.480      ;
+; -1.879 ; ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.667      ;
+; -1.155 ; clk                                            ; ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.500        ; 2.740      ; 2.652      ;
+; -1.058 ; clk                                            ; ms_jk_ff:ms_jk_ff_10|NAND_gate:nand_5|output~1 ; clk          ; clk         ; 0.500        ; 2.740      ; 2.635      ;
+; -1.039 ; clk                                            ; ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.500        ; 2.735      ; 2.505      ;
+; -1.014 ; clk                                            ; ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.500        ; 2.583      ; 2.823      ;
+; -0.901 ; clk                                            ; ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.500        ; 2.734      ; 2.647      ;
+; -0.898 ; clk                                            ; ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.500        ; 2.708      ; 2.632      ;
+; -0.868 ; clk                                            ; ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.500        ; 2.720      ; 2.645      ;
+; -0.693 ; clk                                            ; ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.500        ; 2.720      ; 2.657      ;
+; -0.690 ; clk                                            ; ms_jk_ff:ms_jk_ff_8|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.500        ; 2.720      ; 2.650      ;
+; -0.655 ; clk                                            ; ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 2.740      ; 2.652      ;
+; -0.639 ; clk                                            ; ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.500        ; 2.734      ; 2.661      ;
+; -0.558 ; clk                                            ; ms_jk_ff:ms_jk_ff_10|NAND_gate:nand_5|output~1 ; clk          ; clk         ; 1.000        ; 2.740      ; 2.635      ;
+; -0.539 ; clk                                            ; ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 2.735      ; 2.505      ;
+; -0.514 ; clk                                            ; ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 2.583      ; 2.823      ;
+; -0.510 ; clk                                            ; ms_jk_ff:ms_jk_ff_11|NAND_gate:nand_5|output~1 ; clk          ; clk         ; 0.500        ; 2.740      ; 2.255      ;
+; -0.401 ; clk                                            ; ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 2.734      ; 2.647      ;
+; -0.398 ; clk                                            ; ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 2.708      ; 2.632      ;
+; -0.368 ; clk                                            ; ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 2.720      ; 2.645      ;
+; -0.214 ; clk                                            ; ms_jk_ff:ms_jk_ff_9|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.500        ; 2.739      ; 2.248      ;
+; -0.193 ; clk                                            ; ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 2.720      ; 2.657      ;
+; -0.190 ; clk                                            ; ms_jk_ff:ms_jk_ff_8|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 2.720      ; 2.650      ;
+; -0.139 ; clk                                            ; ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 2.734      ; 2.661      ;
+; -0.010 ; clk                                            ; ms_jk_ff:ms_jk_ff_11|NAND_gate:nand_5|output~1 ; clk          ; clk         ; 1.000        ; 2.740      ; 2.255      ;
+; 0.286  ; clk                                            ; ms_jk_ff:ms_jk_ff_9|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 2.739      ; 2.248      ;
++--------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                                                         ;
++--------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                      ; To Node                                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.491 ; clk                                            ; ms_jk_ff:ms_jk_ff_9|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 2.739      ; 2.248      ;
+; -0.485 ; clk                                            ; ms_jk_ff:ms_jk_ff_11|NAND_gate:nand_5|output~1 ; clk          ; clk         ; 0.000        ; 2.740      ; 2.255      ;
+; -0.230 ; clk                                            ; ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 2.735      ; 2.505      ;
+; -0.105 ; clk                                            ; ms_jk_ff:ms_jk_ff_10|NAND_gate:nand_5|output~1 ; clk          ; clk         ; 0.000        ; 2.740      ; 2.635      ;
+; -0.088 ; clk                                            ; ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 2.740      ; 2.652      ;
+; -0.087 ; clk                                            ; ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 2.734      ; 2.647      ;
+; -0.076 ; clk                                            ; ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 2.708      ; 2.632      ;
+; -0.075 ; clk                                            ; ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 2.720      ; 2.645      ;
+; -0.073 ; clk                                            ; ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 2.734      ; 2.661      ;
+; -0.070 ; clk                                            ; ms_jk_ff:ms_jk_ff_8|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 2.720      ; 2.650      ;
+; -0.063 ; clk                                            ; ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 2.720      ; 2.657      ;
+; 0.009  ; clk                                            ; ms_jk_ff:ms_jk_ff_9|NAND_gate:nand_5|output~1  ; clk          ; clk         ; -0.500       ; 2.739      ; 2.248      ;
+; 0.015  ; clk                                            ; ms_jk_ff:ms_jk_ff_11|NAND_gate:nand_5|output~1 ; clk          ; clk         ; -0.500       ; 2.740      ; 2.255      ;
+; 0.240  ; clk                                            ; ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 2.583      ; 2.823      ;
+; 0.270  ; clk                                            ; ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1  ; clk          ; clk         ; -0.500       ; 2.735      ; 2.505      ;
+; 0.395  ; clk                                            ; ms_jk_ff:ms_jk_ff_10|NAND_gate:nand_5|output~1 ; clk          ; clk         ; -0.500       ; 2.740      ; 2.635      ;
+; 0.412  ; clk                                            ; ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; clk          ; clk         ; -0.500       ; 2.740      ; 2.652      ;
+; 0.413  ; clk                                            ; ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_5|output~1  ; clk          ; clk         ; -0.500       ; 2.734      ; 2.647      ;
+; 0.424  ; clk                                            ; ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_5|output~1  ; clk          ; clk         ; -0.500       ; 2.708      ; 2.632      ;
+; 0.425  ; clk                                            ; ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_5|output~1  ; clk          ; clk         ; -0.500       ; 2.720      ; 2.645      ;
+; 0.427  ; clk                                            ; ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_5|output~1  ; clk          ; clk         ; -0.500       ; 2.734      ; 2.661      ;
+; 0.430  ; clk                                            ; ms_jk_ff:ms_jk_ff_8|NAND_gate:nand_5|output~1  ; clk          ; clk         ; -0.500       ; 2.720      ; 2.650      ;
+; 0.437  ; clk                                            ; ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5|output~1  ; clk          ; clk         ; -0.500       ; 2.720      ; 2.657      ;
+; 0.740  ; clk                                            ; ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1  ; clk          ; clk         ; -0.500       ; 2.583      ; 2.823      ;
+; 1.155  ; ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.155      ;
+; 1.349  ; ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.349      ;
+; 1.354  ; ms_jk_ff:ms_jk_ff_10|NAND_gate:nand_5|output~1 ; ms_jk_ff:ms_jk_ff_10|NAND_gate:nand_5|output~1 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.354      ;
+; 1.358  ; ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.358      ;
+; 1.361  ; ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.361      ;
+; 1.362  ; ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.362      ;
+; 1.365  ; ms_jk_ff:ms_jk_ff_9|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_9|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.365      ;
+; 1.366  ; ms_jk_ff:ms_jk_ff_11|NAND_gate:nand_5|output~1 ; ms_jk_ff:ms_jk_ff_11|NAND_gate:nand_5|output~1 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.366      ;
+; 1.377  ; ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.377      ;
+; 1.425  ; ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.425      ;
+; 1.427  ; ms_jk_ff:ms_jk_ff_8|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_8|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.427      ;
+; 1.536  ; ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.536      ;
++--------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                                           ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                         ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; clk   ; Rise       ; clk                                            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_10|NAND_gate:nand_5|output~1 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_10|NAND_gate:nand_5|output~1 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_11|NAND_gate:nand_5|output~1 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_11|NAND_gate:nand_5|output~1 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_8|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_8|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_9|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_9|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff_0|nand_5|output~1|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff_0|nand_5|output~1|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff_10|nand_5|output~1|datac              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff_10|nand_5|output~1|datac              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff_11|nand_5|output~1|datac              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff_11|nand_5|output~1|datac              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff_1|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff_1|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff_2|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff_2|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff_3|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff_3|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff_4|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff_4|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff_5|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff_5|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff_6|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff_6|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff_7|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff_7|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff_8|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff_8|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff_9|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff_9|nand_5|output~1|datac               ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Setup Times                                                            ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; clear      ; clk        ; 7.319 ; 7.319 ; Rise       ; clk             ;
+; clk        ; clk        ; 1.655 ; 1.655 ; Rise       ; clk             ;
+; input[*]   ; clk        ; 7.402 ; 7.402 ; Rise       ; clk             ;
+;  input[0]  ; clk        ; 7.129 ; 7.129 ; Rise       ; clk             ;
+;  input[1]  ; clk        ; 7.159 ; 7.159 ; Rise       ; clk             ;
+;  input[2]  ; clk        ; 7.402 ; 7.402 ; Rise       ; clk             ;
+;  input[3]  ; clk        ; 6.755 ; 6.755 ; Rise       ; clk             ;
+;  input[4]  ; clk        ; 2.783 ; 2.783 ; Rise       ; clk             ;
+;  input[5]  ; clk        ; 3.210 ; 3.210 ; Rise       ; clk             ;
+;  input[6]  ; clk        ; 2.988 ; 2.988 ; Rise       ; clk             ;
+;  input[7]  ; clk        ; 3.098 ; 3.098 ; Rise       ; clk             ;
+;  input[8]  ; clk        ; 6.737 ; 6.737 ; Rise       ; clk             ;
+;  input[9]  ; clk        ; 6.840 ; 6.840 ; Rise       ; clk             ;
+;  input[10] ; clk        ; 6.554 ; 6.554 ; Rise       ; clk             ;
+;  input[11] ; clk        ; 6.684 ; 6.684 ; Rise       ; clk             ;
+; load       ; clk        ; 7.058 ; 7.058 ; Rise       ; clk             ;
+; not_reset  ; clk        ; 7.771 ; 7.771 ; Rise       ; clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; clear      ; clk        ; -4.966 ; -4.966 ; Rise       ; clk             ;
+; clk        ; clk        ; 0.491  ; 0.491  ; Rise       ; clk             ;
+; input[*]   ; clk        ; -1.309 ; -1.309 ; Rise       ; clk             ;
+;  input[0]  ; clk        ; -5.855 ; -5.855 ; Rise       ; clk             ;
+;  input[1]  ; clk        ; -5.416 ; -5.416 ; Rise       ; clk             ;
+;  input[2]  ; clk        ; -5.633 ; -5.633 ; Rise       ; clk             ;
+;  input[3]  ; clk        ; -5.499 ; -5.499 ; Rise       ; clk             ;
+;  input[4]  ; clk        ; -1.309 ; -1.309 ; Rise       ; clk             ;
+;  input[5]  ; clk        ; -1.767 ; -1.767 ; Rise       ; clk             ;
+;  input[6]  ; clk        ; -1.500 ; -1.500 ; Rise       ; clk             ;
+;  input[7]  ; clk        ; -1.886 ; -1.886 ; Rise       ; clk             ;
+;  input[8]  ; clk        ; -5.477 ; -5.477 ; Rise       ; clk             ;
+;  input[9]  ; clk        ; -5.635 ; -5.635 ; Rise       ; clk             ;
+;  input[10] ; clk        ; -4.891 ; -4.891 ; Rise       ; clk             ;
+;  input[11] ; clk        ; -5.189 ; -5.189 ; Rise       ; clk             ;
+; load       ; clk        ; -4.977 ; -4.977 ; Rise       ; clk             ;
+; not_reset  ; clk        ; -5.026 ; -5.026 ; Rise       ; clk             ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; output[*]   ; clk        ; 7.142 ; 7.142 ; Rise       ; clk             ;
+;  output[0]  ; clk        ; 7.021 ; 7.021 ; Rise       ; clk             ;
+;  output[1]  ; clk        ; 7.142 ; 7.142 ; Rise       ; clk             ;
+;  output[2]  ; clk        ; 6.988 ; 6.988 ; Rise       ; clk             ;
+;  output[3]  ; clk        ; 6.963 ; 6.963 ; Rise       ; clk             ;
+;  output[4]  ; clk        ; 6.954 ; 6.954 ; Rise       ; clk             ;
+;  output[5]  ; clk        ; 6.980 ; 6.980 ; Rise       ; clk             ;
+;  output[6]  ; clk        ; 6.885 ; 6.885 ; Rise       ; clk             ;
+;  output[7]  ; clk        ; 6.942 ; 6.942 ; Rise       ; clk             ;
+;  output[8]  ; clk        ; 6.961 ; 6.961 ; Rise       ; clk             ;
+;  output[9]  ; clk        ; 6.911 ; 6.911 ; Rise       ; clk             ;
+;  output[10] ; clk        ; 6.791 ; 6.791 ; Rise       ; clk             ;
+;  output[11] ; clk        ; 6.931 ; 6.931 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; output[*]   ; clk        ; 6.791 ; 6.791 ; Rise       ; clk             ;
+;  output[0]  ; clk        ; 7.021 ; 7.021 ; Rise       ; clk             ;
+;  output[1]  ; clk        ; 7.142 ; 7.142 ; Rise       ; clk             ;
+;  output[2]  ; clk        ; 6.988 ; 6.988 ; Rise       ; clk             ;
+;  output[3]  ; clk        ; 6.963 ; 6.963 ; Rise       ; clk             ;
+;  output[4]  ; clk        ; 6.954 ; 6.954 ; Rise       ; clk             ;
+;  output[5]  ; clk        ; 6.980 ; 6.980 ; Rise       ; clk             ;
+;  output[6]  ; clk        ; 6.885 ; 6.885 ; Rise       ; clk             ;
+;  output[7]  ; clk        ; 6.942 ; 6.942 ; Rise       ; clk             ;
+;  output[8]  ; clk        ; 6.961 ; 6.961 ; Rise       ; clk             ;
+;  output[9]  ; clk        ; 6.911 ; 6.911 ; Rise       ; clk             ;
+;  output[10] ; clk        ; 6.791 ; 6.791 ; Rise       ; clk             ;
+;  output[11] ; clk        ; 6.931 ; 6.931 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -0.090 ; -0.190        ;
++-------+--------+---------------+
+
+
++--------------------------------+
+; Fast Model Hold Summary        ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -0.365 ; -3.011        ;
++-------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.380 ; -1.380                ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                                                        ;
++--------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                      ; To Node                                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.090 ; ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.537      ;
+; -0.089 ; ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.528      ;
+; -0.007 ; ms_jk_ff:ms_jk_ff_11|NAND_gate:nand_5|output~1 ; ms_jk_ff:ms_jk_ff_11|NAND_gate:nand_5|output~1 ; clk          ; clk         ; 1.000        ; 0.000      ; 0.532      ;
+; -0.002 ; ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.593      ;
+; -0.002 ; ms_jk_ff:ms_jk_ff_10|NAND_gate:nand_5|output~1 ; ms_jk_ff:ms_jk_ff_10|NAND_gate:nand_5|output~1 ; clk          ; clk         ; 1.000        ; 0.000      ; 0.480      ;
+; 0.032  ; ms_jk_ff:ms_jk_ff_9|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_9|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.586      ;
+; 0.049  ; ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.483      ;
+; 0.059  ; ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.480      ;
+; 0.065  ; ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.541      ;
+; 0.065  ; ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.475      ;
+; 0.067  ; ms_jk_ff:ms_jk_ff_8|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_8|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.537      ;
+; 0.078  ; ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.538      ;
+; 0.190  ; clk                                            ; ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.500        ; 1.303      ; 1.060      ;
+; 0.220  ; clk                                            ; ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.500        ; 1.300      ; 1.019      ;
+; 0.226  ; clk                                            ; ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.500        ; 1.252      ; 1.117      ;
+; 0.228  ; clk                                            ; ms_jk_ff:ms_jk_ff_10|NAND_gate:nand_5|output~1 ; clk          ; clk         ; 0.500        ; 1.303      ; 1.053      ;
+; 0.265  ; clk                                            ; ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.500        ; 1.281      ; 1.055      ;
+; 0.270  ; clk                                            ; ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.500        ; 1.289      ; 1.059      ;
+; 0.270  ; clk                                            ; ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.500        ; 1.299      ; 1.061      ;
+; 0.330  ; clk                                            ; ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.500        ; 1.290      ; 1.066      ;
+; 0.333  ; clk                                            ; ms_jk_ff:ms_jk_ff_8|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.500        ; 1.289      ; 1.060      ;
+; 0.346  ; clk                                            ; ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.500        ; 1.299      ; 1.069      ;
+; 0.385  ; clk                                            ; ms_jk_ff:ms_jk_ff_11|NAND_gate:nand_5|output~1 ; clk          ; clk         ; 0.500        ; 1.303      ; 0.943      ;
+; 0.483  ; clk                                            ; ms_jk_ff:ms_jk_ff_9|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.500        ; 1.302      ; 0.937      ;
+; 0.690  ; clk                                            ; ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 1.303      ; 1.060      ;
+; 0.720  ; clk                                            ; ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 1.300      ; 1.019      ;
+; 0.726  ; clk                                            ; ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 1.252      ; 1.117      ;
+; 0.728  ; clk                                            ; ms_jk_ff:ms_jk_ff_10|NAND_gate:nand_5|output~1 ; clk          ; clk         ; 1.000        ; 1.303      ; 1.053      ;
+; 0.765  ; clk                                            ; ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 1.281      ; 1.055      ;
+; 0.770  ; clk                                            ; ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 1.299      ; 1.061      ;
+; 0.770  ; clk                                            ; ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 1.289      ; 1.059      ;
+; 0.830  ; clk                                            ; ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 1.290      ; 1.066      ;
+; 0.833  ; clk                                            ; ms_jk_ff:ms_jk_ff_8|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 1.289      ; 1.060      ;
+; 0.846  ; clk                                            ; ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 1.299      ; 1.069      ;
+; 0.885  ; clk                                            ; ms_jk_ff:ms_jk_ff_11|NAND_gate:nand_5|output~1 ; clk          ; clk         ; 1.000        ; 1.303      ; 0.943      ;
+; 0.983  ; clk                                            ; ms_jk_ff:ms_jk_ff_9|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 1.302      ; 0.937      ;
++--------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                                                         ;
++--------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                      ; To Node                                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.365 ; clk                                            ; ms_jk_ff:ms_jk_ff_9|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 1.302      ; 0.937      ;
+; -0.360 ; clk                                            ; ms_jk_ff:ms_jk_ff_11|NAND_gate:nand_5|output~1 ; clk          ; clk         ; 0.000        ; 1.303      ; 0.943      ;
+; -0.281 ; clk                                            ; ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 1.300      ; 1.019      ;
+; -0.250 ; clk                                            ; ms_jk_ff:ms_jk_ff_10|NAND_gate:nand_5|output~1 ; clk          ; clk         ; 0.000        ; 1.303      ; 1.053      ;
+; -0.243 ; clk                                            ; ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 1.303      ; 1.060      ;
+; -0.238 ; clk                                            ; ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 1.299      ; 1.061      ;
+; -0.230 ; clk                                            ; ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 1.289      ; 1.059      ;
+; -0.230 ; clk                                            ; ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 1.299      ; 1.069      ;
+; -0.229 ; clk                                            ; ms_jk_ff:ms_jk_ff_8|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 1.289      ; 1.060      ;
+; -0.226 ; clk                                            ; ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 1.281      ; 1.055      ;
+; -0.224 ; clk                                            ; ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 1.290      ; 1.066      ;
+; -0.135 ; clk                                            ; ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 1.252      ; 1.117      ;
+; 0.135  ; clk                                            ; ms_jk_ff:ms_jk_ff_9|NAND_gate:nand_5|output~1  ; clk          ; clk         ; -0.500       ; 1.302      ; 0.937      ;
+; 0.140  ; clk                                            ; ms_jk_ff:ms_jk_ff_11|NAND_gate:nand_5|output~1 ; clk          ; clk         ; -0.500       ; 1.303      ; 0.943      ;
+; 0.219  ; clk                                            ; ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1  ; clk          ; clk         ; -0.500       ; 1.300      ; 1.019      ;
+; 0.250  ; clk                                            ; ms_jk_ff:ms_jk_ff_10|NAND_gate:nand_5|output~1 ; clk          ; clk         ; -0.500       ; 1.303      ; 1.053      ;
+; 0.257  ; clk                                            ; ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; clk          ; clk         ; -0.500       ; 1.303      ; 1.060      ;
+; 0.262  ; clk                                            ; ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_5|output~1  ; clk          ; clk         ; -0.500       ; 1.299      ; 1.061      ;
+; 0.270  ; clk                                            ; ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_5|output~1  ; clk          ; clk         ; -0.500       ; 1.289      ; 1.059      ;
+; 0.270  ; clk                                            ; ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_5|output~1  ; clk          ; clk         ; -0.500       ; 1.299      ; 1.069      ;
+; 0.271  ; clk                                            ; ms_jk_ff:ms_jk_ff_8|NAND_gate:nand_5|output~1  ; clk          ; clk         ; -0.500       ; 1.289      ; 1.060      ;
+; 0.274  ; clk                                            ; ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_5|output~1  ; clk          ; clk         ; -0.500       ; 1.281      ; 1.055      ;
+; 0.276  ; clk                                            ; ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5|output~1  ; clk          ; clk         ; -0.500       ; 1.290      ; 1.066      ;
+; 0.365  ; clk                                            ; ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1  ; clk          ; clk         ; -0.500       ; 1.252      ; 1.117      ;
+; 0.369  ; ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.369      ;
+; 0.431  ; ms_jk_ff:ms_jk_ff_10|NAND_gate:nand_5|output~1 ; ms_jk_ff:ms_jk_ff_10|NAND_gate:nand_5|output~1 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.431      ;
+; 0.431  ; ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.431      ;
+; 0.436  ; ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.436      ;
+; 0.436  ; ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.436      ;
+; 0.438  ; ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.438      ;
+; 0.441  ; ms_jk_ff:ms_jk_ff_9|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_9|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.441      ;
+; 0.441  ; ms_jk_ff:ms_jk_ff_11|NAND_gate:nand_5|output~1 ; ms_jk_ff:ms_jk_ff_11|NAND_gate:nand_5|output~1 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.441      ;
+; 0.446  ; ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.446      ;
+; 0.454  ; ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.454      ;
+; 0.456  ; ms_jk_ff:ms_jk_ff_8|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_8|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.456      ;
+; 0.493  ; ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1  ; ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.493      ;
++--------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                                           ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                         ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                                            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_10|NAND_gate:nand_5|output~1 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_10|NAND_gate:nand_5|output~1 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_11|NAND_gate:nand_5|output~1 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_11|NAND_gate:nand_5|output~1 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_8|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_8|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_9|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff:ms_jk_ff_9|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff_0|nand_5|output~1|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff_0|nand_5|output~1|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff_10|nand_5|output~1|datac              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff_10|nand_5|output~1|datac              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff_11|nand_5|output~1|datac              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff_11|nand_5|output~1|datac              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff_1|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff_1|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff_2|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff_2|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff_3|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff_3|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff_4|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff_4|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff_5|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff_5|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff_6|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff_6|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff_7|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff_7|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff_8|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff_8|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ms_jk_ff_9|nand_5|output~1|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ms_jk_ff_9|nand_5|output~1|datac               ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Setup Times                                                            ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; clear      ; clk        ; 3.085 ; 3.085 ; Rise       ; clk             ;
+; clk        ; clk        ; 0.310 ; 0.310 ; Rise       ; clk             ;
+; input[*]   ; clk        ; 3.096 ; 3.096 ; Rise       ; clk             ;
+;  input[0]  ; clk        ; 3.024 ; 3.024 ; Rise       ; clk             ;
+;  input[1]  ; clk        ; 3.095 ; 3.095 ; Rise       ; clk             ;
+;  input[2]  ; clk        ; 3.096 ; 3.096 ; Rise       ; clk             ;
+;  input[3]  ; clk        ; 2.894 ; 2.894 ; Rise       ; clk             ;
+;  input[4]  ; clk        ; 0.763 ; 0.763 ; Rise       ; clk             ;
+;  input[5]  ; clk        ; 0.904 ; 0.904 ; Rise       ; clk             ;
+;  input[6]  ; clk        ; 0.826 ; 0.826 ; Rise       ; clk             ;
+;  input[7]  ; clk        ; 0.863 ; 0.863 ; Rise       ; clk             ;
+;  input[8]  ; clk        ; 2.888 ; 2.888 ; Rise       ; clk             ;
+;  input[9]  ; clk        ; 2.918 ; 2.918 ; Rise       ; clk             ;
+;  input[10] ; clk        ; 2.832 ; 2.832 ; Rise       ; clk             ;
+;  input[11] ; clk        ; 2.863 ; 2.863 ; Rise       ; clk             ;
+; load       ; clk        ; 2.983 ; 2.983 ; Rise       ; clk             ;
+; not_reset  ; clk        ; 3.264 ; 3.264 ; Rise       ; clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; clear      ; clk        ; -2.337 ; -2.337 ; Rise       ; clk             ;
+; clk        ; clk        ; 0.365  ; 0.365  ; Rise       ; clk             ;
+; input[*]   ; clk        ; -0.302 ; -0.302 ; Rise       ; clk             ;
+;  input[0]  ; clk        ; -2.615 ; -2.615 ; Rise       ; clk             ;
+;  input[1]  ; clk        ; -2.542 ; -2.542 ; Rise       ; clk             ;
+;  input[2]  ; clk        ; -2.535 ; -2.535 ; Rise       ; clk             ;
+;  input[3]  ; clk        ; -2.500 ; -2.500 ; Rise       ; clk             ;
+;  input[4]  ; clk        ; -0.302 ; -0.302 ; Rise       ; clk             ;
+;  input[5]  ; clk        ; -0.444 ; -0.444 ; Rise       ; clk             ;
+;  input[6]  ; clk        ; -0.358 ; -0.358 ; Rise       ; clk             ;
+;  input[7]  ; clk        ; -0.479 ; -0.479 ; Rise       ; clk             ;
+;  input[8]  ; clk        ; -2.492 ; -2.492 ; Rise       ; clk             ;
+;  input[9]  ; clk        ; -2.536 ; -2.536 ; Rise       ; clk             ;
+;  input[10] ; clk        ; -2.310 ; -2.310 ; Rise       ; clk             ;
+;  input[11] ; clk        ; -2.388 ; -2.388 ; Rise       ; clk             ;
+; load       ; clk        ; -2.326 ; -2.326 ; Rise       ; clk             ;
+; not_reset  ; clk        ; -2.358 ; -2.358 ; Rise       ; clk             ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; output[*]   ; clk        ; 3.250 ; 3.250 ; Rise       ; clk             ;
+;  output[0]  ; clk        ; 3.196 ; 3.196 ; Rise       ; clk             ;
+;  output[1]  ; clk        ; 3.232 ; 3.232 ; Rise       ; clk             ;
+;  output[2]  ; clk        ; 3.192 ; 3.192 ; Rise       ; clk             ;
+;  output[3]  ; clk        ; 3.238 ; 3.238 ; Rise       ; clk             ;
+;  output[4]  ; clk        ; 3.228 ; 3.228 ; Rise       ; clk             ;
+;  output[5]  ; clk        ; 3.250 ; 3.250 ; Rise       ; clk             ;
+;  output[6]  ; clk        ; 3.097 ; 3.097 ; Rise       ; clk             ;
+;  output[7]  ; clk        ; 3.133 ; 3.133 ; Rise       ; clk             ;
+;  output[8]  ; clk        ; 3.176 ; 3.176 ; Rise       ; clk             ;
+;  output[9]  ; clk        ; 3.162 ; 3.162 ; Rise       ; clk             ;
+;  output[10] ; clk        ; 3.128 ; 3.128 ; Rise       ; clk             ;
+;  output[11] ; clk        ; 3.184 ; 3.184 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; output[*]   ; clk        ; 3.097 ; 3.097 ; Rise       ; clk             ;
+;  output[0]  ; clk        ; 3.196 ; 3.196 ; Rise       ; clk             ;
+;  output[1]  ; clk        ; 3.232 ; 3.232 ; Rise       ; clk             ;
+;  output[2]  ; clk        ; 3.192 ; 3.192 ; Rise       ; clk             ;
+;  output[3]  ; clk        ; 3.238 ; 3.238 ; Rise       ; clk             ;
+;  output[4]  ; clk        ; 3.228 ; 3.228 ; Rise       ; clk             ;
+;  output[5]  ; clk        ; 3.250 ; 3.250 ; Rise       ; clk             ;
+;  output[6]  ; clk        ; 3.097 ; 3.097 ; Rise       ; clk             ;
+;  output[7]  ; clk        ; 3.133 ; 3.133 ; Rise       ; clk             ;
+;  output[8]  ; clk        ; 3.176 ; 3.176 ; Rise       ; clk             ;
+;  output[9]  ; clk        ; 3.162 ; 3.162 ; Rise       ; clk             ;
+;  output[10] ; clk        ; 3.128 ; 3.128 ; Rise       ; clk             ;
+;  output[11] ; clk        ; 3.184 ; 3.184 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+---------+--------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+--------+----------+---------+---------------------+
+; Worst-case Slack ; -2.418  ; -0.491 ; N/A      ; N/A     ; -1.631              ;
+;  clk             ; -2.418  ; -0.491 ; N/A      ; N/A     ; -1.631              ;
+; Design-wide TNS  ; -24.859 ; -3.011 ; 0.0      ; 0.0     ; -1.631              ;
+;  clk             ; -24.859 ; -3.011 ; N/A      ; N/A     ; -1.631              ;
++------------------+---------+--------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------+
+; Setup Times                                                            ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; clear      ; clk        ; 7.319 ; 7.319 ; Rise       ; clk             ;
+; clk        ; clk        ; 1.655 ; 1.655 ; Rise       ; clk             ;
+; input[*]   ; clk        ; 7.402 ; 7.402 ; Rise       ; clk             ;
+;  input[0]  ; clk        ; 7.129 ; 7.129 ; Rise       ; clk             ;
+;  input[1]  ; clk        ; 7.159 ; 7.159 ; Rise       ; clk             ;
+;  input[2]  ; clk        ; 7.402 ; 7.402 ; Rise       ; clk             ;
+;  input[3]  ; clk        ; 6.755 ; 6.755 ; Rise       ; clk             ;
+;  input[4]  ; clk        ; 2.783 ; 2.783 ; Rise       ; clk             ;
+;  input[5]  ; clk        ; 3.210 ; 3.210 ; Rise       ; clk             ;
+;  input[6]  ; clk        ; 2.988 ; 2.988 ; Rise       ; clk             ;
+;  input[7]  ; clk        ; 3.098 ; 3.098 ; Rise       ; clk             ;
+;  input[8]  ; clk        ; 6.737 ; 6.737 ; Rise       ; clk             ;
+;  input[9]  ; clk        ; 6.840 ; 6.840 ; Rise       ; clk             ;
+;  input[10] ; clk        ; 6.554 ; 6.554 ; Rise       ; clk             ;
+;  input[11] ; clk        ; 6.684 ; 6.684 ; Rise       ; clk             ;
+; load       ; clk        ; 7.058 ; 7.058 ; Rise       ; clk             ;
+; not_reset  ; clk        ; 7.771 ; 7.771 ; Rise       ; clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; clear      ; clk        ; -2.337 ; -2.337 ; Rise       ; clk             ;
+; clk        ; clk        ; 0.491  ; 0.491  ; Rise       ; clk             ;
+; input[*]   ; clk        ; -0.302 ; -0.302 ; Rise       ; clk             ;
+;  input[0]  ; clk        ; -2.615 ; -2.615 ; Rise       ; clk             ;
+;  input[1]  ; clk        ; -2.542 ; -2.542 ; Rise       ; clk             ;
+;  input[2]  ; clk        ; -2.535 ; -2.535 ; Rise       ; clk             ;
+;  input[3]  ; clk        ; -2.500 ; -2.500 ; Rise       ; clk             ;
+;  input[4]  ; clk        ; -0.302 ; -0.302 ; Rise       ; clk             ;
+;  input[5]  ; clk        ; -0.444 ; -0.444 ; Rise       ; clk             ;
+;  input[6]  ; clk        ; -0.358 ; -0.358 ; Rise       ; clk             ;
+;  input[7]  ; clk        ; -0.479 ; -0.479 ; Rise       ; clk             ;
+;  input[8]  ; clk        ; -2.492 ; -2.492 ; Rise       ; clk             ;
+;  input[9]  ; clk        ; -2.536 ; -2.536 ; Rise       ; clk             ;
+;  input[10] ; clk        ; -2.310 ; -2.310 ; Rise       ; clk             ;
+;  input[11] ; clk        ; -2.388 ; -2.388 ; Rise       ; clk             ;
+; load       ; clk        ; -2.326 ; -2.326 ; Rise       ; clk             ;
+; not_reset  ; clk        ; -2.358 ; -2.358 ; Rise       ; clk             ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; output[*]   ; clk        ; 7.142 ; 7.142 ; Rise       ; clk             ;
+;  output[0]  ; clk        ; 7.021 ; 7.021 ; Rise       ; clk             ;
+;  output[1]  ; clk        ; 7.142 ; 7.142 ; Rise       ; clk             ;
+;  output[2]  ; clk        ; 6.988 ; 6.988 ; Rise       ; clk             ;
+;  output[3]  ; clk        ; 6.963 ; 6.963 ; Rise       ; clk             ;
+;  output[4]  ; clk        ; 6.954 ; 6.954 ; Rise       ; clk             ;
+;  output[5]  ; clk        ; 6.980 ; 6.980 ; Rise       ; clk             ;
+;  output[6]  ; clk        ; 6.885 ; 6.885 ; Rise       ; clk             ;
+;  output[7]  ; clk        ; 6.942 ; 6.942 ; Rise       ; clk             ;
+;  output[8]  ; clk        ; 6.961 ; 6.961 ; Rise       ; clk             ;
+;  output[9]  ; clk        ; 6.911 ; 6.911 ; Rise       ; clk             ;
+;  output[10] ; clk        ; 6.791 ; 6.791 ; Rise       ; clk             ;
+;  output[11] ; clk        ; 6.931 ; 6.931 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; output[*]   ; clk        ; 3.097 ; 3.097 ; Rise       ; clk             ;
+;  output[0]  ; clk        ; 3.196 ; 3.196 ; Rise       ; clk             ;
+;  output[1]  ; clk        ; 3.232 ; 3.232 ; Rise       ; clk             ;
+;  output[2]  ; clk        ; 3.192 ; 3.192 ; Rise       ; clk             ;
+;  output[3]  ; clk        ; 3.238 ; 3.238 ; Rise       ; clk             ;
+;  output[4]  ; clk        ; 3.228 ; 3.228 ; Rise       ; clk             ;
+;  output[5]  ; clk        ; 3.250 ; 3.250 ; Rise       ; clk             ;
+;  output[6]  ; clk        ; 3.097 ; 3.097 ; Rise       ; clk             ;
+;  output[7]  ; clk        ; 3.133 ; 3.133 ; Rise       ; clk             ;
+;  output[8]  ; clk        ; 3.176 ; 3.176 ; Rise       ; clk             ;
+;  output[9]  ; clk        ; 3.162 ; 3.162 ; Rise       ; clk             ;
+;  output[10] ; clk        ; 3.128 ; 3.128 ; Rise       ; clk             ;
+;  output[11] ; clk        ; 3.184 ; 3.184 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 36       ; 12       ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 36       ; 12       ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 15    ; 15   ;
+; Unconstrained Input Port Paths  ; 48    ; 48   ;
+; Unconstrained Output Ports      ; 12    ; 12   ;
+; Unconstrained Output Port Paths ; 12    ; 12   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Jan  3 19:17:54 2017
+Info: Command: quartus_sta 12_bit_register -c 12_bit_register
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is -40 degrees C
+Info (21077): High junction temperature is 125 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 12 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: '12_bit_register.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Warning (332125): Found combinational loop of 4 nodes
+    Warning (332126): Node "ms_jk_ff_11|nand_1|output~3|combout"
+    Warning (332126): Node "ms_jk_ff_11|nand_1|output~1|datad"
+    Warning (332126): Node "ms_jk_ff_11|nand_1|output~1|combout"
+    Warning (332126): Node "ms_jk_ff_11|nand_1|output~3|dataa"
+Warning (332125): Found combinational loop of 4 nodes
+    Warning (332126): Node "ms_jk_ff_10|nand_1|output~3|combout"
+    Warning (332126): Node "ms_jk_ff_10|nand_1|output~1|datac"
+    Warning (332126): Node "ms_jk_ff_10|nand_1|output~1|combout"
+    Warning (332126): Node "ms_jk_ff_10|nand_1|output~3|datac"
+Warning (332125): Found combinational loop of 4 nodes
+    Warning (332126): Node "ms_jk_ff_9|nand_1|output~3|combout"
+    Warning (332126): Node "ms_jk_ff_9|nand_1|output~1|datad"
+    Warning (332126): Node "ms_jk_ff_9|nand_1|output~1|combout"
+    Warning (332126): Node "ms_jk_ff_9|nand_1|output~3|dataa"
+Warning (332125): Found combinational loop of 4 nodes
+    Warning (332126): Node "ms_jk_ff_8|nand_1|output~3|combout"
+    Warning (332126): Node "ms_jk_ff_8|nand_1|output~1|datac"
+    Warning (332126): Node "ms_jk_ff_8|nand_1|output~1|combout"
+    Warning (332126): Node "ms_jk_ff_8|nand_1|output~3|datab"
+Warning (332125): Found combinational loop of 4 nodes
+    Warning (332126): Node "ms_jk_ff_7|nand_1|output~3|combout"
+    Warning (332126): Node "ms_jk_ff_7|nand_1|output~1|datac"
+    Warning (332126): Node "ms_jk_ff_7|nand_1|output~1|combout"
+    Warning (332126): Node "ms_jk_ff_7|nand_1|output~3|dataa"
+Warning (332125): Found combinational loop of 4 nodes
+    Warning (332126): Node "ms_jk_ff_6|nand_1|output~3|combout"
+    Warning (332126): Node "ms_jk_ff_6|nand_1|output~1|datac"
+    Warning (332126): Node "ms_jk_ff_6|nand_1|output~1|combout"
+    Warning (332126): Node "ms_jk_ff_6|nand_1|output~3|dataa"
+Warning (332125): Found combinational loop of 4 nodes
+    Warning (332126): Node "ms_jk_ff_5|nand_1|output~3|combout"
+    Warning (332126): Node "ms_jk_ff_5|nand_1|output~1|datac"
+    Warning (332126): Node "ms_jk_ff_5|nand_1|output~1|combout"
+    Warning (332126): Node "ms_jk_ff_5|nand_1|output~3|dataa"
+Warning (332125): Found combinational loop of 4 nodes
+    Warning (332126): Node "ms_jk_ff_4|nand_1|output~3|combout"
+    Warning (332126): Node "ms_jk_ff_4|nand_1|output~1|datac"
+    Warning (332126): Node "ms_jk_ff_4|nand_1|output~1|combout"
+    Warning (332126): Node "ms_jk_ff_4|nand_1|output~3|dataa"
+Warning (332125): Found combinational loop of 4 nodes
+    Warning (332126): Node "ms_jk_ff_3|nand_1|output~3|combout"
+    Warning (332126): Node "ms_jk_ff_3|nand_1|output~1|datac"
+    Warning (332126): Node "ms_jk_ff_3|nand_1|output~1|combout"
+    Warning (332126): Node "ms_jk_ff_3|nand_1|output~3|datab"
+Warning (332125): Found combinational loop of 4 nodes
+    Warning (332126): Node "ms_jk_ff_2|nand_1|output~3|combout"
+    Warning (332126): Node "ms_jk_ff_2|nand_1|output~1|datac"
+    Warning (332126): Node "ms_jk_ff_2|nand_1|output~1|combout"
+    Warning (332126): Node "ms_jk_ff_2|nand_1|output~3|dataa"
+Warning (332125): Found combinational loop of 4 nodes
+    Warning (332126): Node "ms_jk_ff_0|nand_1|output~3|combout"
+    Warning (332126): Node "ms_jk_ff_0|nand_1|output~1|dataa"
+    Warning (332126): Node "ms_jk_ff_0|nand_1|output~1|combout"
+    Warning (332126): Node "ms_jk_ff_0|nand_1|output~3|dataa"
+Warning (332125): Found combinational loop of 4 nodes
+    Warning (332126): Node "ms_jk_ff_1|nand_1|output~3|combout"
+    Warning (332126): Node "ms_jk_ff_1|nand_1|output~1|datac"
+    Warning (332126): Node "ms_jk_ff_1|nand_1|output~1|combout"
+    Warning (332126): Node "ms_jk_ff_1|nand_1|output~3|datab"
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.418
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.418       -24.859 clk 
+Info (332146): Worst-case hold slack is -0.491
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.491        -1.843 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.631
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.631        -1.631 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.090
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.090        -0.190 clk 
+Info (332146): Worst-case hold slack is -0.365
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.365        -3.011 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -1.380 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 65 warnings
+    Info: Peak virtual memory: 583 megabytes
+    Info: Processing ended: Tue Jan  3 19:17:55 2017
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

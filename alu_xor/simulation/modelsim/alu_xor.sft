@@ -1,0 +1,5 @@
+set tool_name "ModelSim-Altera (VHDL)"
+set corner_file_list {
+	{{"Slow Model"} {alu_xor.vho alu_xor_vhd.sdo}}
+	{{"Fast Model"} {alu_xor_fast.vho alu_xor_vhd_fast.sdo}}
+}

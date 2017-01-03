@@ -1,0 +1,13 @@
+-- master-slave j-k ff --
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ms_jk_ff is
+	port ( j:		in std_logic;
+			 k:		in std_logic;
+			 q:		out std_logic;
+			 not_q:	out std_logic
+	);
+end ms_jk_ff;
+
+architecture 

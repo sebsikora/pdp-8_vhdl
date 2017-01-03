@@ -1,0 +1,76 @@
+# do 1_bit_ms_flip_flop_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /home/sebsikora/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /home/sebsikora/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity NAND_3_gate
+# -- Compiling architecture rtl of NAND_3_gate
+# -- Compiling entity NAND_gate
+# -- Compiling architecture rtl of NAND_gate
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ms_jk_ff
+# -- Compiling architecture gates of ms_jk_ff
+# 
+do /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/simulation/modelsim/ms_ff_test_wave.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Error: (vish-4014) No objects found matching 'NewSig:sim:/ms_jk_ff/clk'.
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/simulation/modelsim/ms_ff_test_wave.do line 30
+# ** Error: (vish-4014) No objects found matching 'NewSig:sim:/ms_jk_ff/j'.
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/simulation/modelsim/ms_ff_test_wave.do line 31
+# ** Error: (vish-4014) No objects found matching 'NewSig:sim:/ms_jk_ff/k'.
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/simulation/modelsim/ms_ff_test_wave.do line 32
+# ** Error: (vish-4014) No objects found matching 'NewSig:sim:/ms_jk_ff/not_reset'.
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/simulation/modelsim/ms_ff_test_wave.do line 33
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/simulation/modelsim/ms_ff_test_wave.do line 34
+# 0
+vsim -voptargs=+acc work.ms_jk_ff
+# vsim -voptargs=+acc work.ms_jk_ff 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.ms_jk_ff(gates)
+# Loading work.nand_3_gate(rtl)
+# Loading work.nand_gate(rtl)
+do /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/simulation/modelsim/ms_ff_test_wave.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# 0
+run
+run
+run
+run
+restart
+wave modify -driver freeze -pattern constant -value 0 -starttime 500ns -endtime 1000ns Edit:/ms_jk_ff/j
+wave modify -driver freeze -pattern constant -value 0 -starttime 500ns -endtime 1000ns Edit:/ms_jk_ff/k
+run
+run
+run
+run
+run
+run
+run
+run

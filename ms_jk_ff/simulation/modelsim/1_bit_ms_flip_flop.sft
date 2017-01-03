@@ -1,0 +1,5 @@
+set tool_name "ModelSim-Altera (VHDL)"
+set corner_file_list {
+	{{"Slow Model"} {1_bit_ms_flip_flop.vho 1_bit_ms_flip_flop_vhd.sdo}}
+	{{"Fast Model"} {1_bit_ms_flip_flop_fast.vho 1_bit_ms_flip_flop_vhd_fast.sdo}}
+}

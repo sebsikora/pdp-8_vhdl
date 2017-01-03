@@ -1,0 +1,51 @@
+# do alu_clear_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /home/sebsikora/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /home/sebsikora/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity NAND_3_gate
+# -- Compiling architecture rtl of NAND_3_gate
+# -- Compiling entity NAND_gate
+# -- Compiling architecture rtl of NAND_gate
+# -- Compiling entity AND_gate
+# -- Compiling architecture rtl of AND_gate
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_clear/alu_clear.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_clear
+# -- Compiling architecture rtl of alu_clear
+# 
+vsim -voptargs=+acc work.alu_clear
+# vsim -voptargs=+acc work.alu_clear 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.alu_clear(rtl)
+# Loading work.and_gate(rtl)
+wave create -driver freeze -pattern constant -value 101010101010 -range 11 0 -starttime 0ns -endtime 1000ns sim:/alu_clear/input
+wave create -driver freeze -pattern clock -initialvalue 0 -period 1000ps -dutycycle 50 -starttime 0ns -endtime 1000ns sim:/alu_clear/alu_clear
+add wave  \
+sim:/alu_clear/output
+run
+wave modify -driver freeze -pattern clock -initialvalue 0 -period 1500ps -dutycycle 50 -starttime 0ns -endtime 1000ns Edit:/alu_clear/alu_clear
+wave modify -driver freeze -pattern clock -initialvalue 0 -period 660ps -dutycycle 50 -starttime 0ns -endtime 1000ns Edit:/alu_clear/alu_clear
+restart
+run
+wave modify -driver freeze -pattern clock -initialvalue 0 -period 660ns -dutycycle 50 -starttime 0ns -endtime 1000ns Edit:/alu_clear/alu_clear
+restart
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/alu_clear/simulation/modelsim/alu_clear_test_wave.do
+wave editwrite -file /home/sebsikora/altera/projects/pdp-8/alu_clear/simulation/modelsim/alu_clear_test_wave.do -append
