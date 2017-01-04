@@ -51,6 +51,24 @@ begin
 	output <= (inputA and inputB);
 end rtl;
 
+-- AND 3 gate
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity AND_3_gate is
+	port( inputA: 	in std_logic;
+			inputB:	in std_logic;
+			inputC:	in std_logic;
+			output:	out std_logic
+	);
+end AND_3_gate;
+
+architecture rtl of AND_3_gate is
+begin
+	output <= (inputA and inputB and inputC);
+end rtl;
+
 -- OR 3 gate
 
 library ieee;
@@ -69,6 +87,22 @@ begin
 	output <= (inputA or inputB or inputC);
 end rtl;
 
+-- OR gate
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity OR_gate is
+	port( inputA: 	in std_logic;
+			inputB:	in std_logic;
+			output:	out std_logic
+	);
+end OR_gate;
+
+architecture rtl of OR_gate is
+begin
+	output <= (inputA or inputB);
+end rtl;
 
 -- XOR gate
 library ieee;
