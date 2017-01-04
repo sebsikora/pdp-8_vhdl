@@ -1,5 +1,5 @@
 Analysis & Synthesis report for state_generator
-Wed Jan  4 17:49:21 2017
+Wed Jan  4 18:53:25 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -15,11 +15,17 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Logic Cells Representing Combinational Loops
   9. General Register Statistics
- 10. Port Connectivity Checks: "counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2"
- 11. Port Connectivity Checks: "counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1"
- 12. Port Connectivity Checks: "counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0"
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+ 10. Port Connectivity Checks: "t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2"
+ 11. Port Connectivity Checks: "t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1"
+ 12. Port Connectivity Checks: "t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0"
+ 13. Port Connectivity Checks: "t_state_generator:t_state_generator_0"
+ 14. Port Connectivity Checks: "s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_3"
+ 15. Port Connectivity Checks: "s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_2"
+ 16. Port Connectivity Checks: "s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1"
+ 17. Port Connectivity Checks: "s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_0|ms_jk_ff:ms_jk_ff_0"
+ 18. Port Connectivity Checks: "s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_0"
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -45,16 +51,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jan  4 17:49:21 2017           ;
+; Analysis & Synthesis Status        ; Successful - Wed Jan  4 18:53:25 2017           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; state_generator                                 ;
-; Top-level Entity Name              ; t_state_generator                               ;
+; Top-level Entity Name              ; state_generator                                 ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 21                                              ;
-;     Total combinational functions  ; 21                                              ;
+; Total logic elements               ; 37                                              ;
+;     Total combinational functions  ; 37                                              ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 14                                              ;
+; Total pins                         ; 19                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -68,7 +74,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C5AT144A7       ;                    ;
-; Top-level entity name                                                      ; t_state_generator  ; state_generator    ;
+; Top-level entity name                                                      ; state_generator    ; state_generator    ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -158,90 +164,124 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                       ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
-; ../ms_jk_ff/ms_jk_ff.vhd         ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd                 ;         ;
-; ../ms_jk_ff/basic_gates.vhd      ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd              ;         ;
-; t_state_generator.vhd            ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/state_generator/t_state_generator.vhd ;         ;
-; counter_3_bit.vhd                ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/state_generator/counter_3_bit.vhd     ;         ;
-; decoder_3_to_6.vhd               ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/state_generator/decoder_3_to_6.vhd    ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++---------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path      ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                ; Library ;
++---------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
+; s_state_generator.vhd                 ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/state_generator/s_state_generator.vhd ;         ;
+; ../ms_jk_ff/ms_jk_ff.vhd              ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd                 ;         ;
+; ../ms_jk_ff/basic_gates.vhd           ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd              ;         ;
+; ../12_bit_register/register_1_bit.vhd ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/12_bit_register/register_1_bit.vhd    ;         ;
+; t_state_generator.vhd                 ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/state_generator/t_state_generator.vhd ;         ;
+; counter_3_bit.vhd                     ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/state_generator/counter_3_bit.vhd     ;         ;
+; decoder_3_to_6.vhd                    ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/state_generator/decoder_3_to_6.vhd    ;         ;
+; state_generator.vhd                   ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/state_generator/state_generator.vhd   ;         ;
++---------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                           ;
-+---------------------------------------------+-------------------------------------------------------------------------+
-; Resource                                    ; Usage                                                                   ;
-+---------------------------------------------+-------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 21                                                                      ;
-;                                             ;                                                                         ;
-; Total combinational functions               ; 21                                                                      ;
-; Logic element usage by number of LUT inputs ;                                                                         ;
-;     -- 4 input functions                    ; 8                                                                       ;
-;     -- 3 input functions                    ; 13                                                                      ;
-;     -- <=2 input functions                  ; 0                                                                       ;
-;                                             ;                                                                         ;
-; Logic elements by mode                      ;                                                                         ;
-;     -- normal mode                          ; 21                                                                      ;
-;     -- arithmetic mode                      ; 0                                                                       ;
-;                                             ;                                                                         ;
-; Total registers                             ; 0                                                                       ;
-;     -- Dedicated logic registers            ; 0                                                                       ;
-;     -- I/O registers                        ; 0                                                                       ;
-;                                             ;                                                                         ;
-; I/O pins                                    ; 14                                                                      ;
-; Embedded Multiplier 9-bit elements          ; 0                                                                       ;
-; Maximum fan-out node                        ; counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ;
-; Maximum fan-out                             ; 13                                                                      ;
-; Total fan-out                               ; 77                                                                      ;
-; Average fan-out                             ; 2.20                                                                    ;
-+---------------------------------------------+-------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                                                                 ;
++---------------------------------------------+---------------------------------------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                                                         ;
++---------------------------------------------+---------------------------------------------------------------------------------------------------------------+
+; Estimated Total logic elements              ; 37                                                                                                            ;
+;                                             ;                                                                                                               ;
+; Total combinational functions               ; 37                                                                                                            ;
+; Logic element usage by number of LUT inputs ;                                                                                                               ;
+;     -- 4 input functions                    ; 17                                                                                                            ;
+;     -- 3 input functions                    ; 17                                                                                                            ;
+;     -- <=2 input functions                  ; 3                                                                                                             ;
+;                                             ;                                                                                                               ;
+; Logic elements by mode                      ;                                                                                                               ;
+;     -- normal mode                          ; 37                                                                                                            ;
+;     -- arithmetic mode                      ; 0                                                                                                             ;
+;                                             ;                                                                                                               ;
+; Total registers                             ; 0                                                                                                             ;
+;     -- Dedicated logic registers            ; 0                                                                                                             ;
+;     -- I/O registers                        ; 0                                                                                                             ;
+;                                             ;                                                                                                               ;
+; I/O pins                                    ; 19                                                                                                            ;
+; Embedded Multiplier 9-bit elements          ; 0                                                                                                             ;
+; Maximum fan-out node                        ; t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ;
+; Maximum fan-out                             ; 12                                                                                                            ;
+; Total fan-out                               ; 135                                                                                                           ;
+; Average fan-out                             ; 2.41                                                                                                          ;
++---------------------------------------------+---------------------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                 ;
-+--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node           ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                               ; Library Name ;
-+--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+--------------+
-; |t_state_generator                   ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |t_state_generator                                                                ; work         ;
-;    |OR_gate:or_3|                    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t_state_generator|OR_gate:or_3                                                   ; work         ;
-;    |counter_3_bit:counter_3_0|       ; 12 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t_state_generator|counter_3_bit:counter_3_0                                      ; work         ;
-;       |ms_jk_ff:ms_jk_ff_0|          ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t_state_generator|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0                  ; work         ;
-;          |NAND_gate:nand_1|          ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t_state_generator|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1 ; work         ;
-;          |NAND_gate:nand_5|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t_state_generator|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5 ; work         ;
-;       |ms_jk_ff:ms_jk_ff_1|          ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t_state_generator|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1                  ; work         ;
-;          |NAND_gate:nand_1|          ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t_state_generator|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1 ; work         ;
-;          |NAND_gate:nand_5|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t_state_generator|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5 ; work         ;
-;       |ms_jk_ff:ms_jk_ff_2|          ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t_state_generator|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2                  ; work         ;
-;          |NAND_gate:nand_1|          ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t_state_generator|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1 ; work         ;
-;          |NAND_gate:nand_5|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t_state_generator|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5 ; work         ;
-;    |decoder_3_to_6:decoder_3_to_6_0| ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t_state_generator|decoder_3_to_6:decoder_3_to_6_0                                ; work         ;
-;       |AND_3_gate:and_3_0|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t_state_generator|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_0             ; work         ;
-;       |AND_3_gate:and_3_1|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t_state_generator|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_1             ; work         ;
-;       |AND_3_gate:and_3_2|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t_state_generator|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_2             ; work         ;
-;       |AND_3_gate:and_3_3|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t_state_generator|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_3             ; work         ;
-;       |AND_3_gate:and_3_4|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t_state_generator|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_4             ; work         ;
-;       |AND_3_gate:and_3_5|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t_state_generator|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_5             ; work         ;
-+--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                            ;
++--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                 ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                    ; Library Name ;
++--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+--------------+
+; |state_generator                           ; 37 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 19   ; 0            ; |state_generator                                                                                                       ; work         ;
+;    |s_state_generator:s_state_generator_0| ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|s_state_generator:s_state_generator_0                                                                 ; work         ;
+;       |AND_gate:and_2|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|s_state_generator:s_state_generator_0|AND_gate:and_2                                                  ; work         ;
+;       |AND_gate:and_4|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|s_state_generator:s_state_generator_0|AND_gate:and_4                                                  ; work         ;
+;       |OR_gate:or_3|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|s_state_generator:s_state_generator_0|OR_gate:or_3                                                    ; work         ;
+;       |OR_gate:or_4|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|s_state_generator:s_state_generator_0|OR_gate:or_4                                                    ; work         ;
+;       |OR_gate:or_5|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|s_state_generator:s_state_generator_0|OR_gate:or_5                                                    ; work         ;
+;       |register_1_bit:reg_1_bit_0|         ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_0                                      ; work         ;
+;          |ms_jk_ff:ms_jk_ff_0|             ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_0|ms_jk_ff:ms_jk_ff_0                  ; work         ;
+;             |NAND_gate:nand_1|             ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1 ; work         ;
+;             |NAND_gate:nand_5|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5 ; work         ;
+;       |register_1_bit:reg_1_bit_1|         ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1                                      ; work         ;
+;          |ms_jk_ff:ms_jk_ff_0|             ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1|ms_jk_ff:ms_jk_ff_0                  ; work         ;
+;             |NAND_gate:nand_1|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1 ; work         ;
+;             |NAND_gate:nand_5|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5 ; work         ;
+;       |register_1_bit:reg_1_bit_2|         ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_2                                      ; work         ;
+;          |ms_jk_ff:ms_jk_ff_0|             ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_2|ms_jk_ff:ms_jk_ff_0                  ; work         ;
+;             |NAND_gate:nand_1|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_2|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1 ; work         ;
+;             |NAND_gate:nand_5|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_2|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5 ; work         ;
+;       |register_1_bit:reg_1_bit_3|         ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_3                                      ; work         ;
+;          |ms_jk_ff:ms_jk_ff_0|             ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_3|ms_jk_ff:ms_jk_ff_0                  ; work         ;
+;             |NAND_gate:nand_1|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_3|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1 ; work         ;
+;             |NAND_gate:nand_5|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_3|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5 ; work         ;
+;    |t_state_generator:t_state_generator_0| ; 19 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|t_state_generator:t_state_generator_0                                                                 ; work         ;
+;       |OR_gate:or_2|                       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|t_state_generator:t_state_generator_0|OR_gate:or_2                                                    ; work         ;
+;       |counter_3_bit:counter_3_0|          ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0                                       ; work         ;
+;          |ms_jk_ff:ms_jk_ff_0|             ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0                   ; work         ;
+;             |NAND_gate:nand_1|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1  ; work         ;
+;             |NAND_gate:nand_5|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5  ; work         ;
+;          |ms_jk_ff:ms_jk_ff_1|             ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1                   ; work         ;
+;             |NAND_gate:nand_1|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1  ; work         ;
+;             |NAND_gate:nand_5|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5  ; work         ;
+;          |ms_jk_ff:ms_jk_ff_2|             ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2                   ; work         ;
+;             |NAND_gate:nand_1|             ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1  ; work         ;
+;             |NAND_gate:nand_5|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5  ; work         ;
+;       |decoder_3_to_6:decoder_3_to_6_0|    ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|t_state_generator:t_state_generator_0|decoder_3_to_6:decoder_3_to_6_0                                 ; work         ;
+;          |AND_3_gate:and_3_0|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|t_state_generator:t_state_generator_0|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_0              ; work         ;
+;          |AND_3_gate:and_3_1|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|t_state_generator:t_state_generator_0|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_1              ; work         ;
+;          |AND_3_gate:and_3_2|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|t_state_generator:t_state_generator_0|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_2              ; work         ;
+;          |AND_3_gate:and_3_3|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|t_state_generator:t_state_generator_0|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_3              ; work         ;
+;          |AND_3_gate:and_3_4|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|t_state_generator:t_state_generator_0|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_4              ; work         ;
+;          |AND_3_gate:and_3_5|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |state_generator|t_state_generator:t_state_generator_0|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_5              ; work         ;
++--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------+
-; Logic Cells Representing Combinational Loops                                ;
-+-------------------------------------------------------------------------+---+
-; Logic Cell Name                                                         ;   ;
-+-------------------------------------------------------------------------+---+
-; counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~0 ;   ;
-; counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~0 ;   ;
-; counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~0 ;   ;
-; counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1|output~0 ;   ;
-; counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~0 ;   ;
-; counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1|output~0 ;   ;
-; Number of logic cells representing combinational loops                  ; 6 ;
-+-------------------------------------------------------------------------+---+
++---------------------------------------------------------------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops                                                                        ;
++----------------------------------------------------------------------------------------------------------------+----+
+; Logic Cell Name                                                                                                ;    ;
++----------------------------------------------------------------------------------------------------------------+----+
+; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~0 ;    ;
+; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~0 ;    ;
+; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_2|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~0 ;    ;
+; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_3|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~0 ;    ;
+; t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~0  ;    ;
+; t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~0  ;    ;
+; t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~0  ;    ;
+; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~0 ;    ;
+; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~0 ;    ;
+; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_2|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~0 ;    ;
+; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_3|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~0 ;    ;
+; t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1|output~0  ;    ;
+; t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~0  ;    ;
+; t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1|output~0  ;    ;
+; Number of logic cells representing combinational loops                                                         ; 14 ;
++----------------------------------------------------------------------------------------------------------------+----+
 Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -261,7 +301,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 
 
 +-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2"                                       ;
+; Port Connectivity Checks: "t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2" ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port  ; Type   ; Severity ; Details                                                                             ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
@@ -270,7 +310,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 
 
 +-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1"                                       ;
+; Port Connectivity Checks: "t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1" ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port  ; Type   ; Severity ; Details                                                                             ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
@@ -279,13 +319,67 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 
 
 +-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0"                                       ;
+; Port Connectivity Checks: "t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0" ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port  ; Type   ; Severity ; Details                                                                             ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 ; k     ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; not_q ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "t_state_generator:t_state_generator_0" ;
++------+-------+----------+-----------------------------------------+
+; Port ; Type  ; Severity ; Details                                 ;
++------+-------+----------+-----------------------------------------+
+; clr  ; Input ; Info     ; Stuck at GND                            ;
++------+-------+----------+-----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_3" ;
++------+-------+----------+--------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                            ;
++------+-------+----------+--------------------------------------------------------------------+
+; load ; Input ; Info     ; Stuck at VCC                                                       ;
++------+-------+----------+--------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_2" ;
++------+-------+----------+--------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                            ;
++------+-------+----------+--------------------------------------------------------------------+
+; load ; Input ; Info     ; Stuck at VCC                                                       ;
++------+-------+----------+--------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1" ;
++------+-------+----------+--------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                            ;
++------+-------+----------+--------------------------------------------------------------------+
+; load ; Input ; Info     ; Stuck at VCC                                                       ;
++------+-------+----------+--------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_0|ms_jk_ff:ms_jk_ff_0" ;
++-------+--------+----------+--------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                              ;
++-------+--------+----------+--------------------------------------------------------------------------------------+
+; not_q ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.  ;
++-------+--------+----------+--------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_0" ;
++------+-------+----------+--------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                            ;
++------+-------+----------+--------------------------------------------------------------------+
+; load ; Input ; Info     ; Stuck at VCC                                                       ;
++------+-------+----------+--------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -303,12 +397,9 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Jan  4 17:49:19 2017
+    Info: Processing started: Wed Jan  4 18:53:22 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off state_generator -c state_generator
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file state_generator.vhd
-    Info (12022): Found design unit 1: state_generator-rtl
-    Info (12023): Found entity 1: state_generator
 Info (12021): Found 2 design units, including 1 entities, in source file s_state_generator.vhd
     Info (12022): Found design unit 1: s_state_generator-rtl
     Info (12023): Found entity 1: s_state_generator
@@ -342,31 +433,38 @@ Info (12021): Found 2 design units, including 1 entities, in source file counter
 Info (12021): Found 2 design units, including 1 entities, in source file decoder_3_to_6.vhd
     Info (12022): Found design unit 1: decoder_3_to_6-rtl
     Info (12023): Found entity 1: decoder_3_to_6
-Info (12127): Elaborating entity "t_state_generator" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at t_state_generator.vhd(7): used implicit default value for signal "next_state" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Info (12128): Elaborating entity "AND_gate" for hierarchy "AND_gate:and_0"
-Info (12128): Elaborating entity "OR_gate" for hierarchy "OR_gate:or_0"
-Info (12128): Elaborating entity "counter_3_bit" for hierarchy "counter_3_bit:counter_3_0"
+Info (12021): Found 2 design units, including 1 entities, in source file state_generator.vhd
+    Info (12022): Found design unit 1: state_generator-rtl
+    Info (12023): Found entity 1: state_generator
+Info (12127): Elaborating entity "state_generator" for the top level hierarchy
+Info (12128): Elaborating entity "s_state_generator" for hierarchy "s_state_generator:s_state_generator_0"
+Info (12128): Elaborating entity "AND_gate" for hierarchy "s_state_generator:s_state_generator_0|AND_gate:and_0"
+Info (12128): Elaborating entity "OR_gate" for hierarchy "s_state_generator:s_state_generator_0|OR_gate:or_0"
+Info (12128): Elaborating entity "register_1_bit" for hierarchy "s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_0"
+Warning (10036): Verilog HDL or VHDL warning at register_1_bit.vhd(28): object "not_q" assigned a value but never read
+Info (12128): Elaborating entity "ms_jk_ff" for hierarchy "s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_0|ms_jk_ff:ms_jk_ff_0"
+Info (12128): Elaborating entity "NAND_3_gate" for hierarchy "s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_0|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_1"
+Info (12128): Elaborating entity "NAND_gate" for hierarchy "s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1"
+Info (12128): Elaborating entity "t_state_generator" for hierarchy "t_state_generator:t_state_generator_0"
+Info (12128): Elaborating entity "counter_3_bit" for hierarchy "t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0"
 Warning (10036): Verilog HDL or VHDL warning at counter_3_bit.vhd(36): object "not_q" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at counter_3_bit.vhd(40): object "not_ff_output_0" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at counter_3_bit.vhd(41): object "not_ff_output_1" assigned a value but never read
-Info (12128): Elaborating entity "ms_jk_ff" for hierarchy "counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0"
-Info (12128): Elaborating entity "NAND_3_gate" for hierarchy "counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_1"
-Info (12128): Elaborating entity "NAND_gate" for hierarchy "counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1"
-Info (12128): Elaborating entity "decoder_3_to_6" for hierarchy "decoder_3_to_6:decoder_3_to_6_0"
-Info (12128): Elaborating entity "AND_3_gate" for hierarchy "decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_0"
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "next_state" is stuck at GND
+Info (12128): Elaborating entity "decoder_3_to_6" for hierarchy "t_state_generator:t_state_generator_0|decoder_3_to_6:decoder_3_to_6_0"
+Info (12128): Elaborating entity "AND_3_gate" for hierarchy "t_state_generator:t_state_generator_0|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_0"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 35 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 7 output pins
-    Info (21061): Implemented 21 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 729 megabytes
-    Info: Processing ended: Wed Jan  4 17:49:21 2017
-    Info: Elapsed time: 00:00:02
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "IR[2]"
+    Warning (15610): No output dependent on input pin "IR[4]"
+Info (21057): Implemented 56 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
+    Info (21059): Implemented 10 output pins
+    Info (21061): Implemented 37 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 733 megabytes
+    Info: Processing ended: Wed Jan  4 18:53:25 2017
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
 

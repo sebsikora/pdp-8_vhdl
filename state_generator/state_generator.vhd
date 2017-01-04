@@ -32,6 +32,15 @@ architecture rtl of state_generator is
 				 t_states:						out std_logic_vector(5 downto 0)
 		);
 	end component;
+	
+	signal s_state_signals:					std_logic_vector(3 downto 0);
+	signal next_state:						std_logic;
+	
 	begin
+		
+		s_state_generator_0:					s_state_generator port map (irq => irq, IR => IR, not_reset => not_reset, next_state => next_state, start => start, clk => clk, s_states => s_state_signals);
+		t_state_generator_0:					t_state_generator port map (not_reset => not_reset, clr => '0', next_state => next_state, clk => clk, s_states => s_state_signals, t_states => t_states);
+		
+		s_states(3 downto 0) <= s_state_signals(3 downto 0);
 		
 end rtl;

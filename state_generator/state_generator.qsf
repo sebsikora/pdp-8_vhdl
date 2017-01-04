@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C5AT144A7
-set_global_assignment -name TOP_LEVEL_ENTITY t_state_generator
+set_global_assignment -name TOP_LEVEL_ENTITY state_generator
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:21:01  JANUARY 04, 2017"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
@@ -49,7 +49,6 @@ set_global_assignment -name DEVICE_FILTER_PIN_COUNT 144
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
-set_global_assignment -name VHDL_FILE state_generator.vhd
 set_global_assignment -name VHDL_FILE s_state_generator.vhd
 set_global_assignment -name VHDL_FILE ../ms_jk_ff/ms_jk_ff.vhd
 set_global_assignment -name VHDL_FILE ../ms_jk_ff/basic_gates.vhd
@@ -57,6 +56,7 @@ set_global_assignment -name VHDL_FILE ../12_bit_register/register_1_bit.vhd
 set_global_assignment -name VHDL_FILE t_state_generator.vhd
 set_global_assignment -name VHDL_FILE counter_3_bit.vhd
 set_global_assignment -name VHDL_FILE decoder_3_to_6.vhd
+set_global_assignment -name VHDL_FILE state_generator.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

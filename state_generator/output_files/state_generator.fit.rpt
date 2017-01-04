@@ -1,5 +1,5 @@
 Fitter report for state_generator
-Wed Jan  4 17:49:26 2017
+Wed Jan  4 18:53:30 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -33,8 +33,10 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  25. LAB Distinct Inputs
  26. Fitter Device Options
  27. Operating Settings and Conditions
- 28. Fitter Messages
- 29. Fitter Suppressed Messages
+ 28. Estimated Delay Added for Hold Timing Summary
+ 29. Estimated Delay Added for Hold Timing Details
+ 30. Fitter Messages
+ 31. Fitter Suppressed Messages
 
 
 
@@ -60,18 +62,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Wed Jan  4 17:49:26 2017           ;
+; Fitter Status                      ; Successful - Wed Jan  4 18:53:30 2017           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; state_generator                                 ;
-; Top-level Entity Name              ; t_state_generator                               ;
+; Top-level Entity Name              ; state_generator                                 ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C5AT144A7                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 21 / 4,608 ( < 1 % )                            ;
-;     Total combinational functions  ; 21 / 4,608 ( < 1 % )                            ;
+; Total logic elements               ; 37 / 4,608 ( < 1 % )                            ;
+;     Total combinational functions  ; 37 / 4,608 ( < 1 % )                            ;
 ;     Dedicated logic registers      ; 0 / 4,608 ( 0 % )                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 14 / 89 ( 16 % )                                ;
+; Total pins                         ; 19 / 89 ( 21 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 119,808 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 26 ( 0 % )                                  ;
@@ -146,8 +148,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 40 ( 0.00 % )      ;
-;     -- Achieved     ; 0 / 40 ( 0.00 % )      ;
+;     -- Requested    ; 0 / 61 ( 0.00 % )      ;
+;     -- Achieved     ; 0 / 61 ( 0.00 % )      ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -170,7 +172,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 37      ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 58      ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -186,29 +188,29 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/state_gen
 +---------------------------------------------+----------------------+
 ; Resource                                    ; Usage                ;
 +---------------------------------------------+----------------------+
-; Total logic elements                        ; 21 / 4,608 ( < 1 % ) ;
-;     -- Combinational with no register       ; 21                   ;
+; Total logic elements                        ; 37 / 4,608 ( < 1 % ) ;
+;     -- Combinational with no register       ; 37                   ;
 ;     -- Register only                        ; 0                    ;
 ;     -- Combinational with a register        ; 0                    ;
 ;                                             ;                      ;
 ; Logic element usage by number of LUT inputs ;                      ;
-;     -- 4 input functions                    ; 8                    ;
-;     -- 3 input functions                    ; 13                   ;
-;     -- <=2 input functions                  ; 0                    ;
+;     -- 4 input functions                    ; 17                   ;
+;     -- 3 input functions                    ; 17                   ;
+;     -- <=2 input functions                  ; 3                    ;
 ;     -- Register only                        ; 0                    ;
 ;                                             ;                      ;
 ; Logic elements by mode                      ;                      ;
-;     -- normal mode                          ; 21                   ;
+;     -- normal mode                          ; 37                   ;
 ;     -- arithmetic mode                      ; 0                    ;
 ;                                             ;                      ;
 ; Total registers*                            ; 0 / 4,851 ( 0 % )    ;
 ;     -- Dedicated logic registers            ; 0 / 4,608 ( 0 % )    ;
 ;     -- I/O registers                        ; 0 / 243 ( 0 % )      ;
 ;                                             ;                      ;
-; Total LABs:  partially or completely used   ; 2 / 288 ( < 1 % )    ;
+; Total LABs:  partially or completely used   ; 3 / 288 ( 1 % )      ;
 ; Virtual pins                                ; 0                    ;
-; I/O pins                                    ; 14 / 89 ( 16 % )     ;
-;     -- Clock pins                           ; 2 / 4 ( 50 % )       ;
+; I/O pins                                    ; 19 / 89 ( 21 % )     ;
+;     -- Clock pins                           ; 1 / 4 ( 25 % )       ;
 ;                                             ;                      ;
 ; Global signals                              ; 1                    ;
 ; M4Ks                                        ; 0 / 26 ( 0 % )       ;
@@ -222,10 +224,10 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/state_gen
 ; CRC blocks                                  ; 0 / 1 ( 0 % )        ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%         ;
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%         ;
-; Maximum fan-out                             ; 13                   ;
-; Highest non-global fan-out                  ; 13                   ;
-; Total fan-out                               ; 78                   ;
-; Average fan-out                             ; 2.00                 ;
+; Maximum fan-out                             ; 12                   ;
+; Highest non-global fan-out                  ; 12                   ;
+; Total fan-out                               ; 136                  ;
+; Average fan-out                             ; 2.27                 ;
 +---------------------------------------------+----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -238,28 +240,28 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/state_gen
 +---------------------------------------------+---------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                 ; Low                            ;
 ;                                             ;                     ;                                ;
-; Total logic elements                        ; 21 / 4608 ( < 1 % ) ; 0 / 4608 ( 0 % )               ;
-;     -- Combinational with no register       ; 21                  ; 0                              ;
+; Total logic elements                        ; 37 / 4608 ( < 1 % ) ; 0 / 4608 ( 0 % )               ;
+;     -- Combinational with no register       ; 37                  ; 0                              ;
 ;     -- Register only                        ; 0                   ; 0                              ;
 ;     -- Combinational with a register        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic element usage by number of LUT inputs ;                     ;                                ;
-;     -- 4 input functions                    ; 8                   ; 0                              ;
-;     -- 3 input functions                    ; 13                  ; 0                              ;
-;     -- <=2 input functions                  ; 0                   ; 0                              ;
+;     -- 4 input functions                    ; 17                  ; 0                              ;
+;     -- 3 input functions                    ; 17                  ; 0                              ;
+;     -- <=2 input functions                  ; 3                   ; 0                              ;
 ;     -- Register only                        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic elements by mode                      ;                     ;                                ;
-;     -- normal mode                          ; 21                  ; 0                              ;
+;     -- normal mode                          ; 37                  ; 0                              ;
 ;     -- arithmetic mode                      ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Total registers                             ; 0                   ; 0                              ;
 ;     -- Dedicated logic registers            ; 0 / 4608 ( 0 % )    ; 0 / 4608 ( 0 % )               ;
 ;                                             ;                     ;                                ;
-; Total LABs:  partially or completely used   ; 2 / 288 ( < 1 % )   ; 0 / 288 ( 0 % )                ;
+; Total LABs:  partially or completely used   ; 3 / 288 ( 1 % )     ; 0 / 288 ( 0 % )                ;
 ;                                             ;                     ;                                ;
 ; Virtual pins                                ; 0                   ; 0                              ;
-; I/O pins                                    ; 14                  ; 0                              ;
+; I/O pins                                    ; 19                  ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 26 ( 0 % )      ; 0 / 26 ( 0 % )                 ;
 ; Total memory bits                           ; 0                   ; 0                              ;
 ; Total RAM block bits                        ; 0                   ; 0                              ;
@@ -272,7 +274,7 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/state_gen
 ;     -- Registered Output Connections        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Internal Connections                        ;                     ;                                ;
-;     -- Total Connections                    ; 78                  ; 0                              ;
+;     -- Total Connections                    ; 136                 ; 0                              ;
 ;     -- Registered Connections               ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; External Connections                        ;                     ;                                ;
@@ -280,8 +282,8 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/state_gen
 ;     -- hard_block:auto_generated_inst       ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Partition Interface                         ;                     ;                                ;
-;     -- Input Ports                          ; 7                   ; 0                              ;
-;     -- Output Ports                         ; 7                   ; 0                              ;
+;     -- Input Ports                          ; 9                   ; 0                              ;
+;     -- Output Ports                         ; 10                  ; 0                              ;
 ;     -- Bidir Ports                          ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Registered Ports                            ;                     ;                                ;
@@ -300,19 +302,21 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/state_gen
 +---------------------------------------------+---------------------+--------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Input Pins                                                                                                                                                                                                                                                        ;
-+-------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; Name        ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
-+-------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; clk         ; 17    ; 1        ; 0            ; 6            ; 0           ; 5                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; clr         ; 25    ; 1        ; 0            ; 5            ; 1           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; not_reset   ; 18    ; 1        ; 0            ; 6            ; 1           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; s_states[0] ; 27    ; 1        ; 0            ; 5            ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; s_states[1] ; 21    ; 1        ; 0            ; 6            ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; s_states[2] ; 26    ; 1        ; 0            ; 5            ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; s_states[3] ; 22    ; 1        ; 0            ; 6            ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-+-------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                                                                                                                                      ;
++-----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+; Name      ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
++-----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+; IR[0]     ; 44    ; 4        ; 3            ; 0            ; 1           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; IR[1]     ; 88    ; 3        ; 28           ; 7            ; 3           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; IR[2]     ; 51    ; 4        ; 7            ; 0            ; 2           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; IR[3]     ; 89    ; 3        ; 28           ; 7            ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; IR[4]     ; 144   ; 2        ; 1            ; 14           ; 3           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; clk       ; 30    ; 1        ; 0            ; 2            ; 2           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; irq       ; 43    ; 4        ; 3            ; 0            ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; not_reset ; 45    ; 4        ; 3            ; 0            ; 0           ; 7                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; start     ; 32    ; 1        ; 0            ; 2            ; 4           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
++-----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -320,12 +324,15 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/state_gen
 +-------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 ; Name        ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
 +-------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; next_state  ; 129   ; 2        ; 12           ; 14           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; t_states[0] ; 8     ; 1        ; 0            ; 11           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; t_states[1] ; 143   ; 2        ; 1            ; 14           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; t_states[2] ; 7     ; 1        ; 0            ; 11           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; s_states[0] ; 42    ; 4        ; 1            ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; s_states[1] ; 41    ; 4        ; 1            ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; s_states[2] ; 40    ; 4        ; 1            ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; s_states[3] ; 31    ; 1        ; 0            ; 2            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; t_states[0] ; 26    ; 1        ; 0            ; 5            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; t_states[1] ; 25    ; 1        ; 0            ; 5            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; t_states[2] ; 27    ; 1        ; 0            ; 5            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 ; t_states[3] ; 24    ; 1        ; 0            ; 5            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; t_states[4] ; 144   ; 2        ; 1            ; 14           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; t_states[4] ; 28    ; 1        ; 0            ; 4            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 ; t_states[5] ; 9     ; 1        ; 0            ; 11           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 +-------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
@@ -335,10 +342,10 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/state_gen
 +----------+------------------+---------------+--------------+
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
-; 1        ; 13 / 19 ( 68 % ) ; 3.3V          ; --           ;
-; 2        ; 3 / 23 ( 13 % )  ; 3.3V          ; --           ;
-; 3        ; 1 / 23 ( 4 % )   ; 3.3V          ; --           ;
-; 4        ; 0 / 24 ( 0 % )   ; 3.3V          ; --           ;
+; 1        ; 11 / 19 ( 58 % ) ; 3.3V          ; --           ;
+; 2        ; 1 / 23 ( 4 % )   ; 3.3V          ; --           ;
+; 3        ; 3 / 23 ( 13 % )  ; 3.3V          ; --           ;
+; 4        ; 7 / 24 ( 29 % )  ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
 
 
@@ -353,8 +360,8 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/state_gen
 ; 4        ; 3          ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 5        ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 6        ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 7        ; 10         ; 1        ; t_states[2]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 8        ; 11         ; 1        ; t_states[0]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 7        ; 10         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 8        ; 11         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 9        ; 12         ; 1        ; t_states[5]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 10       ; 13         ; 1        ; #TDO                                     ; output ;              ;         ; --         ;                 ; --       ; --           ;
 ; 11       ; 14         ; 1        ; #TMS                                     ; input  ;              ;         ; --         ;                 ; --       ; --           ;
@@ -363,22 +370,22 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/state_gen
 ; 14       ; 17         ; 1        ; ^DATA0                                   ; input  ;              ;         ; --         ;                 ; --       ; --           ;
 ; 15       ; 18         ; 1        ; ^DCLK                                    ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; 16       ; 19         ; 1        ; ^nCE                                     ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; 17       ; 20         ; 1        ; clk                                      ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 18       ; 21         ; 1        ; not_reset                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 17       ; 20         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 18       ; 21         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 19       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 20       ; 22         ; 1        ; ^nCONFIG                                 ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; 21       ; 23         ; 1        ; s_states[1]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 22       ; 24         ; 1        ; s_states[3]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 21       ; 23         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 22       ; 24         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 23       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 24       ; 25         ; 1        ; t_states[3]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 25       ; 26         ; 1        ; clr                                      ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 26       ; 27         ; 1        ; s_states[2]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 27       ; 28         ; 1        ; s_states[0]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 28       ; 32         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 25       ; 26         ; 1        ; t_states[1]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 26       ; 27         ; 1        ; t_states[0]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 27       ; 28         ; 1        ; t_states[2]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 28       ; 32         ; 1        ; t_states[4]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 29       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; 30       ; 40         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 31       ; 41         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 32       ; 42         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 30       ; 40         ; 1        ; clk                                      ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 31       ; 41         ; 1        ; s_states[3]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 32       ; 42         ; 1        ; start                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 33       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 34       ;            ;          ; GND_PLL1                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 35       ;            ;          ; VCCD_PLL1                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -386,18 +393,18 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/state_gen
 ; 37       ;            ;          ; VCCA_PLL1                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 38       ;            ;          ; GNDA_PLL1                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 39       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 40       ; 43         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 41       ; 44         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 42       ; 45         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 43       ; 46         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 44       ; 47         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 45       ; 48         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 40       ; 43         ; 4        ; s_states[2]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 41       ; 44         ; 4        ; s_states[1]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 42       ; 45         ; 4        ; s_states[0]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 43       ; 46         ; 4        ; irq                                      ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 44       ; 47         ; 4        ; IR[0]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 45       ; 48         ; 4        ; not_reset                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 46       ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 47       ; 49         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 48       ; 50         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 49       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 50       ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; 51       ; 52         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; 51       ; 52         ; 4        ; IR[2]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 52       ; 53         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 53       ; 57         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 54       ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -434,8 +441,8 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/state_gen
 ; 85       ; 102        ; 3        ; ^MSEL0                                   ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; 86       ; 103        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 87       ; 104        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 88       ; 105        ; 3        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; 89       ; 106        ; 3        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 88       ; 105        ; 3        ; IR[1]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 89       ; 106        ; 3        ; IR[3]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 90       ; 107        ; 3        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 91       ; 108        ; 3        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 92       ; 109        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -475,7 +482,7 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/state_gen
 ; 126      ; 145        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 127      ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 128      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 129      ; 148        ; 2        ; next_state                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 129      ; 148        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 130      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 131      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 132      ; 153        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
@@ -489,8 +496,8 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/state_gen
 ; 140      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 141      ; 166        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 142      ; 167        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 143      ; 168        ; 2        ; t_states[1]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 144      ; 169        ; 2        ; t_states[4]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 143      ; 168        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 144      ; 169        ; 2        ; IR[4]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 +----------+------------+----------+------------------------------------------+--------+--------------+---------+------------+-----------------+----------+--------------+
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
@@ -532,31 +539,54 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                   ;
-+--------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node           ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                               ; Library Name ;
-+--------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------+--------------+
-; |t_state_generator                   ; 21 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 14   ; 0            ; 21 (0)       ; 0 (0)             ; 0 (0)            ; |t_state_generator                                                                ; work         ;
-;    |OR_gate:or_3|                    ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |t_state_generator|OR_gate:or_3                                                   ; work         ;
-;    |counter_3_bit:counter_3_0|       ; 12 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (0)       ; 0 (0)             ; 0 (0)            ; |t_state_generator|counter_3_bit:counter_3_0                                      ; work         ;
-;       |ms_jk_ff:ms_jk_ff_0|          ; 3 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; |t_state_generator|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0                  ; work         ;
-;          |NAND_gate:nand_1|          ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |t_state_generator|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1 ; work         ;
-;          |NAND_gate:nand_5|          ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |t_state_generator|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5 ; work         ;
-;       |ms_jk_ff:ms_jk_ff_1|          ; 4 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; |t_state_generator|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1                  ; work         ;
-;          |NAND_gate:nand_1|          ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |t_state_generator|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1 ; work         ;
-;          |NAND_gate:nand_5|          ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |t_state_generator|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5 ; work         ;
-;       |ms_jk_ff:ms_jk_ff_2|          ; 5 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; |t_state_generator|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2                  ; work         ;
-;          |NAND_gate:nand_1|          ; 4 (4)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; |t_state_generator|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1 ; work         ;
-;          |NAND_gate:nand_5|          ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |t_state_generator|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5 ; work         ;
-;    |decoder_3_to_6:decoder_3_to_6_0| ; 6 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; |t_state_generator|decoder_3_to_6:decoder_3_to_6_0                                ; work         ;
-;       |AND_3_gate:and_3_0|           ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |t_state_generator|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_0             ; work         ;
-;       |AND_3_gate:and_3_1|           ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |t_state_generator|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_1             ; work         ;
-;       |AND_3_gate:and_3_2|           ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |t_state_generator|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_2             ; work         ;
-;       |AND_3_gate:and_3_3|           ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |t_state_generator|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_3             ; work         ;
-;       |AND_3_gate:and_3_4|           ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |t_state_generator|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_4             ; work         ;
-;       |AND_3_gate:and_3_5|           ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |t_state_generator|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_5             ; work         ;
-+--------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                              ;
++--------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                 ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                    ; Library Name ;
++--------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------+--------------+
+; |state_generator                           ; 37 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 19   ; 0            ; 37 (0)       ; 0 (0)             ; 0 (0)            ; |state_generator                                                                                                       ; work         ;
+;    |s_state_generator:s_state_generator_0| ; 18 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 18 (0)       ; 0 (0)             ; 0 (0)            ; |state_generator|s_state_generator:s_state_generator_0                                                                 ; work         ;
+;       |AND_gate:and_2|                     ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |state_generator|s_state_generator:s_state_generator_0|AND_gate:and_2                                                  ; work         ;
+;       |AND_gate:and_4|                     ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |state_generator|s_state_generator:s_state_generator_0|AND_gate:and_4                                                  ; work         ;
+;       |OR_gate:or_3|                       ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |state_generator|s_state_generator:s_state_generator_0|OR_gate:or_3                                                    ; work         ;
+;       |OR_gate:or_4|                       ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |state_generator|s_state_generator:s_state_generator_0|OR_gate:or_4                                                    ; work         ;
+;       |OR_gate:or_5|                       ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |state_generator|s_state_generator:s_state_generator_0|OR_gate:or_5                                                    ; work         ;
+;       |register_1_bit:reg_1_bit_0|         ; 4 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_0                                      ; work         ;
+;          |ms_jk_ff:ms_jk_ff_0|             ; 4 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_0|ms_jk_ff:ms_jk_ff_0                  ; work         ;
+;             |NAND_gate:nand_1|             ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1 ; work         ;
+;             |NAND_gate:nand_5|             ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5 ; work         ;
+;       |register_1_bit:reg_1_bit_1|         ; 3 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1                                      ; work         ;
+;          |ms_jk_ff:ms_jk_ff_0|             ; 3 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1|ms_jk_ff:ms_jk_ff_0                  ; work         ;
+;             |NAND_gate:nand_1|             ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1 ; work         ;
+;             |NAND_gate:nand_5|             ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5 ; work         ;
+;       |register_1_bit:reg_1_bit_2|         ; 3 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_2                                      ; work         ;
+;          |ms_jk_ff:ms_jk_ff_0|             ; 3 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_2|ms_jk_ff:ms_jk_ff_0                  ; work         ;
+;             |NAND_gate:nand_1|             ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_2|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1 ; work         ;
+;             |NAND_gate:nand_5|             ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_2|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5 ; work         ;
+;       |register_1_bit:reg_1_bit_3|         ; 3 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_3                                      ; work         ;
+;          |ms_jk_ff:ms_jk_ff_0|             ; 3 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_3|ms_jk_ff:ms_jk_ff_0                  ; work         ;
+;             |NAND_gate:nand_1|             ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_3|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1 ; work         ;
+;             |NAND_gate:nand_5|             ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |state_generator|s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_3|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5 ; work         ;
+;    |t_state_generator:t_state_generator_0| ; 19 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 19 (0)       ; 0 (0)             ; 0 (0)            ; |state_generator|t_state_generator:t_state_generator_0                                                                 ; work         ;
+;       |OR_gate:or_2|                       ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |state_generator|t_state_generator:t_state_generator_0|OR_gate:or_2                                                    ; work         ;
+;       |counter_3_bit:counter_3_0|          ; 10 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (0)       ; 0 (0)             ; 0 (0)            ; |state_generator|t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0                                       ; work         ;
+;          |ms_jk_ff:ms_jk_ff_0|             ; 3 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; |state_generator|t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0                   ; work         ;
+;             |NAND_gate:nand_1|             ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |state_generator|t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1  ; work         ;
+;             |NAND_gate:nand_5|             ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |state_generator|t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5  ; work         ;
+;          |ms_jk_ff:ms_jk_ff_1|             ; 3 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; |state_generator|t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1                   ; work         ;
+;             |NAND_gate:nand_1|             ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |state_generator|t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1  ; work         ;
+;             |NAND_gate:nand_5|             ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |state_generator|t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5  ; work         ;
+;          |ms_jk_ff:ms_jk_ff_2|             ; 4 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; |state_generator|t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2                   ; work         ;
+;             |NAND_gate:nand_1|             ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |state_generator|t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1  ; work         ;
+;             |NAND_gate:nand_5|             ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |state_generator|t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5  ; work         ;
+;       |decoder_3_to_6:decoder_3_to_6_0|    ; 6 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; |state_generator|t_state_generator:t_state_generator_0|decoder_3_to_6:decoder_3_to_6_0                                 ; work         ;
+;          |AND_3_gate:and_3_0|              ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |state_generator|t_state_generator:t_state_generator_0|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_0              ; work         ;
+;          |AND_3_gate:and_3_1|              ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |state_generator|t_state_generator:t_state_generator_0|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_1              ; work         ;
+;          |AND_3_gate:and_3_2|              ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |state_generator|t_state_generator:t_state_generator_0|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_2              ; work         ;
+;          |AND_3_gate:and_3_3|              ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |state_generator|t_state_generator:t_state_generator_0|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_3              ; work         ;
+;          |AND_3_gate:and_3_4|              ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |state_generator|t_state_generator:t_state_generator_0|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_4              ; work         ;
+;          |AND_3_gate:and_3_5|              ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |state_generator|t_state_generator:t_state_generator_0|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_5              ; work         ;
++--------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -565,86 +595,126 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------+----------+---------------+---------------+-----------------------+-----+
 ; Name        ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
 +-------------+----------+---------------+---------------+-----------------------+-----+
-; next_state  ; Output   ; --            ; --            ; --                    ; --  ;
+; IR[2]       ; Input    ; (0) 162 ps    ; (0) 162 ps    ; --                    ; --  ;
+; IR[4]       ; Input    ; (0) 162 ps    ; (0) 162 ps    ; --                    ; --  ;
+; s_states[0] ; Output   ; --            ; --            ; --                    ; --  ;
+; s_states[1] ; Output   ; --            ; --            ; --                    ; --  ;
+; s_states[2] ; Output   ; --            ; --            ; --                    ; --  ;
+; s_states[3] ; Output   ; --            ; --            ; --                    ; --  ;
 ; t_states[0] ; Output   ; --            ; --            ; --                    ; --  ;
 ; t_states[1] ; Output   ; --            ; --            ; --                    ; --  ;
 ; t_states[2] ; Output   ; --            ; --            ; --                    ; --  ;
 ; t_states[3] ; Output   ; --            ; --            ; --                    ; --  ;
 ; t_states[4] ; Output   ; --            ; --            ; --                    ; --  ;
 ; t_states[5] ; Output   ; --            ; --            ; --                    ; --  ;
+; start       ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
 ; clk         ; Input    ; (0) 163 ps    ; (0) 163 ps    ; --                    ; --  ;
-; not_reset   ; Input    ; (0) 163 ps    ; (0) 163 ps    ; --                    ; --  ;
-; s_states[1] ; Input    ; (0) 163 ps    ; (0) 163 ps    ; --                    ; --  ;
-; s_states[3] ; Input    ; (0) 163 ps    ; (0) 163 ps    ; --                    ; --  ;
-; s_states[0] ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
-; s_states[2] ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
-; clr         ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
+; not_reset   ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
+; irq         ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
+; IR[0]       ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
+; IR[1]       ; Input    ; (0) 163 ps    ; (0) 163 ps    ; --                    ; --  ;
+; IR[3]       ; Input    ; (0) 163 ps    ; (0) 163 ps    ; --                    ; --  ;
 +-------------+----------+---------------+---------------+-----------------------+-----+
 
 
-+--------------------------------------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                                               ;
-+--------------------------------------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                                                            ; Pad To Core Index ; Setting ;
-+--------------------------------------------------------------------------------+-------------------+---------+
-; clk                                                                            ;                   ;         ;
-; not_reset                                                                      ;                   ;         ;
-; s_states[1]                                                                    ;                   ;         ;
-; s_states[3]                                                                    ;                   ;         ;
-; s_states[0]                                                                    ;                   ;         ;
-;      - OR_gate:or_3|output~2                                                   ; 0                 ; 6       ;
-; s_states[2]                                                                    ;                   ;         ;
-;      - OR_gate:or_3|output~2                                                   ; 1                 ; 6       ;
-; clr                                                                            ;                   ;         ;
-;      - counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1|output~1 ; 0                 ; 6       ;
-;      - counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1|output~4 ; 0                 ; 6       ;
-;      - counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~1 ; 0                 ; 6       ;
-+--------------------------------------------------------------------------------+-------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                                                                                      ;
++-----------------------------------------------------------------------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                                                                                   ; Pad To Core Index ; Setting ;
++-----------------------------------------------------------------------------------------------------------------------+-------------------+---------+
+; IR[2]                                                                                                                 ;                   ;         ;
+; IR[4]                                                                                                                 ;                   ;         ;
+; start                                                                                                                 ;                   ;         ;
+;      - s_state_generator:s_state_generator_0|OR_gate:or_5|output                                                      ; 0                 ; 6       ;
+;      - s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~2 ; 0                 ; 6       ;
+; clk                                                                                                                   ;                   ;         ;
+;      - s_state_generator:s_state_generator_0|OR_gate:or_5|output                                                      ; 0                 ; 0       ;
+;      - t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1  ; 0                 ; 0       ;
+;      - t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1  ; 0                 ; 0       ;
+;      - t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; 0                 ; 0       ;
+;      - t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1|output~2  ; 0                 ; 0       ;
+;      - t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~1  ; 1                 ; 0       ;
+;      - t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~2  ; 0                 ; 0       ;
+;      - t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1|output~1  ; 0                 ; 0       ;
+; not_reset                                                                                                             ;                   ;         ;
+;      - s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~3 ; 0                 ; 6       ;
+;      - s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~1 ; 0                 ; 6       ;
+;      - s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_2|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~2 ; 0                 ; 6       ;
+;      - s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_3|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~1 ; 0                 ; 6       ;
+;      - t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1|output~3  ; 0                 ; 6       ;
+;      - t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~1  ; 0                 ; 6       ;
+;      - t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1|output~2  ; 0                 ; 6       ;
+; irq                                                                                                                   ;                   ;         ;
+;      - s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~1 ; 1                 ; 6       ;
+;      - s_state_generator:s_state_generator_0|OR_gate:or_4|output~0                                                    ; 1                 ; 6       ;
+; IR[0]                                                                                                                 ;                   ;         ;
+;      - s_state_generator:s_state_generator_0|AND_gate:and_4|output~0                                                  ; 0                 ; 6       ;
+;      - s_state_generator:s_state_generator_0|AND_gate:and_2|output~0                                                  ; 0                 ; 6       ;
+;      - s_state_generator:s_state_generator_0|OR_gate:or_3|output~0                                                    ; 0                 ; 6       ;
+; IR[1]                                                                                                                 ;                   ;         ;
+; IR[3]                                                                                                                 ;                   ;         ;
++-----------------------------------------------------------------------------------------------------------------------+-------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                     ;
-+------+----------+---------+----------------------+------------------+---------------------------+
-; Name ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+------+----------+---------+----------------------+------------------+---------------------------+
-; clk  ; PIN_17   ; 3       ; Global Clock         ; GCLK2            ; --                        ;
-+------+----------+---------+----------------------+------------------+---------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                                                 ;
++-----------------------------------------------------------+-----------------+---------+----------------------+------------------+---------------------------+
+; Name                                                      ; Location        ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-----------------------------------------------------------+-----------------+---------+----------------------+------------------+---------------------------+
+; s_state_generator:s_state_generator_0|OR_gate:or_5|output ; LCCOMB_X1_Y2_N8 ; 4       ; Global Clock         ; GCLK1            ; --                        ;
++-----------------------------------------------------------+-----------------+---------+----------------------+------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Non-Global High Fan-Out Signals                                                   ;
-+-------------------------------------------------------------------------+---------+
-; Name                                                                    ; Fan-Out ;
-+-------------------------------------------------------------------------+---------+
-; counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; 13      ;
-; counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1 ; 12      ;
-; counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1 ; 9       ;
-; not_reset                                                               ; 4       ;
-; clk                                                                     ; 4       ;
-; clr                                                                     ; 3       ;
-; counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1|output~4 ; 3       ;
-; OR_gate:or_3|output~3                                                   ; 3       ;
-; counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~2 ; 2       ;
-; counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1|output~3 ; 2       ;
-; decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_3|output~0             ; 2       ;
-; s_states[2]                                                             ; 1       ;
-; s_states[0]                                                             ; 1       ;
-; s_states[3]                                                             ; 1       ;
-; s_states[1]                                                             ; 1       ;
-; counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~1 ; 1       ;
-; counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1|output~3 ; 1       ;
-; counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1|output~2 ; 1       ;
-; counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1|output~1 ; 1       ;
-; counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1|output~2 ; 1       ;
-; counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1|output~1 ; 1       ;
-; OR_gate:or_3|output~2                                                   ; 1       ;
-; OR_gate:or_3|output~1                                                   ; 1       ;
-; decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_5|output~0             ; 1       ;
-; decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_4|output~0             ; 1       ;
-; decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_2|output               ; 1       ;
-; decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_1|output~0             ; 1       ;
-; decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_0|output~0             ; 1       ;
-+-------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                                                                          ;
++----------------------------------------------------------------------------------------------------------------+---------+
+; Name                                                                                                           ; Fan-Out ;
++----------------------------------------------------------------------------------------------------------------+---------+
+; t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1  ; 12      ;
+; t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; 11      ;
+; t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1  ; 11      ;
+; clk                                                                                                            ; 8       ;
+; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; 8       ;
+; not_reset                                                                                                      ; 7       ;
+; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_2|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; 7       ;
+; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_3|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; 5       ;
+; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; 5       ;
+; s_state_generator:s_state_generator_0|OR_gate:or_5|output                                                      ; 4       ;
+; t_state_generator:t_state_generator_0|OR_gate:or_2|output~3                                                    ; 4       ;
+; IR[1]                                                                                                          ; 3       ;
+; IR[0]                                                                                                          ; 3       ;
+; IR[3]                                                                                                          ; 2       ;
+; irq                                                                                                            ; 2       ;
+; start                                                                                                          ; 2       ;
+; t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1|output~2  ; 2       ;
+; t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~2  ; 2       ;
+; t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1|output~3  ; 2       ;
+; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_3|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~2 ; 2       ;
+; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_2|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~2 ; 2       ;
+; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~2 ; 2       ;
+; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~3 ; 2       ;
+; s_state_generator:s_state_generator_0|AND_gate:and_4|output~0                                                  ; 2       ;
+; t_state_generator:t_state_generator_0|OR_gate:or_2|output~1                                                    ; 2       ;
+; t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1|output~1  ; 1       ;
+; t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~1  ; 1       ;
+; t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1|output~2  ; 1       ;
+; t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1|output~1  ; 1       ;
+; s_state_generator:s_state_generator_0|OR_gate:or_4|output~0                                                    ; 1       ;
+; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_3|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~1 ; 1       ;
+; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_2|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~1 ; 1       ;
+; s_state_generator:s_state_generator_0|OR_gate:or_3|output~0                                                    ; 1       ;
+; s_state_generator:s_state_generator_0|AND_gate:and_2|output~0                                                  ; 1       ;
+; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~1 ; 1       ;
+; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~2 ; 1       ;
+; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~1 ; 1       ;
+; t_state_generator:t_state_generator_0|OR_gate:or_2|output~2                                                    ; 1       ;
+; t_state_generator:t_state_generator_0|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_5|output~0              ; 1       ;
+; t_state_generator:t_state_generator_0|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_4|output~0              ; 1       ;
+; t_state_generator:t_state_generator_0|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_3|output~0              ; 1       ;
+; t_state_generator:t_state_generator_0|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_2|output~0              ; 1       ;
+; t_state_generator:t_state_generator_0|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_1|output~0              ; 1       ;
+; t_state_generator:t_state_generator_0|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_0|output~0              ; 1       ;
++----------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -652,36 +722,36 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+-----------------------+
 ; Other Routing Resource Type ; Usage                 ;
 +-----------------------------+-----------------------+
-; Block interconnects         ; 21 / 15,666 ( < 1 % ) ;
-; C16 interconnects           ; 0 / 812 ( 0 % )       ;
-; C4 interconnects            ; 12 / 11,424 ( < 1 % ) ;
-; Direct links                ; 5 / 15,666 ( < 1 % )  ;
+; Block interconnects         ; 46 / 15,666 ( < 1 % ) ;
+; C16 interconnects           ; 1 / 812 ( < 1 % )     ;
+; C4 interconnects            ; 24 / 11,424 ( < 1 % ) ;
+; Direct links                ; 18 / 15,666 ( < 1 % ) ;
 ; Global clocks               ; 1 / 8 ( 13 % )        ;
-; Local interconnects         ; 15 / 4,608 ( < 1 % )  ;
-; R24 interconnects           ; 0 / 652 ( 0 % )       ;
-; R4 interconnects            ; 2 / 13,328 ( < 1 % )  ;
+; Local interconnects         ; 26 / 4,608 ( < 1 % )  ;
+; R24 interconnects           ; 2 / 652 ( < 1 % )     ;
+; R4 interconnects            ; 14 / 13,328 ( < 1 % ) ;
 +-----------------------------+-----------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +---------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 10.50) ; Number of LABs  (Total = 2) ;
+; Number of Logic Elements  (Average = 12.33) ; Number of LABs  (Total = 3) ;
 +---------------------------------------------+-----------------------------+
 ; 1                                           ; 0                           ;
 ; 2                                           ; 0                           ;
 ; 3                                           ; 0                           ;
 ; 4                                           ; 0                           ;
-; 5                                           ; 1                           ;
+; 5                                           ; 0                           ;
 ; 6                                           ; 0                           ;
-; 7                                           ; 0                           ;
+; 7                                           ; 1                           ;
 ; 8                                           ; 0                           ;
 ; 9                                           ; 0                           ;
 ; 10                                          ; 0                           ;
 ; 11                                          ; 0                           ;
 ; 12                                          ; 0                           ;
 ; 13                                          ; 0                           ;
-; 14                                          ; 0                           ;
+; 14                                          ; 1                           ;
 ; 15                                          ; 0                           ;
 ; 16                                          ; 1                           ;
 +---------------------------------------------+-----------------------------+
@@ -690,23 +760,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 10.50) ; Number of LABs  (Total = 2) ;
+; Number of Signals Sourced  (Average = 12.33) ; Number of LABs  (Total = 3) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
 ; 1                                            ; 0                           ;
 ; 2                                            ; 0                           ;
 ; 3                                            ; 0                           ;
 ; 4                                            ; 0                           ;
-; 5                                            ; 1                           ;
+; 5                                            ; 0                           ;
 ; 6                                            ; 0                           ;
-; 7                                            ; 0                           ;
+; 7                                            ; 1                           ;
 ; 8                                            ; 0                           ;
 ; 9                                            ; 0                           ;
 ; 10                                           ; 0                           ;
 ; 11                                           ; 0                           ;
 ; 12                                           ; 0                           ;
 ; 13                                           ; 0                           ;
-; 14                                           ; 0                           ;
+; 14                                           ; 1                           ;
 ; 15                                           ; 0                           ;
 ; 16                                           ; 1                           ;
 +----------------------------------------------+-----------------------------+
@@ -715,21 +785,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 4.50) ; Number of LABs  (Total = 2) ;
+; Number of Signals Sourced Out  (Average = 6.00) ; Number of LABs  (Total = 3) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
 ; 1                                               ; 0                           ;
 ; 2                                               ; 0                           ;
 ; 3                                               ; 0                           ;
 ; 4                                               ; 1                           ;
-; 5                                               ; 1                           ;
+; 5                                               ; 0                           ;
+; 6                                               ; 0                           ;
+; 7                                               ; 2                           ;
 +-------------------------------------------------+-----------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 5.50) ; Number of LABs  (Total = 2) ;
+; Number of Distinct Inputs  (Average = 7.67) ; Number of LABs  (Total = 3) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
@@ -739,7 +811,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 5                                           ; 0                           ;
 ; 6                                           ; 0                           ;
 ; 7                                           ; 0                           ;
-; 8                                           ; 1                           ;
+; 8                                           ; 0                           ;
+; 9                                           ; 1                           ;
+; 10                                          ; 0                           ;
+; 11                                          ; 1                           ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -772,6 +847,40 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------+--------+
 
 
++------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Summary              ;
++-----------------+----------------------+-------------------+
+; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
++-----------------+----------------------+-------------------+
+; clk,I/O         ; clk                  ; 4.0               ;
++-----------------+----------------------+-------------------+
+Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
+This will disable optimization of problematic paths and expose them for further analysis using either the TimeQuest Timing Analyzer or the Classic Timing Analyzer.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                                                                                                                                                       ;
++----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+-------------------+
+; Source Register                                                                                                ; Destination Register                                                                                           ; Delay Added in ns ;
++----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+-------------------+
+; t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; 1.999             ;
+; IR[3]                                                                                                          ; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; 1.999             ;
+; t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1  ; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; 1.999             ;
+; not_reset                                                                                                      ; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; 1.999             ;
+; irq                                                                                                            ; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_3|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; 1.999             ;
+; IR[0]                                                                                                          ; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; 1.999             ;
+; IR[1]                                                                                                          ; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; 1.999             ;
+; t_state_generator:t_state_generator_0|counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1  ; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; 1.999             ;
+; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; 1.999             ;
+; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; 1.999             ;
+; start                                                                                                          ; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; 1.999             ;
+; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_2|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; 1.999             ;
+; clk                                                                                                            ; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; 1.999             ;
+; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_3|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; 1.999             ;
++----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+-------------------+
+Note: This table only shows the top 14 path(s) that have the largest delay added for hold.
+
+
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
@@ -786,57 +895,73 @@ Info (169124): Fitter converted 3 user pins into dedicated programming pins
     Info (169125): Pin ~ASDO~ is reserved at location 1
     Info (169125): Pin ~nCSO~ is reserved at location 2
     Info (169125): Pin ~LVDS41p/nCEO~ is reserved at location 76
-Critical Warning (169085): No exact pin location assignment(s) for 14 pins of 14 total pins
-    Info (169086): Pin next_state not assigned to an exact location on the device
+Critical Warning (169085): No exact pin location assignment(s) for 19 pins of 19 total pins
+    Info (169086): Pin IR[2] not assigned to an exact location on the device
+    Info (169086): Pin IR[4] not assigned to an exact location on the device
+    Info (169086): Pin s_states[0] not assigned to an exact location on the device
+    Info (169086): Pin s_states[1] not assigned to an exact location on the device
+    Info (169086): Pin s_states[2] not assigned to an exact location on the device
+    Info (169086): Pin s_states[3] not assigned to an exact location on the device
     Info (169086): Pin t_states[0] not assigned to an exact location on the device
     Info (169086): Pin t_states[1] not assigned to an exact location on the device
     Info (169086): Pin t_states[2] not assigned to an exact location on the device
     Info (169086): Pin t_states[3] not assigned to an exact location on the device
     Info (169086): Pin t_states[4] not assigned to an exact location on the device
     Info (169086): Pin t_states[5] not assigned to an exact location on the device
+    Info (169086): Pin start not assigned to an exact location on the device
     Info (169086): Pin clk not assigned to an exact location on the device
     Info (169086): Pin not_reset not assigned to an exact location on the device
-    Info (169086): Pin s_states[1] not assigned to an exact location on the device
-    Info (169086): Pin s_states[3] not assigned to an exact location on the device
-    Info (169086): Pin s_states[0] not assigned to an exact location on the device
-    Info (169086): Pin s_states[2] not assigned to an exact location on the device
-    Info (169086): Pin clr not assigned to an exact location on the device
-Warning (335093): TimeQuest Timing Analyzer is analyzing 3 combinational loops as latches.
+    Info (169086): Pin irq not assigned to an exact location on the device
+    Info (169086): Pin IR[0] not assigned to an exact location on the device
+    Info (169086): Pin IR[1] not assigned to an exact location on the device
+    Info (169086): Pin IR[3] not assigned to an exact location on the device
+Warning (335093): TimeQuest Timing Analyzer is analyzing 7 combinational loops as latches.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'state_generator.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
+Warning (332125): Found combinational loop of 4 nodes
+    Warning (332126): Node "t_state_generator_0|counter_3_0|ms_jk_ff_0|nand_1|output~2|combout"
+    Warning (332126): Node "t_state_generator_0|counter_3_0|ms_jk_ff_0|nand_1|output~1|datad"
+    Warning (332126): Node "t_state_generator_0|counter_3_0|ms_jk_ff_0|nand_1|output~1|combout"
+    Warning (332126): Node "t_state_generator_0|counter_3_0|ms_jk_ff_0|nand_1|output~2|dataa"
 Warning (332125): Found combinational loop of 2 nodes
-    Warning (332126): Node "counter_3_0|ms_jk_ff_1|nand_1|output~3|combout"
-    Warning (332126): Node "counter_3_0|ms_jk_ff_1|nand_1|output~3|datab"
+    Warning (332126): Node "t_state_generator_0|counter_3_0|ms_jk_ff_2|nand_1|output~3|combout"
+    Warning (332126): Node "t_state_generator_0|counter_3_0|ms_jk_ff_2|nand_1|output~3|datab"
 Warning (332125): Found combinational loop of 2 nodes
-    Warning (332126): Node "counter_3_0|ms_jk_ff_0|nand_1|output~2|combout"
-    Warning (332126): Node "counter_3_0|ms_jk_ff_0|nand_1|output~2|datab"
-Warning (332125): Found combinational loop of 9 nodes
-    Warning (332126): Node "counter_3_0|ms_jk_ff_2|nand_1|output~4|combout"
-    Warning (332126): Node "counter_3_0|ms_jk_ff_2|nand_1|output~1|datad"
-    Warning (332126): Node "counter_3_0|ms_jk_ff_2|nand_1|output~1|combout"
-    Warning (332126): Node "counter_3_0|ms_jk_ff_2|nand_1|output~4|dataa"
-    Warning (332126): Node "counter_3_0|ms_jk_ff_2|nand_1|output~2|datad"
-    Warning (332126): Node "counter_3_0|ms_jk_ff_2|nand_1|output~2|combout"
-    Warning (332126): Node "counter_3_0|ms_jk_ff_2|nand_1|output~3|dataa"
-    Warning (332126): Node "counter_3_0|ms_jk_ff_2|nand_1|output~3|combout"
-    Warning (332126): Node "counter_3_0|ms_jk_ff_2|nand_1|output~4|datab"
+    Warning (332126): Node "s_state_generator_0|reg_1_bit_0|ms_jk_ff_0|nand_1|output~3|combout"
+    Warning (332126): Node "s_state_generator_0|reg_1_bit_0|ms_jk_ff_0|nand_1|output~3|datab"
+Warning (332125): Found combinational loop of 4 nodes
+    Warning (332126): Node "s_state_generator_0|reg_1_bit_1|ms_jk_ff_0|nand_1|output~2|combout"
+    Warning (332126): Node "s_state_generator_0|reg_1_bit_1|ms_jk_ff_0|nand_1|output~1|datad"
+    Warning (332126): Node "s_state_generator_0|reg_1_bit_1|ms_jk_ff_0|nand_1|output~1|combout"
+    Warning (332126): Node "s_state_generator_0|reg_1_bit_1|ms_jk_ff_0|nand_1|output~2|dataa"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "s_state_generator_0|reg_1_bit_2|ms_jk_ff_0|nand_1|output~2|combout"
+    Warning (332126): Node "s_state_generator_0|reg_1_bit_2|ms_jk_ff_0|nand_1|output~2|datab"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "t_state_generator_0|counter_3_0|ms_jk_ff_1|nand_1|output~2|combout"
+    Warning (332126): Node "t_state_generator_0|counter_3_0|ms_jk_ff_1|nand_1|output~2|datab"
+Warning (332125): Found combinational loop of 4 nodes
+    Warning (332126): Node "s_state_generator_0|reg_1_bit_3|ms_jk_ff_0|nand_1|output~2|combout"
+    Warning (332126): Node "s_state_generator_0|reg_1_bit_3|ms_jk_ff_0|nand_1|output~1|datad"
+    Warning (332126): Node "s_state_generator_0|reg_1_bit_3|ms_jk_ff_0|nand_1|output~1|combout"
+    Warning (332126): Node "s_state_generator_0|reg_1_bit_3|ms_jk_ff_0|nand_1|output~2|dataa"
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node clk (placed in PIN 17 (CLK0, LVDSCLK0p, Input))
-    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
+Info (176353): Automatically promoted node s_state_generator:s_state_generator_0|OR_gate:or_5|output 
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1|output~2
-        Info (176357): Destination node counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1|output~1
-        Info (176357): Destination node counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1|output~3
-        Info (176357): Destination node counter_3_bit:counter_3_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~1
+        Info (176357): Destination node s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~2
+        Info (176357): Destination node s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_1|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~2
+        Info (176357): Destination node s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_2|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~1
+        Info (176357): Destination node s_state_generator:s_state_generator_0|register_1_bit:reg_1_bit_3|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~2
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
 Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info (176211): Number of I/O pins in group: 13 (unused VREF, 3.3V VCCIO, 6 input, 7 output, 0 bidirectional)
+    Info (176211): Number of I/O pins in group: 19 (unused VREF, 3.3V VCCIO, 9 input, 10 output, 0 bidirectional)
         Info (176212): I/O standards used: 3.3-V LVTTL.
 Info (176215): I/O bank details before I/O pin placement
     Info (176214): Statistics of I/O banks
-        Info (176213): I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 3 total pin(s) used --  16 pins available
+        Info (176213): I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 2 total pin(s) used --  17 pins available
         Info (176213): I/O bank number 2 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  23 pins available
         Info (176213): I/O bank number 3 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  22 pins available
         Info (176213): I/O bank number 4 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  24 pins available
@@ -852,10 +977,13 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.49 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.54 seconds.
 Info (306004): Started post-fitting delay annotation
-Warning (306006): Found 7 output pins without output pin load capacitance assignment
-    Info (306007): Pin "next_state" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+Warning (306006): Found 10 output pins without output pin load capacitance assignment
+    Info (306007): Pin "s_states[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "s_states[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "s_states[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "s_states[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "t_states[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "t_states[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "t_states[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -868,9 +996,9 @@ Info (306005): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file /home/sebsikora/altera/projects/pdp-8/state_generator/output_files/state_generator.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 23 warnings
-    Info: Peak virtual memory: 729 megabytes
-    Info: Processing ended: Wed Jan  4 17:49:26 2017
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 34 warnings
+    Info: Peak virtual memory: 725 megabytes
+    Info: Processing ended: Wed Jan  4 18:53:30 2017
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 

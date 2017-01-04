@@ -60,4 +60,6 @@ architecture rtl of t_state_generator is
 		
 		t_states(5 downto 0) <= decoder_outputs(5 downto 0);
 		
+		next_state <= or_outputs(2);
+		
 end rtl;
