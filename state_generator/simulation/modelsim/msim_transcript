@@ -95,7 +95,7 @@ vsim -voptargs=+acc work.state_generator
 # Loading work.counter_3_bit(rtl)
 # Loading work.decoder_3_to_6(rtl)
 # Loading work.and_3_gate(rtl)
-do /home/sebsikora/altera/projects/pdp-8/state_generator/simulation/modelsim/state_generator_test_wave.do
+do /home/sebsikora/altera/projects/pdp-8/state_generator/simulation/modelsim/state_generator_test_wave_3.do
 # .main_pane.wave.interior.cs.body.pw.wf
 # 1
 # 1
@@ -115,7 +115,6 @@ run
 run
 run
 run
-restart
 run
 run
 run
@@ -129,165 +128,6 @@ run
 run
 run
 run
-restart
-vcom -93 -work work -O0 /home/sebsikora/altera/projects/pdp-8/state_generator/s_state_generator.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity s_state_generator
-# -- Compiling architecture rtl of s_state_generator
-vcom -93 -work work -O0 /home/sebsikora/altera/projects/pdp-8/state_generator/state_generator.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity state_generator
-# -- Compiling architecture rtl of state_generator
-vcom -93 -work work -O0 /home/sebsikora/altera/projects/pdp-8/state_generator/t_state_generator.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity t_state_generator
-# -- Compiling architecture rtl of t_state_generator
-restart
-# Loading work.state_generator(rtl)
-# Loading work.s_state_generator(rtl)
-# Loading work.t_state_generator(rtl)
 run
 run
 run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-restart
-wave modify -driver freeze -pattern constant -value 00000 -range 4 0 -starttime 0ns -endtime 3000ns Edit:/state_generator/IR
-wave modify -driver freeze -pattern constant -value 1 -starttime 200ns -endtime 3000ns Edit:/state_generator/not_reset
-wave modify -driver freeze -pattern clock -initialvalue 0 -period 200ns -dutycycle 50 -starttime 2000ns -endtime 3000ns Edit:/state_generator/clk
-wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 3000ns Edit:/state_generator/irq
-wave modify -driver freeze -pattern constant -value 1 -starttime 2000ns -endtime 3000ns Edit:/state_generator/start
-wave modify -driver freeze -pattern constant -value 0 -starttime 2000ns -endtime 3000ns Edit:/state_generator/start
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-restart
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/state_generator/simulation/modelsim/state_generator_test_wave-2.do
-wave editwrite -file /home/sebsikora/altera/projects/pdp-8/state_generator/simulation/modelsim/state_generator_test_wave-2.do -append
-add wave -position 9 -format Logic -height 16 -editable 2 Edit:/state_generator/irq
-wave modify -driver freeze -pattern constant -value 1 -starttime 0ns -endtime 3000ns Edit:/state_generator/irq
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-restart
-wave modify -driver freeze -pattern constant -value 00000 -range 4 0 -starttime 0ns -endtime 4000ns Edit:/state_generator/IR
-wave modify -driver freeze -pattern constant -value 1 -starttime 0ns -endtime 4000ns Edit:/state_generator/irq
-wave modify -driver freeze -pattern constant -value 1 -starttime 200ns -endtime 4000ns Edit:/state_generator/not_reset
-wave modify -driver freeze -pattern clock -initialvalue 0 -period 200ns -dutycycle 50 -starttime 2000ns -endtime 4000ns Edit:/state_generator/clk
-wave modify -driver freeze -pattern constant -value 0 -starttime 2000ns -endtime 4000ns Edit:/state_generator/start
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-restart
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-restart
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/state_generator/simulation/modelsim/state_generator_test_wave_3.do
-wave editwrite -file /home/sebsikora/altera/projects/pdp-8/state_generator/simulation/modelsim/state_generator_test_wave_3.do -append

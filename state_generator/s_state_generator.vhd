@@ -60,8 +60,9 @@ architecture rtl of s_state_generator is
 	
 	begin
 		
-		not_IR_0_and_IR_1 <= not (IR(0) and IR(1));
+		
 		IR_0_and_IR_1 <= (IR(0) and IR(1));
+		not_IR_0_and_IR_1 <= not IR_0_and_IR_1;
 		not_IR_3 <= not IR(3);
 		not_irq <= not irq;
 		
@@ -80,14 +81,14 @@ architecture rtl of s_state_generator is
 		or_2:					OR_gate  port map (inputA => and_6_output, inputB => s_state_signals(3), output => or_2_output);
 		or_3:					OR_gate  port map (inputA => s_state_signals(1), inputB => and_1_output, output => or_3_output);
 		or_4:					OR_gate  port map (inputA => and_5_output, inputB => and_7_output, output => or_4_output);
-		or_5:					OR_gate  port map (inputA => start, inputB => and_8_output, output => or_5_output);
+		or_5:					OR_gate  port map (inputA => start, inputB => state_clk, output => or_5_output);
 		
-		reg_1_bit_0:		register_1_bit port map (input => or_1_output, output => s_state_signals(0), load => '1', clk => state_clk, not_reset => not_reset);
+		reg_1_bit_0:		register_1_bit port map (input => or_1_output, output => s_state_signals(0), load => '1', clk => or_5_output, not_reset => not_reset);
 		reg_1_bit_1:		register_1_bit port map (input => and_2_output, output => s_state_signals(1), load => '1', clk => state_clk, not_reset => not_reset);
 		reg_1_bit_2:		register_1_bit port map (input => or_3_output, output => s_state_signals(2), load => '1', clk => state_clk, not_reset => not_reset);
 		reg_1_bit_3:		register_1_bit port map (input => or_4_output, output => s_state_signals(3), load => '1', clk => state_clk, not_reset => not_reset);
 		
-		state_clk <= or_5_output;
+		state_clk <= and_8_output;
 		s_states(3 downto 0) <= s_state_signals(3 downto 0);
 		
 end rtl;

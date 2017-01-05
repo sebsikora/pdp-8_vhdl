@@ -72,7 +72,7 @@ VCCIO1                       : 5         : power  :                   : 3.3V    
 GND                          : 6         : gnd    :                   :         :           :                
 GND*                         : 7         :        :                   :         : 1         :                
 GND*                         : 8         :        :                   :         : 1         :                
-t_states[5]                  : 9         : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 9         :        :                   :         : 1         :                
 TDO                          : 10        : output :                   :         : 1         :                
 TMS                          : 11        : input  :                   :         : 1         :                
 TCK                          : 12        : input  :                   :         : 1         :                
@@ -87,15 +87,15 @@ nCONFIG                      : 20        :        :                   :         
 GND+                         : 21        :        :                   :         : 1         :                
 GND+                         : 22        :        :                   :         : 1         :                
 VCCIO1                       : 23        : power  :                   : 3.3V    : 1         :                
-t_states[3]                  : 24        : output : 3.3-V LVTTL       :         : 1         : N              
-t_states[1]                  : 25        : output : 3.3-V LVTTL       :         : 1         : N              
-t_states[0]                  : 26        : output : 3.3-V LVTTL       :         : 1         : N              
-t_states[2]                  : 27        : output : 3.3-V LVTTL       :         : 1         : N              
-t_states[4]                  : 28        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 24        :        :                   :         : 1         :                
+GND*                         : 25        :        :                   :         : 1         :                
+GND*                         : 26        :        :                   :         : 1         :                
+GND*                         : 27        :        :                   :         : 1         :                
+GND*                         : 28        :        :                   :         : 1         :                
 VCCIO1                       : 29        : power  :                   : 3.3V    : 1         :                
-clk                          : 30        : input  : 3.3-V LVTTL       :         : 1         : N              
-s_states[3]                  : 31        : output : 3.3-V LVTTL       :         : 1         : N              
-start                        : 32        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 30        :        :                   :         : 1         :                
+GND*                         : 31        :        :                   :         : 1         :                
+GND*                         : 32        :        :                   :         : 1         :                
 GND                          : 33        : gnd    :                   :         :           :                
 GND_PLL1                     : 34        : gnd    :                   :         :           :                
 VCCD_PLL1                    : 35        : power  :                   : 1.2V    :           :                
@@ -103,18 +103,18 @@ GND_PLL1                     : 36        : gnd    :                   :         
 VCCA_PLL1                    : 37        : power  :                   : 1.2V    :           :                
 GNDA_PLL1                    : 38        : gnd    :                   :         :           :                
 GND                          : 39        : gnd    :                   :         :           :                
-s_states[2]                  : 40        : output : 3.3-V LVTTL       :         : 4         : N              
-s_states[1]                  : 41        : output : 3.3-V LVTTL       :         : 4         : N              
-s_states[0]                  : 42        : output : 3.3-V LVTTL       :         : 4         : N              
-irq                          : 43        : input  : 3.3-V LVTTL       :         : 4         : N              
-IR[0]                        : 44        : input  : 3.3-V LVTTL       :         : 4         : N              
-not_reset                    : 45        : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : 40        :        :                   :         : 4         :                
+GND*                         : 41        :        :                   :         : 4         :                
+GND*                         : 42        :        :                   :         : 4         :                
+GND*                         : 43        :        :                   :         : 4         :                
+IR[4]                        : 44        : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : 45        :        :                   :         : 4         :                
 VCCIO4                       : 46        : power  :                   : 3.3V    : 4         :                
 GND*                         : 47        :        :                   :         : 4         :                
 GND*                         : 48        :        :                   :         : 4         :                
 GND                          : 49        : gnd    :                   :         :           :                
 VCCINT                       : 50        : power  :                   : 1.2V    :           :                
-IR[2]                        : 51        : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : 51        :        :                   :         : 4         :                
 GND*                         : 52        :        :                   :         : 4         :                
 GND*                         : 53        :        :                   :         : 4         :                
 VCCIO4                       : 54        : power  :                   : 3.3V    : 4         :                
@@ -155,19 +155,19 @@ IR[1]                        : 88        : input  : 3.3-V LVTTL       :         
 IR[3]                        : 89        : input  : 3.3-V LVTTL       :         : 3         : N              
 GND+                         : 90        :        :                   :         : 3         :                
 GND+                         : 91        :        :                   :         : 3         :                
-GND*                         : 92        :        :                   :         : 3         :                
+s_states[2]                  : 92        : output : 3.3-V LVTTL       :         : 3         : N              
 GND*                         : 93        :        :                   :         : 3         :                
-GND*                         : 94        :        :                   :         : 3         :                
+irq                          : 94        : input  : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : 95        : power  :                   : 3.3V    : 3         :                
-GND*                         : 96        :        :                   :         : 3         :                
-GND*                         : 97        :        :                   :         : 3         :                
+t_states[1]                  : 96        : output : 3.3-V LVTTL       :         : 3         : N              
+start                        : 97        : input  : 3.3-V LVTTL       :         : 3         : N              
 GND                          : 98        : gnd    :                   :         :           :                
-GND*                         : 99        :        :                   :         : 3         :                
-GND*                         : 100       :        :                   :         : 3         :                
-GND*                         : 101       :        :                   :         : 3         :                
+s_states[0]                  : 99        : output : 3.3-V LVTTL       :         : 3         : N              
+t_states[2]                  : 100       : output : 3.3-V LVTTL       :         : 3         : N              
+not_reset                    : 101       : input  : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : 102       : power  :                   : 3.3V    : 3         :                
-GND*                         : 103       :        :                   :         : 3         :                
-GND*                         : 104       :        :                   :         : 3         :                
+clk                          : 103       : input  : 3.3-V LVTTL       :         : 3         : N              
+IR[0]                        : 104       : input  : 3.3-V LVTTL       :         : 3         : N              
 GND                          : 105       : gnd    :                   :         :           :                
 GND_PLL2                     : 106       : gnd    :                   :         :           :                
 VCCD_PLL2                    : 107       : power  :                   : 1.2V    :           :                
@@ -175,14 +175,14 @@ GND_PLL2                     : 108       : gnd    :                   :         
 VCCA_PLL2                    : 109       : power  :                   : 1.2V    :           :                
 GNDA_PLL2                    : 110       : gnd    :                   :         :           :                
 GND                          : 111       : gnd    :                   :         :           :                
-GND*                         : 112       :        :                   :         : 2         :                
-GND*                         : 113       :        :                   :         : 2         :                
-GND*                         : 114       :        :                   :         : 2         :                
-GND*                         : 115       :        :                   :         : 2         :                
+s_states[3]                  : 112       : output : 3.3-V LVTTL       :         : 2         : N              
+t_states[5]                  : 113       : output : 3.3-V LVTTL       :         : 2         : N              
+s_states[1]                  : 114       : output : 3.3-V LVTTL       :         : 2         : N              
+t_states[0]                  : 115       : output : 3.3-V LVTTL       :         : 2         : N              
 VCCIO2                       : 116       : power  :                   : 3.3V    : 2         :                
 GND                          : 117       : gnd    :                   :         :           :                
-GND*                         : 118       :        :                   :         : 2         :                
-GND*                         : 119       :        :                   :         : 2         :                
+t_states[3]                  : 118       : output : 3.3-V LVTTL       :         : 2         : N              
+t_states[4]                  : 119       : output : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : 120       :        :                   :         : 2         :                
 GND*                         : 121       :        :                   :         : 2         :                
 GND*                         : 122       :        :                   :         : 2         :                
@@ -197,7 +197,7 @@ GND                          : 130       : gnd    :                   :         
 VCCINT                       : 131       : power  :                   : 1.2V    :           :                
 GND*                         : 132       :        :                   :         : 2         :                
 GND*                         : 133       :        :                   :         : 2         :                
-GND*                         : 134       :        :                   :         : 2         :                
+IR[2]                        : 134       : input  : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : 135       :        :                   :         : 2         :                
 GND*                         : 136       :        :                   :         : 2         :                
 GND*                         : 137       :        :                   :         : 2         :                
@@ -207,4 +207,4 @@ GND                          : 140       : gnd    :                   :         
 GND*                         : 141       :        :                   :         : 2         :                
 GND*                         : 142       :        :                   :         : 2         :                
 GND*                         : 143       :        :                   :         : 2         :                
-IR[4]                        : 144       : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 144       :        :                   :         : 2         :                
