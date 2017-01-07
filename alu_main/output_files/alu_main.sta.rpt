@@ -1,0 +1,1584 @@
+TimeQuest Timing Analyzer report for alu_main
+Sat Jan  7 20:39:11 2017
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Propagation Delay
+ 12. Minimum Propagation Delay
+ 13. Fast Model Setup Summary
+ 14. Fast Model Hold Summary
+ 15. Fast Model Recovery Summary
+ 16. Fast Model Removal Summary
+ 17. Fast Model Minimum Pulse Width Summary
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Multicorner Timing Analysis Summary
+ 21. Progagation Delay
+ 22. Minimum Progagation Delay
+ 23. Clock Transfers
+ 24. Report TCCS
+ 25. Report RSKM
+ 26. Unconstrained Paths
+ 27. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; alu_main                                                          ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C5AT144A7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
+----------
+; Clocks ;
+----------
+No clocks to report.
+
+
+---------------------------
+; Slow Model Fmax Summary ;
+---------------------------
+No paths to report.
+
+
+----------------------------
+; Slow Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Slow Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Slow Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++---------------------------------------------------------------------+
+; Propagation Delay                                                   ;
++-------------------+-------------+--------+--------+--------+--------+
+; Input Port        ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++-------------------+-------------+--------+--------+--------+--------+
+; alu_out_select[0] ; output[0]   ; 12.703 ; 12.810 ; 12.810 ; 12.703 ;
+; alu_out_select[0] ; output[1]   ; 13.213 ; 13.366 ; 13.366 ; 13.213 ;
+; alu_out_select[0] ; output[2]   ; 13.915 ; 13.657 ; 13.657 ; 13.915 ;
+; alu_out_select[0] ; output[3]   ; 12.457 ; 12.868 ; 12.868 ; 12.457 ;
+; alu_out_select[0] ; output[4]   ; 14.247 ; 13.992 ; 13.992 ; 14.247 ;
+; alu_out_select[0] ; output[5]   ; 12.217 ; 12.621 ; 12.621 ; 12.217 ;
+; alu_out_select[0] ; output[6]   ; 14.571 ; 14.308 ; 14.308 ; 14.571 ;
+; alu_out_select[0] ; output[7]   ; 13.250 ; 13.004 ; 13.004 ; 13.250 ;
+; alu_out_select[0] ; output[8]   ; 14.752 ; 14.488 ; 14.488 ; 14.752 ;
+; alu_out_select[0] ; output[9]   ; 14.010 ; 14.317 ; 14.317 ; 14.010 ;
+; alu_out_select[0] ; output[10]  ; 14.030 ; 14.134 ; 14.134 ; 14.030 ;
+; alu_out_select[0] ; output[11]  ; 12.160 ; 12.566 ; 12.566 ; 12.160 ;
+; alu_out_select[1] ; output[0]   ; 13.192 ; 13.385 ; 13.385 ; 13.192 ;
+; alu_out_select[1] ; output[1]   ; 13.195 ; 13.941 ; 13.941 ; 13.195 ;
+; alu_out_select[1] ; output[2]   ; 13.783 ; 14.533 ; 14.533 ; 13.783 ;
+; alu_out_select[1] ; output[3]   ; 13.067 ; 13.443 ; 13.443 ; 13.067 ;
+; alu_out_select[1] ; output[4]   ; 13.996 ; 14.865 ; 14.865 ; 13.996 ;
+; alu_out_select[1] ; output[5]   ; 12.549 ; 13.196 ; 13.196 ; 12.549 ;
+; alu_out_select[1] ; output[6]   ; 14.149 ; 15.189 ; 15.189 ; 14.149 ;
+; alu_out_select[1] ; output[7]   ; 12.823 ; 13.868 ; 13.868 ; 12.823 ;
+; alu_out_select[1] ; output[8]   ; 14.008 ; 15.370 ; 15.370 ; 14.008 ;
+; alu_out_select[1] ; output[9]   ; 13.987 ; 14.892 ; 14.892 ; 13.987 ;
+; alu_out_select[1] ; output[10]  ; 14.261 ; 14.709 ; 14.709 ; 14.261 ;
+; alu_out_select[1] ; output[11]  ; 12.499 ; 13.141 ; 13.141 ; 12.499 ;
+; alu_out_select[2] ; output[0]   ; 12.447 ; 12.336 ; 12.336 ; 12.447 ;
+; alu_out_select[2] ; output[1]   ; 13.003 ; 12.846 ; 12.846 ; 13.003 ;
+; alu_out_select[2] ; output[2]   ; 13.294 ; 13.548 ; 13.548 ; 13.294 ;
+; alu_out_select[2] ; output[3]   ; 12.505 ; 12.090 ; 12.090 ; 12.505 ;
+; alu_out_select[2] ; output[4]   ; 13.629 ; 13.880 ; 13.880 ; 13.629 ;
+; alu_out_select[2] ; output[5]   ; 12.258 ; 11.850 ; 11.850 ; 12.258 ;
+; alu_out_select[2] ; output[6]   ; 13.945 ; 14.204 ; 14.204 ; 13.945 ;
+; alu_out_select[2] ; output[7]   ; 12.641 ; 12.883 ; 12.883 ; 12.641 ;
+; alu_out_select[2] ; output[8]   ; 14.125 ; 14.385 ; 14.385 ; 14.125 ;
+; alu_out_select[2] ; output[9]   ; 13.954 ; 13.643 ; 13.643 ; 13.954 ;
+; alu_out_select[2] ; output[10]  ; 13.771 ; 13.663 ; 13.663 ; 13.771 ;
+; alu_out_select[2] ; output[11]  ; 12.203 ; 11.793 ; 11.793 ; 12.203 ;
+; inputA[0]         ; add_carry   ; 14.211 ;        ;        ; 14.211 ;
+; inputA[0]         ; output[0]   ; 13.598 ; 13.598 ; 13.598 ; 13.598 ;
+; inputA[0]         ; output[1]   ; 14.205 ; 14.205 ; 14.205 ; 14.205 ;
+; inputA[0]         ; output[2]   ; 14.627 ; 14.627 ; 14.627 ; 14.627 ;
+; inputA[0]         ; output[3]   ; 13.898 ; 13.898 ; 13.898 ; 13.898 ;
+; inputA[0]         ; output[4]   ; 15.414 ; 15.414 ; 15.414 ; 15.414 ;
+; inputA[0]         ; output[5]   ; 14.375 ; 14.375 ; 14.375 ; 14.375 ;
+; inputA[0]         ; output[6]   ; 15.784 ; 15.784 ; 15.784 ; 15.784 ;
+; inputA[0]         ; output[7]   ; 14.833 ; 14.833 ; 14.833 ; 14.833 ;
+; inputA[0]         ; output[8]   ; 14.943 ; 14.943 ; 14.943 ; 14.943 ;
+; inputA[0]         ; output[9]   ; 15.838 ; 15.838 ; 15.838 ; 15.838 ;
+; inputA[0]         ; output[10]  ; 15.759 ; 15.759 ; 15.759 ; 15.759 ;
+; inputA[0]         ; output[11]  ; 15.105 ; 15.105 ; 15.105 ; 15.105 ;
+; inputA[1]         ; add_carry   ; 13.647 ;        ;        ; 13.647 ;
+; inputA[1]         ; output[1]   ; 13.377 ; 13.275 ; 13.275 ; 13.377 ;
+; inputA[1]         ; output[2]   ; 14.063 ; 14.063 ; 14.063 ; 14.063 ;
+; inputA[1]         ; output[3]   ; 13.334 ; 13.334 ; 13.334 ; 13.334 ;
+; inputA[1]         ; output[4]   ; 14.850 ; 14.850 ; 14.850 ; 14.850 ;
+; inputA[1]         ; output[5]   ; 13.811 ; 13.811 ; 13.811 ; 13.811 ;
+; inputA[1]         ; output[6]   ; 15.220 ; 15.220 ; 15.220 ; 15.220 ;
+; inputA[1]         ; output[7]   ; 14.269 ; 14.269 ; 14.269 ; 14.269 ;
+; inputA[1]         ; output[8]   ; 14.379 ; 14.379 ; 14.379 ; 14.379 ;
+; inputA[1]         ; output[9]   ; 15.274 ; 15.274 ; 15.274 ; 15.274 ;
+; inputA[1]         ; output[10]  ; 15.195 ; 15.195 ; 15.195 ; 15.195 ;
+; inputA[1]         ; output[11]  ; 14.541 ; 14.541 ; 14.541 ; 14.541 ;
+; inputA[2]         ; add_carry   ; 12.979 ;        ;        ; 12.979 ;
+; inputA[2]         ; output[2]   ; 13.031 ; 13.031 ; 13.031 ; 13.031 ;
+; inputA[2]         ; output[3]   ; 12.666 ; 12.666 ; 12.666 ; 12.666 ;
+; inputA[2]         ; output[4]   ; 14.182 ; 14.182 ; 14.182 ; 14.182 ;
+; inputA[2]         ; output[5]   ; 13.143 ; 13.143 ; 13.143 ; 13.143 ;
+; inputA[2]         ; output[6]   ; 14.552 ; 14.552 ; 14.552 ; 14.552 ;
+; inputA[2]         ; output[7]   ; 13.601 ; 13.601 ; 13.601 ; 13.601 ;
+; inputA[2]         ; output[8]   ; 13.711 ; 13.711 ; 13.711 ; 13.711 ;
+; inputA[2]         ; output[9]   ; 14.606 ; 14.606 ; 14.606 ; 14.606 ;
+; inputA[2]         ; output[10]  ; 14.527 ; 14.527 ; 14.527 ; 14.527 ;
+; inputA[2]         ; output[11]  ; 13.873 ; 13.873 ; 13.873 ; 13.873 ;
+; inputA[3]         ; add_carry   ; 13.109 ;        ;        ; 13.109 ;
+; inputA[3]         ; output[3]   ; 12.430 ; 12.430 ; 12.430 ; 12.430 ;
+; inputA[3]         ; output[4]   ; 14.312 ; 14.312 ; 14.312 ; 14.312 ;
+; inputA[3]         ; output[5]   ; 13.273 ; 13.273 ; 13.273 ; 13.273 ;
+; inputA[3]         ; output[6]   ; 14.682 ; 14.682 ; 14.682 ; 14.682 ;
+; inputA[3]         ; output[7]   ; 13.731 ; 13.731 ; 13.731 ; 13.731 ;
+; inputA[3]         ; output[8]   ; 13.841 ; 13.841 ; 13.841 ; 13.841 ;
+; inputA[3]         ; output[9]   ; 14.736 ; 14.736 ; 14.736 ; 14.736 ;
+; inputA[3]         ; output[10]  ; 14.657 ; 14.657 ; 14.657 ; 14.657 ;
+; inputA[3]         ; output[11]  ; 14.003 ; 14.003 ; 14.003 ; 14.003 ;
+; inputA[4]         ; add_carry   ; 12.528 ;        ;        ; 12.528 ;
+; inputA[4]         ; output[4]   ; 13.359 ; 13.359 ; 13.359 ; 13.359 ;
+; inputA[4]         ; output[5]   ; 12.692 ; 12.692 ; 12.692 ; 12.692 ;
+; inputA[4]         ; output[6]   ; 14.101 ; 14.101 ; 14.101 ; 14.101 ;
+; inputA[4]         ; output[7]   ; 13.150 ; 13.150 ; 13.150 ; 13.150 ;
+; inputA[4]         ; output[8]   ; 13.260 ; 13.260 ; 13.260 ; 13.260 ;
+; inputA[4]         ; output[9]   ; 14.155 ; 14.155 ; 14.155 ; 14.155 ;
+; inputA[4]         ; output[10]  ; 14.076 ; 14.076 ; 14.076 ; 14.076 ;
+; inputA[4]         ; output[11]  ; 13.422 ; 13.422 ; 13.422 ; 13.422 ;
+; inputA[5]         ; add_carry   ; 12.815 ;        ;        ; 12.815 ;
+; inputA[5]         ; output[5]   ; 12.609 ; 12.609 ; 12.609 ; 12.609 ;
+; inputA[5]         ; output[6]   ; 14.388 ; 14.388 ; 14.388 ; 14.388 ;
+; inputA[5]         ; output[7]   ; 13.437 ; 13.437 ; 13.437 ; 13.437 ;
+; inputA[5]         ; output[8]   ; 13.547 ; 13.547 ; 13.547 ; 13.547 ;
+; inputA[5]         ; output[9]   ; 14.442 ; 14.442 ; 14.442 ; 14.442 ;
+; inputA[5]         ; output[10]  ; 14.363 ; 14.363 ; 14.363 ; 14.363 ;
+; inputA[5]         ; output[11]  ; 13.709 ; 13.709 ; 13.709 ; 13.709 ;
+; inputA[6]         ; add_carry   ; 13.112 ;        ;        ; 13.112 ;
+; inputA[6]         ; output[6]   ; 14.320 ; 14.320 ; 14.320 ; 14.320 ;
+; inputA[6]         ; output[7]   ; 13.734 ; 13.734 ; 13.734 ; 13.734 ;
+; inputA[6]         ; output[8]   ; 13.844 ; 13.844 ; 13.844 ; 13.844 ;
+; inputA[6]         ; output[9]   ; 14.739 ; 14.739 ; 14.739 ; 14.739 ;
+; inputA[6]         ; output[10]  ; 14.660 ; 14.660 ; 14.660 ; 14.660 ;
+; inputA[6]         ; output[11]  ; 14.006 ; 14.006 ; 14.006 ; 14.006 ;
+; inputA[7]         ; add_carry   ; 12.763 ;        ;        ; 12.763 ;
+; inputA[7]         ; output[7]   ; 13.019 ; 13.019 ; 13.019 ; 13.019 ;
+; inputA[7]         ; output[8]   ; 13.495 ; 13.495 ; 13.495 ; 13.495 ;
+; inputA[7]         ; output[9]   ; 14.390 ; 14.390 ; 14.390 ; 14.390 ;
+; inputA[7]         ; output[10]  ; 14.311 ; 14.311 ; 14.311 ; 14.311 ;
+; inputA[7]         ; output[11]  ; 13.657 ; 13.657 ; 13.657 ; 13.657 ;
+; inputA[8]         ; add_carry   ; 12.535 ;        ;        ; 12.535 ;
+; inputA[8]         ; output[8]   ; 13.583 ; 12.903 ; 12.903 ; 13.583 ;
+; inputA[8]         ; output[9]   ; 14.162 ; 14.162 ; 14.162 ; 14.162 ;
+; inputA[8]         ; output[10]  ; 14.083 ; 14.083 ; 14.083 ; 14.083 ;
+; inputA[8]         ; output[11]  ; 13.429 ; 13.429 ; 13.429 ; 13.429 ;
+; inputA[9]         ; add_carry   ; 13.027 ;        ;        ; 13.027 ;
+; inputA[9]         ; output[9]   ; 14.284 ; 14.284 ; 14.284 ; 14.284 ;
+; inputA[9]         ; output[10]  ; 14.575 ; 14.575 ; 14.575 ; 14.575 ;
+; inputA[9]         ; output[11]  ; 13.921 ; 13.921 ; 13.921 ; 13.921 ;
+; inputA[10]        ; add_carry   ; 12.391 ;        ;        ; 12.391 ;
+; inputA[10]        ; output[10]  ; 13.575 ; 13.575 ; 13.575 ; 13.575 ;
+; inputA[10]        ; output[11]  ; 13.285 ; 13.285 ; 13.285 ; 13.285 ;
+; inputA[11]        ; add_carry   ; 12.331 ;        ;        ; 12.331 ;
+; inputA[11]        ; output[11]  ; 12.859 ; 12.859 ; 12.859 ; 12.859 ;
+; inputB[0]         ; add_carry   ; 13.779 ;        ;        ; 13.779 ;
+; inputB[0]         ; output[0]   ; 13.167 ; 13.167 ; 13.167 ; 13.167 ;
+; inputB[0]         ; output[1]   ; 13.773 ; 13.773 ; 13.773 ; 13.773 ;
+; inputB[0]         ; output[2]   ; 14.195 ; 14.195 ; 14.195 ; 14.195 ;
+; inputB[0]         ; output[3]   ; 13.466 ; 13.466 ; 13.466 ; 13.466 ;
+; inputB[0]         ; output[4]   ; 14.982 ; 14.982 ; 14.982 ; 14.982 ;
+; inputB[0]         ; output[5]   ; 13.943 ; 13.943 ; 13.943 ; 13.943 ;
+; inputB[0]         ; output[6]   ; 15.352 ; 15.352 ; 15.352 ; 15.352 ;
+; inputB[0]         ; output[7]   ; 14.401 ; 14.401 ; 14.401 ; 14.401 ;
+; inputB[0]         ; output[8]   ; 14.511 ; 14.511 ; 14.511 ; 14.511 ;
+; inputB[0]         ; output[9]   ; 15.406 ; 15.406 ; 15.406 ; 15.406 ;
+; inputB[0]         ; output[10]  ; 15.327 ; 15.327 ; 15.327 ; 15.327 ;
+; inputB[0]         ; output[11]  ; 14.673 ; 14.673 ; 14.673 ; 14.673 ;
+; inputB[1]         ; add_carry   ; 13.663 ;        ;        ; 13.663 ;
+; inputB[1]         ; output[1]   ; 13.454 ; 13.287 ; 13.287 ; 13.454 ;
+; inputB[1]         ; output[2]   ; 14.079 ; 14.079 ; 14.079 ; 14.079 ;
+; inputB[1]         ; output[3]   ; 13.350 ; 13.350 ; 13.350 ; 13.350 ;
+; inputB[1]         ; output[4]   ; 14.866 ; 14.866 ; 14.866 ; 14.866 ;
+; inputB[1]         ; output[5]   ; 13.827 ; 13.827 ; 13.827 ; 13.827 ;
+; inputB[1]         ; output[6]   ; 15.236 ; 15.236 ; 15.236 ; 15.236 ;
+; inputB[1]         ; output[7]   ; 14.285 ; 14.285 ; 14.285 ; 14.285 ;
+; inputB[1]         ; output[8]   ; 14.395 ; 14.395 ; 14.395 ; 14.395 ;
+; inputB[1]         ; output[9]   ; 15.290 ; 15.290 ; 15.290 ; 15.290 ;
+; inputB[1]         ; output[10]  ; 15.211 ; 15.211 ; 15.211 ; 15.211 ;
+; inputB[1]         ; output[11]  ; 14.557 ; 14.557 ; 14.557 ; 14.557 ;
+; inputB[2]         ; add_carry   ; 13.536 ;        ;        ; 13.536 ;
+; inputB[2]         ; output[2]   ; 13.587 ; 13.587 ; 13.587 ; 13.587 ;
+; inputB[2]         ; output[3]   ; 13.223 ; 13.223 ; 13.223 ; 13.223 ;
+; inputB[2]         ; output[4]   ; 14.739 ; 14.739 ; 14.739 ; 14.739 ;
+; inputB[2]         ; output[5]   ; 13.700 ; 13.700 ; 13.700 ; 13.700 ;
+; inputB[2]         ; output[6]   ; 15.109 ; 15.109 ; 15.109 ; 15.109 ;
+; inputB[2]         ; output[7]   ; 14.158 ; 14.158 ; 14.158 ; 14.158 ;
+; inputB[2]         ; output[8]   ; 14.268 ; 14.268 ; 14.268 ; 14.268 ;
+; inputB[2]         ; output[9]   ; 15.163 ; 15.163 ; 15.163 ; 15.163 ;
+; inputB[2]         ; output[10]  ; 15.084 ; 15.084 ; 15.084 ; 15.084 ;
+; inputB[2]         ; output[11]  ; 14.430 ; 14.430 ; 14.430 ; 14.430 ;
+; inputB[3]         ; add_carry   ; 12.840 ;        ;        ; 12.840 ;
+; inputB[3]         ; output[3]   ; 12.157 ; 12.157 ; 12.157 ; 12.157 ;
+; inputB[3]         ; output[4]   ; 14.043 ; 14.043 ; 14.043 ; 14.043 ;
+; inputB[3]         ; output[5]   ; 13.004 ; 13.004 ; 13.004 ; 13.004 ;
+; inputB[3]         ; output[6]   ; 14.413 ; 14.413 ; 14.413 ; 14.413 ;
+; inputB[3]         ; output[7]   ; 13.462 ; 13.462 ; 13.462 ; 13.462 ;
+; inputB[3]         ; output[8]   ; 13.572 ; 13.572 ; 13.572 ; 13.572 ;
+; inputB[3]         ; output[9]   ; 14.467 ; 14.467 ; 14.467 ; 14.467 ;
+; inputB[3]         ; output[10]  ; 14.388 ; 14.388 ; 14.388 ; 14.388 ;
+; inputB[3]         ; output[11]  ; 13.734 ; 13.734 ; 13.734 ; 13.734 ;
+; inputB[4]         ; add_carry   ; 12.845 ;        ;        ; 12.845 ;
+; inputB[4]         ; output[4]   ; 13.676 ; 13.676 ; 13.676 ; 13.676 ;
+; inputB[4]         ; output[5]   ; 13.009 ; 13.009 ; 13.009 ; 13.009 ;
+; inputB[4]         ; output[6]   ; 14.418 ; 14.418 ; 14.418 ; 14.418 ;
+; inputB[4]         ; output[7]   ; 13.467 ; 13.467 ; 13.467 ; 13.467 ;
+; inputB[4]         ; output[8]   ; 13.577 ; 13.577 ; 13.577 ; 13.577 ;
+; inputB[4]         ; output[9]   ; 14.472 ; 14.472 ; 14.472 ; 14.472 ;
+; inputB[4]         ; output[10]  ; 14.393 ; 14.393 ; 14.393 ; 14.393 ;
+; inputB[4]         ; output[11]  ; 13.739 ; 13.739 ; 13.739 ; 13.739 ;
+; inputB[5]         ; add_carry   ; 12.341 ;        ;        ; 12.341 ;
+; inputB[5]         ; output[5]   ; 12.139 ; 12.139 ; 12.139 ; 12.139 ;
+; inputB[5]         ; output[6]   ; 13.914 ; 13.914 ; 13.914 ; 13.914 ;
+; inputB[5]         ; output[7]   ; 12.963 ; 12.963 ; 12.963 ; 12.963 ;
+; inputB[5]         ; output[8]   ; 13.073 ; 13.073 ; 13.073 ; 13.073 ;
+; inputB[5]         ; output[9]   ; 13.968 ; 13.968 ; 13.968 ; 13.968 ;
+; inputB[5]         ; output[10]  ; 13.889 ; 13.889 ; 13.889 ; 13.889 ;
+; inputB[5]         ; output[11]  ; 13.235 ; 13.235 ; 13.235 ; 13.235 ;
+; inputB[6]         ; add_carry   ; 13.429 ;        ;        ; 13.429 ;
+; inputB[6]         ; output[6]   ; 14.638 ; 14.638 ; 14.638 ; 14.638 ;
+; inputB[6]         ; output[7]   ; 14.051 ; 14.051 ; 14.051 ; 14.051 ;
+; inputB[6]         ; output[8]   ; 14.161 ; 14.161 ; 14.161 ; 14.161 ;
+; inputB[6]         ; output[9]   ; 15.056 ; 15.056 ; 15.056 ; 15.056 ;
+; inputB[6]         ; output[10]  ; 14.977 ; 14.977 ; 14.977 ; 14.977 ;
+; inputB[6]         ; output[11]  ; 14.323 ; 14.323 ; 14.323 ; 14.323 ;
+; inputB[7]         ; add_carry   ; 12.743 ;        ;        ; 12.743 ;
+; inputB[7]         ; output[7]   ; 12.995 ; 12.995 ; 12.995 ; 12.995 ;
+; inputB[7]         ; output[8]   ; 13.475 ; 13.475 ; 13.475 ; 13.475 ;
+; inputB[7]         ; output[9]   ; 14.370 ; 14.370 ; 14.370 ; 14.370 ;
+; inputB[7]         ; output[10]  ; 14.291 ; 14.291 ; 14.291 ; 14.291 ;
+; inputB[7]         ; output[11]  ; 13.637 ; 13.637 ; 13.637 ; 13.637 ;
+; inputB[8]         ; add_carry   ; 13.284 ;        ;        ; 13.284 ;
+; inputB[8]         ; output[8]   ; 13.651 ; 13.651 ; 13.651 ; 13.651 ;
+; inputB[8]         ; output[9]   ; 14.911 ; 14.911 ; 14.911 ; 14.911 ;
+; inputB[8]         ; output[10]  ; 14.832 ; 14.832 ; 14.832 ; 14.832 ;
+; inputB[8]         ; output[11]  ; 14.178 ; 14.178 ; 14.178 ; 14.178 ;
+; inputB[9]         ; add_carry   ; 13.366 ;        ;        ; 13.366 ;
+; inputB[9]         ; output[9]   ; 14.627 ; 14.627 ; 14.627 ; 14.627 ;
+; inputB[9]         ; output[10]  ; 14.914 ; 14.914 ; 14.914 ; 14.914 ;
+; inputB[9]         ; output[11]  ; 14.260 ; 14.260 ; 14.260 ; 14.260 ;
+; inputB[10]        ; add_carry   ; 13.106 ;        ;        ; 13.106 ;
+; inputB[10]        ; output[10]  ; 14.289 ; 14.289 ; 14.289 ; 14.289 ;
+; inputB[10]        ; output[11]  ; 14.000 ; 14.000 ; 14.000 ; 14.000 ;
+; inputB[11]        ; add_carry   ; 12.275 ;        ;        ; 12.275 ;
+; inputB[11]        ; output[11]  ; 12.799 ; 12.799 ; 12.799 ; 12.799 ;
++-------------------+-------------+--------+--------+--------+--------+
+
+
++---------------------------------------------------------------------+
+; Minimum Propagation Delay                                           ;
++-------------------+-------------+--------+--------+--------+--------+
+; Input Port        ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++-------------------+-------------+--------+--------+--------+--------+
+; alu_out_select[0] ; output[0]   ; 12.703 ; 12.510 ; 12.510 ; 12.703 ;
+; alu_out_select[0] ; output[1]   ; 13.213 ; 12.513 ; 12.513 ; 13.213 ;
+; alu_out_select[0] ; output[2]   ; 13.915 ; 13.101 ; 13.101 ; 13.915 ;
+; alu_out_select[0] ; output[3]   ; 12.457 ; 12.385 ; 12.385 ; 12.457 ;
+; alu_out_select[0] ; output[4]   ; 14.247 ; 13.314 ; 13.314 ; 14.247 ;
+; alu_out_select[0] ; output[5]   ; 12.217 ; 11.867 ; 11.867 ; 12.217 ;
+; alu_out_select[0] ; output[6]   ; 14.571 ; 13.467 ; 13.467 ; 14.571 ;
+; alu_out_select[0] ; output[7]   ; 13.250 ; 11.967 ; 11.967 ; 13.250 ;
+; alu_out_select[0] ; output[8]   ; 14.752 ; 13.326 ; 13.326 ; 14.752 ;
+; alu_out_select[0] ; output[9]   ; 14.010 ; 13.305 ; 13.305 ; 14.010 ;
+; alu_out_select[0] ; output[10]  ; 14.030 ; 13.579 ; 13.579 ; 14.030 ;
+; alu_out_select[0] ; output[11]  ; 12.160 ; 11.817 ; 11.817 ; 12.160 ;
+; alu_out_select[1] ; output[0]   ; 13.192 ; 13.321 ; 13.321 ; 13.192 ;
+; alu_out_select[1] ; output[1]   ; 13.195 ; 13.831 ; 13.831 ; 13.195 ;
+; alu_out_select[1] ; output[2]   ; 13.783 ; 14.232 ; 14.232 ; 13.783 ;
+; alu_out_select[1] ; output[3]   ; 13.067 ; 13.075 ; 13.075 ; 13.067 ;
+; alu_out_select[1] ; output[4]   ; 13.996 ; 14.567 ; 14.567 ; 13.996 ;
+; alu_out_select[1] ; output[5]   ; 12.549 ; 12.835 ; 12.835 ; 12.549 ;
+; alu_out_select[1] ; output[6]   ; 14.149 ; 14.883 ; 14.883 ; 14.149 ;
+; alu_out_select[1] ; output[7]   ; 12.823 ; 12.290 ; 12.290 ; 12.823 ;
+; alu_out_select[1] ; output[8]   ; 14.008 ; 15.063 ; 15.063 ; 14.008 ;
+; alu_out_select[1] ; output[9]   ; 13.987 ; 14.628 ; 14.628 ; 13.987 ;
+; alu_out_select[1] ; output[10]  ; 14.261 ; 14.648 ; 14.648 ; 14.261 ;
+; alu_out_select[1] ; output[11]  ; 12.499 ; 12.778 ; 12.778 ; 12.499 ;
+; alu_out_select[2] ; output[0]   ; 12.447 ; 12.142 ; 12.142 ; 12.447 ;
+; alu_out_select[2] ; output[1]   ; 13.003 ; 12.145 ; 12.145 ; 13.003 ;
+; alu_out_select[2] ; output[2]   ; 13.294 ; 12.733 ; 12.733 ; 13.294 ;
+; alu_out_select[2] ; output[3]   ; 12.505 ; 12.017 ; 12.017 ; 12.505 ;
+; alu_out_select[2] ; output[4]   ; 13.629 ; 12.946 ; 12.946 ; 13.629 ;
+; alu_out_select[2] ; output[5]   ; 12.258 ; 11.499 ; 11.499 ; 12.258 ;
+; alu_out_select[2] ; output[6]   ; 13.945 ; 13.099 ; 13.099 ; 13.945 ;
+; alu_out_select[2] ; output[7]   ; 11.997 ; 11.773 ; 11.773 ; 11.997 ;
+; alu_out_select[2] ; output[8]   ; 14.125 ; 12.958 ; 12.958 ; 14.125 ;
+; alu_out_select[2] ; output[9]   ; 13.954 ; 12.937 ; 12.937 ; 13.954 ;
+; alu_out_select[2] ; output[10]  ; 13.771 ; 13.211 ; 13.211 ; 13.771 ;
+; alu_out_select[2] ; output[11]  ; 12.203 ; 11.449 ; 11.449 ; 12.203 ;
+; inputA[0]         ; add_carry   ; 14.211 ;        ;        ; 14.211 ;
+; inputA[0]         ; output[0]   ; 12.812 ; 13.598 ; 13.598 ; 12.812 ;
+; inputA[0]         ; output[1]   ; 14.205 ; 14.205 ; 14.205 ; 14.205 ;
+; inputA[0]         ; output[2]   ; 14.627 ; 14.627 ; 14.627 ; 14.627 ;
+; inputA[0]         ; output[3]   ; 13.898 ; 13.898 ; 13.898 ; 13.898 ;
+; inputA[0]         ; output[4]   ; 15.414 ; 15.414 ; 15.414 ; 15.414 ;
+; inputA[0]         ; output[5]   ; 14.375 ; 14.375 ; 14.375 ; 14.375 ;
+; inputA[0]         ; output[6]   ; 15.784 ; 15.784 ; 15.784 ; 15.784 ;
+; inputA[0]         ; output[7]   ; 14.833 ; 14.833 ; 14.833 ; 14.833 ;
+; inputA[0]         ; output[8]   ; 14.943 ; 14.943 ; 14.943 ; 14.943 ;
+; inputA[0]         ; output[9]   ; 15.838 ; 15.838 ; 15.838 ; 15.838 ;
+; inputA[0]         ; output[10]  ; 15.759 ; 15.759 ; 15.759 ; 15.759 ;
+; inputA[0]         ; output[11]  ; 15.105 ; 15.105 ; 15.105 ; 15.105 ;
+; inputA[1]         ; add_carry   ; 13.647 ;        ;        ; 13.647 ;
+; inputA[1]         ; output[1]   ; 13.275 ; 13.275 ; 13.275 ; 13.275 ;
+; inputA[1]         ; output[2]   ; 14.063 ; 14.063 ; 14.063 ; 14.063 ;
+; inputA[1]         ; output[3]   ; 13.334 ; 13.334 ; 13.334 ; 13.334 ;
+; inputA[1]         ; output[4]   ; 14.850 ; 14.850 ; 14.850 ; 14.850 ;
+; inputA[1]         ; output[5]   ; 13.811 ; 13.811 ; 13.811 ; 13.811 ;
+; inputA[1]         ; output[6]   ; 15.220 ; 15.220 ; 15.220 ; 15.220 ;
+; inputA[1]         ; output[7]   ; 14.269 ; 14.269 ; 14.269 ; 14.269 ;
+; inputA[1]         ; output[8]   ; 14.379 ; 14.379 ; 14.379 ; 14.379 ;
+; inputA[1]         ; output[9]   ; 15.274 ; 15.274 ; 15.274 ; 15.274 ;
+; inputA[1]         ; output[10]  ; 15.195 ; 15.195 ; 15.195 ; 15.195 ;
+; inputA[1]         ; output[11]  ; 14.541 ; 14.541 ; 14.541 ; 14.541 ;
+; inputA[2]         ; add_carry   ; 12.979 ;        ;        ; 12.979 ;
+; inputA[2]         ; output[2]   ; 12.119 ; 13.031 ; 13.031 ; 12.119 ;
+; inputA[2]         ; output[3]   ; 12.666 ; 12.666 ; 12.666 ; 12.666 ;
+; inputA[2]         ; output[4]   ; 14.182 ; 14.182 ; 14.182 ; 14.182 ;
+; inputA[2]         ; output[5]   ; 13.143 ; 13.143 ; 13.143 ; 13.143 ;
+; inputA[2]         ; output[6]   ; 14.552 ; 14.552 ; 14.552 ; 14.552 ;
+; inputA[2]         ; output[7]   ; 13.601 ; 13.601 ; 13.601 ; 13.601 ;
+; inputA[2]         ; output[8]   ; 13.711 ; 13.711 ; 13.711 ; 13.711 ;
+; inputA[2]         ; output[9]   ; 14.606 ; 14.606 ; 14.606 ; 14.606 ;
+; inputA[2]         ; output[10]  ; 14.527 ; 14.527 ; 14.527 ; 14.527 ;
+; inputA[2]         ; output[11]  ; 13.873 ; 13.873 ; 13.873 ; 13.873 ;
+; inputA[3]         ; add_carry   ; 13.109 ;        ;        ; 13.109 ;
+; inputA[3]         ; output[3]   ; 12.258 ; 12.430 ; 12.430 ; 12.258 ;
+; inputA[3]         ; output[4]   ; 14.312 ; 14.312 ; 14.312 ; 14.312 ;
+; inputA[3]         ; output[5]   ; 13.273 ; 13.273 ; 13.273 ; 13.273 ;
+; inputA[3]         ; output[6]   ; 14.682 ; 14.682 ; 14.682 ; 14.682 ;
+; inputA[3]         ; output[7]   ; 13.731 ; 13.731 ; 13.731 ; 13.731 ;
+; inputA[3]         ; output[8]   ; 13.841 ; 13.841 ; 13.841 ; 13.841 ;
+; inputA[3]         ; output[9]   ; 14.736 ; 14.736 ; 14.736 ; 14.736 ;
+; inputA[3]         ; output[10]  ; 14.657 ; 14.657 ; 14.657 ; 14.657 ;
+; inputA[3]         ; output[11]  ; 14.003 ; 14.003 ; 14.003 ; 14.003 ;
+; inputA[4]         ; add_carry   ; 12.528 ;        ;        ; 12.528 ;
+; inputA[4]         ; output[4]   ; 12.176 ; 13.359 ; 13.359 ; 12.176 ;
+; inputA[4]         ; output[5]   ; 12.692 ; 12.692 ; 12.692 ; 12.692 ;
+; inputA[4]         ; output[6]   ; 14.101 ; 14.101 ; 14.101 ; 14.101 ;
+; inputA[4]         ; output[7]   ; 13.150 ; 13.150 ; 13.150 ; 13.150 ;
+; inputA[4]         ; output[8]   ; 13.260 ; 13.260 ; 13.260 ; 13.260 ;
+; inputA[4]         ; output[9]   ; 14.155 ; 14.155 ; 14.155 ; 14.155 ;
+; inputA[4]         ; output[10]  ; 14.076 ; 14.076 ; 14.076 ; 14.076 ;
+; inputA[4]         ; output[11]  ; 13.422 ; 13.422 ; 13.422 ; 13.422 ;
+; inputA[5]         ; add_carry   ; 12.815 ;        ;        ; 12.815 ;
+; inputA[5]         ; output[5]   ; 11.790 ; 12.609 ; 12.609 ; 11.790 ;
+; inputA[5]         ; output[6]   ; 14.388 ; 14.388 ; 14.388 ; 14.388 ;
+; inputA[5]         ; output[7]   ; 13.437 ; 13.437 ; 13.437 ; 13.437 ;
+; inputA[5]         ; output[8]   ; 13.547 ; 13.547 ; 13.547 ; 13.547 ;
+; inputA[5]         ; output[9]   ; 14.442 ; 14.442 ; 14.442 ; 14.442 ;
+; inputA[5]         ; output[10]  ; 14.363 ; 14.363 ; 14.363 ; 14.363 ;
+; inputA[5]         ; output[11]  ; 13.709 ; 13.709 ; 13.709 ; 13.709 ;
+; inputA[6]         ; add_carry   ; 13.112 ;        ;        ; 13.112 ;
+; inputA[6]         ; output[6]   ; 13.648 ; 14.320 ; 14.320 ; 13.648 ;
+; inputA[6]         ; output[7]   ; 13.734 ; 13.734 ; 13.734 ; 13.734 ;
+; inputA[6]         ; output[8]   ; 13.844 ; 13.844 ; 13.844 ; 13.844 ;
+; inputA[6]         ; output[9]   ; 14.739 ; 14.739 ; 14.739 ; 14.739 ;
+; inputA[6]         ; output[10]  ; 14.660 ; 14.660 ; 14.660 ; 14.660 ;
+; inputA[6]         ; output[11]  ; 14.006 ; 14.006 ; 14.006 ; 14.006 ;
+; inputA[7]         ; add_carry   ; 12.763 ;        ;        ; 12.763 ;
+; inputA[7]         ; output[7]   ; 12.745 ; 13.019 ; 13.019 ; 12.745 ;
+; inputA[7]         ; output[8]   ; 13.495 ; 13.495 ; 13.495 ; 13.495 ;
+; inputA[7]         ; output[9]   ; 14.390 ; 14.390 ; 14.390 ; 14.390 ;
+; inputA[7]         ; output[10]  ; 14.311 ; 14.311 ; 14.311 ; 14.311 ;
+; inputA[7]         ; output[11]  ; 13.657 ; 13.657 ; 13.657 ; 13.657 ;
+; inputA[8]         ; add_carry   ; 12.535 ;        ;        ; 12.535 ;
+; inputA[8]         ; output[8]   ; 12.903 ; 12.903 ; 12.903 ; 12.903 ;
+; inputA[8]         ; output[9]   ; 14.162 ; 14.162 ; 14.162 ; 14.162 ;
+; inputA[8]         ; output[10]  ; 14.083 ; 14.083 ; 14.083 ; 14.083 ;
+; inputA[8]         ; output[11]  ; 13.429 ; 13.429 ; 13.429 ; 13.429 ;
+; inputA[9]         ; add_carry   ; 13.027 ;        ;        ; 13.027 ;
+; inputA[9]         ; output[9]   ; 13.483 ; 14.284 ; 14.284 ; 13.483 ;
+; inputA[9]         ; output[10]  ; 14.575 ; 14.575 ; 14.575 ; 14.575 ;
+; inputA[9]         ; output[11]  ; 13.921 ; 13.921 ; 13.921 ; 13.921 ;
+; inputA[10]        ; add_carry   ; 12.391 ;        ;        ; 12.391 ;
+; inputA[10]        ; output[10]  ; 13.128 ; 13.575 ; 13.575 ; 13.128 ;
+; inputA[10]        ; output[11]  ; 13.285 ; 13.285 ; 13.285 ; 13.285 ;
+; inputA[11]        ; add_carry   ; 12.331 ;        ;        ; 12.331 ;
+; inputA[11]        ; output[11]  ; 11.970 ; 12.859 ; 12.859 ; 11.970 ;
+; inputB[0]         ; add_carry   ; 13.779 ;        ;        ; 13.779 ;
+; inputB[0]         ; output[0]   ; 11.942 ; 13.167 ; 13.167 ; 11.942 ;
+; inputB[0]         ; output[1]   ; 13.773 ; 13.773 ; 13.773 ; 13.773 ;
+; inputB[0]         ; output[2]   ; 14.195 ; 14.195 ; 14.195 ; 14.195 ;
+; inputB[0]         ; output[3]   ; 13.466 ; 13.466 ; 13.466 ; 13.466 ;
+; inputB[0]         ; output[4]   ; 14.982 ; 14.982 ; 14.982 ; 14.982 ;
+; inputB[0]         ; output[5]   ; 13.943 ; 13.943 ; 13.943 ; 13.943 ;
+; inputB[0]         ; output[6]   ; 15.352 ; 15.352 ; 15.352 ; 15.352 ;
+; inputB[0]         ; output[7]   ; 14.401 ; 14.401 ; 14.401 ; 14.401 ;
+; inputB[0]         ; output[8]   ; 14.511 ; 14.511 ; 14.511 ; 14.511 ;
+; inputB[0]         ; output[9]   ; 15.406 ; 15.406 ; 15.406 ; 15.406 ;
+; inputB[0]         ; output[10]  ; 15.327 ; 15.327 ; 15.327 ; 15.327 ;
+; inputB[0]         ; output[11]  ; 14.673 ; 14.673 ; 14.673 ; 14.673 ;
+; inputB[1]         ; add_carry   ; 13.663 ;        ;        ; 13.663 ;
+; inputB[1]         ; output[1]   ; 13.287 ; 13.287 ; 13.287 ; 13.287 ;
+; inputB[1]         ; output[2]   ; 14.079 ; 14.079 ; 14.079 ; 14.079 ;
+; inputB[1]         ; output[3]   ; 13.350 ; 13.350 ; 13.350 ; 13.350 ;
+; inputB[1]         ; output[4]   ; 14.866 ; 14.866 ; 14.866 ; 14.866 ;
+; inputB[1]         ; output[5]   ; 13.827 ; 13.827 ; 13.827 ; 13.827 ;
+; inputB[1]         ; output[6]   ; 15.236 ; 15.236 ; 15.236 ; 15.236 ;
+; inputB[1]         ; output[7]   ; 14.285 ; 14.285 ; 14.285 ; 14.285 ;
+; inputB[1]         ; output[8]   ; 14.395 ; 14.395 ; 14.395 ; 14.395 ;
+; inputB[1]         ; output[9]   ; 15.290 ; 15.290 ; 15.290 ; 15.290 ;
+; inputB[1]         ; output[10]  ; 15.211 ; 15.211 ; 15.211 ; 15.211 ;
+; inputB[1]         ; output[11]  ; 14.557 ; 14.557 ; 14.557 ; 14.557 ;
+; inputB[2]         ; add_carry   ; 13.536 ;        ;        ; 13.536 ;
+; inputB[2]         ; output[2]   ; 13.453 ; 13.587 ; 13.587 ; 13.453 ;
+; inputB[2]         ; output[3]   ; 13.223 ; 13.223 ; 13.223 ; 13.223 ;
+; inputB[2]         ; output[4]   ; 14.739 ; 14.739 ; 14.739 ; 14.739 ;
+; inputB[2]         ; output[5]   ; 13.700 ; 13.700 ; 13.700 ; 13.700 ;
+; inputB[2]         ; output[6]   ; 15.109 ; 15.109 ; 15.109 ; 15.109 ;
+; inputB[2]         ; output[7]   ; 14.158 ; 14.158 ; 14.158 ; 14.158 ;
+; inputB[2]         ; output[8]   ; 14.268 ; 14.268 ; 14.268 ; 14.268 ;
+; inputB[2]         ; output[9]   ; 15.163 ; 15.163 ; 15.163 ; 15.163 ;
+; inputB[2]         ; output[10]  ; 15.084 ; 15.084 ; 15.084 ; 15.084 ;
+; inputB[2]         ; output[11]  ; 14.430 ; 14.430 ; 14.430 ; 14.430 ;
+; inputB[3]         ; add_carry   ; 12.840 ;        ;        ; 12.840 ;
+; inputB[3]         ; output[3]   ; 11.824 ; 12.157 ; 12.157 ; 11.824 ;
+; inputB[3]         ; output[4]   ; 14.043 ; 14.043 ; 14.043 ; 14.043 ;
+; inputB[3]         ; output[5]   ; 13.004 ; 13.004 ; 13.004 ; 13.004 ;
+; inputB[3]         ; output[6]   ; 14.413 ; 14.413 ; 14.413 ; 14.413 ;
+; inputB[3]         ; output[7]   ; 13.462 ; 13.462 ; 13.462 ; 13.462 ;
+; inputB[3]         ; output[8]   ; 13.572 ; 13.572 ; 13.572 ; 13.572 ;
+; inputB[3]         ; output[9]   ; 14.467 ; 14.467 ; 14.467 ; 14.467 ;
+; inputB[3]         ; output[10]  ; 14.388 ; 14.388 ; 14.388 ; 14.388 ;
+; inputB[3]         ; output[11]  ; 13.734 ; 13.734 ; 13.734 ; 13.734 ;
+; inputB[4]         ; add_carry   ; 12.845 ;        ;        ; 12.845 ;
+; inputB[4]         ; output[4]   ; 12.899 ; 13.676 ; 13.676 ; 12.899 ;
+; inputB[4]         ; output[5]   ; 13.009 ; 13.009 ; 13.009 ; 13.009 ;
+; inputB[4]         ; output[6]   ; 14.418 ; 14.418 ; 14.418 ; 14.418 ;
+; inputB[4]         ; output[7]   ; 13.467 ; 13.467 ; 13.467 ; 13.467 ;
+; inputB[4]         ; output[8]   ; 13.577 ; 13.577 ; 13.577 ; 13.577 ;
+; inputB[4]         ; output[9]   ; 14.472 ; 14.472 ; 14.472 ; 14.472 ;
+; inputB[4]         ; output[10]  ; 14.393 ; 14.393 ; 14.393 ; 14.393 ;
+; inputB[4]         ; output[11]  ; 13.739 ; 13.739 ; 13.739 ; 13.739 ;
+; inputB[5]         ; add_carry   ; 12.341 ;        ;        ; 12.341 ;
+; inputB[5]         ; output[5]   ; 11.476 ; 12.139 ; 12.139 ; 11.476 ;
+; inputB[5]         ; output[6]   ; 13.914 ; 13.914 ; 13.914 ; 13.914 ;
+; inputB[5]         ; output[7]   ; 12.963 ; 12.963 ; 12.963 ; 12.963 ;
+; inputB[5]         ; output[8]   ; 13.073 ; 13.073 ; 13.073 ; 13.073 ;
+; inputB[5]         ; output[9]   ; 13.968 ; 13.968 ; 13.968 ; 13.968 ;
+; inputB[5]         ; output[10]  ; 13.889 ; 13.889 ; 13.889 ; 13.889 ;
+; inputB[5]         ; output[11]  ; 13.235 ; 13.235 ; 13.235 ; 13.235 ;
+; inputB[6]         ; add_carry   ; 13.429 ;        ;        ; 13.429 ;
+; inputB[6]         ; output[6]   ; 13.736 ; 14.638 ; 14.638 ; 13.736 ;
+; inputB[6]         ; output[7]   ; 14.051 ; 14.051 ; 14.051 ; 14.051 ;
+; inputB[6]         ; output[8]   ; 14.161 ; 14.161 ; 14.161 ; 14.161 ;
+; inputB[6]         ; output[9]   ; 15.056 ; 15.056 ; 15.056 ; 15.056 ;
+; inputB[6]         ; output[10]  ; 14.977 ; 14.977 ; 14.977 ; 14.977 ;
+; inputB[6]         ; output[11]  ; 14.323 ; 14.323 ; 14.323 ; 14.323 ;
+; inputB[7]         ; add_carry   ; 12.743 ;        ;        ; 12.743 ;
+; inputB[7]         ; output[7]   ; 12.367 ; 12.995 ; 12.995 ; 12.367 ;
+; inputB[7]         ; output[8]   ; 13.475 ; 13.475 ; 13.475 ; 13.475 ;
+; inputB[7]         ; output[9]   ; 14.370 ; 14.370 ; 14.370 ; 14.370 ;
+; inputB[7]         ; output[10]  ; 14.291 ; 14.291 ; 14.291 ; 14.291 ;
+; inputB[7]         ; output[11]  ; 13.637 ; 13.637 ; 13.637 ; 13.637 ;
+; inputB[8]         ; add_carry   ; 13.284 ;        ;        ; 13.284 ;
+; inputB[8]         ; output[8]   ; 13.286 ; 13.651 ; 13.651 ; 13.286 ;
+; inputB[8]         ; output[9]   ; 14.911 ; 14.911 ; 14.911 ; 14.911 ;
+; inputB[8]         ; output[10]  ; 14.832 ; 14.832 ; 14.832 ; 14.832 ;
+; inputB[8]         ; output[11]  ; 14.178 ; 14.178 ; 14.178 ; 14.178 ;
+; inputB[9]         ; add_carry   ; 13.366 ;        ;        ; 13.366 ;
+; inputB[9]         ; output[9]   ; 13.986 ; 14.627 ; 14.627 ; 13.986 ;
+; inputB[9]         ; output[10]  ; 14.914 ; 14.914 ; 14.914 ; 14.914 ;
+; inputB[9]         ; output[11]  ; 14.260 ; 14.260 ; 14.260 ; 14.260 ;
+; inputB[10]        ; add_carry   ; 13.106 ;        ;        ; 13.106 ;
+; inputB[10]        ; output[10]  ; 13.593 ; 14.289 ; 14.289 ; 13.593 ;
+; inputB[10]        ; output[11]  ; 14.000 ; 14.000 ; 14.000 ; 14.000 ;
+; inputB[11]        ; add_carry   ; 12.275 ;        ;        ; 12.275 ;
+; inputB[11]        ; output[11]  ; 11.901 ; 12.799 ; 12.799 ; 11.901 ;
++-------------------+-------------+--------+--------+--------+--------+
+
+
+----------------------------
+; Fast Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Fast Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Fast Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++-----------------------------------------------------------------+
+; Propagation Delay                                               ;
++-------------------+-------------+-------+-------+-------+-------+
+; Input Port        ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++-------------------+-------------+-------+-------+-------+-------+
+; alu_out_select[0] ; output[0]   ; 5.823 ; 5.846 ; 5.846 ; 5.823 ;
+; alu_out_select[0] ; output[1]   ; 5.941 ; 5.959 ; 5.959 ; 5.941 ;
+; alu_out_select[0] ; output[2]   ; 6.216 ; 6.125 ; 6.125 ; 6.216 ;
+; alu_out_select[0] ; output[3]   ; 5.708 ; 5.810 ; 5.810 ; 5.708 ;
+; alu_out_select[0] ; output[4]   ; 6.276 ; 6.190 ; 6.190 ; 6.276 ;
+; alu_out_select[0] ; output[5]   ; 5.634 ; 5.730 ; 5.730 ; 5.634 ;
+; alu_out_select[0] ; output[6]   ; 6.443 ; 6.348 ; 6.348 ; 6.443 ;
+; alu_out_select[0] ; output[7]   ; 5.925 ; 5.822 ; 5.822 ; 5.925 ;
+; alu_out_select[0] ; output[8]   ; 6.506 ; 6.411 ; 6.411 ; 6.506 ;
+; alu_out_select[0] ; output[9]   ; 6.204 ; 6.294 ; 6.294 ; 6.204 ;
+; alu_out_select[0] ; output[10]  ; 6.301 ; 6.321 ; 6.321 ; 6.301 ;
+; alu_out_select[0] ; output[11]  ; 5.575 ; 5.672 ; 5.672 ; 5.575 ;
+; alu_out_select[1] ; output[0]   ; 5.979 ; 6.095 ; 6.095 ; 5.979 ;
+; alu_out_select[1] ; output[1]   ; 5.948 ; 6.208 ; 6.208 ; 5.948 ;
+; alu_out_select[1] ; output[2]   ; 6.186 ; 6.447 ; 6.447 ; 6.186 ;
+; alu_out_select[1] ; output[3]   ; 5.919 ; 6.059 ; 6.059 ; 5.919 ;
+; alu_out_select[1] ; output[4]   ; 6.213 ; 6.507 ; 6.507 ; 6.213 ;
+; alu_out_select[1] ; output[5]   ; 5.749 ; 5.979 ; 5.979 ; 5.749 ;
+; alu_out_select[1] ; output[6]   ; 6.327 ; 6.674 ; 6.674 ; 6.327 ;
+; alu_out_select[1] ; output[7]   ; 5.807 ; 6.156 ; 6.156 ; 5.807 ;
+; alu_out_select[1] ; output[8]   ; 6.268 ; 6.737 ; 6.737 ; 6.268 ;
+; alu_out_select[1] ; output[9]   ; 6.208 ; 6.543 ; 6.543 ; 6.208 ;
+; alu_out_select[1] ; output[10]  ; 6.383 ; 6.570 ; 6.570 ; 6.383 ;
+; alu_out_select[1] ; output[11]  ; 5.695 ; 5.921 ; 5.921 ; 5.695 ;
+; alu_out_select[2] ; output[0]   ; 5.703 ; 5.653 ; 5.653 ; 5.703 ;
+; alu_out_select[2] ; output[1]   ; 5.816 ; 5.771 ; 5.771 ; 5.816 ;
+; alu_out_select[2] ; output[2]   ; 5.982 ; 6.046 ; 6.046 ; 5.982 ;
+; alu_out_select[2] ; output[3]   ; 5.667 ; 5.538 ; 5.538 ; 5.667 ;
+; alu_out_select[2] ; output[4]   ; 6.047 ; 6.106 ; 6.106 ; 6.047 ;
+; alu_out_select[2] ; output[5]   ; 5.587 ; 5.464 ; 5.464 ; 5.587 ;
+; alu_out_select[2] ; output[6]   ; 6.205 ; 6.273 ; 6.273 ; 6.205 ;
+; alu_out_select[2] ; output[7]   ; 5.679 ; 5.755 ; 5.755 ; 5.679 ;
+; alu_out_select[2] ; output[8]   ; 6.268 ; 6.336 ; 6.336 ; 6.268 ;
+; alu_out_select[2] ; output[9]   ; 6.151 ; 6.034 ; 6.034 ; 6.151 ;
+; alu_out_select[2] ; output[10]  ; 6.178 ; 6.131 ; 6.131 ; 6.178 ;
+; alu_out_select[2] ; output[11]  ; 5.529 ; 5.405 ; 5.405 ; 5.529 ;
+; inputA[0]         ; add_carry   ; 6.414 ;       ;       ; 6.414 ;
+; inputA[0]         ; output[0]   ; 6.120 ; 6.120 ; 6.120 ; 6.120 ;
+; inputA[0]         ; output[1]   ; 6.273 ; 6.273 ; 6.273 ; 6.273 ;
+; inputA[0]         ; output[2]   ; 6.464 ; 6.464 ; 6.464 ; 6.464 ;
+; inputA[0]         ; output[3]   ; 6.192 ; 6.192 ; 6.192 ; 6.192 ;
+; inputA[0]         ; output[4]   ; 6.683 ; 6.683 ; 6.683 ; 6.683 ;
+; inputA[0]         ; output[5]   ; 6.395 ; 6.395 ; 6.395 ; 6.395 ;
+; inputA[0]         ; output[6]   ; 6.917 ; 6.917 ; 6.917 ; 6.917 ;
+; inputA[0]         ; output[7]   ; 6.519 ; 6.519 ; 6.519 ; 6.519 ;
+; inputA[0]         ; output[8]   ; 6.647 ; 6.647 ; 6.647 ; 6.647 ;
+; inputA[0]         ; output[9]   ; 6.889 ; 6.889 ; 6.889 ; 6.889 ;
+; inputA[0]         ; output[10]  ; 6.958 ; 6.958 ; 6.958 ; 6.958 ;
+; inputA[0]         ; output[11]  ; 6.644 ; 6.644 ; 6.644 ; 6.644 ;
+; inputA[1]         ; add_carry   ; 6.189 ;       ;       ; 6.189 ;
+; inputA[1]         ; output[1]   ; 5.986 ; 5.949 ; 5.949 ; 5.986 ;
+; inputA[1]         ; output[2]   ; 6.239 ; 6.239 ; 6.239 ; 6.239 ;
+; inputA[1]         ; output[3]   ; 5.967 ; 5.967 ; 5.967 ; 5.967 ;
+; inputA[1]         ; output[4]   ; 6.458 ; 6.458 ; 6.458 ; 6.458 ;
+; inputA[1]         ; output[5]   ; 6.170 ; 6.170 ; 6.170 ; 6.170 ;
+; inputA[1]         ; output[6]   ; 6.692 ; 6.692 ; 6.692 ; 6.692 ;
+; inputA[1]         ; output[7]   ; 6.294 ; 6.294 ; 6.294 ; 6.294 ;
+; inputA[1]         ; output[8]   ; 6.422 ; 6.422 ; 6.422 ; 6.422 ;
+; inputA[1]         ; output[9]   ; 6.664 ; 6.664 ; 6.664 ; 6.664 ;
+; inputA[1]         ; output[10]  ; 6.733 ; 6.733 ; 6.733 ; 6.733 ;
+; inputA[1]         ; output[11]  ; 6.419 ; 6.419 ; 6.419 ; 6.419 ;
+; inputA[2]         ; add_carry   ; 5.897 ;       ;       ; 5.897 ;
+; inputA[2]         ; output[2]   ; 5.848 ; 5.848 ; 5.848 ; 5.848 ;
+; inputA[2]         ; output[3]   ; 5.675 ; 5.675 ; 5.675 ; 5.675 ;
+; inputA[2]         ; output[4]   ; 6.166 ; 6.166 ; 6.166 ; 6.166 ;
+; inputA[2]         ; output[5]   ; 5.878 ; 5.878 ; 5.878 ; 5.878 ;
+; inputA[2]         ; output[6]   ; 6.400 ; 6.400 ; 6.400 ; 6.400 ;
+; inputA[2]         ; output[7]   ; 6.002 ; 6.002 ; 6.002 ; 6.002 ;
+; inputA[2]         ; output[8]   ; 6.130 ; 6.130 ; 6.130 ; 6.130 ;
+; inputA[2]         ; output[9]   ; 6.372 ; 6.372 ; 6.372 ; 6.372 ;
+; inputA[2]         ; output[10]  ; 6.441 ; 6.441 ; 6.441 ; 6.441 ;
+; inputA[2]         ; output[11]  ; 6.127 ; 6.127 ; 6.127 ; 6.127 ;
+; inputA[3]         ; add_carry   ; 6.017 ;       ;       ; 6.017 ;
+; inputA[3]         ; output[3]   ; 5.696 ; 5.696 ; 5.696 ; 5.696 ;
+; inputA[3]         ; output[4]   ; 6.286 ; 6.286 ; 6.286 ; 6.286 ;
+; inputA[3]         ; output[5]   ; 5.998 ; 5.998 ; 5.998 ; 5.998 ;
+; inputA[3]         ; output[6]   ; 6.520 ; 6.520 ; 6.520 ; 6.520 ;
+; inputA[3]         ; output[7]   ; 6.122 ; 6.122 ; 6.122 ; 6.122 ;
+; inputA[3]         ; output[8]   ; 6.250 ; 6.250 ; 6.250 ; 6.250 ;
+; inputA[3]         ; output[9]   ; 6.492 ; 6.492 ; 6.492 ; 6.492 ;
+; inputA[3]         ; output[10]  ; 6.561 ; 6.561 ; 6.561 ; 6.561 ;
+; inputA[3]         ; output[11]  ; 6.247 ; 6.247 ; 6.247 ; 6.247 ;
+; inputA[4]         ; add_carry   ; 5.725 ;       ;       ; 5.725 ;
+; inputA[4]         ; output[4]   ; 5.900 ; 5.900 ; 5.900 ; 5.900 ;
+; inputA[4]         ; output[5]   ; 5.706 ; 5.706 ; 5.706 ; 5.706 ;
+; inputA[4]         ; output[6]   ; 6.228 ; 6.228 ; 6.228 ; 6.228 ;
+; inputA[4]         ; output[7]   ; 5.830 ; 5.830 ; 5.830 ; 5.830 ;
+; inputA[4]         ; output[8]   ; 5.958 ; 5.958 ; 5.958 ; 5.958 ;
+; inputA[4]         ; output[9]   ; 6.200 ; 6.200 ; 6.200 ; 6.200 ;
+; inputA[4]         ; output[10]  ; 6.269 ; 6.269 ; 6.269 ; 6.269 ;
+; inputA[4]         ; output[11]  ; 5.955 ; 5.955 ; 5.955 ; 5.955 ;
+; inputA[5]         ; add_carry   ; 5.846 ;       ;       ; 5.846 ;
+; inputA[5]         ; output[5]   ; 5.729 ; 5.729 ; 5.729 ; 5.729 ;
+; inputA[5]         ; output[6]   ; 6.349 ; 6.349 ; 6.349 ; 6.349 ;
+; inputA[5]         ; output[7]   ; 5.951 ; 5.951 ; 5.951 ; 5.951 ;
+; inputA[5]         ; output[8]   ; 6.079 ; 6.079 ; 6.079 ; 6.079 ;
+; inputA[5]         ; output[9]   ; 6.321 ; 6.321 ; 6.321 ; 6.321 ;
+; inputA[5]         ; output[10]  ; 6.390 ; 6.390 ; 6.390 ; 6.390 ;
+; inputA[5]         ; output[11]  ; 6.076 ; 6.076 ; 6.076 ; 6.076 ;
+; inputA[6]         ; add_carry   ; 5.989 ;       ;       ; 5.989 ;
+; inputA[6]         ; output[6]   ; 6.394 ; 6.394 ; 6.394 ; 6.394 ;
+; inputA[6]         ; output[7]   ; 6.094 ; 6.094 ; 6.094 ; 6.094 ;
+; inputA[6]         ; output[8]   ; 6.222 ; 6.222 ; 6.222 ; 6.222 ;
+; inputA[6]         ; output[9]   ; 6.464 ; 6.464 ; 6.464 ; 6.464 ;
+; inputA[6]         ; output[10]  ; 6.533 ; 6.533 ; 6.533 ; 6.533 ;
+; inputA[6]         ; output[11]  ; 6.219 ; 6.219 ; 6.219 ; 6.219 ;
+; inputA[7]         ; add_carry   ; 5.776 ;       ;       ; 5.776 ;
+; inputA[7]         ; output[7]   ; 5.782 ; 5.782 ; 5.782 ; 5.782 ;
+; inputA[7]         ; output[8]   ; 6.009 ; 6.009 ; 6.009 ; 6.009 ;
+; inputA[7]         ; output[9]   ; 6.251 ; 6.251 ; 6.251 ; 6.251 ;
+; inputA[7]         ; output[10]  ; 6.320 ; 6.320 ; 6.320 ; 6.320 ;
+; inputA[7]         ; output[11]  ; 6.006 ; 6.006 ; 6.006 ; 6.006 ;
+; inputA[8]         ; add_carry   ; 5.752 ;       ;       ; 5.752 ;
+; inputA[8]         ; output[8]   ; 6.114 ; 5.886 ; 5.886 ; 6.114 ;
+; inputA[8]         ; output[9]   ; 6.227 ; 6.227 ; 6.227 ; 6.227 ;
+; inputA[8]         ; output[10]  ; 6.296 ; 6.296 ; 6.296 ; 6.296 ;
+; inputA[8]         ; output[11]  ; 5.982 ; 5.982 ; 5.982 ; 5.982 ;
+; inputA[9]         ; add_carry   ; 5.929 ;       ;       ; 5.929 ;
+; inputA[9]         ; output[9]   ; 6.306 ; 6.306 ; 6.306 ; 6.306 ;
+; inputA[9]         ; output[10]  ; 6.473 ; 6.473 ; 6.473 ; 6.473 ;
+; inputA[9]         ; output[11]  ; 6.159 ; 6.159 ; 6.159 ; 6.159 ;
+; inputA[10]        ; add_carry   ; 5.687 ;       ;       ; 5.687 ;
+; inputA[10]        ; output[10]  ; 6.132 ; 6.132 ; 6.132 ; 6.132 ;
+; inputA[10]        ; output[11]  ; 5.917 ; 5.917 ; 5.917 ; 5.917 ;
+; inputA[11]        ; add_carry   ; 5.661 ;       ;       ; 5.661 ;
+; inputA[11]        ; output[11]  ; 5.792 ; 5.792 ; 5.792 ; 5.792 ;
+; inputB[0]         ; add_carry   ; 6.185 ;       ;       ; 6.185 ;
+; inputB[0]         ; output[0]   ; 5.887 ; 5.887 ; 5.887 ; 5.887 ;
+; inputB[0]         ; output[1]   ; 6.044 ; 6.044 ; 6.044 ; 6.044 ;
+; inputB[0]         ; output[2]   ; 6.235 ; 6.235 ; 6.235 ; 6.235 ;
+; inputB[0]         ; output[3]   ; 5.963 ; 5.963 ; 5.963 ; 5.963 ;
+; inputB[0]         ; output[4]   ; 6.454 ; 6.454 ; 6.454 ; 6.454 ;
+; inputB[0]         ; output[5]   ; 6.166 ; 6.166 ; 6.166 ; 6.166 ;
+; inputB[0]         ; output[6]   ; 6.688 ; 6.688 ; 6.688 ; 6.688 ;
+; inputB[0]         ; output[7]   ; 6.290 ; 6.290 ; 6.290 ; 6.290 ;
+; inputB[0]         ; output[8]   ; 6.418 ; 6.418 ; 6.418 ; 6.418 ;
+; inputB[0]         ; output[9]   ; 6.660 ; 6.660 ; 6.660 ; 6.660 ;
+; inputB[0]         ; output[10]  ; 6.729 ; 6.729 ; 6.729 ; 6.729 ;
+; inputB[0]         ; output[11]  ; 6.415 ; 6.415 ; 6.415 ; 6.415 ;
+; inputB[1]         ; add_carry   ; 6.204 ;       ;       ; 6.204 ;
+; inputB[1]         ; output[1]   ; 6.009 ; 5.965 ; 5.965 ; 6.009 ;
+; inputB[1]         ; output[2]   ; 6.254 ; 6.254 ; 6.254 ; 6.254 ;
+; inputB[1]         ; output[3]   ; 5.982 ; 5.982 ; 5.982 ; 5.982 ;
+; inputB[1]         ; output[4]   ; 6.473 ; 6.473 ; 6.473 ; 6.473 ;
+; inputB[1]         ; output[5]   ; 6.185 ; 6.185 ; 6.185 ; 6.185 ;
+; inputB[1]         ; output[6]   ; 6.707 ; 6.707 ; 6.707 ; 6.707 ;
+; inputB[1]         ; output[7]   ; 6.309 ; 6.309 ; 6.309 ; 6.309 ;
+; inputB[1]         ; output[8]   ; 6.437 ; 6.437 ; 6.437 ; 6.437 ;
+; inputB[1]         ; output[9]   ; 6.679 ; 6.679 ; 6.679 ; 6.679 ;
+; inputB[1]         ; output[10]  ; 6.748 ; 6.748 ; 6.748 ; 6.748 ;
+; inputB[1]         ; output[11]  ; 6.434 ; 6.434 ; 6.434 ; 6.434 ;
+; inputB[2]         ; add_carry   ; 6.147 ;       ;       ; 6.147 ;
+; inputB[2]         ; output[2]   ; 6.099 ; 6.099 ; 6.099 ; 6.099 ;
+; inputB[2]         ; output[3]   ; 5.925 ; 5.925 ; 5.925 ; 5.925 ;
+; inputB[2]         ; output[4]   ; 6.416 ; 6.416 ; 6.416 ; 6.416 ;
+; inputB[2]         ; output[5]   ; 6.128 ; 6.128 ; 6.128 ; 6.128 ;
+; inputB[2]         ; output[6]   ; 6.650 ; 6.650 ; 6.650 ; 6.650 ;
+; inputB[2]         ; output[7]   ; 6.252 ; 6.252 ; 6.252 ; 6.252 ;
+; inputB[2]         ; output[8]   ; 6.380 ; 6.380 ; 6.380 ; 6.380 ;
+; inputB[2]         ; output[9]   ; 6.622 ; 6.622 ; 6.622 ; 6.622 ;
+; inputB[2]         ; output[10]  ; 6.691 ; 6.691 ; 6.691 ; 6.691 ;
+; inputB[2]         ; output[11]  ; 6.377 ; 6.377 ; 6.377 ; 6.377 ;
+; inputB[3]         ; add_carry   ; 5.845 ;       ;       ; 5.845 ;
+; inputB[3]         ; output[3]   ; 5.525 ; 5.525 ; 5.525 ; 5.525 ;
+; inputB[3]         ; output[4]   ; 6.114 ; 6.114 ; 6.114 ; 6.114 ;
+; inputB[3]         ; output[5]   ; 5.826 ; 5.826 ; 5.826 ; 5.826 ;
+; inputB[3]         ; output[6]   ; 6.348 ; 6.348 ; 6.348 ; 6.348 ;
+; inputB[3]         ; output[7]   ; 5.950 ; 5.950 ; 5.950 ; 5.950 ;
+; inputB[3]         ; output[8]   ; 6.078 ; 6.078 ; 6.078 ; 6.078 ;
+; inputB[3]         ; output[9]   ; 6.320 ; 6.320 ; 6.320 ; 6.320 ;
+; inputB[3]         ; output[10]  ; 6.389 ; 6.389 ; 6.389 ; 6.389 ;
+; inputB[3]         ; output[11]  ; 6.075 ; 6.075 ; 6.075 ; 6.075 ;
+; inputB[4]         ; add_carry   ; 5.866 ;       ;       ; 5.866 ;
+; inputB[4]         ; output[4]   ; 6.042 ; 6.042 ; 6.042 ; 6.042 ;
+; inputB[4]         ; output[5]   ; 5.847 ; 5.847 ; 5.847 ; 5.847 ;
+; inputB[4]         ; output[6]   ; 6.369 ; 6.369 ; 6.369 ; 6.369 ;
+; inputB[4]         ; output[7]   ; 5.971 ; 5.971 ; 5.971 ; 5.971 ;
+; inputB[4]         ; output[8]   ; 6.099 ; 6.099 ; 6.099 ; 6.099 ;
+; inputB[4]         ; output[9]   ; 6.341 ; 6.341 ; 6.341 ; 6.341 ;
+; inputB[4]         ; output[10]  ; 6.410 ; 6.410 ; 6.410 ; 6.410 ;
+; inputB[4]         ; output[11]  ; 6.096 ; 6.096 ; 6.096 ; 6.096 ;
+; inputB[5]         ; add_carry   ; 5.639 ;       ;       ; 5.639 ;
+; inputB[5]         ; output[5]   ; 5.521 ; 5.521 ; 5.521 ; 5.521 ;
+; inputB[5]         ; output[6]   ; 6.142 ; 6.142 ; 6.142 ; 6.142 ;
+; inputB[5]         ; output[7]   ; 5.744 ; 5.744 ; 5.744 ; 5.744 ;
+; inputB[5]         ; output[8]   ; 5.872 ; 5.872 ; 5.872 ; 5.872 ;
+; inputB[5]         ; output[9]   ; 6.114 ; 6.114 ; 6.114 ; 6.114 ;
+; inputB[5]         ; output[10]  ; 6.183 ; 6.183 ; 6.183 ; 6.183 ;
+; inputB[5]         ; output[11]  ; 5.869 ; 5.869 ; 5.869 ; 5.869 ;
+; inputB[6]         ; add_carry   ; 6.045 ;       ;       ; 6.045 ;
+; inputB[6]         ; output[6]   ; 6.449 ; 6.449 ; 6.449 ; 6.449 ;
+; inputB[6]         ; output[7]   ; 6.150 ; 6.150 ; 6.150 ; 6.150 ;
+; inputB[6]         ; output[8]   ; 6.278 ; 6.278 ; 6.278 ; 6.278 ;
+; inputB[6]         ; output[9]   ; 6.520 ; 6.520 ; 6.520 ; 6.520 ;
+; inputB[6]         ; output[10]  ; 6.589 ; 6.589 ; 6.589 ; 6.589 ;
+; inputB[6]         ; output[11]  ; 6.275 ; 6.275 ; 6.275 ; 6.275 ;
+; inputB[7]         ; add_carry   ; 5.776 ;       ;       ; 5.776 ;
+; inputB[7]         ; output[7]   ; 5.783 ; 5.783 ; 5.783 ; 5.783 ;
+; inputB[7]         ; output[8]   ; 6.009 ; 6.009 ; 6.009 ; 6.009 ;
+; inputB[7]         ; output[9]   ; 6.251 ; 6.251 ; 6.251 ; 6.251 ;
+; inputB[7]         ; output[10]  ; 6.320 ; 6.320 ; 6.320 ; 6.320 ;
+; inputB[7]         ; output[11]  ; 6.006 ; 6.006 ; 6.006 ; 6.006 ;
+; inputB[8]         ; add_carry   ; 5.957 ;       ;       ; 5.957 ;
+; inputB[8]         ; output[8]   ; 6.092 ; 6.092 ; 6.092 ; 6.092 ;
+; inputB[8]         ; output[9]   ; 6.432 ; 6.432 ; 6.432 ; 6.432 ;
+; inputB[8]         ; output[10]  ; 6.501 ; 6.501 ; 6.501 ; 6.501 ;
+; inputB[8]         ; output[11]  ; 6.187 ; 6.187 ; 6.187 ; 6.187 ;
+; inputB[9]         ; add_carry   ; 6.042 ;       ;       ; 6.042 ;
+; inputB[9]         ; output[9]   ; 6.418 ; 6.418 ; 6.418 ; 6.418 ;
+; inputB[9]         ; output[10]  ; 6.586 ; 6.586 ; 6.586 ; 6.586 ;
+; inputB[9]         ; output[11]  ; 6.272 ; 6.272 ; 6.272 ; 6.272 ;
+; inputB[10]        ; add_carry   ; 5.927 ;       ;       ; 5.927 ;
+; inputB[10]        ; output[10]  ; 6.373 ; 6.373 ; 6.373 ; 6.373 ;
+; inputB[10]        ; output[11]  ; 6.157 ; 6.157 ; 6.157 ; 6.157 ;
+; inputB[11]        ; add_carry   ; 5.633 ;       ;       ; 5.633 ;
+; inputB[11]        ; output[11]  ; 5.765 ; 5.765 ; 5.765 ; 5.765 ;
++-------------------+-------------+-------+-------+-------+-------+
+
+
++-----------------------------------------------------------------+
+; Minimum Propagation Delay                                       ;
++-------------------+-------------+-------+-------+-------+-------+
+; Input Port        ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++-------------------+-------------+-------+-------+-------+-------+
+; alu_out_select[0] ; output[0]   ; 5.823 ; 5.723 ; 5.723 ; 5.823 ;
+; alu_out_select[0] ; output[1]   ; 5.941 ; 5.692 ; 5.692 ; 5.941 ;
+; alu_out_select[0] ; output[2]   ; 6.216 ; 5.930 ; 5.930 ; 6.216 ;
+; alu_out_select[0] ; output[3]   ; 5.708 ; 5.663 ; 5.663 ; 5.708 ;
+; alu_out_select[0] ; output[4]   ; 6.276 ; 5.957 ; 5.957 ; 6.276 ;
+; alu_out_select[0] ; output[5]   ; 5.634 ; 5.493 ; 5.493 ; 5.634 ;
+; alu_out_select[0] ; output[6]   ; 6.443 ; 6.071 ; 6.071 ; 6.443 ;
+; alu_out_select[0] ; output[7]   ; 5.925 ; 5.493 ; 5.493 ; 5.925 ;
+; alu_out_select[0] ; output[8]   ; 6.506 ; 6.012 ; 6.012 ; 6.506 ;
+; alu_out_select[0] ; output[9]   ; 6.204 ; 5.952 ; 5.952 ; 6.204 ;
+; alu_out_select[0] ; output[10]  ; 6.301 ; 6.127 ; 6.127 ; 6.301 ;
+; alu_out_select[0] ; output[11]  ; 5.575 ; 5.439 ; 5.439 ; 5.575 ;
+; alu_out_select[1] ; output[0]   ; 5.979 ; 6.054 ; 6.054 ; 5.979 ;
+; alu_out_select[1] ; output[1]   ; 5.948 ; 6.172 ; 6.172 ; 5.948 ;
+; alu_out_select[1] ; output[2]   ; 6.186 ; 6.374 ; 6.374 ; 6.186 ;
+; alu_out_select[1] ; output[3]   ; 5.919 ; 5.939 ; 5.939 ; 5.919 ;
+; alu_out_select[1] ; output[4]   ; 6.213 ; 6.439 ; 6.439 ; 6.213 ;
+; alu_out_select[1] ; output[5]   ; 5.749 ; 5.865 ; 5.865 ; 5.749 ;
+; alu_out_select[1] ; output[6]   ; 6.327 ; 6.597 ; 6.597 ; 6.327 ;
+; alu_out_select[1] ; output[7]   ; 5.807 ; 5.633 ; 5.633 ; 5.807 ;
+; alu_out_select[1] ; output[8]   ; 6.268 ; 6.660 ; 6.660 ; 6.268 ;
+; alu_out_select[1] ; output[9]   ; 6.208 ; 6.435 ; 6.435 ; 6.208 ;
+; alu_out_select[1] ; output[10]  ; 6.383 ; 6.532 ; 6.532 ; 6.383 ;
+; alu_out_select[1] ; output[11]  ; 5.695 ; 5.806 ; 5.806 ; 5.695 ;
+; alu_out_select[2] ; output[0]   ; 5.703 ; 5.575 ; 5.575 ; 5.703 ;
+; alu_out_select[2] ; output[1]   ; 5.816 ; 5.544 ; 5.544 ; 5.816 ;
+; alu_out_select[2] ; output[2]   ; 5.982 ; 5.782 ; 5.782 ; 5.982 ;
+; alu_out_select[2] ; output[3]   ; 5.667 ; 5.515 ; 5.515 ; 5.667 ;
+; alu_out_select[2] ; output[4]   ; 6.047 ; 5.809 ; 5.809 ; 6.047 ;
+; alu_out_select[2] ; output[5]   ; 5.587 ; 5.345 ; 5.345 ; 5.587 ;
+; alu_out_select[2] ; output[6]   ; 6.205 ; 5.923 ; 5.923 ; 6.205 ;
+; alu_out_select[2] ; output[7]   ; 5.475 ; 5.403 ; 5.403 ; 5.475 ;
+; alu_out_select[2] ; output[8]   ; 6.268 ; 5.864 ; 5.864 ; 6.268 ;
+; alu_out_select[2] ; output[9]   ; 6.151 ; 5.804 ; 5.804 ; 6.151 ;
+; alu_out_select[2] ; output[10]  ; 6.178 ; 5.979 ; 5.979 ; 6.178 ;
+; alu_out_select[2] ; output[11]  ; 5.529 ; 5.291 ; 5.291 ; 5.529 ;
+; inputA[0]         ; add_carry   ; 6.414 ;       ;       ; 6.414 ;
+; inputA[0]         ; output[0]   ; 5.874 ; 6.120 ; 6.120 ; 5.874 ;
+; inputA[0]         ; output[1]   ; 6.273 ; 6.273 ; 6.273 ; 6.273 ;
+; inputA[0]         ; output[2]   ; 6.464 ; 6.464 ; 6.464 ; 6.464 ;
+; inputA[0]         ; output[3]   ; 6.192 ; 6.192 ; 6.192 ; 6.192 ;
+; inputA[0]         ; output[4]   ; 6.683 ; 6.683 ; 6.683 ; 6.683 ;
+; inputA[0]         ; output[5]   ; 6.395 ; 6.395 ; 6.395 ; 6.395 ;
+; inputA[0]         ; output[6]   ; 6.917 ; 6.917 ; 6.917 ; 6.917 ;
+; inputA[0]         ; output[7]   ; 6.519 ; 6.519 ; 6.519 ; 6.519 ;
+; inputA[0]         ; output[8]   ; 6.647 ; 6.647 ; 6.647 ; 6.647 ;
+; inputA[0]         ; output[9]   ; 6.889 ; 6.889 ; 6.889 ; 6.889 ;
+; inputA[0]         ; output[10]  ; 6.958 ; 6.958 ; 6.958 ; 6.958 ;
+; inputA[0]         ; output[11]  ; 6.644 ; 6.644 ; 6.644 ; 6.644 ;
+; inputA[1]         ; add_carry   ; 6.189 ;       ;       ; 6.189 ;
+; inputA[1]         ; output[1]   ; 5.949 ; 5.949 ; 5.949 ; 5.949 ;
+; inputA[1]         ; output[2]   ; 6.239 ; 6.239 ; 6.239 ; 6.239 ;
+; inputA[1]         ; output[3]   ; 5.967 ; 5.967 ; 5.967 ; 5.967 ;
+; inputA[1]         ; output[4]   ; 6.458 ; 6.458 ; 6.458 ; 6.458 ;
+; inputA[1]         ; output[5]   ; 6.170 ; 6.170 ; 6.170 ; 6.170 ;
+; inputA[1]         ; output[6]   ; 6.692 ; 6.692 ; 6.692 ; 6.692 ;
+; inputA[1]         ; output[7]   ; 6.294 ; 6.294 ; 6.294 ; 6.294 ;
+; inputA[1]         ; output[8]   ; 6.422 ; 6.422 ; 6.422 ; 6.422 ;
+; inputA[1]         ; output[9]   ; 6.664 ; 6.664 ; 6.664 ; 6.664 ;
+; inputA[1]         ; output[10]  ; 6.733 ; 6.733 ; 6.733 ; 6.733 ;
+; inputA[1]         ; output[11]  ; 6.419 ; 6.419 ; 6.419 ; 6.419 ;
+; inputA[2]         ; add_carry   ; 5.897 ;       ;       ; 5.897 ;
+; inputA[2]         ; output[2]   ; 5.549 ; 5.848 ; 5.848 ; 5.549 ;
+; inputA[2]         ; output[3]   ; 5.675 ; 5.675 ; 5.675 ; 5.675 ;
+; inputA[2]         ; output[4]   ; 6.166 ; 6.166 ; 6.166 ; 6.166 ;
+; inputA[2]         ; output[5]   ; 5.878 ; 5.878 ; 5.878 ; 5.878 ;
+; inputA[2]         ; output[6]   ; 6.400 ; 6.400 ; 6.400 ; 6.400 ;
+; inputA[2]         ; output[7]   ; 6.002 ; 6.002 ; 6.002 ; 6.002 ;
+; inputA[2]         ; output[8]   ; 6.130 ; 6.130 ; 6.130 ; 6.130 ;
+; inputA[2]         ; output[9]   ; 6.372 ; 6.372 ; 6.372 ; 6.372 ;
+; inputA[2]         ; output[10]  ; 6.441 ; 6.441 ; 6.441 ; 6.441 ;
+; inputA[2]         ; output[11]  ; 6.127 ; 6.127 ; 6.127 ; 6.127 ;
+; inputA[3]         ; add_carry   ; 6.017 ;       ;       ; 6.017 ;
+; inputA[3]         ; output[3]   ; 5.657 ; 5.696 ; 5.696 ; 5.657 ;
+; inputA[3]         ; output[4]   ; 6.286 ; 6.286 ; 6.286 ; 6.286 ;
+; inputA[3]         ; output[5]   ; 5.998 ; 5.998 ; 5.998 ; 5.998 ;
+; inputA[3]         ; output[6]   ; 6.520 ; 6.520 ; 6.520 ; 6.520 ;
+; inputA[3]         ; output[7]   ; 6.122 ; 6.122 ; 6.122 ; 6.122 ;
+; inputA[3]         ; output[8]   ; 6.250 ; 6.250 ; 6.250 ; 6.250 ;
+; inputA[3]         ; output[9]   ; 6.492 ; 6.492 ; 6.492 ; 6.492 ;
+; inputA[3]         ; output[10]  ; 6.561 ; 6.561 ; 6.561 ; 6.561 ;
+; inputA[3]         ; output[11]  ; 6.247 ; 6.247 ; 6.247 ; 6.247 ;
+; inputA[4]         ; add_carry   ; 5.725 ;       ;       ; 5.725 ;
+; inputA[4]         ; output[4]   ; 5.523 ; 5.900 ; 5.900 ; 5.523 ;
+; inputA[4]         ; output[5]   ; 5.706 ; 5.706 ; 5.706 ; 5.706 ;
+; inputA[4]         ; output[6]   ; 6.228 ; 6.228 ; 6.228 ; 6.228 ;
+; inputA[4]         ; output[7]   ; 5.830 ; 5.830 ; 5.830 ; 5.830 ;
+; inputA[4]         ; output[8]   ; 5.958 ; 5.958 ; 5.958 ; 5.958 ;
+; inputA[4]         ; output[9]   ; 6.200 ; 6.200 ; 6.200 ; 6.200 ;
+; inputA[4]         ; output[10]  ; 6.269 ; 6.269 ; 6.269 ; 6.269 ;
+; inputA[4]         ; output[11]  ; 5.955 ; 5.955 ; 5.955 ; 5.955 ;
+; inputA[5]         ; add_carry   ; 5.846 ;       ;       ; 5.846 ;
+; inputA[5]         ; output[5]   ; 5.465 ; 5.729 ; 5.729 ; 5.465 ;
+; inputA[5]         ; output[6]   ; 6.349 ; 6.349 ; 6.349 ; 6.349 ;
+; inputA[5]         ; output[7]   ; 5.951 ; 5.951 ; 5.951 ; 5.951 ;
+; inputA[5]         ; output[8]   ; 6.079 ; 6.079 ; 6.079 ; 6.079 ;
+; inputA[5]         ; output[9]   ; 6.321 ; 6.321 ; 6.321 ; 6.321 ;
+; inputA[5]         ; output[10]  ; 6.390 ; 6.390 ; 6.390 ; 6.390 ;
+; inputA[5]         ; output[11]  ; 6.076 ; 6.076 ; 6.076 ; 6.076 ;
+; inputA[6]         ; add_carry   ; 5.989 ;       ;       ; 5.989 ;
+; inputA[6]         ; output[6]   ; 6.156 ; 6.394 ; 6.394 ; 6.156 ;
+; inputA[6]         ; output[7]   ; 6.094 ; 6.094 ; 6.094 ; 6.094 ;
+; inputA[6]         ; output[8]   ; 6.222 ; 6.222 ; 6.222 ; 6.222 ;
+; inputA[6]         ; output[9]   ; 6.464 ; 6.464 ; 6.464 ; 6.464 ;
+; inputA[6]         ; output[10]  ; 6.533 ; 6.533 ; 6.533 ; 6.533 ;
+; inputA[6]         ; output[11]  ; 6.219 ; 6.219 ; 6.219 ; 6.219 ;
+; inputA[7]         ; add_carry   ; 5.776 ;       ;       ; 5.776 ;
+; inputA[7]         ; output[7]   ; 5.711 ; 5.782 ; 5.782 ; 5.711 ;
+; inputA[7]         ; output[8]   ; 6.009 ; 6.009 ; 6.009 ; 6.009 ;
+; inputA[7]         ; output[9]   ; 6.251 ; 6.251 ; 6.251 ; 6.251 ;
+; inputA[7]         ; output[10]  ; 6.320 ; 6.320 ; 6.320 ; 6.320 ;
+; inputA[7]         ; output[11]  ; 6.006 ; 6.006 ; 6.006 ; 6.006 ;
+; inputA[8]         ; add_carry   ; 5.752 ;       ;       ; 5.752 ;
+; inputA[8]         ; output[8]   ; 5.886 ; 5.886 ; 5.886 ; 5.886 ;
+; inputA[8]         ; output[9]   ; 6.227 ; 6.227 ; 6.227 ; 6.227 ;
+; inputA[8]         ; output[10]  ; 6.296 ; 6.296 ; 6.296 ; 6.296 ;
+; inputA[8]         ; output[11]  ; 5.982 ; 5.982 ; 5.982 ; 5.982 ;
+; inputA[9]         ; add_carry   ; 5.929 ;       ;       ; 5.929 ;
+; inputA[9]         ; output[9]   ; 6.025 ; 6.306 ; 6.306 ; 6.025 ;
+; inputA[9]         ; output[10]  ; 6.473 ; 6.473 ; 6.473 ; 6.473 ;
+; inputA[9]         ; output[11]  ; 6.159 ; 6.159 ; 6.159 ; 6.159 ;
+; inputA[10]        ; add_carry   ; 5.687 ;       ;       ; 5.687 ;
+; inputA[10]        ; output[10]  ; 5.977 ; 6.132 ; 6.132 ; 5.977 ;
+; inputA[10]        ; output[11]  ; 5.917 ; 5.917 ; 5.917 ; 5.917 ;
+; inputA[11]        ; add_carry   ; 5.661 ;       ;       ; 5.661 ;
+; inputA[11]        ; output[11]  ; 5.500 ; 5.792 ; 5.792 ; 5.500 ;
+; inputB[0]         ; add_carry   ; 6.185 ;       ;       ; 6.185 ;
+; inputB[0]         ; output[0]   ; 5.499 ; 5.887 ; 5.887 ; 5.499 ;
+; inputB[0]         ; output[1]   ; 6.044 ; 6.044 ; 6.044 ; 6.044 ;
+; inputB[0]         ; output[2]   ; 6.235 ; 6.235 ; 6.235 ; 6.235 ;
+; inputB[0]         ; output[3]   ; 5.963 ; 5.963 ; 5.963 ; 5.963 ;
+; inputB[0]         ; output[4]   ; 6.454 ; 6.454 ; 6.454 ; 6.454 ;
+; inputB[0]         ; output[5]   ; 6.166 ; 6.166 ; 6.166 ; 6.166 ;
+; inputB[0]         ; output[6]   ; 6.688 ; 6.688 ; 6.688 ; 6.688 ;
+; inputB[0]         ; output[7]   ; 6.290 ; 6.290 ; 6.290 ; 6.290 ;
+; inputB[0]         ; output[8]   ; 6.418 ; 6.418 ; 6.418 ; 6.418 ;
+; inputB[0]         ; output[9]   ; 6.660 ; 6.660 ; 6.660 ; 6.660 ;
+; inputB[0]         ; output[10]  ; 6.729 ; 6.729 ; 6.729 ; 6.729 ;
+; inputB[0]         ; output[11]  ; 6.415 ; 6.415 ; 6.415 ; 6.415 ;
+; inputB[1]         ; add_carry   ; 6.204 ;       ;       ; 6.204 ;
+; inputB[1]         ; output[1]   ; 5.965 ; 5.965 ; 5.965 ; 5.965 ;
+; inputB[1]         ; output[2]   ; 6.254 ; 6.254 ; 6.254 ; 6.254 ;
+; inputB[1]         ; output[3]   ; 5.982 ; 5.982 ; 5.982 ; 5.982 ;
+; inputB[1]         ; output[4]   ; 6.473 ; 6.473 ; 6.473 ; 6.473 ;
+; inputB[1]         ; output[5]   ; 6.185 ; 6.185 ; 6.185 ; 6.185 ;
+; inputB[1]         ; output[6]   ; 6.707 ; 6.707 ; 6.707 ; 6.707 ;
+; inputB[1]         ; output[7]   ; 6.309 ; 6.309 ; 6.309 ; 6.309 ;
+; inputB[1]         ; output[8]   ; 6.437 ; 6.437 ; 6.437 ; 6.437 ;
+; inputB[1]         ; output[9]   ; 6.679 ; 6.679 ; 6.679 ; 6.679 ;
+; inputB[1]         ; output[10]  ; 6.748 ; 6.748 ; 6.748 ; 6.748 ;
+; inputB[1]         ; output[11]  ; 6.434 ; 6.434 ; 6.434 ; 6.434 ;
+; inputB[2]         ; add_carry   ; 6.147 ;       ;       ; 6.147 ;
+; inputB[2]         ; output[2]   ; 6.045 ; 6.099 ; 6.099 ; 6.045 ;
+; inputB[2]         ; output[3]   ; 5.925 ; 5.925 ; 5.925 ; 5.925 ;
+; inputB[2]         ; output[4]   ; 6.416 ; 6.416 ; 6.416 ; 6.416 ;
+; inputB[2]         ; output[5]   ; 6.128 ; 6.128 ; 6.128 ; 6.128 ;
+; inputB[2]         ; output[6]   ; 6.650 ; 6.650 ; 6.650 ; 6.650 ;
+; inputB[2]         ; output[7]   ; 6.252 ; 6.252 ; 6.252 ; 6.252 ;
+; inputB[2]         ; output[8]   ; 6.380 ; 6.380 ; 6.380 ; 6.380 ;
+; inputB[2]         ; output[9]   ; 6.622 ; 6.622 ; 6.622 ; 6.622 ;
+; inputB[2]         ; output[10]  ; 6.691 ; 6.691 ; 6.691 ; 6.691 ;
+; inputB[2]         ; output[11]  ; 6.377 ; 6.377 ; 6.377 ; 6.377 ;
+; inputB[3]         ; add_carry   ; 5.845 ;       ;       ; 5.845 ;
+; inputB[3]         ; output[3]   ; 5.429 ; 5.525 ; 5.525 ; 5.429 ;
+; inputB[3]         ; output[4]   ; 6.114 ; 6.114 ; 6.114 ; 6.114 ;
+; inputB[3]         ; output[5]   ; 5.826 ; 5.826 ; 5.826 ; 5.826 ;
+; inputB[3]         ; output[6]   ; 6.348 ; 6.348 ; 6.348 ; 6.348 ;
+; inputB[3]         ; output[7]   ; 5.950 ; 5.950 ; 5.950 ; 5.950 ;
+; inputB[3]         ; output[8]   ; 6.078 ; 6.078 ; 6.078 ; 6.078 ;
+; inputB[3]         ; output[9]   ; 6.320 ; 6.320 ; 6.320 ; 6.320 ;
+; inputB[3]         ; output[10]  ; 6.389 ; 6.389 ; 6.389 ; 6.389 ;
+; inputB[3]         ; output[11]  ; 6.075 ; 6.075 ; 6.075 ; 6.075 ;
+; inputB[4]         ; add_carry   ; 5.866 ;       ;       ; 5.866 ;
+; inputB[4]         ; output[4]   ; 5.786 ; 6.042 ; 6.042 ; 5.786 ;
+; inputB[4]         ; output[5]   ; 5.847 ; 5.847 ; 5.847 ; 5.847 ;
+; inputB[4]         ; output[6]   ; 6.369 ; 6.369 ; 6.369 ; 6.369 ;
+; inputB[4]         ; output[7]   ; 5.971 ; 5.971 ; 5.971 ; 5.971 ;
+; inputB[4]         ; output[8]   ; 6.099 ; 6.099 ; 6.099 ; 6.099 ;
+; inputB[4]         ; output[9]   ; 6.341 ; 6.341 ; 6.341 ; 6.341 ;
+; inputB[4]         ; output[10]  ; 6.410 ; 6.410 ; 6.410 ; 6.410 ;
+; inputB[4]         ; output[11]  ; 6.096 ; 6.096 ; 6.096 ; 6.096 ;
+; inputB[5]         ; add_carry   ; 5.639 ;       ;       ; 5.639 ;
+; inputB[5]         ; output[5]   ; 5.314 ; 5.521 ; 5.521 ; 5.314 ;
+; inputB[5]         ; output[6]   ; 6.142 ; 6.142 ; 6.142 ; 6.142 ;
+; inputB[5]         ; output[7]   ; 5.744 ; 5.744 ; 5.744 ; 5.744 ;
+; inputB[5]         ; output[8]   ; 5.872 ; 5.872 ; 5.872 ; 5.872 ;
+; inputB[5]         ; output[9]   ; 6.114 ; 6.114 ; 6.114 ; 6.114 ;
+; inputB[5]         ; output[10]  ; 6.183 ; 6.183 ; 6.183 ; 6.183 ;
+; inputB[5]         ; output[11]  ; 5.869 ; 5.869 ; 5.869 ; 5.869 ;
+; inputB[6]         ; add_carry   ; 6.045 ;       ;       ; 6.045 ;
+; inputB[6]         ; output[6]   ; 6.133 ; 6.449 ; 6.449 ; 6.133 ;
+; inputB[6]         ; output[7]   ; 6.150 ; 6.150 ; 6.150 ; 6.150 ;
+; inputB[6]         ; output[8]   ; 6.278 ; 6.278 ; 6.278 ; 6.278 ;
+; inputB[6]         ; output[9]   ; 6.520 ; 6.520 ; 6.520 ; 6.520 ;
+; inputB[6]         ; output[10]  ; 6.589 ; 6.589 ; 6.589 ; 6.589 ;
+; inputB[6]         ; output[11]  ; 6.275 ; 6.275 ; 6.275 ; 6.275 ;
+; inputB[7]         ; add_carry   ; 5.776 ;       ;       ; 5.776 ;
+; inputB[7]         ; output[7]   ; 5.585 ; 5.783 ; 5.783 ; 5.585 ;
+; inputB[7]         ; output[8]   ; 6.009 ; 6.009 ; 6.009 ; 6.009 ;
+; inputB[7]         ; output[9]   ; 6.251 ; 6.251 ; 6.251 ; 6.251 ;
+; inputB[7]         ; output[10]  ; 6.320 ; 6.320 ; 6.320 ; 6.320 ;
+; inputB[7]         ; output[11]  ; 6.006 ; 6.006 ; 6.006 ; 6.006 ;
+; inputB[8]         ; add_carry   ; 5.957 ;       ;       ; 5.957 ;
+; inputB[8]         ; output[8]   ; 5.965 ; 6.092 ; 6.092 ; 5.965 ;
+; inputB[8]         ; output[9]   ; 6.432 ; 6.432 ; 6.432 ; 6.432 ;
+; inputB[8]         ; output[10]  ; 6.501 ; 6.501 ; 6.501 ; 6.501 ;
+; inputB[8]         ; output[11]  ; 6.187 ; 6.187 ; 6.187 ; 6.187 ;
+; inputB[9]         ; add_carry   ; 6.042 ;       ;       ; 6.042 ;
+; inputB[9]         ; output[9]   ; 6.199 ; 6.418 ; 6.418 ; 6.199 ;
+; inputB[9]         ; output[10]  ; 6.586 ; 6.586 ; 6.586 ; 6.586 ;
+; inputB[9]         ; output[11]  ; 6.272 ; 6.272 ; 6.272 ; 6.272 ;
+; inputB[10]        ; add_carry   ; 5.927 ;       ;       ; 5.927 ;
+; inputB[10]        ; output[10]  ; 6.135 ; 6.373 ; 6.373 ; 6.135 ;
+; inputB[10]        ; output[11]  ; 6.157 ; 6.157 ; 6.157 ; 6.157 ;
+; inputB[11]        ; add_carry   ; 5.633 ;       ;       ; 5.633 ;
+; inputB[11]        ; output[11]  ; 5.470 ; 5.765 ; 5.765 ; 5.470 ;
++-------------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                        ;
++------------------+-------+------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
++------------------+-------+------+----------+---------+---------------------+
+
+
++---------------------------------------------------------------------+
+; Progagation Delay                                                   ;
++-------------------+-------------+--------+--------+--------+--------+
+; Input Port        ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++-------------------+-------------+--------+--------+--------+--------+
+; alu_out_select[0] ; output[0]   ; 12.703 ; 12.810 ; 12.810 ; 12.703 ;
+; alu_out_select[0] ; output[1]   ; 13.213 ; 13.366 ; 13.366 ; 13.213 ;
+; alu_out_select[0] ; output[2]   ; 13.915 ; 13.657 ; 13.657 ; 13.915 ;
+; alu_out_select[0] ; output[3]   ; 12.457 ; 12.868 ; 12.868 ; 12.457 ;
+; alu_out_select[0] ; output[4]   ; 14.247 ; 13.992 ; 13.992 ; 14.247 ;
+; alu_out_select[0] ; output[5]   ; 12.217 ; 12.621 ; 12.621 ; 12.217 ;
+; alu_out_select[0] ; output[6]   ; 14.571 ; 14.308 ; 14.308 ; 14.571 ;
+; alu_out_select[0] ; output[7]   ; 13.250 ; 13.004 ; 13.004 ; 13.250 ;
+; alu_out_select[0] ; output[8]   ; 14.752 ; 14.488 ; 14.488 ; 14.752 ;
+; alu_out_select[0] ; output[9]   ; 14.010 ; 14.317 ; 14.317 ; 14.010 ;
+; alu_out_select[0] ; output[10]  ; 14.030 ; 14.134 ; 14.134 ; 14.030 ;
+; alu_out_select[0] ; output[11]  ; 12.160 ; 12.566 ; 12.566 ; 12.160 ;
+; alu_out_select[1] ; output[0]   ; 13.192 ; 13.385 ; 13.385 ; 13.192 ;
+; alu_out_select[1] ; output[1]   ; 13.195 ; 13.941 ; 13.941 ; 13.195 ;
+; alu_out_select[1] ; output[2]   ; 13.783 ; 14.533 ; 14.533 ; 13.783 ;
+; alu_out_select[1] ; output[3]   ; 13.067 ; 13.443 ; 13.443 ; 13.067 ;
+; alu_out_select[1] ; output[4]   ; 13.996 ; 14.865 ; 14.865 ; 13.996 ;
+; alu_out_select[1] ; output[5]   ; 12.549 ; 13.196 ; 13.196 ; 12.549 ;
+; alu_out_select[1] ; output[6]   ; 14.149 ; 15.189 ; 15.189 ; 14.149 ;
+; alu_out_select[1] ; output[7]   ; 12.823 ; 13.868 ; 13.868 ; 12.823 ;
+; alu_out_select[1] ; output[8]   ; 14.008 ; 15.370 ; 15.370 ; 14.008 ;
+; alu_out_select[1] ; output[9]   ; 13.987 ; 14.892 ; 14.892 ; 13.987 ;
+; alu_out_select[1] ; output[10]  ; 14.261 ; 14.709 ; 14.709 ; 14.261 ;
+; alu_out_select[1] ; output[11]  ; 12.499 ; 13.141 ; 13.141 ; 12.499 ;
+; alu_out_select[2] ; output[0]   ; 12.447 ; 12.336 ; 12.336 ; 12.447 ;
+; alu_out_select[2] ; output[1]   ; 13.003 ; 12.846 ; 12.846 ; 13.003 ;
+; alu_out_select[2] ; output[2]   ; 13.294 ; 13.548 ; 13.548 ; 13.294 ;
+; alu_out_select[2] ; output[3]   ; 12.505 ; 12.090 ; 12.090 ; 12.505 ;
+; alu_out_select[2] ; output[4]   ; 13.629 ; 13.880 ; 13.880 ; 13.629 ;
+; alu_out_select[2] ; output[5]   ; 12.258 ; 11.850 ; 11.850 ; 12.258 ;
+; alu_out_select[2] ; output[6]   ; 13.945 ; 14.204 ; 14.204 ; 13.945 ;
+; alu_out_select[2] ; output[7]   ; 12.641 ; 12.883 ; 12.883 ; 12.641 ;
+; alu_out_select[2] ; output[8]   ; 14.125 ; 14.385 ; 14.385 ; 14.125 ;
+; alu_out_select[2] ; output[9]   ; 13.954 ; 13.643 ; 13.643 ; 13.954 ;
+; alu_out_select[2] ; output[10]  ; 13.771 ; 13.663 ; 13.663 ; 13.771 ;
+; alu_out_select[2] ; output[11]  ; 12.203 ; 11.793 ; 11.793 ; 12.203 ;
+; inputA[0]         ; add_carry   ; 14.211 ;        ;        ; 14.211 ;
+; inputA[0]         ; output[0]   ; 13.598 ; 13.598 ; 13.598 ; 13.598 ;
+; inputA[0]         ; output[1]   ; 14.205 ; 14.205 ; 14.205 ; 14.205 ;
+; inputA[0]         ; output[2]   ; 14.627 ; 14.627 ; 14.627 ; 14.627 ;
+; inputA[0]         ; output[3]   ; 13.898 ; 13.898 ; 13.898 ; 13.898 ;
+; inputA[0]         ; output[4]   ; 15.414 ; 15.414 ; 15.414 ; 15.414 ;
+; inputA[0]         ; output[5]   ; 14.375 ; 14.375 ; 14.375 ; 14.375 ;
+; inputA[0]         ; output[6]   ; 15.784 ; 15.784 ; 15.784 ; 15.784 ;
+; inputA[0]         ; output[7]   ; 14.833 ; 14.833 ; 14.833 ; 14.833 ;
+; inputA[0]         ; output[8]   ; 14.943 ; 14.943 ; 14.943 ; 14.943 ;
+; inputA[0]         ; output[9]   ; 15.838 ; 15.838 ; 15.838 ; 15.838 ;
+; inputA[0]         ; output[10]  ; 15.759 ; 15.759 ; 15.759 ; 15.759 ;
+; inputA[0]         ; output[11]  ; 15.105 ; 15.105 ; 15.105 ; 15.105 ;
+; inputA[1]         ; add_carry   ; 13.647 ;        ;        ; 13.647 ;
+; inputA[1]         ; output[1]   ; 13.377 ; 13.275 ; 13.275 ; 13.377 ;
+; inputA[1]         ; output[2]   ; 14.063 ; 14.063 ; 14.063 ; 14.063 ;
+; inputA[1]         ; output[3]   ; 13.334 ; 13.334 ; 13.334 ; 13.334 ;
+; inputA[1]         ; output[4]   ; 14.850 ; 14.850 ; 14.850 ; 14.850 ;
+; inputA[1]         ; output[5]   ; 13.811 ; 13.811 ; 13.811 ; 13.811 ;
+; inputA[1]         ; output[6]   ; 15.220 ; 15.220 ; 15.220 ; 15.220 ;
+; inputA[1]         ; output[7]   ; 14.269 ; 14.269 ; 14.269 ; 14.269 ;
+; inputA[1]         ; output[8]   ; 14.379 ; 14.379 ; 14.379 ; 14.379 ;
+; inputA[1]         ; output[9]   ; 15.274 ; 15.274 ; 15.274 ; 15.274 ;
+; inputA[1]         ; output[10]  ; 15.195 ; 15.195 ; 15.195 ; 15.195 ;
+; inputA[1]         ; output[11]  ; 14.541 ; 14.541 ; 14.541 ; 14.541 ;
+; inputA[2]         ; add_carry   ; 12.979 ;        ;        ; 12.979 ;
+; inputA[2]         ; output[2]   ; 13.031 ; 13.031 ; 13.031 ; 13.031 ;
+; inputA[2]         ; output[3]   ; 12.666 ; 12.666 ; 12.666 ; 12.666 ;
+; inputA[2]         ; output[4]   ; 14.182 ; 14.182 ; 14.182 ; 14.182 ;
+; inputA[2]         ; output[5]   ; 13.143 ; 13.143 ; 13.143 ; 13.143 ;
+; inputA[2]         ; output[6]   ; 14.552 ; 14.552 ; 14.552 ; 14.552 ;
+; inputA[2]         ; output[7]   ; 13.601 ; 13.601 ; 13.601 ; 13.601 ;
+; inputA[2]         ; output[8]   ; 13.711 ; 13.711 ; 13.711 ; 13.711 ;
+; inputA[2]         ; output[9]   ; 14.606 ; 14.606 ; 14.606 ; 14.606 ;
+; inputA[2]         ; output[10]  ; 14.527 ; 14.527 ; 14.527 ; 14.527 ;
+; inputA[2]         ; output[11]  ; 13.873 ; 13.873 ; 13.873 ; 13.873 ;
+; inputA[3]         ; add_carry   ; 13.109 ;        ;        ; 13.109 ;
+; inputA[3]         ; output[3]   ; 12.430 ; 12.430 ; 12.430 ; 12.430 ;
+; inputA[3]         ; output[4]   ; 14.312 ; 14.312 ; 14.312 ; 14.312 ;
+; inputA[3]         ; output[5]   ; 13.273 ; 13.273 ; 13.273 ; 13.273 ;
+; inputA[3]         ; output[6]   ; 14.682 ; 14.682 ; 14.682 ; 14.682 ;
+; inputA[3]         ; output[7]   ; 13.731 ; 13.731 ; 13.731 ; 13.731 ;
+; inputA[3]         ; output[8]   ; 13.841 ; 13.841 ; 13.841 ; 13.841 ;
+; inputA[3]         ; output[9]   ; 14.736 ; 14.736 ; 14.736 ; 14.736 ;
+; inputA[3]         ; output[10]  ; 14.657 ; 14.657 ; 14.657 ; 14.657 ;
+; inputA[3]         ; output[11]  ; 14.003 ; 14.003 ; 14.003 ; 14.003 ;
+; inputA[4]         ; add_carry   ; 12.528 ;        ;        ; 12.528 ;
+; inputA[4]         ; output[4]   ; 13.359 ; 13.359 ; 13.359 ; 13.359 ;
+; inputA[4]         ; output[5]   ; 12.692 ; 12.692 ; 12.692 ; 12.692 ;
+; inputA[4]         ; output[6]   ; 14.101 ; 14.101 ; 14.101 ; 14.101 ;
+; inputA[4]         ; output[7]   ; 13.150 ; 13.150 ; 13.150 ; 13.150 ;
+; inputA[4]         ; output[8]   ; 13.260 ; 13.260 ; 13.260 ; 13.260 ;
+; inputA[4]         ; output[9]   ; 14.155 ; 14.155 ; 14.155 ; 14.155 ;
+; inputA[4]         ; output[10]  ; 14.076 ; 14.076 ; 14.076 ; 14.076 ;
+; inputA[4]         ; output[11]  ; 13.422 ; 13.422 ; 13.422 ; 13.422 ;
+; inputA[5]         ; add_carry   ; 12.815 ;        ;        ; 12.815 ;
+; inputA[5]         ; output[5]   ; 12.609 ; 12.609 ; 12.609 ; 12.609 ;
+; inputA[5]         ; output[6]   ; 14.388 ; 14.388 ; 14.388 ; 14.388 ;
+; inputA[5]         ; output[7]   ; 13.437 ; 13.437 ; 13.437 ; 13.437 ;
+; inputA[5]         ; output[8]   ; 13.547 ; 13.547 ; 13.547 ; 13.547 ;
+; inputA[5]         ; output[9]   ; 14.442 ; 14.442 ; 14.442 ; 14.442 ;
+; inputA[5]         ; output[10]  ; 14.363 ; 14.363 ; 14.363 ; 14.363 ;
+; inputA[5]         ; output[11]  ; 13.709 ; 13.709 ; 13.709 ; 13.709 ;
+; inputA[6]         ; add_carry   ; 13.112 ;        ;        ; 13.112 ;
+; inputA[6]         ; output[6]   ; 14.320 ; 14.320 ; 14.320 ; 14.320 ;
+; inputA[6]         ; output[7]   ; 13.734 ; 13.734 ; 13.734 ; 13.734 ;
+; inputA[6]         ; output[8]   ; 13.844 ; 13.844 ; 13.844 ; 13.844 ;
+; inputA[6]         ; output[9]   ; 14.739 ; 14.739 ; 14.739 ; 14.739 ;
+; inputA[6]         ; output[10]  ; 14.660 ; 14.660 ; 14.660 ; 14.660 ;
+; inputA[6]         ; output[11]  ; 14.006 ; 14.006 ; 14.006 ; 14.006 ;
+; inputA[7]         ; add_carry   ; 12.763 ;        ;        ; 12.763 ;
+; inputA[7]         ; output[7]   ; 13.019 ; 13.019 ; 13.019 ; 13.019 ;
+; inputA[7]         ; output[8]   ; 13.495 ; 13.495 ; 13.495 ; 13.495 ;
+; inputA[7]         ; output[9]   ; 14.390 ; 14.390 ; 14.390 ; 14.390 ;
+; inputA[7]         ; output[10]  ; 14.311 ; 14.311 ; 14.311 ; 14.311 ;
+; inputA[7]         ; output[11]  ; 13.657 ; 13.657 ; 13.657 ; 13.657 ;
+; inputA[8]         ; add_carry   ; 12.535 ;        ;        ; 12.535 ;
+; inputA[8]         ; output[8]   ; 13.583 ; 12.903 ; 12.903 ; 13.583 ;
+; inputA[8]         ; output[9]   ; 14.162 ; 14.162 ; 14.162 ; 14.162 ;
+; inputA[8]         ; output[10]  ; 14.083 ; 14.083 ; 14.083 ; 14.083 ;
+; inputA[8]         ; output[11]  ; 13.429 ; 13.429 ; 13.429 ; 13.429 ;
+; inputA[9]         ; add_carry   ; 13.027 ;        ;        ; 13.027 ;
+; inputA[9]         ; output[9]   ; 14.284 ; 14.284 ; 14.284 ; 14.284 ;
+; inputA[9]         ; output[10]  ; 14.575 ; 14.575 ; 14.575 ; 14.575 ;
+; inputA[9]         ; output[11]  ; 13.921 ; 13.921 ; 13.921 ; 13.921 ;
+; inputA[10]        ; add_carry   ; 12.391 ;        ;        ; 12.391 ;
+; inputA[10]        ; output[10]  ; 13.575 ; 13.575 ; 13.575 ; 13.575 ;
+; inputA[10]        ; output[11]  ; 13.285 ; 13.285 ; 13.285 ; 13.285 ;
+; inputA[11]        ; add_carry   ; 12.331 ;        ;        ; 12.331 ;
+; inputA[11]        ; output[11]  ; 12.859 ; 12.859 ; 12.859 ; 12.859 ;
+; inputB[0]         ; add_carry   ; 13.779 ;        ;        ; 13.779 ;
+; inputB[0]         ; output[0]   ; 13.167 ; 13.167 ; 13.167 ; 13.167 ;
+; inputB[0]         ; output[1]   ; 13.773 ; 13.773 ; 13.773 ; 13.773 ;
+; inputB[0]         ; output[2]   ; 14.195 ; 14.195 ; 14.195 ; 14.195 ;
+; inputB[0]         ; output[3]   ; 13.466 ; 13.466 ; 13.466 ; 13.466 ;
+; inputB[0]         ; output[4]   ; 14.982 ; 14.982 ; 14.982 ; 14.982 ;
+; inputB[0]         ; output[5]   ; 13.943 ; 13.943 ; 13.943 ; 13.943 ;
+; inputB[0]         ; output[6]   ; 15.352 ; 15.352 ; 15.352 ; 15.352 ;
+; inputB[0]         ; output[7]   ; 14.401 ; 14.401 ; 14.401 ; 14.401 ;
+; inputB[0]         ; output[8]   ; 14.511 ; 14.511 ; 14.511 ; 14.511 ;
+; inputB[0]         ; output[9]   ; 15.406 ; 15.406 ; 15.406 ; 15.406 ;
+; inputB[0]         ; output[10]  ; 15.327 ; 15.327 ; 15.327 ; 15.327 ;
+; inputB[0]         ; output[11]  ; 14.673 ; 14.673 ; 14.673 ; 14.673 ;
+; inputB[1]         ; add_carry   ; 13.663 ;        ;        ; 13.663 ;
+; inputB[1]         ; output[1]   ; 13.454 ; 13.287 ; 13.287 ; 13.454 ;
+; inputB[1]         ; output[2]   ; 14.079 ; 14.079 ; 14.079 ; 14.079 ;
+; inputB[1]         ; output[3]   ; 13.350 ; 13.350 ; 13.350 ; 13.350 ;
+; inputB[1]         ; output[4]   ; 14.866 ; 14.866 ; 14.866 ; 14.866 ;
+; inputB[1]         ; output[5]   ; 13.827 ; 13.827 ; 13.827 ; 13.827 ;
+; inputB[1]         ; output[6]   ; 15.236 ; 15.236 ; 15.236 ; 15.236 ;
+; inputB[1]         ; output[7]   ; 14.285 ; 14.285 ; 14.285 ; 14.285 ;
+; inputB[1]         ; output[8]   ; 14.395 ; 14.395 ; 14.395 ; 14.395 ;
+; inputB[1]         ; output[9]   ; 15.290 ; 15.290 ; 15.290 ; 15.290 ;
+; inputB[1]         ; output[10]  ; 15.211 ; 15.211 ; 15.211 ; 15.211 ;
+; inputB[1]         ; output[11]  ; 14.557 ; 14.557 ; 14.557 ; 14.557 ;
+; inputB[2]         ; add_carry   ; 13.536 ;        ;        ; 13.536 ;
+; inputB[2]         ; output[2]   ; 13.587 ; 13.587 ; 13.587 ; 13.587 ;
+; inputB[2]         ; output[3]   ; 13.223 ; 13.223 ; 13.223 ; 13.223 ;
+; inputB[2]         ; output[4]   ; 14.739 ; 14.739 ; 14.739 ; 14.739 ;
+; inputB[2]         ; output[5]   ; 13.700 ; 13.700 ; 13.700 ; 13.700 ;
+; inputB[2]         ; output[6]   ; 15.109 ; 15.109 ; 15.109 ; 15.109 ;
+; inputB[2]         ; output[7]   ; 14.158 ; 14.158 ; 14.158 ; 14.158 ;
+; inputB[2]         ; output[8]   ; 14.268 ; 14.268 ; 14.268 ; 14.268 ;
+; inputB[2]         ; output[9]   ; 15.163 ; 15.163 ; 15.163 ; 15.163 ;
+; inputB[2]         ; output[10]  ; 15.084 ; 15.084 ; 15.084 ; 15.084 ;
+; inputB[2]         ; output[11]  ; 14.430 ; 14.430 ; 14.430 ; 14.430 ;
+; inputB[3]         ; add_carry   ; 12.840 ;        ;        ; 12.840 ;
+; inputB[3]         ; output[3]   ; 12.157 ; 12.157 ; 12.157 ; 12.157 ;
+; inputB[3]         ; output[4]   ; 14.043 ; 14.043 ; 14.043 ; 14.043 ;
+; inputB[3]         ; output[5]   ; 13.004 ; 13.004 ; 13.004 ; 13.004 ;
+; inputB[3]         ; output[6]   ; 14.413 ; 14.413 ; 14.413 ; 14.413 ;
+; inputB[3]         ; output[7]   ; 13.462 ; 13.462 ; 13.462 ; 13.462 ;
+; inputB[3]         ; output[8]   ; 13.572 ; 13.572 ; 13.572 ; 13.572 ;
+; inputB[3]         ; output[9]   ; 14.467 ; 14.467 ; 14.467 ; 14.467 ;
+; inputB[3]         ; output[10]  ; 14.388 ; 14.388 ; 14.388 ; 14.388 ;
+; inputB[3]         ; output[11]  ; 13.734 ; 13.734 ; 13.734 ; 13.734 ;
+; inputB[4]         ; add_carry   ; 12.845 ;        ;        ; 12.845 ;
+; inputB[4]         ; output[4]   ; 13.676 ; 13.676 ; 13.676 ; 13.676 ;
+; inputB[4]         ; output[5]   ; 13.009 ; 13.009 ; 13.009 ; 13.009 ;
+; inputB[4]         ; output[6]   ; 14.418 ; 14.418 ; 14.418 ; 14.418 ;
+; inputB[4]         ; output[7]   ; 13.467 ; 13.467 ; 13.467 ; 13.467 ;
+; inputB[4]         ; output[8]   ; 13.577 ; 13.577 ; 13.577 ; 13.577 ;
+; inputB[4]         ; output[9]   ; 14.472 ; 14.472 ; 14.472 ; 14.472 ;
+; inputB[4]         ; output[10]  ; 14.393 ; 14.393 ; 14.393 ; 14.393 ;
+; inputB[4]         ; output[11]  ; 13.739 ; 13.739 ; 13.739 ; 13.739 ;
+; inputB[5]         ; add_carry   ; 12.341 ;        ;        ; 12.341 ;
+; inputB[5]         ; output[5]   ; 12.139 ; 12.139 ; 12.139 ; 12.139 ;
+; inputB[5]         ; output[6]   ; 13.914 ; 13.914 ; 13.914 ; 13.914 ;
+; inputB[5]         ; output[7]   ; 12.963 ; 12.963 ; 12.963 ; 12.963 ;
+; inputB[5]         ; output[8]   ; 13.073 ; 13.073 ; 13.073 ; 13.073 ;
+; inputB[5]         ; output[9]   ; 13.968 ; 13.968 ; 13.968 ; 13.968 ;
+; inputB[5]         ; output[10]  ; 13.889 ; 13.889 ; 13.889 ; 13.889 ;
+; inputB[5]         ; output[11]  ; 13.235 ; 13.235 ; 13.235 ; 13.235 ;
+; inputB[6]         ; add_carry   ; 13.429 ;        ;        ; 13.429 ;
+; inputB[6]         ; output[6]   ; 14.638 ; 14.638 ; 14.638 ; 14.638 ;
+; inputB[6]         ; output[7]   ; 14.051 ; 14.051 ; 14.051 ; 14.051 ;
+; inputB[6]         ; output[8]   ; 14.161 ; 14.161 ; 14.161 ; 14.161 ;
+; inputB[6]         ; output[9]   ; 15.056 ; 15.056 ; 15.056 ; 15.056 ;
+; inputB[6]         ; output[10]  ; 14.977 ; 14.977 ; 14.977 ; 14.977 ;
+; inputB[6]         ; output[11]  ; 14.323 ; 14.323 ; 14.323 ; 14.323 ;
+; inputB[7]         ; add_carry   ; 12.743 ;        ;        ; 12.743 ;
+; inputB[7]         ; output[7]   ; 12.995 ; 12.995 ; 12.995 ; 12.995 ;
+; inputB[7]         ; output[8]   ; 13.475 ; 13.475 ; 13.475 ; 13.475 ;
+; inputB[7]         ; output[9]   ; 14.370 ; 14.370 ; 14.370 ; 14.370 ;
+; inputB[7]         ; output[10]  ; 14.291 ; 14.291 ; 14.291 ; 14.291 ;
+; inputB[7]         ; output[11]  ; 13.637 ; 13.637 ; 13.637 ; 13.637 ;
+; inputB[8]         ; add_carry   ; 13.284 ;        ;        ; 13.284 ;
+; inputB[8]         ; output[8]   ; 13.651 ; 13.651 ; 13.651 ; 13.651 ;
+; inputB[8]         ; output[9]   ; 14.911 ; 14.911 ; 14.911 ; 14.911 ;
+; inputB[8]         ; output[10]  ; 14.832 ; 14.832 ; 14.832 ; 14.832 ;
+; inputB[8]         ; output[11]  ; 14.178 ; 14.178 ; 14.178 ; 14.178 ;
+; inputB[9]         ; add_carry   ; 13.366 ;        ;        ; 13.366 ;
+; inputB[9]         ; output[9]   ; 14.627 ; 14.627 ; 14.627 ; 14.627 ;
+; inputB[9]         ; output[10]  ; 14.914 ; 14.914 ; 14.914 ; 14.914 ;
+; inputB[9]         ; output[11]  ; 14.260 ; 14.260 ; 14.260 ; 14.260 ;
+; inputB[10]        ; add_carry   ; 13.106 ;        ;        ; 13.106 ;
+; inputB[10]        ; output[10]  ; 14.289 ; 14.289 ; 14.289 ; 14.289 ;
+; inputB[10]        ; output[11]  ; 14.000 ; 14.000 ; 14.000 ; 14.000 ;
+; inputB[11]        ; add_carry   ; 12.275 ;        ;        ; 12.275 ;
+; inputB[11]        ; output[11]  ; 12.799 ; 12.799 ; 12.799 ; 12.799 ;
++-------------------+-------------+--------+--------+--------+--------+
+
+
++-----------------------------------------------------------------+
+; Minimum Progagation Delay                                       ;
++-------------------+-------------+-------+-------+-------+-------+
+; Input Port        ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++-------------------+-------------+-------+-------+-------+-------+
+; alu_out_select[0] ; output[0]   ; 5.823 ; 5.723 ; 5.723 ; 5.823 ;
+; alu_out_select[0] ; output[1]   ; 5.941 ; 5.692 ; 5.692 ; 5.941 ;
+; alu_out_select[0] ; output[2]   ; 6.216 ; 5.930 ; 5.930 ; 6.216 ;
+; alu_out_select[0] ; output[3]   ; 5.708 ; 5.663 ; 5.663 ; 5.708 ;
+; alu_out_select[0] ; output[4]   ; 6.276 ; 5.957 ; 5.957 ; 6.276 ;
+; alu_out_select[0] ; output[5]   ; 5.634 ; 5.493 ; 5.493 ; 5.634 ;
+; alu_out_select[0] ; output[6]   ; 6.443 ; 6.071 ; 6.071 ; 6.443 ;
+; alu_out_select[0] ; output[7]   ; 5.925 ; 5.493 ; 5.493 ; 5.925 ;
+; alu_out_select[0] ; output[8]   ; 6.506 ; 6.012 ; 6.012 ; 6.506 ;
+; alu_out_select[0] ; output[9]   ; 6.204 ; 5.952 ; 5.952 ; 6.204 ;
+; alu_out_select[0] ; output[10]  ; 6.301 ; 6.127 ; 6.127 ; 6.301 ;
+; alu_out_select[0] ; output[11]  ; 5.575 ; 5.439 ; 5.439 ; 5.575 ;
+; alu_out_select[1] ; output[0]   ; 5.979 ; 6.054 ; 6.054 ; 5.979 ;
+; alu_out_select[1] ; output[1]   ; 5.948 ; 6.172 ; 6.172 ; 5.948 ;
+; alu_out_select[1] ; output[2]   ; 6.186 ; 6.374 ; 6.374 ; 6.186 ;
+; alu_out_select[1] ; output[3]   ; 5.919 ; 5.939 ; 5.939 ; 5.919 ;
+; alu_out_select[1] ; output[4]   ; 6.213 ; 6.439 ; 6.439 ; 6.213 ;
+; alu_out_select[1] ; output[5]   ; 5.749 ; 5.865 ; 5.865 ; 5.749 ;
+; alu_out_select[1] ; output[6]   ; 6.327 ; 6.597 ; 6.597 ; 6.327 ;
+; alu_out_select[1] ; output[7]   ; 5.807 ; 5.633 ; 5.633 ; 5.807 ;
+; alu_out_select[1] ; output[8]   ; 6.268 ; 6.660 ; 6.660 ; 6.268 ;
+; alu_out_select[1] ; output[9]   ; 6.208 ; 6.435 ; 6.435 ; 6.208 ;
+; alu_out_select[1] ; output[10]  ; 6.383 ; 6.532 ; 6.532 ; 6.383 ;
+; alu_out_select[1] ; output[11]  ; 5.695 ; 5.806 ; 5.806 ; 5.695 ;
+; alu_out_select[2] ; output[0]   ; 5.703 ; 5.575 ; 5.575 ; 5.703 ;
+; alu_out_select[2] ; output[1]   ; 5.816 ; 5.544 ; 5.544 ; 5.816 ;
+; alu_out_select[2] ; output[2]   ; 5.982 ; 5.782 ; 5.782 ; 5.982 ;
+; alu_out_select[2] ; output[3]   ; 5.667 ; 5.515 ; 5.515 ; 5.667 ;
+; alu_out_select[2] ; output[4]   ; 6.047 ; 5.809 ; 5.809 ; 6.047 ;
+; alu_out_select[2] ; output[5]   ; 5.587 ; 5.345 ; 5.345 ; 5.587 ;
+; alu_out_select[2] ; output[6]   ; 6.205 ; 5.923 ; 5.923 ; 6.205 ;
+; alu_out_select[2] ; output[7]   ; 5.475 ; 5.403 ; 5.403 ; 5.475 ;
+; alu_out_select[2] ; output[8]   ; 6.268 ; 5.864 ; 5.864 ; 6.268 ;
+; alu_out_select[2] ; output[9]   ; 6.151 ; 5.804 ; 5.804 ; 6.151 ;
+; alu_out_select[2] ; output[10]  ; 6.178 ; 5.979 ; 5.979 ; 6.178 ;
+; alu_out_select[2] ; output[11]  ; 5.529 ; 5.291 ; 5.291 ; 5.529 ;
+; inputA[0]         ; add_carry   ; 6.414 ;       ;       ; 6.414 ;
+; inputA[0]         ; output[0]   ; 5.874 ; 6.120 ; 6.120 ; 5.874 ;
+; inputA[0]         ; output[1]   ; 6.273 ; 6.273 ; 6.273 ; 6.273 ;
+; inputA[0]         ; output[2]   ; 6.464 ; 6.464 ; 6.464 ; 6.464 ;
+; inputA[0]         ; output[3]   ; 6.192 ; 6.192 ; 6.192 ; 6.192 ;
+; inputA[0]         ; output[4]   ; 6.683 ; 6.683 ; 6.683 ; 6.683 ;
+; inputA[0]         ; output[5]   ; 6.395 ; 6.395 ; 6.395 ; 6.395 ;
+; inputA[0]         ; output[6]   ; 6.917 ; 6.917 ; 6.917 ; 6.917 ;
+; inputA[0]         ; output[7]   ; 6.519 ; 6.519 ; 6.519 ; 6.519 ;
+; inputA[0]         ; output[8]   ; 6.647 ; 6.647 ; 6.647 ; 6.647 ;
+; inputA[0]         ; output[9]   ; 6.889 ; 6.889 ; 6.889 ; 6.889 ;
+; inputA[0]         ; output[10]  ; 6.958 ; 6.958 ; 6.958 ; 6.958 ;
+; inputA[0]         ; output[11]  ; 6.644 ; 6.644 ; 6.644 ; 6.644 ;
+; inputA[1]         ; add_carry   ; 6.189 ;       ;       ; 6.189 ;
+; inputA[1]         ; output[1]   ; 5.949 ; 5.949 ; 5.949 ; 5.949 ;
+; inputA[1]         ; output[2]   ; 6.239 ; 6.239 ; 6.239 ; 6.239 ;
+; inputA[1]         ; output[3]   ; 5.967 ; 5.967 ; 5.967 ; 5.967 ;
+; inputA[1]         ; output[4]   ; 6.458 ; 6.458 ; 6.458 ; 6.458 ;
+; inputA[1]         ; output[5]   ; 6.170 ; 6.170 ; 6.170 ; 6.170 ;
+; inputA[1]         ; output[6]   ; 6.692 ; 6.692 ; 6.692 ; 6.692 ;
+; inputA[1]         ; output[7]   ; 6.294 ; 6.294 ; 6.294 ; 6.294 ;
+; inputA[1]         ; output[8]   ; 6.422 ; 6.422 ; 6.422 ; 6.422 ;
+; inputA[1]         ; output[9]   ; 6.664 ; 6.664 ; 6.664 ; 6.664 ;
+; inputA[1]         ; output[10]  ; 6.733 ; 6.733 ; 6.733 ; 6.733 ;
+; inputA[1]         ; output[11]  ; 6.419 ; 6.419 ; 6.419 ; 6.419 ;
+; inputA[2]         ; add_carry   ; 5.897 ;       ;       ; 5.897 ;
+; inputA[2]         ; output[2]   ; 5.549 ; 5.848 ; 5.848 ; 5.549 ;
+; inputA[2]         ; output[3]   ; 5.675 ; 5.675 ; 5.675 ; 5.675 ;
+; inputA[2]         ; output[4]   ; 6.166 ; 6.166 ; 6.166 ; 6.166 ;
+; inputA[2]         ; output[5]   ; 5.878 ; 5.878 ; 5.878 ; 5.878 ;
+; inputA[2]         ; output[6]   ; 6.400 ; 6.400 ; 6.400 ; 6.400 ;
+; inputA[2]         ; output[7]   ; 6.002 ; 6.002 ; 6.002 ; 6.002 ;
+; inputA[2]         ; output[8]   ; 6.130 ; 6.130 ; 6.130 ; 6.130 ;
+; inputA[2]         ; output[9]   ; 6.372 ; 6.372 ; 6.372 ; 6.372 ;
+; inputA[2]         ; output[10]  ; 6.441 ; 6.441 ; 6.441 ; 6.441 ;
+; inputA[2]         ; output[11]  ; 6.127 ; 6.127 ; 6.127 ; 6.127 ;
+; inputA[3]         ; add_carry   ; 6.017 ;       ;       ; 6.017 ;
+; inputA[3]         ; output[3]   ; 5.657 ; 5.696 ; 5.696 ; 5.657 ;
+; inputA[3]         ; output[4]   ; 6.286 ; 6.286 ; 6.286 ; 6.286 ;
+; inputA[3]         ; output[5]   ; 5.998 ; 5.998 ; 5.998 ; 5.998 ;
+; inputA[3]         ; output[6]   ; 6.520 ; 6.520 ; 6.520 ; 6.520 ;
+; inputA[3]         ; output[7]   ; 6.122 ; 6.122 ; 6.122 ; 6.122 ;
+; inputA[3]         ; output[8]   ; 6.250 ; 6.250 ; 6.250 ; 6.250 ;
+; inputA[3]         ; output[9]   ; 6.492 ; 6.492 ; 6.492 ; 6.492 ;
+; inputA[3]         ; output[10]  ; 6.561 ; 6.561 ; 6.561 ; 6.561 ;
+; inputA[3]         ; output[11]  ; 6.247 ; 6.247 ; 6.247 ; 6.247 ;
+; inputA[4]         ; add_carry   ; 5.725 ;       ;       ; 5.725 ;
+; inputA[4]         ; output[4]   ; 5.523 ; 5.900 ; 5.900 ; 5.523 ;
+; inputA[4]         ; output[5]   ; 5.706 ; 5.706 ; 5.706 ; 5.706 ;
+; inputA[4]         ; output[6]   ; 6.228 ; 6.228 ; 6.228 ; 6.228 ;
+; inputA[4]         ; output[7]   ; 5.830 ; 5.830 ; 5.830 ; 5.830 ;
+; inputA[4]         ; output[8]   ; 5.958 ; 5.958 ; 5.958 ; 5.958 ;
+; inputA[4]         ; output[9]   ; 6.200 ; 6.200 ; 6.200 ; 6.200 ;
+; inputA[4]         ; output[10]  ; 6.269 ; 6.269 ; 6.269 ; 6.269 ;
+; inputA[4]         ; output[11]  ; 5.955 ; 5.955 ; 5.955 ; 5.955 ;
+; inputA[5]         ; add_carry   ; 5.846 ;       ;       ; 5.846 ;
+; inputA[5]         ; output[5]   ; 5.465 ; 5.729 ; 5.729 ; 5.465 ;
+; inputA[5]         ; output[6]   ; 6.349 ; 6.349 ; 6.349 ; 6.349 ;
+; inputA[5]         ; output[7]   ; 5.951 ; 5.951 ; 5.951 ; 5.951 ;
+; inputA[5]         ; output[8]   ; 6.079 ; 6.079 ; 6.079 ; 6.079 ;
+; inputA[5]         ; output[9]   ; 6.321 ; 6.321 ; 6.321 ; 6.321 ;
+; inputA[5]         ; output[10]  ; 6.390 ; 6.390 ; 6.390 ; 6.390 ;
+; inputA[5]         ; output[11]  ; 6.076 ; 6.076 ; 6.076 ; 6.076 ;
+; inputA[6]         ; add_carry   ; 5.989 ;       ;       ; 5.989 ;
+; inputA[6]         ; output[6]   ; 6.156 ; 6.394 ; 6.394 ; 6.156 ;
+; inputA[6]         ; output[7]   ; 6.094 ; 6.094 ; 6.094 ; 6.094 ;
+; inputA[6]         ; output[8]   ; 6.222 ; 6.222 ; 6.222 ; 6.222 ;
+; inputA[6]         ; output[9]   ; 6.464 ; 6.464 ; 6.464 ; 6.464 ;
+; inputA[6]         ; output[10]  ; 6.533 ; 6.533 ; 6.533 ; 6.533 ;
+; inputA[6]         ; output[11]  ; 6.219 ; 6.219 ; 6.219 ; 6.219 ;
+; inputA[7]         ; add_carry   ; 5.776 ;       ;       ; 5.776 ;
+; inputA[7]         ; output[7]   ; 5.711 ; 5.782 ; 5.782 ; 5.711 ;
+; inputA[7]         ; output[8]   ; 6.009 ; 6.009 ; 6.009 ; 6.009 ;
+; inputA[7]         ; output[9]   ; 6.251 ; 6.251 ; 6.251 ; 6.251 ;
+; inputA[7]         ; output[10]  ; 6.320 ; 6.320 ; 6.320 ; 6.320 ;
+; inputA[7]         ; output[11]  ; 6.006 ; 6.006 ; 6.006 ; 6.006 ;
+; inputA[8]         ; add_carry   ; 5.752 ;       ;       ; 5.752 ;
+; inputA[8]         ; output[8]   ; 5.886 ; 5.886 ; 5.886 ; 5.886 ;
+; inputA[8]         ; output[9]   ; 6.227 ; 6.227 ; 6.227 ; 6.227 ;
+; inputA[8]         ; output[10]  ; 6.296 ; 6.296 ; 6.296 ; 6.296 ;
+; inputA[8]         ; output[11]  ; 5.982 ; 5.982 ; 5.982 ; 5.982 ;
+; inputA[9]         ; add_carry   ; 5.929 ;       ;       ; 5.929 ;
+; inputA[9]         ; output[9]   ; 6.025 ; 6.306 ; 6.306 ; 6.025 ;
+; inputA[9]         ; output[10]  ; 6.473 ; 6.473 ; 6.473 ; 6.473 ;
+; inputA[9]         ; output[11]  ; 6.159 ; 6.159 ; 6.159 ; 6.159 ;
+; inputA[10]        ; add_carry   ; 5.687 ;       ;       ; 5.687 ;
+; inputA[10]        ; output[10]  ; 5.977 ; 6.132 ; 6.132 ; 5.977 ;
+; inputA[10]        ; output[11]  ; 5.917 ; 5.917 ; 5.917 ; 5.917 ;
+; inputA[11]        ; add_carry   ; 5.661 ;       ;       ; 5.661 ;
+; inputA[11]        ; output[11]  ; 5.500 ; 5.792 ; 5.792 ; 5.500 ;
+; inputB[0]         ; add_carry   ; 6.185 ;       ;       ; 6.185 ;
+; inputB[0]         ; output[0]   ; 5.499 ; 5.887 ; 5.887 ; 5.499 ;
+; inputB[0]         ; output[1]   ; 6.044 ; 6.044 ; 6.044 ; 6.044 ;
+; inputB[0]         ; output[2]   ; 6.235 ; 6.235 ; 6.235 ; 6.235 ;
+; inputB[0]         ; output[3]   ; 5.963 ; 5.963 ; 5.963 ; 5.963 ;
+; inputB[0]         ; output[4]   ; 6.454 ; 6.454 ; 6.454 ; 6.454 ;
+; inputB[0]         ; output[5]   ; 6.166 ; 6.166 ; 6.166 ; 6.166 ;
+; inputB[0]         ; output[6]   ; 6.688 ; 6.688 ; 6.688 ; 6.688 ;
+; inputB[0]         ; output[7]   ; 6.290 ; 6.290 ; 6.290 ; 6.290 ;
+; inputB[0]         ; output[8]   ; 6.418 ; 6.418 ; 6.418 ; 6.418 ;
+; inputB[0]         ; output[9]   ; 6.660 ; 6.660 ; 6.660 ; 6.660 ;
+; inputB[0]         ; output[10]  ; 6.729 ; 6.729 ; 6.729 ; 6.729 ;
+; inputB[0]         ; output[11]  ; 6.415 ; 6.415 ; 6.415 ; 6.415 ;
+; inputB[1]         ; add_carry   ; 6.204 ;       ;       ; 6.204 ;
+; inputB[1]         ; output[1]   ; 5.965 ; 5.965 ; 5.965 ; 5.965 ;
+; inputB[1]         ; output[2]   ; 6.254 ; 6.254 ; 6.254 ; 6.254 ;
+; inputB[1]         ; output[3]   ; 5.982 ; 5.982 ; 5.982 ; 5.982 ;
+; inputB[1]         ; output[4]   ; 6.473 ; 6.473 ; 6.473 ; 6.473 ;
+; inputB[1]         ; output[5]   ; 6.185 ; 6.185 ; 6.185 ; 6.185 ;
+; inputB[1]         ; output[6]   ; 6.707 ; 6.707 ; 6.707 ; 6.707 ;
+; inputB[1]         ; output[7]   ; 6.309 ; 6.309 ; 6.309 ; 6.309 ;
+; inputB[1]         ; output[8]   ; 6.437 ; 6.437 ; 6.437 ; 6.437 ;
+; inputB[1]         ; output[9]   ; 6.679 ; 6.679 ; 6.679 ; 6.679 ;
+; inputB[1]         ; output[10]  ; 6.748 ; 6.748 ; 6.748 ; 6.748 ;
+; inputB[1]         ; output[11]  ; 6.434 ; 6.434 ; 6.434 ; 6.434 ;
+; inputB[2]         ; add_carry   ; 6.147 ;       ;       ; 6.147 ;
+; inputB[2]         ; output[2]   ; 6.045 ; 6.099 ; 6.099 ; 6.045 ;
+; inputB[2]         ; output[3]   ; 5.925 ; 5.925 ; 5.925 ; 5.925 ;
+; inputB[2]         ; output[4]   ; 6.416 ; 6.416 ; 6.416 ; 6.416 ;
+; inputB[2]         ; output[5]   ; 6.128 ; 6.128 ; 6.128 ; 6.128 ;
+; inputB[2]         ; output[6]   ; 6.650 ; 6.650 ; 6.650 ; 6.650 ;
+; inputB[2]         ; output[7]   ; 6.252 ; 6.252 ; 6.252 ; 6.252 ;
+; inputB[2]         ; output[8]   ; 6.380 ; 6.380 ; 6.380 ; 6.380 ;
+; inputB[2]         ; output[9]   ; 6.622 ; 6.622 ; 6.622 ; 6.622 ;
+; inputB[2]         ; output[10]  ; 6.691 ; 6.691 ; 6.691 ; 6.691 ;
+; inputB[2]         ; output[11]  ; 6.377 ; 6.377 ; 6.377 ; 6.377 ;
+; inputB[3]         ; add_carry   ; 5.845 ;       ;       ; 5.845 ;
+; inputB[3]         ; output[3]   ; 5.429 ; 5.525 ; 5.525 ; 5.429 ;
+; inputB[3]         ; output[4]   ; 6.114 ; 6.114 ; 6.114 ; 6.114 ;
+; inputB[3]         ; output[5]   ; 5.826 ; 5.826 ; 5.826 ; 5.826 ;
+; inputB[3]         ; output[6]   ; 6.348 ; 6.348 ; 6.348 ; 6.348 ;
+; inputB[3]         ; output[7]   ; 5.950 ; 5.950 ; 5.950 ; 5.950 ;
+; inputB[3]         ; output[8]   ; 6.078 ; 6.078 ; 6.078 ; 6.078 ;
+; inputB[3]         ; output[9]   ; 6.320 ; 6.320 ; 6.320 ; 6.320 ;
+; inputB[3]         ; output[10]  ; 6.389 ; 6.389 ; 6.389 ; 6.389 ;
+; inputB[3]         ; output[11]  ; 6.075 ; 6.075 ; 6.075 ; 6.075 ;
+; inputB[4]         ; add_carry   ; 5.866 ;       ;       ; 5.866 ;
+; inputB[4]         ; output[4]   ; 5.786 ; 6.042 ; 6.042 ; 5.786 ;
+; inputB[4]         ; output[5]   ; 5.847 ; 5.847 ; 5.847 ; 5.847 ;
+; inputB[4]         ; output[6]   ; 6.369 ; 6.369 ; 6.369 ; 6.369 ;
+; inputB[4]         ; output[7]   ; 5.971 ; 5.971 ; 5.971 ; 5.971 ;
+; inputB[4]         ; output[8]   ; 6.099 ; 6.099 ; 6.099 ; 6.099 ;
+; inputB[4]         ; output[9]   ; 6.341 ; 6.341 ; 6.341 ; 6.341 ;
+; inputB[4]         ; output[10]  ; 6.410 ; 6.410 ; 6.410 ; 6.410 ;
+; inputB[4]         ; output[11]  ; 6.096 ; 6.096 ; 6.096 ; 6.096 ;
+; inputB[5]         ; add_carry   ; 5.639 ;       ;       ; 5.639 ;
+; inputB[5]         ; output[5]   ; 5.314 ; 5.521 ; 5.521 ; 5.314 ;
+; inputB[5]         ; output[6]   ; 6.142 ; 6.142 ; 6.142 ; 6.142 ;
+; inputB[5]         ; output[7]   ; 5.744 ; 5.744 ; 5.744 ; 5.744 ;
+; inputB[5]         ; output[8]   ; 5.872 ; 5.872 ; 5.872 ; 5.872 ;
+; inputB[5]         ; output[9]   ; 6.114 ; 6.114 ; 6.114 ; 6.114 ;
+; inputB[5]         ; output[10]  ; 6.183 ; 6.183 ; 6.183 ; 6.183 ;
+; inputB[5]         ; output[11]  ; 5.869 ; 5.869 ; 5.869 ; 5.869 ;
+; inputB[6]         ; add_carry   ; 6.045 ;       ;       ; 6.045 ;
+; inputB[6]         ; output[6]   ; 6.133 ; 6.449 ; 6.449 ; 6.133 ;
+; inputB[6]         ; output[7]   ; 6.150 ; 6.150 ; 6.150 ; 6.150 ;
+; inputB[6]         ; output[8]   ; 6.278 ; 6.278 ; 6.278 ; 6.278 ;
+; inputB[6]         ; output[9]   ; 6.520 ; 6.520 ; 6.520 ; 6.520 ;
+; inputB[6]         ; output[10]  ; 6.589 ; 6.589 ; 6.589 ; 6.589 ;
+; inputB[6]         ; output[11]  ; 6.275 ; 6.275 ; 6.275 ; 6.275 ;
+; inputB[7]         ; add_carry   ; 5.776 ;       ;       ; 5.776 ;
+; inputB[7]         ; output[7]   ; 5.585 ; 5.783 ; 5.783 ; 5.585 ;
+; inputB[7]         ; output[8]   ; 6.009 ; 6.009 ; 6.009 ; 6.009 ;
+; inputB[7]         ; output[9]   ; 6.251 ; 6.251 ; 6.251 ; 6.251 ;
+; inputB[7]         ; output[10]  ; 6.320 ; 6.320 ; 6.320 ; 6.320 ;
+; inputB[7]         ; output[11]  ; 6.006 ; 6.006 ; 6.006 ; 6.006 ;
+; inputB[8]         ; add_carry   ; 5.957 ;       ;       ; 5.957 ;
+; inputB[8]         ; output[8]   ; 5.965 ; 6.092 ; 6.092 ; 5.965 ;
+; inputB[8]         ; output[9]   ; 6.432 ; 6.432 ; 6.432 ; 6.432 ;
+; inputB[8]         ; output[10]  ; 6.501 ; 6.501 ; 6.501 ; 6.501 ;
+; inputB[8]         ; output[11]  ; 6.187 ; 6.187 ; 6.187 ; 6.187 ;
+; inputB[9]         ; add_carry   ; 6.042 ;       ;       ; 6.042 ;
+; inputB[9]         ; output[9]   ; 6.199 ; 6.418 ; 6.418 ; 6.199 ;
+; inputB[9]         ; output[10]  ; 6.586 ; 6.586 ; 6.586 ; 6.586 ;
+; inputB[9]         ; output[11]  ; 6.272 ; 6.272 ; 6.272 ; 6.272 ;
+; inputB[10]        ; add_carry   ; 5.927 ;       ;       ; 5.927 ;
+; inputB[10]        ; output[10]  ; 6.135 ; 6.373 ; 6.373 ; 6.135 ;
+; inputB[10]        ; output[11]  ; 6.157 ; 6.157 ; 6.157 ; 6.157 ;
+; inputB[11]        ; add_carry   ; 5.633 ;       ;       ; 5.633 ;
+; inputB[11]        ; output[11]  ; 5.470 ; 5.765 ; 5.765 ; 5.470 ;
++-------------------+-------------+-------+-------+-------+-------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 27    ; 27   ;
+; Unconstrained Input Port Paths  ; 216   ; 216  ;
+; Unconstrained Output Ports      ; 13    ; 13   ;
+; Unconstrained Output Port Paths ; 216   ; 216  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Jan  7 20:39:10 2017
+Info: Command: quartus_sta alu_main -c alu_main
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is -40 degrees C
+Info (21077): High junction temperature is 125 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'alu_main.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332159): No clocks to report
+Info: Analyzing Slow Model
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 599 megabytes
+    Info: Processing ended: Sat Jan  7 20:39:11 2017
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

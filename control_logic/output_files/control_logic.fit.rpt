@@ -1,5 +1,5 @@
 Fitter report for control_logic
-Sat Jan  7 16:39:37 2017
+Sat Jan  7 17:18:15 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -59,15 +59,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Sat Jan  7 16:39:37 2017           ;
+; Fitter Status                      ; Successful - Sat Jan  7 17:18:15 2017           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; control_logic                                   ;
 ; Top-level Entity Name              ; control_logic                                   ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C5AT144A7                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 77 / 4,608 ( 2 % )                              ;
-;     Total combinational functions  ; 77 / 4,608 ( 2 % )                              ;
+; Total logic elements               ; 82 / 4,608 ( 2 % )                              ;
+;     Total combinational functions  ; 82 / 4,608 ( 2 % )                              ;
 ;     Dedicated logic registers      ; 0 / 4,608 ( 0 % )                               ;
 ; Total registers                    ; 0                                               ;
 ; Total pins                         ; 64 / 89 ( 72 % )                                ;
@@ -84,10 +84,10 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting                        ; Default Value                  ;
 +----------------------------------------------------------------------------+--------------------------------+--------------------------------+
 ; Device                                                                     ; EP2C5AT144A7                   ;                                ;
+; Use smart compilation                                                      ; On                             ; Off                            ;
 ; Minimum Core Junction Temperature                                          ; -40                            ;                                ;
 ; Maximum Core Junction Temperature                                          ; 125                            ;                                ;
 ; Fit Attempts to Skip                                                       ; 0                              ; 0.0                            ;
-; Use smart compilation                                                      ; Off                            ; Off                            ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                             ; On                             ;
 ; Enable compact report table                                                ; Off                            ; Off                            ;
 ; Auto Merge PLLs                                                            ; On                             ; On                             ;
@@ -145,8 +145,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 145 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 145 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 150 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 150 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -169,7 +169,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 142     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 147     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -185,26 +185,26 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/control_l
 +---------------------------------------------+---------------------+
 ; Resource                                    ; Usage               ;
 +---------------------------------------------+---------------------+
-; Total logic elements                        ; 77 / 4,608 ( 2 % )  ;
-;     -- Combinational with no register       ; 77                  ;
+; Total logic elements                        ; 82 / 4,608 ( 2 % )  ;
+;     -- Combinational with no register       ; 82                  ;
 ;     -- Register only                        ; 0                   ;
 ;     -- Combinational with a register        ; 0                   ;
 ;                                             ;                     ;
 ; Logic element usage by number of LUT inputs ;                     ;
-;     -- 4 input functions                    ; 51                  ;
-;     -- 3 input functions                    ; 15                  ;
+;     -- 4 input functions                    ; 52                  ;
+;     -- 3 input functions                    ; 19                  ;
 ;     -- <=2 input functions                  ; 11                  ;
 ;     -- Register only                        ; 0                   ;
 ;                                             ;                     ;
 ; Logic elements by mode                      ;                     ;
-;     -- normal mode                          ; 77                  ;
+;     -- normal mode                          ; 82                  ;
 ;     -- arithmetic mode                      ; 0                   ;
 ;                                             ;                     ;
 ; Total registers*                            ; 0 / 4,851 ( 0 % )   ;
 ;     -- Dedicated logic registers            ; 0 / 4,608 ( 0 % )   ;
 ;     -- I/O registers                        ; 0 / 243 ( 0 % )     ;
 ;                                             ;                     ;
-; Total LABs:  partially or completely used   ; 6 / 288 ( 2 % )     ;
+; Total LABs:  partially or completely used   ; 7 / 288 ( 2 % )     ;
 ; Virtual pins                                ; 0                   ;
 ; I/O pins                                    ; 64 / 89 ( 72 % )    ;
 ;     -- Clock pins                           ; 0 / 4 ( 0 % )       ;
@@ -219,12 +219,12 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/control_l
 ; JTAGs                                       ; 0 / 1 ( 0 % )       ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )       ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )       ;
-; Average interconnect usage (total/H/V)      ; 1% / 1% / 0%        ;
+; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%        ;
 ; Peak interconnect usage (total/H/V)         ; 1% / 1% / 1%        ;
-; Maximum fan-out                             ; 16                  ;
-; Highest non-global fan-out                  ; 16                  ;
-; Total fan-out                               ; 301                 ;
-; Average fan-out                             ; 2.09                ;
+; Maximum fan-out                             ; 17                  ;
+; Highest non-global fan-out                  ; 17                  ;
+; Total fan-out                               ; 317                 ;
+; Average fan-out                             ; 2.13                ;
 +---------------------------------------------+---------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -237,25 +237,25 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/control_l
 +---------------------------------------------+-------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low               ; Low                            ;
 ;                                             ;                   ;                                ;
-; Total logic elements                        ; 77 / 4608 ( 2 % ) ; 0 / 4608 ( 0 % )               ;
-;     -- Combinational with no register       ; 77                ; 0                              ;
+; Total logic elements                        ; 82 / 4608 ( 2 % ) ; 0 / 4608 ( 0 % )               ;
+;     -- Combinational with no register       ; 82                ; 0                              ;
 ;     -- Register only                        ; 0                 ; 0                              ;
 ;     -- Combinational with a register        ; 0                 ; 0                              ;
 ;                                             ;                   ;                                ;
 ; Logic element usage by number of LUT inputs ;                   ;                                ;
-;     -- 4 input functions                    ; 51                ; 0                              ;
-;     -- 3 input functions                    ; 15                ; 0                              ;
+;     -- 4 input functions                    ; 52                ; 0                              ;
+;     -- 3 input functions                    ; 19                ; 0                              ;
 ;     -- <=2 input functions                  ; 11                ; 0                              ;
 ;     -- Register only                        ; 0                 ; 0                              ;
 ;                                             ;                   ;                                ;
 ; Logic elements by mode                      ;                   ;                                ;
-;     -- normal mode                          ; 77                ; 0                              ;
+;     -- normal mode                          ; 82                ; 0                              ;
 ;     -- arithmetic mode                      ; 0                 ; 0                              ;
 ;                                             ;                   ;                                ;
 ; Total registers                             ; 0                 ; 0                              ;
 ;     -- Dedicated logic registers            ; 0 / 4608 ( 0 % )  ; 0 / 4608 ( 0 % )               ;
 ;                                             ;                   ;                                ;
-; Total LABs:  partially or completely used   ; 6 / 288 ( 2 % )   ; 0 / 288 ( 0 % )                ;
+; Total LABs:  partially or completely used   ; 7 / 288 ( 2 % )   ; 0 / 288 ( 0 % )                ;
 ;                                             ;                   ;                                ;
 ; Virtual pins                                ; 0                 ; 0                              ;
 ; I/O pins                                    ; 64                ; 0                              ;
@@ -270,7 +270,7 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/control_l
 ;     -- Registered Output Connections        ; 0                 ; 0                              ;
 ;                                             ;                   ;                                ;
 ; Internal Connections                        ;                   ;                                ;
-;     -- Total Connections                    ; 301               ; 0                              ;
+;     -- Total Connections                    ; 317               ; 0                              ;
 ;     -- Registered Connections               ; 0                 ; 0                              ;
 ;                                             ;                   ;                                ;
 ; External Connections                        ;                   ;                                ;
@@ -303,36 +303,36 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/control_l
 +---------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; Name          ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +---------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; ADD_CARRY     ; 9     ; 1        ; 0            ; 11           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; INC_CARRY     ; 96    ; 3        ; 28           ; 9            ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; IRQ           ; 72    ; 4        ; 26           ; 0            ; 0           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; IR[0]         ; 121   ; 2        ; 19           ; 14           ; 1           ; 13                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; IR[10]        ; 92    ; 3        ; 28           ; 8            ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; IR[11]        ; 93    ; 3        ; 28           ; 8            ; 0           ; 6                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; IR[1]         ; 122   ; 2        ; 19           ; 14           ; 2           ; 14                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; IR[2]         ; 119   ; 2        ; 21           ; 14           ; 1           ; 14                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; IR[3]         ; 27    ; 1        ; 0            ; 5            ; 3           ; 6                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; IR[4]         ; 113   ; 2        ; 26           ; 14           ; 1           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; IR[5]         ; 101   ; 3        ; 28           ; 11           ; 0           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; IR[6]         ; 103   ; 3        ; 28           ; 12           ; 1           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; IR[7]         ; 112   ; 2        ; 26           ; 14           ; 0           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; IR[8]         ; 115   ; 2        ; 24           ; 14           ; 0           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; IR[9]         ; 57    ; 4        ; 12           ; 0            ; 1           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; IS_AUTO_INDEX ; 120   ; 2        ; 19           ; 14           ; 0           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; IS_NEG        ; 142   ; 2        ; 1            ; 14           ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; IS_ZERO       ; 26    ; 1        ; 0            ; 5            ; 2           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; IS_ZERO_LAST  ; 99    ; 3        ; 28           ; 11           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; LINK_VALUE    ; 104   ; 3        ; 28           ; 12           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; s_states[0]   ; 81    ; 3        ; 28           ; 5            ; 1           ; 13                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; s_states[1]   ; 132   ; 2        ; 9            ; 14           ; 2           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; s_states[2]   ; 63    ; 4        ; 19           ; 0            ; 0           ; 9                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; s_states[3]   ; 65    ; 4        ; 21           ; 0            ; 0           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; t_states[0]   ; 75    ; 3        ; 28           ; 2            ; 1           ; 13                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; t_states[1]   ; 87    ; 3        ; 28           ; 6            ; 0           ; 6                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; t_states[2]   ; 71    ; 4        ; 26           ; 0            ; 1           ; 9                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; t_states[3]   ; 86    ; 3        ; 28           ; 6            ; 1           ; 16                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; t_states[4]   ; 118   ; 2        ; 21           ; 14           ; 0           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; t_states[5]   ; 64    ; 4        ; 21           ; 0            ; 1           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ADD_CARRY     ; 72    ; 4        ; 26           ; 0            ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; INC_CARRY     ; 63    ; 4        ; 19           ; 0            ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; IRQ           ; 8     ; 1        ; 0            ; 11           ; 2           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; IR[0]         ; 47    ; 4        ; 5            ; 0            ; 1           ; 15                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; IR[10]        ; 59    ; 4        ; 14           ; 0            ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; IR[11]        ; 58    ; 4        ; 12           ; 0            ; 0           ; 7                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; IR[1]         ; 28    ; 1        ; 0            ; 4            ; 3           ; 16                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; IR[2]         ; 43    ; 4        ; 3            ; 0            ; 2           ; 10                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; IR[3]         ; 80    ; 3        ; 28           ; 5            ; 2           ; 11                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; IR[4]         ; 25    ; 1        ; 0            ; 5            ; 1           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; IR[5]         ; 64    ; 4        ; 21           ; 0            ; 1           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; IR[6]         ; 67    ; 4        ; 24           ; 0            ; 0           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; IR[7]         ; 65    ; 4        ; 21           ; 0            ; 0           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; IR[8]         ; 120   ; 2        ; 19           ; 14           ; 0           ; 7                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; IR[9]         ; 48    ; 4        ; 5            ; 0            ; 0           ; 5                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; IS_AUTO_INDEX ; 133   ; 2        ; 7            ; 14           ; 0           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; IS_NEG        ; 74    ; 3        ; 28           ; 1            ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; IS_ZERO       ; 93    ; 3        ; 28           ; 8            ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; IS_ZERO_LAST  ; 30    ; 1        ; 0            ; 2            ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; LINK_VALUE    ; 71    ; 4        ; 26           ; 0            ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; s_states[0]   ; 27    ; 1        ; 0            ; 5            ; 3           ; 11                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; s_states[1]   ; 134   ; 2        ; 7            ; 14           ; 1           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; s_states[2]   ; 32    ; 1        ; 0            ; 2            ; 4           ; 9                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; s_states[3]   ; 136   ; 2        ; 3            ; 14           ; 1           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; t_states[0]   ; 26    ; 1        ; 0            ; 5            ; 2           ; 12                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; t_states[1]   ; 24    ; 1        ; 0            ; 5            ; 0           ; 6                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; t_states[2]   ; 4     ; 1        ; 0            ; 13           ; 3           ; 10                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; t_states[3]   ; 87    ; 3        ; 28           ; 6            ; 0           ; 17                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; t_states[4]   ; 57    ; 4        ; 12           ; 0            ; 1           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; t_states[5]   ; 40    ; 4        ; 1            ; 0            ; 2           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 +---------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
@@ -341,53 +341,53 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/control_l
 +----------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 ; Name           ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
 +----------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; AC_LOAD        ; 58    ; 4        ; 12           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; ALU_CLEAR      ; 52    ; 4        ; 7            ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; ALU_COMP       ; 79    ; 3        ; 28           ; 5            ; 4           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; ALU_FUNC_SEL_0 ; 133   ; 2        ; 7            ; 14           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; ALU_FUNC_SEL_1 ; 94    ; 3        ; 28           ; 9            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; ALU_FUNC_SEL_2 ; 137   ; 2        ; 3            ; 14           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; ALU_INC        ; 44    ; 4        ; 3            ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; ALU_OUT_SEL_0  ; 100   ; 3        ; 28           ; 11           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; ALU_OUT_SEL_1  ; 135   ; 2        ; 3            ; 14           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; ALU_OUT_SEL_2  ; 80    ; 3        ; 28           ; 5            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; ALU_ROT_1      ; 8     ; 1        ; 0            ; 11           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; ALU_ROT_2      ; 7     ; 1        ; 0            ; 11           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; IR_CLR         ; 4     ; 1        ; 0            ; 13           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; IR_LOAD        ; 70    ; 4        ; 26           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; LINK_COMP      ; 97    ; 3        ; 28           ; 9            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; LINK_LOAD      ; 129   ; 2        ; 12           ; 14           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; LINK_OUT_SEL   ; 73    ; 3        ; 28           ; 1            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MA_BUS_SEL     ; 41    ; 4        ; 1            ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MA_CLR_HI      ; 60    ; 4        ; 14           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MA_CLR_LO      ; 48    ; 4        ; 5            ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MA_LOAD_HI     ; 55    ; 4        ; 9            ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MA_LOAD_LO     ; 51    ; 4        ; 7            ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MD_BUS_SEL     ; 114   ; 2        ; 26           ; 14           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MD_CLR         ; 32    ; 1        ; 0            ; 2            ; 4           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MD_IN_SEL      ; 134   ; 2        ; 7            ; 14           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MD_LOAD        ; 126   ; 2        ; 14           ; 14           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MEM_READ       ; 59    ; 4        ; 14           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MEM_WRITE      ; 67    ; 4        ; 24           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PC_BUS_SEL     ; 69    ; 4        ; 26           ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PC_CLR_HI      ; 47    ; 4        ; 5            ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PC_CLR_LO      ; 136   ; 2        ; 3            ; 14           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PC_LOAD_HI     ; 125   ; 2        ; 14           ; 14           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PC_LOAD_LO     ; 53    ; 4        ; 9            ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SR_BUS_SEL     ; 139   ; 2        ; 3            ; 14           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AC_LOAD        ; 55    ; 4        ; 9            ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; ALU_CLEAR      ; 44    ; 4        ; 3            ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; ALU_COMP       ; 69    ; 4        ; 26           ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; ALU_FUNC_SEL_0 ; 7     ; 1        ; 0            ; 11           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; ALU_FUNC_SEL_1 ; 79    ; 3        ; 28           ; 5            ; 4           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; ALU_FUNC_SEL_2 ; 52    ; 4        ; 7            ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; ALU_INC        ; 139   ; 2        ; 3            ; 14           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; ALU_OUT_SEL_0  ; 41    ; 4        ; 1            ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; ALU_OUT_SEL_1  ; 9     ; 1        ; 0            ; 11           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; ALU_OUT_SEL_2  ; 53    ; 4        ; 9            ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; ALU_ROT_1      ; 60    ; 4        ; 14           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; ALU_ROT_2      ; 122   ; 2        ; 19           ; 14           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; IR_CLR         ; 119   ; 2        ; 21           ; 14           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; IR_LOAD        ; 132   ; 2        ; 9            ; 14           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; LINK_COMP      ; 70    ; 4        ; 26           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; LINK_LOAD      ; 125   ; 2        ; 14           ; 14           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; LINK_OUT_SEL   ; 75    ; 3        ; 28           ; 2            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MA_BUS_SEL     ; 100   ; 3        ; 28           ; 11           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MA_CLR_HI      ; 126   ; 2        ; 14           ; 14           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MA_CLR_LO      ; 3     ; 1        ; 0            ; 13           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MA_LOAD_HI     ; 129   ; 2        ; 12           ; 14           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MA_LOAD_LO     ; 142   ; 2        ; 1            ; 14           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MD_BUS_SEL     ; 144   ; 2        ; 1            ; 14           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MD_CLR         ; 118   ; 2        ; 21           ; 14           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MD_IN_SEL      ; 135   ; 2        ; 3            ; 14           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MD_LOAD        ; 137   ; 2        ; 3            ; 14           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MEM_READ       ; 141   ; 2        ; 1            ; 14           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MEM_WRITE      ; 42    ; 4        ; 1            ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PC_BUS_SEL     ; 143   ; 2        ; 1            ; 14           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PC_CLR_HI      ; 86    ; 3        ; 28           ; 6            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PC_CLR_LO      ; 121   ; 2        ; 19           ; 14           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PC_LOAD_HI     ; 31    ; 1        ; 0            ; 2            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PC_LOAD_LO     ; 45    ; 4        ; 3            ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SR_BUS_SEL     ; 51    ; 4        ; 7            ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 +----------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
 
-+------------------------------------------------------------+
-; I/O Bank Usage                                             ;
-+----------+------------------+---------------+--------------+
-; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
-+----------+------------------+---------------+--------------+
-; 1        ; 9 / 19 ( 47 % )  ; 3.3V          ; --           ;
-; 2        ; 20 / 23 ( 87 % ) ; 3.3V          ; --           ;
-; 3        ; 18 / 23 ( 78 % ) ; 3.3V          ; --           ;
-; 4        ; 20 / 24 ( 83 % ) ; 3.3V          ; --           ;
-+----------+------------------+---------------+--------------+
++-------------------------------------------------------------+
+; I/O Bank Usage                                              ;
++----------+-------------------+---------------+--------------+
+; I/O Bank ; Usage             ; VCCIO Voltage ; VREF Voltage ;
++----------+-------------------+---------------+--------------+
+; 1        ; 15 / 19 ( 79 % )  ; 3.3V          ; --           ;
+; 2        ; 19 / 23 ( 83 % )  ; 3.3V          ; --           ;
+; 3        ; 9 / 23 ( 39 % )   ; 3.3V          ; --           ;
+; 4        ; 24 / 24 ( 100 % ) ; 3.3V          ; --           ;
++----------+-------------------+---------------+--------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -397,13 +397,13 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/control_l
 +----------+------------+----------+------------------------------------------+--------+--------------+---------+------------+-----------------+----------+--------------+
 ; 1        ; 0          ; 1        ; ~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; On           ;
 ; 2        ; 1          ; 1        ; ~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; On           ;
-; 3        ; 2          ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 4        ; 3          ; 1        ; IR_CLR                                   ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 3        ; 2          ; 1        ; MA_CLR_LO                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 4        ; 3          ; 1        ; t_states[2]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 5        ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 6        ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 7        ; 10         ; 1        ; ALU_ROT_2                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 8        ; 11         ; 1        ; ALU_ROT_1                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 9        ; 12         ; 1        ; ADD_CARRY                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 7        ; 10         ; 1        ; ALU_FUNC_SEL_0                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 8        ; 11         ; 1        ; IRQ                                      ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 9        ; 12         ; 1        ; ALU_OUT_SEL_1                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 10       ; 13         ; 1        ; #TDO                                     ; output ;              ;         ; --         ;                 ; --       ; --           ;
 ; 11       ; 14         ; 1        ; #TMS                                     ; input  ;              ;         ; --         ;                 ; --       ; --           ;
 ; 12       ; 15         ; 1        ; #TCK                                     ; input  ;              ;         ; --         ;                 ; --       ; --           ;
@@ -418,15 +418,15 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/control_l
 ; 21       ; 23         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 22       ; 24         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 23       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; 24       ; 25         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 25       ; 26         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 26       ; 27         ; 1        ; IS_ZERO                                  ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 27       ; 28         ; 1        ; IR[3]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 28       ; 32         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 24       ; 25         ; 1        ; t_states[1]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 25       ; 26         ; 1        ; IR[4]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 26       ; 27         ; 1        ; t_states[0]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 27       ; 28         ; 1        ; s_states[0]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 28       ; 32         ; 1        ; IR[1]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 29       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; 30       ; 40         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 31       ; 41         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 32       ; 42         ; 1        ; MD_CLR                                   ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 30       ; 40         ; 1        ; IS_ZERO_LAST                             ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 31       ; 41         ; 1        ; PC_LOAD_HI                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 32       ; 42         ; 1        ; s_states[2]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 33       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 34       ;            ;          ; GND_PLL1                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 35       ;            ;          ; VCCD_PLL1                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -434,71 +434,71 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/control_l
 ; 37       ;            ;          ; VCCA_PLL1                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 38       ;            ;          ; GNDA_PLL1                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 39       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 40       ; 43         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 41       ; 44         ; 4        ; MA_BUS_SEL                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 42       ; 45         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 43       ; 46         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 44       ; 47         ; 4        ; ALU_INC                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 45       ; 48         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 40       ; 43         ; 4        ; t_states[5]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 41       ; 44         ; 4        ; ALU_OUT_SEL_0                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 42       ; 45         ; 4        ; MEM_WRITE                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 43       ; 46         ; 4        ; IR[2]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 44       ; 47         ; 4        ; ALU_CLEAR                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 45       ; 48         ; 4        ; PC_LOAD_LO                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 46       ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; 47       ; 49         ; 4        ; PC_CLR_HI                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 48       ; 50         ; 4        ; MA_CLR_LO                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 47       ; 49         ; 4        ; IR[0]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 48       ; 50         ; 4        ; IR[9]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 49       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 50       ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; 51       ; 52         ; 4        ; MA_LOAD_LO                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 52       ; 53         ; 4        ; ALU_CLEAR                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 53       ; 57         ; 4        ; PC_LOAD_LO                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 51       ; 52         ; 4        ; SR_BUS_SEL                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 52       ; 53         ; 4        ; ALU_FUNC_SEL_2                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 53       ; 57         ; 4        ; ALU_OUT_SEL_2                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 54       ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; 55       ; 58         ; 4        ; MA_LOAD_HI                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 55       ; 58         ; 4        ; AC_LOAD                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 56       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 57       ; 59         ; 4        ; IR[9]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 58       ; 60         ; 4        ; AC_LOAD                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 59       ; 63         ; 4        ; MEM_READ                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 60       ; 64         ; 4        ; MA_CLR_HI                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 57       ; 59         ; 4        ; t_states[4]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 58       ; 60         ; 4        ; IR[11]                                   ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 59       ; 63         ; 4        ; IR[10]                                   ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 60       ; 64         ; 4        ; ALU_ROT_1                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 61       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 62       ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; 63       ; 72         ; 4        ; s_states[2]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 64       ; 75         ; 4        ; t_states[5]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 65       ; 76         ; 4        ; s_states[3]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 63       ; 72         ; 4        ; INC_CARRY                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 64       ; 75         ; 4        ; IR[5]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 65       ; 76         ; 4        ; IR[7]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 66       ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; 67       ; 79         ; 4        ; MEM_WRITE                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 67       ; 79         ; 4        ; IR[6]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 68       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 69       ; 80         ; 4        ; PC_BUS_SEL                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 70       ; 81         ; 4        ; IR_LOAD                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 71       ; 82         ; 4        ; t_states[2]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 72       ; 83         ; 4        ; IRQ                                      ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 73       ; 84         ; 3        ; LINK_OUT_SEL                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 74       ; 85         ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 75       ; 86         ; 3        ; t_states[0]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 69       ; 80         ; 4        ; ALU_COMP                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 70       ; 81         ; 4        ; LINK_COMP                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 71       ; 82         ; 4        ; LINK_VALUE                               ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 72       ; 83         ; 4        ; ADD_CARRY                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 73       ; 84         ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 74       ; 85         ; 3        ; IS_NEG                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 75       ; 86         ; 3        ; LINK_OUT_SEL                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 76       ; 87         ; 3        ; ~LVDS41p/nCEO~                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 77       ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 78       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 79       ; 95         ; 3        ; ALU_COMP                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 80       ; 97         ; 3        ; ALU_OUT_SEL_2                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 81       ; 98         ; 3        ; s_states[0]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 79       ; 95         ; 3        ; ALU_FUNC_SEL_1                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 80       ; 97         ; 3        ; IR[3]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 81       ; 98         ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 82       ; 99         ; 3        ; ^nSTATUS                                 ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; 83       ; 100        ; 3        ; ^CONF_DONE                               ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; 84       ; 101        ; 3        ; ^MSEL1                                   ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; 85       ; 102        ; 3        ; ^MSEL0                                   ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; 86       ; 103        ; 3        ; t_states[3]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 87       ; 104        ; 3        ; t_states[1]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 86       ; 103        ; 3        ; PC_CLR_HI                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 87       ; 104        ; 3        ; t_states[3]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 88       ; 105        ; 3        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 89       ; 106        ; 3        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 90       ; 107        ; 3        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 91       ; 108        ; 3        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; 92       ; 109        ; 3        ; IR[10]                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 93       ; 110        ; 3        ; IR[11]                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 94       ; 111        ; 3        ; ALU_FUNC_SEL_1                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 92       ; 109        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 93       ; 110        ; 3        ; IS_ZERO                                  ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 94       ; 111        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 95       ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; 96       ; 112        ; 3        ; INC_CARRY                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 97       ; 113        ; 3        ; LINK_COMP                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 96       ; 112        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 97       ; 113        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 98       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 99       ; 119        ; 3        ; IS_ZERO_LAST                             ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 100      ; 120        ; 3        ; ALU_OUT_SEL_0                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 101      ; 121        ; 3        ; IR[5]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 99       ; 119        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 100      ; 120        ; 3        ; MA_BUS_SEL                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 101      ; 121        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 102      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; 103      ; 125        ; 3        ; IR[6]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 104      ; 126        ; 3        ; LINK_VALUE                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 103      ; 125        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 104      ; 126        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 105      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 106      ;            ;          ; GND_PLL2                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 107      ;            ;          ; VCCD_PLL2                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -506,39 +506,39 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/control_l
 ; 109      ;            ;          ; VCCA_PLL2                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 110      ;            ;          ; GNDA_PLL2                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 111      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 112      ; 127        ; 2        ; IR[7]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 113      ; 128        ; 2        ; IR[4]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 114      ; 129        ; 2        ; MD_BUS_SEL                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 115      ; 130        ; 2        ; IR[8]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 112      ; 127        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 113      ; 128        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 114      ; 129        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 115      ; 130        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 116      ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 117      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 118      ; 134        ; 2        ; t_states[4]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 119      ; 135        ; 2        ; IR[2]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 120      ; 137        ; 2        ; IS_AUTO_INDEX                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 121      ; 138        ; 2        ; IR[0]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 122      ; 139        ; 2        ; IR[1]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 118      ; 134        ; 2        ; MD_CLR                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 119      ; 135        ; 2        ; IR_CLR                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 120      ; 137        ; 2        ; IR[8]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 121      ; 138        ; 2        ; PC_CLR_LO                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 122      ; 139        ; 2        ; ALU_ROT_2                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 123      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 124      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; 125      ; 144        ; 2        ; PC_LOAD_HI                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 126      ; 145        ; 2        ; MD_LOAD                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 125      ; 144        ; 2        ; LINK_LOAD                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 126      ; 145        ; 2        ; MA_CLR_HI                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 127      ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 128      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 129      ; 148        ; 2        ; LINK_LOAD                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 129      ; 148        ; 2        ; MA_LOAD_HI                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 130      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 131      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; 132      ; 153        ; 2        ; s_states[1]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 133      ; 154        ; 2        ; ALU_FUNC_SEL_0                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 134      ; 155        ; 2        ; MD_IN_SEL                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 135      ; 162        ; 2        ; ALU_OUT_SEL_1                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 136      ; 163        ; 2        ; PC_CLR_LO                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 137      ; 164        ; 2        ; ALU_FUNC_SEL_2                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 132      ; 153        ; 2        ; IR_LOAD                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 133      ; 154        ; 2        ; IS_AUTO_INDEX                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 134      ; 155        ; 2        ; s_states[1]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 135      ; 162        ; 2        ; MD_IN_SEL                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 136      ; 163        ; 2        ; s_states[3]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 137      ; 164        ; 2        ; MD_LOAD                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 138      ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; 139      ; 165        ; 2        ; SR_BUS_SEL                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 139      ; 165        ; 2        ; ALU_INC                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 140      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 141      ; 166        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 142      ; 167        ; 2        ; IS_NEG                                   ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 143      ; 168        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 144      ; 169        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 141      ; 166        ; 2        ; MEM_READ                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 142      ; 167        ; 2        ; MA_LOAD_LO                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 143      ; 168        ; 2        ; PC_BUS_SEL                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 144      ; 169        ; 2        ; MD_BUS_SEL                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 +----------+------------+----------+------------------------------------------+--------+--------------+---------+------------+-----------------+----------+--------------+
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
@@ -580,16 +580,13 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                   ;
-+--------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node           ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                               ; Library Name ;
-+--------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------+--------------+
-; |control_logic                       ; 77 (75)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 64   ; 0            ; 77 (75)      ; 0 (0)             ; 0 (0)            ; |control_logic                                                    ; work         ;
-;    |decoder_3_to_6:decoder_3_to_6_0| ; 2 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; |control_logic|decoder_3_to_6:decoder_3_to_6_0                    ; work         ;
-;       |AND_3_gate:and_3_2|           ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |control_logic|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_2 ; work         ;
-;       |AND_3_gate:and_3_5|           ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |control_logic|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_5 ; work         ;
-+--------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                           ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
+; |control_logic             ; 82 (82)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 64   ; 0            ; 82 (82)      ; 0 (0)             ; 0 (0)            ; |control_logic      ; work         ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -632,360 +629,372 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ALU_ROT_2      ; Output   ; --            ; --            ; --                    ; --  ;
 ; MEM_READ       ; Output   ; --            ; --            ; --                    ; --  ;
 ; MEM_WRITE      ; Output   ; --            ; --            ; --                    ; --  ;
-; IS_NEG         ; Input    ; (0) 162 ps    ; (0) 162 ps    ; --                    ; --  ;
+; IS_NEG         ; Input    ; (0) 163 ps    ; (0) 163 ps    ; --                    ; --  ;
 ; IS_ZERO        ; Input    ; (0) 163 ps    ; (0) 163 ps    ; --                    ; --  ;
-; IR[3]          ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
-; IR[11]         ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
+; t_states[5]    ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
+; IR[1]          ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
+; s_states[2]    ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
 ; IR[0]          ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
-; IR[1]          ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
+; IR[2]          ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
+; IR[5]          ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
+; IR[6]          ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
+; IR[7]          ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
+; LINK_VALUE     ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
+; IR[8]          ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
 ; t_states[3]    ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
 ; s_states[0]    ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
-; IR[2]          ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
-; IR[5]          ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
-; IR[6]          ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
-; IR[7]          ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
-; LINK_VALUE     ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
-; IR[8]          ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
-; t_states[5]    ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
-; s_states[2]    ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
-; t_states[1]    ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
+; IR[3]          ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
+; IR[11]         ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
 ; t_states[0]    ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
-; IS_ZERO_LAST   ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
-; t_states[2]    ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
+; t_states[1]    ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
+; t_states[2]    ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
 ; s_states[3]    ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
-; IRQ            ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
-; IR[4]          ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
+; IRQ            ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
+; IS_ZERO_LAST   ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
+; IR[4]          ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
 ; s_states[1]    ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
-; t_states[4]    ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
 ; IS_AUTO_INDEX  ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
+; t_states[4]    ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
 ; IR[9]          ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
-; IR[10]         ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
-; ADD_CARRY      ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
-; INC_CARRY      ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
+; IR[10]         ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
+; ADD_CARRY      ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
+; INC_CARRY      ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
 +----------------+----------+---------------+---------------+-----------------------+-----+
 
 
-+--------------------------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                                   ;
-+--------------------------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                                                ; Pad To Core Index ; Setting ;
-+--------------------------------------------------------------------+-------------------+---------+
-; IS_NEG                                                             ;                   ;         ;
-; IS_ZERO                                                            ;                   ;         ;
-; IR[3]                                                              ;                   ;         ;
-;      - PC_LOAD_HI~1                                                ; 1                 ; 6       ;
-;      - PC_LOAD_HI~7                                                ; 1                 ; 6       ;
-;      - MA_LOAD_HI~1                                                ; 1                 ; 6       ;
-;      - LINK_LOAD~0                                                 ; 1                 ; 6       ;
-;      - ALU_INC~1                                                   ; 1                 ; 6       ;
-;      - AC_LOAD~4                                                   ; 1                 ; 6       ;
-; IR[11]                                                             ;                   ;         ;
-;      - PC_LOAD_HI~1                                                ; 0                 ; 6       ;
-;      - AC_LOAD~2                                                   ; 0                 ; 6       ;
-;      - AC_LOAD~4                                                   ; 0                 ; 6       ;
-;      - LINK_LOAD~3                                                 ; 0                 ; 6       ;
-;      - LINK_COMP~0                                                 ; 0                 ; 6       ;
-;      - ALU_INC~2                                                   ; 0                 ; 6       ;
-; IR[0]                                                              ;                   ;         ;
-;      - decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_2|output~0 ; 0                 ; 6       ;
-;      - MD_BUS_SEL~0                                                ; 0                 ; 6       ;
-;      - PC_LOAD_HI~3                                                ; 0                 ; 6       ;
-;      - PC_CLR_HI~0                                                 ; 0                 ; 6       ;
-;      - MA_CLR_HI~0                                                 ; 0                 ; 6       ;
-;      - MD_BUS_SEL~1                                                ; 0                 ; 6       ;
-;      - decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_5|output~0 ; 0                 ; 6       ;
-;      - MD_LOAD~2                                                   ; 0                 ; 6       ;
-;      - MD_LOAD~3                                                   ; 0                 ; 6       ;
-;      - AC_LOAD~6                                                   ; 0                 ; 6       ;
-;      - ALU_FUNC_SEL_0~1                                            ; 0                 ; 6       ;
-;      - ALU_OUT_SEL_0~2                                             ; 0                 ; 6       ;
-;      - ALU_CLEAR~2                                                 ; 0                 ; 6       ;
-; IR[1]                                                              ;                   ;         ;
-;      - decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_2|output~0 ; 0                 ; 6       ;
-;      - MD_BUS_SEL~0                                                ; 0                 ; 6       ;
-;      - PC_LOAD_HI~3                                                ; 0                 ; 6       ;
-;      - PC_CLR_HI~0                                                 ; 0                 ; 6       ;
-;      - MA_CLR_HI~0                                                 ; 0                 ; 6       ;
-;      - MD_BUS_SEL~1                                                ; 0                 ; 6       ;
-;      - decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_5|output~0 ; 0                 ; 6       ;
-;      - MD_LOAD~2                                                   ; 0                 ; 6       ;
-;      - MD_LOAD~3                                                   ; 0                 ; 6       ;
-;      - AC_LOAD~6                                                   ; 0                 ; 6       ;
-;      - ALU_FUNC_SEL_0~1                                            ; 0                 ; 6       ;
-;      - ALU_OUT_SEL_0~3                                             ; 0                 ; 6       ;
-;      - ALU_OUT_SEL_1~0                                             ; 0                 ; 6       ;
-;      - ALU_CLEAR~2                                                 ; 0                 ; 6       ;
-; t_states[3]                                                        ;                   ;         ;
-;      - PC_LOAD_HI~0                                                ; 0                 ; 6       ;
-;      - PC_LOAD_HI~6                                                ; 0                 ; 6       ;
-;      - MD_BUS_SEL~3                                                ; 0                 ; 6       ;
-;      - MD_BUS_SEL~4                                                ; 0                 ; 6       ;
-;      - MD_LOAD~4                                                   ; 0                 ; 6       ;
-;      - MD_LOAD~5                                                   ; 0                 ; 6       ;
-;      - LINK_LOAD~1                                                 ; 0                 ; 6       ;
-;      - PC_LOAD_HI~8                                                ; 0                 ; 6       ;
-;      - ALU_FUNC_SEL_0~0                                            ; 0                 ; 6       ;
-;      - LINK_LOAD~2                                                 ; 0                 ; 6       ;
-;      - LINK_OUT_SEL~0                                              ; 0                 ; 6       ;
-;      - ALU_OUT_SEL_0~2                                             ; 0                 ; 6       ;
-;      - ALU_COMP~0                                                  ; 0                 ; 6       ;
-;      - ALU_INC~3                                                   ; 0                 ; 6       ;
-;      - ALU_ROT_1~1                                                 ; 0                 ; 6       ;
-;      - ALU_ROT_2~0                                                 ; 0                 ; 6       ;
-; s_states[0]                                                        ;                   ;         ;
-;      - PC_LOAD_HI~0                                                ; 0                 ; 6       ;
-;      - PC_BUS_SEL~3                                                ; 0                 ; 6       ;
-;      - PC_LOAD_HI~4                                                ; 0                 ; 6       ;
-;      - IR_LOAD~0                                                   ; 0                 ; 6       ;
-;      - MA_LOAD_HI~1                                                ; 0                 ; 6       ;
-;      - MA_LOAD_LO~0                                                ; 0                 ; 6       ;
-;      - MD_IN_SEL~0                                                 ; 0                 ; 6       ;
-;      - LINK_LOAD~1                                                 ; 0                 ; 6       ;
-;      - ALU_INC~1                                                   ; 0                 ; 6       ;
-;      - PC_LOAD_HI~8                                                ; 0                 ; 6       ;
-;      - ALU_OUT_SEL_0~0                                             ; 0                 ; 6       ;
-;      - MEM_READ~0                                                  ; 0                 ; 6       ;
-;      - MD_LOAD~7                                                   ; 0                 ; 6       ;
-; IR[2]                                                              ;                   ;         ;
-;      - PC_LOAD_HI~0                                                ; 0                 ; 6       ;
-;      - MD_BUS_SEL~0                                                ; 0                 ; 6       ;
-;      - PC_LOAD_HI~3                                                ; 0                 ; 6       ;
-;      - PC_CLR_HI~0                                                 ; 0                 ; 6       ;
-;      - MD_BUS_SEL~1                                                ; 0                 ; 6       ;
-;      - MA_LOAD_HI~0                                                ; 0                 ; 6       ;
-;      - MD_LOAD~2                                                   ; 0                 ; 6       ;
-;      - MD_LOAD~3                                                   ; 0                 ; 6       ;
-;      - LINK_LOAD~0                                                 ; 0                 ; 6       ;
-;      - ALU_INC~1                                                   ; 0                 ; 6       ;
-;      - PC_LOAD_HI~8                                                ; 0                 ; 6       ;
-;      - ALU_FUNC_SEL_0~0                                            ; 0                 ; 6       ;
-;      - LINK_LOAD~2                                                 ; 0                 ; 6       ;
-;      - ALU_OUT_SEL_0~2                                             ; 0                 ; 6       ;
-; IR[5]                                                              ;                   ;         ;
-;      - SKIP_MASTER~0                                               ; 0                 ; 6       ;
-;      - LINK_LOAD~3                                                 ; 0                 ; 6       ;
-;      - LINK_OUT_SEL~0                                              ; 0                 ; 6       ;
-; IR[6]                                                              ;                   ;         ;
-;      - SKIP_MASTER~0                                               ; 0                 ; 6       ;
-;      - AC_LOAD~2                                                   ; 0                 ; 6       ;
-;      - ALU_COMP~0                                                  ; 0                 ; 6       ;
-; IR[7]                                                              ;                   ;         ;
-;      - SKIP_MASTER~0                                               ; 0                 ; 6       ;
-;      - LINK_LOAD~3                                                 ; 0                 ; 6       ;
-;      - LINK_COMP~0                                                 ; 0                 ; 6       ;
-; LINK_VALUE                                                         ;                   ;         ;
-;      - SKIP_MASTER~0                                               ; 0                 ; 6       ;
-; IR[8]                                                              ;                   ;         ;
-;      - PC_LOAD_HI~2                                                ; 0                 ; 6       ;
-;      - AC_LOAD~0                                                   ; 0                 ; 6       ;
-;      - AC_LOAD~1                                                   ; 0                 ; 6       ;
-;      - ALU_ROT_1~1                                                 ; 0                 ; 6       ;
-; t_states[5]                                                        ;                   ;         ;
-;      - PC_BUS_SEL~2                                                ; 0                 ; 6       ;
-;      - ALU_OUT_SEL_0~1                                             ; 0                 ; 6       ;
-;      - PC_BUS_SEL~4                                                ; 0                 ; 6       ;
-; s_states[2]                                                        ;                   ;         ;
-;      - MD_BUS_SEL~0                                                ; 0                 ; 6       ;
-;      - PC_LOAD_HI~3                                                ; 0                 ; 6       ;
-;      - PC_CLR_HI~0                                                 ; 0                 ; 6       ;
-;      - MD_BUS_SEL~1                                                ; 0                 ; 6       ;
-;      - MD_LOAD~2                                                   ; 0                 ; 6       ;
-;      - MD_LOAD~3                                                   ; 0                 ; 6       ;
-;      - ALU_FUNC_SEL_0~0                                            ; 0                 ; 6       ;
-;      - LINK_LOAD~2                                                 ; 0                 ; 6       ;
-;      - ALU_OUT_SEL_0~3                                             ; 0                 ; 6       ;
-; t_states[1]                                                        ;                   ;         ;
-;      - PC_BUS_SEL~3                                                ; 0                 ; 6       ;
-;      - PC_LOAD_HI~4                                                ; 0                 ; 6       ;
-;      - MD_LOAD~4                                                   ; 0                 ; 6       ;
-;      - ALU_OUT_SEL_0~2                                             ; 0                 ; 6       ;
-;      - MEM_READ~1                                                  ; 0                 ; 6       ;
-;      - MEM_WRITE~0                                                 ; 0                 ; 6       ;
-; t_states[0]                                                        ;                   ;         ;
-;      - PC_BUS_SEL~3                                                ; 1                 ; 6       ;
-;      - PC_LOAD_HI~7                                                ; 1                 ; 6       ;
-;      - PC_LOAD_LO~0                                                ; 1                 ; 6       ;
-;      - PC_CLR_HI~1                                                 ; 1                 ; 6       ;
-;      - MA_LOAD_HI~0                                                ; 1                 ; 6       ;
-;      - MA_LOAD_HI~1                                                ; 1                 ; 6       ;
-;      - MA_LOAD_HI~2                                                ; 1                 ; 6       ;
-;      - MA_LOAD_LO~0                                                ; 1                 ; 6       ;
-;      - MA_CLR_HI~1                                                 ; 1                 ; 6       ;
-;      - MA_CLR_HI~2                                                 ; 1                 ; 6       ;
-;      - MD_BUS_SEL~3                                                ; 1                 ; 6       ;
-;      - MD_BUS_SEL~4                                                ; 1                 ; 6       ;
-;      - ALU_OUT_SEL_0~0                                             ; 1                 ; 6       ;
-; IS_ZERO_LAST                                                       ;                   ;         ;
-;      - ALU_INC~0                                                   ; 0                 ; 6       ;
-;      - ALU_OUT_SEL_0~1                                             ; 0                 ; 6       ;
-; t_states[2]                                                        ;                   ;         ;
-;      - PC_LOAD_HI~5                                                ; 0                 ; 6       ;
-;      - IR_LOAD~0                                                   ; 0                 ; 6       ;
-;      - MD_IN_SEL~0                                                 ; 0                 ; 6       ;
-;      - MD_LOAD~5                                                   ; 0                 ; 6       ;
-;      - MD_LOAD~6                                                   ; 0                 ; 6       ;
-;      - ALU_OUT_SEL_0~0                                             ; 0                 ; 6       ;
-;      - MEM_READ~1                                                  ; 0                 ; 6       ;
-;      - MEM_WRITE~1                                                 ; 0                 ; 6       ;
-;      - MD_LOAD~7                                                   ; 0                 ; 6       ;
-; s_states[3]                                                        ;                   ;         ;
-;      - PC_LOAD_HI~5                                                ; 0                 ; 6       ;
-;      - MA_CLR_HI~2                                                 ; 0                 ; 6       ;
-;      - MA_CLR_HI~4                                                 ; 0                 ; 6       ;
-;      - MEM_WRITE~0                                                 ; 0                 ; 6       ;
-; IRQ                                                                ;                   ;         ;
-;      - PC_LOAD_HI~5                                                ; 1                 ; 6       ;
-;      - MA_CLR_HI~2                                                 ; 1                 ; 6       ;
-;      - MA_CLR_HI~4                                                 ; 1                 ; 6       ;
-;      - MEM_WRITE~0                                                 ; 1                 ; 6       ;
-; IR[4]                                                              ;                   ;         ;
-;      - MA_CLR_HI~0                                                 ; 1                 ; 6       ;
-;      - MA_CLR_HI~1                                                 ; 1                 ; 6       ;
-;      - MA_CLR_HI~3                                                 ; 1                 ; 6       ;
-;      - AC_LOAD~4                                                   ; 1                 ; 6       ;
-; s_states[1]                                                        ;                   ;         ;
-;      - MA_LOAD_HI~2                                                ; 0                 ; 6       ;
-;      - MA_LOAD_LO~0                                                ; 0                 ; 6       ;
-;      - MA_CLR_HI~1                                                 ; 0                 ; 6       ;
-;      - MD_IN_SEL~0                                                 ; 0                 ; 6       ;
-;      - MD_BUS_SEL~4                                                ; 0                 ; 6       ;
-;      - MD_LOAD~5                                                   ; 0                 ; 6       ;
-;      - ALU_INC~2                                                   ; 0                 ; 6       ;
-;      - MEM_READ~0                                                  ; 0                 ; 6       ;
-; t_states[4]                                                        ;                   ;         ;
-;      - MD_BUS_SEL~2                                                ; 0                 ; 6       ;
-;      - AC_LOAD~3                                                   ; 0                 ; 6       ;
-;      - ALU_OUT_SEL_0~1                                             ; 0                 ; 6       ;
-;      - ALU_ROT_1~0                                                 ; 0                 ; 6       ;
-; IS_AUTO_INDEX                                                      ;                   ;         ;
-;      - MD_BUS_SEL~4                                                ; 0                 ; 6       ;
-;      - MD_LOAD~5                                                   ; 0                 ; 6       ;
-;      - ALU_INC~2                                                   ; 0                 ; 6       ;
-; IR[9]                                                              ;                   ;         ;
-;      - AC_LOAD~0                                                   ; 1                 ; 6       ;
-;      - AC_LOAD~1                                                   ; 1                 ; 6       ;
-;      - ALU_ROT_2~0                                                 ; 1                 ; 6       ;
-; IR[10]                                                             ;                   ;         ;
-;      - AC_LOAD~3                                                   ; 1                 ; 6       ;
-;      - ALU_ROT_1~0                                                 ; 1                 ; 6       ;
-; ADD_CARRY                                                          ;                   ;         ;
-;      - LINK_COMP~1                                                 ; 0                 ; 6       ;
-; INC_CARRY                                                          ;                   ;         ;
-;      - LINK_COMP~0                                                 ; 1                 ; 6       ;
-+--------------------------------------------------------------------+-------------------+---------+
++-------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                        ;
++-------------------------+-------------------+---------+
+; Source Pin / Fanout     ; Pad To Core Index ; Setting ;
++-------------------------+-------------------+---------+
+; IS_NEG                  ;                   ;         ;
+; IS_ZERO                 ;                   ;         ;
+; t_states[5]             ;                   ;         ;
+;      - PC_BUS_SEL~2     ; 0                 ; 6       ;
+;      - PC_LOAD_HI~7     ; 0                 ; 6       ;
+;      - ALU_OUT_SEL_0~1  ; 0                 ; 6       ;
+; IR[1]                   ;                   ;         ;
+;      - MD_BUS_SEL~0     ; 0                 ; 6       ;
+;      - PC_LOAD_HI~0     ; 0                 ; 6       ;
+;      - PC_LOAD_HI~2     ; 0                 ; 6       ;
+;      - PC_CLR_HI~0      ; 0                 ; 6       ;
+;      - PC_CLR_HI~1      ; 0                 ; 6       ;
+;      - MA_LOAD_HI~0     ; 0                 ; 6       ;
+;      - MA_CLR_HI~3      ; 0                 ; 6       ;
+;      - MD_LOAD~0        ; 0                 ; 6       ;
+;      - MD_BUS_SEL~1     ; 0                 ; 6       ;
+;      - MD_LOAD~1        ; 0                 ; 6       ;
+;      - AC_LOAD~2        ; 0                 ; 6       ;
+;      - LINK_LOAD~0      ; 0                 ; 6       ;
+;      - ALU_FUNC_SEL_0~1 ; 0                 ; 6       ;
+;      - ALU_OUT_SEL_0~3  ; 0                 ; 6       ;
+;      - ALU_OUT_SEL_1~0  ; 0                 ; 6       ;
+;      - ALU_CLEAR~0      ; 0                 ; 6       ;
+; s_states[2]             ;                   ;         ;
+;      - MD_BUS_SEL~0     ; 1                 ; 6       ;
+;      - PC_LOAD_HI~2     ; 1                 ; 6       ;
+;      - PC_CLR_HI~0      ; 1                 ; 6       ;
+;      - MA_LOAD_HI~0     ; 1                 ; 6       ;
+;      - MD_LOAD~0        ; 1                 ; 6       ;
+;      - MD_BUS_SEL~1     ; 1                 ; 6       ;
+;      - MD_LOAD~1        ; 1                 ; 6       ;
+;      - ALU_FUNC_SEL_0~0 ; 1                 ; 6       ;
+;      - ALU_OUT_SEL_0~3  ; 1                 ; 6       ;
+; IR[0]                   ;                   ;         ;
+;      - MD_BUS_SEL~0     ; 0                 ; 6       ;
+;      - PC_LOAD_HI~0     ; 0                 ; 6       ;
+;      - PC_LOAD_HI~2     ; 0                 ; 6       ;
+;      - PC_CLR_HI~0      ; 0                 ; 6       ;
+;      - PC_CLR_HI~1      ; 0                 ; 6       ;
+;      - MA_LOAD_HI~0     ; 0                 ; 6       ;
+;      - MA_CLR_HI~3      ; 0                 ; 6       ;
+;      - MD_LOAD~0        ; 0                 ; 6       ;
+;      - MD_BUS_SEL~1     ; 0                 ; 6       ;
+;      - MD_LOAD~1        ; 0                 ; 6       ;
+;      - AC_LOAD~2        ; 0                 ; 6       ;
+;      - LINK_LOAD~0      ; 0                 ; 6       ;
+;      - ALU_FUNC_SEL_0~1 ; 0                 ; 6       ;
+;      - ALU_OUT_SEL_0~2  ; 0                 ; 6       ;
+;      - ALU_CLEAR~0      ; 0                 ; 6       ;
+; IR[2]                   ;                   ;         ;
+;      - MD_BUS_SEL~0     ; 0                 ; 6       ;
+;      - PC_LOAD_HI~0     ; 0                 ; 6       ;
+;      - PC_LOAD_HI~2     ; 0                 ; 6       ;
+;      - PC_CLR_HI~0      ; 0                 ; 6       ;
+;      - MA_LOAD_HI~0     ; 0                 ; 6       ;
+;      - MD_LOAD~0        ; 0                 ; 6       ;
+;      - MD_BUS_SEL~1     ; 0                 ; 6       ;
+;      - MD_LOAD~1        ; 0                 ; 6       ;
+;      - ALU_FUNC_SEL_0~0 ; 0                 ; 6       ;
+;      - ALU_OUT_SEL_0~2  ; 0                 ; 6       ;
+; IR[5]                   ;                   ;         ;
+;      - SKIP_MASTER~0    ; 0                 ; 6       ;
+;      - LINK_LOAD~3      ; 0                 ; 6       ;
+;      - LINK_OUT_SEL~0   ; 0                 ; 6       ;
+; IR[6]                   ;                   ;         ;
+;      - SKIP_MASTER~0    ; 1                 ; 6       ;
+;      - AC_LOAD~3        ; 1                 ; 6       ;
+;      - ALU_COMP~0       ; 1                 ; 6       ;
+; IR[7]                   ;                   ;         ;
+;      - SKIP_MASTER~0    ; 0                 ; 6       ;
+;      - LINK_LOAD~4      ; 0                 ; 6       ;
+;      - LINK_COMP~0      ; 0                 ; 6       ;
+; LINK_VALUE              ;                   ;         ;
+;      - SKIP_MASTER~0    ; 0                 ; 6       ;
+; IR[8]                   ;                   ;         ;
+;      - PC_BUS_SEL~0     ; 0                 ; 6       ;
+;      - PC_LOAD_HI~3     ; 0                 ; 6       ;
+;      - AC_LOAD~1        ; 0                 ; 6       ;
+;      - AC_LOAD~3        ; 0                 ; 6       ;
+;      - AC_LOAD~7        ; 0                 ; 6       ;
+;      - LINK_LOAD~3      ; 0                 ; 6       ;
+;      - ALU_ROT_1~1      ; 0                 ; 6       ;
+; t_states[3]             ;                   ;         ;
+;      - PC_LOAD_HI~1     ; 0                 ; 6       ;
+;      - PC_LOAD_HI~5     ; 0                 ; 6       ;
+;      - MD_BUS_SEL~2     ; 0                 ; 6       ;
+;      - MD_BUS_SEL~3     ; 0                 ; 6       ;
+;      - MD_LOAD~2        ; 0                 ; 6       ;
+;      - MD_LOAD~3        ; 0                 ; 6       ;
+;      - AC_LOAD~0        ; 0                 ; 6       ;
+;      - ALU_FUNC_SEL_0~0 ; 0                 ; 6       ;
+;      - AC_LOAD~4        ; 0                 ; 6       ;
+;      - AC_LOAD~6        ; 0                 ; 6       ;
+;      - LINK_LOAD~2      ; 0                 ; 6       ;
+;      - LINK_OUT_SEL~0   ; 0                 ; 6       ;
+;      - ALU_OUT_SEL_0~2  ; 0                 ; 6       ;
+;      - ALU_COMP~0       ; 0                 ; 6       ;
+;      - ALU_INC~4        ; 0                 ; 6       ;
+;      - ALU_ROT_1~1      ; 0                 ; 6       ;
+;      - ALU_ROT_2~0      ; 0                 ; 6       ;
+; s_states[0]             ;                   ;         ;
+;      - PC_LOAD_HI~0     ; 1                 ; 6       ;
+;      - PC_BUS_SEL~1     ; 1                 ; 6       ;
+;      - PC_LOAD_HI~6     ; 1                 ; 6       ;
+;      - IR_LOAD~0        ; 1                 ; 6       ;
+;      - MA_LOAD_HI~1     ; 1                 ; 6       ;
+;      - MA_LOAD_LO~0     ; 1                 ; 6       ;
+;      - MEM_READ~0       ; 1                 ; 6       ;
+;      - MD_BUS_SEL~4     ; 1                 ; 6       ;
+;      - MD_LOAD~5        ; 1                 ; 6       ;
+;      - ALU_OUT_SEL_0~0  ; 1                 ; 6       ;
+;      - MD_IN_SEL~2      ; 1                 ; 6       ;
+; IR[3]                   ;                   ;         ;
+;      - PC_LOAD_HI~1     ; 0                 ; 6       ;
+;      - PC_LOAD_HI~4     ; 0                 ; 6       ;
+;      - MA_LOAD_HI~1     ; 0                 ; 6       ;
+;      - AC_LOAD~0        ; 0                 ; 6       ;
+;      - AC_LOAD~4        ; 0                 ; 6       ;
+;      - AC_LOAD~5        ; 0                 ; 6       ;
+;      - ALU_INC~1        ; 0                 ; 6       ;
+;      - LINK_LOAD~2      ; 0                 ; 6       ;
+;      - LINK_OUT_SEL~0   ; 0                 ; 6       ;
+;      - ALU_COMP~0       ; 0                 ; 6       ;
+;      - ALU_INC~3        ; 0                 ; 6       ;
+; IR[11]                  ;                   ;         ;
+;      - PC_LOAD_HI~1     ; 0                 ; 6       ;
+;      - AC_LOAD~0        ; 0                 ; 6       ;
+;      - AC_LOAD~3        ; 0                 ; 6       ;
+;      - AC_LOAD~5        ; 0                 ; 6       ;
+;      - LINK_LOAD~3      ; 0                 ; 6       ;
+;      - LINK_COMP~0      ; 0                 ; 6       ;
+;      - ALU_INC~3        ; 0                 ; 6       ;
+; t_states[0]             ;                   ;         ;
+;      - PC_BUS_SEL~1     ; 0                 ; 6       ;
+;      - PC_LOAD_HI~4     ; 0                 ; 6       ;
+;      - PC_LOAD_HI~9     ; 0                 ; 6       ;
+;      - PC_CLR_HI~1      ; 0                 ; 6       ;
+;      - MA_LOAD_HI~1     ; 0                 ; 6       ;
+;      - MA_LOAD_LO~0     ; 0                 ; 6       ;
+;      - MA_CLR_HI~1      ; 0                 ; 6       ;
+;      - MA_CLR_HI~2      ; 0                 ; 6       ;
+;      - MA_CLR_HI~4      ; 0                 ; 6       ;
+;      - MD_BUS_SEL~2     ; 0                 ; 6       ;
+;      - MD_BUS_SEL~3     ; 0                 ; 6       ;
+;      - ALU_OUT_SEL_0~0  ; 0                 ; 6       ;
+; t_states[1]             ;                   ;         ;
+;      - PC_BUS_SEL~1     ; 1                 ; 6       ;
+;      - PC_LOAD_HI~6     ; 1                 ; 6       ;
+;      - MD_LOAD~2        ; 1                 ; 6       ;
+;      - ALU_OUT_SEL_0~2  ; 1                 ; 6       ;
+;      - MEM_READ~1       ; 1                 ; 6       ;
+;      - MEM_WRITE~3      ; 1                 ; 6       ;
+; t_states[2]             ;                   ;         ;
+;      - ALU_INC~0        ; 1                 ; 6       ;
+;      - IR_LOAD~0        ; 1                 ; 6       ;
+;      - MD_BUS_SEL~4     ; 1                 ; 6       ;
+;      - MD_LOAD~3        ; 1                 ; 6       ;
+;      - MD_LOAD~4        ; 1                 ; 6       ;
+;      - MD_LOAD~5        ; 1                 ; 6       ;
+;      - ALU_OUT_SEL_0~0  ; 1                 ; 6       ;
+;      - MEM_READ~1       ; 1                 ; 6       ;
+;      - MEM_WRITE~2      ; 1                 ; 6       ;
+;      - MD_IN_SEL~2      ; 1                 ; 6       ;
+; s_states[3]             ;                   ;         ;
+;      - MA_CLR_HI~0      ; 0                 ; 6       ;
+;      - MA_CLR_HI~1      ; 0                 ; 6       ;
+;      - MEM_WRITE~3      ; 0                 ; 6       ;
+; IRQ                     ;                   ;         ;
+;      - MA_CLR_HI~0      ; 0                 ; 6       ;
+;      - MA_CLR_HI~1      ; 0                 ; 6       ;
+;      - MEM_WRITE~3      ; 0                 ; 6       ;
+; IS_ZERO_LAST            ;                   ;         ;
+;      - PC_LOAD_HI~7     ; 0                 ; 6       ;
+;      - ALU_OUT_SEL_0~1  ; 0                 ; 6       ;
+; IR[4]                   ;                   ;         ;
+;      - PC_CLR_HI~1      ; 1                 ; 6       ;
+;      - MA_CLR_HI~2      ; 1                 ; 6       ;
+;      - MA_CLR_HI~3      ; 1                 ; 6       ;
+;      - AC_LOAD~5        ; 1                 ; 6       ;
+; s_states[1]             ;                   ;         ;
+;      - MA_LOAD_HI~2     ; 0                 ; 6       ;
+;      - MA_LOAD_LO~0     ; 0                 ; 6       ;
+;      - MA_CLR_HI~4      ; 0                 ; 6       ;
+;      - MEM_READ~0       ; 0                 ; 6       ;
+;      - MD_BUS_SEL~3     ; 0                 ; 6       ;
+;      - MD_LOAD~3        ; 0                 ; 6       ;
+;      - ALU_INC~2        ; 0                 ; 6       ;
+;      - MD_IN_SEL~2      ; 0                 ; 6       ;
+; IS_AUTO_INDEX           ;                   ;         ;
+;      - MD_BUS_SEL~3     ; 0                 ; 6       ;
+;      - MD_LOAD~3        ; 0                 ; 6       ;
+;      - ALU_INC~2        ; 0                 ; 6       ;
+; t_states[4]             ;                   ;         ;
+;      - MD_BUS_SEL~5     ; 0                 ; 6       ;
+;      - ALU_ROT_1~0      ; 0                 ; 6       ;
+;      - ALU_OUT_SEL_0~1  ; 0                 ; 6       ;
+;      - MEM_WRITE~2      ; 0                 ; 6       ;
+; IR[9]                   ;                   ;         ;
+;      - AC_LOAD~1        ; 1                 ; 6       ;
+;      - AC_LOAD~3        ; 1                 ; 6       ;
+;      - AC_LOAD~7        ; 1                 ; 6       ;
+;      - LINK_LOAD~3      ; 1                 ; 6       ;
+;      - ALU_ROT_2~0      ; 1                 ; 6       ;
+; IR[10]                  ;                   ;         ;
+;      - ALU_ROT_1~0      ; 0                 ; 6       ;
+; ADD_CARRY               ;                   ;         ;
+;      - LINK_COMP~1      ; 0                 ; 6       ;
+; INC_CARRY               ;                   ;         ;
+;      - LINK_COMP~0      ; 1                 ; 6       ;
++-------------------------+-------------------+---------+
 
 
-+-----------------------------------------------------------------------+
-; Non-Global High Fan-Out Signals                                       ;
-+-------------------------------------------------------------+---------+
-; Name                                                        ; Fan-Out ;
-+-------------------------------------------------------------+---------+
-; t_states[3]                                                 ; 16      ;
-; IR[2]                                                       ; 14      ;
-; IR[1]                                                       ; 14      ;
-; t_states[0]                                                 ; 13      ;
-; s_states[0]                                                 ; 13      ;
-; IR[0]                                                       ; 13      ;
-; t_states[2]                                                 ; 9       ;
-; s_states[2]                                                 ; 9       ;
-; s_states[1]                                                 ; 8       ;
-; t_states[1]                                                 ; 6       ;
-; IR[11]                                                      ; 6       ;
-; IR[3]                                                       ; 6       ;
-; ALU_INC~1                                                   ; 6       ;
-; MD_BUS_SEL~0                                                ; 5       ;
-; decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_2|output~0 ; 5       ;
-; t_states[4]                                                 ; 4       ;
-; IR[4]                                                       ; 4       ;
-; IRQ                                                         ; 4       ;
-; s_states[3]                                                 ; 4       ;
-; IR[8]                                                       ; 4       ;
-; ALU_FUNC_SEL_0~0                                            ; 4       ;
-; AC_LOAD~0                                                   ; 4       ;
-; IR[9]                                                       ; 3       ;
-; IS_AUTO_INDEX                                               ; 3       ;
-; t_states[5]                                                 ; 3       ;
-; IR[7]                                                       ; 3       ;
-; IR[6]                                                       ; 3       ;
-; IR[5]                                                       ; 3       ;
-; LINK_LOAD~2                                                 ; 3       ;
-; AC_LOAD~1                                                   ; 3       ;
-; LINK_LOAD~1                                                 ; 3       ;
-; MD_LOAD~2                                                   ; 3       ;
-; MA_CLR_HI~2                                                 ; 3       ;
-; MA_LOAD_HI~0                                                ; 3       ;
-; PC_CLR_HI~0                                                 ; 3       ;
-; PC_LOAD_HI~3                                                ; 3       ;
-; IR[10]                                                      ; 2       ;
-; IS_ZERO_LAST                                                ; 2       ;
-; ALU_ROT_1~0                                                 ; 2       ;
-; AC_LOAD~5                                                   ; 2       ;
-; AC_LOAD~4                                                   ; 2       ;
-; AC_LOAD~3                                                   ; 2       ;
-; MD_LOAD~3                                                   ; 2       ;
-; MD_BUS_SEL~4                                                ; 2       ;
-; MD_BUS_SEL~2                                                ; 2       ;
-; decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_5|output~0 ; 2       ;
-; MD_BUS_SEL~1                                                ; 2       ;
-; IR_LOAD~0                                                   ; 2       ;
-; MA_CLR_HI~0                                                 ; 2       ;
-; PC_LOAD_HI~6                                                ; 2       ;
-; ALU_INC~0                                                   ; 2       ;
-; PC_LOAD_HI~5                                                ; 2       ;
-; PC_LOAD_HI~4                                                ; 2       ;
-; PC_LOAD_HI~2                                                ; 2       ;
-; PC_LOAD_HI~1                                                ; 2       ;
-; INC_CARRY                                                   ; 1       ;
-; ADD_CARRY                                                   ; 1       ;
-; LINK_VALUE                                                  ; 1       ;
-; ALU_CLEAR~2                                                 ; 1       ;
-; MD_LOAD~7                                                   ; 1       ;
-; PC_BUS_SEL~4                                                ; 1       ;
-; MEM_WRITE~1                                                 ; 1       ;
-; MEM_WRITE~0                                                 ; 1       ;
-; MEM_READ~1                                                  ; 1       ;
-; MEM_READ~0                                                  ; 1       ;
-; ALU_ROT_2~0                                                 ; 1       ;
-; ALU_ROT_1~1                                                 ; 1       ;
-; ALU_INC~3                                                   ; 1       ;
-; ALU_INC~2                                                   ; 1       ;
-; ALU_COMP~0                                                  ; 1       ;
-; ALU_OUT_SEL_1~0                                             ; 1       ;
-; ALU_OUT_SEL_0~4                                             ; 1       ;
-; ALU_OUT_SEL_0~3                                             ; 1       ;
-; ALU_OUT_SEL_0~2                                             ; 1       ;
-; ALU_OUT_SEL_0~1                                             ; 1       ;
-; ALU_OUT_SEL_0~0                                             ; 1       ;
-; MA_CLR_HI~4                                                 ; 1       ;
-; ALU_FUNC_SEL_0~1                                            ; 1       ;
-; LINK_COMP~1                                                 ; 1       ;
-; LINK_COMP~0                                                 ; 1       ;
-; LINK_OUT_SEL~0                                              ; 1       ;
-; LINK_LOAD~4                                                 ; 1       ;
-; LINK_LOAD~3                                                 ; 1       ;
-; AC_LOAD~6                                                   ; 1       ;
-; PC_LOAD_HI~8                                                ; 1       ;
-; AC_LOAD~2                                                   ; 1       ;
-; LINK_LOAD~0                                                 ; 1       ;
-; MD_LOAD~6                                                   ; 1       ;
-; MD_LOAD~5                                                   ; 1       ;
-; MD_LOAD~4                                                   ; 1       ;
-; MD_BUS_SEL~5                                                ; 1       ;
-; MD_BUS_SEL~3                                                ; 1       ;
-; MD_IN_SEL~0                                                 ; 1       ;
-; MA_CLR_HI~3                                                 ; 1       ;
-; MA_CLR_HI~1                                                 ; 1       ;
-; MA_LOAD_LO~0                                                ; 1       ;
-; MA_LOAD_HI~2                                                ; 1       ;
-; MA_LOAD_HI~1                                                ; 1       ;
-; PC_CLR_HI~1                                                 ; 1       ;
-; PC_LOAD_LO~0                                                ; 1       ;
-; PC_LOAD_HI~7                                                ; 1       ;
-; PC_BUS_SEL~3                                                ; 1       ;
-; PC_BUS_SEL~2                                                ; 1       ;
-; SKIP_MASTER~0                                               ; 1       ;
-; PC_LOAD_HI~0                                                ; 1       ;
-+-------------------------------------------------------------+---------+
++---------------------------------+
+; Non-Global High Fan-Out Signals ;
++------------------+--------------+
+; Name             ; Fan-Out      ;
++------------------+--------------+
+; t_states[3]      ; 17           ;
+; IR[1]            ; 16           ;
+; IR[0]            ; 15           ;
+; t_states[0]      ; 12           ;
+; IR[3]            ; 11           ;
+; s_states[0]      ; 11           ;
+; t_states[2]      ; 10           ;
+; IR[2]            ; 10           ;
+; s_states[2]      ; 9            ;
+; PC_LOAD_HI~0     ; 9            ;
+; s_states[1]      ; 8            ;
+; IR[11]           ; 7            ;
+; IR[8]            ; 7            ;
+; t_states[1]      ; 6            ;
+; MD_BUS_SEL~0     ; 6            ;
+; IR[9]            ; 5            ;
+; ALU_FUNC_SEL_0~0 ; 5            ;
+; AC_LOAD~1        ; 5            ;
+; t_states[4]      ; 4            ;
+; IR[4]            ; 4            ;
+; ALU_ROT_1~0      ; 4            ;
+; ALU_INC~1        ; 4            ;
+; IS_AUTO_INDEX    ; 3            ;
+; IRQ              ; 3            ;
+; s_states[3]      ; 3            ;
+; IR[7]            ; 3            ;
+; IR[6]            ; 3            ;
+; IR[5]            ; 3            ;
+; t_states[5]      ; 3            ;
+; LINK_LOAD~0      ; 3            ;
+; MD_LOAD~0        ; 3            ;
+; MA_CLR_HI~1      ; 3            ;
+; MA_LOAD_HI~0     ; 3            ;
+; ALU_INC~0        ; 3            ;
+; MA_CLR_HI~0      ; 3            ;
+; PC_CLR_HI~0      ; 3            ;
+; PC_LOAD_HI~2     ; 3            ;
+; IS_ZERO_LAST     ; 2            ;
+; LINK_LOAD~2      ; 2            ;
+; AC_LOAD~8        ; 2            ;
+; AC_LOAD~7        ; 2            ;
+; AC_LOAD~6        ; 2            ;
+; AC_LOAD~4        ; 2            ;
+; MD_LOAD~1        ; 2            ;
+; MD_BUS_SEL~3     ; 2            ;
+; PC_CLR_HI~1      ; 2            ;
+; PC_LOAD_HI~6     ; 2            ;
+; PC_LOAD_HI~5     ; 2            ;
+; PC_LOAD_HI~3     ; 2            ;
+; PC_LOAD_HI~1     ; 2            ;
+; SKIP_MASTER~0    ; 2            ;
+; INC_CARRY        ; 1            ;
+; ADD_CARRY        ; 1            ;
+; IR[10]           ; 1            ;
+; LINK_VALUE       ; 1            ;
+; MEM_WRITE~3      ; 1            ;
+; MD_IN_SEL~2      ; 1            ;
+; MEM_WRITE~2      ; 1            ;
+; MEM_READ~1       ; 1            ;
+; ALU_ROT_2~0      ; 1            ;
+; ALU_ROT_1~1      ; 1            ;
+; ALU_CLEAR~0      ; 1            ;
+; ALU_INC~4        ; 1            ;
+; ALU_INC~3        ; 1            ;
+; ALU_INC~2        ; 1            ;
+; ALU_COMP~0       ; 1            ;
+; AC_LOAD~10       ; 1            ;
+; ALU_OUT_SEL_1~0  ; 1            ;
+; ALU_OUT_SEL_0~4  ; 1            ;
+; ALU_OUT_SEL_0~3  ; 1            ;
+; ALU_OUT_SEL_0~2  ; 1            ;
+; ALU_OUT_SEL_0~1  ; 1            ;
+; ALU_OUT_SEL_0~0  ; 1            ;
+; ALU_FUNC_SEL_0~1 ; 1            ;
+; LINK_COMP~1      ; 1            ;
+; LINK_COMP~0      ; 1            ;
+; LINK_OUT_SEL~0   ; 1            ;
+; LINK_LOAD~4      ; 1            ;
+; LINK_LOAD~3      ; 1            ;
+; LINK_LOAD~1      ; 1            ;
+; AC_LOAD~9        ; 1            ;
+; AC_LOAD~5        ; 1            ;
+; AC_LOAD~3        ; 1            ;
+; AC_LOAD~2        ; 1            ;
+; AC_LOAD~0        ; 1            ;
+; MD_LOAD~5        ; 1            ;
+; MD_LOAD~4        ; 1            ;
+; MD_LOAD~3        ; 1            ;
+; MD_LOAD~2        ; 1            ;
+; MD_BUS_SEL~5     ; 1            ;
+; MD_BUS_SEL~4     ; 1            ;
+; MD_BUS_SEL~2     ; 1            ;
+; MD_BUS_SEL~1     ; 1            ;
+; MEM_READ~0       ; 1            ;
+; MA_CLR_HI~4      ; 1            ;
+; MA_CLR_HI~3      ; 1            ;
+; MA_CLR_HI~2      ; 1            ;
+; MA_LOAD_LO~0     ; 1            ;
+; MA_LOAD_HI~2     ; 1            ;
+; MA_LOAD_HI~1     ; 1            ;
+; IR_LOAD~0        ; 1            ;
+; PC_CLR_HI~2      ; 1            ;
+; PC_LOAD_LO~0     ; 1            ;
+; PC_LOAD_HI~9     ; 1            ;
+; PC_LOAD_HI~8     ; 1            ;
+; PC_LOAD_HI~7     ; 1            ;
+; PC_LOAD_HI~4     ; 1            ;
+; PC_BUS_SEL~2     ; 1            ;
+; PC_BUS_SEL~1     ; 1            ;
+; PC_BUS_SEL~0     ; 1            ;
++------------------+--------------+
 
 
 +------------------------------------------------------+
@@ -993,24 +1002,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+------------------------+
 ; Other Routing Resource Type ; Usage                  ;
 +-----------------------------+------------------------+
-; Block interconnects         ; 113 / 15,666 ( < 1 % ) ;
-; C16 interconnects           ; 8 / 812 ( < 1 % )      ;
+; Block interconnects         ; 123 / 15,666 ( < 1 % ) ;
+; C16 interconnects           ; 10 / 812 ( 1 % )       ;
 ; C4 interconnects            ; 97 / 11,424 ( < 1 % )  ;
-; Direct links                ; 17 / 15,666 ( < 1 % )  ;
+; Direct links                ; 12 / 15,666 ( < 1 % )  ;
 ; Global clocks               ; 0 / 8 ( 0 % )          ;
-; Local interconnects         ; 32 / 4,608 ( < 1 % )   ;
-; R24 interconnects           ; 20 / 652 ( 3 % )       ;
-; R4 interconnects            ; 80 / 13,328 ( < 1 % )  ;
+; Local interconnects         ; 31 / 4,608 ( < 1 % )   ;
+; R24 interconnects           ; 11 / 652 ( 2 % )       ;
+; R4 interconnects            ; 82 / 13,328 ( < 1 % )  ;
 +-----------------------------+------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +---------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 12.83) ; Number of LABs  (Total = 6) ;
+; Number of Logic Elements  (Average = 11.71) ; Number of LABs  (Total = 7) ;
 +---------------------------------------------+-----------------------------+
 ; 1                                           ; 1                           ;
-; 2                                           ; 0                           ;
+; 2                                           ; 1                           ;
 ; 3                                           ; 0                           ;
 ; 4                                           ; 0                           ;
 ; 5                                           ; 0                           ;
@@ -1020,10 +1029,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 9                                           ; 0                           ;
 ; 10                                          ; 0                           ;
 ; 11                                          ; 0                           ;
-; 12                                          ; 1                           ;
+; 12                                          ; 0                           ;
 ; 13                                          ; 0                           ;
 ; 14                                          ; 0                           ;
-; 15                                          ; 0                           ;
+; 15                                          ; 1                           ;
 ; 16                                          ; 4                           ;
 +---------------------------------------------+-----------------------------+
 
@@ -1031,11 +1040,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 12.83) ; Number of LABs  (Total = 6) ;
+; Number of Signals Sourced  (Average = 11.71) ; Number of LABs  (Total = 7) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
 ; 1                                            ; 1                           ;
-; 2                                            ; 0                           ;
+; 2                                            ; 1                           ;
 ; 3                                            ; 0                           ;
 ; 4                                            ; 0                           ;
 ; 5                                            ; 0                           ;
@@ -1045,10 +1054,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 9                                            ; 0                           ;
 ; 10                                           ; 0                           ;
 ; 11                                           ; 0                           ;
-; 12                                           ; 1                           ;
+; 12                                           ; 0                           ;
 ; 13                                           ; 0                           ;
 ; 14                                           ; 0                           ;
-; 15                                           ; 0                           ;
+; 15                                           ; 1                           ;
 ; 16                                           ; 4                           ;
 +----------------------------------------------+-----------------------------+
 
@@ -1056,34 +1065,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 8.83) ; Number of LABs  (Total = 6) ;
+; Number of Signals Sourced Out  (Average = 7.43) ; Number of LABs  (Total = 7) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
 ; 1                                               ; 1                           ;
-; 2                                               ; 0                           ;
+; 2                                               ; 1                           ;
 ; 3                                               ; 0                           ;
 ; 4                                               ; 0                           ;
 ; 5                                               ; 0                           ;
 ; 6                                               ; 0                           ;
-; 7                                               ; 0                           ;
+; 7                                               ; 1                           ;
 ; 8                                               ; 1                           ;
 ; 9                                               ; 1                           ;
 ; 10                                              ; 1                           ;
-; 11                                              ; 1                           ;
+; 11                                              ; 0                           ;
 ; 12                                              ; 0                           ;
 ; 13                                              ; 0                           ;
-; 14                                              ; 1                           ;
+; 14                                              ; 0                           ;
+; 15                                              ; 1                           ;
 +-------------------------------------------------+-----------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 13.50) ; Number of LABs  (Total = 6) ;
+; Number of Distinct Inputs  (Average = 11.57) ; Number of LABs  (Total = 7) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
 ; 1                                            ; 0                           ;
-; 2                                            ; 0                           ;
+; 2                                            ; 1                           ;
 ; 3                                            ; 0                           ;
 ; 4                                            ; 1                           ;
 ; 5                                            ; 0                           ;
@@ -1091,14 +1101,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 7                                            ; 0                           ;
 ; 8                                            ; 0                           ;
 ; 9                                            ; 0                           ;
-; 10                                           ; 0                           ;
-; 11                                           ; 1                           ;
+; 10                                           ; 1                           ;
+; 11                                           ; 0                           ;
 ; 12                                           ; 0                           ;
 ; 13                                           ; 0                           ;
 ; 14                                           ; 0                           ;
-; 15                                           ; 0                           ;
-; 16                                           ; 2                           ;
-; 17                                           ; 2                           ;
+; 15                                           ; 2                           ;
+; 16                                           ; 0                           ;
+; 17                                           ; 1                           ;
+; 18                                           ; 1                           ;
 +----------------------------------------------+-----------------------------+
 
 
@@ -1182,30 +1193,30 @@ Critical Warning (169085): No exact pin location assignment(s) for 64 pins of 64
     Info (169086): Pin MEM_WRITE not assigned to an exact location on the device
     Info (169086): Pin IS_NEG not assigned to an exact location on the device
     Info (169086): Pin IS_ZERO not assigned to an exact location on the device
-    Info (169086): Pin IR[3] not assigned to an exact location on the device
-    Info (169086): Pin IR[11] not assigned to an exact location on the device
-    Info (169086): Pin IR[0] not assigned to an exact location on the device
+    Info (169086): Pin t_states[5] not assigned to an exact location on the device
     Info (169086): Pin IR[1] not assigned to an exact location on the device
-    Info (169086): Pin t_states[3] not assigned to an exact location on the device
-    Info (169086): Pin s_states[0] not assigned to an exact location on the device
+    Info (169086): Pin s_states[2] not assigned to an exact location on the device
+    Info (169086): Pin IR[0] not assigned to an exact location on the device
     Info (169086): Pin IR[2] not assigned to an exact location on the device
     Info (169086): Pin IR[5] not assigned to an exact location on the device
     Info (169086): Pin IR[6] not assigned to an exact location on the device
     Info (169086): Pin IR[7] not assigned to an exact location on the device
     Info (169086): Pin LINK_VALUE not assigned to an exact location on the device
     Info (169086): Pin IR[8] not assigned to an exact location on the device
-    Info (169086): Pin t_states[5] not assigned to an exact location on the device
-    Info (169086): Pin s_states[2] not assigned to an exact location on the device
-    Info (169086): Pin t_states[1] not assigned to an exact location on the device
+    Info (169086): Pin t_states[3] not assigned to an exact location on the device
+    Info (169086): Pin s_states[0] not assigned to an exact location on the device
+    Info (169086): Pin IR[3] not assigned to an exact location on the device
+    Info (169086): Pin IR[11] not assigned to an exact location on the device
     Info (169086): Pin t_states[0] not assigned to an exact location on the device
-    Info (169086): Pin IS_ZERO_LAST not assigned to an exact location on the device
+    Info (169086): Pin t_states[1] not assigned to an exact location on the device
     Info (169086): Pin t_states[2] not assigned to an exact location on the device
     Info (169086): Pin s_states[3] not assigned to an exact location on the device
     Info (169086): Pin IRQ not assigned to an exact location on the device
+    Info (169086): Pin IS_ZERO_LAST not assigned to an exact location on the device
     Info (169086): Pin IR[4] not assigned to an exact location on the device
     Info (169086): Pin s_states[1] not assigned to an exact location on the device
-    Info (169086): Pin t_states[4] not assigned to an exact location on the device
     Info (169086): Pin IS_AUTO_INDEX not assigned to an exact location on the device
+    Info (169086): Pin t_states[4] not assigned to an exact location on the device
     Info (169086): Pin IR[9] not assigned to an exact location on the device
     Info (169086): Pin IR[10] not assigned to an exact location on the device
     Info (169086): Pin ADD_CARRY not assigned to an exact location on the device
@@ -1234,13 +1245,13 @@ Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
-Info (170195): Router estimated average interconnect usage is 1% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X14_Y0 to location X28_Y14
+Info (170195): Router estimated average interconnect usage is 0% of the available device resources
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X0_Y0 to location X13_Y14
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.18 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.13 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 34 output pins without output pin load capacitance assignment
     Info (306007): Pin "PC_BUS_SEL" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1285,7 +1296,7 @@ Warning (169174): The Reserve All Unused Pins setting has not been specified, an
 Info (144001): Generated suppressed messages file /home/sebsikora/altera/projects/pdp-8/control_logic/output_files/control_logic.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 7 warnings
     Info: Peak virtual memory: 729 megabytes
-    Info: Processing ended: Sat Jan  7 16:39:37 2017
+    Info: Processing ended: Sat Jan  7 17:18:15 2017
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 

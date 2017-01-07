@@ -1,0 +1,64 @@
+# do alu_main_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /home/sebsikora/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /home/sebsikora/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity NAND_3_gate
+# -- Compiling architecture rtl of NAND_3_gate
+# -- Compiling entity NAND_gate
+# -- Compiling architecture rtl of NAND_gate
+# -- Compiling entity AND_gate
+# -- Compiling architecture rtl of AND_gate
+# -- Compiling entity AND_3_gate
+# -- Compiling architecture rtl of AND_3_gate
+# -- Compiling entity OR_3_gate
+# -- Compiling architecture rtl of OR_3_gate
+# -- Compiling entity OR_gate
+# -- Compiling architecture rtl of OR_gate
+# -- Compiling entity XOR_gate
+# -- Compiling architecture rtl of XOR_gate
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_main/nand_1_bit_full_adder.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity nand_1_bit_full_adder
+# -- Compiling architecture rtl of nand_1_bit_full_adder
+# 
+vsim -voptargs=+acc work.nand_1_bit_full_adder
+# vsim -voptargs=+acc work.nand_1_bit_full_adder 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.nand_1_bit_full_adder(rtl)
+# Loading work.nand_gate(rtl)
+wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 1000ns sim:/nand_1_bit_full_adder/carry_in
+wave modify -driver freeze -pattern constant -value 1 -starttime 1000ns -endtime 2000ns Edit:/nand_1_bit_full_adder/carry_in
+wave create -driver freeze -pattern clock -initialvalue 0 -period 500ns -dutycycle 50 -starttime 0ns -endtime 2000ns sim:/nand_1_bit_full_adder/inputA
+wave create -driver freeze -pattern clock -initialvalue 0 -period 1000ns -dutycycle 50 -starttime 0ns -endtime 2000ns sim:/nand_1_bit_full_adder/inputB
+add wave  \
+sim:/nand_1_bit_full_adder/output
+add wave  \
+sim:/nand_1_bit_full_adder/carry_out
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/alu_main/simulation/modelsim/nand_1_bit_full_adder_test_wave.do
+wave editwrite -file /home/sebsikora/altera/projects/pdp-8/alu_main/simulation/modelsim/nand_1_bit_full_adder_test_wave.do -append

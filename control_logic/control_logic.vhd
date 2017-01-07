@@ -61,7 +61,7 @@ architecture rtl of control_logic is
 	signal not_JMP:									std_logic;
 	signal not_Z_BIT:									std_logic;
 	signal Z_BIT:										std_logic;
-	signhal not_DCA:									std_logic;
+	signal not_DCA:									std_logic;
 	signal decoder_outputs:							std_logic_vector(5 downto 0);
 	
 	signal CLA0:										std_logic;
