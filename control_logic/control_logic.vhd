@@ -51,10 +51,18 @@ entity control_logic is
 end control_logic;
 
 architecture rtl of control_logic is
+	
+	component decoder_3_to_6 is
+		port ( input:									in std_logic_vector(2 downto 0);
+				 output:									out std_logic_vector(5 downto 0)
+		);
+	end component;
+	
 	signal not_JMP:									std_logic;
 	signal not_Z_BIT:									std_logic;
 	signal Z_BIT:										std_logic;
-	signal not_DCA:									std_logic;
+	signhal not_DCA:									std_logic;
+	signal decoder_outputs:							std_logic_vector(5 downto 0);
 	
 	signal CLA0:										std_logic;
 	signal CLL:											std_logic;
@@ -176,6 +184,7 @@ begin
 	IR_LOAD <= s_states(0) and t_states(2);
 	IR_CLR <= '0';
 	MA_LOAD_HI <= (s_states(0) and t_states(0)) or (s_states(1) and t_states(0) and Z_BIT) or (s_states(2) and t_states(0) and IND and MEM_INST and not_JMP);
+	MA_LOAD_LO <= (s_states(0) and t_states(0)) or (s_states(1) and t_states(0)) or (s_states(2) and t_states(0) and MEM_INST and not_JMP);
 	MA_BUS_SEL <= '0';
 	MA_CLR_HI <= (s_states(1) and t_states(0) and not_Z_BIT) or (s_states(2) and t_states(0) and Z_BIT and MEM_INST and not_JMP) or (s_states(3) and t_states(0) and IRQ);
 	MA_CLR_LO <= s_states(3) and t_states(0) and IRQ;
@@ -191,9 +200,23 @@ begin
 	ALU_FUNC_SEL_0 <= s_states(2) and t_states(3) and ANDD;
 	ALU_FUNC_SEL_1 <= s_states(2) and t_states(3) and TAD;
 	ALU_FUNC_SEL_2 <= s_states(0) and t_states(3) and OSR;
+	ALU_OUT_SEL_0 <= (s_states(0) and (t_states(0) or t_states(1) or t_states(2))) or (s_states(1) and (t_states(0) or (t_states(3) and IS_AUTO_INDEX))) or (s_states(2) and ((t_states(1) and JMS) or (t_states(3) and (ANDD or TAD)) or (t_states(4) and ISZ) or (t_states(5) and ISZ and IS_ZERO_LAST))) or (s_states(3) and ((t_states(0) and IRQ) or (t_states(2) and IRQ)));
+	ALU_OUT_SEL_1 <= (s_states(0) and t_states(3) and OSR) or (s_states(2) and t_states(3) and (ANDD or TAD));
+	ALU_OUT_SEL_2 <= (s_states(0) and ((t_states(3) and (AC_MOD or ROTATE_MASTER)) or (t_states(4) and ROTATE_TWICE)));
+	ALU_COMP <= (s_states(0) and t_states(3) and CMA);
+	ALU_INC <= (s_states(0) and (t_states(1) or (t_states(3) and IAC))) or (s_states(1) and t_states(3) and IS_AUTO_INDEX) or (s_states(2) and ((t_states(3) and JMS) or (t_states(5) and ISZ and IS_ZERO_LAST))) or (s_states(3) and t_states(2) and IRQ);
+	ALU_ROT_1 <= (s_states(0) and ((t_states(3) and ROTATE_R) or (t_states(4) and RTR)));
+	ALU_ROT_2 <= (s_states(0) and ((t_states(3) and ROTATE_L) or (t_states(4) and RTL)));
+	MEM_READ <= (s_states(0) and (t_states(1) or t_states(2))) or (s_states(1) and (t_states(1) or t_states(2))) or (s_states(2) and ((t_states(1) and (ANDD or TAD or ISZ)) or (t_states(2) and (ANDD or TAD or ISZ))));
+	MEM_WRITE <= (s_states(2) and ((t_states(2) and (DCA or JMS)) or (t_states(4) and ISZ))) or (s_states(3) and t_states(1) and IRQ);
+	ALU_CLEAR <= (s_states(0) and t_states(3) and CLA_MASTER) or (s_states(2) and t_states(3) and DCA);
 	
-	
-	
-	
+	decoder_3_to_6_0:				decoder_3_to_6 port map (input => IR(2 downto 0), output => decoder_outputs);
+	ANDD <= decoder_outputs(0);
+	TAD <= decoder_outputs(1);
+	ISZ <= decoder_outputs(2);
+	DCA <= decoder_outputs(3);
+	JMS <= decoder_outputs(4);
+	JMP <= decoder_outputs(5);
 	
 end rtl;
