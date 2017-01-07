@@ -12,7 +12,7 @@ end alu_mux;
 
 architecture rtl of alu_mux is
 begin
-	process(inputA, inputB, inputC)
+	process(inputA, inputB, inputC, alu_out_select)
 	begin
 		if alu_out_select = "001" then
 			output <= inputA;

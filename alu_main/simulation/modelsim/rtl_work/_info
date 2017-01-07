@@ -3,23 +3,198 @@ K3
 13
 cModel Technology
 Z0 d/home/sebsikora/altera/projects/pdp-8/alu_main/simulation/modelsim
-Eand_3_gate
-Z1 w1483547113
+Ealu_add
+Z1 w1483816713
 Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 Z4 d/home/sebsikora/altera/projects/pdp-8/alu_main/simulation/modelsim
-Z5 8/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd
-Z6 F/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd
+Z5 8/home/sebsikora/altera/projects/pdp-8/alu_main/alu_add.vhd
+Z6 F/home/sebsikora/altera/projects/pdp-8/alu_main/alu_add.vhd
+l0
+L4
+VkQ?T>Xbkib[E7<>g]Bc[z1
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1483826620.621940
+Z9 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/alu_main/alu_add.vhd|
+Z10 !s107 /home/sebsikora/altera/projects/pdp-8/alu_main/alu_add.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 n<0CF5M3C`PSQJljmM[5f1
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 7 alu_add 0 22 kQ?T>Xbkib[E7<>g]Bc[z1
+l24
+L12
+VCR[fmgO;]H`6A9>lIXE@h3
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 MMmN]XESOQ?Xo?dz_6UK73
+!i10b 1
+Ealu_and
+Z13 w1483820754
+R2
+R3
+R4
+Z14 8/home/sebsikora/altera/projects/pdp-8/alu_main/alu_and.vhd
+Z15 F/home/sebsikora/altera/projects/pdp-8/alu_main/alu_and.vhd
+l0
+L4
+VI>HYJj9kbQ@m?UTWmh8:T1
+R7
+31
+Z16 !s108 1483826620.593363
+Z17 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/alu_main/alu_and.vhd|
+Z18 !s107 /home/sebsikora/altera/projects/pdp-8/alu_main/alu_and.vhd|
+R11
+R12
+!s100 LMV;mAGVIz=Kg9AjAj[C70
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 7 alu_and 0 22 I>HYJj9kbQ@m?UTWmh8:T1
+l19
+L11
+Vo[o]gj@8kAm;QFm1kEB9a1
+R7
+31
+R16
+R17
+R18
+R11
+R12
+!s100 ^dK8nL_fGLJ=AKX8DQzo[0
+!i10b 1
+Ealu_main
+Z19 w1483821534
+R2
+R3
+R4
+Z20 8/home/sebsikora/altera/projects/pdp-8/alu_main/alu_main.vhd
+Z21 F/home/sebsikora/altera/projects/pdp-8/alu_main/alu_main.vhd
+l0
+L4
+V7BIm^:TMIO9D[lP2G7SX41
+R7
+31
+Z22 !s108 1483826966.985958
+Z23 !s90 -reportprogress|300|-93|-work|work|-O0|/home/sebsikora/altera/projects/pdp-8/alu_main/alu_main.vhd|
+Z24 !s107 /home/sebsikora/altera/projects/pdp-8/alu_main/alu_main.vhd|
+R11
+R12
+!s100 :_U6?Y?g0eiC@7R63a?n:0
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 8 alu_main 0 22 7BIm^:TMIO9D[lP2G7SX41
+l46
+L13
+V0^5lLVL7jm2bXcoUNdT8E0
+!s100 o19BnMR9nd0jU?FN2T8TJ0
+R7
+31
+R22
+R23
+R24
+R11
+R12
+!i10b 1
+Ealu_mux
+Z25 w1483826923
+R2
+R3
+R4
+Z26 8/home/sebsikora/altera/projects/pdp-8/alu_main/alu_mux.vhd
+Z27 F/home/sebsikora/altera/projects/pdp-8/alu_main/alu_mux.vhd
+l0
+L4
+VWoRdJXYoE8A[g9SWUjfBD0
+!s100 OIna3_9D7ZgckQdfDEZIX1
+R7
+31
+!i10b 1
+Z28 !s108 1483826975.640100
+Z29 !s90 -reportprogress|300|-93|-work|work|-O0|/home/sebsikora/altera/projects/pdp-8/alu_main/alu_mux.vhd|
+Z30 !s107 /home/sebsikora/altera/projects/pdp-8/alu_main/alu_mux.vhd|
+R11
+R12
+Artl
+R2
+R3
+Z31 DEx4 work 7 alu_mux 0 22 WoRdJXYoE8A[g9SWUjfBD0
+l14
+L13
+VQ7FER[gFl_GQhMkPU0iLE2
+!s100 97fk]_73@OWiAmO]MGlmf2
+R7
+31
+!i10b 1
+R28
+R29
+R30
+R11
+R12
+Ealu_or
+Z32 w1483820653
+R2
+R3
+R4
+Z33 8/home/sebsikora/altera/projects/pdp-8/alu_main/alu_or.vhd
+Z34 F/home/sebsikora/altera/projects/pdp-8/alu_main/alu_or.vhd
+l0
+L4
+VR_>IKiN9;8aX8?9BBMMhe0
+R7
+31
+Z35 !s108 1483826620.657150
+Z36 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/alu_main/alu_or.vhd|
+Z37 !s107 /home/sebsikora/altera/projects/pdp-8/alu_main/alu_or.vhd|
+R11
+R12
+!s100 g7<F3kch:VL?UYE`m04Cg0
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 6 alu_or 0 22 R_>IKiN9;8aX8?9BBMMhe0
+l19
+L11
+VPQUdkz:0jjM2VTn22;LgD1
+R7
+31
+R35
+R36
+R37
+R11
+R12
+!s100 A[Y]SM@fEdP^;OYI9V7ag0
+!i10b 1
+Eand_3_gate
+Z38 w1483547113
+R2
+R3
+R4
+Z39 8/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd
+Z40 F/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd
 l0
 L59
 Vz6UPELG@T<D9^D:51cnV<0
-Z7 OV;C;10.1d;51
+R7
 31
-Z8 !s108 1483815501.870816
-Z9 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd|
-Z10 !s107 /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd|
-Z11 o-93 -work work -O0
-Z12 tExplicit 1
+Z41 !s108 1483826620.519018
+Z42 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd|
+Z43 !s107 /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd|
+R11
+R12
 !s100 fgDeaQZSMG_8e?N3OahWO3
 !i10b 1
 Artl
@@ -31,28 +206,28 @@ L67
 V:RTI@I3e3Z1ijfR?3bd<n1
 R7
 31
-R8
-R9
-R10
+R41
+R42
+R43
 R11
 R12
 !s100 oT08l>]_SQAUK_FhebSc70
 !i10b 1
 Eand_gate
-R1
+R38
 R2
 R3
 R4
-R5
-R6
+R39
+R40
 l0
 L42
 V1Z3_VKAzkUkN:;iI??:V31
 R7
 31
-R8
-R9
-R10
+R41
+R42
+R43
 R11
 R12
 !s100 cc4O][TB[UFSg9gUIfjhG3
@@ -66,32 +241,32 @@ L49
 VgF_Koo@f_>HeiKQ?dc<R_3
 R7
 31
-R8
-R9
-R10
+R41
+R42
+R43
 R11
 R12
 !s100 QCS;?=^jz6?DdmmKK0gzS2
 !i10b 1
 Enand_1_bit_full_adder
-Z13 w1483815452
+Z44 w1483815452
 R2
 R3
 R4
-Z14 8/home/sebsikora/altera/projects/pdp-8/alu_main/nand_1_bit_full_adder.vhd
-Z15 F/home/sebsikora/altera/projects/pdp-8/alu_main/nand_1_bit_full_adder.vhd
+Z45 8/home/sebsikora/altera/projects/pdp-8/alu_main/nand_1_bit_full_adder.vhd
+Z46 F/home/sebsikora/altera/projects/pdp-8/alu_main/nand_1_bit_full_adder.vhd
 l0
 L4
 VH0T?]nVZe;OYlCQi2hW@z3
-!s100 PlZmo8O0_0gi9[8SZB2lB3
 R7
 31
-!i10b 1
-Z16 !s108 1483815501.940138
-Z17 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/alu_main/nand_1_bit_full_adder.vhd|
-Z18 !s107 /home/sebsikora/altera/projects/pdp-8/alu_main/nand_1_bit_full_adder.vhd|
+Z47 !s108 1483826620.690331
+Z48 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/alu_main/nand_1_bit_full_adder.vhd|
+Z49 !s107 /home/sebsikora/altera/projects/pdp-8/alu_main/nand_1_bit_full_adder.vhd|
 R11
 R12
+!s100 PlZmo8O0_0gi9[8SZB2lB3
+!i10b 1
 Artl
 R2
 R3
@@ -99,30 +274,30 @@ DEx4 work 21 nand_1_bit_full_adder 0 22 H0T?]nVZe;OYlCQi2hW@z3
 l23
 L13
 ViSP1l?ChQ8n=U36]U;z<E3
-!s100 JHfV1C`H<LJ]Nk1MGTa6?3
 R7
 31
-!i10b 1
-R16
-R17
-R18
+R47
+R48
+R49
 R11
 R12
+!s100 JHfV1C`H<LJ]Nk1MGTa6?3
+!i10b 1
 Enand_3_gate
-R1
+R38
 R2
 R3
 R4
-R5
-R6
+R39
+R40
 l0
 L6
 VhPLDeZMmigm5a_I>3bzSO2
 R7
 31
-R8
-R9
-R10
+R41
+R42
+R43
 R11
 R12
 !s100 [zEa0ICkC5kKTLiNeHNdX3
@@ -136,28 +311,28 @@ L14
 VGhE7VUafLYQHX<;UnJYKK2
 R7
 31
-R8
-R9
-R10
+R41
+R42
+R43
 R11
 R12
 !s100 T@3DIG3J6`:=6HoBP`nl80
 !i10b 1
 Enand_gate
-R1
+R38
 R2
 R3
 R4
-R5
-R6
+R39
+R40
 l0
 L25
 VHfnD41a:TQ[MMH7PM@eDU1
 R7
 31
-R8
-R9
-R10
+R41
+R42
+R43
 R11
 R12
 !s100 XA7[cDHVX2oD9[iLW<?AX0
@@ -171,28 +346,28 @@ L32
 VVf@VKI3K3QFBj_E`?YWn80
 R7
 31
-R8
-R9
-R10
+R41
+R42
+R43
 R11
 R12
 !s100 C]G3INn=CA`PcQJ81Afoa1
 !i10b 1
 Eor_3_gate
-R1
+R38
 R2
 R3
 R4
-R5
-R6
+R39
+R40
 l0
 L77
 VFSU^:TLER?@<Ze2`cb?8h3
 R7
 31
-R8
-R9
-R10
+R41
+R42
+R43
 R11
 R12
 !s100 P3X3]PZWezAa>RLoOi33c2
@@ -206,28 +381,28 @@ L85
 V1a8Bkj[4meSJKlaLizefz2
 R7
 31
-R8
-R9
-R10
+R41
+R42
+R43
 R11
 R12
 !s100 IQPg9K2YdUVCNK3z[oX`93
 !i10b 1
 Eor_gate
-R1
+R38
 R2
 R3
 R4
-R5
-R6
+R39
+R40
 l0
 L95
 V0T>75[KV;F18cCiNhSeMK0
 R7
 31
-R8
-R9
-R10
+R41
+R42
+R43
 R11
 R12
 !s100 UZzEi4ineOd<9lZWYWKLl0
@@ -241,28 +416,28 @@ L102
 V;l8egWVWP?0zm3I=3GTie2
 R7
 31
-R8
-R9
-R10
+R41
+R42
+R43
 R11
 R12
 !s100 Jn?E0KSfPVMaZamh>HPeC2
 !i10b 1
 Exor_gate
-R1
+R38
 R2
 R3
 R4
-R5
-R6
+R39
+R40
 l0
 L111
 VXY^nKQ3;cBa@_DAoJd4n:0
 R7
 31
-R8
-R9
-R10
+R41
+R42
+R43
 R11
 R12
 !s100 D5`[dL7C5fz^mX=A<<TUW0
@@ -276,9 +451,9 @@ L118
 V6SfJY6?9bg`B;5D=UJ8TU0
 R7
 31
-R8
-R9
-R10
+R41
+R42
+R43
 R11
 R12
 !s100 iWR_ioRd1`5NMoXFc32Xg3

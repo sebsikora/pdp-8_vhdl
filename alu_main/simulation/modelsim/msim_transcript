@@ -28,6 +28,34 @@
 # -- Compiling architecture rtl of OR_gate
 # -- Compiling entity XOR_gate
 # -- Compiling architecture rtl of XOR_gate
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_main/alu_main.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_main
+# -- Compiling architecture rtl of alu_main
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_main/alu_and.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_and
+# -- Compiling architecture rtl of alu_and
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_main/alu_add.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_add
+# -- Compiling architecture rtl of alu_add
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_main/alu_or.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_or
+# -- Compiling architecture rtl of alu_or
 # vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_main/nand_1_bit_full_adder.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -35,24 +63,36 @@
 # -- Loading package std_logic_1164
 # -- Compiling entity nand_1_bit_full_adder
 # -- Compiling architecture rtl of nand_1_bit_full_adder
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_main/alu_mux.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_mux
+# -- Compiling architecture rtl of alu_mux
 # 
-vsim -voptargs=+acc work.nand_1_bit_full_adder
-# vsim -voptargs=+acc work.nand_1_bit_full_adder 
+vsim -voptargs=+acc work.alu_main
+# vsim -voptargs=+acc work.alu_main 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
+# Loading work.alu_main(rtl)
+# Loading work.alu_mux(rtl)
+# Loading work.alu_and(rtl)
+# Loading work.and_gate(rtl)
+# Loading work.alu_add(rtl)
 # Loading work.nand_1_bit_full_adder(rtl)
 # Loading work.nand_gate(rtl)
-wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 1000ns sim:/nand_1_bit_full_adder/carry_in
-wave modify -driver freeze -pattern constant -value 1 -starttime 1000ns -endtime 2000ns Edit:/nand_1_bit_full_adder/carry_in
-wave create -driver freeze -pattern clock -initialvalue 0 -period 500ns -dutycycle 50 -starttime 0ns -endtime 2000ns sim:/nand_1_bit_full_adder/inputA
-wave create -driver freeze -pattern clock -initialvalue 0 -period 1000ns -dutycycle 50 -starttime 0ns -endtime 2000ns sim:/nand_1_bit_full_adder/inputB
+# Loading work.alu_or(rtl)
+# Loading work.or_gate(rtl)
+wave create -driver freeze -pattern constant -value 100000000000 -range 11 0 -starttime 0ns -endtime 3000ns sim:/alu_main/inputA
+wave create -driver freeze -pattern constant -value 000000000010 -range 11 0 -starttime 0ns -endtime 3000ns sim:/alu_main/inputB
+wave modify -driver freeze -pattern constant -value 111111111110 -range 11 0 -starttime 0ns -endtime 3000ns Edit:/alu_main/inputA
+wave create -driver freeze -pattern repeater -initialvalue 001 -period 1000ns -sequence { 001 010 100  } -repeat forever -range 2 0 -starttime 0ns -endtime 3000ns sim:/alu_main/alu_out_select
 add wave  \
-sim:/nand_1_bit_full_adder/output
+sim:/alu_main/output
 add wave  \
-sim:/nand_1_bit_full_adder/carry_out
-run
-run
+sim:/alu_main/add_carry
 run
 run
 run
@@ -60,5 +100,31 @@ run
 run
 run
 restart
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/alu_main/simulation/modelsim/nand_1_bit_full_adder_test_wave.do
-wave editwrite -file /home/sebsikora/altera/projects/pdp-8/alu_main/simulation/modelsim/nand_1_bit_full_adder_test_wave.do -append
+run -all
+restart
+vcom -93 -work work -O0 /home/sebsikora/altera/projects/pdp-8/alu_main/alu_main.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_main
+# -- Compiling architecture rtl of alu_main
+vcom -93 -work work -O0 /home/sebsikora/altera/projects/pdp-8/alu_main/alu_mux.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_mux
+# -- Compiling architecture rtl of alu_mux
+restart
+# Loading work.alu_main(rtl)
+# Loading work.alu_mux(rtl)
+run -all
+restart
+run
+wave modify -driver freeze -pattern constant -value 111111111100 -range 11 0 -starttime 0ns -endtime 500ns Edit:/alu_main/inputA
+restart
+run -all
+restart
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/alu_main/simulation/modelsim/alu_main_test_wave.do
+wave editwrite -file /home/sebsikora/altera/projects/pdp-8/alu_main/simulation/modelsim/alu_main_test_wave.do -append

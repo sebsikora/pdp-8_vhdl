@@ -1,5 +1,5 @@
 EDA Netlist Writer report for alu_main
-Sat Jan  7 20:39:14 2017
+Sat Jan  7 22:09:02 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sat Jan  7 20:39:14 2017 ;
+; EDA Netlist Writer Status ; Successful - Sat Jan  7 22:09:02 2017 ;
 ; Revision Name             ; alu_main                              ;
 ; Top-level Entity Name     ; alu_main                              ;
 ; Family                    ; Cyclone II                            ;
@@ -84,12 +84,12 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Jan  7 20:39:13 2017
+    Info: Processing started: Sat Jan  7 22:09:01 2017
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off alu_main -c alu_main
 Info (204026): Generated files "alu_main.vho", "alu_main_fast.vho", "alu_main_vhd.sdo" and "alu_main_vhd_fast.sdo" in directory "/home/sebsikora/altera/projects/pdp-8/alu_main/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 897 megabytes
-    Info: Processing ended: Sat Jan  7 20:39:14 2017
+    Info: Peak virtual memory: 886 megabytes
+    Info: Processing ended: Sat Jan  7 22:09:02 2017
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
