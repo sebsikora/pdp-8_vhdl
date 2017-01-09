@@ -1,5 +1,5 @@
 Fitter report for alu_shifter
-Mon Jan  9 22:29:33 2017
+Mon Jan  9 22:45:15 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -59,7 +59,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Mon Jan  9 22:29:33 2017           ;
+; Fitter Status                      ; Successful - Mon Jan  9 22:45:15 2017           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; alu_shifter                                     ;
 ; Top-level Entity Name              ; alu_shifter                                     ;
@@ -221,8 +221,8 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/alu_shift
 ; CRC blocks                                  ; 0 / 1 ( 0 % )        ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%         ;
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%         ;
-; Maximum fan-out                             ; 20                   ;
-; Highest non-global fan-out                  ; 20                   ;
+; Maximum fan-out                             ; 24                   ;
+; Highest non-global fan-out                  ; 24                   ;
 ; Total fan-out                               ; 104                  ;
 ; Average fan-out                             ; 1.82                 ;
 +---------------------------------------------+----------------------+
@@ -303,21 +303,21 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/alu_shift
 +------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; Name       ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; alu_rot_1  ; 75    ; 3        ; 28           ; 2            ; 1           ; 19                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; alu_rot_2  ; 119   ; 2        ; 21           ; 14           ; 1           ; 20                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; input[0]   ; 101   ; 3        ; 28           ; 11           ; 0           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; alu_rot_1  ; 101   ; 3        ; 28           ; 11           ; 0           ; 15                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; alu_rot_2  ; 93    ; 3        ; 28           ; 8            ; 0           ; 24                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; input[0]   ; 92    ; 3        ; 28           ; 8            ; 1           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; input[10]  ; 115   ; 2        ; 24           ; 14           ; 0           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; input[11]  ; 93    ; 3        ; 28           ; 8            ; 0           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; input[11]  ; 96    ; 3        ; 28           ; 9            ; 1           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; input[1]   ; 41    ; 4        ; 1            ; 0            ; 1           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; input[2]   ; 135   ; 2        ; 3            ; 14           ; 0           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; input[3]   ; 132   ; 2        ; 9            ; 14           ; 2           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; input[2]   ; 24    ; 1        ; 0            ; 5            ; 0           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; input[3]   ; 133   ; 2        ; 7            ; 14           ; 0           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; input[4]   ; 88    ; 3        ; 28           ; 7            ; 3           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; input[5]   ; 89    ; 3        ; 28           ; 7            ; 2           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; input[6]   ; 90    ; 3        ; 28           ; 7            ; 1           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; input[7]   ; 118   ; 2        ; 21           ; 14           ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; input[8]   ; 91    ; 3        ; 28           ; 7            ; 0           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; input[9]   ; 65    ; 4        ; 21           ; 0            ; 0           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; link_input ; 64    ; 4        ; 21           ; 0            ; 1           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; input[7]   ; 91    ; 3        ; 28           ; 7            ; 0           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; input[8]   ; 9     ; 1        ; 0            ; 11           ; 3           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; input[9]   ; 120   ; 2        ; 19           ; 14           ; 0           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; link_input ; 126   ; 2        ; 14           ; 14           ; 1           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 +------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
@@ -326,32 +326,32 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/alu_shift
 +-------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 ; Name        ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
 +-------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; link_output ; 120   ; 2        ; 19           ; 14           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; output[0]   ; 121   ; 2        ; 19           ; 14           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; output[10]  ; 97    ; 3        ; 28           ; 9            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; output[11]  ; 94    ; 3        ; 28           ; 9            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; output[1]   ; 125   ; 2        ; 14           ; 14           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; output[2]   ; 53    ; 4        ; 9            ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; output[3]   ; 26    ; 1        ; 0            ; 5            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; output[4]   ; 126   ; 2        ; 14           ; 14           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; output[5]   ; 60    ; 4        ; 14           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; output[6]   ; 31    ; 1        ; 0            ; 2            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; output[7]   ; 122   ; 2        ; 19           ; 14           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; output[8]   ; 96    ; 3        ; 28           ; 9            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; output[9]   ; 104   ; 3        ; 28           ; 12           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; link_output ; 59    ; 4        ; 14           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; output[0]   ; 55    ; 4        ; 9            ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; output[10]  ; 118   ; 2        ; 21           ; 14           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; output[11]  ; 57    ; 4        ; 12           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; output[1]   ; 53    ; 4        ; 9            ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; output[2]   ; 25    ; 1        ; 0            ; 5            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; output[3]   ; 122   ; 2        ; 19           ; 14           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; output[4]   ; 132   ; 2        ; 9            ; 14           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; output[5]   ; 28    ; 1        ; 0            ; 4            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; output[6]   ; 44    ; 4        ; 3            ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; output[7]   ; 121   ; 2        ; 19           ; 14           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; output[8]   ; 60    ; 4        ; 14           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; output[9]   ; 58    ; 4        ; 12           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 +-------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
 
-+------------------------------------------------------------+
-; I/O Bank Usage                                             ;
-+----------+------------------+---------------+--------------+
-; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
-+----------+------------------+---------------+--------------+
-; 1        ; 4 / 19 ( 21 % )  ; 3.3V          ; --           ;
-; 2        ; 10 / 23 ( 43 % ) ; 3.3V          ; --           ;
-; 3        ; 12 / 23 ( 52 % ) ; 3.3V          ; --           ;
-; 4        ; 5 / 24 ( 21 % )  ; 3.3V          ; --           ;
-+----------+------------------+---------------+--------------+
++-----------------------------------------------------------+
+; I/O Bank Usage                                            ;
++----------+-----------------+---------------+--------------+
+; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ;
++----------+-----------------+---------------+--------------+
+; 1        ; 6 / 19 ( 32 % ) ; 3.3V          ; --           ;
+; 2        ; 8 / 23 ( 35 % ) ; 3.3V          ; --           ;
+; 3        ; 9 / 23 ( 39 % ) ; 3.3V          ; --           ;
+; 4        ; 8 / 24 ( 33 % ) ; 3.3V          ; --           ;
++----------+-----------------+---------------+--------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -367,7 +367,7 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/alu_shift
 ; 6        ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 7        ; 10         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 8        ; 11         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 9        ; 12         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 9        ; 12         ; 1        ; input[8]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 10       ; 13         ; 1        ; #TDO                                     ; output ;              ;         ; --         ;                 ; --       ; --           ;
 ; 11       ; 14         ; 1        ; #TMS                                     ; input  ;              ;         ; --         ;                 ; --       ; --           ;
 ; 12       ; 15         ; 1        ; #TCK                                     ; input  ;              ;         ; --         ;                 ; --       ; --           ;
@@ -382,14 +382,14 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/alu_shift
 ; 21       ; 23         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 22       ; 24         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 23       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; 24       ; 25         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 25       ; 26         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 26       ; 27         ; 1        ; output[3]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 24       ; 25         ; 1        ; input[2]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 25       ; 26         ; 1        ; output[2]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 26       ; 27         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 27       ; 28         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 28       ; 32         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 28       ; 32         ; 1        ; output[5]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 29       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 30       ; 40         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 31       ; 41         ; 1        ; output[6]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 31       ; 41         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 32       ; 42         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 33       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 34       ;            ;          ; GND_PLL1                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -402,7 +402,7 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/alu_shift
 ; 41       ; 44         ; 4        ; input[1]                                 ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 42       ; 45         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 43       ; 46         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 44       ; 47         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 44       ; 47         ; 4        ; output[6]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 45       ; 48         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 46       ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 47       ; 49         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -411,19 +411,19 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/alu_shift
 ; 50       ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 51       ; 52         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; 52       ; 53         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 53       ; 57         ; 4        ; output[2]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 53       ; 57         ; 4        ; output[1]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 54       ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; 55       ; 58         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 55       ; 58         ; 4        ; output[0]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 56       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 57       ; 59         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 58       ; 60         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 59       ; 63         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 60       ; 64         ; 4        ; output[5]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 57       ; 59         ; 4        ; output[11]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 58       ; 60         ; 4        ; output[9]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 59       ; 63         ; 4        ; link_output                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 60       ; 64         ; 4        ; output[8]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 61       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 62       ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 63       ; 72         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; 64       ; 75         ; 4        ; link_input                               ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 65       ; 76         ; 4        ; input[9]                                 ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 64       ; 75         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 65       ; 76         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 66       ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 67       ; 79         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 68       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -433,7 +433,7 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/alu_shift
 ; 72       ; 83         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 73       ; 84         ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 74       ; 85         ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 75       ; 86         ; 3        ; alu_rot_1                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 75       ; 86         ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 76       ; 87         ; 3        ; ~LVDS41p/nCEO~                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 77       ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 78       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -449,20 +449,20 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/alu_shift
 ; 88       ; 105        ; 3        ; input[4]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 89       ; 106        ; 3        ; input[5]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 90       ; 107        ; 3        ; input[6]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 91       ; 108        ; 3        ; input[8]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 92       ; 109        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 93       ; 110        ; 3        ; input[11]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 94       ; 111        ; 3        ; output[11]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 91       ; 108        ; 3        ; input[7]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 92       ; 109        ; 3        ; input[0]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 93       ; 110        ; 3        ; alu_rot_2                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 94       ; 111        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 95       ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; 96       ; 112        ; 3        ; output[8]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 97       ; 113        ; 3        ; output[10]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 96       ; 112        ; 3        ; input[11]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 97       ; 113        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 98       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 99       ; 119        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 100      ; 120        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 101      ; 121        ; 3        ; input[0]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 101      ; 121        ; 3        ; alu_rot_1                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 102      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 103      ; 125        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 104      ; 126        ; 3        ; output[9]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 104      ; 126        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 105      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 106      ;            ;          ; GND_PLL2                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 107      ;            ;          ; VCCD_PLL2                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -476,24 +476,24 @@ The pin-out file can be found in /home/sebsikora/altera/projects/pdp-8/alu_shift
 ; 115      ; 130        ; 2        ; input[10]                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 116      ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 117      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 118      ; 134        ; 2        ; input[7]                                 ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 119      ; 135        ; 2        ; alu_rot_2                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 120      ; 137        ; 2        ; link_output                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 121      ; 138        ; 2        ; output[0]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 122      ; 139        ; 2        ; output[7]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 118      ; 134        ; 2        ; output[10]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 119      ; 135        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 120      ; 137        ; 2        ; input[9]                                 ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 121      ; 138        ; 2        ; output[7]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 122      ; 139        ; 2        ; output[3]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 123      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 124      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; 125      ; 144        ; 2        ; output[1]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 126      ; 145        ; 2        ; output[4]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 125      ; 144        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 126      ; 145        ; 2        ; link_input                               ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 127      ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 128      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 129      ; 148        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 130      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 131      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; 132      ; 153        ; 2        ; input[3]                                 ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 133      ; 154        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 132      ; 153        ; 2        ; output[4]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 133      ; 154        ; 2        ; input[3]                                 ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 134      ; 155        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 135      ; 162        ; 2        ; input[2]                                 ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 135      ; 162        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 136      ; 163        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 137      ; 164        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 138      ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -586,17 +586,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; output[11]  ; Output   ; --            ; --            ; --                    ; --  ;
 ; link_output ; Output   ; --            ; --            ; --                    ; --  ;
 ; input[1]    ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
-; alu_rot_2   ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
+; alu_rot_2   ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
 ; input[0]    ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
 ; alu_rot_1   ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
 ; link_input  ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
-; input[2]    ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
+; input[2]    ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
 ; input[3]    ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
 ; input[4]    ; Input    ; (0) 163 ps    ; (0) 163 ps    ; --                    ; --  ;
 ; input[5]    ; Input    ; (0) 163 ps    ; (0) 163 ps    ; --                    ; --  ;
 ; input[6]    ; Input    ; (0) 163 ps    ; (0) 163 ps    ; --                    ; --  ;
-; input[8]    ; Input    ; (0) 163 ps    ; (0) 163 ps    ; --                    ; --  ;
-; input[7]    ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
+; input[7]    ; Input    ; (0) 163 ps    ; (0) 163 ps    ; --                    ; --  ;
+; input[8]    ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
 ; input[9]    ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
 ; input[10]   ; Input    ; (6) 2395 ps   ; (6) 2395 ps   ; --                    ; --  ;
 ; input[11]   ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
@@ -625,38 +625,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - OR_3_gate:or_3_5|output~0    ; 0                 ; 6       ;
 ;      - OR_3_gate:or_3_5|output      ; 0                 ; 6       ;
 ;      - OR_3_gate:or_3_6|output~0    ; 0                 ; 6       ;
+;      - OR_3_gate:or_3_6|output      ; 0                 ; 6       ;
 ;      - OR_3_gate:or_3_7|output~0    ; 0                 ; 6       ;
+;      - OR_3_gate:or_3_7|output      ; 0                 ; 6       ;
 ;      - OR_3_gate:or_3_8|output~0    ; 0                 ; 6       ;
+;      - OR_3_gate:or_3_8|output      ; 0                 ; 6       ;
 ;      - OR_3_gate:or_3_9|output~0    ; 0                 ; 6       ;
+;      - OR_3_gate:or_3_9|output      ; 0                 ; 6       ;
 ;      - OR_3_gate:or_3_10|output~0   ; 0                 ; 6       ;
 ;      - OR_3_gate:or_3_10|output     ; 0                 ; 6       ;
 ;      - OR_3_gate:or_3_11|output~0   ; 0                 ; 6       ;
 ;      - OR_3_gate:or_3_11|output     ; 0                 ; 6       ;
 ;      - OR_3_gate:or_3_link|output~0 ; 0                 ; 6       ;
 ; input[0]                            ;                   ;         ;
-;      - OR_3_gate:or_3_0|output~0    ; 0                 ; 6       ;
-;      - OR_3_gate:or_3_1|output~0    ; 0                 ; 6       ;
-;      - OR_3_gate:or_3_link|output~0 ; 0                 ; 6       ;
-; alu_rot_1                           ;                   ;         ;
 ;      - OR_3_gate:or_3_0|output~0    ; 1                 ; 6       ;
-;      - OR_3_gate:or_3_0|output      ; 1                 ; 6       ;
 ;      - OR_3_gate:or_3_1|output~0    ; 1                 ; 6       ;
-;      - OR_3_gate:or_3_2|output~0    ; 1                 ; 6       ;
-;      - OR_3_gate:or_3_3|output~0    ; 1                 ; 6       ;
-;      - OR_3_gate:or_3_4|output~0    ; 1                 ; 6       ;
-;      - OR_3_gate:or_3_5|output~0    ; 1                 ; 6       ;
-;      - OR_3_gate:or_3_6|output~0    ; 1                 ; 6       ;
-;      - OR_3_gate:or_3_6|output~1    ; 1                 ; 6       ;
-;      - OR_3_gate:or_3_7|output~0    ; 1                 ; 6       ;
-;      - OR_3_gate:or_3_7|output~1    ; 1                 ; 6       ;
-;      - OR_3_gate:or_3_8|output~0    ; 1                 ; 6       ;
-;      - OR_3_gate:or_3_8|output~1    ; 1                 ; 6       ;
-;      - OR_3_gate:or_3_9|output~0    ; 1                 ; 6       ;
-;      - OR_3_gate:or_3_9|output~1    ; 1                 ; 6       ;
-;      - OR_3_gate:or_3_10|output~0   ; 1                 ; 6       ;
-;      - OR_3_gate:or_3_11|output~0   ; 1                 ; 6       ;
 ;      - OR_3_gate:or_3_link|output~0 ; 1                 ; 6       ;
-;      - OR_3_gate:or_3_link|output   ; 1                 ; 6       ;
+; alu_rot_1                           ;                   ;         ;
+;      - OR_3_gate:or_3_0|output~0    ; 0                 ; 6       ;
+;      - OR_3_gate:or_3_0|output      ; 0                 ; 6       ;
+;      - OR_3_gate:or_3_1|output~0    ; 0                 ; 6       ;
+;      - OR_3_gate:or_3_2|output~0    ; 0                 ; 6       ;
+;      - OR_3_gate:or_3_3|output~0    ; 0                 ; 6       ;
+;      - OR_3_gate:or_3_4|output~0    ; 0                 ; 6       ;
+;      - OR_3_gate:or_3_5|output~0    ; 0                 ; 6       ;
+;      - OR_3_gate:or_3_6|output~0    ; 0                 ; 6       ;
+;      - OR_3_gate:or_3_7|output~0    ; 0                 ; 6       ;
+;      - OR_3_gate:or_3_8|output~0    ; 0                 ; 6       ;
+;      - OR_3_gate:or_3_9|output~0    ; 0                 ; 6       ;
+;      - OR_3_gate:or_3_10|output~0   ; 0                 ; 6       ;
+;      - OR_3_gate:or_3_11|output~0   ; 0                 ; 6       ;
+;      - OR_3_gate:or_3_link|output~0 ; 0                 ; 6       ;
+;      - OR_3_gate:or_3_link|output   ; 0                 ; 6       ;
 ; link_input                          ;                   ;         ;
 ;      - OR_3_gate:or_3_0|output      ; 1                 ; 6       ;
 ;      - OR_3_gate:or_3_11|output     ; 1                 ; 6       ;
@@ -672,20 +672,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; input[4]                            ;                   ;         ;
 ; input[5]                            ;                   ;         ;
 ; input[6]                            ;                   ;         ;
-; input[8]                            ;                   ;         ;
 ; input[7]                            ;                   ;         ;
-;      - OR_3_gate:or_3_7|output~0    ; 0                 ; 6       ;
-;      - OR_3_gate:or_3_8|output~1    ; 0                 ; 6       ;
+; input[8]                            ;                   ;         ;
+;      - OR_3_gate:or_3_7|output      ; 0                 ; 6       ;
+;      - OR_3_gate:or_3_8|output~0    ; 0                 ; 6       ;
+;      - OR_3_gate:or_3_9|output~0    ; 0                 ; 6       ;
 ; input[9]                            ;                   ;         ;
-;      - OR_3_gate:or_3_7|output~0    ; 0                 ; 6       ;
+;      - OR_3_gate:or_3_8|output      ; 0                 ; 6       ;
 ;      - OR_3_gate:or_3_9|output~0    ; 0                 ; 6       ;
 ;      - OR_3_gate:or_3_10|output~0   ; 0                 ; 6       ;
 ; input[10]                           ;                   ;         ;
-;      - OR_3_gate:or_3_8|output~0    ; 0                 ; 6       ;
+;      - OR_3_gate:or_3_9|output      ; 0                 ; 6       ;
 ;      - OR_3_gate:or_3_10|output~0   ; 0                 ; 6       ;
 ;      - OR_3_gate:or_3_11|output~0   ; 0                 ; 6       ;
 ; input[11]                           ;                   ;         ;
-;      - OR_3_gate:or_3_9|output~0    ; 0                 ; 6       ;
 ;      - OR_3_gate:or_3_10|output     ; 0                 ; 6       ;
 ;      - OR_3_gate:or_3_11|output~0   ; 0                 ; 6       ;
 ;      - OR_3_gate:or_3_link|output   ; 0                 ; 6       ;
@@ -697,12 +697,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------+---------+
 ; Name                         ; Fan-Out ;
 +------------------------------+---------+
-; alu_rot_2                    ; 20      ;
-; alu_rot_1                    ; 19      ;
-; input[11]                    ; 4       ;
+; alu_rot_2                    ; 24      ;
+; alu_rot_1                    ; 15      ;
+; input[11]                    ; 3       ;
 ; input[10]                    ; 3       ;
 ; input[9]                     ; 3       ;
 ; input[8]                     ; 3       ;
+; input[7]                     ; 3       ;
 ; input[6]                     ; 3       ;
 ; input[5]                     ; 3       ;
 ; input[4]                     ; 3       ;
@@ -711,20 +712,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; link_input                   ; 3       ;
 ; input[0]                     ; 3       ;
 ; input[1]                     ; 3       ;
-; input[7]                     ; 2       ;
 ; OR_3_gate:or_3_link|output   ; 1       ;
 ; OR_3_gate:or_3_link|output~0 ; 1       ;
 ; OR_3_gate:or_3_11|output     ; 1       ;
 ; OR_3_gate:or_3_11|output~0   ; 1       ;
 ; OR_3_gate:or_3_10|output     ; 1       ;
 ; OR_3_gate:or_3_10|output~0   ; 1       ;
-; OR_3_gate:or_3_9|output~1    ; 1       ;
+; OR_3_gate:or_3_9|output      ; 1       ;
 ; OR_3_gate:or_3_9|output~0    ; 1       ;
-; OR_3_gate:or_3_8|output~1    ; 1       ;
+; OR_3_gate:or_3_8|output      ; 1       ;
 ; OR_3_gate:or_3_8|output~0    ; 1       ;
-; OR_3_gate:or_3_7|output~1    ; 1       ;
+; OR_3_gate:or_3_7|output      ; 1       ;
 ; OR_3_gate:or_3_7|output~0    ; 1       ;
-; OR_3_gate:or_3_6|output~1    ; 1       ;
+; OR_3_gate:or_3_6|output      ; 1       ;
 ; OR_3_gate:or_3_6|output~0    ; 1       ;
 ; OR_3_gate:or_3_5|output      ; 1       ;
 ; OR_3_gate:or_3_5|output~0    ; 1       ;
@@ -746,13 +746,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+-----------------------+
 ; Other Routing Resource Type ; Usage                 ;
 +-----------------------------+-----------------------+
-; Block interconnects         ; 34 / 15,666 ( < 1 % ) ;
+; Block interconnects         ; 38 / 15,666 ( < 1 % ) ;
 ; C16 interconnects           ; 7 / 812 ( < 1 % )     ;
-; C4 interconnects            ; 39 / 11,424 ( < 1 % ) ;
+; C4 interconnects            ; 37 / 11,424 ( < 1 % ) ;
+; Direct links                ; 2 / 15,666 ( < 1 % )  ;
 ; Global clocks               ; 0 / 8 ( 0 % )         ;
-; Local interconnects         ; 12 / 4,608 ( < 1 % )  ;
-; R24 interconnects           ; 10 / 652 ( 2 % )      ;
-; R4 interconnects            ; 25 / 13,328 ( < 1 % ) ;
+; Local interconnects         ; 11 / 4,608 ( < 1 % )  ;
+; R24 interconnects           ; 11 / 652 ( 2 % )      ;
+; R4 interconnects            ; 27 / 13,328 ( < 1 % ) ;
 +-----------------------------+-----------------------+
 
 
@@ -772,9 +773,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 9                                           ; 0                           ;
 ; 10                                          ; 0                           ;
 ; 11                                          ; 0                           ;
-; 12                                          ; 0                           ;
-; 13                                          ; 2                           ;
-; 14                                          ; 0                           ;
+; 12                                          ; 1                           ;
+; 13                                          ; 0                           ;
+; 14                                          ; 1                           ;
 ; 15                                          ; 0                           ;
 ; 16                                          ; 0                           ;
 +---------------------------------------------+-----------------------------+
@@ -797,15 +798,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 9                                            ; 0                           ;
 ; 10                                           ; 0                           ;
 ; 11                                           ; 0                           ;
-; 12                                           ; 0                           ;
-; 13                                           ; 2                           ;
+; 12                                           ; 1                           ;
+; 13                                           ; 0                           ;
+; 14                                           ; 1                           ;
 +----------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 7.00) ; Number of LABs  (Total = 2) ;
+; Number of Signals Sourced Out  (Average = 6.50) ; Number of LABs  (Total = 2) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
 ; 1                                               ; 0                           ;
@@ -813,8 +815,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 3                                               ; 0                           ;
 ; 4                                               ; 0                           ;
 ; 5                                               ; 0                           ;
-; 6                                               ; 0                           ;
-; 7                                               ; 2                           ;
+; 6                                               ; 1                           ;
+; 7                                               ; 1                           ;
 +-------------------------------------------------+-----------------------------+
 
 
@@ -905,8 +907,8 @@ Critical Warning (169085): No exact pin location assignment(s) for 28 pins of 28
     Info (169086): Pin input[4] not assigned to an exact location on the device
     Info (169086): Pin input[5] not assigned to an exact location on the device
     Info (169086): Pin input[6] not assigned to an exact location on the device
-    Info (169086): Pin input[8] not assigned to an exact location on the device
     Info (169086): Pin input[7] not assigned to an exact location on the device
+    Info (169086): Pin input[8] not assigned to an exact location on the device
     Info (169086): Pin input[9] not assigned to an exact location on the device
     Info (169086): Pin input[10] not assigned to an exact location on the device
     Info (169086): Pin input[11] not assigned to an exact location on the device
@@ -935,12 +937,12 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X14_Y0 to location X28_Y14
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y0 to location X13_Y14
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.16 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.10 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 13 output pins without output pin load capacitance assignment
     Info (306007): Pin "output[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -959,13 +961,13 @@ Warning (306006): Found 13 output pins without output pin load capacitance assig
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file /home/sebsikora/altera/projects/pdp-8/alu_shifter/output_files/alu_shifter.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 724 megabytes
-    Info: Processing ended: Mon Jan  9 22:29:33 2017
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 728 megabytes
+    Info: Processing ended: Mon Jan  9 22:45:15 2017
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:03
 
 

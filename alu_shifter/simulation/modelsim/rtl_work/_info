@@ -4,7 +4,7 @@ K3
 cModel Technology
 Z0 d/home/sebsikora/altera/projects/pdp-8/alu_shifter/simulation/modelsim
 Ealu_shifter
-Z1 w1484000381
+Z1 w1484001906
 Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 Z4 d/home/sebsikora/altera/projects/pdp-8/alu_shifter/simulation/modelsim
@@ -15,7 +15,7 @@ L4
 V@GGK?^LM8Zb8K?54JA<UX1
 Z7 OV;C;10.1d;51
 31
-Z8 !s108 1484001041.680926
+Z8 !s108 1484001934.763498
 Z9 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/alu_shifter/alu_shifter.vhd|
 Z10 !s107 /home/sebsikora/altera/projects/pdp-8/alu_shifter/alu_shifter.vhd|
 Z11 o-93 -work work -O0
@@ -28,7 +28,7 @@ R3
 DEx4 work 11 alu_shifter 0 22 @GGK?^LM8Zb8K?54JA<UX1
 l33
 L14
-Ve`RH7CUVH<hRPNK_4gEI]0
+VPcDfoAX9<j=j]TiRWf5XE2
 R7
 31
 R8
@@ -36,7 +36,7 @@ R9
 R10
 R11
 R12
-!s100 h`9<=gDSXLFzRD^fj5QDL2
+!s100 2D_aDA?jSAMl=4XX=QfX<0
 !i10b 1
 Eand_3_gate
 Z13 w1483990488
@@ -52,7 +52,7 @@ Vz6UPELG@T<D9^D:51cnV<0
 R7
 31
 !i10b 1
-Z16 !s108 1484001041.724813
+Z16 !s108 1484001934.793302
 Z17 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd|
 Z18 !s107 /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd|
 R11

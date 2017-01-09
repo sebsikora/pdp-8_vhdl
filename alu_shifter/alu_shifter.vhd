@@ -64,12 +64,12 @@ begin
 	and_9_0:			AND_gate port map (inputA => alu_rot_0, inputB => input(9), output => and_outputs(27));
 	and_9_1:			AND_gate port map (inputA => alu_rot_1, inputB => input(9), output => and_outputs(28));
 	and_9_2:			AND_gate port map (inputA => alu_rot_2, inputB => input(9), output => and_outputs(29));
-	and_10_0:			AND_gate port map (inputA => alu_rot_0, inputB => input(10), output => and_outputs(30));
-	and_10_1:			AND_gate port map (inputA => alu_rot_1, inputB => input(10), output => and_outputs(31));
-	and_10_2:			AND_gate port map (inputA => alu_rot_2, inputB => input(10), output => and_outputs(32));
-	and_11_0:			AND_gate port map (inputA => alu_rot_0, inputB => input(11), output => and_outputs(33));
-	and_11_1:			AND_gate port map (inputA => alu_rot_1, inputB => input(11), output => and_outputs(34));
-	and_11_2:			AND_gate port map (inputA => alu_rot_2, inputB => input(11), output => and_outputs(35));
+	and_10_0:		AND_gate port map (inputA => alu_rot_0, inputB => input(10), output => and_outputs(30));
+	and_10_1:		AND_gate port map (inputA => alu_rot_1, inputB => input(10), output => and_outputs(31));
+	and_10_2:		AND_gate port map (inputA => alu_rot_2, inputB => input(10), output => and_outputs(32));
+	and_11_0:		AND_gate port map (inputA => alu_rot_0, inputB => input(11), output => and_outputs(33));
+	and_11_1:		AND_gate port map (inputA => alu_rot_1, inputB => input(11), output => and_outputs(34));
+	and_11_2:		AND_gate port map (inputA => alu_rot_2, inputB => input(11), output => and_outputs(35));
 	
 	and_link_0:		AND_gate port map (inputA => alu_rot_0, inputB => link_input, output => and_link_outputs(0));
 	and_link_1:		AND_gate port map (inputA => alu_rot_1, inputB => link_input, output => and_link_outputs(1));
@@ -81,10 +81,10 @@ begin
 	or_3_3:			OR_3_gate port map (inputA => and_outputs(9), inputB => and_outputs(7), inputC =>  and_outputs(14), output => output(3));
 	or_3_4:			OR_3_gate port map (inputA => and_outputs(12), inputB => and_outputs(10), inputC =>  and_outputs(17), output => output(4));
 	or_3_5:			OR_3_gate port map (inputA => and_outputs(15), inputB => and_outputs(13), inputC =>  and_outputs(20), output => output(5));
-	or_3_6:			OR_3_gate port map (inputA => and_outputs(18), inputB => and_outputs(16), inputC =>  and_outputs(24), output => output(6));
-	or_3_7:			OR_3_gate port map (inputA => and_outputs(21), inputB => and_outputs(19), inputC =>  and_outputs(27), output => output(7));
-	or_3_8:			OR_3_gate port map (inputA => and_outputs(24), inputB => and_outputs(22), inputC =>  and_outputs(30), output => output(8));
-	or_3_9:			OR_3_gate port map (inputA => and_outputs(27), inputB => and_outputs(25), inputC =>  and_outputs(33), output => output(9));
+	or_3_6:			OR_3_gate port map (inputA => and_outputs(18), inputB => and_outputs(16), inputC =>  and_outputs(23), output => output(6));
+	or_3_7:			OR_3_gate port map (inputA => and_outputs(21), inputB => and_outputs(19), inputC =>  and_outputs(26), output => output(7));
+	or_3_8:			OR_3_gate port map (inputA => and_outputs(24), inputB => and_outputs(22), inputC =>  and_outputs(29), output => output(8));
+	or_3_9:			OR_3_gate port map (inputA => and_outputs(27), inputB => and_outputs(25), inputC =>  and_outputs(32), output => output(9));
 	or_3_10:			OR_3_gate port map (inputA => and_outputs(30), inputB => and_outputs(28), inputC =>  and_outputs(35), output => output(10));
 	or_3_11:			OR_3_gate port map (inputA => and_outputs(33), inputB => and_outputs(31), inputC =>  and_link_outputs(2), output => output(11));
 	

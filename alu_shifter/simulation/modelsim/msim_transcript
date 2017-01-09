@@ -48,3 +48,15 @@ vsim -voptargs=+acc work.alu_shifter
 # Loading work.alu_shifter(rtl)
 # Loading work.and_gate(rtl)
 # Loading work.or_3_gate(rtl)
+do /home/sebsikora/altera/projects/pdp-8/alu_shifter/simulation/modelsim/alu_shifter_test_wave_2.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# 1
+# 1
+run
+run
+run
+run
+run
+run
+run
+run
