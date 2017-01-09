@@ -5,7 +5,9 @@ entity control_subsystem is
 	port ( clk:												in std_logic;
 			 not_reset:										in std_logic;
 			 start:											in std_logic;
+			 HRQ:												in std_logic;
 			 IRQ:												in std_logic;
+			 IRQ_ON:											in std_logic;
 			 MD_BUS:											in std_logic_vector(11 downto 0);
 			 ADD_CARRY:										in std_logic;
 			 INC_CARRY:										in std_logic;
@@ -14,6 +16,7 @@ entity control_subsystem is
 			 IS_NEG:											in std_logic;
 			 IS_AUTO_INDEX:								in std_logic;
 			 LINK_VALUE:									in std_logic;
+			 HLT_indicator:								out std_logic;
 			 PC_BUS_SEL:									out std_logic;
 			 PC_LOAD_HI:									out std_logic;
 			 PC_LOAD_LO:									out std_logic;
@@ -67,6 +70,9 @@ architecture rtl of control_subsystem is
 				 not_reset:									in std_logic;
 				 start:										in std_logic;
 				 clk:											in std_logic;
+				 state_clk:									out std_logic;
+				 HLT:											in std_logic;
+				 HLT_indicator:							out std_logic;
 				 s_states:									out std_logic_vector(3 downto 0);
 				 t_states:									out std_logic_vector(5 downto 0)
 		);
@@ -74,6 +80,7 @@ architecture rtl of control_subsystem is
 	component control_logic is
 		port ( s_states:									in std_logic_vector(3 downto 0);
 				 t_states:									in std_logic_vector(5 downto 0);
+				 HRQ:											in std_logic;
 				 IRQ:											in std_logic;
 				 IR:											in std_logic_vector(11 downto 0);
 				 ADD_CARRY:									in std_logic;
@@ -83,6 +90,7 @@ architecture rtl of control_subsystem is
 				 IS_NEG:										in std_logic;
 				 IS_AUTO_INDEX:							in std_logic;
 				 LINK_VALUE:								in std_logic;
+				 HLT_flag:									out std_logic;
 				 PC_BUS_SEL:								out std_logic;
 				 PC_LOAD_HI:								out std_logic;
 				 PC_LOAD_LO:								out std_logic;
@@ -122,15 +130,19 @@ architecture rtl of control_subsystem is
 	
 	signal s_state_signals:					std_logic_vector(3 downto 0);
 	signal t_state_signals:					std_logic_vector(5 downto 0);
+	signal state_clk:							std_logic;
+	signal HLT_signal:						std_logic;
 	signal IR_reg_output:					std_logic_vector(4 downto 0);
 	signal IR_clr_input:						std_logic;
 	signal IR_load_input:					std_logic;
+	signal IRQ_signal:						std_logic;
 	signal control_matrix_IR_input:		std_logic_vector(11 downto 0);
 	
 	begin
 		
 		IR_LOAD <= IR_load_input;
 		IR_CLR <= IR_clr_input;
+		IRQ_signal <= IRQ and IRQ_ON;
 		
 		control_matrix_IR_input(4 downto 0) <= IR_reg_output;
 		control_matrix_IR_input(11 downto 5) <= MD_BUS(11 downto 5);
@@ -142,20 +154,23 @@ architecture rtl of control_subsystem is
 																			clk => clk,
 																			not_reset => not_reset
 										);
-		
-		
-		state_generator_0:		state_generator port map ( irq => IRQ,
+										
+		state_generator_0:		state_generator port map ( irq => IRQ_signal,
 																			IR => control_matrix_IR_input(4 downto 0),
 																		   not_reset => not_reset,
 																		   start => start,
 																		   clk => clk,
+																			state_clk => state_clk,
+																			HLT => HLT_signal,
+																			HLT_indicator => HLT_indicator,
 																		   s_states => s_state_signals,
 																		   t_states => t_state_signals
 										);
 		
 		control_matrix:			control_logic   port map ( s_states => s_state_signals,
 																		   t_states => t_state_signals,
-																		   IRQ => IRQ,
+																		   HRQ => HRQ,
+																			IRQ => IRQ_signal,
 																		   IR => control_matrix_IR_input,
 																		   ADD_CARRY => ADD_CARRY,
 																		   INC_CARRY => INC_CARRY,
@@ -164,6 +179,7 @@ architecture rtl of control_subsystem is
 																		   IS_NEG => IS_NEG,
 																		   IS_AUTO_INDEX => IS_AUTO_INDEX,
 																		   LINK_VALUE => LINK_VALUE,
+																			HLT_flag => HLT_signal,
 																		   PC_BUS_SEL => PC_BUS_SEL,
 																		   PC_LOAD_HI => PC_LOAD_HI,
 																		   PC_LOAD_LO => PC_LOAD_LO,

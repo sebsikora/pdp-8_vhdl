@@ -36,6 +36,8 @@
 # -- Compiling architecture rtl of AND_gate
 # -- Compiling entity AND_3_gate
 # -- Compiling architecture rtl of AND_3_gate
+# -- Compiling entity OR_4_gate
+# -- Compiling architecture rtl of OR_4_gate
 # -- Compiling entity OR_3_gate
 # -- Compiling architecture rtl of OR_3_gate
 # -- Compiling entity OR_gate
@@ -84,21 +86,300 @@ vsim -voptargs=+acc work.state_generator
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading work.state_generator(rtl)
-# Loading work.s_state_generator(rtl)
-# Loading work.and_gate(rtl)
-# Loading work.or_gate(rtl)
 # Loading work.register_1_bit(rtl)
 # Loading work.ms_jk_ff(gates)
 # Loading work.nand_3_gate(rtl)
 # Loading work.nand_gate(rtl)
+# Loading work.s_state_generator(rtl)
+# Loading work.and_gate(rtl)
+# Loading work.or_4_gate(rtl)
+# Loading work.or_gate(rtl)
 # Loading work.t_state_generator(rtl)
 # Loading work.counter_3_bit(rtl)
 # Loading work.decoder_3_to_6(rtl)
 # Loading work.and_3_gate(rtl)
-do /home/sebsikora/altera/projects/pdp-8/state_generator/simulation/modelsim/state_generator_test_wave_3.do
+do /home/sebsikora/altera/projects/pdp-8/state_generator/simulation/modelsim/state_generator_test_wave_7.do
 # .main_pane.wave.interior.cs.body.pw.wf
 # 1
 # 1
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+wave modify -driver freeze -pattern constant -value 1 -starttime 2800ns -endtime 8000ns Edit:/state_generator/HLT
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+wave modify -driver freeze -pattern constant -value 0 -starttime 4800ns -endtime 8000ns Edit:/state_generator/HLT
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+wave modify -driver freeze -pattern constant -value 1 -starttime 2200ns -endtime 4800ns Edit:/state_generator/HLT
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
 run
 run
 run

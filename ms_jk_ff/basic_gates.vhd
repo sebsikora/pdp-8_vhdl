@@ -69,6 +69,25 @@ begin
 	output <= (inputA and inputB and inputC);
 end rtl;
 
+-- OR 4 gate
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity OR_4_gate is
+	port( inputA: 	in std_logic;
+			inputB:	in std_logic;
+			inputC:	in std_logic;
+			inputD:	in std_logic;
+			output:	out std_logic
+	);
+end OR_4_gate;
+
+architecture rtl of OR_4_gate is
+begin
+	output <= (inputA or inputB or inputC or inputD);
+end rtl;
+
 -- OR 3 gate
 
 library ieee;

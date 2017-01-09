@@ -1,5 +1,5 @@
 Analysis & Synthesis report for control_logic
-Sat Jan  7 17:18:10 2017
+Sun Jan  8 17:53:51 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -41,16 +41,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Jan  7 17:18:10 2017           ;
+; Analysis & Synthesis Status        ; Successful - Sun Jan  8 17:53:51 2017           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; control_logic                                   ;
 ; Top-level Entity Name              ; control_logic                                   ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 82                                              ;
-;     Total combinational functions  ; 82                                              ;
+; Total logic elements               ; 81                                              ;
+;     Total combinational functions  ; 81                                              ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 64                                              ;
+; Total pins                         ; 65                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -170,38 +170,40 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 82          ;
+; Estimated Total logic elements              ; 81          ;
 ;                                             ;             ;
-; Total combinational functions               ; 82          ;
+; Total combinational functions               ; 81          ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 52          ;
-;     -- 3 input functions                    ; 19          ;
-;     -- <=2 input functions                  ; 11          ;
+;     -- 4 input functions                    ; 57          ;
+;     -- 3 input functions                    ; 15          ;
+;     -- <=2 input functions                  ; 9           ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 82          ;
+;     -- normal mode                          ; 81          ;
 ;     -- arithmetic mode                      ; 0           ;
 ;                                             ;             ;
 ; Total registers                             ; 0           ;
 ;     -- Dedicated logic registers            ; 0           ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
-; I/O pins                                    ; 64          ;
+; I/O pins                                    ; 65          ;
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ; Maximum fan-out node                        ; t_states[3] ;
-; Maximum fan-out                             ; 17          ;
-; Total fan-out                               ; 317         ;
-; Average fan-out                             ; 2.17        ;
+; Maximum fan-out                             ; 19          ;
+; Total fan-out                               ; 322         ;
+; Average fan-out                             ; 2.21        ;
 +---------------------------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |control_logic             ; 82 (82)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 64   ; 0            ; |control_logic      ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                 ;
++--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node           ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                               ; Library Name ;
++--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------+--------------+
+; |control_logic                       ; 81 (80)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 65   ; 0            ; |control_logic                                                    ; work         ;
+;    |decoder_3_to_6:decoder_3_to_6_0| ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |control_logic|decoder_3_to_6:decoder_3_to_6_0                    ; work         ;
+;       |AND_3_gate:and_3_2|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |control_logic|decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_2 ; work         ;
++--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -235,7 +237,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Jan  7 17:18:08 2017
+    Info: Processing started: Sun Jan  8 17:53:49 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off control_logic -c control_logic
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file control_logic.vhd
@@ -244,24 +246,25 @@ Info (12021): Found 2 design units, including 1 entities, in source file control
 Info (12021): Found 2 design units, including 1 entities, in source file /home/sebsikora/altera/projects/pdp-8/state_generator/decoder_3_to_6.vhd
     Info (12022): Found design unit 1: decoder_3_to_6-rtl
     Info (12023): Found entity 1: decoder_3_to_6
-Info (12021): Found 14 design units, including 7 entities, in source file /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd
+Info (12021): Found 16 design units, including 8 entities, in source file /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd
     Info (12022): Found design unit 1: NAND_3_gate-rtl
     Info (12022): Found design unit 2: NAND_gate-rtl
     Info (12022): Found design unit 3: AND_gate-rtl
     Info (12022): Found design unit 4: AND_3_gate-rtl
-    Info (12022): Found design unit 5: OR_3_gate-rtl
-    Info (12022): Found design unit 6: OR_gate-rtl
-    Info (12022): Found design unit 7: XOR_gate-rtl
+    Info (12022): Found design unit 5: OR_4_gate-rtl
+    Info (12022): Found design unit 6: OR_3_gate-rtl
+    Info (12022): Found design unit 7: OR_gate-rtl
+    Info (12022): Found design unit 8: XOR_gate-rtl
     Info (12023): Found entity 1: NAND_3_gate
     Info (12023): Found entity 2: NAND_gate
     Info (12023): Found entity 3: AND_gate
     Info (12023): Found entity 4: AND_3_gate
-    Info (12023): Found entity 5: OR_3_gate
-    Info (12023): Found entity 6: OR_gate
-    Info (12023): Found entity 7: XOR_gate
+    Info (12023): Found entity 5: OR_4_gate
+    Info (12023): Found entity 6: OR_3_gate
+    Info (12023): Found entity 7: OR_gate
+    Info (12023): Found entity 8: XOR_gate
 Info (12127): Elaborating entity "control_logic" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at control_logic.vhd(82): object "HLT" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at control_logic.vhd(100): object "CARRY_MASTER" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at control_logic.vhd(101): object "CARRY_MASTER" assigned a value but never read
 Info (12128): Elaborating entity "decoder_3_to_6" for hierarchy "decoder_3_to_6:decoder_3_to_6_0"
 Info (12128): Elaborating entity "AND_3_gate" for hierarchy "decoder_3_to_6:decoder_3_to_6_0|AND_3_gate:and_3_0"
 Warning (13024): Output pins are stuck at VCC or GND
@@ -276,11 +279,11 @@ Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "IS_ZERO"
 Info (21057): Implemented 146 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 30 input pins
-    Info (21059): Implemented 34 output pins
-    Info (21061): Implemented 82 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info (21059): Implemented 35 output pins
+    Info (21061): Implemented 81 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 10 warnings
     Info: Peak virtual memory: 719 megabytes
-    Info: Processing ended: Sat Jan  7 17:18:10 2017
+    Info: Processing ended: Sun Jan  8 17:53:51 2017
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

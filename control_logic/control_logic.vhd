@@ -4,6 +4,7 @@ use ieee.std_logic_1164.all;
 entity control_logic is
 	port ( s_states:									in std_logic_vector(3 downto 0);
 			 t_states:									in std_logic_vector(5 downto 0);
+			 HRQ:											in std_logic;
 			 IRQ:											in std_logic;
 			 IR:											in std_logic_vector(11 downto 0);
 			 ADD_CARRY:									in std_logic;
@@ -13,6 +14,7 @@ entity control_logic is
 			 IS_NEG:										in std_logic;
 			 IS_AUTO_INDEX:							in std_logic;
 			 LINK_VALUE:								in std_logic;
+			 HLT_flag:									out std_logic;
 			 PC_BUS_SEL:								out std_logic;
 			 PC_LOAD_HI:								out std_logic;
 			 PC_LOAD_LO:								out std_logic;
@@ -218,5 +220,7 @@ begin
 	DCA <= decoder_outputs(3);
 	JMS <= decoder_outputs(4);
 	JMP <= decoder_outputs(5);
+	
+	HLT_flag <= HLT or HRQ;
 	
 end rtl;
