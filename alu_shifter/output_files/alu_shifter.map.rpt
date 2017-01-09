@@ -1,5 +1,5 @@
 Analysis & Synthesis report for alu_shifter
-Tue Jan  3 20:03:24 2017
+Mon Jan  9 22:29:28 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,8 +14,12 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "AND_gate:and_10_2"
+ 10. Port Connectivity Checks: "AND_gate:and_9_2"
+ 11. Port Connectivity Checks: "AND_gate:and_8_2"
+ 12. Port Connectivity Checks: "AND_gate:and_7_2"
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -41,7 +45,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jan  3 20:03:24 2017           ;
+; Analysis & Synthesis Status        ; Successful - Mon Jan  9 22:29:28 2017           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; alu_shifter                                     ;
 ; Top-level Entity Name              ; alu_shifter                                     ;
@@ -187,8 +191,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;           ;
 ; I/O pins                                    ; 28        ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
-; Maximum fan-out node                        ; alu_rot_1 ;
-; Maximum fan-out                             ; 24        ;
+; Maximum fan-out node                        ; alu_rot_2 ;
+; Maximum fan-out                             ; 20        ;
 ; Total fan-out                               ; 104       ;
 ; Average fan-out                             ; 1.93      ;
 +---------------------------------------------+-----------+
@@ -232,6 +236,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "AND_gate:and_10_2"                                                                    ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "AND_gate:and_9_2"                                                                     ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "AND_gate:and_8_2"                                                                     ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "AND_gate:and_7_2"                                                                     ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -247,26 +287,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Jan  3 20:03:22 2017
+    Info: Processing started: Mon Jan  9 22:29:26 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu_shifter -c alu_shifter
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file alu_shifter.vhd
     Info (12022): Found design unit 1: alu_shifter-rtl
     Info (12023): Found entity 1: alu_shifter
-Info (12021): Found 10 design units, including 5 entities, in source file /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd
+Info (12021): Found 18 design units, including 9 entities, in source file /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd
     Info (12022): Found design unit 1: NAND_3_gate-rtl
     Info (12022): Found design unit 2: NAND_gate-rtl
     Info (12022): Found design unit 3: AND_gate-rtl
-    Info (12022): Found design unit 4: OR_3_gate-rtl
-    Info (12022): Found design unit 5: XOR_gate-rtl
+    Info (12022): Found design unit 4: AND_3_gate-rtl
+    Info (12022): Found design unit 5: OR_5_gate-rtl
+    Info (12022): Found design unit 6: OR_4_gate-rtl
+    Info (12022): Found design unit 7: OR_3_gate-rtl
+    Info (12022): Found design unit 8: OR_gate-rtl
+    Info (12022): Found design unit 9: XOR_gate-rtl
     Info (12023): Found entity 1: NAND_3_gate
     Info (12023): Found entity 2: NAND_gate
     Info (12023): Found entity 3: AND_gate
-    Info (12023): Found entity 4: OR_3_gate
-    Info (12023): Found entity 5: XOR_gate
+    Info (12023): Found entity 4: AND_3_gate
+    Info (12023): Found entity 5: OR_5_gate
+    Info (12023): Found entity 6: OR_4_gate
+    Info (12023): Found entity 7: OR_3_gate
+    Info (12023): Found entity 8: OR_gate
+    Info (12023): Found entity 9: XOR_gate
 Info (12127): Elaborating entity "alu_shifter" for the top level hierarchy
-Info (12128): Elaborating entity "AND_gate" for hierarchy "AND_gate:and_link_0"
-Info (12128): Elaborating entity "OR_3_gate" for hierarchy "OR_3_gate:or_3_link"
+Info (12128): Elaborating entity "AND_gate" for hierarchy "AND_gate:and_0_0"
+Info (12128): Elaborating entity "OR_3_gate" for hierarchy "OR_3_gate:or_3_0"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 54 device resources after synthesis - the final resource count might be different
@@ -274,8 +322,8 @@ Info (21057): Implemented 54 device resources after synthesis - the final resour
     Info (21059): Implemented 13 output pins
     Info (21061): Implemented 26 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 715 megabytes
-    Info: Processing ended: Tue Jan  3 20:03:24 2017
+    Info: Peak virtual memory: 719 megabytes
+    Info: Processing ended: Mon Jan  9 22:29:28 2017
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

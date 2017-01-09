@@ -36,6 +36,8 @@
 # -- Compiling architecture rtl of AND_gate
 # -- Compiling entity AND_3_gate
 # -- Compiling architecture rtl of AND_3_gate
+# -- Compiling entity OR_5_gate
+# -- Compiling architecture rtl of OR_5_gate
 # -- Compiling entity OR_4_gate
 # -- Compiling architecture rtl of OR_4_gate
 # -- Compiling entity OR_3_gate
@@ -92,147 +94,25 @@ vsim -voptargs=+acc work.state_generator
 # Loading work.nand_gate(rtl)
 # Loading work.s_state_generator(rtl)
 # Loading work.and_gate(rtl)
-# Loading work.or_4_gate(rtl)
+# Loading work.or_3_gate(rtl)
 # Loading work.or_gate(rtl)
 # Loading work.t_state_generator(rtl)
+# Loading work.or_5_gate(rtl)
 # Loading work.counter_3_bit(rtl)
 # Loading work.decoder_3_to_6(rtl)
 # Loading work.and_3_gate(rtl)
-do /home/sebsikora/altera/projects/pdp-8/state_generator/simulation/modelsim/state_generator_test_wave_7.do
+do /home/sebsikora/altera/projects/pdp-8/state_generator/simulation/modelsim/state_generator_test_wave_10.do
 # .main_pane.wave.interior.cs.body.pw.wf
 # 1
 # 1
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
+wave modify -driver freeze -pattern constant -value 1 -starttime 0ns -endtime 8000ns Edit:/state_generator/FP_CMD
+wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 6000ns Edit:/state_generator/start
+wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 8000ns Edit:/state_generator/HLT
 run
 run
 run
 run
 restart
-wave modify -driver freeze -pattern constant -value 1 -starttime 2800ns -endtime 8000ns Edit:/state_generator/HLT
-restart
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-restart
-wave modify -driver freeze -pattern constant -value 0 -starttime 4800ns -endtime 8000ns Edit:/state_generator/HLT
-restart
-run
-run
-run
-run
-run
-run
-run
 run
 run
 run
@@ -273,66 +153,8 @@ run
 run
 run
 run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-restart
-wave modify -driver freeze -pattern constant -value 1 -starttime 2200ns -endtime 4800ns Edit:/state_generator/HLT
+wave modify -driver freeze -pattern constant -value 1 -starttime 1400ns -endtime 1600ns Edit:/state_generator/start
+wave modify -driver freeze -pattern constant -value 0 -starttime 1400ns -endtime 8000ns Edit:/state_generator/FP_CMD
 restart
 run
 run
@@ -356,59 +178,6 @@ run
 run
 run
 run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
+restart
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/state_generator/simulation/modelsim/state_generator_test_wave_10b.do
+wave editwrite -file /home/sebsikora/altera/projects/pdp-8/state_generator/simulation/modelsim/state_generator_test_wave_10b.do -append

@@ -5,6 +5,8 @@ entity control_subsystem is
 	port ( clk:												in std_logic;
 			 not_reset:										in std_logic;
 			 start:											in std_logic;
+			 step:											in std_logic;
+			 FP_CMD:											in std_logic;
 			 HRQ:												in std_logic;
 			 IRQ:												in std_logic;
 			 IRQ_ON:											in std_logic;
@@ -67,6 +69,8 @@ architecture rtl of control_subsystem is
 	component state_generator is
 		port ( irq:											in std_logic;
 				 IR:											in std_logic_vector(4 downto 0);
+				 step:										in std_logic;
+				 FP_CMD:										in std_logic;
 				 not_reset:									in std_logic;
 				 start:										in std_logic;
 				 clk:											in std_logic;
@@ -80,6 +84,7 @@ architecture rtl of control_subsystem is
 	component control_logic is
 		port ( s_states:									in std_logic_vector(3 downto 0);
 				 t_states:									in std_logic_vector(5 downto 0);
+				 FP_CMD:										in std_logic;
 				 HRQ:											in std_logic;
 				 IRQ:											in std_logic;
 				 IR:											in std_logic_vector(11 downto 0);
@@ -136,6 +141,7 @@ architecture rtl of control_subsystem is
 	signal IR_clr_input:						std_logic;
 	signal IR_load_input:					std_logic;
 	signal IRQ_signal:						std_logic;
+	signal FP_CMD_signal:					std_logic;
 	signal control_matrix_IR_input:		std_logic_vector(11 downto 0);
 	
 	begin
@@ -143,6 +149,7 @@ architecture rtl of control_subsystem is
 		IR_LOAD <= IR_load_input;
 		IR_CLR <= IR_clr_input;
 		IRQ_signal <= IRQ and IRQ_ON;
+		FP_CMD_signal <= FP_CMD;
 		
 		control_matrix_IR_input(4 downto 0) <= IR_reg_output;
 		control_matrix_IR_input(11 downto 5) <= MD_BUS(11 downto 5);
@@ -157,7 +164,9 @@ architecture rtl of control_subsystem is
 										
 		state_generator_0:		state_generator port map ( irq => IRQ_signal,
 																			IR => control_matrix_IR_input(4 downto 0),
-																		   not_reset => not_reset,
+																		   step => step,
+																			FP_CMD => FP_CMD_signal,
+																			not_reset => not_reset,
 																		   start => start,
 																		   clk => clk,
 																			state_clk => state_clk,

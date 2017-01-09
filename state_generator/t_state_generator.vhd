@@ -6,6 +6,7 @@ entity t_state_generator is
 			 clr:								in std_logic;
 			 next_state:					out std_logic;
 			 clk:								in std_logic;
+			 FP_CMD:							in std_logic;
 			 s_states:						in std_logic_vector(3 downto 0);
 			 t_states:						out std_logic_vector(5 downto 0)
 	);
@@ -36,20 +37,21 @@ architecture rtl of t_state_generator is
 				output:						out std_logic
 		);
 	end component;
-	component OR_4_gate is
+	component OR_5_gate is
 		port( inputA: 						in std_logic;
 				inputB:						in std_logic;
 				inputC: 						in std_logic;
 				inputD:						in std_logic;
+				inputE:						in std_logic;
 				output:						out std_logic
 		);
 	end component;
 	
 	signal counter_outputs:				std_logic_vector(2 downto 0);
 	signal decoder_outputs:				std_logic_vector(5 downto 0);
-	signal and_outputs:					std_logic_vector(4 downto 0);
-	signal or_outputs:					std_logic_vector(3 downto 0);
-	signal or_4_0_output:				std_logic;
+	signal and_outputs:					std_logic_vector(5 downto 0);
+	signal or_outputs:					std_logic_vector(4 downto 0);
+	signal or_5_0_output:				std_logic;
 	
 	begin
 		
@@ -57,14 +59,17 @@ architecture rtl of t_state_generator is
 		and_1:				AND_gate  		port map (inputA => decoder_outputs(3), inputB => s_states(1), output => and_outputs(1));
 		and_2:				AND_gate  		port map (inputA => decoder_outputs(5), inputB => s_states(2), output => and_outputs(2));
 		and_3:				AND_gate  		port map (inputA => decoder_outputs(2), inputB => s_states(3), output => and_outputs(3));
-		and_4:				AND_gate  		port map (inputA => or_4_0_output, inputB => clk, output => and_outputs(4));
+		and_4:				AND_gate  		port map (inputA => or_5_0_output, inputB => clk, output => and_outputs(4));
+		and_5:				AND_gate  		port map (inputA => FP_CMD, inputB => decoder_outputs(5), output => and_outputs(5));
+		
 		
 		or_0:					OR_gate	 		port map (inputA => and_outputs(0), inputB => and_outputs(1), output => or_outputs(0));
 		or_1:					OR_gate 		 	port map (inputA => or_outputs(0), inputB => and_outputs(2), output => or_outputs(1));
 		or_2:					OR_gate	 		port map (inputA => or_outputs(1), inputB => and_outputs(3), output => or_outputs(2));
-		or_3:					OR_gate	 		port map (inputA => or_outputs(2), inputB => clr, output => or_outputs(3));
+		or_3:					OR_gate	 		port map (inputA => or_outputs(4), inputB => clr, output => or_outputs(3));
+		or_4:					OR_gate	 		port map (inputA => and_outputs(5), inputB => or_outputs(2), output => or_outputs(4));
 		
-		or_4_0:				OR_4_gate		port map (inputA => s_states(0), inputB => s_states(1), inputC => s_states(2), inputD => s_states(3), output => or_4_0_output);
+		or_5_0:				OR_5_gate		port map (inputA => s_states(0), inputB => s_states(1), inputC => s_states(2), inputD => s_states(3), inputE => FP_CMD, output => or_5_0_output);
 		
 		counter_3_0:		counter_3_bit	port map (clr => or_outputs(3), not_reset => not_reset, clk => and_outputs(4), output => counter_outputs);
 		

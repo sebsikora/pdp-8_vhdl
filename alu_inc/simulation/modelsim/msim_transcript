@@ -27,6 +27,16 @@
 # -- Compiling architecture rtl of NAND_gate
 # -- Compiling entity AND_gate
 # -- Compiling architecture rtl of AND_gate
+# -- Compiling entity AND_3_gate
+# -- Compiling architecture rtl of AND_3_gate
+# -- Compiling entity OR_5_gate
+# -- Compiling architecture rtl of OR_5_gate
+# -- Compiling entity OR_4_gate
+# -- Compiling architecture rtl of OR_4_gate
+# -- Compiling entity OR_3_gate
+# -- Compiling architecture rtl of OR_3_gate
+# -- Compiling entity OR_gate
+# -- Compiling architecture rtl of OR_gate
 # -- Compiling entity XOR_gate
 # -- Compiling architecture rtl of XOR_gate
 # 
@@ -39,18 +49,10 @@ vsim -voptargs=+acc work.alu_inc
 # Loading work.and_gate(rtl)
 # Loading work.xor_gate(rtl)
 # Loading work.nand_gate(rtl)
-wave create -driver freeze -pattern constant -value 011111111111 -range 11 0 -starttime 0ns -endtime 1000ns sim:/alu_inc/input
-wave modify -driver freeze -pattern counter -startvalue 111111111110 -endvalue 111111111111 -type Range -direction Up -period 500ps -step 1 -repeat forever -range 11 0 -starttime 0ns -endtime 1000ns Edit:/alu_inc/input
-wave modify -driver freeze -pattern counter -startvalue 111111111110 -endvalue 111111111111 -type Range -direction Up -period 500ns -step 1 -repeat forever -range 11 0 -starttime 0ns -endtime 1000ns Edit:/alu_inc/input
-wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 300ns sim:/alu_inc/alu_inc
-wave modify -driver freeze -pattern constant -value 1 -starttime 300ns -endtime 700ns Edit:/alu_inc/alu_inc
-wave modify -driver freeze -pattern constant -value 1 -starttime 300ns -endtime 1000ns Edit:/alu_inc/alu_inc
-add wave  \
-sim:/alu_inc/output
-add wave  \
-sim:/alu_inc/carry_out
-run
-run
+do /home/sebsikora/altera/projects/pdp-8/alu_inc/simulation/modelsim/alu_inc_test_wave.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# 1
+# 1
 run
 run
 run
@@ -59,5 +61,35 @@ run
 run
 run
 restart
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/alu_inc/simulation/modelsim/alu_inc_test_wave.do
-wave editwrite -file /home/sebsikora/altera/projects/pdp-8/alu_inc/simulation/modelsim/alu_inc_test_wave.do -append
+run
+restart
+restart
+run
+run
+run
+restart
+run
+run
+run
+restart
+run
+run
+run
+restart
+run
+restart
+wave modify -driver freeze -pattern repeater -initialvalue 011111111111 -period 500ns -sequence { 011111111111 111111111111  } -repeat forever -range 11 0 -starttime 0ns -endtime 1000ns Edit:/alu_inc/input
+run
+run
+run
+run
+run
+run
+run
+wave modify -driver freeze -pattern constant -value 0 -starttime 750ns -endtime 1000ns Edit:/alu_inc/alu_inc
+run
+run
+run
+restart
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/alu_inc/simulation/modelsim/alu_inc_test_wave_2.do
+wave editwrite -file /home/sebsikora/altera/projects/pdp-8/alu_inc/simulation/modelsim/alu_inc_test_wave_2.do -append

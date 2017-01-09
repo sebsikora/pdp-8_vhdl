@@ -35,9 +35,9 @@ output[8] <= XOR_gate:xor_8.output
 output[9] <= XOR_gate:xor_9.output
 output[10] <= XOR_gate:xor_10.output
 output[11] <= XOR_gate:xor_11.output
-alu_inc => AND_gate:and_0.inputB
-alu_inc => XOR_gate:xor_0.inputB
-carry_out <= AND_gate:and_11.output
+alu_inc => AND_gate:and_11.inputB
+alu_inc => XOR_gate:xor_11.inputB
+carry_out <= AND_gate:and_0.output
 
 
 |alu_inc|AND_gate:and_0
