@@ -3,10 +3,17 @@ use ieee.std_logic_1164.all;
 
 entity control_subsystem is
 	port ( clk:												in std_logic;
+			 -- Ultimately clk will become an output, driving the rest of the system.
+			 -- In the real system, an oscillator within the control subsystem will be switched
+			 -- on and off in response to control signals from the front panel / control
+			 -- logic. In this system, those same signals will instead gate a constant clock
+			 -- connected to a 'dummy' input here. Start will also become an output, perhaps others.
 			 not_reset:										in std_logic;
 			 start:											in std_logic;
 			 step:											in std_logic;
-			 FP_CMD:											in std_logic;
+			 FP_ADDR_LOAD:									in std_logic;
+			 FP_EXAMINE:									in std_logic;
+			 FP_DEPOSIT:									in std_logic;
 			 HRQ:												in std_logic;
 			 IRQ:												in std_logic;
 			 IRQ_ON:											in std_logic;
@@ -19,6 +26,7 @@ entity control_subsystem is
 			 IS_AUTO_INDEX:								in std_logic;
 			 LINK_VALUE:									in std_logic;
 			 HLT_indicator:								out std_logic;
+			 RUN_indicator:								out std_logic;
 			 PC_BUS_SEL:									out std_logic;
 			 PC_LOAD_HI:									out std_logic;
 			 PC_LOAD_LO:									out std_logic;
@@ -84,7 +92,10 @@ architecture rtl of control_subsystem is
 	component control_logic is
 		port ( s_states:									in std_logic_vector(3 downto 0);
 				 t_states:									in std_logic_vector(5 downto 0);
-				 FP_CMD:										in std_logic;
+				 FP_CMD:										out std_logic;
+				 FP_ADDR_LOAD:								in std_logic;
+				 FP_EXAMINE:								in std_logic;
+				 FP_DEPOSIT:								in std_logic;
 				 HRQ:											in std_logic;
 				 IRQ:											in std_logic;
 				 IR:											in std_logic_vector(11 downto 0);
@@ -141,15 +152,14 @@ architecture rtl of control_subsystem is
 	signal IR_clr_input:						std_logic;
 	signal IR_load_input:					std_logic;
 	signal IRQ_signal:						std_logic;
-	signal FP_CMD_signal:					std_logic;
 	signal control_matrix_IR_input:		std_logic_vector(11 downto 0);
+	signal FP_CMD:								std_logic;
 	
 	begin
 		
 		IR_LOAD <= IR_load_input;
 		IR_CLR <= IR_clr_input;
 		IRQ_signal <= IRQ and IRQ_ON;
-		FP_CMD_signal <= FP_CMD;
 		
 		control_matrix_IR_input(4 downto 0) <= IR_reg_output;
 		control_matrix_IR_input(11 downto 5) <= MD_BUS(11 downto 5);
@@ -165,7 +175,7 @@ architecture rtl of control_subsystem is
 		state_generator_0:		state_generator port map ( irq => IRQ_signal,
 																			IR => control_matrix_IR_input(4 downto 0),
 																		   step => step,
-																			FP_CMD => FP_CMD_signal,
+																			FP_CMD => FP_CMD,
 																			not_reset => not_reset,
 																		   start => start,
 																		   clk => clk,
@@ -178,7 +188,11 @@ architecture rtl of control_subsystem is
 		
 		control_matrix:			control_logic   port map ( s_states => s_state_signals,
 																		   t_states => t_state_signals,
-																		   HRQ => HRQ,
+																		   FP_CMD => FP_CMD,
+																			FP_ADDR_LOAD => FP_ADDR_LOAD,
+																			FP_EXAMINE => FP_EXAMINE,
+																			FP_DEPOSIT => FP_DEPOSIT,
+																			HRQ => HRQ,
 																			IRQ => IRQ_signal,
 																		   IR => control_matrix_IR_input,
 																		   ADD_CARRY => ADD_CARRY,

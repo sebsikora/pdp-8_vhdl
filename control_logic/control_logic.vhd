@@ -4,6 +4,10 @@ use ieee.std_logic_1164.all;
 entity control_logic is
 	port ( s_states:									in std_logic_vector(3 downto 0);
 			 t_states:									in std_logic_vector(5 downto 0);
+			 FP_CMD:										out std_logic;
+			 FP_ADDR_LOAD:								in std_logic;
+			 FP_EXAMINE:								in std_logic;
+			 FP_DEPOSIT:								in std_logic;
 			 HRQ:											in std_logic;
 			 IRQ:											in std_logic;
 			 IR:											in std_logic_vector(11 downto 0);
@@ -117,6 +121,8 @@ architecture rtl of control_logic is
 	signal GROUP_2_AND:								std_logic;
 	
 begin
+	FP_CMD <= FP_ADDR_LOAD or FP_DEPOSIT or FP_EXAMINE;
+	
 	IOT_INS <= IR(0) and IR(1) and (not IR(2));
 	OPR_INS <= IR(0) and IR(1) and IR(2);
 	BASIC_INS <= not (IOT_INS or OPR_INS);

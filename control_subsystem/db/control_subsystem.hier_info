@@ -4,6 +4,10 @@ clk => state_generator:state_generator_0.clk
 not_reset => register_5_bit:register_5_bit_0.not_reset
 not_reset => state_generator:state_generator_0.not_reset
 start => state_generator:state_generator_0.start
+step => state_generator:state_generator_0.step
+FP_ADDR_LOAD => control_logic:control_matrix.FP_ADDR_LOAD
+FP_EXAMINE => control_logic:control_matrix.FP_EXAMINE
+FP_DEPOSIT => control_logic:control_matrix.FP_DEPOSIT
 HRQ => control_logic:control_matrix.HRQ
 IRQ => IRQ_signal.IN0
 IRQ_ON => IRQ_signal.IN1
@@ -27,6 +31,7 @@ IS_NEG => control_logic:control_matrix.IS_NEG
 IS_AUTO_INDEX => control_logic:control_matrix.IS_AUTO_INDEX
 LINK_VALUE => control_logic:control_matrix.LINK_VALUE
 HLT_indicator <= state_generator:state_generator_0.HLT_indicator
+RUN_indicator <= comb.DB_MAX_OUTPUT_PORT_TYPE
 PC_BUS_SEL <= control_logic:control_matrix.PC_BUS_SEL
 PC_LOAD_HI <= control_logic:control_matrix.PC_LOAD_HI
 PC_LOAD_LO <= control_logic:control_matrix.PC_LOAD_LO
@@ -428,15 +433,19 @@ IR[1] => s_state_generator:s_state_generator_0.IR[1]
 IR[2] => s_state_generator:s_state_generator_0.IR[2]
 IR[3] => s_state_generator:s_state_generator_0.IR[3]
 IR[4] => s_state_generator:s_state_generator_0.IR[4]
+step => s_state_generator:s_state_generator_0.step
+FP_CMD => t_state_generator:t_state_generator_0.FP_CMD
 not_reset => register_1_bit:register_1_bit_0.not_reset
 not_reset => s_state_generator:s_state_generator_0.not_reset
 not_reset => t_state_generator:t_state_generator_0.not_reset
+start => HLT_reg_load.IN1
 start => HLT_reg_clk.IN0
 start => s_state_generator:s_state_generator_0.start
+clk => HLT_reg_clk.IN1
 clk => s_state_generator:s_state_generator_0.clk
 clk => t_state_generator:t_state_generator_0.clk
 state_clk <= t_state_generator:t_state_generator_0.next_state
-HLT => HLT_reg_clk.IN1
+HLT => HLT_reg_load.IN1
 HLT => register_1_bit:register_1_bit_0.input
 HLT => s_state_generator:s_state_generator_0.HLT
 HLT_indicator <= HLT_indicator.DB_MAX_OUTPUT_PORT_TYPE
@@ -530,6 +539,7 @@ irq => AND_gate:and_5.inputB
 irq => AND_gate:and_7.inputB
 irq => AND_gate:and_4.inputB
 irq => AND_gate:and_6.inputB
+step => AND_gate:and_9.inputB
 IR[0] => IR_0_and_IR_1.IN0
 IR[1] => IR_0_and_IR_1.IN1
 IR[2] => ~NO_FANOUT~
@@ -541,10 +551,11 @@ not_reset => register_1_bit:reg_1_bit_1.not_reset
 not_reset => register_1_bit:reg_1_bit_2.not_reset
 not_reset => register_1_bit:reg_1_bit_3.not_reset
 next_state => AND_gate:and_8.inputB
-start => OR_4_gate:or_4_0.inputA
-start => OR_gate:or_2.inputB
+start => start_and_clk.IN0
+start => OR_gate:or_3.inputA
+clk => start_and_clk.IN1
 clk => AND_gate:and_8.inputA
-HLT => AND_gate:and_9.inputB
+HLT => AND_gate:and_10.inputB
 s_states[0] <= register_1_bit:reg_1_bit_0.output
 s_states[1] <= register_1_bit:reg_1_bit_1.output
 s_states[2] <= register_1_bit:reg_1_bit_2.output
@@ -611,11 +622,16 @@ inputB => output.IN1
 output <= output.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|control_subsystem|state_generator:state_generator_0|s_state_generator:s_state_generator_0|OR_4_gate:or_4_0
+|control_subsystem|state_generator:state_generator_0|s_state_generator:s_state_generator_0|AND_gate:and_10
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_subsystem|state_generator:state_generator_0|s_state_generator:s_state_generator_0|OR_3_gate:or_3_0
 inputA => output.IN0
 inputB => output.IN1
 inputC => output.IN1
-inputD => output.IN1
 output <= output.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -632,6 +648,12 @@ output <= output.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |control_subsystem|state_generator:state_generator_0|s_state_generator:s_state_generator_0|OR_gate:or_2
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_subsystem|state_generator:state_generator_0|s_state_generator:s_state_generator_0|OR_gate:or_3
 inputA => output.IN0
 inputB => output.IN1
 output <= output.DB_MAX_OUTPUT_PORT_TYPE
@@ -934,14 +956,16 @@ not_reset => counter_3_bit:counter_3_0.not_reset
 clr => OR_gate:or_3.inputB
 next_state <= OR_gate:or_2.output
 clk => AND_gate:and_4.inputB
+FP_CMD => AND_gate:and_5.inputA
+FP_CMD => OR_5_gate:or_5_0.inputE
 s_states[0] => AND_gate:and_0.inputB
-s_states[0] => OR_4_gate:or_4_0.inputA
+s_states[0] => OR_5_gate:or_5_0.inputA
 s_states[1] => AND_gate:and_1.inputB
-s_states[1] => OR_4_gate:or_4_0.inputB
+s_states[1] => OR_5_gate:or_5_0.inputB
 s_states[2] => AND_gate:and_2.inputB
-s_states[2] => OR_4_gate:or_4_0.inputC
+s_states[2] => OR_5_gate:or_5_0.inputC
 s_states[3] => AND_gate:and_3.inputB
-s_states[3] => OR_4_gate:or_4_0.inputD
+s_states[3] => OR_5_gate:or_5_0.inputD
 t_states[0] <= decoder_3_to_6:decoder_3_to_6_0.output[0]
 t_states[1] <= decoder_3_to_6:decoder_3_to_6_0.output[1]
 t_states[2] <= decoder_3_to_6:decoder_3_to_6_0.output[2]
@@ -980,6 +1004,12 @@ inputB => output.IN1
 output <= output.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|control_subsystem|state_generator:state_generator_0|t_state_generator:t_state_generator_0|AND_gate:and_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |control_subsystem|state_generator:state_generator_0|t_state_generator:t_state_generator_0|OR_gate:or_0
 inputA => output.IN0
 inputB => output.IN1
@@ -1004,11 +1034,18 @@ inputB => output.IN1
 output <= output.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|control_subsystem|state_generator:state_generator_0|t_state_generator:t_state_generator_0|OR_4_gate:or_4_0
+|control_subsystem|state_generator:state_generator_0|t_state_generator:t_state_generator_0|OR_gate:or_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_subsystem|state_generator:state_generator_0|t_state_generator:t_state_generator_0|OR_5_gate:or_5_0
 inputA => output.IN0
 inputB => output.IN1
 inputC => output.IN1
 inputD => output.IN1
+inputE => output.IN1
 output <= output.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -1397,6 +1434,10 @@ t_states[4] => ALU_OUT_SEL_0.IN1
 t_states[4] => ALU_ROT_1.IN1
 t_states[4] => ALU_ROT_2.IN1
 t_states[5] => PC_BUS_SEL.IN1
+FP_CMD <= FP_CMD.DB_MAX_OUTPUT_PORT_TYPE
+FP_ADDR_LOAD => FP_CMD.IN0
+FP_EXAMINE => FP_CMD.IN1
+FP_DEPOSIT => FP_CMD.IN1
 HRQ => HLT_flag.IN1
 IRQ => PC_LOAD_HI.IN1
 IRQ => MA_CLR_HI.IN1

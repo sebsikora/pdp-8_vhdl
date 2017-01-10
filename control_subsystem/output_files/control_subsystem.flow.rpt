@@ -1,5 +1,5 @@
 Flow report for control_subsystem
-Sun Jan  8 20:47:35 2017
+Tue Jan 10 00:17:28 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sun Jan  8 20:47:35 2017           ;
+; Flow Status                        ; Successful - Tue Jan 10 00:17:27 2017           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; control_subsystem                               ;
 ; Top-level Entity Name              ; control_subsystem                               ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C5AT144A7                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 153 / 4,608 ( 3 % )                             ;
-;     Total combinational functions  ; 153 / 4,608 ( 3 % )                             ;
+; Total logic elements               ; 151 / 4,608 ( 3 % )                             ;
+;     Total combinational functions  ; 151 / 4,608 ( 3 % )                             ;
 ;     Dedicated logic registers      ; 0 / 4,608 ( 0 % )                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 60 / 89 ( 67 % )                                ;
+; Total pins                         ; 65 / 89 ( 73 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 119,808 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 26 ( 0 % )                                  ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/08/2017 20:47:16 ;
+; Start date & time ; 01/10/2017 00:17:10 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; control_subsystem   ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 90520735942130.148390843603216        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 90520735942130.148400743002637        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 125                                   ; --            ; --          ; --             ;
@@ -94,12 +94,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 694 MB              ; 00:00:02                           ;
-; Fitter                    ; 00:00:04     ; 1.0                     ; 738 MB              ; 00:00:05                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 630 MB              ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 699 MB              ; 00:00:02                           ;
+; Fitter                    ; 00:00:04     ; 1.0                     ; 738 MB              ; 00:00:04                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 636 MB              ; 00:00:01                           ;
 ; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 588 MB              ; 00:00:01                           ;
 ; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 788 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:08     ; --                      ; --                  ; 00:00:10                           ;
+; Total                     ; 00:00:09     ; --                      ; --                  ; 00:00:09                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
