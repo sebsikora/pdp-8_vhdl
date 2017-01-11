@@ -28,6 +28,8 @@
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
+# -- Compiling entity NOT_gate
+# -- Compiling architecture rtl of NOT_gate
 # -- Compiling entity NAND_3_gate
 # -- Compiling architecture rtl of NAND_3_gate
 # -- Compiling entity NAND_gate
@@ -46,68 +48,252 @@
 # -- Compiling architecture rtl of OR_gate
 # -- Compiling entity XOR_gate
 # -- Compiling architecture rtl of XOR_gate
-# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/12_bit_register/register_1_bit.vhd}
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/decoder_3_to_8.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity register_1_bit
-# -- Compiling architecture rtl of register_1_bit
-# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/t_state_generator.vhd}
+# -- Compiling entity decoder_3_to_8
+# -- Compiling architecture rtl of decoder_3_to_8
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/counter_3_bit_with_load.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity t_state_generator
-# -- Compiling architecture rtl of t_state_generator
-# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/counter_3_bit.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity counter_3_bit
-# -- Compiling architecture rtl of counter_3_bit
-# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/decoder_3_to_6.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity decoder_3_to_6
-# -- Compiling architecture rtl of decoder_3_to_6
-# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/state_generator.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity state_generator
-# -- Compiling architecture rtl of state_generator
+# -- Compiling entity counter_3_bit_with_load
+# -- Compiling architecture rtl of counter_3_bit_with_load
 # 
-vsim -voptargs=+acc work.state_generator
-# vsim -voptargs=+acc work.state_generator 
+vsim -voptargs=+acc work.s_state_generator
+# vsim -voptargs=+acc work.s_state_generator 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.state_generator(rtl)
-# Loading work.register_1_bit(rtl)
+# Loading work.s_state_generator(rtl)
+# Loading work.and_gate(rtl)
 # Loading work.ms_jk_ff(gates)
 # Loading work.nand_3_gate(rtl)
 # Loading work.nand_gate(rtl)
-# Loading work.s_state_generator(rtl)
-# Loading work.and_gate(rtl)
-# Loading work.or_3_gate(rtl)
+# Loading work.counter_3_bit_with_load(rtl)
 # Loading work.or_gate(rtl)
-# Loading work.t_state_generator(rtl)
-# Loading work.or_5_gate(rtl)
-# Loading work.counter_3_bit(rtl)
-# Loading work.decoder_3_to_6(rtl)
+# Loading work.or_3_gate(rtl)
+# Loading work.decoder_3_to_8(rtl)
 # Loading work.and_3_gate(rtl)
-do /home/sebsikora/altera/projects/pdp-8/state_generator/simulation/modelsim/state_generator_test_wave_10.do
-# .main_pane.wave.interior.cs.body.pw.wf
-# 1
-# 1
-wave modify -driver freeze -pattern constant -value 1 -starttime 0ns -endtime 8000ns Edit:/state_generator/FP_CMD
-wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 6000ns Edit:/state_generator/start
-wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 8000ns Edit:/state_generator/HLT
+wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 5000ns sim:/s_state_generator/not_reset
+wave modify -driver freeze -pattern constant -value 1 -starttime 200ns -endtime 5000ns Edit:/s_state_generator/not_reset
+wave create -driver freeze -pattern clock -initialvalue 0 -period 200ns -dutycycle 50 -starttime 0ns -endtime 5000ns sim:/s_state_generator/clk
+wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 5000ns sim:/s_state_generator/HLT_flag
+add wave  \
+sim:/s_state_generator/s_states
+run
+run
+restart
+wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 200ns Edit:/s_state_generator/clk
+restart
+run
+run
+restart
+wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 5000ns sim:/s_state_generator/end_state
+wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 5000ns sim:/s_state_generator/next_state
+wave create -driver freeze -pattern constant -value 00 -range 1 0 -starttime 0ns -endtime 5000ns sim:/s_state_generator/load
+run
+run
+run
+run
+run
+run
+run
+restart
+wave modify -driver freeze -pattern constant -value 1 -starttime 1000ns -endtime 1200ns Edit:/s_state_generator/next_state
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+wave modify -driver freeze -pattern constant -value 1 -starttime 2200ns -endtime 2400ns Edit:/s_state_generator/next_state
+wave modify -driver freeze -pattern constant -value 1 -starttime 3200ns -endtime 3400ns Edit:/s_state_generator/end_state
+wave modify -driver freeze -pattern constant -value 11 -range 1 0 -starttime 4400ns -endtime 4600ns Edit:/s_state_generator/load
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run -all
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+run
+run
+run
+run
+run
+wave modify -driver freeze -pattern constant -value 1 -starttime 2200ns -endtime 2500ns Edit:/s_state_generator/next_state
+restart
+wave modify -driver freeze -pattern constant -value 1 -starttime 2200ns -endtime 2400ns Edit:/s_state_generator/next_state
+wave modify -driver freeze -pattern constant -value 0 -starttime 2400ns -endtime 2500ns Edit:/s_state_generator/next_state
+wave modify -driver freeze -pattern constant -value 1 -starttime 3400ns -endtime 3500ns Edit:/s_state_generator/end_state
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+wave modify -driver freeze -pattern constant -value 0 -starttime 3400ns -endtime 3500ns Edit:/s_state_generator/end_state
+run -all
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
 run
 run
 run
@@ -138,6 +324,49 @@ run
 run
 run
 run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
 restart
 run
 run
@@ -153,8 +382,26 @@ run
 run
 run
 run
-wave modify -driver freeze -pattern constant -value 1 -starttime 1400ns -endtime 1600ns Edit:/state_generator/start
-wave modify -driver freeze -pattern constant -value 0 -starttime 1400ns -endtime 8000ns Edit:/state_generator/FP_CMD
+run
+run
+run
+run
+run
+run
+restart
+wave modify -driver freeze -pattern constant -value 1 -starttime 3200ns -endtime 3400ns Edit:/s_state_generator/next_state
+restart
+run -all
+wave modify -driver freeze -pattern constant -value 1 -starttime 4400ns -endtime 4600ns Edit:/s_state_generator/next_state
+run
+restart
+run -all
+restart
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/state_generator/simulation/modelsim/new_s_state_gen_test_wave.do
+wave editwrite -file /home/sebsikora/altera/projects/pdp-8/state_generator/simulation/modelsim/new_s_state_gen_test_wave.do -append
+wave modify -driver freeze -pattern constant -value 1 -starttime 1600ns -endtime 1800ns Edit:/s_state_generator/HLT_flag
+add wave  \
+sim:/s_state_generator/HLT_indicator
 restart
 run
 run
@@ -178,6 +425,8 @@ run
 run
 run
 run
+run
+run
 restart
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/state_generator/simulation/modelsim/state_generator_test_wave_10b.do
-wave editwrite -file /home/sebsikora/altera/projects/pdp-8/state_generator/simulation/modelsim/state_generator_test_wave_10b.do -append
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/state_generator/simulation/modelsim/new_s_state_gen_test_wave_2.do
+wave editwrite -file /home/sebsikora/altera/projects/pdp-8/state_generator/simulation/modelsim/new_s_state_gen_test_wave_2.do -append

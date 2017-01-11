@@ -1,3 +1,19 @@
+-- Inverter
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity NOT_gate is
+	port( input:	in std_logic;
+			output:	out std_logic
+	);
+end NOT_gate;
+
+architecture rtl of NOT_gate is
+begin
+	output <= not (input);
+end rtl;
+
 -- 3 input NAND gate
 
 library ieee;
