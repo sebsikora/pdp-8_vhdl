@@ -15,7 +15,7 @@ L75
 Vz6UPELG@T<D9^D:51cnV<0
 Z7 OV;C;10.1d;51
 31
-Z8 !s108 1484168808.299899
+Z8 !s108 1484253063.169999
 Z9 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd|
 Z10 !s107 /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd|
 Z11 o-93 -work work -O0
@@ -73,33 +73,33 @@ R11
 R12
 !s100 bmgA3QfRI>4GYz0aNI[P23
 !i10b 1
-Ecounter_3_bit_with_load
-Z13 w1484166318
+Ecounter_3_bit
+Z13 w1483551479
 R2
 R3
 R4
-Z14 8/home/sebsikora/altera/projects/pdp-8/state_generator/counter_3_bit_with_load.vhd
-Z15 F/home/sebsikora/altera/projects/pdp-8/state_generator/counter_3_bit_with_load.vhd
+Z14 8/home/sebsikora/altera/projects/pdp-8/state_generator/counter_3_bit.vhd
+Z15 F/home/sebsikora/altera/projects/pdp-8/state_generator/counter_3_bit.vhd
 l0
 L4
-V=mN^ZCg29<QCn?B7CAS731
-!s100 nDSf;jbhdfIY>R52A;MEN3
+V`0N>O>k?j_fKKPVz_F`gN0
+!s100 2SJ^96gHV6o09@`hSQZ893
 R7
 31
 !i10b 1
-Z16 !s108 1484168808.385712
-Z17 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/state_generator/counter_3_bit_with_load.vhd|
-Z18 !s107 /home/sebsikora/altera/projects/pdp-8/state_generator/counter_3_bit_with_load.vhd|
+Z16 !s108 1484253063.350836
+Z17 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/state_generator/counter_3_bit.vhd|
+Z18 !s107 /home/sebsikora/altera/projects/pdp-8/state_generator/counter_3_bit.vhd|
 R11
 R12
 Artl
 R2
 R3
-DEx4 work 23 counter_3_bit_with_load 0 22 =mN^ZCg29<QCn?B7CAS731
-l51
-L15
-V6V9g?28[bP67JSQa5ZJ<^1
-!s100 7aY>RXfPWDfDc>PATaRlI3
+DEx4 work 13 counter_3_bit 0 22 `0N>O>k?j_fKKPVz_F`gN0
+l50
+L12
+V>0o]Bl;eJN?Wz:D?bneIE0
+!s100 i<m8[]jn]0]KjzUz@d@dQ3
 R7
 31
 !i10b 1
@@ -108,21 +108,56 @@ R17
 R18
 R11
 R12
-Edecoder_3_to_8
-Z19 w1484158564
+Ecounter_3_bit_with_load
+Z19 w1484166318
 R2
 R3
 R4
-Z20 8/home/sebsikora/altera/projects/pdp-8/state_generator/decoder_3_to_8.vhd
-Z21 F/home/sebsikora/altera/projects/pdp-8/state_generator/decoder_3_to_8.vhd
+Z20 8/home/sebsikora/altera/projects/pdp-8/state_generator/counter_3_bit_with_load.vhd
+Z21 F/home/sebsikora/altera/projects/pdp-8/state_generator/counter_3_bit_with_load.vhd
+l0
+L4
+V=mN^ZCg29<QCn?B7CAS731
+R7
+31
+Z22 !s108 1484253063.322172
+Z23 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/state_generator/counter_3_bit_with_load.vhd|
+Z24 !s107 /home/sebsikora/altera/projects/pdp-8/state_generator/counter_3_bit_with_load.vhd|
+R11
+R12
+!s100 nDSf;jbhdfIY>R52A;MEN3
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 23 counter_3_bit_with_load 0 22 =mN^ZCg29<QCn?B7CAS731
+l51
+L15
+V6V9g?28[bP67JSQa5ZJ<^1
+R7
+31
+R22
+R23
+R24
+R11
+R12
+!s100 7aY>RXfPWDfDc>PATaRlI3
+!i10b 1
+Edecoder_3_to_8
+Z25 w1484252861
+R2
+R3
+R4
+Z26 8/home/sebsikora/altera/projects/pdp-8/state_generator/decoder_3_to_8.vhd
+Z27 F/home/sebsikora/altera/projects/pdp-8/state_generator/decoder_3_to_8.vhd
 l0
 L4
 VIL8TiAl22ia4YH_30DT5O0
 R7
 31
-Z22 !s108 1484168808.353467
-Z23 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/state_generator/decoder_3_to_8.vhd|
-Z24 !s107 /home/sebsikora/altera/projects/pdp-8/state_generator/decoder_3_to_8.vhd|
+Z28 !s108 1484253063.279168
+Z29 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/state_generator/decoder_3_to_8.vhd|
+Z30 !s107 /home/sebsikora/altera/projects/pdp-8/state_generator/decoder_3_to_8.vhd|
 R11
 R12
 !s100 8_M5d;JZ1]@7j4BdY0]`g0
@@ -136,28 +171,28 @@ L10
 VPI@llA1ohf>Y;:bGfRh8O3
 R7
 31
-R22
-R23
-R24
+R28
+R29
+R30
 R11
 R12
 !s100 Ef;7CoI]_`OoU;V0iKRMo1
 !i10b 1
 Ems_jk_ff
-Z25 w1483460033
+Z31 w1483460033
 R2
 R3
 R4
-Z26 8/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd
-Z27 F/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd
+Z32 8/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd
+Z33 F/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd
 l0
 L5
 V]IeQOc`NS8zUgmDdNA0FN0
 R7
 31
-Z28 !s108 1484168808.273109
-Z29 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd|
-Z30 !s107 /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd|
+Z34 !s108 1484253063.142387
+Z35 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd|
+Z36 !s107 /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd|
 R11
 R12
 !s100 _T@d>kQcQ2d2TY@AYYDZ`2
@@ -171,9 +206,9 @@ L15
 VXDYIG4Zm^TF=:9PP`B?6`1
 R7
 31
-R28
-R29
-R30
+R34
+R35
+R36
 R11
 R12
 !s100 c:L``LDONKL`SD=6IAB:72
@@ -424,39 +459,109 @@ R12
 !s100 UaMd9Wkd5KOGe9i?Ik?3<0
 !i10b 1
 Es_state_generator
-Z31 w1484168553
+Z37 w1484252991
 R2
 R3
 R4
-Z32 8/home/sebsikora/altera/projects/pdp-8/state_generator/s_state_generator.vhd
-Z33 F/home/sebsikora/altera/projects/pdp-8/state_generator/s_state_generator.vhd
+Z38 8/home/sebsikora/altera/projects/pdp-8/state_generator/s_state_generator.vhd
+Z39 F/home/sebsikora/altera/projects/pdp-8/state_generator/s_state_generator.vhd
 l0
 L4
-V1g^PY@>0hk4C]c2`hTo0c1
+VZC8Yf3jLc40iI0N00lh4B3
 R7
 31
-Z34 !s108 1484168808.247027
-Z35 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/state_generator/s_state_generator.vhd|
-Z36 !s107 /home/sebsikora/altera/projects/pdp-8/state_generator/s_state_generator.vhd|
+Z40 !s108 1484253063.114554
+Z41 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/state_generator/s_state_generator.vhd|
+Z42 !s107 /home/sebsikora/altera/projects/pdp-8/state_generator/s_state_generator.vhd|
 R11
 R12
-!s100 ULMa]hOZ5aPXfZM<=VW[X2
+!s100 b8IU9PYcSz[lZ<KMzOH:^3
 !i10b 1
 Artl
 R2
 R3
-DEx4 work 17 s_state_generator 0 22 1g^PY@>0hk4C]c2`hTo0c1
+DEx4 work 17 s_state_generator 0 22 ZC8Yf3jLc40iI0N00lh4B3
 l56
 L16
-VcP0GZGk>cTmW2K0[XL_g21
+V@<?ooGeaH9j8iU0ZMY5=@3
 R7
 31
-R34
-R35
-R36
+R40
+R41
+R42
 R11
 R12
-!s100 ?<lNJVK30kUPon?Yj@FWI3
+!s100 ;=`jL?7bfMN^8QlK:eWDM1
+!i10b 1
+Estate_generator
+Z43 w1484249754
+R2
+R3
+R4
+Z44 8/home/sebsikora/altera/projects/pdp-8/state_generator/state_generator.vhd
+Z45 F/home/sebsikora/altera/projects/pdp-8/state_generator/state_generator.vhd
+l0
+L4
+VUClYO?`Wb3NSN[@^]9M1]2
+R7
+31
+Z46 !s108 1484253063.251581
+Z47 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/state_generator/state_generator.vhd|
+Z48 !s107 /home/sebsikora/altera/projects/pdp-8/state_generator/state_generator.vhd|
+R11
+R12
+!s100 FI2[Kd0K[]_>lN8SZm^U?0
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 15 state_generator 0 22 UClYO?`Wb3NSN[@^]9M1]2
+l43
+L17
+VV194bG:]?V1SJ7A7VP]QE0
+R7
+31
+R46
+R47
+R48
+R11
+R12
+!s100 Uh`2?E_zB><MjnXb1b:WG0
+!i10b 1
+Et_state_generator
+Z49 w1484159547
+R2
+R3
+R4
+Z50 8/home/sebsikora/altera/projects/pdp-8/state_generator/t_state_generator.vhd
+Z51 F/home/sebsikora/altera/projects/pdp-8/state_generator/t_state_generator.vhd
+l0
+L4
+VOb=9K=?YcjlNVWQXgW:jh1
+R7
+31
+Z52 !s108 1484253063.221975
+Z53 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/state_generator/t_state_generator.vhd|
+Z54 !s107 /home/sebsikora/altera/projects/pdp-8/state_generator/t_state_generator.vhd|
+R11
+R12
+!s100 glLS>DV30::eZJdP8JOE62
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 17 t_state_generator 0 22 Ob=9K=?YcjlNVWQXgW:jh1
+l37
+L13
+VnOAbNcho=Qb2UXH]U>VJA1
+R7
+31
+R52
+R53
+R54
+R11
+R12
+!s100 cJ`82nCOgLJ6kQacC`^_P0
 !i10b 1
 Exor_gate
 R1

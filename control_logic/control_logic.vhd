@@ -2,9 +2,11 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity control_logic is
-	port ( s_states:									in std_logic_vector(3 downto 0);
-			 t_states:									in std_logic_vector(5 downto 0);
-			 FP_CMD:										out std_logic;
+	port ( s_states:									in std_logic_vector(7 downto 0);
+			 t_states:									in std_logic_vector(7 downto 0);
+			 NEXT_STATE_in:							in std_logic;
+			 END_STATE_in:								in std_logic;
+			 ASSERT_CONTROL:							in std_logic;
 			 FP_ADDR_LOAD:								in std_logic;
 			 FP_EXAMINE:								in std_logic;
 			 FP_DEPOSIT:								in std_logic;
@@ -18,6 +20,9 @@ entity control_logic is
 			 IS_NEG:										in std_logic;
 			 IS_AUTO_INDEX:							in std_logic;
 			 LINK_VALUE:								in std_logic;
+			 LOAD:										out std_logic_vector(1 downto 0);
+			 NEXT_STATE_out:							out std_logic;
+			 END_STATE_out:							out std_logic;
 			 HLT_flag:									out std_logic;
 			 PC_BUS_SEL:								out std_logic;
 			 PC_LOAD_HI:								out std_logic;
@@ -58,9 +63,9 @@ end control_logic;
 
 architecture rtl of control_logic is
 	
-	component decoder_3_to_6 is
+	component decoder_3_to_8 is
 		port ( input:									in std_logic_vector(2 downto 0);
-				 output:									out std_logic_vector(5 downto 0)
+				 output:									out std_logic_vector(7 downto 0)
 		);
 	end component;
 	
@@ -68,7 +73,7 @@ architecture rtl of control_logic is
 	signal not_Z_BIT:									std_logic;
 	signal Z_BIT:										std_logic;
 	signal not_DCA:									std_logic;
-	signal decoder_outputs:							std_logic_vector(5 downto 0);
+	signal decoder_outputs:							std_logic_vector(7 downto 0);
 	
 	signal CLA0:										std_logic;
 	signal CLL:											std_logic;
@@ -121,7 +126,6 @@ architecture rtl of control_logic is
 	signal GROUP_2_AND:								std_logic;
 	
 begin
-	FP_CMD <= FP_ADDR_LOAD or FP_DEPOSIT or FP_EXAMINE;
 	
 	IOT_INS <= IR(0) and IR(1) and (not IR(2));
 	OPR_INS <= IR(0) and IR(1) and IR(2);
@@ -219,7 +223,7 @@ begin
 	MEM_WRITE <= (s_states(2) and ((t_states(2) and (DCA or JMS)) or (t_states(4) and ISZ))) or (s_states(3) and t_states(1) and IRQ);
 	ALU_CLEAR <= (s_states(0) and t_states(3) and CLA_MASTER) or (s_states(2) and t_states(3) and DCA);
 	
-	decoder_3_to_6_0:				decoder_3_to_6 port map (input => IR(2 downto 0), output => decoder_outputs);
+	decoder_3_to_8_0:				decoder_3_to_8 port map (input => IR(2 downto 0), output => decoder_outputs);
 	ANDD <= decoder_outputs(0);
 	TAD <= decoder_outputs(1);
 	ISZ <= decoder_outputs(2);

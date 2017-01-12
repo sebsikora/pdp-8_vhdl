@@ -2,22 +2,25 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity control_subsystem is
-	port ( clk:												in std_logic;
+	port ( MD_BUS:											in std_logic_vector(11 downto 0);
+			 not_reset:										in std_logic;
+			 clk:												in std_logic;
 			 -- Ultimately clk will become an output, driving the rest of the system.
 			 -- In the real system, an oscillator within the control subsystem will be switched
 			 -- on and off in response to control signals from the front panel / control
 			 -- logic. In this system, those same signals will instead gate a constant clock
 			 -- connected to a 'dummy' input here. Start will also become an output, perhaps others.
-			 not_reset:										in std_logic;
-			 start:											in std_logic;
-			 step:											in std_logic;
+			 START:											in std_logic;
+			 STEP:											in std_logic;
+			 NEXT_STATE:									in std_logic;
+			 END_STATE:										in std_logic;
+			 ASSERT_CONTROL:								in std_logic;
 			 FP_ADDR_LOAD:									in std_logic;
 			 FP_EXAMINE:									in std_logic;
 			 FP_DEPOSIT:									in std_logic;
 			 HRQ:												in std_logic;
 			 IRQ:												in std_logic;
 			 IRQ_ON:											in std_logic;
-			 MD_BUS:											in std_logic_vector(11 downto 0);
 			 ADD_CARRY:										in std_logic;
 			 INC_CARRY:										in std_logic;
 			 IS_ZERO_LAST:									in std_logic;
@@ -32,8 +35,6 @@ entity control_subsystem is
 			 PC_LOAD_LO:									out std_logic;
 			 PC_CLR_HI:										out std_logic;
 			 PC_CLR_LO:										out std_logic;
-			 IR_LOAD:										out std_logic;
-			 IR_CLR:											out std_logic;
 			 MA_LOAD_HI:									out std_logic;
 			 MA_LOAD_LO:									out std_logic;
 			 MA_BUS_SEL:									out std_logic;
@@ -75,24 +76,23 @@ architecture rtl of control_subsystem is
 		);
 	end component; 
 	component state_generator is
-		port ( irq:											in std_logic;
-				 IR:											in std_logic_vector(4 downto 0);
-				 step:										in std_logic;
-				 FP_CMD:										in std_logic;
+		port ( clk:											in std_logic;
 				 not_reset:									in std_logic;
-				 start:										in std_logic;
-				 clk:											in std_logic;
-				 state_clk:									out std_logic;
-				 HLT:											in std_logic;
+				 HLT_flag:									in std_logic;
+				 NEXT_STATE:								in std_logic;
+				 END_STATE:									in std_logic;
+				 LOAD:										in std_logic_vector(1 downto 0);
 				 HLT_indicator:							out std_logic;
-				 s_states:									out std_logic_vector(3 downto 0);
-				 t_states:									out std_logic_vector(5 downto 0)
+				 s_states:									out std_logic_vector(7 downto 0);
+				 t_states:									out std_logic_vector(7 downto 0)
 		);
 	end component;
 	component control_logic is
-		port ( s_states:									in std_logic_vector(3 downto 0);
-				 t_states:									in std_logic_vector(5 downto 0);
-				 FP_CMD:										out std_logic;
+		port ( s_states:									in std_logic_vector(7 downto 0);
+				 t_states:									in std_logic_vector(7 downto 0);
+				 NEXT_STATE_in:							in std_logic;
+				 END_STATE_in:								in std_logic;
+				 ASSERT_CONTROL:							in std_logic;
 				 FP_ADDR_LOAD:								in std_logic;
 				 FP_EXAMINE:								in std_logic;
 				 FP_DEPOSIT:								in std_logic;
@@ -106,6 +106,9 @@ architecture rtl of control_subsystem is
 				 IS_NEG:										in std_logic;
 				 IS_AUTO_INDEX:							in std_logic;
 				 LINK_VALUE:								in std_logic;
+				 LOAD:										out std_logic_vector(1 downto 0);
+				 NEXT_STATE_out:							out std_logic;
+				 END_STATE_out:							out std_logic;
 				 HLT_flag:									out std_logic;
 				 PC_BUS_SEL:								out std_logic;
 				 PC_LOAD_HI:								out std_logic;
@@ -144,23 +147,21 @@ architecture rtl of control_subsystem is
 		);
 	end component;
 	
-	signal s_state_signals:					std_logic_vector(3 downto 0);
-	signal t_state_signals:					std_logic_vector(5 downto 0);
-	signal state_clk:							std_logic;
-	signal HLT_signal:						std_logic;
+	signal s_state_signals:					std_logic_vector(7 downto 0);
+	signal load_s_state:						std_logic_vector(1 downto 0);
+	signal t_state_signals:					std_logic_vector(7 downto 0);
+	signal NEXT_STATE_flag:					std_logic;
+	signal END_STATE_flag:					std_logic;
+	signal HLT_flag:							std_logic;
 	signal IR_reg_output:					std_logic_vector(4 downto 0);
 	signal IR_clr_input:						std_logic;
 	signal IR_load_input:					std_logic;
-	signal IRQ_signal:						std_logic;
 	signal control_matrix_IR_input:		std_logic_vector(11 downto 0);
-	signal FP_CMD:								std_logic;
+	signal IRQ_signal:						std_logic;
 	
 	begin
 		
-		IR_LOAD <= IR_load_input;
-		IR_CLR <= IR_clr_input;
 		IRQ_signal <= IRQ and IRQ_ON;
-		
 		control_matrix_IR_input(4 downto 0) <= IR_reg_output;
 		control_matrix_IR_input(11 downto 5) <= MD_BUS(11 downto 5);
 		
@@ -172,23 +173,22 @@ architecture rtl of control_subsystem is
 																			not_reset => not_reset
 										);
 										
-		state_generator_0:		state_generator port map ( irq => IRQ_signal,
-																			IR => control_matrix_IR_input(4 downto 0),
-																		   step => step,
-																			FP_CMD => FP_CMD,
+		state_generator_0:		state_generator port map ( clk => clk,
 																			not_reset => not_reset,
-																		   start => start,
-																		   clk => clk,
-																			state_clk => state_clk,
-																			HLT => HLT_signal,
+																			HLT_flag => HLT_flag,
+																			NEXT_STATE => NEXT_STATE_flag,
+																			END_STATE => END_STATE_flag,
+																			LOAD => load_s_state,
 																			HLT_indicator => HLT_indicator,
-																		   s_states => s_state_signals,
-																		   t_states => t_state_signals
+																			s_states => s_state_signals,
+																			t_states => t_state_signals
 										);
 		
 		control_matrix:			control_logic   port map ( s_states => s_state_signals,
 																		   t_states => t_state_signals,
-																		   FP_CMD => FP_CMD,
+																		   NEXT_STATE_in => NEXT_STATE,
+																			END_STATE_in => END_STATE,
+																			ASSERT_CONTROL => ASSERT_CONTROL,
 																			FP_ADDR_LOAD => FP_ADDR_LOAD,
 																			FP_EXAMINE => FP_EXAMINE,
 																			FP_DEPOSIT => FP_DEPOSIT,
@@ -202,7 +202,10 @@ architecture rtl of control_subsystem is
 																		   IS_NEG => IS_NEG,
 																		   IS_AUTO_INDEX => IS_AUTO_INDEX,
 																		   LINK_VALUE => LINK_VALUE,
-																			HLT_flag => HLT_signal,
+																			LOAD => load_s_state,
+																			NEXT_STATE_out => NEXT_STATE_flag,
+																			END_STATE_out => END_STATE_flag,
+																			HLT_flag => HLT_flag,
 																		   PC_BUS_SEL => PC_BUS_SEL,
 																		   PC_LOAD_HI => PC_LOAD_HI,
 																		   PC_LOAD_LO => PC_LOAD_LO,

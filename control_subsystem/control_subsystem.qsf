@@ -54,13 +54,14 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VHDL_FILE ../state_generator/counter_3_bit.vhd
+set_global_assignment -name VHDL_FILE ../state_generator/counter_3_bit_with_load.vhd
+set_global_assignment -name VHDL_FILE ../state_generator/decoder_3_to_8.vhd
 set_global_assignment -name VHDL_FILE ../12_bit_register/register_1_bit.vhd
 set_global_assignment -name VHDL_FILE ../ms_jk_ff/ms_jk_ff.vhd
 set_global_assignment -name VHDL_FILE ../ms_jk_ff/basic_gates.vhd
 set_global_assignment -name VHDL_FILE ../state_generator/t_state_generator.vhd
 set_global_assignment -name VHDL_FILE ../state_generator/s_state_generator.vhd
-set_global_assignment -name VHDL_FILE ../state_generator/decoder_3_to_6.vhd
-set_global_assignment -name VHDL_FILE ../state_generator/counter_3_bit.vhd
 set_global_assignment -name VHDL_FILE ../12_bit_register/register_5_bit.vhd
 set_global_assignment -name VHDL_FILE ../control_logic/control_logic.vhd
 set_global_assignment -name VHDL_FILE ../state_generator/state_generator.vhd
