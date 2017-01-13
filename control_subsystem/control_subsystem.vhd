@@ -162,10 +162,10 @@ architecture rtl of control_subsystem is
 	begin
 		
 		IRQ_signal <= IRQ and IRQ_ON;
-		control_matrix_IR_input(4 downto 0) <= IR_reg_output;
-		control_matrix_IR_input(11 downto 5) <= MD_BUS(11 downto 5);
+		control_matrix_IR_input(11 downto 7) <= IR_reg_output;
+		control_matrix_IR_input(6 downto 0) <= MD_BUS(6 downto 0);
 		
-		register_5_bit_0:			register_5_bit  port map ( input => MD_BUS(4 downto 0),
+		register_5_bit_0:			register_5_bit  port map ( input => MD_BUS(11 downto 7),
 																			output => IR_reg_output,
 																			load => IR_load_input,
 																			clear => IR_clr_input,

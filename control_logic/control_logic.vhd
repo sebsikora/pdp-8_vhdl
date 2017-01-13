@@ -75,6 +75,11 @@ architecture rtl of control_logic is
 	signal not_DCA:									std_logic;
 	signal decoder_outputs:							std_logic_vector(7 downto 0);
 	
+	signal NEXT_STATE:								std_logic;
+	signal END_STATE:									std_logic;
+	signal not_END_STATE:							std_logic;
+	signal not_ASSERT_CONTROL:						std_logic;
+	
 	signal CLA0:										std_logic;
 	signal CLL:											std_logic;
 	signal CML:											std_logic;
@@ -127,12 +132,22 @@ architecture rtl of control_logic is
 	
 begin
 	
-	IOT_INS <= IR(0) and IR(1) and (not IR(2));
-	OPR_INS <= IR(0) and IR(1) and IR(2);
+	NEXT_STATE <= (s_states(0) and t_states(4) and (OPR_INS or BASIC_INS)) or (s_states(1) and t_states(3) and IND) or (s_states(2) and t_states(5) and BASIC_INS) or (s_states(3) and t_states(2) and IRQ);
+	END_STATE <= (s_states(0) and t_states(4) and (OPR_INS and (not IRQ))) or (s_states(2) and t_states(5) and BASIC_INS and (not IRQ)) or (s_states(3) and t_states(2) and IRQ);
+	not_END_STATE <= not END_STATE;
+	not_ASSERT_CONTROL <= not ASSERT_CONTROL;
+	
+	NEXT_STATE_out <= (NEXT_STATE or NEXT_STATE_in) and (not_ASSERT_CONTROL);
+	END_STATE_out <= (END_STATE or END_STATE_in) and (not_ASSERT_CONTROL);
+	LOAD(0) <= (OPR_INS and IRQ and NEXT_STATE and not_ASSERT_CONTROL and not_END_STATE);
+	LOAD(1) <= (OPR_INS and IRQ and NEXT_STATE and not_ASSERT_CONTROL and not_END_STATE) or (BASIC_INS and (not IR(8)) and NEXT_STATE and not_END_STATE);
+	
+	IOT_INS <= IR(11) and IR(10) and (not IR(9));
+	OPR_INS <= IR(11) and IR(10) and IR(9);
 	BASIC_INS <= not (IOT_INS or OPR_INS);
 	
-	Z_BIT <= BASIC_INS and IR(4);
-	IND <= BASIC_INS and IR(3);
+	Z_BIT <= BASIC_INS and IR(8);
+	IND <= BASIC_INS and IR(7);
 	
 	not_Z_BIT <= not Z_BIT;
 	not_DCA <= not DCA;
@@ -140,9 +155,9 @@ begin
 	
 	MEM_INST <= BASIC_INS and (JMP or ANDD or TAD or DCA or JMS or ISZ);
 	
-	GROUP_1 <= OPR_INS and (not IR(3));
-	GROUP_2_AND <= OPR_INS and (IR(3) and (not IR(8)) and (not IR(11)));
-	GROUP_2_OR <= OPR_INS and (IR(3) and IR(8) and (not IR(11)));
+	GROUP_1 <= OPR_INS and (not IR(8));
+	GROUP_2_AND <= OPR_INS and (IR(8) and (not IR(4)) and (not IR(0)));
+	GROUP_2_OR <= OPR_INS and (IR(8) and IR(4) and (not IR(0)));
 	
 	CLA0 <= GROUP_1 and IR(4);
 	CLL <= GROUP_1 and IR(5);
@@ -188,6 +203,11 @@ begin
 	-- NEW NOTE --
 	-- I think I have fixed this issue below now, but need to check it over above again, and also pay EXTRA ATTENTION
 	-- to this bit as I finish off summing the control states below...!
+	--
+	-- NEWER NOTE --
+	-- I now need to go through and correct the IR() bit indices, as they have ended up the wrong way round seemingly...?!
+	-- They need to be numbered from [11............0], wheras currently they are numbered [0.............11].
+	
 	PC_BUS_SEL <= (s_states(0) and (t_states(0) or t_states(1))) or (s_states(0) and t_states(3) and SKIP_MASTER) or (s_states(2) and ((t_states(1) and JMS) or (t_states(5) and ISZ)));
 	PC_LOAD_HI <= (s_states(0) and (t_states(1) or (t_states(3) and SKIP_MASTER))) or (s_states(2) and ((t_states(0) and JMP and IND) or (t_states(3) and JMS) or (t_states(5) and ISZ and IS_ZERO_LAST))) or (s_states(3) and t_states(2) and IRQ);
 	PC_LOAD_LO <= (s_states(0) and (t_states(1) or (t_states(3) and SKIP_MASTER))) or (s_states(2) and ((t_states(0) and JMP) or (t_states(3) and JMS) or (t_states(5) and ISZ and IS_ZERO_LAST))) or (s_states(3) and t_states(2) and IRQ);

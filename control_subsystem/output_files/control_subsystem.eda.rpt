@@ -1,5 +1,5 @@
 EDA Netlist Writer report for control_subsystem
-Thu Jan 12 21:27:33 2017
+Fri Jan 13 21:06:24 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu Jan 12 21:27:33 2017 ;
+; EDA Netlist Writer Status ; Successful - Fri Jan 13 21:06:24 2017 ;
 ; Revision Name             ; control_subsystem                     ;
 ; Top-level Entity Name     ; control_subsystem                     ;
 ; Family                    ; Cyclone II                            ;
@@ -84,13 +84,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Jan 12 21:27:32 2017
+    Info: Processing started: Fri Jan 13 21:06:24 2017
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off control_subsystem -c control_subsystem
 Info (204026): Generated files "control_subsystem.vho", "control_subsystem_fast.vho", "control_subsystem_vhd.sdo" and "control_subsystem_vhd_fast.sdo" in directory "/home/sebsikora/altera/projects/pdp-8/control_subsystem/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 892 megabytes
-    Info: Processing ended: Thu Jan 12 21:27:33 2017
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Fri Jan 13 21:06:24 2017
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

@@ -1,0 +1,174 @@
+# do control_subsystem_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /home/sebsikora/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /home/sebsikora/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/counter_3_bit.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity counter_3_bit
+# -- Compiling architecture rtl of counter_3_bit
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/counter_3_bit_with_load.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity counter_3_bit_with_load
+# -- Compiling architecture rtl of counter_3_bit_with_load
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/decoder_3_to_8.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity decoder_3_to_8
+# -- Compiling architecture rtl of decoder_3_to_8
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ms_jk_ff
+# -- Compiling architecture gates of ms_jk_ff
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity NOT_gate
+# -- Compiling architecture rtl of NOT_gate
+# -- Compiling entity NAND_3_gate
+# -- Compiling architecture rtl of NAND_3_gate
+# -- Compiling entity NAND_gate
+# -- Compiling architecture rtl of NAND_gate
+# -- Compiling entity AND_gate
+# -- Compiling architecture rtl of AND_gate
+# -- Compiling entity AND_3_gate
+# -- Compiling architecture rtl of AND_3_gate
+# -- Compiling entity OR_5_gate
+# -- Compiling architecture rtl of OR_5_gate
+# -- Compiling entity OR_4_gate
+# -- Compiling architecture rtl of OR_4_gate
+# -- Compiling entity OR_3_gate
+# -- Compiling architecture rtl of OR_3_gate
+# -- Compiling entity OR_gate
+# -- Compiling architecture rtl of OR_gate
+# -- Compiling entity XOR_gate
+# -- Compiling architecture rtl of XOR_gate
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/t_state_generator.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity t_state_generator
+# -- Compiling architecture rtl of t_state_generator
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/s_state_generator.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity s_state_generator
+# -- Compiling architecture rtl of s_state_generator
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/12_bit_register/register_5_bit.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity register_5_bit
+# -- Compiling architecture rtl of register_5_bit
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/control_logic/control_logic.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity control_logic
+# -- Compiling architecture rtl of control_logic
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/state_generator.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity state_generator
+# -- Compiling architecture rtl of state_generator
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/control_subsystem/control_subsystem.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity control_subsystem
+# -- Compiling architecture rtl of control_subsystem
+# 
+vsim -voptargs=+acc work.control_subsystem
+# vsim -voptargs=+acc work.control_subsystem 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.control_subsystem(rtl)
+# Loading work.register_5_bit(rtl)
+# Loading work.ms_jk_ff(gates)
+# Loading work.nand_3_gate(rtl)
+# Loading work.nand_gate(rtl)
+# Loading work.state_generator(rtl)
+# Loading work.s_state_generator(rtl)
+# Loading work.and_gate(rtl)
+# Loading work.counter_3_bit_with_load(rtl)
+# Loading work.or_gate(rtl)
+# Loading work.or_3_gate(rtl)
+# Loading work.decoder_3_to_8(rtl)
+# Loading work.and_3_gate(rtl)
+# Loading work.t_state_generator(rtl)
+# Loading work.counter_3_bit(rtl)
+# Loading work.control_logic(rtl)
+do /home/sebsikora/altera/projects/pdp-8/control_subsystem/simulation/modelsim/control_subsystem_redux_test_wave.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# 1
+# 1
+run
+# ** Warning: (vsim-8780) Forcing /control_subsystem/HRQ as root of /control_subsystem/control_matrix/HRQ specified in the force.
+run
+# ** Warning: (vsim-8780) Forcing /control_subsystem/HRQ as root of /control_subsystem/control_matrix/HRQ specified in the force.
+run
+# ** Warning: (vsim-8780) Forcing /control_subsystem/HRQ as root of /control_subsystem/control_matrix/HRQ specified in the force.
+run
+# ** Warning: (vsim-8780) Forcing /control_subsystem/HRQ as root of /control_subsystem/control_matrix/HRQ specified in the force.
+run
+# ** Warning: (vsim-8780) Forcing /control_subsystem/HRQ as root of /control_subsystem/control_matrix/HRQ specified in the force.
+run
+# ** Warning: (vsim-8780) Forcing /control_subsystem/HRQ as root of /control_subsystem/control_matrix/HRQ specified in the force.
+run
+# ** Warning: (vsim-8780) Forcing /control_subsystem/HRQ as root of /control_subsystem/control_matrix/HRQ specified in the force.
+run
+# ** Warning: (vsim-8780) Forcing /control_subsystem/HRQ as root of /control_subsystem/control_matrix/HRQ specified in the force.
+run
+# ** Warning: (vsim-8780) Forcing /control_subsystem/HRQ as root of /control_subsystem/control_matrix/HRQ specified in the force.
+run
+# ** Warning: (vsim-8780) Forcing /control_subsystem/HRQ as root of /control_subsystem/control_matrix/HRQ specified in the force.
+run
+# ** Warning: (vsim-8780) Forcing /control_subsystem/HRQ as root of /control_subsystem/control_matrix/HRQ specified in the force.
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+run
+run
+run
+run
+run
+run
+run
