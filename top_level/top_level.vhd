@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 entity top_level is
 	port ( mem_data_bus_in:								in std_logic_vector(11 downto 0);
 			 mem_data_bus_out:							out std_logic_vector(11 downto 0);
-			 mem_addr_bus_in:								in std_logic;
+			 mem_addr_bus_out:							out std_logic_vector(11 downto 0);
 			 not_reset:										in std_logic;
 			 clk_in:											in std_logic;
 			 START:											in std_logic;
@@ -14,14 +14,6 @@ end top_level;
 
 architecture rtl of top_level is
 
-component alu_main is
-	port ( alu_out_select:								in std_logic_vector(2 downto 0);
-			 inputA:											in std_logic_vector(11 downto 0);
-			 inputB:											in std_logic_vector(11 downto 0);
-			 output:											out std_logic_vector(11 downto 0);
-			 add_carry:										out std_logic
-	);
-end component;
 component control_subsystem is
 	port ( MD_BUS:											in std_logic_vector(11 downto 0);
 			 not_reset:										in std_logic;
@@ -81,7 +73,41 @@ component control_subsystem is
 			 MEM_WRITE:										out std_logic
 	);
 end component;
+component register_array is
+	port ( top_bus:										in std_logic_vector(11 downto 0);
+			 ALU_link_output:								in std_logic;
+			 register_output_bus:						out std_logic_vector(11 downto 0);
+			 mem_data_bus_in:								in std_logic_vector(11 downto 0);
+			 mem_data_bus_out:							out std_logic_vector(11 downto 0);
+			 mem_addr_bus_out:							out std_logic_vector(11 downto 0);
+			 not_reset:										in std_logic;
+			 clk:												in std_logic;
+			 LINK_VALUE:									out std_logic;
+			 PC_BUS_SEL:									in std_logic;
+			 PC_LOAD_HI:									in std_logic;
+			 PC_LOAD_LO:									in std_logic;
+			 PC_CLR_HI:										in std_logic;
+			 PC_CLR_LO:										in std_logic;
+			 MA_LOAD_HI:									in std_logic;
+			 MA_LOAD_LO:									in std_logic;
+			 MA_BUS_SEL:									in std_logic;
+			 MA_CLR_HI:										in std_logic;
+			 MA_CLR_LO:										in std_logic;
+			 MD_IN_SEL:										in std_logic;
+			 MD_BUS_SEL:									in std_logic;
+			 MD_CLR:											in std_logic;
+			 MD_LOAD:										in std_logic;
+			 SR_BUS_SEL:									in std_logic;
+			 AC_LOAD:										in std_logic;
+			 LINK_LOAD:										in std_logic
+	);
+end component;
 		
+		signal mem_data_bus:								std_logic_vector(11 downto 0);
+		signal ALU_link_output:							std_logic;
+		signal register_output_bus:					std_logic_vector(11 downto 0);
+		signal top_bus:									std_logic_vector(11 downto 0);
+		signal clk:											std_logic;
 		
 		signal NEXT_STATE:								std_logic;
 		signal END_STATE:									std_logic;
@@ -136,7 +162,92 @@ end component;
 		
 	begin
 		
+		register_array_0:		register_array port map ( top_bus => top_bus,
+																	  ALU_link_output => ALU_link_output,
+																	  register_output_bus => register_output_bus,
+																	  mem_data_bus_in => mem_data_bus_in,
+																	  mem_data_bus_out => mem_data_bus,
+																	  mem_addr_bus_out => mem_addr_bus_out,
+																	  not_reset => not_reset,
+																	  clk => clk,
+																 	  LINK_VALUE => LINK_VALUE,
+															 		  PC_BUS_SEL => PC_BUS_SEL,
+																	  PC_LOAD_HI => PC_LOAD_HI,
+																	  PC_LOAD_LO => PC_LOAD_LO,
+																	  PC_CLR_HI => PC_CLR_HI,
+																	  PC_CLR_LO => PC_CLR_LO,
+																	  MA_LOAD_HI => MA_LOAD_HI,
+																	  MA_LOAD_LO => MA_LOAD_LO,
+																	  MA_BUS_SEL => MA_BUS_SEL,
+																	  MA_CLR_HI => MA_CLR_HI,
+																	  MA_CLR_LO => MA_CLR_LO,
+																	  MD_IN_SEL => MD_IN_SEL,
+																	  MD_BUS_SEL => MD_BUS_SEL,
+																	  MD_CLR => MD_CLR,
+																	  MD_LOAD => MD_LOAD,
+																	  SR_BUS_SEL => SR_BUS_SEL,
+																	  AC_LOAD => AC_LOAD,
+																	  LINK_LOAD => LINK_LOAD 
+									);
 		
+		control_subsystem_0:	control_subsystem port map (MD_BUS => mem_data_bus,
+																		 not_reset => not_reset,
+																		 clk_in => clk_in,
+																		 clk => clk,
+																		 START => START,
+																		 STEP => STEP,
+																		 NEXT_STATE => NEXT_STATE,
+																		 END_STATE => END_STATE,
+																		 ASSERT_CONTROL => ASSERT_CONTROL,
+																		 FP_ADDR_LOAD => FP_ADDR_LOAD,
+																		 FP_EXAMINE => FP_EXAMINE,
+																		 FP_DEPOSIT => FP_DEPOSIT,
+																		 HRQ => HRQ,
+																		 IRQ => IRQ,
+																		 IRQ_ON => IRQ_ON,
+																		 ADD_CARRY => ADD_CARRY,
+																		 INC_CARRY => INC_CARRY,
+																		 IS_ZERO_LAST => IS_ZERO_LAST,
+																		 IS_ZERO => IS_ZERO,
+																		 IS_NEG => IS_NEG,
+																		 IS_AUTO_INDEX => IS_AUTO_INDEX,
+																		 LINK_VALUE => LINK_VALUE,
+																		 HLT_indicator => HLT_indicator,
+																		 RUN_indicator => RUN_indicator,
+																		 PC_BUS_SEL => PC_BUS_SEL,
+																		 PC_LOAD_HI => PC_LOAD_HI,
+																		 PC_LOAD_LO => PC_LOAD_LO,
+																		 PC_CLR_HI => PC_CLR_HI,
+																		 PC_CLR_LO => PC_CLR_LO,
+																		 MA_LOAD_HI => MA_LOAD_HI,
+																		 MA_LOAD_LO => MA_LOAD_LO,
+																		 MA_BUS_SEL => MA_BUS_SEL,
+																		 MA_CLR_HI => MA_CLR_HI,
+																		 MA_CLR_LO => MA_CLR_LO,
+																		 MD_IN_SEL => MD_IN_SEL,
+																		 MD_BUS_SEL => MD_BUS_SEL,
+																		 MD_CLR => MD_CLR,
+																		 MD_LOAD => MD_LOAD,
+																		 SR_BUS_SEL => SR_BUS_SEL,
+																		 AC_LOAD => AC_LOAD,
+																		 LINK_LOAD => LINK_LOAD,
+																		 LINK_OUT_SEL => LINK_OUT_SEL,
+																		 LINK_COMP => LINK_COMP,
+																		 ALU_FUNC_SEL_0 => ALU_FUNC_SEL_0,
+																		 ALU_FUNC_SEL_1 => ALU_FUNC_SEL_1,
+																		 ALU_FUNC_SEL_2 => ALU_FUNC_SEL_2,
+																		 ALU_OUT_SEL_0 => ALU_OUT_SEL_0,
+																		 ALU_OUT_SEL_1 => ALU_OUT_SEL_1,
+																		 ALU_OUT_SEL_2 => ALU_OUT_SEL_2,
+																		 ALU_COMP => ALU_COMP,
+																		 ALU_INC => ALU_INC,
+																		 ALU_CLEAR => ALU_CLEAR,
+																		 ALU_ROT_1 => ALU_ROT_1,
+																		 ALU_ROT_2 => ALU_ROT_2,
+																		 MEM_READ => MEM_READ,
+																		 MEM_WRITE => MEM_WRITE
+									);
 		
+		mem_data_bus_out <= mem_data_bus;
 		
 end rtl;

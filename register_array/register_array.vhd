@@ -1,19 +1,38 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity top_level is
-	port ( mem_data_bus_in:								in std_logic_vector(11 downto 0);
+entity register_array is
+	port ( top_bus:										in std_logic_vector(11 downto 0);
+			 ALU_link_output:								in std_logic;
+			 register_output_bus:						out std_logic_vector(11 downto 0);
+			 mem_data_bus_in:								in std_logic_vector(11 downto 0);
 			 mem_data_bus_out:							out std_logic_vector(11 downto 0);
-			 mem_addr_bus_in:								in std_logic;
+			 mem_addr_bus_out:							out std_logic_vector(11 downto 0);
 			 not_reset:										in std_logic;
-			 clk_in:											in std_logic;
-			 START:											in std_logic;
-			 STEP:											in std_logic
+			 clk:												in std_logic;
+			 LINK_VALUE:									out std_logic;
+			 PC_BUS_SEL:									in std_logic;
+			 PC_LOAD_HI:									in std_logic;
+			 PC_LOAD_LO:									in std_logic;
+			 PC_CLR_HI:										in std_logic;
+			 PC_CLR_LO:										in std_logic;
+			 MA_LOAD_HI:									in std_logic;
+			 MA_LOAD_LO:									in std_logic;
+			 MA_BUS_SEL:									in std_logic;
+			 MA_CLR_HI:										in std_logic;
+			 MA_CLR_LO:										in std_logic;
+			 MD_IN_SEL:										in std_logic;
+			 MD_BUS_SEL:									in std_logic;
+			 MD_CLR:											in std_logic;
+			 MD_LOAD:										in std_logic;
+			 SR_BUS_SEL:									in std_logic;
+			 AC_LOAD:										in std_logic;
+			 LINK_LOAD:										in std_logic
 	);
-end top_level;
+end register_array;
 
 
-architecture rtl of top_level is
+architecture rtl of register_array is
 component register_1_bit is
 	port ( input:			in std_logic;
 			 output:			out std_logic;
@@ -56,27 +75,22 @@ component register_output_mux is
 			 SR_BUS_SEL:									in std_logic
 	);
 end component;
-component address_comparator is
-	port( input:											in std_logic_vector(11 downto 0);
-			output:											out std_logic_vector(11 downto 0);
-			IS_AUTO_INDEX:									out std_logic
+component  md_input_mux is
+	port ( mem_data_bus_input:							in std_logic_vector(11 downto 0);
+			 top_bus_input:								in std_logic_vector(11 downto 0);
+			 output:											out std_logic_vector(11 downto 0);
+			 MD_IN_SEL:										in std_logic
 	);
 end component;
-
-		signal top_bus:									std_logic_vector(11 downto 0);
-		signal register_output_bus:					std_logic_vector(11 downto 0);
-		signal MA_register_output:						std_logic_vector(11 downto 0);
-		signal MD_register_output:						std_logic_vector(11 downto 0);
-		signal PC_register_output:						std_logic_vector(11 downto 0);
-		signal SR_register_output:						std_logic_vector(11 downto 0);
-		signal AC_register_output:						std_logic_vector(11 downto 0);
-		signal LINK_register_output:					std_logic;
-		
-		signal ALU_link_output:							std_logic;
-		
-		signal clk:											std_logic;
-
-		begin
+	
+	signal MA_register_output:						std_logic_vector(11 downto 0);
+	signal MD_register_input:						std_logic_vector(11 downto 0);
+	signal MD_register_output:						std_logic_vector(11 downto 0);
+	signal PC_register_output:						std_logic_vector(11 downto 0);
+	signal SR_register_output:						std_logic_vector(11 downto 0);
+	signal AC_register_output:						std_logic_vector(11 downto 0);
+	
+	begin
 		
 		MA_register:	register_12_bit_split port map ( input_hi => top_bus(11 downto 5),
   																	   input_lo => top_bus(4 downto 0),
@@ -90,7 +104,13 @@ end component;
 																	   not_reset => not_reset
 							);
 		
-		MD_register:	register_12_bit 		 port map ( input => top_bus,
+		md_input_mux_0:	md_input_mux 		 port map ( mem_data_bus_input => mem_data_bus_in,
+																		top_bus_input => top_bus,
+																		output => MD_register_input,
+																		MD_IN_SEL => MD_IN_SEL
+							);
+		
+		MD_register:	register_12_bit 		 port map ( input => MD_register_input,
 																	   output => MD_register_output,
 																	   load => MD_LOAD,
 																	   clear => MD_CLR,
@@ -119,11 +139,25 @@ end component;
 							);
 		
 		LINK_register:	register_1_bit			 port map ( input => ALU_link_output,
-																		output => LINK_register_output,
+																		output => LINK_VALUE,
 																		load => LINK_LOAD,
 																		clk => clk,
 																		not_reset => not_reset
 							);
+		
+		output_mux:		register_output_mux 	 port map ( input_0 => MA_register_output,
+																		input_1 => MD_register_output,
+																		input_2 => PC_register_output,
+																		input_3 => SR_register_output,
+																		output => register_output_bus,
+																		MA_BUS_SEL => MA_BUS_SEL,
+																		MD_BUS_SEL => MD_BUS_SEL,
+																		PC_BUS_SEL => PC_BUS_SEL,
+																		SR_BUS_SEL => SR_BUS_SEL 
+							);
+		
+		mem_addr_bus_out <= MA_register_output;
+		mem_data_bus_out <= MD_register_output;
 		
 
 end rtl;

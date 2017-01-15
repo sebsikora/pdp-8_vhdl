@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for top_level
-Sun Jan 15 18:00:45 2017
+Sun Jan 15 20:10:01 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -16,19 +16,42 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   8. Slow Model Recovery Summary
   9. Slow Model Removal Summary
  10. Slow Model Minimum Pulse Width Summary
- 11. Slow Model Datasheet Report
- 12. Fast Model Setup Summary
- 13. Fast Model Hold Summary
- 14. Fast Model Recovery Summary
- 15. Fast Model Removal Summary
- 16. Fast Model Minimum Pulse Width Summary
- 17. Fast Model Datasheet Report
- 18. Multicorner Timing Analysis Summary
- 19. Clock Transfers
- 20. Report TCCS
- 21. Report RSKM
- 22. Unconstrained Paths
- 23. TimeQuest Timing Analyzer Messages
+ 11. Slow Model Setup: 'START'
+ 12. Slow Model Hold: 'START'
+ 13. Slow Model Minimum Pulse Width: 'START'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Fast Model Setup Summary
+ 21. Fast Model Hold Summary
+ 22. Fast Model Recovery Summary
+ 23. Fast Model Removal Summary
+ 24. Fast Model Minimum Pulse Width Summary
+ 25. Fast Model Setup: 'START'
+ 26. Fast Model Hold: 'START'
+ 27. Fast Model Minimum Pulse Width: 'START'
+ 28. Setup Times
+ 29. Hold Times
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Propagation Delay
+ 33. Minimum Propagation Delay
+ 34. Multicorner Timing Analysis Summary
+ 35. Setup Times
+ 36. Hold Times
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Progagation Delay
+ 40. Minimum Progagation Delay
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
 
 
 
@@ -75,28 +98,41 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-----------
-; Clocks ;
-----------
-No clocks to report.
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; START      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { START } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
 
 
----------------------------
-; Slow Model Fmax Summary ;
----------------------------
-No paths to report.
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 228.62 MHz ; 228.62 MHz      ; START      ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-----------------------------
-; Slow Model Setup Summary ;
-----------------------------
-No paths to report.
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; START ; -1.719 ; -1.719        ;
++-------+--------+---------------+
 
 
----------------------------
-; Slow Model Hold Summary ;
----------------------------
-No paths to report.
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; START ; 0.460 ; 0.000         ;
++-------+-------+---------------+
 
 
 -------------------------------
@@ -111,28 +147,414 @@ No paths to report.
 No paths to report.
 
 
-------------------------------------------
++----------------------------------------+
 ; Slow Model Minimum Pulse Width Summary ;
-------------------------------------------
-No paths to report.
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; START ; -1.469 ; -1.469                ;
++-------+--------+-----------------------+
 
 
--------------------------------
-; Slow Model Datasheet Report ;
--------------------------------
-Nothing to report.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'START'                                                                                                                                                                                                                                                                                                    ;
++--------+-----------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                                                             ; To Node                                                                                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.719 ; control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; START        ; START       ; 1.000        ; 0.000      ; 0.992      ;
+; -1.687 ; START                                                                                                                 ; control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; START        ; START       ; 0.500        ; 2.438      ; 2.898      ;
+; -1.187 ; START                                                                                                                 ; control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; START        ; START       ; 1.000        ; 2.438      ; 2.898      ;
++--------+-----------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-----------------------------
-; Fast Model Setup Summary ;
-----------------------------
-No paths to report.
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'START'                                                                                                                                                                                                                                                                                                    ;
++-------+-----------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                                                             ; To Node                                                                                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.460 ; START                                                                                                                 ; control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; START        ; START       ; 0.000        ; 2.438      ; 2.898      ;
+; 0.960 ; START                                                                                                                 ; control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; START        ; START       ; -0.500       ; 2.438      ; 2.898      ;
+; 0.992 ; control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; START        ; START       ; 0.000        ; 0.000      ; 0.992      ;
++-------+-----------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
----------------------------
-; Fast Model Hold Summary ;
----------------------------
-No paths to report.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'START'                                                                                                                                                                ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                                                ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------------------------------------------------------------------------+
+; -1.469 ; 1.000        ; 2.469          ; Port Rate        ; START ; Rise       ; START                                                                                                                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; START ; Rise       ; START|combout                                                                                                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; START ; Rise       ; START|combout                                                                                                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; START ; Rise       ; control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; START ; Rise       ; control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; START ; Rise       ; control_subsystem_0|clock_generator_0|ms_jk_ff_0|nand_5|output~1|datac                                                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; START ; Rise       ; control_subsystem_0|clock_generator_0|ms_jk_ff_0|nand_5|output~1|datac                                                ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; START     ; START      ; 2.187 ; 2.187 ; Rise       ; START           ;
+; not_reset ; START      ; 7.605 ; 7.605 ; Rise       ; START           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; START     ; START      ; -0.460 ; -0.460 ; Rise       ; START           ;
+; not_reset ; START      ; -5.878 ; -5.878 ; Rise       ; START           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------------+
+; Clock to Output Times                                                               ;
++-----------------------+------------+--------+--------+------------+-----------------+
+; Data Port             ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------------------+------------+--------+--------+------------+-----------------+
+; mem_addr_bus_out[*]   ; START      ; 30.853 ; 30.853 ; Rise       ; START           ;
+;  mem_addr_bus_out[0]  ; START      ; 10.197 ; 10.197 ; Rise       ; START           ;
+;  mem_addr_bus_out[1]  ; START      ; 9.623  ; 9.623  ; Rise       ; START           ;
+;  mem_addr_bus_out[2]  ; START      ; 9.926  ; 9.926  ; Rise       ; START           ;
+;  mem_addr_bus_out[3]  ; START      ; 9.954  ; 9.954  ; Rise       ; START           ;
+;  mem_addr_bus_out[4]  ; START      ; 7.606  ; 7.606  ; Rise       ; START           ;
+;  mem_addr_bus_out[5]  ; START      ; 30.027 ; 30.027 ; Rise       ; START           ;
+;  mem_addr_bus_out[6]  ; START      ; 29.736 ; 29.736 ; Rise       ; START           ;
+;  mem_addr_bus_out[7]  ; START      ; 29.714 ; 29.714 ; Rise       ; START           ;
+;  mem_addr_bus_out[8]  ; START      ; 29.587 ; 29.587 ; Rise       ; START           ;
+;  mem_addr_bus_out[9]  ; START      ; 29.683 ; 29.683 ; Rise       ; START           ;
+;  mem_addr_bus_out[10] ; START      ; 30.022 ; 30.022 ; Rise       ; START           ;
+;  mem_addr_bus_out[11] ; START      ; 30.853 ; 30.853 ; Rise       ; START           ;
+; mem_data_bus_out[*]   ; START      ; 23.903 ; 23.903 ; Rise       ; START           ;
+;  mem_data_bus_out[0]  ; START      ; 23.557 ; 23.557 ; Rise       ; START           ;
+;  mem_data_bus_out[1]  ; START      ; 22.637 ; 22.637 ; Rise       ; START           ;
+;  mem_data_bus_out[2]  ; START      ; 23.341 ; 23.341 ; Rise       ; START           ;
+;  mem_data_bus_out[3]  ; START      ; 23.383 ; 23.383 ; Rise       ; START           ;
+;  mem_data_bus_out[4]  ; START      ; 23.622 ; 23.622 ; Rise       ; START           ;
+;  mem_data_bus_out[5]  ; START      ; 23.163 ; 23.163 ; Rise       ; START           ;
+;  mem_data_bus_out[6]  ; START      ; 23.258 ; 23.258 ; Rise       ; START           ;
+;  mem_data_bus_out[7]  ; START      ; 23.365 ; 23.365 ; Rise       ; START           ;
+;  mem_data_bus_out[8]  ; START      ; 23.331 ; 23.331 ; Rise       ; START           ;
+;  mem_data_bus_out[9]  ; START      ; 23.598 ; 23.598 ; Rise       ; START           ;
+;  mem_data_bus_out[10] ; START      ; 23.356 ; 23.356 ; Rise       ; START           ;
+;  mem_data_bus_out[11] ; START      ; 23.903 ; 23.903 ; Rise       ; START           ;
++-----------------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                       ;
++-----------------------+------------+--------+--------+------------+-----------------+
+; Data Port             ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------------------+------------+--------+--------+------------+-----------------+
+; mem_addr_bus_out[*]   ; START      ; 7.606  ; 7.606  ; Rise       ; START           ;
+;  mem_addr_bus_out[0]  ; START      ; 10.197 ; 10.197 ; Rise       ; START           ;
+;  mem_addr_bus_out[1]  ; START      ; 9.623  ; 9.623  ; Rise       ; START           ;
+;  mem_addr_bus_out[2]  ; START      ; 9.926  ; 9.926  ; Rise       ; START           ;
+;  mem_addr_bus_out[3]  ; START      ; 9.954  ; 9.954  ; Rise       ; START           ;
+;  mem_addr_bus_out[4]  ; START      ; 7.606  ; 7.606  ; Rise       ; START           ;
+;  mem_addr_bus_out[5]  ; START      ; 9.953  ; 9.953  ; Rise       ; START           ;
+;  mem_addr_bus_out[6]  ; START      ; 10.073 ; 10.073 ; Rise       ; START           ;
+;  mem_addr_bus_out[7]  ; START      ; 9.807  ; 9.807  ; Rise       ; START           ;
+;  mem_addr_bus_out[8]  ; START      ; 9.663  ; 9.663  ; Rise       ; START           ;
+;  mem_addr_bus_out[9]  ; START      ; 9.648  ; 9.648  ; Rise       ; START           ;
+;  mem_addr_bus_out[10] ; START      ; 10.113 ; 10.113 ; Rise       ; START           ;
+;  mem_addr_bus_out[11] ; START      ; 10.694 ; 10.694 ; Rise       ; START           ;
+; mem_data_bus_out[*]   ; START      ; 8.941  ; 8.941  ; Rise       ; START           ;
+;  mem_data_bus_out[0]  ; START      ; 9.537  ; 9.537  ; Rise       ; START           ;
+;  mem_data_bus_out[1]  ; START      ; 8.977  ; 8.977  ; Rise       ; START           ;
+;  mem_data_bus_out[2]  ; START      ; 9.680  ; 9.680  ; Rise       ; START           ;
+;  mem_data_bus_out[3]  ; START      ; 9.320  ; 9.320  ; Rise       ; START           ;
+;  mem_data_bus_out[4]  ; START      ; 9.551  ; 9.551  ; Rise       ; START           ;
+;  mem_data_bus_out[5]  ; START      ; 9.915  ; 9.915  ; Rise       ; START           ;
+;  mem_data_bus_out[6]  ; START      ; 8.941  ; 8.941  ; Rise       ; START           ;
+;  mem_data_bus_out[7]  ; START      ; 9.711  ; 9.711  ; Rise       ; START           ;
+;  mem_data_bus_out[8]  ; START      ; 9.384  ; 9.384  ; Rise       ; START           ;
+;  mem_data_bus_out[9]  ; START      ; 9.292  ; 9.292  ; Rise       ; START           ;
+;  mem_data_bus_out[10] ; START      ; 9.293  ; 9.293  ; Rise       ; START           ;
+;  mem_data_bus_out[11] ; START      ; 10.301 ; 10.301 ; Rise       ; START           ;
++-----------------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Propagation Delay                                                              ;
++---------------------+----------------------+--------+--------+--------+--------+
+; Input Port          ; Output Port          ; RR     ; RF     ; FR     ; FF     ;
++---------------------+----------------------+--------+--------+--------+--------+
+; clk_in              ; mem_addr_bus_out[0]  ; 11.840 ; 11.840 ; 11.840 ; 11.840 ;
+; clk_in              ; mem_addr_bus_out[1]  ; 11.077 ; 11.077 ; 11.077 ; 11.077 ;
+; clk_in              ; mem_addr_bus_out[2]  ; 11.818 ; 11.818 ; 11.818 ; 11.818 ;
+; clk_in              ; mem_addr_bus_out[3]  ; 11.600 ; 11.600 ; 11.600 ; 11.600 ;
+; clk_in              ; mem_addr_bus_out[4]  ; 11.466 ; 11.466 ; 11.466 ; 11.466 ;
+; clk_in              ; mem_addr_bus_out[5]  ; 31.592 ; 31.592 ; 31.592 ; 31.592 ;
+; clk_in              ; mem_addr_bus_out[6]  ; 31.301 ; 31.301 ; 31.301 ; 31.301 ;
+; clk_in              ; mem_addr_bus_out[7]  ; 31.279 ; 31.279 ; 31.279 ; 31.279 ;
+; clk_in              ; mem_addr_bus_out[8]  ; 31.152 ; 31.152 ; 31.152 ; 31.152 ;
+; clk_in              ; mem_addr_bus_out[9]  ; 31.248 ; 31.248 ; 31.248 ; 31.248 ;
+; clk_in              ; mem_addr_bus_out[10] ; 31.587 ; 31.587 ; 31.587 ; 31.587 ;
+; clk_in              ; mem_addr_bus_out[11] ; 32.418 ; 32.418 ; 32.418 ; 32.418 ;
+; clk_in              ; mem_data_bus_out[0]  ; 25.122 ; 25.122 ; 25.122 ; 25.122 ;
+; clk_in              ; mem_data_bus_out[1]  ; 24.202 ; 24.202 ; 24.202 ; 24.202 ;
+; clk_in              ; mem_data_bus_out[2]  ; 24.906 ; 24.906 ; 24.906 ; 24.906 ;
+; clk_in              ; mem_data_bus_out[3]  ; 24.948 ; 24.948 ; 24.948 ; 24.948 ;
+; clk_in              ; mem_data_bus_out[4]  ; 25.187 ; 25.187 ; 25.187 ; 25.187 ;
+; clk_in              ; mem_data_bus_out[5]  ; 24.728 ; 24.728 ; 24.728 ; 24.728 ;
+; clk_in              ; mem_data_bus_out[6]  ; 24.823 ; 24.823 ; 24.823 ; 24.823 ;
+; clk_in              ; mem_data_bus_out[7]  ; 24.930 ; 24.930 ; 24.930 ; 24.930 ;
+; clk_in              ; mem_data_bus_out[8]  ; 24.896 ; 24.896 ; 24.896 ; 24.896 ;
+; clk_in              ; mem_data_bus_out[9]  ; 25.163 ; 25.163 ; 25.163 ; 25.163 ;
+; clk_in              ; mem_data_bus_out[10] ; 24.921 ; 24.921 ; 24.921 ; 24.921 ;
+; clk_in              ; mem_data_bus_out[11] ; 25.468 ; 25.468 ; 25.468 ; 25.468 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[5]  ; 25.034 ; 25.034 ; 25.034 ; 25.034 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[6]  ; 24.743 ; 24.743 ; 24.743 ; 24.743 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[7]  ; 24.721 ; 24.721 ; 24.721 ; 24.721 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[8]  ; 24.594 ; 24.594 ; 24.594 ; 24.594 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[9]  ; 24.690 ; 24.690 ; 24.690 ; 24.690 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[10] ; 25.029 ; 25.029 ; 25.029 ; 25.029 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[11] ; 25.860 ; 25.860 ; 25.860 ; 25.860 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[0]  ; 12.184 ;        ;        ; 12.184 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[1]  ; 17.635 ; 17.635 ; 17.635 ; 17.635 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[2]  ; 18.339 ; 18.339 ; 18.339 ; 18.339 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[3]  ; 18.381 ; 18.381 ; 18.381 ; 18.381 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[4]  ; 18.620 ; 18.620 ; 18.620 ; 18.620 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[5]  ; 18.161 ; 18.161 ; 18.161 ; 18.161 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[6]  ; 18.256 ; 18.256 ; 18.256 ; 18.256 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[7]  ; 18.363 ; 18.363 ; 18.363 ; 18.363 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[8]  ; 18.329 ; 18.329 ; 18.329 ; 18.329 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[9]  ; 18.596 ; 18.596 ; 18.596 ; 18.596 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[10] ; 18.354 ; 18.354 ; 18.354 ; 18.354 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[11] ; 18.901 ; 18.901 ; 18.901 ; 18.901 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[5]  ; 24.206 ; 24.206 ; 24.206 ; 24.206 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[6]  ; 23.915 ; 23.915 ; 23.915 ; 23.915 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[7]  ; 23.893 ; 23.893 ; 23.893 ; 23.893 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[8]  ; 23.766 ; 23.766 ; 23.766 ; 23.766 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[9]  ; 23.862 ; 23.862 ; 23.862 ; 23.862 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[10] ; 24.201 ; 24.201 ; 24.201 ; 24.201 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[11] ; 25.032 ; 25.032 ; 25.032 ; 25.032 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[0]  ; 17.736 ; 17.736 ; 17.736 ; 17.736 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[1]  ; 10.436 ;        ;        ; 10.436 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[2]  ; 17.520 ; 17.520 ; 17.520 ; 17.520 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[3]  ; 17.562 ; 17.562 ; 17.562 ; 17.562 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[4]  ; 17.801 ; 17.801 ; 17.801 ; 17.801 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[5]  ; 17.342 ; 17.342 ; 17.342 ; 17.342 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[6]  ; 17.437 ; 17.437 ; 17.437 ; 17.437 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[7]  ; 17.544 ; 17.544 ; 17.544 ; 17.544 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[8]  ; 17.510 ; 17.510 ; 17.510 ; 17.510 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[9]  ; 17.777 ; 17.777 ; 17.777 ; 17.777 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[10] ; 17.535 ; 17.535 ; 17.535 ; 17.535 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[11] ; 18.082 ; 18.082 ; 18.082 ; 18.082 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[5]  ; 23.744 ; 23.744 ; 23.744 ; 23.744 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[6]  ; 23.453 ; 23.453 ; 23.453 ; 23.453 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[7]  ; 23.431 ; 23.431 ; 23.431 ; 23.431 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[8]  ; 23.304 ; 23.304 ; 23.304 ; 23.304 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[9]  ; 23.400 ; 23.400 ; 23.400 ; 23.400 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[10] ; 23.739 ; 23.739 ; 23.739 ; 23.739 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[11] ; 24.570 ; 24.570 ; 24.570 ; 24.570 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[0]  ; 17.265 ; 17.265 ; 17.265 ; 17.265 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[1]  ; 16.345 ; 16.345 ; 16.345 ; 16.345 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[2]  ; 10.810 ;        ;        ; 10.810 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[3]  ; 17.091 ; 17.091 ; 17.091 ; 17.091 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[4]  ; 17.330 ; 17.330 ; 17.330 ; 17.330 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[5]  ; 16.871 ; 16.871 ; 16.871 ; 16.871 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[6]  ; 16.966 ; 16.966 ; 16.966 ; 16.966 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[7]  ; 17.073 ; 17.073 ; 17.073 ; 17.073 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[8]  ; 17.039 ; 17.039 ; 17.039 ; 17.039 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[9]  ; 17.306 ; 17.306 ; 17.306 ; 17.306 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[10] ; 17.064 ; 17.064 ; 17.064 ; 17.064 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[11] ; 17.611 ; 17.611 ; 17.611 ; 17.611 ;
+; mem_data_bus_in[3]  ; mem_data_bus_out[3]  ; 6.449  ;        ;        ; 6.449  ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[5]  ; 13.299 ;        ;        ; 13.299 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[6]  ; 12.937 ;        ;        ; 12.937 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[7]  ; 13.024 ;        ;        ; 13.024 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[8]  ; 12.758 ;        ;        ; 12.758 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[9]  ; 12.858 ;        ;        ; 12.858 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[10] ; 12.576 ;        ;        ; 12.576 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[11] ; 13.773 ;        ;        ; 13.773 ;
+; mem_data_bus_in[4]  ; mem_data_bus_out[4]  ; 7.636  ;        ;        ; 7.636  ;
+; mem_data_bus_in[5]  ; mem_data_bus_out[5]  ; 6.617  ;        ;        ; 6.617  ;
+; mem_data_bus_in[6]  ; mem_data_bus_out[6]  ; 6.583  ;        ;        ; 6.583  ;
+; mem_data_bus_in[7]  ; mem_data_bus_out[7]  ; 10.367 ;        ;        ; 10.367 ;
+; mem_data_bus_in[8]  ; mem_data_bus_out[8]  ; 11.493 ;        ;        ; 11.493 ;
+; mem_data_bus_in[9]  ; mem_data_bus_out[9]  ; 11.522 ;        ;        ; 11.522 ;
+; mem_data_bus_in[10] ; mem_data_bus_out[10] ; 11.213 ;        ;        ; 11.213 ;
+; mem_data_bus_in[11] ; mem_data_bus_out[11] ; 11.709 ;        ;        ; 11.709 ;
+; not_reset           ; mem_addr_bus_out[0]  ; 12.207 ;        ;        ; 12.207 ;
+; not_reset           ; mem_addr_bus_out[1]  ; 11.840 ;        ;        ; 11.840 ;
+; not_reset           ; mem_addr_bus_out[2]  ; 12.431 ;        ;        ; 12.431 ;
+; not_reset           ; mem_addr_bus_out[3]  ; 11.964 ;        ;        ; 11.964 ;
+; not_reset           ; mem_addr_bus_out[4]  ; 11.768 ;        ;        ; 11.768 ;
+; not_reset           ; mem_addr_bus_out[5]  ; 30.958 ; 30.958 ; 30.958 ; 30.958 ;
+; not_reset           ; mem_addr_bus_out[6]  ; 30.667 ; 30.667 ; 30.667 ; 30.667 ;
+; not_reset           ; mem_addr_bus_out[7]  ; 30.645 ; 30.645 ; 30.645 ; 30.645 ;
+; not_reset           ; mem_addr_bus_out[8]  ; 30.518 ; 30.518 ; 30.518 ; 30.518 ;
+; not_reset           ; mem_addr_bus_out[9]  ; 30.614 ; 30.614 ; 30.614 ; 30.614 ;
+; not_reset           ; mem_addr_bus_out[10] ; 30.953 ; 30.953 ; 30.953 ; 30.953 ;
+; not_reset           ; mem_addr_bus_out[11] ; 31.784 ; 31.784 ; 31.784 ; 31.784 ;
+; not_reset           ; mem_data_bus_out[0]  ; 24.488 ; 24.488 ; 24.488 ; 24.488 ;
+; not_reset           ; mem_data_bus_out[1]  ; 23.568 ; 23.568 ; 23.568 ; 23.568 ;
+; not_reset           ; mem_data_bus_out[2]  ; 24.272 ; 24.272 ; 24.272 ; 24.272 ;
+; not_reset           ; mem_data_bus_out[3]  ; 24.314 ; 24.314 ; 24.314 ; 24.314 ;
+; not_reset           ; mem_data_bus_out[4]  ; 24.553 ; 24.553 ; 24.553 ; 24.553 ;
+; not_reset           ; mem_data_bus_out[5]  ; 24.094 ; 24.094 ; 24.094 ; 24.094 ;
+; not_reset           ; mem_data_bus_out[6]  ; 24.189 ; 24.189 ; 24.189 ; 24.189 ;
+; not_reset           ; mem_data_bus_out[7]  ; 24.296 ; 24.296 ; 24.296 ; 24.296 ;
+; not_reset           ; mem_data_bus_out[8]  ; 24.262 ; 24.262 ; 24.262 ; 24.262 ;
+; not_reset           ; mem_data_bus_out[9]  ; 24.529 ; 24.529 ; 24.529 ; 24.529 ;
+; not_reset           ; mem_data_bus_out[10] ; 24.287 ; 24.287 ; 24.287 ; 24.287 ;
+; not_reset           ; mem_data_bus_out[11] ; 24.834 ; 24.834 ; 24.834 ; 24.834 ;
++---------------------+----------------------+--------+--------+--------+--------+
+
+
++--------------------------------------------------------------------------------+
+; Minimum Propagation Delay                                                      ;
++---------------------+----------------------+--------+--------+--------+--------+
+; Input Port          ; Output Port          ; RR     ; RF     ; FR     ; FF     ;
++---------------------+----------------------+--------+--------+--------+--------+
+; clk_in              ; mem_addr_bus_out[0]  ; 11.840 ; 11.840 ; 11.840 ; 11.840 ;
+; clk_in              ; mem_addr_bus_out[1]  ; 11.077 ; 11.077 ; 11.077 ; 11.077 ;
+; clk_in              ; mem_addr_bus_out[2]  ; 11.818 ; 11.818 ; 11.818 ; 11.818 ;
+; clk_in              ; mem_addr_bus_out[3]  ; 11.600 ; 11.600 ; 11.600 ; 11.600 ;
+; clk_in              ; mem_addr_bus_out[4]  ; 11.466 ; 11.466 ; 11.466 ; 11.466 ;
+; clk_in              ; mem_addr_bus_out[5]  ; 12.065 ; 12.065 ; 12.065 ; 12.065 ;
+; clk_in              ; mem_addr_bus_out[6]  ; 12.013 ; 12.013 ; 12.013 ; 12.013 ;
+; clk_in              ; mem_addr_bus_out[7]  ; 11.746 ; 11.746 ; 11.746 ; 11.746 ;
+; clk_in              ; mem_addr_bus_out[8]  ; 11.572 ; 11.572 ; 11.572 ; 11.572 ;
+; clk_in              ; mem_addr_bus_out[9]  ; 11.098 ; 11.098 ; 11.098 ; 11.098 ;
+; clk_in              ; mem_addr_bus_out[10] ; 12.054 ; 12.054 ; 12.054 ; 12.054 ;
+; clk_in              ; mem_addr_bus_out[11] ; 12.634 ; 12.634 ; 12.634 ; 12.634 ;
+; clk_in              ; mem_data_bus_out[0]  ; 11.142 ; 11.142 ; 11.142 ; 11.142 ;
+; clk_in              ; mem_data_bus_out[1]  ; 11.199 ; 11.199 ; 11.199 ; 11.199 ;
+; clk_in              ; mem_data_bus_out[2]  ; 11.911 ; 11.911 ; 11.911 ; 11.911 ;
+; clk_in              ; mem_data_bus_out[3]  ; 11.558 ; 11.558 ; 11.558 ; 11.558 ;
+; clk_in              ; mem_data_bus_out[4]  ; 11.515 ; 11.515 ; 11.515 ; 11.515 ;
+; clk_in              ; mem_data_bus_out[5]  ; 11.597 ; 11.597 ; 11.597 ; 11.597 ;
+; clk_in              ; mem_data_bus_out[6]  ; 11.161 ; 11.161 ; 11.161 ; 11.161 ;
+; clk_in              ; mem_data_bus_out[7]  ; 11.947 ; 11.947 ; 11.947 ; 11.947 ;
+; clk_in              ; mem_data_bus_out[8]  ; 11.735 ; 11.735 ; 11.735 ; 11.735 ;
+; clk_in              ; mem_data_bus_out[9]  ; 11.501 ; 11.501 ; 11.501 ; 11.501 ;
+; clk_in              ; mem_data_bus_out[10] ; 11.516 ; 11.516 ; 11.516 ; 11.516 ;
+; clk_in              ; mem_data_bus_out[11] ; 11.965 ; 11.965 ; 11.965 ; 11.965 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[5]  ; 18.654 ; 18.091 ; 18.091 ; 18.654 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[6]  ; 18.363 ; 17.729 ; 17.729 ; 18.363 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[7]  ; 18.341 ; 17.816 ; 17.816 ; 18.341 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[8]  ; 18.214 ; 17.550 ; 17.550 ; 18.214 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[9]  ; 18.310 ; 17.650 ; 17.650 ; 18.310 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[10] ; 18.649 ; 17.368 ; 17.368 ; 18.649 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[11] ; 19.480 ; 18.565 ; 18.565 ; 19.480 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[0]  ; 12.184 ;        ;        ; 12.184 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[1]  ; 17.468 ; 17.468 ; 17.468 ; 17.468 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[2]  ; 18.172 ; 18.172 ; 18.172 ; 18.172 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[3]  ; 18.214 ; 18.214 ; 18.214 ; 18.214 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[4]  ; 18.453 ; 18.453 ; 18.453 ; 18.453 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[5]  ; 17.994 ; 17.994 ; 17.994 ; 17.994 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[6]  ; 18.089 ; 18.089 ; 18.089 ; 18.089 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[7]  ; 18.196 ; 18.196 ; 18.196 ; 18.196 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[8]  ; 18.162 ; 18.162 ; 18.162 ; 18.162 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[9]  ; 18.429 ; 18.429 ; 18.429 ; 18.429 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[10] ; 18.187 ; 18.187 ; 18.187 ; 18.187 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[11] ; 18.734 ; 18.734 ; 18.734 ; 18.734 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[5]  ; 17.835 ; 17.395 ; 17.395 ; 17.835 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[6]  ; 17.544 ; 17.033 ; 17.033 ; 17.544 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[7]  ; 17.522 ; 17.120 ; 17.120 ; 17.522 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[8]  ; 17.395 ; 16.854 ; 16.854 ; 17.395 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[9]  ; 17.491 ; 16.954 ; 16.954 ; 17.491 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[10] ; 17.830 ; 16.672 ; 16.672 ; 17.830 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[11] ; 18.661 ; 17.869 ; 17.869 ; 18.661 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[0]  ; 17.538 ; 17.538 ; 17.538 ; 17.538 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[1]  ; 10.436 ;        ;        ; 10.436 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[2]  ; 17.322 ; 17.322 ; 17.322 ; 17.322 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[3]  ; 17.364 ; 17.364 ; 17.364 ; 17.364 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[4]  ; 17.603 ; 17.603 ; 17.603 ; 17.603 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[5]  ; 17.144 ; 17.144 ; 17.144 ; 17.144 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[6]  ; 17.239 ; 17.239 ; 17.239 ; 17.239 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[7]  ; 17.346 ; 17.346 ; 17.346 ; 17.346 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[8]  ; 17.312 ; 17.312 ; 17.312 ; 17.312 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[9]  ; 17.579 ; 17.579 ; 17.579 ; 17.579 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[10] ; 17.337 ; 17.337 ; 17.337 ; 17.337 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[11] ; 17.884 ; 17.884 ; 17.884 ; 17.884 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[5]  ; 17.361 ; 22.826 ; 22.826 ; 17.361 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[6]  ; 17.070 ; 22.464 ; 22.464 ; 17.070 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[7]  ; 17.048 ; 22.551 ; 22.551 ; 17.048 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[8]  ; 16.921 ; 22.285 ; 22.285 ; 16.921 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[9]  ; 17.017 ; 22.385 ; 22.385 ; 17.017 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[10] ; 17.356 ; 22.103 ; 22.103 ; 17.356 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[11] ; 18.187 ; 23.300 ; 23.300 ; 18.187 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[0]  ; 17.098 ; 17.098 ; 17.098 ; 17.098 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[1]  ; 16.178 ; 16.178 ; 16.178 ; 16.178 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[2]  ; 10.810 ;        ;        ; 10.810 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[3]  ; 16.924 ; 16.924 ; 16.924 ; 16.924 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[4]  ; 17.163 ; 17.163 ; 17.163 ; 17.163 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[5]  ; 16.704 ; 16.704 ; 16.704 ; 16.704 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[6]  ; 16.799 ; 16.799 ; 16.799 ; 16.799 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[7]  ; 16.906 ; 16.906 ; 16.906 ; 16.906 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[8]  ; 16.872 ; 16.872 ; 16.872 ; 16.872 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[9]  ; 17.139 ; 17.139 ; 17.139 ; 17.139 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[10] ; 16.897 ; 16.897 ; 16.897 ; 16.897 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[11] ; 17.444 ; 17.444 ; 17.444 ; 17.444 ;
+; mem_data_bus_in[3]  ; mem_data_bus_out[3]  ; 6.449  ;        ;        ; 6.449  ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[5]  ; 13.299 ;        ;        ; 13.299 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[6]  ; 12.937 ;        ;        ; 12.937 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[7]  ; 13.024 ;        ;        ; 13.024 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[8]  ; 12.758 ;        ;        ; 12.758 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[9]  ; 12.858 ;        ;        ; 12.858 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[10] ; 12.576 ;        ;        ; 12.576 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[11] ; 13.773 ;        ;        ; 13.773 ;
+; mem_data_bus_in[4]  ; mem_data_bus_out[4]  ; 7.636  ;        ;        ; 7.636  ;
+; mem_data_bus_in[5]  ; mem_data_bus_out[5]  ; 6.617  ;        ;        ; 6.617  ;
+; mem_data_bus_in[6]  ; mem_data_bus_out[6]  ; 6.583  ;        ;        ; 6.583  ;
+; mem_data_bus_in[7]  ; mem_data_bus_out[7]  ; 10.367 ;        ;        ; 10.367 ;
+; mem_data_bus_in[8]  ; mem_data_bus_out[8]  ; 11.493 ;        ;        ; 11.493 ;
+; mem_data_bus_in[9]  ; mem_data_bus_out[9]  ; 11.522 ;        ;        ; 11.522 ;
+; mem_data_bus_in[10] ; mem_data_bus_out[10] ; 11.213 ;        ;        ; 11.213 ;
+; mem_data_bus_in[11] ; mem_data_bus_out[11] ; 11.709 ;        ;        ; 11.709 ;
+; not_reset           ; mem_addr_bus_out[0]  ; 12.207 ;        ;        ; 12.207 ;
+; not_reset           ; mem_addr_bus_out[1]  ; 11.840 ;        ;        ; 11.840 ;
+; not_reset           ; mem_addr_bus_out[2]  ; 12.431 ;        ;        ; 12.431 ;
+; not_reset           ; mem_addr_bus_out[3]  ; 11.964 ;        ;        ; 11.964 ;
+; not_reset           ; mem_addr_bus_out[4]  ; 11.768 ;        ;        ; 11.768 ;
+; not_reset           ; mem_addr_bus_out[5]  ; 12.320 ; 16.277 ; 16.277 ; 12.320 ;
+; not_reset           ; mem_addr_bus_out[6]  ; 12.529 ; 15.986 ; 15.986 ; 12.529 ;
+; not_reset           ; mem_addr_bus_out[7]  ; 12.002 ; 15.964 ; 15.964 ; 12.002 ;
+; not_reset           ; mem_addr_bus_out[8]  ; 11.777 ; 15.837 ; 15.837 ; 11.777 ;
+; not_reset           ; mem_addr_bus_out[9]  ; 11.878 ; 15.933 ; 15.933 ; 11.878 ;
+; not_reset           ; mem_addr_bus_out[10] ; 12.318 ; 16.272 ; 16.272 ; 12.318 ;
+; not_reset           ; mem_addr_bus_out[11] ; 13.139 ; 17.103 ; 17.103 ; 13.139 ;
+; not_reset           ; mem_data_bus_out[0]  ; 13.635 ; 15.584 ; 15.584 ; 13.635 ;
+; not_reset           ; mem_data_bus_out[1]  ; 12.700 ; 14.664 ; 14.664 ; 12.700 ;
+; not_reset           ; mem_data_bus_out[2]  ; 13.431 ; 15.368 ; 15.368 ; 13.431 ;
+; not_reset           ; mem_data_bus_out[3]  ; 13.474 ; 15.410 ; 15.410 ; 13.474 ;
+; not_reset           ; mem_data_bus_out[4]  ; 13.756 ; 15.649 ; 15.649 ; 13.756 ;
+; not_reset           ; mem_data_bus_out[5]  ; 13.253 ; 15.190 ; 15.190 ; 13.253 ;
+; not_reset           ; mem_data_bus_out[6]  ; 13.086 ; 15.285 ; 15.285 ; 13.086 ;
+; not_reset           ; mem_data_bus_out[7]  ; 13.458 ; 15.392 ; 15.392 ; 13.458 ;
+; not_reset           ; mem_data_bus_out[8]  ; 13.044 ; 15.358 ; 15.358 ; 13.044 ;
+; not_reset           ; mem_data_bus_out[9]  ; 13.423 ; 15.625 ; 15.625 ; 13.423 ;
+; not_reset           ; mem_data_bus_out[10] ; 13.425 ; 15.383 ; 15.383 ; 13.425 ;
+; not_reset           ; mem_data_bus_out[11] ; 13.625 ; 15.930 ; 15.930 ; 13.625 ;
++---------------------+----------------------+--------+--------+--------+--------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; START ; -0.190 ; -0.190        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; START ; 0.138 ; 0.000         ;
++-------+-------+---------------+
 
 
 -------------------------------
@@ -147,32 +569,774 @@ No paths to report.
 No paths to report.
 
 
-------------------------------------------
++----------------------------------------+
 ; Fast Model Minimum Pulse Width Summary ;
-------------------------------------------
-No paths to report.
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; START ; -1.222 ; -1.222                ;
++-------+--------+-----------------------+
 
 
--------------------------------
-; Fast Model Datasheet Report ;
--------------------------------
-Nothing to report.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'START'                                                                                                                                                                                                                                                                                                    ;
++--------+-----------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                                                             ; To Node                                                                                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.190 ; START                                                                                                                 ; control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; START        ; START       ; 0.500        ; 1.037      ; 1.175      ;
+; 0.127  ; control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; START        ; START       ; 1.000        ; 0.000      ; 0.321      ;
+; 0.310  ; START                                                                                                                 ; control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; START        ; START       ; 1.000        ; 1.037      ; 1.175      ;
++--------+-----------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'START'                                                                                                                                                                                                                                                                                                    ;
++-------+-----------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                                                             ; To Node                                                                                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.138 ; START                                                                                                                 ; control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; START        ; START       ; 0.000        ; 1.037      ; 1.175      ;
+; 0.321 ; control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; START        ; START       ; 0.000        ; 0.000      ; 0.321      ;
+; 0.638 ; START                                                                                                                 ; control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ; START        ; START       ; -0.500       ; 1.037      ; 1.175      ;
++-------+-----------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'START'                                                                                                                                                                ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                                                ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------------------------------------------------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; START ; Rise       ; START                                                                                                                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; START ; Rise       ; START|combout                                                                                                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; START ; Rise       ; START|combout                                                                                                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; START ; Rise       ; control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; START ; Rise       ; control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~1 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; START ; Rise       ; control_subsystem_0|clock_generator_0|ms_jk_ff_0|nand_5|output~1|datac                                                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; START ; Rise       ; control_subsystem_0|clock_generator_0|ms_jk_ff_0|nand_5|output~1|datac                                                ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; START     ; START      ; 0.690 ; 0.690 ; Rise       ; START           ;
+; not_reset ; START      ; 3.412 ; 3.412 ; Rise       ; START           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; START     ; START      ; -0.138 ; -0.138 ; Rise       ; START           ;
+; not_reset ; START      ; -2.860 ; -2.860 ; Rise       ; START           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------------+
+; Clock to Output Times                                                               ;
++-----------------------+------------+--------+--------+------------+-----------------+
+; Data Port             ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------------------+------------+--------+--------+------------+-----------------+
+; mem_addr_bus_out[*]   ; START      ; 11.098 ; 11.098 ; Rise       ; START           ;
+;  mem_addr_bus_out[0]  ; START      ; 4.158  ; 4.158  ; Rise       ; START           ;
+;  mem_addr_bus_out[1]  ; START      ; 3.959  ; 3.959  ; Rise       ; START           ;
+;  mem_addr_bus_out[2]  ; START      ; 4.064  ; 4.064  ; Rise       ; START           ;
+;  mem_addr_bus_out[3]  ; START      ; 4.088  ; 4.088  ; Rise       ; START           ;
+;  mem_addr_bus_out[4]  ; START      ; 3.187  ; 3.187  ; Rise       ; START           ;
+;  mem_addr_bus_out[5]  ; START      ; 10.825 ; 10.825 ; Rise       ; START           ;
+;  mem_addr_bus_out[6]  ; START      ; 10.720 ; 10.720 ; Rise       ; START           ;
+;  mem_addr_bus_out[7]  ; START      ; 10.705 ; 10.705 ; Rise       ; START           ;
+;  mem_addr_bus_out[8]  ; START      ; 10.665 ; 10.665 ; Rise       ; START           ;
+;  mem_addr_bus_out[9]  ; START      ; 10.691 ; 10.691 ; Rise       ; START           ;
+;  mem_addr_bus_out[10] ; START      ; 10.817 ; 10.817 ; Rise       ; START           ;
+;  mem_addr_bus_out[11] ; START      ; 11.098 ; 11.098 ; Rise       ; START           ;
+; mem_data_bus_out[*]   ; START      ; 8.802  ; 8.802  ; Rise       ; START           ;
+;  mem_data_bus_out[0]  ; START      ; 8.583  ; 8.583  ; Rise       ; START           ;
+;  mem_data_bus_out[1]  ; START      ; 8.282  ; 8.282  ; Rise       ; START           ;
+;  mem_data_bus_out[2]  ; START      ; 8.539  ; 8.539  ; Rise       ; START           ;
+;  mem_data_bus_out[3]  ; START      ; 8.534  ; 8.534  ; Rise       ; START           ;
+;  mem_data_bus_out[4]  ; START      ; 8.603  ; 8.603  ; Rise       ; START           ;
+;  mem_data_bus_out[5]  ; START      ; 8.479  ; 8.479  ; Rise       ; START           ;
+;  mem_data_bus_out[6]  ; START      ; 8.467  ; 8.467  ; Rise       ; START           ;
+;  mem_data_bus_out[7]  ; START      ; 8.568  ; 8.568  ; Rise       ; START           ;
+;  mem_data_bus_out[8]  ; START      ; 8.595  ; 8.595  ; Rise       ; START           ;
+;  mem_data_bus_out[9]  ; START      ; 8.578  ; 8.578  ; Rise       ; START           ;
+;  mem_data_bus_out[10] ; START      ; 8.514  ; 8.514  ; Rise       ; START           ;
+;  mem_data_bus_out[11] ; START      ; 8.802  ; 8.802  ; Rise       ; START           ;
++-----------------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                     ;
++-----------------------+------------+-------+-------+------------+-----------------+
+; Data Port             ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------------+------------+-------+-------+------------+-----------------+
+; mem_addr_bus_out[*]   ; START      ; 3.187 ; 3.187 ; Rise       ; START           ;
+;  mem_addr_bus_out[0]  ; START      ; 4.158 ; 4.158 ; Rise       ; START           ;
+;  mem_addr_bus_out[1]  ; START      ; 3.959 ; 3.959 ; Rise       ; START           ;
+;  mem_addr_bus_out[2]  ; START      ; 4.064 ; 4.064 ; Rise       ; START           ;
+;  mem_addr_bus_out[3]  ; START      ; 4.088 ; 4.088 ; Rise       ; START           ;
+;  mem_addr_bus_out[4]  ; START      ; 3.187 ; 3.187 ; Rise       ; START           ;
+;  mem_addr_bus_out[5]  ; START      ; 4.113 ; 4.113 ; Rise       ; START           ;
+;  mem_addr_bus_out[6]  ; START      ; 4.140 ; 4.140 ; Rise       ; START           ;
+;  mem_addr_bus_out[7]  ; START      ; 4.054 ; 4.054 ; Rise       ; START           ;
+;  mem_addr_bus_out[8]  ; START      ; 3.986 ; 3.986 ; Rise       ; START           ;
+;  mem_addr_bus_out[9]  ; START      ; 3.978 ; 3.978 ; Rise       ; START           ;
+;  mem_addr_bus_out[10] ; START      ; 4.165 ; 4.165 ; Rise       ; START           ;
+;  mem_addr_bus_out[11] ; START      ; 4.359 ; 4.359 ; Rise       ; START           ;
+; mem_data_bus_out[*]   ; START      ; 3.671 ; 3.671 ; Rise       ; START           ;
+;  mem_data_bus_out[0]  ; START      ; 3.874 ; 3.874 ; Rise       ; START           ;
+;  mem_data_bus_out[1]  ; START      ; 3.689 ; 3.689 ; Rise       ; START           ;
+;  mem_data_bus_out[2]  ; START      ; 3.944 ; 3.944 ; Rise       ; START           ;
+;  mem_data_bus_out[3]  ; START      ; 3.816 ; 3.816 ; Rise       ; START           ;
+;  mem_data_bus_out[4]  ; START      ; 3.884 ; 3.884 ; Rise       ; START           ;
+;  mem_data_bus_out[5]  ; START      ; 4.015 ; 4.015 ; Rise       ; START           ;
+;  mem_data_bus_out[6]  ; START      ; 3.671 ; 3.671 ; Rise       ; START           ;
+;  mem_data_bus_out[7]  ; START      ; 3.977 ; 3.977 ; Rise       ; START           ;
+;  mem_data_bus_out[8]  ; START      ; 3.905 ; 3.905 ; Rise       ; START           ;
+;  mem_data_bus_out[9]  ; START      ; 3.794 ; 3.794 ; Rise       ; START           ;
+;  mem_data_bus_out[10] ; START      ; 3.796 ; 3.796 ; Rise       ; START           ;
+;  mem_data_bus_out[11] ; START      ; 4.230 ; 4.230 ; Rise       ; START           ;
++-----------------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Propagation Delay                                                              ;
++---------------------+----------------------+--------+--------+--------+--------+
+; Input Port          ; Output Port          ; RR     ; RF     ; FR     ; FF     ;
++---------------------+----------------------+--------+--------+--------+--------+
+; clk_in              ; mem_addr_bus_out[0]  ; 5.508  ; 5.508  ; 5.508  ; 5.508  ;
+; clk_in              ; mem_addr_bus_out[1]  ; 5.255  ; 5.255  ; 5.255  ; 5.255  ;
+; clk_in              ; mem_addr_bus_out[2]  ; 5.493  ; 5.493  ; 5.493  ; 5.493  ;
+; clk_in              ; mem_addr_bus_out[3]  ; 5.440  ; 5.440  ; 5.440  ; 5.440  ;
+; clk_in              ; mem_addr_bus_out[4]  ; 5.371  ; 5.371  ; 5.371  ; 5.371  ;
+; clk_in              ; mem_addr_bus_out[5]  ; 12.155 ; 12.155 ; 12.155 ; 12.155 ;
+; clk_in              ; mem_addr_bus_out[6]  ; 12.050 ; 12.050 ; 12.050 ; 12.050 ;
+; clk_in              ; mem_addr_bus_out[7]  ; 12.035 ; 12.035 ; 12.035 ; 12.035 ;
+; clk_in              ; mem_addr_bus_out[8]  ; 11.995 ; 11.995 ; 11.995 ; 11.995 ;
+; clk_in              ; mem_addr_bus_out[9]  ; 12.021 ; 12.021 ; 12.021 ; 12.021 ;
+; clk_in              ; mem_addr_bus_out[10] ; 12.147 ; 12.147 ; 12.147 ; 12.147 ;
+; clk_in              ; mem_addr_bus_out[11] ; 12.428 ; 12.428 ; 12.428 ; 12.428 ;
+; clk_in              ; mem_data_bus_out[0]  ; 9.913  ; 9.913  ; 9.913  ; 9.913  ;
+; clk_in              ; mem_data_bus_out[1]  ; 9.612  ; 9.612  ; 9.612  ; 9.612  ;
+; clk_in              ; mem_data_bus_out[2]  ; 9.869  ; 9.869  ; 9.869  ; 9.869  ;
+; clk_in              ; mem_data_bus_out[3]  ; 9.864  ; 9.864  ; 9.864  ; 9.864  ;
+; clk_in              ; mem_data_bus_out[4]  ; 9.933  ; 9.933  ; 9.933  ; 9.933  ;
+; clk_in              ; mem_data_bus_out[5]  ; 9.809  ; 9.809  ; 9.809  ; 9.809  ;
+; clk_in              ; mem_data_bus_out[6]  ; 9.797  ; 9.797  ; 9.797  ; 9.797  ;
+; clk_in              ; mem_data_bus_out[7]  ; 9.898  ; 9.898  ; 9.898  ; 9.898  ;
+; clk_in              ; mem_data_bus_out[8]  ; 9.925  ; 9.925  ; 9.925  ; 9.925  ;
+; clk_in              ; mem_data_bus_out[9]  ; 9.908  ; 9.908  ; 9.908  ; 9.908  ;
+; clk_in              ; mem_data_bus_out[10] ; 9.844  ; 9.844  ; 9.844  ; 9.844  ;
+; clk_in              ; mem_data_bus_out[11] ; 10.132 ; 10.132 ; 10.132 ; 10.132 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[5]  ; 9.830  ; 9.830  ; 9.830  ; 9.830  ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[6]  ; 9.725  ; 9.725  ; 9.725  ; 9.725  ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[7]  ; 9.710  ; 9.710  ; 9.710  ; 9.710  ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[8]  ; 9.670  ; 9.670  ; 9.670  ; 9.670  ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[9]  ; 9.696  ; 9.696  ; 9.696  ; 9.696  ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[10] ; 9.822  ; 9.822  ; 9.822  ; 9.822  ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[11] ; 10.103 ; 10.103 ; 10.103 ; 10.103 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[0]  ; 5.501  ;        ;        ; 5.501  ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[1]  ; 7.287  ; 7.287  ; 7.287  ; 7.287  ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[2]  ; 7.544  ; 7.544  ; 7.544  ; 7.544  ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[3]  ; 7.539  ; 7.539  ; 7.539  ; 7.539  ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[4]  ; 7.608  ; 7.608  ; 7.608  ; 7.608  ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[5]  ; 7.484  ; 7.484  ; 7.484  ; 7.484  ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[6]  ; 7.472  ; 7.472  ; 7.472  ; 7.472  ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[7]  ; 7.573  ; 7.573  ; 7.573  ; 7.573  ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[8]  ; 7.600  ; 7.600  ; 7.600  ; 7.600  ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[9]  ; 7.583  ; 7.583  ; 7.583  ; 7.583  ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[10] ; 7.519  ; 7.519  ; 7.519  ; 7.519  ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[11] ; 7.807  ; 7.807  ; 7.807  ; 7.807  ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[5]  ; 9.556  ; 9.556  ; 9.556  ; 9.556  ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[6]  ; 9.451  ; 9.451  ; 9.451  ; 9.451  ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[7]  ; 9.436  ; 9.436  ; 9.436  ; 9.436  ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[8]  ; 9.396  ; 9.396  ; 9.396  ; 9.396  ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[9]  ; 9.422  ; 9.422  ; 9.422  ; 9.422  ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[10] ; 9.548  ; 9.548  ; 9.548  ; 9.548  ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[11] ; 9.829  ; 9.829  ; 9.829  ; 9.829  ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[0]  ; 7.314  ; 7.314  ; 7.314  ; 7.314  ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[1]  ; 4.930  ;        ;        ; 4.930  ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[2]  ; 7.270  ; 7.270  ; 7.270  ; 7.270  ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[3]  ; 7.265  ; 7.265  ; 7.265  ; 7.265  ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[4]  ; 7.334  ; 7.334  ; 7.334  ; 7.334  ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[5]  ; 7.210  ; 7.210  ; 7.210  ; 7.210  ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[6]  ; 7.198  ; 7.198  ; 7.198  ; 7.198  ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[7]  ; 7.299  ; 7.299  ; 7.299  ; 7.299  ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[8]  ; 7.326  ; 7.326  ; 7.326  ; 7.326  ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[9]  ; 7.309  ; 7.309  ; 7.309  ; 7.309  ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[10] ; 7.245  ; 7.245  ; 7.245  ; 7.245  ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[11] ; 7.533  ; 7.533  ; 7.533  ; 7.533  ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[5]  ; 9.452  ; 9.452  ; 9.452  ; 9.452  ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[6]  ; 9.347  ; 9.347  ; 9.347  ; 9.347  ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[7]  ; 9.332  ; 9.332  ; 9.332  ; 9.332  ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[8]  ; 9.292  ; 9.292  ; 9.292  ; 9.292  ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[9]  ; 9.318  ; 9.318  ; 9.318  ; 9.318  ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[10] ; 9.444  ; 9.444  ; 9.444  ; 9.444  ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[11] ; 9.725  ; 9.725  ; 9.725  ; 9.725  ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[0]  ; 7.224  ; 7.224  ; 7.224  ; 7.224  ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[1]  ; 6.923  ; 6.923  ; 6.923  ; 6.923  ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[2]  ; 5.080  ;        ;        ; 5.080  ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[3]  ; 7.175  ; 7.175  ; 7.175  ; 7.175  ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[4]  ; 7.244  ; 7.244  ; 7.244  ; 7.244  ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[5]  ; 7.120  ; 7.120  ; 7.120  ; 7.120  ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[6]  ; 7.108  ; 7.108  ; 7.108  ; 7.108  ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[7]  ; 7.209  ; 7.209  ; 7.209  ; 7.209  ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[8]  ; 7.236  ; 7.236  ; 7.236  ; 7.236  ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[9]  ; 7.219  ; 7.219  ; 7.219  ; 7.219  ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[10] ; 7.155  ; 7.155  ; 7.155  ; 7.155  ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[11] ; 7.443  ; 7.443  ; 7.443  ; 7.443  ;
+; mem_data_bus_in[3]  ; mem_data_bus_out[3]  ; 2.728  ;        ;        ; 2.728  ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[5]  ; 5.066  ;        ;        ; 5.066  ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[6]  ; 4.938  ;        ;        ; 4.938  ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[7]  ; 4.956  ;        ;        ; 4.956  ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[8]  ; 4.883  ;        ;        ; 4.883  ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[9]  ; 4.913  ;        ;        ; 4.913  ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[10] ; 4.854  ;        ;        ; 4.854  ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[11] ; 5.252  ;        ;        ; 5.252  ;
+; mem_data_bus_in[4]  ; mem_data_bus_out[4]  ; 3.134  ;        ;        ; 3.134  ;
+; mem_data_bus_in[5]  ; mem_data_bus_out[5]  ; 2.784  ;        ;        ; 2.784  ;
+; mem_data_bus_in[6]  ; mem_data_bus_out[6]  ; 2.764  ;        ;        ; 2.764  ;
+; mem_data_bus_in[7]  ; mem_data_bus_out[7]  ; 4.935  ;        ;        ; 4.935  ;
+; mem_data_bus_in[8]  ; mem_data_bus_out[8]  ; 5.360  ;        ;        ; 5.360  ;
+; mem_data_bus_in[9]  ; mem_data_bus_out[9]  ; 5.277  ;        ;        ; 5.277  ;
+; mem_data_bus_in[10] ; mem_data_bus_out[10] ; 5.158  ;        ;        ; 5.158  ;
+; mem_data_bus_in[11] ; mem_data_bus_out[11] ; 5.438  ;        ;        ; 5.438  ;
+; not_reset           ; mem_addr_bus_out[0]  ; 5.667  ;        ;        ; 5.667  ;
+; not_reset           ; mem_addr_bus_out[1]  ; 5.534  ;        ;        ; 5.534  ;
+; not_reset           ; mem_addr_bus_out[2]  ; 5.723  ;        ;        ; 5.723  ;
+; not_reset           ; mem_addr_bus_out[3]  ; 5.597  ;        ;        ; 5.597  ;
+; not_reset           ; mem_addr_bus_out[4]  ; 5.508  ;        ;        ; 5.508  ;
+; not_reset           ; mem_addr_bus_out[5]  ; 11.842 ; 11.842 ; 11.842 ; 11.842 ;
+; not_reset           ; mem_addr_bus_out[6]  ; 11.737 ; 11.737 ; 11.737 ; 11.737 ;
+; not_reset           ; mem_addr_bus_out[7]  ; 11.722 ; 11.722 ; 11.722 ; 11.722 ;
+; not_reset           ; mem_addr_bus_out[8]  ; 11.682 ; 11.682 ; 11.682 ; 11.682 ;
+; not_reset           ; mem_addr_bus_out[9]  ; 11.708 ; 11.708 ; 11.708 ; 11.708 ;
+; not_reset           ; mem_addr_bus_out[10] ; 11.834 ; 11.834 ; 11.834 ; 11.834 ;
+; not_reset           ; mem_addr_bus_out[11] ; 12.115 ; 12.115 ; 12.115 ; 12.115 ;
+; not_reset           ; mem_data_bus_out[0]  ; 9.600  ; 9.600  ; 9.600  ; 9.600  ;
+; not_reset           ; mem_data_bus_out[1]  ; 9.299  ; 9.299  ; 9.299  ; 9.299  ;
+; not_reset           ; mem_data_bus_out[2]  ; 9.556  ; 9.556  ; 9.556  ; 9.556  ;
+; not_reset           ; mem_data_bus_out[3]  ; 9.551  ; 9.551  ; 9.551  ; 9.551  ;
+; not_reset           ; mem_data_bus_out[4]  ; 9.620  ; 9.620  ; 9.620  ; 9.620  ;
+; not_reset           ; mem_data_bus_out[5]  ; 9.496  ; 9.496  ; 9.496  ; 9.496  ;
+; not_reset           ; mem_data_bus_out[6]  ; 9.484  ; 9.484  ; 9.484  ; 9.484  ;
+; not_reset           ; mem_data_bus_out[7]  ; 9.585  ; 9.585  ; 9.585  ; 9.585  ;
+; not_reset           ; mem_data_bus_out[8]  ; 9.612  ; 9.612  ; 9.612  ; 9.612  ;
+; not_reset           ; mem_data_bus_out[9]  ; 9.595  ; 9.595  ; 9.595  ; 9.595  ;
+; not_reset           ; mem_data_bus_out[10] ; 9.531  ; 9.531  ; 9.531  ; 9.531  ;
+; not_reset           ; mem_data_bus_out[11] ; 9.819  ; 9.819  ; 9.819  ; 9.819  ;
++---------------------+----------------------+--------+--------+--------+--------+
 
 
 +----------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                        ;
-+------------------+-------+------+----------+---------+---------------------+
-; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+-------+------+----------+---------+---------------------+
-; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
-; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
-+------------------+-------+------+----------+---------+---------------------+
+; Minimum Propagation Delay                                                  ;
++---------------------+----------------------+-------+-------+-------+-------+
+; Input Port          ; Output Port          ; RR    ; RF    ; FR    ; FF    ;
++---------------------+----------------------+-------+-------+-------+-------+
+; clk_in              ; mem_addr_bus_out[0]  ; 5.508 ; 5.508 ; 5.508 ; 5.508 ;
+; clk_in              ; mem_addr_bus_out[1]  ; 5.255 ; 5.255 ; 5.255 ; 5.255 ;
+; clk_in              ; mem_addr_bus_out[2]  ; 5.493 ; 5.493 ; 5.493 ; 5.493 ;
+; clk_in              ; mem_addr_bus_out[3]  ; 5.440 ; 5.440 ; 5.440 ; 5.440 ;
+; clk_in              ; mem_addr_bus_out[4]  ; 5.371 ; 5.371 ; 5.371 ; 5.371 ;
+; clk_in              ; mem_addr_bus_out[5]  ; 5.612 ; 5.612 ; 5.612 ; 5.612 ;
+; clk_in              ; mem_addr_bus_out[6]  ; 5.581 ; 5.581 ; 5.581 ; 5.581 ;
+; clk_in              ; mem_addr_bus_out[7]  ; 5.495 ; 5.495 ; 5.495 ; 5.495 ;
+; clk_in              ; mem_addr_bus_out[8]  ; 5.426 ; 5.426 ; 5.426 ; 5.426 ;
+; clk_in              ; mem_addr_bus_out[9]  ; 5.269 ; 5.269 ; 5.269 ; 5.269 ;
+; clk_in              ; mem_addr_bus_out[10] ; 5.607 ; 5.607 ; 5.607 ; 5.607 ;
+; clk_in              ; mem_addr_bus_out[11] ; 5.802 ; 5.802 ; 5.802 ; 5.802 ;
+; clk_in              ; mem_data_bus_out[0]  ; 5.229 ; 5.229 ; 5.229 ; 5.229 ;
+; clk_in              ; mem_data_bus_out[1]  ; 5.239 ; 5.239 ; 5.239 ; 5.239 ;
+; clk_in              ; mem_data_bus_out[2]  ; 5.496 ; 5.496 ; 5.496 ; 5.496 ;
+; clk_in              ; mem_data_bus_out[3]  ; 5.380 ; 5.380 ; 5.380 ; 5.380 ;
+; clk_in              ; mem_data_bus_out[4]  ; 5.354 ; 5.354 ; 5.354 ; 5.354 ;
+; clk_in              ; mem_data_bus_out[5]  ; 5.401 ; 5.401 ; 5.401 ; 5.401 ;
+; clk_in              ; mem_data_bus_out[6]  ; 5.225 ; 5.225 ; 5.225 ; 5.225 ;
+; clk_in              ; mem_data_bus_out[7]  ; 5.537 ; 5.537 ; 5.537 ; 5.537 ;
+; clk_in              ; mem_data_bus_out[8]  ; 5.492 ; 5.492 ; 5.492 ; 5.492 ;
+; clk_in              ; mem_data_bus_out[9]  ; 5.336 ; 5.336 ; 5.336 ; 5.336 ;
+; clk_in              ; mem_data_bus_out[10] ; 5.352 ; 5.352 ; 5.352 ; 5.352 ;
+; clk_in              ; mem_data_bus_out[11] ; 5.598 ; 5.598 ; 5.598 ; 5.598 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[5]  ; 7.729 ; 7.508 ; 7.508 ; 7.729 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[6]  ; 7.624 ; 7.380 ; 7.380 ; 7.624 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[7]  ; 7.609 ; 7.398 ; 7.398 ; 7.609 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[8]  ; 7.569 ; 7.325 ; 7.325 ; 7.569 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[9]  ; 7.595 ; 7.355 ; 7.355 ; 7.595 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[10] ; 7.721 ; 7.296 ; 7.296 ; 7.721 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[11] ; 8.002 ; 7.694 ; 7.694 ; 8.002 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[0]  ; 5.501 ;       ;       ; 5.501 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[1]  ; 7.227 ; 7.227 ; 7.227 ; 7.227 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[2]  ; 7.484 ; 7.484 ; 7.484 ; 7.484 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[3]  ; 7.479 ; 7.479 ; 7.479 ; 7.479 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[4]  ; 7.548 ; 7.548 ; 7.548 ; 7.548 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[5]  ; 7.424 ; 7.424 ; 7.424 ; 7.424 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[6]  ; 7.412 ; 7.412 ; 7.412 ; 7.412 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[7]  ; 7.513 ; 7.513 ; 7.513 ; 7.513 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[8]  ; 7.540 ; 7.540 ; 7.540 ; 7.540 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[9]  ; 7.523 ; 7.523 ; 7.523 ; 7.523 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[10] ; 7.459 ; 7.459 ; 7.459 ; 7.459 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[11] ; 7.747 ; 7.747 ; 7.747 ; 7.747 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[5]  ; 7.456 ; 7.289 ; 7.289 ; 7.456 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[6]  ; 7.351 ; 7.161 ; 7.161 ; 7.351 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[7]  ; 7.336 ; 7.179 ; 7.179 ; 7.336 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[8]  ; 7.296 ; 7.106 ; 7.106 ; 7.296 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[9]  ; 7.322 ; 7.136 ; 7.136 ; 7.322 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[10] ; 7.448 ; 7.077 ; 7.077 ; 7.448 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[11] ; 7.729 ; 7.475 ; 7.475 ; 7.729 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[0]  ; 7.254 ; 7.254 ; 7.254 ; 7.254 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[1]  ; 4.930 ;       ;       ; 4.930 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[2]  ; 7.210 ; 7.210 ; 7.210 ; 7.210 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[3]  ; 7.205 ; 7.205 ; 7.205 ; 7.205 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[4]  ; 7.274 ; 7.274 ; 7.274 ; 7.274 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[5]  ; 7.150 ; 7.150 ; 7.150 ; 7.150 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[6]  ; 7.138 ; 7.138 ; 7.138 ; 7.138 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[7]  ; 7.239 ; 7.239 ; 7.239 ; 7.239 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[8]  ; 7.266 ; 7.266 ; 7.266 ; 7.266 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[9]  ; 7.249 ; 7.249 ; 7.249 ; 7.249 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[10] ; 7.185 ; 7.185 ; 7.185 ; 7.185 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[11] ; 7.473 ; 7.473 ; 7.473 ; 7.473 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[5]  ; 7.366 ; 9.116 ; 9.116 ; 7.366 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[6]  ; 7.261 ; 8.988 ; 8.988 ; 7.261 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[7]  ; 7.246 ; 9.006 ; 9.006 ; 7.246 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[8]  ; 7.206 ; 8.933 ; 8.933 ; 7.206 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[9]  ; 7.232 ; 8.963 ; 8.963 ; 7.232 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[10] ; 7.358 ; 8.904 ; 8.904 ; 7.358 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[11] ; 7.639 ; 9.302 ; 9.302 ; 7.639 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[0]  ; 7.164 ; 7.164 ; 7.164 ; 7.164 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[1]  ; 6.863 ; 6.863 ; 6.863 ; 6.863 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[2]  ; 5.080 ;       ;       ; 5.080 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[3]  ; 7.115 ; 7.115 ; 7.115 ; 7.115 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[4]  ; 7.184 ; 7.184 ; 7.184 ; 7.184 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[5]  ; 7.060 ; 7.060 ; 7.060 ; 7.060 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[6]  ; 7.048 ; 7.048 ; 7.048 ; 7.048 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[7]  ; 7.149 ; 7.149 ; 7.149 ; 7.149 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[8]  ; 7.176 ; 7.176 ; 7.176 ; 7.176 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[9]  ; 7.159 ; 7.159 ; 7.159 ; 7.159 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[10] ; 7.095 ; 7.095 ; 7.095 ; 7.095 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[11] ; 7.383 ; 7.383 ; 7.383 ; 7.383 ;
+; mem_data_bus_in[3]  ; mem_data_bus_out[3]  ; 2.728 ;       ;       ; 2.728 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[5]  ; 5.066 ;       ;       ; 5.066 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[6]  ; 4.938 ;       ;       ; 4.938 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[7]  ; 4.956 ;       ;       ; 4.956 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[8]  ; 4.883 ;       ;       ; 4.883 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[9]  ; 4.913 ;       ;       ; 4.913 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[10] ; 4.854 ;       ;       ; 4.854 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[11] ; 5.252 ;       ;       ; 5.252 ;
+; mem_data_bus_in[4]  ; mem_data_bus_out[4]  ; 3.134 ;       ;       ; 3.134 ;
+; mem_data_bus_in[5]  ; mem_data_bus_out[5]  ; 2.784 ;       ;       ; 2.784 ;
+; mem_data_bus_in[6]  ; mem_data_bus_out[6]  ; 2.764 ;       ;       ; 2.764 ;
+; mem_data_bus_in[7]  ; mem_data_bus_out[7]  ; 4.935 ;       ;       ; 4.935 ;
+; mem_data_bus_in[8]  ; mem_data_bus_out[8]  ; 5.360 ;       ;       ; 5.360 ;
+; mem_data_bus_in[9]  ; mem_data_bus_out[9]  ; 5.277 ;       ;       ; 5.277 ;
+; mem_data_bus_in[10] ; mem_data_bus_out[10] ; 5.158 ;       ;       ; 5.158 ;
+; mem_data_bus_in[11] ; mem_data_bus_out[11] ; 5.438 ;       ;       ; 5.438 ;
+; not_reset           ; mem_addr_bus_out[0]  ; 5.667 ;       ;       ; 5.667 ;
+; not_reset           ; mem_addr_bus_out[1]  ; 5.534 ;       ;       ; 5.534 ;
+; not_reset           ; mem_addr_bus_out[2]  ; 5.723 ;       ;       ; 5.723 ;
+; not_reset           ; mem_addr_bus_out[3]  ; 5.597 ;       ;       ; 5.597 ;
+; not_reset           ; mem_addr_bus_out[4]  ; 5.508 ;       ;       ; 5.508 ;
+; not_reset           ; mem_addr_bus_out[5]  ; 5.697 ; 7.012 ; 7.012 ; 5.697 ;
+; not_reset           ; mem_addr_bus_out[6]  ; 5.745 ; 6.907 ; 6.907 ; 5.745 ;
+; not_reset           ; mem_addr_bus_out[7]  ; 5.576 ; 6.892 ; 6.892 ; 5.576 ;
+; not_reset           ; mem_addr_bus_out[8]  ; 5.528 ; 6.852 ; 6.852 ; 5.528 ;
+; not_reset           ; mem_addr_bus_out[9]  ; 5.560 ; 6.878 ; 6.878 ; 5.560 ;
+; not_reset           ; mem_addr_bus_out[10] ; 5.689 ; 7.004 ; 7.004 ; 5.689 ;
+; not_reset           ; mem_addr_bus_out[11] ; 5.966 ; 7.285 ; 7.285 ; 5.966 ;
+; not_reset           ; mem_data_bus_out[0]  ; 6.067 ; 6.714 ; 6.714 ; 6.067 ;
+; not_reset           ; mem_data_bus_out[1]  ; 5.759 ; 6.413 ; 6.413 ; 5.759 ;
+; not_reset           ; mem_data_bus_out[2]  ; 6.026 ; 6.670 ; 6.670 ; 6.026 ;
+; not_reset           ; mem_data_bus_out[3]  ; 6.022 ; 6.665 ; 6.665 ; 6.022 ;
+; not_reset           ; mem_data_bus_out[4]  ; 6.099 ; 6.734 ; 6.734 ; 6.099 ;
+; not_reset           ; mem_data_bus_out[5]  ; 5.962 ; 6.610 ; 6.610 ; 5.962 ;
+; not_reset           ; mem_data_bus_out[6]  ; 5.870 ; 6.598 ; 6.598 ; 5.870 ;
+; not_reset           ; mem_data_bus_out[7]  ; 6.058 ; 6.699 ; 6.699 ; 6.058 ;
+; not_reset           ; mem_data_bus_out[8]  ; 5.957 ; 6.726 ; 6.726 ; 5.957 ;
+; not_reset           ; mem_data_bus_out[9]  ; 5.980 ; 6.709 ; 6.709 ; 5.980 ;
+; not_reset           ; mem_data_bus_out[10] ; 5.993 ; 6.645 ; 6.645 ; 5.993 ;
+; not_reset           ; mem_data_bus_out[11] ; 6.162 ; 6.933 ; 6.933 ; 6.162 ;
++---------------------+----------------------+-------+-------+-------+-------+
 
 
--------------------
-; Clock Transfers ;
--------------------
-Nothing to report.
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.719 ; 0.138 ; N/A      ; N/A     ; -1.469              ;
+;  START           ; -1.719 ; 0.138 ; N/A      ; N/A     ; -1.469              ;
+; Design-wide TNS  ; -1.719 ; 0.0   ; 0.0      ; 0.0     ; -1.469              ;
+;  START           ; -1.719 ; 0.000 ; N/A      ; N/A     ; -1.469              ;
++------------------+--------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; START     ; START      ; 2.187 ; 2.187 ; Rise       ; START           ;
+; not_reset ; START      ; 7.605 ; 7.605 ; Rise       ; START           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; START     ; START      ; -0.138 ; -0.138 ; Rise       ; START           ;
+; not_reset ; START      ; -2.860 ; -2.860 ; Rise       ; START           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------------+
+; Clock to Output Times                                                               ;
++-----------------------+------------+--------+--------+------------+-----------------+
+; Data Port             ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------------------+------------+--------+--------+------------+-----------------+
+; mem_addr_bus_out[*]   ; START      ; 30.853 ; 30.853 ; Rise       ; START           ;
+;  mem_addr_bus_out[0]  ; START      ; 10.197 ; 10.197 ; Rise       ; START           ;
+;  mem_addr_bus_out[1]  ; START      ; 9.623  ; 9.623  ; Rise       ; START           ;
+;  mem_addr_bus_out[2]  ; START      ; 9.926  ; 9.926  ; Rise       ; START           ;
+;  mem_addr_bus_out[3]  ; START      ; 9.954  ; 9.954  ; Rise       ; START           ;
+;  mem_addr_bus_out[4]  ; START      ; 7.606  ; 7.606  ; Rise       ; START           ;
+;  mem_addr_bus_out[5]  ; START      ; 30.027 ; 30.027 ; Rise       ; START           ;
+;  mem_addr_bus_out[6]  ; START      ; 29.736 ; 29.736 ; Rise       ; START           ;
+;  mem_addr_bus_out[7]  ; START      ; 29.714 ; 29.714 ; Rise       ; START           ;
+;  mem_addr_bus_out[8]  ; START      ; 29.587 ; 29.587 ; Rise       ; START           ;
+;  mem_addr_bus_out[9]  ; START      ; 29.683 ; 29.683 ; Rise       ; START           ;
+;  mem_addr_bus_out[10] ; START      ; 30.022 ; 30.022 ; Rise       ; START           ;
+;  mem_addr_bus_out[11] ; START      ; 30.853 ; 30.853 ; Rise       ; START           ;
+; mem_data_bus_out[*]   ; START      ; 23.903 ; 23.903 ; Rise       ; START           ;
+;  mem_data_bus_out[0]  ; START      ; 23.557 ; 23.557 ; Rise       ; START           ;
+;  mem_data_bus_out[1]  ; START      ; 22.637 ; 22.637 ; Rise       ; START           ;
+;  mem_data_bus_out[2]  ; START      ; 23.341 ; 23.341 ; Rise       ; START           ;
+;  mem_data_bus_out[3]  ; START      ; 23.383 ; 23.383 ; Rise       ; START           ;
+;  mem_data_bus_out[4]  ; START      ; 23.622 ; 23.622 ; Rise       ; START           ;
+;  mem_data_bus_out[5]  ; START      ; 23.163 ; 23.163 ; Rise       ; START           ;
+;  mem_data_bus_out[6]  ; START      ; 23.258 ; 23.258 ; Rise       ; START           ;
+;  mem_data_bus_out[7]  ; START      ; 23.365 ; 23.365 ; Rise       ; START           ;
+;  mem_data_bus_out[8]  ; START      ; 23.331 ; 23.331 ; Rise       ; START           ;
+;  mem_data_bus_out[9]  ; START      ; 23.598 ; 23.598 ; Rise       ; START           ;
+;  mem_data_bus_out[10] ; START      ; 23.356 ; 23.356 ; Rise       ; START           ;
+;  mem_data_bus_out[11] ; START      ; 23.903 ; 23.903 ; Rise       ; START           ;
++-----------------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                     ;
++-----------------------+------------+-------+-------+------------+-----------------+
+; Data Port             ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------------+------------+-------+-------+------------+-----------------+
+; mem_addr_bus_out[*]   ; START      ; 3.187 ; 3.187 ; Rise       ; START           ;
+;  mem_addr_bus_out[0]  ; START      ; 4.158 ; 4.158 ; Rise       ; START           ;
+;  mem_addr_bus_out[1]  ; START      ; 3.959 ; 3.959 ; Rise       ; START           ;
+;  mem_addr_bus_out[2]  ; START      ; 4.064 ; 4.064 ; Rise       ; START           ;
+;  mem_addr_bus_out[3]  ; START      ; 4.088 ; 4.088 ; Rise       ; START           ;
+;  mem_addr_bus_out[4]  ; START      ; 3.187 ; 3.187 ; Rise       ; START           ;
+;  mem_addr_bus_out[5]  ; START      ; 4.113 ; 4.113 ; Rise       ; START           ;
+;  mem_addr_bus_out[6]  ; START      ; 4.140 ; 4.140 ; Rise       ; START           ;
+;  mem_addr_bus_out[7]  ; START      ; 4.054 ; 4.054 ; Rise       ; START           ;
+;  mem_addr_bus_out[8]  ; START      ; 3.986 ; 3.986 ; Rise       ; START           ;
+;  mem_addr_bus_out[9]  ; START      ; 3.978 ; 3.978 ; Rise       ; START           ;
+;  mem_addr_bus_out[10] ; START      ; 4.165 ; 4.165 ; Rise       ; START           ;
+;  mem_addr_bus_out[11] ; START      ; 4.359 ; 4.359 ; Rise       ; START           ;
+; mem_data_bus_out[*]   ; START      ; 3.671 ; 3.671 ; Rise       ; START           ;
+;  mem_data_bus_out[0]  ; START      ; 3.874 ; 3.874 ; Rise       ; START           ;
+;  mem_data_bus_out[1]  ; START      ; 3.689 ; 3.689 ; Rise       ; START           ;
+;  mem_data_bus_out[2]  ; START      ; 3.944 ; 3.944 ; Rise       ; START           ;
+;  mem_data_bus_out[3]  ; START      ; 3.816 ; 3.816 ; Rise       ; START           ;
+;  mem_data_bus_out[4]  ; START      ; 3.884 ; 3.884 ; Rise       ; START           ;
+;  mem_data_bus_out[5]  ; START      ; 4.015 ; 4.015 ; Rise       ; START           ;
+;  mem_data_bus_out[6]  ; START      ; 3.671 ; 3.671 ; Rise       ; START           ;
+;  mem_data_bus_out[7]  ; START      ; 3.977 ; 3.977 ; Rise       ; START           ;
+;  mem_data_bus_out[8]  ; START      ; 3.905 ; 3.905 ; Rise       ; START           ;
+;  mem_data_bus_out[9]  ; START      ; 3.794 ; 3.794 ; Rise       ; START           ;
+;  mem_data_bus_out[10] ; START      ; 3.796 ; 3.796 ; Rise       ; START           ;
+;  mem_data_bus_out[11] ; START      ; 4.230 ; 4.230 ; Rise       ; START           ;
++-----------------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Progagation Delay                                                              ;
++---------------------+----------------------+--------+--------+--------+--------+
+; Input Port          ; Output Port          ; RR     ; RF     ; FR     ; FF     ;
++---------------------+----------------------+--------+--------+--------+--------+
+; clk_in              ; mem_addr_bus_out[0]  ; 11.840 ; 11.840 ; 11.840 ; 11.840 ;
+; clk_in              ; mem_addr_bus_out[1]  ; 11.077 ; 11.077 ; 11.077 ; 11.077 ;
+; clk_in              ; mem_addr_bus_out[2]  ; 11.818 ; 11.818 ; 11.818 ; 11.818 ;
+; clk_in              ; mem_addr_bus_out[3]  ; 11.600 ; 11.600 ; 11.600 ; 11.600 ;
+; clk_in              ; mem_addr_bus_out[4]  ; 11.466 ; 11.466 ; 11.466 ; 11.466 ;
+; clk_in              ; mem_addr_bus_out[5]  ; 31.592 ; 31.592 ; 31.592 ; 31.592 ;
+; clk_in              ; mem_addr_bus_out[6]  ; 31.301 ; 31.301 ; 31.301 ; 31.301 ;
+; clk_in              ; mem_addr_bus_out[7]  ; 31.279 ; 31.279 ; 31.279 ; 31.279 ;
+; clk_in              ; mem_addr_bus_out[8]  ; 31.152 ; 31.152 ; 31.152 ; 31.152 ;
+; clk_in              ; mem_addr_bus_out[9]  ; 31.248 ; 31.248 ; 31.248 ; 31.248 ;
+; clk_in              ; mem_addr_bus_out[10] ; 31.587 ; 31.587 ; 31.587 ; 31.587 ;
+; clk_in              ; mem_addr_bus_out[11] ; 32.418 ; 32.418 ; 32.418 ; 32.418 ;
+; clk_in              ; mem_data_bus_out[0]  ; 25.122 ; 25.122 ; 25.122 ; 25.122 ;
+; clk_in              ; mem_data_bus_out[1]  ; 24.202 ; 24.202 ; 24.202 ; 24.202 ;
+; clk_in              ; mem_data_bus_out[2]  ; 24.906 ; 24.906 ; 24.906 ; 24.906 ;
+; clk_in              ; mem_data_bus_out[3]  ; 24.948 ; 24.948 ; 24.948 ; 24.948 ;
+; clk_in              ; mem_data_bus_out[4]  ; 25.187 ; 25.187 ; 25.187 ; 25.187 ;
+; clk_in              ; mem_data_bus_out[5]  ; 24.728 ; 24.728 ; 24.728 ; 24.728 ;
+; clk_in              ; mem_data_bus_out[6]  ; 24.823 ; 24.823 ; 24.823 ; 24.823 ;
+; clk_in              ; mem_data_bus_out[7]  ; 24.930 ; 24.930 ; 24.930 ; 24.930 ;
+; clk_in              ; mem_data_bus_out[8]  ; 24.896 ; 24.896 ; 24.896 ; 24.896 ;
+; clk_in              ; mem_data_bus_out[9]  ; 25.163 ; 25.163 ; 25.163 ; 25.163 ;
+; clk_in              ; mem_data_bus_out[10] ; 24.921 ; 24.921 ; 24.921 ; 24.921 ;
+; clk_in              ; mem_data_bus_out[11] ; 25.468 ; 25.468 ; 25.468 ; 25.468 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[5]  ; 25.034 ; 25.034 ; 25.034 ; 25.034 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[6]  ; 24.743 ; 24.743 ; 24.743 ; 24.743 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[7]  ; 24.721 ; 24.721 ; 24.721 ; 24.721 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[8]  ; 24.594 ; 24.594 ; 24.594 ; 24.594 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[9]  ; 24.690 ; 24.690 ; 24.690 ; 24.690 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[10] ; 25.029 ; 25.029 ; 25.029 ; 25.029 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[11] ; 25.860 ; 25.860 ; 25.860 ; 25.860 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[0]  ; 12.184 ;        ;        ; 12.184 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[1]  ; 17.635 ; 17.635 ; 17.635 ; 17.635 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[2]  ; 18.339 ; 18.339 ; 18.339 ; 18.339 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[3]  ; 18.381 ; 18.381 ; 18.381 ; 18.381 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[4]  ; 18.620 ; 18.620 ; 18.620 ; 18.620 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[5]  ; 18.161 ; 18.161 ; 18.161 ; 18.161 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[6]  ; 18.256 ; 18.256 ; 18.256 ; 18.256 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[7]  ; 18.363 ; 18.363 ; 18.363 ; 18.363 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[8]  ; 18.329 ; 18.329 ; 18.329 ; 18.329 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[9]  ; 18.596 ; 18.596 ; 18.596 ; 18.596 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[10] ; 18.354 ; 18.354 ; 18.354 ; 18.354 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[11] ; 18.901 ; 18.901 ; 18.901 ; 18.901 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[5]  ; 24.206 ; 24.206 ; 24.206 ; 24.206 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[6]  ; 23.915 ; 23.915 ; 23.915 ; 23.915 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[7]  ; 23.893 ; 23.893 ; 23.893 ; 23.893 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[8]  ; 23.766 ; 23.766 ; 23.766 ; 23.766 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[9]  ; 23.862 ; 23.862 ; 23.862 ; 23.862 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[10] ; 24.201 ; 24.201 ; 24.201 ; 24.201 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[11] ; 25.032 ; 25.032 ; 25.032 ; 25.032 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[0]  ; 17.736 ; 17.736 ; 17.736 ; 17.736 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[1]  ; 10.436 ;        ;        ; 10.436 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[2]  ; 17.520 ; 17.520 ; 17.520 ; 17.520 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[3]  ; 17.562 ; 17.562 ; 17.562 ; 17.562 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[4]  ; 17.801 ; 17.801 ; 17.801 ; 17.801 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[5]  ; 17.342 ; 17.342 ; 17.342 ; 17.342 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[6]  ; 17.437 ; 17.437 ; 17.437 ; 17.437 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[7]  ; 17.544 ; 17.544 ; 17.544 ; 17.544 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[8]  ; 17.510 ; 17.510 ; 17.510 ; 17.510 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[9]  ; 17.777 ; 17.777 ; 17.777 ; 17.777 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[10] ; 17.535 ; 17.535 ; 17.535 ; 17.535 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[11] ; 18.082 ; 18.082 ; 18.082 ; 18.082 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[5]  ; 23.744 ; 23.744 ; 23.744 ; 23.744 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[6]  ; 23.453 ; 23.453 ; 23.453 ; 23.453 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[7]  ; 23.431 ; 23.431 ; 23.431 ; 23.431 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[8]  ; 23.304 ; 23.304 ; 23.304 ; 23.304 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[9]  ; 23.400 ; 23.400 ; 23.400 ; 23.400 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[10] ; 23.739 ; 23.739 ; 23.739 ; 23.739 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[11] ; 24.570 ; 24.570 ; 24.570 ; 24.570 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[0]  ; 17.265 ; 17.265 ; 17.265 ; 17.265 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[1]  ; 16.345 ; 16.345 ; 16.345 ; 16.345 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[2]  ; 10.810 ;        ;        ; 10.810 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[3]  ; 17.091 ; 17.091 ; 17.091 ; 17.091 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[4]  ; 17.330 ; 17.330 ; 17.330 ; 17.330 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[5]  ; 16.871 ; 16.871 ; 16.871 ; 16.871 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[6]  ; 16.966 ; 16.966 ; 16.966 ; 16.966 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[7]  ; 17.073 ; 17.073 ; 17.073 ; 17.073 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[8]  ; 17.039 ; 17.039 ; 17.039 ; 17.039 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[9]  ; 17.306 ; 17.306 ; 17.306 ; 17.306 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[10] ; 17.064 ; 17.064 ; 17.064 ; 17.064 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[11] ; 17.611 ; 17.611 ; 17.611 ; 17.611 ;
+; mem_data_bus_in[3]  ; mem_data_bus_out[3]  ; 6.449  ;        ;        ; 6.449  ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[5]  ; 13.299 ;        ;        ; 13.299 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[6]  ; 12.937 ;        ;        ; 12.937 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[7]  ; 13.024 ;        ;        ; 13.024 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[8]  ; 12.758 ;        ;        ; 12.758 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[9]  ; 12.858 ;        ;        ; 12.858 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[10] ; 12.576 ;        ;        ; 12.576 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[11] ; 13.773 ;        ;        ; 13.773 ;
+; mem_data_bus_in[4]  ; mem_data_bus_out[4]  ; 7.636  ;        ;        ; 7.636  ;
+; mem_data_bus_in[5]  ; mem_data_bus_out[5]  ; 6.617  ;        ;        ; 6.617  ;
+; mem_data_bus_in[6]  ; mem_data_bus_out[6]  ; 6.583  ;        ;        ; 6.583  ;
+; mem_data_bus_in[7]  ; mem_data_bus_out[7]  ; 10.367 ;        ;        ; 10.367 ;
+; mem_data_bus_in[8]  ; mem_data_bus_out[8]  ; 11.493 ;        ;        ; 11.493 ;
+; mem_data_bus_in[9]  ; mem_data_bus_out[9]  ; 11.522 ;        ;        ; 11.522 ;
+; mem_data_bus_in[10] ; mem_data_bus_out[10] ; 11.213 ;        ;        ; 11.213 ;
+; mem_data_bus_in[11] ; mem_data_bus_out[11] ; 11.709 ;        ;        ; 11.709 ;
+; not_reset           ; mem_addr_bus_out[0]  ; 12.207 ;        ;        ; 12.207 ;
+; not_reset           ; mem_addr_bus_out[1]  ; 11.840 ;        ;        ; 11.840 ;
+; not_reset           ; mem_addr_bus_out[2]  ; 12.431 ;        ;        ; 12.431 ;
+; not_reset           ; mem_addr_bus_out[3]  ; 11.964 ;        ;        ; 11.964 ;
+; not_reset           ; mem_addr_bus_out[4]  ; 11.768 ;        ;        ; 11.768 ;
+; not_reset           ; mem_addr_bus_out[5]  ; 30.958 ; 30.958 ; 30.958 ; 30.958 ;
+; not_reset           ; mem_addr_bus_out[6]  ; 30.667 ; 30.667 ; 30.667 ; 30.667 ;
+; not_reset           ; mem_addr_bus_out[7]  ; 30.645 ; 30.645 ; 30.645 ; 30.645 ;
+; not_reset           ; mem_addr_bus_out[8]  ; 30.518 ; 30.518 ; 30.518 ; 30.518 ;
+; not_reset           ; mem_addr_bus_out[9]  ; 30.614 ; 30.614 ; 30.614 ; 30.614 ;
+; not_reset           ; mem_addr_bus_out[10] ; 30.953 ; 30.953 ; 30.953 ; 30.953 ;
+; not_reset           ; mem_addr_bus_out[11] ; 31.784 ; 31.784 ; 31.784 ; 31.784 ;
+; not_reset           ; mem_data_bus_out[0]  ; 24.488 ; 24.488 ; 24.488 ; 24.488 ;
+; not_reset           ; mem_data_bus_out[1]  ; 23.568 ; 23.568 ; 23.568 ; 23.568 ;
+; not_reset           ; mem_data_bus_out[2]  ; 24.272 ; 24.272 ; 24.272 ; 24.272 ;
+; not_reset           ; mem_data_bus_out[3]  ; 24.314 ; 24.314 ; 24.314 ; 24.314 ;
+; not_reset           ; mem_data_bus_out[4]  ; 24.553 ; 24.553 ; 24.553 ; 24.553 ;
+; not_reset           ; mem_data_bus_out[5]  ; 24.094 ; 24.094 ; 24.094 ; 24.094 ;
+; not_reset           ; mem_data_bus_out[6]  ; 24.189 ; 24.189 ; 24.189 ; 24.189 ;
+; not_reset           ; mem_data_bus_out[7]  ; 24.296 ; 24.296 ; 24.296 ; 24.296 ;
+; not_reset           ; mem_data_bus_out[8]  ; 24.262 ; 24.262 ; 24.262 ; 24.262 ;
+; not_reset           ; mem_data_bus_out[9]  ; 24.529 ; 24.529 ; 24.529 ; 24.529 ;
+; not_reset           ; mem_data_bus_out[10] ; 24.287 ; 24.287 ; 24.287 ; 24.287 ;
+; not_reset           ; mem_data_bus_out[11] ; 24.834 ; 24.834 ; 24.834 ; 24.834 ;
++---------------------+----------------------+--------+--------+--------+--------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Progagation Delay                                                  ;
++---------------------+----------------------+-------+-------+-------+-------+
+; Input Port          ; Output Port          ; RR    ; RF    ; FR    ; FF    ;
++---------------------+----------------------+-------+-------+-------+-------+
+; clk_in              ; mem_addr_bus_out[0]  ; 5.508 ; 5.508 ; 5.508 ; 5.508 ;
+; clk_in              ; mem_addr_bus_out[1]  ; 5.255 ; 5.255 ; 5.255 ; 5.255 ;
+; clk_in              ; mem_addr_bus_out[2]  ; 5.493 ; 5.493 ; 5.493 ; 5.493 ;
+; clk_in              ; mem_addr_bus_out[3]  ; 5.440 ; 5.440 ; 5.440 ; 5.440 ;
+; clk_in              ; mem_addr_bus_out[4]  ; 5.371 ; 5.371 ; 5.371 ; 5.371 ;
+; clk_in              ; mem_addr_bus_out[5]  ; 5.612 ; 5.612 ; 5.612 ; 5.612 ;
+; clk_in              ; mem_addr_bus_out[6]  ; 5.581 ; 5.581 ; 5.581 ; 5.581 ;
+; clk_in              ; mem_addr_bus_out[7]  ; 5.495 ; 5.495 ; 5.495 ; 5.495 ;
+; clk_in              ; mem_addr_bus_out[8]  ; 5.426 ; 5.426 ; 5.426 ; 5.426 ;
+; clk_in              ; mem_addr_bus_out[9]  ; 5.269 ; 5.269 ; 5.269 ; 5.269 ;
+; clk_in              ; mem_addr_bus_out[10] ; 5.607 ; 5.607 ; 5.607 ; 5.607 ;
+; clk_in              ; mem_addr_bus_out[11] ; 5.802 ; 5.802 ; 5.802 ; 5.802 ;
+; clk_in              ; mem_data_bus_out[0]  ; 5.229 ; 5.229 ; 5.229 ; 5.229 ;
+; clk_in              ; mem_data_bus_out[1]  ; 5.239 ; 5.239 ; 5.239 ; 5.239 ;
+; clk_in              ; mem_data_bus_out[2]  ; 5.496 ; 5.496 ; 5.496 ; 5.496 ;
+; clk_in              ; mem_data_bus_out[3]  ; 5.380 ; 5.380 ; 5.380 ; 5.380 ;
+; clk_in              ; mem_data_bus_out[4]  ; 5.354 ; 5.354 ; 5.354 ; 5.354 ;
+; clk_in              ; mem_data_bus_out[5]  ; 5.401 ; 5.401 ; 5.401 ; 5.401 ;
+; clk_in              ; mem_data_bus_out[6]  ; 5.225 ; 5.225 ; 5.225 ; 5.225 ;
+; clk_in              ; mem_data_bus_out[7]  ; 5.537 ; 5.537 ; 5.537 ; 5.537 ;
+; clk_in              ; mem_data_bus_out[8]  ; 5.492 ; 5.492 ; 5.492 ; 5.492 ;
+; clk_in              ; mem_data_bus_out[9]  ; 5.336 ; 5.336 ; 5.336 ; 5.336 ;
+; clk_in              ; mem_data_bus_out[10] ; 5.352 ; 5.352 ; 5.352 ; 5.352 ;
+; clk_in              ; mem_data_bus_out[11] ; 5.598 ; 5.598 ; 5.598 ; 5.598 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[5]  ; 7.729 ; 7.508 ; 7.508 ; 7.729 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[6]  ; 7.624 ; 7.380 ; 7.380 ; 7.624 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[7]  ; 7.609 ; 7.398 ; 7.398 ; 7.609 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[8]  ; 7.569 ; 7.325 ; 7.325 ; 7.569 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[9]  ; 7.595 ; 7.355 ; 7.355 ; 7.595 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[10] ; 7.721 ; 7.296 ; 7.296 ; 7.721 ;
+; mem_data_bus_in[0]  ; mem_addr_bus_out[11] ; 8.002 ; 7.694 ; 7.694 ; 8.002 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[0]  ; 5.501 ;       ;       ; 5.501 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[1]  ; 7.227 ; 7.227 ; 7.227 ; 7.227 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[2]  ; 7.484 ; 7.484 ; 7.484 ; 7.484 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[3]  ; 7.479 ; 7.479 ; 7.479 ; 7.479 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[4]  ; 7.548 ; 7.548 ; 7.548 ; 7.548 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[5]  ; 7.424 ; 7.424 ; 7.424 ; 7.424 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[6]  ; 7.412 ; 7.412 ; 7.412 ; 7.412 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[7]  ; 7.513 ; 7.513 ; 7.513 ; 7.513 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[8]  ; 7.540 ; 7.540 ; 7.540 ; 7.540 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[9]  ; 7.523 ; 7.523 ; 7.523 ; 7.523 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[10] ; 7.459 ; 7.459 ; 7.459 ; 7.459 ;
+; mem_data_bus_in[0]  ; mem_data_bus_out[11] ; 7.747 ; 7.747 ; 7.747 ; 7.747 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[5]  ; 7.456 ; 7.289 ; 7.289 ; 7.456 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[6]  ; 7.351 ; 7.161 ; 7.161 ; 7.351 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[7]  ; 7.336 ; 7.179 ; 7.179 ; 7.336 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[8]  ; 7.296 ; 7.106 ; 7.106 ; 7.296 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[9]  ; 7.322 ; 7.136 ; 7.136 ; 7.322 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[10] ; 7.448 ; 7.077 ; 7.077 ; 7.448 ;
+; mem_data_bus_in[1]  ; mem_addr_bus_out[11] ; 7.729 ; 7.475 ; 7.475 ; 7.729 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[0]  ; 7.254 ; 7.254 ; 7.254 ; 7.254 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[1]  ; 4.930 ;       ;       ; 4.930 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[2]  ; 7.210 ; 7.210 ; 7.210 ; 7.210 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[3]  ; 7.205 ; 7.205 ; 7.205 ; 7.205 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[4]  ; 7.274 ; 7.274 ; 7.274 ; 7.274 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[5]  ; 7.150 ; 7.150 ; 7.150 ; 7.150 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[6]  ; 7.138 ; 7.138 ; 7.138 ; 7.138 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[7]  ; 7.239 ; 7.239 ; 7.239 ; 7.239 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[8]  ; 7.266 ; 7.266 ; 7.266 ; 7.266 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[9]  ; 7.249 ; 7.249 ; 7.249 ; 7.249 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[10] ; 7.185 ; 7.185 ; 7.185 ; 7.185 ;
+; mem_data_bus_in[1]  ; mem_data_bus_out[11] ; 7.473 ; 7.473 ; 7.473 ; 7.473 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[5]  ; 7.366 ; 9.116 ; 9.116 ; 7.366 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[6]  ; 7.261 ; 8.988 ; 8.988 ; 7.261 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[7]  ; 7.246 ; 9.006 ; 9.006 ; 7.246 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[8]  ; 7.206 ; 8.933 ; 8.933 ; 7.206 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[9]  ; 7.232 ; 8.963 ; 8.963 ; 7.232 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[10] ; 7.358 ; 8.904 ; 8.904 ; 7.358 ;
+; mem_data_bus_in[2]  ; mem_addr_bus_out[11] ; 7.639 ; 9.302 ; 9.302 ; 7.639 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[0]  ; 7.164 ; 7.164 ; 7.164 ; 7.164 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[1]  ; 6.863 ; 6.863 ; 6.863 ; 6.863 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[2]  ; 5.080 ;       ;       ; 5.080 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[3]  ; 7.115 ; 7.115 ; 7.115 ; 7.115 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[4]  ; 7.184 ; 7.184 ; 7.184 ; 7.184 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[5]  ; 7.060 ; 7.060 ; 7.060 ; 7.060 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[6]  ; 7.048 ; 7.048 ; 7.048 ; 7.048 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[7]  ; 7.149 ; 7.149 ; 7.149 ; 7.149 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[8]  ; 7.176 ; 7.176 ; 7.176 ; 7.176 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[9]  ; 7.159 ; 7.159 ; 7.159 ; 7.159 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[10] ; 7.095 ; 7.095 ; 7.095 ; 7.095 ;
+; mem_data_bus_in[2]  ; mem_data_bus_out[11] ; 7.383 ; 7.383 ; 7.383 ; 7.383 ;
+; mem_data_bus_in[3]  ; mem_data_bus_out[3]  ; 2.728 ;       ;       ; 2.728 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[5]  ; 5.066 ;       ;       ; 5.066 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[6]  ; 4.938 ;       ;       ; 4.938 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[7]  ; 4.956 ;       ;       ; 4.956 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[8]  ; 4.883 ;       ;       ; 4.883 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[9]  ; 4.913 ;       ;       ; 4.913 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[10] ; 4.854 ;       ;       ; 4.854 ;
+; mem_data_bus_in[4]  ; mem_addr_bus_out[11] ; 5.252 ;       ;       ; 5.252 ;
+; mem_data_bus_in[4]  ; mem_data_bus_out[4]  ; 3.134 ;       ;       ; 3.134 ;
+; mem_data_bus_in[5]  ; mem_data_bus_out[5]  ; 2.784 ;       ;       ; 2.784 ;
+; mem_data_bus_in[6]  ; mem_data_bus_out[6]  ; 2.764 ;       ;       ; 2.764 ;
+; mem_data_bus_in[7]  ; mem_data_bus_out[7]  ; 4.935 ;       ;       ; 4.935 ;
+; mem_data_bus_in[8]  ; mem_data_bus_out[8]  ; 5.360 ;       ;       ; 5.360 ;
+; mem_data_bus_in[9]  ; mem_data_bus_out[9]  ; 5.277 ;       ;       ; 5.277 ;
+; mem_data_bus_in[10] ; mem_data_bus_out[10] ; 5.158 ;       ;       ; 5.158 ;
+; mem_data_bus_in[11] ; mem_data_bus_out[11] ; 5.438 ;       ;       ; 5.438 ;
+; not_reset           ; mem_addr_bus_out[0]  ; 5.667 ;       ;       ; 5.667 ;
+; not_reset           ; mem_addr_bus_out[1]  ; 5.534 ;       ;       ; 5.534 ;
+; not_reset           ; mem_addr_bus_out[2]  ; 5.723 ;       ;       ; 5.723 ;
+; not_reset           ; mem_addr_bus_out[3]  ; 5.597 ;       ;       ; 5.597 ;
+; not_reset           ; mem_addr_bus_out[4]  ; 5.508 ;       ;       ; 5.508 ;
+; not_reset           ; mem_addr_bus_out[5]  ; 5.697 ; 7.012 ; 7.012 ; 5.697 ;
+; not_reset           ; mem_addr_bus_out[6]  ; 5.745 ; 6.907 ; 6.907 ; 5.745 ;
+; not_reset           ; mem_addr_bus_out[7]  ; 5.576 ; 6.892 ; 6.892 ; 5.576 ;
+; not_reset           ; mem_addr_bus_out[8]  ; 5.528 ; 6.852 ; 6.852 ; 5.528 ;
+; not_reset           ; mem_addr_bus_out[9]  ; 5.560 ; 6.878 ; 6.878 ; 5.560 ;
+; not_reset           ; mem_addr_bus_out[10] ; 5.689 ; 7.004 ; 7.004 ; 5.689 ;
+; not_reset           ; mem_addr_bus_out[11] ; 5.966 ; 7.285 ; 7.285 ; 5.966 ;
+; not_reset           ; mem_data_bus_out[0]  ; 6.067 ; 6.714 ; 6.714 ; 6.067 ;
+; not_reset           ; mem_data_bus_out[1]  ; 5.759 ; 6.413 ; 6.413 ; 5.759 ;
+; not_reset           ; mem_data_bus_out[2]  ; 6.026 ; 6.670 ; 6.670 ; 6.026 ;
+; not_reset           ; mem_data_bus_out[3]  ; 6.022 ; 6.665 ; 6.665 ; 6.022 ;
+; not_reset           ; mem_data_bus_out[4]  ; 6.099 ; 6.734 ; 6.734 ; 6.099 ;
+; not_reset           ; mem_data_bus_out[5]  ; 5.962 ; 6.610 ; 6.610 ; 5.962 ;
+; not_reset           ; mem_data_bus_out[6]  ; 5.870 ; 6.598 ; 6.598 ; 5.870 ;
+; not_reset           ; mem_data_bus_out[7]  ; 6.058 ; 6.699 ; 6.699 ; 6.058 ;
+; not_reset           ; mem_data_bus_out[8]  ; 5.957 ; 6.726 ; 6.726 ; 5.957 ;
+; not_reset           ; mem_data_bus_out[9]  ; 5.980 ; 6.709 ; 6.709 ; 5.980 ;
+; not_reset           ; mem_data_bus_out[10] ; 5.993 ; 6.645 ; 6.645 ; 5.993 ;
+; not_reset           ; mem_data_bus_out[11] ; 6.162 ; 6.933 ; 6.933 ; 6.162 ;
++---------------------+----------------------+-------+-------+-------+-------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; START      ; START    ; 2        ; 1        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; START      ; START    ; 2        ; 1        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
 ---------------
@@ -194,10 +1358,10 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 0     ; 0    ;
-; Unconstrained Input Port Paths  ; 0     ; 0    ;
-; Unconstrained Output Ports      ; 0     ; 0    ;
-; Unconstrained Output Port Paths ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 14    ; 14   ;
+; Unconstrained Input Port Paths  ; 122   ; 122  ;
+; Unconstrained Output Ports      ; 24    ; 24   ;
+; Unconstrained Output Port Paths ; 145   ; 145  ;
 +---------------------------------+-------+------+
 
 
@@ -207,42 +1371,356 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Jan 15 18:00:44 2017
+    Info: Processing started: Sun Jan 15 20:10:01 2017
 Info: Command: quartus_sta top_level -c top_level
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (21077): Low junction temperature is -40 degrees C
 Info (21077): High junction temperature is 125 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 1 combinational loops as latches.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'top_level.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name START START
+Warning (332125): Found combinational loop of 8 nodes
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_11|nand_5|output~1|datad"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_11|nand_5|output~1|combout"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_11|nand_3_3|output~0|dataa"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_11|nand_3_3|output~0|combout"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_11|nand_3_3|output~1|datab"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_11|nand_3_3|output~1|combout"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_11|nand_3_3|output~1|datad"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_11|nand_5|output~1|datab"
+Warning (332125): Found combinational loop of 8 nodes
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_10|nand_5|output~1|datad"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_10|nand_5|output~1|combout"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_10|nand_3_3|output~0|dataa"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_10|nand_3_3|output~0|combout"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_10|nand_3_3|output~1|datad"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_10|nand_3_3|output~1|combout"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_10|nand_3_3|output~1|datab"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_10|nand_5|output~1|datab"
+Warning (332125): Found combinational loop of 8 nodes
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_9|nand_5|output~1|datad"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_9|nand_5|output~1|combout"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_9|nand_3_3|output~0|datac"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_9|nand_3_3|output~0|combout"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_9|nand_3_3|output~1|datac"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_9|nand_3_3|output~1|combout"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_9|nand_3_3|output~1|datab"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_9|nand_5|output~1|datab"
+Warning (332125): Found combinational loop of 8 nodes
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_8|nand_5|output~1|datad"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_8|nand_5|output~1|combout"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_8|nand_5|output~1|dataa"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_8|nand_3_3|output~0|datac"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_8|nand_3_3|output~0|combout"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_8|nand_3_3|output~1|datac"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_8|nand_3_3|output~1|combout"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_8|nand_3_3|output~1|datab"
+Warning (332125): Found combinational loop of 8 nodes
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_7|nand_5|output~1|datad"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_7|nand_5|output~1|combout"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_7|nand_3_3|output~0|datab"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_7|nand_3_3|output~0|combout"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_7|nand_3_3|output~1|datab"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_7|nand_3_3|output~1|combout"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_7|nand_3_3|output~1|datad"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_7|nand_5|output~1|datab"
+Warning (332125): Found combinational loop of 8 nodes
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_6|nand_5|output~1|datad"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_6|nand_5|output~1|combout"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_6|nand_3_3|output~0|datab"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_6|nand_3_3|output~0|combout"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_6|nand_3_3|output~1|datad"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_6|nand_3_3|output~1|combout"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_6|nand_3_3|output~1|datab"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_6|nand_5|output~1|datab"
+Warning (332125): Found combinational loop of 8 nodes
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_5|nand_5|output~1|datac"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_5|nand_5|output~1|combout"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_5|nand_3_3|output~0|dataa"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_5|nand_3_3|output~0|combout"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_5|nand_3_3|output~1|datab"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_5|nand_3_3|output~1|combout"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_5|nand_3_3|output~1|datad"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_5|nand_5|output~1|datab"
+Warning (332125): Found combinational loop of 8 nodes
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_4|nand_5|output~1|combout"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_4|nand_1|output~2|dataa"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_4|nand_1|output~2|combout"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_4|nand_1|output~1|dataa"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_4|nand_1|output~1|combout"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_4|nand_1|output~2|datab"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_4|nand_5|output~1|dataa"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_4|nand_5|output~1|datac"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_4|nand_5|output~1|dataa"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_4|nand_5|output~1|combout"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_4|nand_3_3|output~0|combout"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_4|nand_3_3|output~0|dataa"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_3|nand_5|output~1|datad"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_3|nand_5|output~1|combout"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_3|nand_3_3|output~0|combout"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_3|nand_3_3|output~0|datac"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_2|nand_5|output~1|datad"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_2|nand_5|output~1|combout"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_2|nand_3_3|output~0|combout"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_2|nand_3_3|output~0|dataa"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_1|nand_5|output~1|datad"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_1|nand_5|output~1|combout"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_1|nand_3_3|output~0|combout"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_1|nand_3_3|output~0|datab"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_0|nand_5|output~1|datad"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_0|nand_5|output~1|combout"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_0|nand_3_3|output~0|combout"
+    Warning (332126): Node "register_array_0|MA_register|ms_jk_ff_0|nand_3_3|output~0|datac"
+Warning (332125): Found combinational loop of 8 nodes
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_11|nand_5|output~1|datac"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_11|nand_5|output~1|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_11|nand_5|output~1|dataa"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_11|nand_1|output~2|dataa"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_11|nand_1|output~2|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_11|nand_1|output~1|datab"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_11|nand_1|output~1|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_11|nand_1|output~2|datad"
+Warning (332125): Found combinational loop of 8 nodes
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_10|nand_5|output~1|datad"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_10|nand_5|output~1|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_10|nand_1|output~2|datad"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_10|nand_1|output~2|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_10|nand_1|output~1|datad"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_10|nand_1|output~1|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_10|nand_1|output~2|datab"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_10|nand_5|output~1|dataa"
+Warning (332125): Found combinational loop of 8 nodes
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_9|nand_5|output~1|datad"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_9|nand_5|output~1|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_9|nand_1|output~2|datad"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_9|nand_1|output~2|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_9|nand_1|output~1|dataa"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_9|nand_1|output~1|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_9|nand_1|output~2|datab"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_9|nand_5|output~1|dataa"
+Warning (332125): Found combinational loop of 8 nodes
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_8|nand_5|output~1|datac"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_8|nand_5|output~1|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_8|nand_5|output~1|dataa"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_8|nand_1|output~2|dataa"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_8|nand_1|output~2|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_8|nand_1|output~1|datab"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_8|nand_1|output~1|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_8|nand_1|output~2|datad"
+Warning (332125): Found combinational loop of 8 nodes
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_7|nand_5|output~1|datad"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_7|nand_5|output~1|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_7|nand_5|output~1|dataa"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_7|nand_1|output~2|dataa"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_7|nand_1|output~2|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_7|nand_1|output~1|datad"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_7|nand_1|output~1|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_7|nand_1|output~2|datab"
+Warning (332125): Found combinational loop of 8 nodes
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_6|nand_5|output~1|datad"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_6|nand_5|output~1|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_6|nand_1|output~2|datad"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_6|nand_1|output~2|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_6|nand_1|output~1|dataa"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_6|nand_1|output~1|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_6|nand_1|output~2|datab"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_6|nand_5|output~1|dataa"
+Warning (332125): Found combinational loop of 8 nodes
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_5|nand_5|output~1|datad"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_5|nand_5|output~1|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_5|nand_1|output~2|datad"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_5|nand_1|output~2|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_5|nand_1|output~1|datab"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_5|nand_1|output~1|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_5|nand_1|output~2|datab"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_5|nand_5|output~1|datac"
+Warning (332125): Found combinational loop of 8 nodes
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_4|nand_5|output~1|datad"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_4|nand_5|output~1|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_4|nand_1|output~2|datad"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_4|nand_1|output~2|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_4|nand_1|output~1|datad"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_4|nand_1|output~1|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_4|nand_1|output~2|dataa"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_4|nand_5|output~1|dataa"
+Warning (332125): Found combinational loop of 8 nodes
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_3|nand_5|output~1|datad"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_3|nand_5|output~1|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_3|nand_1|output~2|dataa"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_3|nand_1|output~2|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_3|nand_1|output~1|dataa"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_3|nand_1|output~1|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_3|nand_1|output~2|datab"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_3|nand_5|output~1|dataa"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "control_subsystem_0|clock_generator_0|ms_jk_ff_0|nand_1|output~1|combout"
+    Warning (332126): Node "control_subsystem_0|clock_generator_0|ms_jk_ff_0|nand_1|output~1|dataa"
+Warning (332125): Found combinational loop of 69 nodes
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_0|nand_5|output~1|datab"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_0|nand_5|output~1|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_0|nand_5|output~1|dataa"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_0|nand_1|output~2|dataa"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_0|nand_1|output~2|combout"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_0|nand_1|output~1|dataa"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_0|nand_1|output~1|combout"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_0|nand_1|output~2|datad"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_0|nand_5|output~1|dataa"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_0|nand_5|output~1|combout"
+    Warning (332126): Node "control_subsystem_0|control_matrix|MD_LOAD~1|datad"
+    Warning (332126): Node "control_subsystem_0|control_matrix|MD_LOAD~1|combout"
+    Warning (332126): Node "control_subsystem_0|control_matrix|MD_LOAD~3|datad"
+    Warning (332126): Node "control_subsystem_0|control_matrix|MD_LOAD~3|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_11|nand_3_1|output~0|datab"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_11|nand_3_1|output~0|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_1|nand_1|output~2|datac"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_1|nand_1|output~2|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_1|nand_1|output~1|datad"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_1|nand_1|output~1|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_1|nand_1|output~2|datab"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_1|nand_5|output~1|datad"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_1|nand_5|output~1|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_1|nand_5|output~1|dataa"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_1|nand_1|output~2|dataa"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_1|nand_1|output~2|dataa"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_1|nand_1|output~2|combout"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_1|nand_1|output~1|datab"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_1|nand_1|output~1|combout"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_1|nand_1|output~2|datab"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_1|nand_5|output~1|datab"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_1|nand_5|output~1|combout"
+    Warning (332126): Node "control_subsystem_0|control_matrix|MD_LOAD~1|datab"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_1|nand_1|output~2|datad"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_1|nand_5|output~1|datad"
+    Warning (332126): Node "control_subsystem_0|control_matrix|MD_LOAD~4|datab"
+    Warning (332126): Node "control_subsystem_0|control_matrix|MD_LOAD~4|combout"
+    Warning (332126): Node "control_subsystem_0|control_matrix|MD_LOAD~5|datad"
+    Warning (332126): Node "control_subsystem_0|control_matrix|MD_LOAD~5|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_11|nand_3_1|output~0|datac"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_2|nand_1|output~2|datac"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_2|nand_1|output~2|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_2|nand_1|output~1|datad"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_2|nand_1|output~1|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_2|nand_1|output~2|datab"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_2|nand_5|output~1|datad"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_2|nand_5|output~1|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_2|nand_5|output~1|dataa"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_2|nand_1|output~2|dataa"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_2|nand_1|output~2|datad"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_2|nand_1|output~2|combout"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_2|nand_1|output~1|datab"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_2|nand_1|output~1|combout"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_2|nand_1|output~2|dataa"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_2|nand_5|output~1|datad"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_2|nand_5|output~1|combout"
+    Warning (332126): Node "control_subsystem_0|control_matrix|MD_LOAD~1|datac"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_2|nand_5|output~1|datab"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_2|nand_1|output~2|datab"
+    Warning (332126): Node "control_subsystem_0|control_matrix|MD_LOAD~4|datac"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_0|nand_1|output~2|datac"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_0|nand_1|output~2|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_0|nand_1|output~1|datad"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_0|nand_1|output~1|combout"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_0|nand_1|output~2|datab"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_0|nand_1|output~2|datab"
+    Warning (332126): Node "control_subsystem_0|register_5_bit_0|ms_jk_ff_0|nand_5|output~1|datad"
+    Warning (332126): Node "control_subsystem_0|control_matrix|MD_LOAD~4|datad"
+    Warning (332126): Node "register_array_0|MD_register|ms_jk_ff_0|nand_1|output~2|datad"
+Warning (332125): Found combinational loop of 6 nodes
+    Warning (332126): Node "control_subsystem_0|state_generator_0|t_state_generator_0|counter_3_0|ms_jk_ff_2|nand_5|output~1|combout"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|t_state_generator_0|counter_3_0|ms_jk_ff_2|nand_5|output~1|dataa"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|t_state_generator_0|counter_3_0|ms_jk_ff_2|nand_3_3|output~0|dataa"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|t_state_generator_0|counter_3_0|ms_jk_ff_2|nand_3_3|output~0|combout"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|t_state_generator_0|counter_3_0|ms_jk_ff_2|nand_3_3|output~0|datab"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|t_state_generator_0|counter_3_0|ms_jk_ff_2|nand_5|output~1|datad"
+Warning (332125): Found combinational loop of 6 nodes
+    Warning (332126): Node "control_subsystem_0|state_generator_0|t_state_generator_0|counter_3_0|ms_jk_ff_1|nand_5|output~1|combout"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|t_state_generator_0|counter_3_0|ms_jk_ff_1|nand_5|output~1|dataa"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|t_state_generator_0|counter_3_0|ms_jk_ff_1|nand_3_3|output~0|dataa"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|t_state_generator_0|counter_3_0|ms_jk_ff_1|nand_3_3|output~0|combout"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|t_state_generator_0|counter_3_0|ms_jk_ff_1|nand_3_3|output~0|datab"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|t_state_generator_0|counter_3_0|ms_jk_ff_1|nand_5|output~1|datab"
+Warning (332125): Found combinational loop of 6 nodes
+    Warning (332126): Node "control_subsystem_0|state_generator_0|s_state_generator_0|counter|ff_2|nand_5|output~1|combout"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|s_state_generator_0|counter|ff_2|nand_1|output~3|dataa"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|s_state_generator_0|counter|ff_2|nand_1|output~3|combout"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|s_state_generator_0|counter|ff_2|nand_1|output~3|datab"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|s_state_generator_0|counter|ff_2|nand_5|output~1|datab"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|s_state_generator_0|counter|ff_2|nand_5|output~1|datad"
+Warning (332125): Found combinational loop of 6 nodes
+    Warning (332126): Node "control_subsystem_0|state_generator_0|s_state_generator_0|counter|ff_1|nand_5|output~1|combout"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|s_state_generator_0|counter|ff_1|nand_1|output~2|datab"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|s_state_generator_0|counter|ff_1|nand_1|output~2|combout"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|s_state_generator_0|counter|ff_1|nand_1|output~2|datac"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|s_state_generator_0|counter|ff_1|nand_5|output~1|datab"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|s_state_generator_0|counter|ff_1|nand_5|output~1|datac"
+Warning (332125): Found combinational loop of 6 nodes
+    Warning (332126): Node "control_subsystem_0|state_generator_0|s_state_generator_0|counter|ff_0|nand_5|output~1|combout"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|s_state_generator_0|counter|ff_0|nand_1|output~1|datab"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|s_state_generator_0|counter|ff_0|nand_1|output~1|combout"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|s_state_generator_0|counter|ff_0|nand_1|output~1|datac"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|s_state_generator_0|counter|ff_0|nand_5|output~1|dataa"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|s_state_generator_0|counter|ff_0|nand_5|output~1|datad"
+Warning (332125): Found combinational loop of 6 nodes
+    Warning (332126): Node "control_subsystem_0|state_generator_0|t_state_generator_0|counter_3_0|ms_jk_ff_0|nand_5|output~2|combout"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|t_state_generator_0|counter_3_0|ms_jk_ff_0|nand_3_3|output~0|datab"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|t_state_generator_0|counter_3_0|ms_jk_ff_0|nand_3_3|output~0|combout"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|t_state_generator_0|counter_3_0|ms_jk_ff_0|nand_3_3|output~0|datac"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|t_state_generator_0|counter_3_0|ms_jk_ff_0|nand_5|output~2|datac"
+    Warning (332126): Node "control_subsystem_0|state_generator_0|t_state_generator_0|counter_3_0|ms_jk_ff_0|nand_5|output~2|datad"
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
-Info (332159): No clocks to report
 Info: Analyzing Slow Model
-Info (332140): No fmax paths to report
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.719
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.719        -1.719 START 
+Info (332146): Worst-case hold slack is 0.460
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.460         0.000 START 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.469
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.469        -1.469 START 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
-Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.190
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.190        -0.190 START 
+Info (332146): Worst-case hold slack is 0.138
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.138         0.000 START 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222        -1.222 START 
 Info (332001): The selected device family is not supported by the report_metastability command.
-Info (332101): Design is fully constrained for setup requirements
-Info (332101): Design is fully constrained for hold requirements
-Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 583 megabytes
-    Info: Processing ended: Sun Jan 15 18:00:45 2017
-    Info: Elapsed time: 00:00:01
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 303 warnings
+    Info: Peak virtual memory: 589 megabytes
+    Info: Processing ended: Sun Jan 15 20:10:01 2017
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 
