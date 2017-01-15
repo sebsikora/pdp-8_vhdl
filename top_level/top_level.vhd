@@ -77,6 +77,7 @@ component register_array is
 	port ( top_bus:										in std_logic_vector(11 downto 0);
 			 ALU_link_output:								in std_logic;
 			 register_output_bus:						out std_logic_vector(11 downto 0);
+			 AC_output_bus:								out std_logic_vector(11 downto 0);
 			 mem_data_bus_in:								in std_logic_vector(11 downto 0);
 			 mem_data_bus_out:							out std_logic_vector(11 downto 0);
 			 mem_addr_bus_out:							out std_logic_vector(11 downto 0);
@@ -102,10 +103,41 @@ component register_array is
 			 LINK_LOAD:										in std_logic
 	);
 end component;
+component  alu_subsystem is
+	port ( clk:												in std_logic;
+			 not_reset:										in std_logic;
+			 ALU_input_A:									in std_logic_vector(11 downto 0);
+			 ALU_input_B:									in std_logic_vector(11 downto 0);
+			 register_bus_input:							in std_logic_vector(11 downto 0);
+			 AC_input:										in std_logic_vector(11 downto 0);
+			 LINK_input:									in std_logic;
+			 LINK_OUT_SEL:									in std_logic;
+			 LINK_COMP:										in std_logic;
+			 ALU_FUNC_SEL_0:								in std_logic;
+			 ALU_FUNC_SEL_1:								in std_logic;
+			 ALU_FUNC_SEL_2:								in std_logic;
+			 ALU_OUT_SEL_0:								in std_logic;
+			 ALU_OUT_SEL_1:								in std_logic;
+			 ALU_OUT_SEL_2:								in std_logic;
+			 ALU_COMP:										in std_logic;
+			 ALU_INC:										in std_logic;
+			 ALU_CLEAR:										in std_logic;
+			 ALU_ROT_1:										in std_logic;
+			 ALU_ROT_2:										in std_logic;
+			 ADD_CARRY:										out std_logic;
+			 INC_CARRY:										out std_logic;
+			 IS_ZERO_LAST:									out std_logic;
+			 IS_ZERO:										out std_logic;
+			 IS_NEG:											out std_logic;
+			 top_bus_output:								out std_logic_vector(11 downto 0);
+			 LINK_output:									out std_logic
+	);
+end component;
 		
 		signal mem_data_bus:								std_logic_vector(11 downto 0);
 		signal ALU_link_output:							std_logic;
 		signal register_output_bus:					std_logic_vector(11 downto 0);
+		signal AC_output_bus:							std_logic_vector(11 downto 0);
 		signal top_bus:									std_logic_vector(11 downto 0);
 		signal clk:											std_logic;
 		
@@ -165,6 +197,7 @@ end component;
 		register_array_0:		register_array port map ( top_bus => top_bus,
 																	  ALU_link_output => ALU_link_output,
 																	  register_output_bus => register_output_bus,
+																	  AC_output_bus => AC_output_bus,
 																	  mem_data_bus_in => mem_data_bus_in,
 																	  mem_data_bus_out => mem_data_bus,
 																	  mem_addr_bus_out => mem_addr_bus_out,
@@ -246,6 +279,35 @@ end component;
 																		 ALU_ROT_2 => ALU_ROT_2,
 																		 MEM_READ => MEM_READ,
 																		 MEM_WRITE => MEM_WRITE
+									);
+		
+		alu_subsystem_0:		alu_subsystem port map    ( clk => clk,
+																		 not_reset => not_reset,
+																		 ALU_input_A => register_output_bus,
+																		 ALU_input_B => AC_output_bus,
+																		 register_bus_input => register_output_bus,
+																		 AC_input => AC_output_bus,
+																		 LINK_input => LINK_VALUE,
+																		 LINK_OUT_SEL => LINK_OUT_SEL,
+																		 LINK_COMP => LINK_COMP,
+																		 ALU_FUNC_SEL_0 => ALU_FUNC_SEL_0,
+																		 ALU_FUNC_SEL_1 => ALU_FUNC_SEL_1,
+																		 ALU_FUNC_SEL_2 => ALU_FUNC_SEL_2,
+																		 ALU_OUT_SEL_0 => ALU_OUT_SEL_0,
+																		 ALU_OUT_SEL_1 => ALU_OUT_SEL_1,
+																		 ALU_OUT_SEL_2 => ALU_OUT_SEL_2,
+																		 ALU_COMP => ALU_COMP,
+																		 ALU_INC => ALU_INC,
+																		 ALU_CLEAR => ALU_CLEAR,
+																		 ALU_ROT_1 => ALU_ROT_1,
+																		 ALU_ROT_2 => ALU_ROT_2,
+																		 ADD_CARRY => ADD_CARRY,
+																		 INC_CARRY => INC_CARRY,
+																		 IS_ZERO_LAST => IS_ZERO_LAST,
+																		 IS_ZERO => IS_ZERO,
+																		 IS_NEG => IS_NEG,
+																		 top_bus_output => top_bus,
+																		 LINK_output => ALU_link_output
 									);
 		
 		mem_data_bus_out <= mem_data_bus;

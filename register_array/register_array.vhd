@@ -5,6 +5,7 @@ entity register_array is
 	port ( top_bus:										in std_logic_vector(11 downto 0);
 			 ALU_link_output:								in std_logic;
 			 register_output_bus:						out std_logic_vector(11 downto 0);
+			 AC_output_bus:								out std_logic_vector(11 downto 0);
 			 mem_data_bus_in:								in std_logic_vector(11 downto 0);
 			 mem_data_bus_out:							out std_logic_vector(11 downto 0);
 			 mem_addr_bus_out:							out std_logic_vector(11 downto 0);
