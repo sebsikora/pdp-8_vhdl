@@ -4,12 +4,8 @@ use ieee.std_logic_1164.all;
 entity control_subsystem is
 	port ( MD_BUS:											in std_logic_vector(11 downto 0);
 			 not_reset:										in std_logic;
-			 clk:												in std_logic;
-			 -- Ultimately clk will become an output, driving the rest of the system.
-			 -- In the real system, an oscillator within the control subsystem will be switched
-			 -- on and off in response to control signals from the front panel / control
-			 -- logic. In this system, those same signals will instead gate a constant clock
-			 -- connected to a 'dummy' input here. Start will also become an output, perhaps others.
+			 clk_in:											in std_logic;
+			 clk:												out std_logic;
 			 START:											in std_logic;
 			 STEP:											in std_logic;
 			 NEXT_STATE:									in std_logic;
@@ -146,6 +142,16 @@ architecture rtl of control_subsystem is
 				 MEM_WRITE:									out std_logic
 		);
 	end component;
+	component clock_generator is
+		port ( START:										in std_logic;
+				 STEP:										in std_logic;
+				 clk_in:										in std_logic;
+				 END_STATE:									in std_logic;
+				 clk:											out std_logic;
+				 not_reset:									in std_logic;
+				 RUN_INDICATOR:							out std_logic
+		);
+	end component;
 	
 	signal s_state_signals:					std_logic_vector(7 downto 0);
 	signal load_s_state:						std_logic_vector(1 downto 0);
@@ -158,22 +164,33 @@ architecture rtl of control_subsystem is
 	signal IR_load_input:					std_logic;
 	signal control_matrix_IR_input:		std_logic_vector(11 downto 0);
 	signal IRQ_signal:						std_logic;
-	
+	signal clk_signal:						std_logic;
+	signal RUN_INDICATOR_signal:			std_logic;
 	begin
 		
 		IRQ_signal <= IRQ and IRQ_ON;
-		control_matrix_IR_input(11 downto 7) <= IR_reg_output;
-		control_matrix_IR_input(6 downto 0) <= MD_BUS(6 downto 0);
+		control_matrix_IR_input(4 downto 0) <= IR_reg_output;
+		control_matrix_IR_input(11 downto 5) <= MD_BUS(11 downto 5);
+		RUN_INDICATOR <= RUN_INDICATOR_signal;
+		clk <= clk_signal;
 		
-		register_5_bit_0:			register_5_bit  port map ( input => MD_BUS(11 downto 7),
+		register_5_bit_0:			register_5_bit  port map ( input => MD_BUS(4 downto 0),
 																			output => IR_reg_output,
 																			load => IR_load_input,
 																			clear => IR_clr_input,
-																			clk => clk,
+																			clk => clk_signal,
 																			not_reset => not_reset
 										);
+		clock_generator_0:		clock_generator port map ( START => START,
+																			STEP => STEP,
+																			clk_in => clk_in,
+																			END_STATE => END_STATE_flag,
+																			clk => clk_signal,
+																			not_reset => not_reset,
+																			RUN_INDICATOR => RUN_INDICATOR_signal
+										);
 										
-		state_generator_0:		state_generator port map ( clk => clk,
+		state_generator_0:		state_generator port map ( clk => clk_signal,
 																			not_reset => not_reset,
 																			HLT_flag => HLT_flag,
 																			NEXT_STATE => NEXT_STATE_flag,

@@ -1,0 +1,31 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity register_output_mux is
+	port ( input_0:				in std_logic_vector(11 downto 0);
+			 input_1:				in std_logic_vector(11 downto 0);
+			 input_2:				in std_logic_vector(11 downto 0);
+			 output:					out std_logic_vector(11 downto 0);
+			 ALU_OUT_SEL_0:		in std_logic;
+			 ALU_OUT_SEL_1:		in std_logic;
+			 ALU_OUT_SEL_2:		in std_logic
+	);
+end register_output_mux;
+
+architecture behavior of register_output_mux is
+
+begin
+	process(input_0, input_1, input_2, ALU_OUT_SEL_0, ALU_OUT_SEL_1, ALU_OUT_SEL_2)
+	begin
+		if ALU_OUT_SEL_0 = '1' then
+			output <= input_0;
+		elsif ALU_OUT_SEL_1 = '1' then
+			output <= input_1;
+		elsif ALU_OUT_SEL_2 = '1' then
+			output <= input_2;
+		else
+			output <= "000000000000";
+		end if;
+	end process;
+	
+end behavior;

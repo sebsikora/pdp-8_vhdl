@@ -1,0 +1,720 @@
+TimeQuest Timing Analyzer report for alu_output_mux
+Sun Jan 15 16:45:05 2017
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Propagation Delay
+ 12. Minimum Propagation Delay
+ 13. Fast Model Setup Summary
+ 14. Fast Model Hold Summary
+ 15. Fast Model Recovery Summary
+ 16. Fast Model Removal Summary
+ 17. Fast Model Minimum Pulse Width Summary
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Multicorner Timing Analysis Summary
+ 21. Progagation Delay
+ 22. Minimum Progagation Delay
+ 23. Clock Transfers
+ 24. Report TCCS
+ 25. Report RSKM
+ 26. Unconstrained Paths
+ 27. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; alu_output_mux                                                    ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C5AT144A7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
+----------
+; Clocks ;
+----------
+No clocks to report.
+
+
+---------------------------
+; Slow Model Fmax Summary ;
+---------------------------
+No paths to report.
+
+
+----------------------------
+; Slow Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Slow Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Slow Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++-----------------------------------------------------------------+
+; Propagation Delay                                               ;
++---------------+-------------+--------+--------+--------+--------+
+; Input Port    ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++---------------+-------------+--------+--------+--------+--------+
+; ALU_OUT_SEL_0 ; output[0]   ; 11.603 ; 11.603 ; 11.603 ; 11.603 ;
+; ALU_OUT_SEL_0 ; output[1]   ; 12.005 ; 12.005 ; 12.005 ; 12.005 ;
+; ALU_OUT_SEL_0 ; output[2]   ; 11.301 ; 11.301 ; 11.301 ; 11.301 ;
+; ALU_OUT_SEL_0 ; output[3]   ; 13.080 ; 13.080 ; 13.080 ; 13.080 ;
+; ALU_OUT_SEL_0 ; output[4]   ; 12.135 ; 12.135 ; 12.135 ; 12.135 ;
+; ALU_OUT_SEL_0 ; output[5]   ; 12.779 ; 12.779 ; 12.779 ; 12.779 ;
+; ALU_OUT_SEL_0 ; output[6]   ; 12.036 ; 14.168 ; 14.168 ; 12.036 ;
+; ALU_OUT_SEL_0 ; output[7]   ; 12.760 ; 15.011 ; 15.011 ; 12.760 ;
+; ALU_OUT_SEL_0 ; output[8]   ; 12.654 ; 14.540 ; 14.540 ; 12.654 ;
+; ALU_OUT_SEL_0 ; output[9]   ; 13.538 ; 15.672 ; 15.672 ; 13.538 ;
+; ALU_OUT_SEL_0 ; output[10]  ; 12.443 ; 14.659 ; 14.659 ; 12.443 ;
+; ALU_OUT_SEL_0 ; output[11]  ; 12.768 ; 15.019 ; 15.019 ; 12.768 ;
+; ALU_OUT_SEL_1 ; output[0]   ; 12.554 ; 12.554 ; 12.554 ; 12.554 ;
+; ALU_OUT_SEL_1 ; output[1]   ; 12.925 ; 12.925 ; 12.925 ; 12.925 ;
+; ALU_OUT_SEL_1 ; output[2]   ; 12.200 ; 12.200 ; 12.200 ; 12.200 ;
+; ALU_OUT_SEL_1 ; output[3]   ; 13.780 ; 13.780 ; 13.780 ; 13.780 ;
+; ALU_OUT_SEL_1 ; output[4]   ; 12.198 ; 12.111 ; 12.111 ; 12.198 ;
+; ALU_OUT_SEL_1 ; output[5]   ; 12.849 ; 12.510 ; 12.510 ; 12.849 ;
+; ALU_OUT_SEL_1 ; output[6]   ; 12.282 ; 14.239 ; 14.239 ; 12.282 ;
+; ALU_OUT_SEL_1 ; output[7]   ; 13.003 ; 15.082 ; 15.082 ; 13.003 ;
+; ALU_OUT_SEL_1 ; output[8]   ; 12.251 ; 14.611 ; 14.611 ; 12.251 ;
+; ALU_OUT_SEL_1 ; output[9]   ; 13.783 ; 15.743 ; 15.743 ; 13.783 ;
+; ALU_OUT_SEL_1 ; output[10]  ; 12.673 ; 14.730 ; 14.730 ; 12.673 ;
+; ALU_OUT_SEL_1 ; output[11]  ; 13.005 ; 15.090 ; 15.090 ; 13.005 ;
+; ALU_OUT_SEL_2 ; output[0]   ; 12.432 ;        ;        ; 12.432 ;
+; ALU_OUT_SEL_2 ; output[1]   ; 12.800 ;        ;        ; 12.800 ;
+; ALU_OUT_SEL_2 ; output[2]   ; 11.702 ;        ;        ; 11.702 ;
+; ALU_OUT_SEL_2 ; output[3]   ; 13.657 ;        ;        ; 13.657 ;
+; ALU_OUT_SEL_2 ; output[4]   ; 11.987 ;        ;        ; 11.987 ;
+; ALU_OUT_SEL_2 ; output[5]   ; 12.386 ;        ;        ; 12.386 ;
+; ALU_OUT_SEL_2 ; output[6]   ; 14.115 ;        ;        ; 14.115 ;
+; ALU_OUT_SEL_2 ; output[7]   ; 14.958 ;        ;        ; 14.958 ;
+; ALU_OUT_SEL_2 ; output[8]   ; 14.487 ;        ;        ; 14.487 ;
+; ALU_OUT_SEL_2 ; output[9]   ; 15.619 ;        ;        ; 15.619 ;
+; ALU_OUT_SEL_2 ; output[10]  ; 14.606 ;        ;        ; 14.606 ;
+; ALU_OUT_SEL_2 ; output[11]  ; 14.966 ;        ;        ; 14.966 ;
+; input_0[0]    ; output[0]   ; 11.111 ;        ;        ; 11.111 ;
+; input_0[1]    ; output[1]   ; 12.105 ;        ;        ; 12.105 ;
+; input_0[2]    ; output[2]   ; 11.074 ;        ;        ; 11.074 ;
+; input_0[3]    ; output[3]   ; 12.572 ;        ;        ; 12.572 ;
+; input_0[4]    ; output[4]   ; 12.085 ;        ;        ; 12.085 ;
+; input_0[5]    ; output[5]   ; 12.214 ;        ;        ; 12.214 ;
+; input_0[6]    ; output[6]   ; 11.838 ;        ;        ; 11.838 ;
+; input_0[7]    ; output[7]   ; 12.154 ;        ;        ; 12.154 ;
+; input_0[8]    ; output[8]   ; 12.308 ;        ;        ; 12.308 ;
+; input_0[9]    ; output[9]   ; 8.193  ;        ;        ; 8.193  ;
+; input_0[10]   ; output[10]  ; 7.422  ;        ;        ; 7.422  ;
+; input_0[11]   ; output[11]  ; 12.661 ;        ;        ; 12.661 ;
+; input_1[0]    ; output[0]   ; 11.636 ;        ;        ; 11.636 ;
+; input_1[1]    ; output[1]   ; 13.174 ;        ;        ; 13.174 ;
+; input_1[2]    ; output[2]   ; 12.385 ;        ;        ; 12.385 ;
+; input_1[3]    ; output[3]   ; 13.077 ;        ;        ; 13.077 ;
+; input_1[4]    ; output[4]   ; 11.509 ;        ;        ; 11.509 ;
+; input_1[5]    ; output[5]   ; 12.562 ;        ;        ; 12.562 ;
+; input_1[6]    ; output[6]   ; 11.043 ;        ;        ; 11.043 ;
+; input_1[7]    ; output[7]   ; 11.818 ;        ;        ; 11.818 ;
+; input_1[8]    ; output[8]   ; 11.576 ;        ;        ; 11.576 ;
+; input_1[9]    ; output[9]   ; 8.509  ;        ;        ; 8.509  ;
+; input_1[10]   ; output[10]  ; 11.424 ;        ;        ; 11.424 ;
+; input_1[11]   ; output[11]  ; 11.807 ;        ;        ; 11.807 ;
+; input_2[0]    ; output[0]   ; 12.784 ;        ;        ; 12.784 ;
+; input_2[1]    ; output[1]   ; 12.544 ;        ;        ; 12.544 ;
+; input_2[2]    ; output[2]   ; 12.092 ;        ;        ; 12.092 ;
+; input_2[3]    ; output[3]   ; 12.688 ;        ;        ; 12.688 ;
+; input_2[4]    ; output[4]   ; 11.239 ;        ;        ; 11.239 ;
+; input_2[5]    ; output[5]   ; 11.728 ;        ;        ; 11.728 ;
+; input_2[6]    ; output[6]   ; 10.481 ;        ;        ; 10.481 ;
+; input_2[7]    ; output[7]   ; 11.449 ;        ;        ; 11.449 ;
+; input_2[8]    ; output[8]   ; 10.444 ;        ;        ; 10.444 ;
+; input_2[9]    ; output[9]   ; 7.584  ;        ;        ; 7.584  ;
+; input_2[10]   ; output[10]  ; 11.314 ;        ;        ; 11.314 ;
+; input_2[11]   ; output[11]  ; 12.096 ;        ;        ; 12.096 ;
++---------------+-------------+--------+--------+--------+--------+
+
+
++-----------------------------------------------------------------+
+; Minimum Propagation Delay                                       ;
++---------------+-------------+--------+--------+--------+--------+
+; Input Port    ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++---------------+-------------+--------+--------+--------+--------+
+; ALU_OUT_SEL_0 ; output[0]   ; 11.603 ; 11.603 ; 11.603 ; 11.603 ;
+; ALU_OUT_SEL_0 ; output[1]   ; 12.005 ; 12.005 ; 12.005 ; 12.005 ;
+; ALU_OUT_SEL_0 ; output[2]   ; 11.301 ; 11.301 ; 11.301 ; 11.301 ;
+; ALU_OUT_SEL_0 ; output[3]   ; 13.080 ; 13.080 ; 13.080 ; 13.080 ;
+; ALU_OUT_SEL_0 ; output[4]   ; 12.135 ; 12.040 ; 12.040 ; 12.135 ;
+; ALU_OUT_SEL_0 ; output[5]   ; 12.779 ; 12.439 ; 12.439 ; 12.779 ;
+; ALU_OUT_SEL_0 ; output[6]   ; 12.036 ; 12.036 ; 12.036 ; 12.036 ;
+; ALU_OUT_SEL_0 ; output[7]   ; 12.760 ; 12.760 ; 12.760 ; 12.760 ;
+; ALU_OUT_SEL_0 ; output[8]   ; 12.654 ; 12.654 ; 12.654 ; 12.654 ;
+; ALU_OUT_SEL_0 ; output[9]   ; 13.538 ; 13.538 ; 13.538 ; 13.538 ;
+; ALU_OUT_SEL_0 ; output[10]  ; 12.443 ; 12.443 ; 12.443 ; 12.443 ;
+; ALU_OUT_SEL_0 ; output[11]  ; 12.768 ; 12.768 ; 12.768 ; 12.768 ;
+; ALU_OUT_SEL_1 ; output[0]   ; 12.554 ; 12.554 ; 12.554 ; 12.554 ;
+; ALU_OUT_SEL_1 ; output[1]   ; 12.925 ; 12.925 ; 12.925 ; 12.925 ;
+; ALU_OUT_SEL_1 ; output[2]   ; 12.200 ; 12.200 ; 12.200 ; 12.200 ;
+; ALU_OUT_SEL_1 ; output[3]   ; 13.780 ; 13.780 ; 13.780 ; 13.780 ;
+; ALU_OUT_SEL_1 ; output[4]   ; 12.198 ; 12.111 ; 12.111 ; 12.198 ;
+; ALU_OUT_SEL_1 ; output[5]   ; 12.849 ; 12.510 ; 12.510 ; 12.849 ;
+; ALU_OUT_SEL_1 ; output[6]   ; 12.282 ; 14.239 ; 14.239 ; 12.282 ;
+; ALU_OUT_SEL_1 ; output[7]   ; 13.003 ; 15.082 ; 15.082 ; 13.003 ;
+; ALU_OUT_SEL_1 ; output[8]   ; 12.251 ; 14.611 ; 14.611 ; 12.251 ;
+; ALU_OUT_SEL_1 ; output[9]   ; 13.783 ; 15.743 ; 15.743 ; 13.783 ;
+; ALU_OUT_SEL_1 ; output[10]  ; 12.673 ; 14.730 ; 14.730 ; 12.673 ;
+; ALU_OUT_SEL_1 ; output[11]  ; 13.005 ; 15.090 ; 15.090 ; 13.005 ;
+; ALU_OUT_SEL_2 ; output[0]   ; 12.432 ;        ;        ; 12.432 ;
+; ALU_OUT_SEL_2 ; output[1]   ; 12.800 ;        ;        ; 12.800 ;
+; ALU_OUT_SEL_2 ; output[2]   ; 11.702 ;        ;        ; 11.702 ;
+; ALU_OUT_SEL_2 ; output[3]   ; 13.657 ;        ;        ; 13.657 ;
+; ALU_OUT_SEL_2 ; output[4]   ; 11.987 ;        ;        ; 11.987 ;
+; ALU_OUT_SEL_2 ; output[5]   ; 12.386 ;        ;        ; 12.386 ;
+; ALU_OUT_SEL_2 ; output[6]   ; 14.115 ;        ;        ; 14.115 ;
+; ALU_OUT_SEL_2 ; output[7]   ; 14.958 ;        ;        ; 14.958 ;
+; ALU_OUT_SEL_2 ; output[8]   ; 14.487 ;        ;        ; 14.487 ;
+; ALU_OUT_SEL_2 ; output[9]   ; 15.619 ;        ;        ; 15.619 ;
+; ALU_OUT_SEL_2 ; output[10]  ; 14.606 ;        ;        ; 14.606 ;
+; ALU_OUT_SEL_2 ; output[11]  ; 14.966 ;        ;        ; 14.966 ;
+; input_0[0]    ; output[0]   ; 11.111 ;        ;        ; 11.111 ;
+; input_0[1]    ; output[1]   ; 12.105 ;        ;        ; 12.105 ;
+; input_0[2]    ; output[2]   ; 11.074 ;        ;        ; 11.074 ;
+; input_0[3]    ; output[3]   ; 12.572 ;        ;        ; 12.572 ;
+; input_0[4]    ; output[4]   ; 12.085 ;        ;        ; 12.085 ;
+; input_0[5]    ; output[5]   ; 12.214 ;        ;        ; 12.214 ;
+; input_0[6]    ; output[6]   ; 11.838 ;        ;        ; 11.838 ;
+; input_0[7]    ; output[7]   ; 12.154 ;        ;        ; 12.154 ;
+; input_0[8]    ; output[8]   ; 12.308 ;        ;        ; 12.308 ;
+; input_0[9]    ; output[9]   ; 8.193  ;        ;        ; 8.193  ;
+; input_0[10]   ; output[10]  ; 7.422  ;        ;        ; 7.422  ;
+; input_0[11]   ; output[11]  ; 12.661 ;        ;        ; 12.661 ;
+; input_1[0]    ; output[0]   ; 11.636 ;        ;        ; 11.636 ;
+; input_1[1]    ; output[1]   ; 13.174 ;        ;        ; 13.174 ;
+; input_1[2]    ; output[2]   ; 12.385 ;        ;        ; 12.385 ;
+; input_1[3]    ; output[3]   ; 13.077 ;        ;        ; 13.077 ;
+; input_1[4]    ; output[4]   ; 11.509 ;        ;        ; 11.509 ;
+; input_1[5]    ; output[5]   ; 12.562 ;        ;        ; 12.562 ;
+; input_1[6]    ; output[6]   ; 11.043 ;        ;        ; 11.043 ;
+; input_1[7]    ; output[7]   ; 11.818 ;        ;        ; 11.818 ;
+; input_1[8]    ; output[8]   ; 11.576 ;        ;        ; 11.576 ;
+; input_1[9]    ; output[9]   ; 8.509  ;        ;        ; 8.509  ;
+; input_1[10]   ; output[10]  ; 11.424 ;        ;        ; 11.424 ;
+; input_1[11]   ; output[11]  ; 11.807 ;        ;        ; 11.807 ;
+; input_2[0]    ; output[0]   ; 12.784 ;        ;        ; 12.784 ;
+; input_2[1]    ; output[1]   ; 12.544 ;        ;        ; 12.544 ;
+; input_2[2]    ; output[2]   ; 12.092 ;        ;        ; 12.092 ;
+; input_2[3]    ; output[3]   ; 12.688 ;        ;        ; 12.688 ;
+; input_2[4]    ; output[4]   ; 11.239 ;        ;        ; 11.239 ;
+; input_2[5]    ; output[5]   ; 11.728 ;        ;        ; 11.728 ;
+; input_2[6]    ; output[6]   ; 10.481 ;        ;        ; 10.481 ;
+; input_2[7]    ; output[7]   ; 11.449 ;        ;        ; 11.449 ;
+; input_2[8]    ; output[8]   ; 10.444 ;        ;        ; 10.444 ;
+; input_2[9]    ; output[9]   ; 7.584  ;        ;        ; 7.584  ;
+; input_2[10]   ; output[10]  ; 11.314 ;        ;        ; 11.314 ;
+; input_2[11]   ; output[11]  ; 12.096 ;        ;        ; 12.096 ;
++---------------+-------------+--------+--------+--------+--------+
+
+
+----------------------------
+; Fast Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Fast Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Fast Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++-------------------------------------------------------------+
+; Propagation Delay                                           ;
++---------------+-------------+-------+-------+-------+-------+
+; Input Port    ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++---------------+-------------+-------+-------+-------+-------+
+; ALU_OUT_SEL_0 ; output[0]   ; 5.473 ; 5.473 ; 5.473 ; 5.473 ;
+; ALU_OUT_SEL_0 ; output[1]   ; 5.581 ; 5.581 ; 5.581 ; 5.581 ;
+; ALU_OUT_SEL_0 ; output[2]   ; 5.357 ; 5.357 ; 5.357 ; 5.357 ;
+; ALU_OUT_SEL_0 ; output[3]   ; 5.979 ; 5.979 ; 5.979 ; 5.979 ;
+; ALU_OUT_SEL_0 ; output[4]   ; 5.593 ; 5.593 ; 5.593 ; 5.593 ;
+; ALU_OUT_SEL_0 ; output[5]   ; 5.922 ; 5.922 ; 5.922 ; 5.922 ;
+; ALU_OUT_SEL_0 ; output[6]   ; 5.485 ; 6.276 ; 6.276 ; 5.485 ;
+; ALU_OUT_SEL_0 ; output[7]   ; 5.812 ; 6.652 ; 6.652 ; 5.812 ;
+; ALU_OUT_SEL_0 ; output[8]   ; 5.702 ; 6.416 ; 6.416 ; 5.702 ;
+; ALU_OUT_SEL_0 ; output[9]   ; 6.105 ; 6.895 ; 6.895 ; 6.105 ;
+; ALU_OUT_SEL_0 ; output[10]  ; 5.697 ; 6.519 ; 6.519 ; 5.697 ;
+; ALU_OUT_SEL_0 ; output[11]  ; 5.811 ; 6.652 ; 6.652 ; 5.811 ;
+; ALU_OUT_SEL_1 ; output[0]   ; 5.744 ; 5.744 ; 5.744 ; 5.744 ;
+; ALU_OUT_SEL_1 ; output[1]   ; 5.846 ; 5.846 ; 5.846 ; 5.846 ;
+; ALU_OUT_SEL_1 ; output[2]   ; 5.612 ; 5.612 ; 5.612 ; 5.612 ;
+; ALU_OUT_SEL_1 ; output[3]   ; 6.169 ; 6.169 ; 6.169 ; 6.169 ;
+; ALU_OUT_SEL_1 ; output[4]   ; 5.582 ; 5.551 ; 5.551 ; 5.582 ;
+; ALU_OUT_SEL_1 ; output[5]   ; 5.917 ; 5.814 ; 5.814 ; 5.917 ;
+; ALU_OUT_SEL_1 ; output[6]   ; 5.605 ; 6.275 ; 6.275 ; 5.605 ;
+; ALU_OUT_SEL_1 ; output[7]   ; 5.929 ; 6.651 ; 6.651 ; 5.929 ;
+; ALU_OUT_SEL_1 ; output[8]   ; 5.622 ; 6.415 ; 6.415 ; 5.622 ;
+; ALU_OUT_SEL_1 ; output[9]   ; 6.225 ; 6.894 ; 6.894 ; 6.225 ;
+; ALU_OUT_SEL_1 ; output[10]  ; 5.803 ; 6.518 ; 6.518 ; 5.803 ;
+; ALU_OUT_SEL_1 ; output[11]  ; 5.923 ; 6.651 ; 6.651 ; 5.923 ;
+; ALU_OUT_SEL_2 ; output[0]   ; 5.719 ;       ;       ; 5.719 ;
+; ALU_OUT_SEL_2 ; output[1]   ; 5.824 ;       ;       ; 5.824 ;
+; ALU_OUT_SEL_2 ; output[2]   ; 5.468 ;       ;       ; 5.468 ;
+; ALU_OUT_SEL_2 ; output[3]   ; 6.148 ;       ;       ; 6.148 ;
+; ALU_OUT_SEL_2 ; output[4]   ; 5.527 ;       ;       ; 5.527 ;
+; ALU_OUT_SEL_2 ; output[5]   ; 5.790 ;       ;       ; 5.790 ;
+; ALU_OUT_SEL_2 ; output[6]   ; 6.251 ;       ;       ; 6.251 ;
+; ALU_OUT_SEL_2 ; output[7]   ; 6.627 ;       ;       ; 6.627 ;
+; ALU_OUT_SEL_2 ; output[8]   ; 6.391 ;       ;       ; 6.391 ;
+; ALU_OUT_SEL_2 ; output[9]   ; 6.870 ;       ;       ; 6.870 ;
+; ALU_OUT_SEL_2 ; output[10]  ; 6.494 ;       ;       ; 6.494 ;
+; ALU_OUT_SEL_2 ; output[11]  ; 6.627 ;       ;       ; 6.627 ;
+; input_0[0]    ; output[0]   ; 5.229 ;       ;       ; 5.229 ;
+; input_0[1]    ; output[1]   ; 5.618 ;       ;       ; 5.618 ;
+; input_0[2]    ; output[2]   ; 5.200 ;       ;       ; 5.200 ;
+; input_0[3]    ; output[3]   ; 5.727 ;       ;       ; 5.727 ;
+; input_0[4]    ; output[4]   ; 5.574 ;       ;       ; 5.574 ;
+; input_0[5]    ; output[5]   ; 5.651 ;       ;       ; 5.651 ;
+; input_0[6]    ; output[6]   ; 5.399 ;       ;       ; 5.399 ;
+; input_0[7]    ; output[7]   ; 5.597 ;       ;       ; 5.597 ;
+; input_0[8]    ; output[8]   ; 5.583 ;       ;       ; 5.583 ;
+; input_0[9]    ; output[9]   ; 3.444 ;       ;       ; 3.444 ;
+; input_0[10]   ; output[10]  ; 3.134 ;       ;       ; 3.134 ;
+; input_0[11]   ; output[11]  ; 5.773 ;       ;       ; 5.773 ;
+; input_1[0]    ; output[0]   ; 5.396 ;       ;       ; 5.396 ;
+; input_1[1]    ; output[1]   ; 5.968 ;       ;       ; 5.968 ;
+; input_1[2]    ; output[2]   ; 5.705 ;       ;       ; 5.705 ;
+; input_1[3]    ; output[3]   ; 5.883 ;       ;       ; 5.883 ;
+; input_1[4]    ; output[4]   ; 5.303 ;       ;       ; 5.303 ;
+; input_1[5]    ; output[5]   ; 5.762 ;       ;       ; 5.762 ;
+; input_1[6]    ; output[6]   ; 5.134 ;       ;       ; 5.134 ;
+; input_1[7]    ; output[7]   ; 5.496 ;       ;       ; 5.496 ;
+; input_1[8]    ; output[8]   ; 5.334 ;       ;       ; 5.334 ;
+; input_1[9]    ; output[9]   ; 3.534 ;       ;       ; 3.534 ;
+; input_1[10]   ; output[10]  ; 5.329 ;       ;       ; 5.329 ;
+; input_1[11]   ; output[11]  ; 5.485 ;       ;       ; 5.485 ;
+; input_2[0]    ; output[0]   ; 5.823 ;       ;       ; 5.823 ;
+; input_2[1]    ; output[1]   ; 5.676 ;       ;       ; 5.676 ;
+; input_2[2]    ; output[2]   ; 5.582 ;       ;       ; 5.582 ;
+; input_2[3]    ; output[3]   ; 5.768 ;       ;       ; 5.768 ;
+; input_2[4]    ; output[4]   ; 5.233 ;       ;       ; 5.233 ;
+; input_2[5]    ; output[5]   ; 5.503 ;       ;       ; 5.503 ;
+; input_2[6]    ; output[6]   ; 4.924 ;       ;       ; 4.924 ;
+; input_2[7]    ; output[7]   ; 5.365 ;       ;       ; 5.365 ;
+; input_2[8]    ; output[8]   ; 4.929 ;       ;       ; 4.929 ;
+; input_2[9]    ; output[9]   ; 3.234 ;       ;       ; 3.234 ;
+; input_2[10]   ; output[10]  ; 5.312 ;       ;       ; 5.312 ;
+; input_2[11]   ; output[11]  ; 5.611 ;       ;       ; 5.611 ;
++---------------+-------------+-------+-------+-------+-------+
+
+
++-------------------------------------------------------------+
+; Minimum Propagation Delay                                   ;
++---------------+-------------+-------+-------+-------+-------+
+; Input Port    ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++---------------+-------------+-------+-------+-------+-------+
+; ALU_OUT_SEL_0 ; output[0]   ; 5.473 ; 5.473 ; 5.473 ; 5.473 ;
+; ALU_OUT_SEL_0 ; output[1]   ; 5.581 ; 5.581 ; 5.581 ; 5.581 ;
+; ALU_OUT_SEL_0 ; output[2]   ; 5.357 ; 5.357 ; 5.357 ; 5.357 ;
+; ALU_OUT_SEL_0 ; output[3]   ; 5.979 ; 5.979 ; 5.979 ; 5.979 ;
+; ALU_OUT_SEL_0 ; output[4]   ; 5.593 ; 5.552 ; 5.552 ; 5.593 ;
+; ALU_OUT_SEL_0 ; output[5]   ; 5.922 ; 5.815 ; 5.815 ; 5.922 ;
+; ALU_OUT_SEL_0 ; output[6]   ; 5.485 ; 5.485 ; 5.485 ; 5.485 ;
+; ALU_OUT_SEL_0 ; output[7]   ; 5.812 ; 5.812 ; 5.812 ; 5.812 ;
+; ALU_OUT_SEL_0 ; output[8]   ; 5.702 ; 5.702 ; 5.702 ; 5.702 ;
+; ALU_OUT_SEL_0 ; output[9]   ; 6.105 ; 6.105 ; 6.105 ; 6.105 ;
+; ALU_OUT_SEL_0 ; output[10]  ; 5.697 ; 5.697 ; 5.697 ; 5.697 ;
+; ALU_OUT_SEL_0 ; output[11]  ; 5.811 ; 5.811 ; 5.811 ; 5.811 ;
+; ALU_OUT_SEL_1 ; output[0]   ; 5.744 ; 5.744 ; 5.744 ; 5.744 ;
+; ALU_OUT_SEL_1 ; output[1]   ; 5.846 ; 5.846 ; 5.846 ; 5.846 ;
+; ALU_OUT_SEL_1 ; output[2]   ; 5.612 ; 5.612 ; 5.612 ; 5.612 ;
+; ALU_OUT_SEL_1 ; output[3]   ; 6.169 ; 6.169 ; 6.169 ; 6.169 ;
+; ALU_OUT_SEL_1 ; output[4]   ; 5.582 ; 5.551 ; 5.551 ; 5.582 ;
+; ALU_OUT_SEL_1 ; output[5]   ; 5.917 ; 5.814 ; 5.814 ; 5.917 ;
+; ALU_OUT_SEL_1 ; output[6]   ; 5.605 ; 6.275 ; 6.275 ; 5.605 ;
+; ALU_OUT_SEL_1 ; output[7]   ; 5.929 ; 6.651 ; 6.651 ; 5.929 ;
+; ALU_OUT_SEL_1 ; output[8]   ; 5.622 ; 6.415 ; 6.415 ; 5.622 ;
+; ALU_OUT_SEL_1 ; output[9]   ; 6.225 ; 6.894 ; 6.894 ; 6.225 ;
+; ALU_OUT_SEL_1 ; output[10]  ; 5.803 ; 6.518 ; 6.518 ; 5.803 ;
+; ALU_OUT_SEL_1 ; output[11]  ; 5.923 ; 6.651 ; 6.651 ; 5.923 ;
+; ALU_OUT_SEL_2 ; output[0]   ; 5.719 ;       ;       ; 5.719 ;
+; ALU_OUT_SEL_2 ; output[1]   ; 5.824 ;       ;       ; 5.824 ;
+; ALU_OUT_SEL_2 ; output[2]   ; 5.468 ;       ;       ; 5.468 ;
+; ALU_OUT_SEL_2 ; output[3]   ; 6.148 ;       ;       ; 6.148 ;
+; ALU_OUT_SEL_2 ; output[4]   ; 5.527 ;       ;       ; 5.527 ;
+; ALU_OUT_SEL_2 ; output[5]   ; 5.790 ;       ;       ; 5.790 ;
+; ALU_OUT_SEL_2 ; output[6]   ; 6.251 ;       ;       ; 6.251 ;
+; ALU_OUT_SEL_2 ; output[7]   ; 6.627 ;       ;       ; 6.627 ;
+; ALU_OUT_SEL_2 ; output[8]   ; 6.391 ;       ;       ; 6.391 ;
+; ALU_OUT_SEL_2 ; output[9]   ; 6.870 ;       ;       ; 6.870 ;
+; ALU_OUT_SEL_2 ; output[10]  ; 6.494 ;       ;       ; 6.494 ;
+; ALU_OUT_SEL_2 ; output[11]  ; 6.627 ;       ;       ; 6.627 ;
+; input_0[0]    ; output[0]   ; 5.229 ;       ;       ; 5.229 ;
+; input_0[1]    ; output[1]   ; 5.618 ;       ;       ; 5.618 ;
+; input_0[2]    ; output[2]   ; 5.200 ;       ;       ; 5.200 ;
+; input_0[3]    ; output[3]   ; 5.727 ;       ;       ; 5.727 ;
+; input_0[4]    ; output[4]   ; 5.574 ;       ;       ; 5.574 ;
+; input_0[5]    ; output[5]   ; 5.651 ;       ;       ; 5.651 ;
+; input_0[6]    ; output[6]   ; 5.399 ;       ;       ; 5.399 ;
+; input_0[7]    ; output[7]   ; 5.597 ;       ;       ; 5.597 ;
+; input_0[8]    ; output[8]   ; 5.583 ;       ;       ; 5.583 ;
+; input_0[9]    ; output[9]   ; 3.444 ;       ;       ; 3.444 ;
+; input_0[10]   ; output[10]  ; 3.134 ;       ;       ; 3.134 ;
+; input_0[11]   ; output[11]  ; 5.773 ;       ;       ; 5.773 ;
+; input_1[0]    ; output[0]   ; 5.396 ;       ;       ; 5.396 ;
+; input_1[1]    ; output[1]   ; 5.968 ;       ;       ; 5.968 ;
+; input_1[2]    ; output[2]   ; 5.705 ;       ;       ; 5.705 ;
+; input_1[3]    ; output[3]   ; 5.883 ;       ;       ; 5.883 ;
+; input_1[4]    ; output[4]   ; 5.303 ;       ;       ; 5.303 ;
+; input_1[5]    ; output[5]   ; 5.762 ;       ;       ; 5.762 ;
+; input_1[6]    ; output[6]   ; 5.134 ;       ;       ; 5.134 ;
+; input_1[7]    ; output[7]   ; 5.496 ;       ;       ; 5.496 ;
+; input_1[8]    ; output[8]   ; 5.334 ;       ;       ; 5.334 ;
+; input_1[9]    ; output[9]   ; 3.534 ;       ;       ; 3.534 ;
+; input_1[10]   ; output[10]  ; 5.329 ;       ;       ; 5.329 ;
+; input_1[11]   ; output[11]  ; 5.485 ;       ;       ; 5.485 ;
+; input_2[0]    ; output[0]   ; 5.823 ;       ;       ; 5.823 ;
+; input_2[1]    ; output[1]   ; 5.676 ;       ;       ; 5.676 ;
+; input_2[2]    ; output[2]   ; 5.582 ;       ;       ; 5.582 ;
+; input_2[3]    ; output[3]   ; 5.768 ;       ;       ; 5.768 ;
+; input_2[4]    ; output[4]   ; 5.233 ;       ;       ; 5.233 ;
+; input_2[5]    ; output[5]   ; 5.503 ;       ;       ; 5.503 ;
+; input_2[6]    ; output[6]   ; 4.924 ;       ;       ; 4.924 ;
+; input_2[7]    ; output[7]   ; 5.365 ;       ;       ; 5.365 ;
+; input_2[8]    ; output[8]   ; 4.929 ;       ;       ; 4.929 ;
+; input_2[9]    ; output[9]   ; 3.234 ;       ;       ; 3.234 ;
+; input_2[10]   ; output[10]  ; 5.312 ;       ;       ; 5.312 ;
+; input_2[11]   ; output[11]  ; 5.611 ;       ;       ; 5.611 ;
++---------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                        ;
++------------------+-------+------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
++------------------+-------+------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------+
+; Progagation Delay                                               ;
++---------------+-------------+--------+--------+--------+--------+
+; Input Port    ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++---------------+-------------+--------+--------+--------+--------+
+; ALU_OUT_SEL_0 ; output[0]   ; 11.603 ; 11.603 ; 11.603 ; 11.603 ;
+; ALU_OUT_SEL_0 ; output[1]   ; 12.005 ; 12.005 ; 12.005 ; 12.005 ;
+; ALU_OUT_SEL_0 ; output[2]   ; 11.301 ; 11.301 ; 11.301 ; 11.301 ;
+; ALU_OUT_SEL_0 ; output[3]   ; 13.080 ; 13.080 ; 13.080 ; 13.080 ;
+; ALU_OUT_SEL_0 ; output[4]   ; 12.135 ; 12.135 ; 12.135 ; 12.135 ;
+; ALU_OUT_SEL_0 ; output[5]   ; 12.779 ; 12.779 ; 12.779 ; 12.779 ;
+; ALU_OUT_SEL_0 ; output[6]   ; 12.036 ; 14.168 ; 14.168 ; 12.036 ;
+; ALU_OUT_SEL_0 ; output[7]   ; 12.760 ; 15.011 ; 15.011 ; 12.760 ;
+; ALU_OUT_SEL_0 ; output[8]   ; 12.654 ; 14.540 ; 14.540 ; 12.654 ;
+; ALU_OUT_SEL_0 ; output[9]   ; 13.538 ; 15.672 ; 15.672 ; 13.538 ;
+; ALU_OUT_SEL_0 ; output[10]  ; 12.443 ; 14.659 ; 14.659 ; 12.443 ;
+; ALU_OUT_SEL_0 ; output[11]  ; 12.768 ; 15.019 ; 15.019 ; 12.768 ;
+; ALU_OUT_SEL_1 ; output[0]   ; 12.554 ; 12.554 ; 12.554 ; 12.554 ;
+; ALU_OUT_SEL_1 ; output[1]   ; 12.925 ; 12.925 ; 12.925 ; 12.925 ;
+; ALU_OUT_SEL_1 ; output[2]   ; 12.200 ; 12.200 ; 12.200 ; 12.200 ;
+; ALU_OUT_SEL_1 ; output[3]   ; 13.780 ; 13.780 ; 13.780 ; 13.780 ;
+; ALU_OUT_SEL_1 ; output[4]   ; 12.198 ; 12.111 ; 12.111 ; 12.198 ;
+; ALU_OUT_SEL_1 ; output[5]   ; 12.849 ; 12.510 ; 12.510 ; 12.849 ;
+; ALU_OUT_SEL_1 ; output[6]   ; 12.282 ; 14.239 ; 14.239 ; 12.282 ;
+; ALU_OUT_SEL_1 ; output[7]   ; 13.003 ; 15.082 ; 15.082 ; 13.003 ;
+; ALU_OUT_SEL_1 ; output[8]   ; 12.251 ; 14.611 ; 14.611 ; 12.251 ;
+; ALU_OUT_SEL_1 ; output[9]   ; 13.783 ; 15.743 ; 15.743 ; 13.783 ;
+; ALU_OUT_SEL_1 ; output[10]  ; 12.673 ; 14.730 ; 14.730 ; 12.673 ;
+; ALU_OUT_SEL_1 ; output[11]  ; 13.005 ; 15.090 ; 15.090 ; 13.005 ;
+; ALU_OUT_SEL_2 ; output[0]   ; 12.432 ;        ;        ; 12.432 ;
+; ALU_OUT_SEL_2 ; output[1]   ; 12.800 ;        ;        ; 12.800 ;
+; ALU_OUT_SEL_2 ; output[2]   ; 11.702 ;        ;        ; 11.702 ;
+; ALU_OUT_SEL_2 ; output[3]   ; 13.657 ;        ;        ; 13.657 ;
+; ALU_OUT_SEL_2 ; output[4]   ; 11.987 ;        ;        ; 11.987 ;
+; ALU_OUT_SEL_2 ; output[5]   ; 12.386 ;        ;        ; 12.386 ;
+; ALU_OUT_SEL_2 ; output[6]   ; 14.115 ;        ;        ; 14.115 ;
+; ALU_OUT_SEL_2 ; output[7]   ; 14.958 ;        ;        ; 14.958 ;
+; ALU_OUT_SEL_2 ; output[8]   ; 14.487 ;        ;        ; 14.487 ;
+; ALU_OUT_SEL_2 ; output[9]   ; 15.619 ;        ;        ; 15.619 ;
+; ALU_OUT_SEL_2 ; output[10]  ; 14.606 ;        ;        ; 14.606 ;
+; ALU_OUT_SEL_2 ; output[11]  ; 14.966 ;        ;        ; 14.966 ;
+; input_0[0]    ; output[0]   ; 11.111 ;        ;        ; 11.111 ;
+; input_0[1]    ; output[1]   ; 12.105 ;        ;        ; 12.105 ;
+; input_0[2]    ; output[2]   ; 11.074 ;        ;        ; 11.074 ;
+; input_0[3]    ; output[3]   ; 12.572 ;        ;        ; 12.572 ;
+; input_0[4]    ; output[4]   ; 12.085 ;        ;        ; 12.085 ;
+; input_0[5]    ; output[5]   ; 12.214 ;        ;        ; 12.214 ;
+; input_0[6]    ; output[6]   ; 11.838 ;        ;        ; 11.838 ;
+; input_0[7]    ; output[7]   ; 12.154 ;        ;        ; 12.154 ;
+; input_0[8]    ; output[8]   ; 12.308 ;        ;        ; 12.308 ;
+; input_0[9]    ; output[9]   ; 8.193  ;        ;        ; 8.193  ;
+; input_0[10]   ; output[10]  ; 7.422  ;        ;        ; 7.422  ;
+; input_0[11]   ; output[11]  ; 12.661 ;        ;        ; 12.661 ;
+; input_1[0]    ; output[0]   ; 11.636 ;        ;        ; 11.636 ;
+; input_1[1]    ; output[1]   ; 13.174 ;        ;        ; 13.174 ;
+; input_1[2]    ; output[2]   ; 12.385 ;        ;        ; 12.385 ;
+; input_1[3]    ; output[3]   ; 13.077 ;        ;        ; 13.077 ;
+; input_1[4]    ; output[4]   ; 11.509 ;        ;        ; 11.509 ;
+; input_1[5]    ; output[5]   ; 12.562 ;        ;        ; 12.562 ;
+; input_1[6]    ; output[6]   ; 11.043 ;        ;        ; 11.043 ;
+; input_1[7]    ; output[7]   ; 11.818 ;        ;        ; 11.818 ;
+; input_1[8]    ; output[8]   ; 11.576 ;        ;        ; 11.576 ;
+; input_1[9]    ; output[9]   ; 8.509  ;        ;        ; 8.509  ;
+; input_1[10]   ; output[10]  ; 11.424 ;        ;        ; 11.424 ;
+; input_1[11]   ; output[11]  ; 11.807 ;        ;        ; 11.807 ;
+; input_2[0]    ; output[0]   ; 12.784 ;        ;        ; 12.784 ;
+; input_2[1]    ; output[1]   ; 12.544 ;        ;        ; 12.544 ;
+; input_2[2]    ; output[2]   ; 12.092 ;        ;        ; 12.092 ;
+; input_2[3]    ; output[3]   ; 12.688 ;        ;        ; 12.688 ;
+; input_2[4]    ; output[4]   ; 11.239 ;        ;        ; 11.239 ;
+; input_2[5]    ; output[5]   ; 11.728 ;        ;        ; 11.728 ;
+; input_2[6]    ; output[6]   ; 10.481 ;        ;        ; 10.481 ;
+; input_2[7]    ; output[7]   ; 11.449 ;        ;        ; 11.449 ;
+; input_2[8]    ; output[8]   ; 10.444 ;        ;        ; 10.444 ;
+; input_2[9]    ; output[9]   ; 7.584  ;        ;        ; 7.584  ;
+; input_2[10]   ; output[10]  ; 11.314 ;        ;        ; 11.314 ;
+; input_2[11]   ; output[11]  ; 12.096 ;        ;        ; 12.096 ;
++---------------+-------------+--------+--------+--------+--------+
+
+
++-------------------------------------------------------------+
+; Minimum Progagation Delay                                   ;
++---------------+-------------+-------+-------+-------+-------+
+; Input Port    ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++---------------+-------------+-------+-------+-------+-------+
+; ALU_OUT_SEL_0 ; output[0]   ; 5.473 ; 5.473 ; 5.473 ; 5.473 ;
+; ALU_OUT_SEL_0 ; output[1]   ; 5.581 ; 5.581 ; 5.581 ; 5.581 ;
+; ALU_OUT_SEL_0 ; output[2]   ; 5.357 ; 5.357 ; 5.357 ; 5.357 ;
+; ALU_OUT_SEL_0 ; output[3]   ; 5.979 ; 5.979 ; 5.979 ; 5.979 ;
+; ALU_OUT_SEL_0 ; output[4]   ; 5.593 ; 5.552 ; 5.552 ; 5.593 ;
+; ALU_OUT_SEL_0 ; output[5]   ; 5.922 ; 5.815 ; 5.815 ; 5.922 ;
+; ALU_OUT_SEL_0 ; output[6]   ; 5.485 ; 5.485 ; 5.485 ; 5.485 ;
+; ALU_OUT_SEL_0 ; output[7]   ; 5.812 ; 5.812 ; 5.812 ; 5.812 ;
+; ALU_OUT_SEL_0 ; output[8]   ; 5.702 ; 5.702 ; 5.702 ; 5.702 ;
+; ALU_OUT_SEL_0 ; output[9]   ; 6.105 ; 6.105 ; 6.105 ; 6.105 ;
+; ALU_OUT_SEL_0 ; output[10]  ; 5.697 ; 5.697 ; 5.697 ; 5.697 ;
+; ALU_OUT_SEL_0 ; output[11]  ; 5.811 ; 5.811 ; 5.811 ; 5.811 ;
+; ALU_OUT_SEL_1 ; output[0]   ; 5.744 ; 5.744 ; 5.744 ; 5.744 ;
+; ALU_OUT_SEL_1 ; output[1]   ; 5.846 ; 5.846 ; 5.846 ; 5.846 ;
+; ALU_OUT_SEL_1 ; output[2]   ; 5.612 ; 5.612 ; 5.612 ; 5.612 ;
+; ALU_OUT_SEL_1 ; output[3]   ; 6.169 ; 6.169 ; 6.169 ; 6.169 ;
+; ALU_OUT_SEL_1 ; output[4]   ; 5.582 ; 5.551 ; 5.551 ; 5.582 ;
+; ALU_OUT_SEL_1 ; output[5]   ; 5.917 ; 5.814 ; 5.814 ; 5.917 ;
+; ALU_OUT_SEL_1 ; output[6]   ; 5.605 ; 6.275 ; 6.275 ; 5.605 ;
+; ALU_OUT_SEL_1 ; output[7]   ; 5.929 ; 6.651 ; 6.651 ; 5.929 ;
+; ALU_OUT_SEL_1 ; output[8]   ; 5.622 ; 6.415 ; 6.415 ; 5.622 ;
+; ALU_OUT_SEL_1 ; output[9]   ; 6.225 ; 6.894 ; 6.894 ; 6.225 ;
+; ALU_OUT_SEL_1 ; output[10]  ; 5.803 ; 6.518 ; 6.518 ; 5.803 ;
+; ALU_OUT_SEL_1 ; output[11]  ; 5.923 ; 6.651 ; 6.651 ; 5.923 ;
+; ALU_OUT_SEL_2 ; output[0]   ; 5.719 ;       ;       ; 5.719 ;
+; ALU_OUT_SEL_2 ; output[1]   ; 5.824 ;       ;       ; 5.824 ;
+; ALU_OUT_SEL_2 ; output[2]   ; 5.468 ;       ;       ; 5.468 ;
+; ALU_OUT_SEL_2 ; output[3]   ; 6.148 ;       ;       ; 6.148 ;
+; ALU_OUT_SEL_2 ; output[4]   ; 5.527 ;       ;       ; 5.527 ;
+; ALU_OUT_SEL_2 ; output[5]   ; 5.790 ;       ;       ; 5.790 ;
+; ALU_OUT_SEL_2 ; output[6]   ; 6.251 ;       ;       ; 6.251 ;
+; ALU_OUT_SEL_2 ; output[7]   ; 6.627 ;       ;       ; 6.627 ;
+; ALU_OUT_SEL_2 ; output[8]   ; 6.391 ;       ;       ; 6.391 ;
+; ALU_OUT_SEL_2 ; output[9]   ; 6.870 ;       ;       ; 6.870 ;
+; ALU_OUT_SEL_2 ; output[10]  ; 6.494 ;       ;       ; 6.494 ;
+; ALU_OUT_SEL_2 ; output[11]  ; 6.627 ;       ;       ; 6.627 ;
+; input_0[0]    ; output[0]   ; 5.229 ;       ;       ; 5.229 ;
+; input_0[1]    ; output[1]   ; 5.618 ;       ;       ; 5.618 ;
+; input_0[2]    ; output[2]   ; 5.200 ;       ;       ; 5.200 ;
+; input_0[3]    ; output[3]   ; 5.727 ;       ;       ; 5.727 ;
+; input_0[4]    ; output[4]   ; 5.574 ;       ;       ; 5.574 ;
+; input_0[5]    ; output[5]   ; 5.651 ;       ;       ; 5.651 ;
+; input_0[6]    ; output[6]   ; 5.399 ;       ;       ; 5.399 ;
+; input_0[7]    ; output[7]   ; 5.597 ;       ;       ; 5.597 ;
+; input_0[8]    ; output[8]   ; 5.583 ;       ;       ; 5.583 ;
+; input_0[9]    ; output[9]   ; 3.444 ;       ;       ; 3.444 ;
+; input_0[10]   ; output[10]  ; 3.134 ;       ;       ; 3.134 ;
+; input_0[11]   ; output[11]  ; 5.773 ;       ;       ; 5.773 ;
+; input_1[0]    ; output[0]   ; 5.396 ;       ;       ; 5.396 ;
+; input_1[1]    ; output[1]   ; 5.968 ;       ;       ; 5.968 ;
+; input_1[2]    ; output[2]   ; 5.705 ;       ;       ; 5.705 ;
+; input_1[3]    ; output[3]   ; 5.883 ;       ;       ; 5.883 ;
+; input_1[4]    ; output[4]   ; 5.303 ;       ;       ; 5.303 ;
+; input_1[5]    ; output[5]   ; 5.762 ;       ;       ; 5.762 ;
+; input_1[6]    ; output[6]   ; 5.134 ;       ;       ; 5.134 ;
+; input_1[7]    ; output[7]   ; 5.496 ;       ;       ; 5.496 ;
+; input_1[8]    ; output[8]   ; 5.334 ;       ;       ; 5.334 ;
+; input_1[9]    ; output[9]   ; 3.534 ;       ;       ; 3.534 ;
+; input_1[10]   ; output[10]  ; 5.329 ;       ;       ; 5.329 ;
+; input_1[11]   ; output[11]  ; 5.485 ;       ;       ; 5.485 ;
+; input_2[0]    ; output[0]   ; 5.823 ;       ;       ; 5.823 ;
+; input_2[1]    ; output[1]   ; 5.676 ;       ;       ; 5.676 ;
+; input_2[2]    ; output[2]   ; 5.582 ;       ;       ; 5.582 ;
+; input_2[3]    ; output[3]   ; 5.768 ;       ;       ; 5.768 ;
+; input_2[4]    ; output[4]   ; 5.233 ;       ;       ; 5.233 ;
+; input_2[5]    ; output[5]   ; 5.503 ;       ;       ; 5.503 ;
+; input_2[6]    ; output[6]   ; 4.924 ;       ;       ; 4.924 ;
+; input_2[7]    ; output[7]   ; 5.365 ;       ;       ; 5.365 ;
+; input_2[8]    ; output[8]   ; 4.929 ;       ;       ; 4.929 ;
+; input_2[9]    ; output[9]   ; 3.234 ;       ;       ; 3.234 ;
+; input_2[10]   ; output[10]  ; 5.312 ;       ;       ; 5.312 ;
+; input_2[11]   ; output[11]  ; 5.611 ;       ;       ; 5.611 ;
++---------------+-------------+-------+-------+-------+-------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 39    ; 39   ;
+; Unconstrained Input Port Paths  ; 72    ; 72   ;
+; Unconstrained Output Ports      ; 12    ; 12   ;
+; Unconstrained Output Port Paths ; 72    ; 72   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Jan 15 16:45:04 2017
+Info: Command: quartus_sta alu_output_mux -c alu_output_mux
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is -40 degrees C
+Info (21077): High junction temperature is 125 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'alu_output_mux.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332159): No clocks to report
+Info: Analyzing Slow Model
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 583 megabytes
+    Info: Processing ended: Sun Jan 15 16:45:05 2017
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -9,6 +9,13 @@
 # ** Warning: Copied /home/sebsikora/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/clock_generator/clock_generator.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity clock_generator
+# -- Compiling architecture rtl of clock_generator
 # vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/counter_3_bit.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -115,48 +122,34 @@ vsim -voptargs=+acc work.control_subsystem
 # Loading work.ms_jk_ff(gates)
 # Loading work.nand_3_gate(rtl)
 # Loading work.nand_gate(rtl)
+# Loading work.clock_generator(rtl)
+# Loading work.and_3_gate(rtl)
+# Loading work.and_gate(rtl)
+# Loading work.or_gate(rtl)
 # Loading work.state_generator(rtl)
 # Loading work.s_state_generator(rtl)
-# Loading work.and_gate(rtl)
 # Loading work.counter_3_bit_with_load(rtl)
-# Loading work.or_gate(rtl)
 # Loading work.or_3_gate(rtl)
 # Loading work.decoder_3_to_8(rtl)
-# Loading work.and_3_gate(rtl)
 # Loading work.t_state_generator(rtl)
 # Loading work.counter_3_bit(rtl)
 # Loading work.control_logic(rtl)
-do /home/sebsikora/altera/projects/pdp-8/control_subsystem/simulation/modelsim/control_subsystem_redux_test_wave.do
+do /home/sebsikora/altera/projects/pdp-8/control_subsystem/simulation/modelsim/cont_ssyst_redux_wave.do
 # .main_pane.wave.interior.cs.body.pw.wf
 # 1
+# ** Error: For Output signals, Only expectedOutput type is allowed
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/control_subsystem/simulation/modelsim/cont_ssyst_redux_wave.do line 102
+# ** Error: Netname Edit:/control_subsystem/clk is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/control_subsystem/simulation/modelsim/cont_ssyst_redux_wave.do line 103
 # 1
-run
-# ** Warning: (vsim-8780) Forcing /control_subsystem/HRQ as root of /control_subsystem/control_matrix/HRQ specified in the force.
-run
-# ** Warning: (vsim-8780) Forcing /control_subsystem/HRQ as root of /control_subsystem/control_matrix/HRQ specified in the force.
-run
-# ** Warning: (vsim-8780) Forcing /control_subsystem/HRQ as root of /control_subsystem/control_matrix/HRQ specified in the force.
-run
-# ** Warning: (vsim-8780) Forcing /control_subsystem/HRQ as root of /control_subsystem/control_matrix/HRQ specified in the force.
-run
-# ** Warning: (vsim-8780) Forcing /control_subsystem/HRQ as root of /control_subsystem/control_matrix/HRQ specified in the force.
-run
-# ** Warning: (vsim-8780) Forcing /control_subsystem/HRQ as root of /control_subsystem/control_matrix/HRQ specified in the force.
-run
-# ** Warning: (vsim-8780) Forcing /control_subsystem/HRQ as root of /control_subsystem/control_matrix/HRQ specified in the force.
-run
-# ** Warning: (vsim-8780) Forcing /control_subsystem/HRQ as root of /control_subsystem/control_matrix/HRQ specified in the force.
-run
-# ** Warning: (vsim-8780) Forcing /control_subsystem/HRQ as root of /control_subsystem/control_matrix/HRQ specified in the force.
-run
-# ** Warning: (vsim-8780) Forcing /control_subsystem/HRQ as root of /control_subsystem/control_matrix/HRQ specified in the force.
-run
-# ** Warning: (vsim-8780) Forcing /control_subsystem/HRQ as root of /control_subsystem/control_matrix/HRQ specified in the force.
-restart
-run
-run
-run
-run
+wave create -driver freeze -pattern clock -initialvalue 0 -period 200ns -dutycycle 50 -starttime 0ns -endtime 10000ns sim:/control_subsystem/clk_in
+add wave -position 2 -format Logic -height 16 -editable 2 Edit:/control_subsystem/clk_in
+add wave -position 3 -format Logic -height 16 -editable 2 Edit:/control_subsystem/START
+add wave -position 4 -format Logic -height 16 -editable 2 Edit:/control_subsystem/STEP
+wave modify -driver freeze -pattern constant -value 1 -starttime 400ns -endtime 2000ns Edit:/control_subsystem/STEP
+wave modify -driver freeze -pattern constant -value 1 -starttime 400ns -endtime 600ns Edit:/control_subsystem/START
+wave modify -driver freeze -pattern constant -value 1 -starttime 400ns -endtime 2600ns Edit:/control_subsystem/STEP
 run
 run
 run
@@ -172,3 +165,55 @@ run
 run
 run
 run
+run
+run
+run
+run
+run
+run
+restart
+wave modify -driver freeze -pattern constant -value 1 -starttime 400ns -endtime 3000ns Edit:/control_subsystem/STEP
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+add wave  \
+sim:/control_subsystem/control_matrix/NEXT_STATE_out
+add wave  \
+sim:/control_subsystem/control_matrix/END_STATE_out
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/control_subsystem/simulation/modelsim/cont_ssyst_redux_plus_clkgen_test_wave.do
+wave editwrite -file /home/sebsikora/altera/projects/pdp-8/control_subsystem/simulation/modelsim/cont_ssyst_redux_plus_clkgen_test_wave.do -append

@@ -20,6 +20,19 @@ architecture rtl of s_state_generator is
 				output:							out std_logic
 		);
 	end component;
+	component OR_gate is
+		port( inputA: 							in std_logic;
+				inputB:							in std_logic;
+				output:							out std_logic
+		);
+	end component;
+	component AND_3_gate is
+		port( inputA: 							in std_logic;
+				inputB:							in std_logic;
+				inputC:							in std_logic;
+				output:							out std_logic
+		);
+	end component;
 	component counter_3_bit_with_load is
 		port ( clr:								in std_logic;
 				 inc:								in std_logic;
@@ -52,26 +65,32 @@ architecture rtl of s_state_generator is
 	signal not_q:								std_logic_vector(1 downto 0);
    signal and_outputs:						std_logic_vector(3 downto 0);
 	signal not_END_STATE:					std_logic;
+	signal counter_load_signal:			std_logic;
+	signal not_counter_load_signal:		std_logic;
+	signal counter_inc_signal:				std_logic;
 	
 	begin
 		
-		counter_inputs(2) <= '0';
-		counter_inputs(0) <= LOAD(1) and (not LOAD(0));
+		counter_inputs(0) <= LOAD(0);
 		counter_inputs(1) <= LOAD(1);
+		counter_inputs(2) <= '0';
 		not_END_STATE <= not END_STATE;
 		HLT_indicator <= ff_outputs(1);
+		not_counter_load_signal <= not counter_load_signal;
+		counter_inc_signal <= and_outputs(3);
 		
-		and_0:				AND_gate port map (inputA => END_STATE, inputB => ff_outputs(0), output => and_outputs(0));
-		and_1:				AND_gate port map (inputA => ff_outputs(0), inputB => END_STATE, output => and_outputs(1));
-		and_2:				AND_gate port map (inputA => clk, inputB => NEXT_STATE, output => and_outputs(2));
-		and_3:				AND_gate port map (inputA => NEXT_STATE, inputB => not_END_STATE, output => and_outputs(3));
+		and_0:				AND_gate 	port map (inputA => END_STATE, inputB => ff_outputs(0), output => and_outputs(0));
+		and_1:				AND_gate 	port map (inputA => ff_outputs(0), inputB => END_STATE, output => and_outputs(1));
+		and_2:				AND_gate 	port map (inputA => clk, inputB => NEXT_STATE, output => and_outputs(2));
+		or_0:					OR_gate 		port map (inputA => LOAD(0), inputB => LOAD(1), output => counter_load_signal);
+		and_3:				AND_3_gate 	port map (inputA => NEXT_STATE, inputB => not_END_STATE, inputC => not_counter_load_signal, output => and_outputs(3));
 		
-		ms_jk_ff_0:			ms_jk_ff port map (j => HLT_flag, k => and_outputs(0), clk => clk, not_reset => not_reset, q => ff_outputs(0), not_q => not_q(0));
-		ms_jk_ff_1:			ms_jk_ff port map (j => and_outputs(1), k => s_state_signals(0), clk => clk, not_reset => not_reset, q => ff_outputs(1), not_q => not_q(1));
+		ms_jk_ff_0:			ms_jk_ff 	port map (j => HLT_flag, k => and_outputs(0), clk => clk, not_reset => not_reset, q => ff_outputs(0), not_q => not_q(0));
+		ms_jk_ff_1:			ms_jk_ff 	port map (j => and_outputs(1), k => s_state_signals(0), clk => clk, not_reset => not_reset, q => ff_outputs(1), not_q => not_q(1));
 		
 		counter:				counter_3_bit_with_load port map ( clr => END_STATE,
-																			  inc => and_outputs(3),
-																			  load => LOAD(1),
+																			  inc => counter_inc_signal,
+																			  load => counter_load_signal,
 																			  input => counter_inputs,
 																			  not_reset => not_reset,
 																			  clk => and_outputs(2),

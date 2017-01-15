@@ -1,0 +1,349 @@
+TimeQuest Timing Analyzer report for clock_generator
+Sun Jan 15 17:14:23 2017
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Propagation Delay
+ 12. Minimum Propagation Delay
+ 13. Fast Model Setup Summary
+ 14. Fast Model Hold Summary
+ 15. Fast Model Recovery Summary
+ 16. Fast Model Removal Summary
+ 17. Fast Model Minimum Pulse Width Summary
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Multicorner Timing Analysis Summary
+ 21. Progagation Delay
+ 22. Minimum Progagation Delay
+ 23. Clock Transfers
+ 24. Report TCCS
+ 25. Report RSKM
+ 26. Unconstrained Paths
+ 27. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; clock_generator                                                   ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C5AT144A7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
+----------
+; Clocks ;
+----------
+No clocks to report.
+
+
+---------------------------
+; Slow Model Fmax Summary ;
+---------------------------
+No paths to report.
+
+
+----------------------------
+; Slow Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Slow Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Slow Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++----------------------------------------------------------------+
+; Propagation Delay                                              ;
++------------+---------------+--------+--------+--------+--------+
+; Input Port ; Output Port   ; RR     ; RF     ; FR     ; FF     ;
++------------+---------------+--------+--------+--------+--------+
+; START      ; RUN_INDICATOR ; 7.224  ; 7.224  ; 7.224  ; 7.224  ;
+; START      ; clk           ; 7.912  ; 7.912  ; 7.912  ; 7.912  ;
+; STEP       ; RUN_INDICATOR ; 10.861 ; 12.497 ; 12.497 ; 10.861 ;
+; STEP       ; clk           ; 11.549 ; 13.185 ; 13.185 ; 11.549 ;
+; clk_in     ; RUN_INDICATOR ; 10.954 ; 12.033 ; 12.033 ; 10.954 ;
+; clk_in     ; clk           ; 11.642 ; 12.721 ; 12.721 ; 11.642 ;
+; not_reset  ; RUN_INDICATOR ; 6.756  ;        ;        ; 6.756  ;
+; not_reset  ; clk           ; 7.444  ;        ;        ; 7.444  ;
++------------+---------------+--------+--------+--------+--------+
+
+
++----------------------------------------------------------------+
+; Minimum Propagation Delay                                      ;
++------------+---------------+--------+--------+--------+--------+
+; Input Port ; Output Port   ; RR     ; RF     ; FR     ; FF     ;
++------------+---------------+--------+--------+--------+--------+
+; START      ; RUN_INDICATOR ; 6.743  ; 6.356  ; 6.356  ; 6.743  ;
+; START      ; clk           ; 7.431  ; 7.044  ; 7.044  ; 7.431  ;
+; STEP       ; RUN_INDICATOR ; 10.861 ; 12.497 ; 12.497 ; 10.861 ;
+; STEP       ; clk           ; 11.549 ; 13.185 ; 13.185 ; 11.549 ;
+; clk_in     ; RUN_INDICATOR ; 10.954 ; 12.033 ; 12.033 ; 10.954 ;
+; clk_in     ; clk           ; 10.336 ; 12.721 ; 12.721 ; 10.336 ;
+; not_reset  ; RUN_INDICATOR ; 6.756  ;        ;        ; 6.756  ;
+; not_reset  ; clk           ; 7.444  ;        ;        ; 7.444  ;
++------------+---------------+--------+--------+--------+--------+
+
+
+----------------------------
+; Fast Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Fast Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Fast Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++------------------------------------------------------------+
+; Propagation Delay                                          ;
++------------+---------------+-------+-------+-------+-------+
+; Input Port ; Output Port   ; RR    ; RF    ; FR    ; FF    ;
++------------+---------------+-------+-------+-------+-------+
+; START      ; RUN_INDICATOR ; 3.003 ; 3.003 ; 3.003 ; 3.003 ;
+; START      ; clk           ; 3.231 ; 3.231 ; 3.231 ; 3.231 ;
+; STEP       ; RUN_INDICATOR ; 5.081 ; 5.604 ; 5.604 ; 5.081 ;
+; STEP       ; clk           ; 5.309 ; 5.832 ; 5.832 ; 5.309 ;
+; clk_in     ; RUN_INDICATOR ; 5.121 ; 5.471 ; 5.471 ; 5.121 ;
+; clk_in     ; clk           ; 5.349 ; 5.699 ; 5.699 ; 5.349 ;
+; not_reset  ; RUN_INDICATOR ; 2.859 ;       ;       ; 2.859 ;
+; not_reset  ; clk           ; 3.087 ;       ;       ; 3.087 ;
++------------+---------------+-------+-------+-------+-------+
+
+
++------------------------------------------------------------+
+; Minimum Propagation Delay                                  ;
++------------+---------------+-------+-------+-------+-------+
+; Input Port ; Output Port   ; RR    ; RF    ; FR    ; FF    ;
++------------+---------------+-------+-------+-------+-------+
+; START      ; RUN_INDICATOR ; 2.873 ; 2.720 ; 2.720 ; 2.873 ;
+; START      ; clk           ; 3.101 ; 2.948 ; 2.948 ; 3.101 ;
+; STEP       ; RUN_INDICATOR ; 5.081 ; 5.604 ; 5.604 ; 5.081 ;
+; STEP       ; clk           ; 5.309 ; 5.832 ; 5.832 ; 5.309 ;
+; clk_in     ; RUN_INDICATOR ; 5.121 ; 5.471 ; 5.471 ; 5.121 ;
+; clk_in     ; clk           ; 4.932 ; 5.699 ; 5.699 ; 4.932 ;
+; not_reset  ; RUN_INDICATOR ; 2.859 ;       ;       ; 2.859 ;
+; not_reset  ; clk           ; 3.087 ;       ;       ; 3.087 ;
++------------+---------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                        ;
++------------------+-------+------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
++------------------+-------+------+----------+---------+---------------------+
+
+
++----------------------------------------------------------------+
+; Progagation Delay                                              ;
++------------+---------------+--------+--------+--------+--------+
+; Input Port ; Output Port   ; RR     ; RF     ; FR     ; FF     ;
++------------+---------------+--------+--------+--------+--------+
+; START      ; RUN_INDICATOR ; 7.224  ; 7.224  ; 7.224  ; 7.224  ;
+; START      ; clk           ; 7.912  ; 7.912  ; 7.912  ; 7.912  ;
+; STEP       ; RUN_INDICATOR ; 10.861 ; 12.497 ; 12.497 ; 10.861 ;
+; STEP       ; clk           ; 11.549 ; 13.185 ; 13.185 ; 11.549 ;
+; clk_in     ; RUN_INDICATOR ; 10.954 ; 12.033 ; 12.033 ; 10.954 ;
+; clk_in     ; clk           ; 11.642 ; 12.721 ; 12.721 ; 11.642 ;
+; not_reset  ; RUN_INDICATOR ; 6.756  ;        ;        ; 6.756  ;
+; not_reset  ; clk           ; 7.444  ;        ;        ; 7.444  ;
++------------+---------------+--------+--------+--------+--------+
+
+
++------------------------------------------------------------+
+; Minimum Progagation Delay                                  ;
++------------+---------------+-------+-------+-------+-------+
+; Input Port ; Output Port   ; RR    ; RF    ; FR    ; FF    ;
++------------+---------------+-------+-------+-------+-------+
+; START      ; RUN_INDICATOR ; 2.873 ; 2.720 ; 2.720 ; 2.873 ;
+; START      ; clk           ; 3.101 ; 2.948 ; 2.948 ; 3.101 ;
+; STEP       ; RUN_INDICATOR ; 5.081 ; 5.604 ; 5.604 ; 5.081 ;
+; STEP       ; clk           ; 5.309 ; 5.832 ; 5.832 ; 5.309 ;
+; clk_in     ; RUN_INDICATOR ; 5.121 ; 5.471 ; 5.471 ; 5.121 ;
+; clk_in     ; clk           ; 4.932 ; 5.699 ; 5.699 ; 4.932 ;
+; not_reset  ; RUN_INDICATOR ; 2.859 ;       ;       ; 2.859 ;
+; not_reset  ; clk           ; 3.087 ;       ;       ; 3.087 ;
++------------+---------------+-------+-------+-------+-------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 4     ; 4    ;
+; Unconstrained Input Port Paths  ; 8     ; 8    ;
+; Unconstrained Output Ports      ; 2     ; 2    ;
+; Unconstrained Output Port Paths ; 8     ; 8    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Jan 15 17:14:22 2017
+Info: Command: quartus_sta clock_generator -c clock_generator
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is -40 degrees C
+Info (21077): High junction temperature is 125 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'clock_generator.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332125): Found combinational loop of 12 nodes
+    Warning (332126): Node "ms_jk_ff_0|nand_5|output~2|combout"
+    Warning (332126): Node "ms_jk_ff_0|nand_1|output~1|datac"
+    Warning (332126): Node "ms_jk_ff_0|nand_1|output~1|combout"
+    Warning (332126): Node "ms_jk_ff_0|nand_1|output~2|datab"
+    Warning (332126): Node "ms_jk_ff_0|nand_1|output~2|combout"
+    Warning (332126): Node "ms_jk_ff_0|nand_1|output~1|datab"
+    Warning (332126): Node "ms_jk_ff_0|nand_5|output~2|datab"
+    Warning (332126): Node "ms_jk_ff_0|nand_1|output~2|datac"
+    Warning (332126): Node "ms_jk_ff_0|nand_5|output~2|datac"
+    Warning (332126): Node "ms_jk_ff_0|nand_5|output~1|datab"
+    Warning (332126): Node "ms_jk_ff_0|nand_5|output~1|combout"
+    Warning (332126): Node "ms_jk_ff_0|nand_5|output~2|datad"
+Warning (332068): No clocks defined in design.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332159): No clocks to report
+Info: Analyzing Slow Model
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 583 megabytes
+    Info: Processing ended: Sun Jan 15 17:14:23 2017
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

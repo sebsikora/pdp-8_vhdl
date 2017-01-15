@@ -1,0 +1,65 @@
+# do address_comparator_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /home/sebsikora/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /home/sebsikora/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity NOT_gate
+# -- Compiling architecture rtl of NOT_gate
+# -- Compiling entity NAND_3_gate
+# -- Compiling architecture rtl of NAND_3_gate
+# -- Compiling entity NAND_gate
+# -- Compiling architecture rtl of NAND_gate
+# -- Compiling entity AND_gate
+# -- Compiling architecture rtl of AND_gate
+# -- Compiling entity AND_3_gate
+# -- Compiling architecture rtl of AND_3_gate
+# -- Compiling entity OR_5_gate
+# -- Compiling architecture rtl of OR_5_gate
+# -- Compiling entity OR_4_gate
+# -- Compiling architecture rtl of OR_4_gate
+# -- Compiling entity OR_3_gate
+# -- Compiling architecture rtl of OR_3_gate
+# -- Compiling entity OR_gate
+# -- Compiling architecture rtl of OR_gate
+# -- Compiling entity XOR_gate
+# -- Compiling architecture rtl of XOR_gate
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_comparator/address_comparator.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity address_comparator
+# -- Compiling architecture rtl of address_comparator
+# 
+vsim -voptargs=+acc work.address_comparator
+# vsim -voptargs=+acc work.address_comparator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.address_comparator(rtl)
+# Loading work.or_gate(rtl)
+# Loading work.and_gate(rtl)
+wave create -driver freeze -pattern repeater -initialvalue 000000000000 -period 200ns -sequence { 000000000000 000000000001 000000000111 000000001000 000000001010 111000001000  } -repeat forever -range 11 0 -starttime 0ns -endtime 1000ns sim:/address_comparator/input
+add wave  \
+sim:/address_comparator/IS_AUTO_INDEX
+run
+run
+run
+run
+run
+wave modify -driver freeze -pattern repeater -initialvalue 000000000000 -period 200ns -sequence { 000000000000 000000000001 000000000111 000000001000 000000001010 111000001000  } -repeat forever -range 11 0 -starttime 0ns -endtime 1200ns Edit:/address_comparator/input
+run
+restart
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/address_comparator/simulation/modelsim/address_comparator_test_wave.do
+wave editwrite -file /home/sebsikora/altera/projects/pdp-8/address_comparator/simulation/modelsim/address_comparator_test_wave.do -append

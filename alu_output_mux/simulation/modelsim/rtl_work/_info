@@ -1,0 +1,40 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/sebsikora/altera/projects/pdp-8/alu_output_mux/simulation/modelsim
+Ealu_output_mux
+Z1 w1484498689
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 d/home/sebsikora/altera/projects/pdp-8/alu_output_mux/simulation/modelsim
+Z5 8/home/sebsikora/altera/projects/pdp-8/alu_output_mux/alu_output_mux.vhd
+Z6 F/home/sebsikora/altera/projects/pdp-8/alu_output_mux/alu_output_mux.vhd
+l0
+L4
+VCTbT6MkjXl?ALd1;iT5OY0
+!s100 @^jD04>BMza]f>Q59g^z@0
+Z7 OV;C;10.1d;51
+31
+!i10b 1
+Z8 !s108 1484498721.612018
+Z9 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/alu_output_mux/alu_output_mux.vhd|
+Z10 !s107 /home/sebsikora/altera/projects/pdp-8/alu_output_mux/alu_output_mux.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+Abehavior
+R2
+R3
+DEx4 work 14 alu_output_mux 0 22 CTbT6MkjXl?ALd1;iT5OY0
+l17
+L15
+VkF3dac`N53QLnRBGPAC]W0
+!s100 4kEoYd<[lG0WRZoeCC08N0
+R7
+31
+!i10b 1
+R8
+R9
+R10
+R11
+R12

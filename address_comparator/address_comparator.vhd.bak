@@ -1,0 +1,31 @@
+-- Inverter
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity address_comparator is
+	port( input:			in std_logic_vector(11 downto 0);
+			output:			out std_logic_vector(11 downto 0);
+			IS_AUTO_INDEX:	out std_logic
+	);
+end address_comparator;
+
+architecture rtl of address_comparator is
+component AND_gate is
+	port( inputA: 	in std_logic;
+			inputB:	in std_logic;
+			output:	out std_logic
+	);
+end component;
+component OR_gate is
+	port( inputA: 	in std_logic;
+			inputB:	in std_logic;
+			output:	out std_logic
+	);
+end component;
+signal or_outputs:					std_logic_vector(11 downto 0);
+begin
+	or_0:			OR_gate port map (inputA => input(0), inputB => input(1), output => or_outputs(0));
+	
+	
+end rtl;

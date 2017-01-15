@@ -74,6 +74,7 @@ architecture rtl of control_logic is
 	signal Z_BIT:										std_logic;
 	signal not_DCA:									std_logic;
 	signal decoder_outputs:							std_logic_vector(7 downto 0);
+	signal decoder_inputs:							std_logic_vector(2 downto 0);
 	
 	signal NEXT_STATE:								std_logic;
 	signal END_STATE:									std_logic;
@@ -140,14 +141,14 @@ begin
 	NEXT_STATE_out <= (NEXT_STATE or NEXT_STATE_in) and (not_ASSERT_CONTROL);
 	END_STATE_out <= (END_STATE or END_STATE_in) and (not_ASSERT_CONTROL);
 	LOAD(0) <= (OPR_INS and IRQ and NEXT_STATE and not_ASSERT_CONTROL and not_END_STATE);
-	LOAD(1) <= (OPR_INS and IRQ and NEXT_STATE and not_ASSERT_CONTROL and not_END_STATE) or (BASIC_INS and (not IR(8)) and NEXT_STATE and not_END_STATE);
+	LOAD(1) <= ((OPR_INS and IRQ and NEXT_STATE and not_END_STATE) or (BASIC_INS and (not IR(3)) and NEXT_STATE and not_END_STATE)) and not_ASSERT_CONTROL;
 	
-	IOT_INS <= IR(11) and IR(10) and (not IR(9));
-	OPR_INS <= IR(11) and IR(10) and IR(9);
+	IOT_INS <= IR(0) and IR(1) and (not IR(2));
+	OPR_INS <= IR(0) and IR(1) and IR(2);
 	BASIC_INS <= not (IOT_INS or OPR_INS);
 	
-	Z_BIT <= BASIC_INS and IR(8);
-	IND <= BASIC_INS and IR(7);
+	Z_BIT <= BASIC_INS and IR(4);
+	IND <= BASIC_INS and IR(3);
 	
 	not_Z_BIT <= not Z_BIT;
 	not_DCA <= not DCA;
@@ -155,9 +156,9 @@ begin
 	
 	MEM_INST <= BASIC_INS and (JMP or ANDD or TAD or DCA or JMS or ISZ);
 	
-	GROUP_1 <= OPR_INS and (not IR(8));
-	GROUP_2_AND <= OPR_INS and (IR(8) and (not IR(4)) and (not IR(0)));
-	GROUP_2_OR <= OPR_INS and (IR(8) and IR(4) and (not IR(0)));
+	GROUP_1 <= OPR_INS and (not IR(3));
+	GROUP_2_AND <= OPR_INS and (IR(3) and IR(8) and (not IR(0)));
+	GROUP_2_OR <= OPR_INS and (IR(3) and (not IR(8)) and (not IR(0)));
 	
 	CLA0 <= GROUP_1 and IR(4);
 	CLL <= GROUP_1 and IR(5);
@@ -218,7 +219,7 @@ begin
 	MA_LOAD_HI <= (s_states(0) and t_states(0)) or (s_states(1) and t_states(0) and Z_BIT) or (s_states(2) and t_states(0) and IND and MEM_INST and not_JMP);
 	MA_LOAD_LO <= (s_states(0) and t_states(0)) or (s_states(1) and t_states(0)) or (s_states(2) and t_states(0) and MEM_INST and not_JMP);
 	MA_BUS_SEL <= '0';
-	MA_CLR_HI <= (s_states(1) and t_states(0) and not_Z_BIT) or (s_states(2) and t_states(0) and Z_BIT and MEM_INST and not_JMP) or (s_states(3) and t_states(0) and IRQ);
+	MA_CLR_HI <= (s_states(1) and t_states(0) and not_Z_BIT) or (s_states(2) and t_states(0) and not_Z_BIT and MEM_INST and not_JMP) or (s_states(3) and t_states(0) and IRQ);
 	MA_CLR_LO <= s_states(3) and t_states(0) and IRQ;
 	MD_LOAD <= (s_states(0) and t_states(2)) or (s_states(1) and (t_states(2) or (t_states(3) and IS_AUTO_INDEX))) or (s_states(2) and ((t_states(1) and (DCA or JMS)) or (t_states(2) and (ANDD or TAD or ISZ)) or (t_states(3) and ISZ))) or (s_states(3) and t_states(0) and IRQ);
 	MD_CLR <= '0';
@@ -243,7 +244,13 @@ begin
 	MEM_WRITE <= (s_states(2) and ((t_states(2) and (DCA or JMS)) or (t_states(4) and ISZ))) or (s_states(3) and t_states(1) and IRQ);
 	ALU_CLEAR <= (s_states(0) and t_states(3) and CLA_MASTER) or (s_states(2) and t_states(3) and DCA);
 	
-	decoder_3_to_8_0:				decoder_3_to_8 port map (input => IR(2 downto 0), output => decoder_outputs);
+	
+	decoder_inputs(0) <= IR(2);
+	decoder_inputs(1) <= IR(1);
+	decoder_inputs(2) <= IR(0);
+	
+	decoder_3_to_8_0:				decoder_3_to_8 port map (input => decoder_inputs, output => decoder_outputs);
+	
 	ANDD <= decoder_outputs(0);
 	TAD <= decoder_outputs(1);
 	ISZ <= decoder_outputs(2);
