@@ -1,0 +1,525 @@
+Analysis & Synthesis report for alu_subsystem
+Sun Jan 15 21:01:16 2017
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Logic Cells Representing Combinational Loops
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Port Connectivity Checks: "alu_comparator:alu_comp_0|register_1_bit:register_0|ms_jk_ff:ms_jk_ff_0"
+ 12. Port Connectivity Checks: "alu_comparator:alu_comp_0|register_1_bit:register_0"
+ 13. Port Connectivity Checks: "alu_main:alu_main_0|alu_add:alu_add_0|nand_1_bit_full_adder:adder_0"
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Jan 15 21:01:16 2017           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; alu_subsystem                                   ;
+; Top-level Entity Name              ; alu_subsystem                                   ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 144                                             ;
+;     Total combinational functions  ; 144                                             ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 82                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C5AT144A7       ;                    ;
+; Top-level entity name                                                      ; alu_subsystem      ; alu_subsystem      ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                         ;
++---------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path      ; Used in Netlist ; File Type       ; File Name with Absolute Path                                             ; Library ;
++---------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
+; ../12_bit_register/register_1_bit.vhd ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/12_bit_register/register_1_bit.vhd ;         ;
+; ../ms_jk_ff/basic_gates.vhd           ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd           ;         ;
+; ../ms_jk_ff/ms_jk_ff.vhd              ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd              ;         ;
+; ../alu_xor/alu_xor.vhd                ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/alu_xor/alu_xor.vhd                ;         ;
+; ../alu_shifter/alu_shifter.vhd        ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/alu_shifter/alu_shifter.vhd        ;         ;
+; ../alu_main/nand_1_bit_full_adder.vhd ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/alu_main/nand_1_bit_full_adder.vhd ;         ;
+; ../alu_main/alu_or.vhd                ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/alu_main/alu_or.vhd                ;         ;
+; ../alu_main/alu_mux.vhd               ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/alu_main/alu_mux.vhd               ;         ;
+; ../alu_main/alu_main.vhd              ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/alu_main/alu_main.vhd              ;         ;
+; ../alu_main/alu_and.vhd               ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/alu_main/alu_and.vhd               ;         ;
+; ../alu_main/alu_add.vhd               ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/alu_main/alu_add.vhd               ;         ;
+; ../alu_inc/alu_inc.vhd                ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/alu_inc/alu_inc.vhd                ;         ;
+; ../alu_comparator/alu_comparator.vhd  ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/alu_comparator/alu_comparator.vhd  ;         ;
+; ../alu_clear/alu_clear.vhd            ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/alu_clear/alu_clear.vhd            ;         ;
+; alu_subsystem.vhd                     ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/alu_subsystem/alu_subsystem.vhd    ;         ;
++---------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 144       ;
+;                                             ;           ;
+; Total combinational functions               ; 144       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 89        ;
+;     -- 3 input functions                    ; 35        ;
+;     -- <=2 input functions                  ; 20        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 132       ;
+;     -- arithmetic mode                      ; 12        ;
+;                                             ;           ;
+; Total registers                             ; 0         ;
+;     -- Dedicated logic registers            ; 0         ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 82        ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+; Maximum fan-out node                        ; ALU_ROT_1 ;
+; Maximum fan-out                             ; 19        ;
+; Total fan-out                               ; 517       ;
+; Average fan-out                             ; 2.29      ;
++---------------------------------------------+-----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                           ;
++------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                     ; Library Name ;
++------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+--------------+
+; |alu_subsystem                           ; 144 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 82   ; 0            ; |alu_subsystem                                                                                          ; work         ;
+;    |alu_clr:alu_clr_0|                   ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_clr:alu_clr_0                                                                        ; work         ;
+;       |AND_gate:and_0|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_clr:alu_clr_0|AND_gate:and_0                                                         ; work         ;
+;       |AND_gate:and_10|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_clr:alu_clr_0|AND_gate:and_10                                                        ; work         ;
+;       |AND_gate:and_11|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_clr:alu_clr_0|AND_gate:and_11                                                        ; work         ;
+;       |AND_gate:and_6|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_clr:alu_clr_0|AND_gate:and_6                                                         ; work         ;
+;       |AND_gate:and_7|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_clr:alu_clr_0|AND_gate:and_7                                                         ; work         ;
+;       |AND_gate:and_8|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_clr:alu_clr_0|AND_gate:and_8                                                         ; work         ;
+;       |AND_gate:and_9|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_clr:alu_clr_0|AND_gate:and_9                                                         ; work         ;
+;    |alu_comparator:alu_comp_0|           ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_comparator:alu_comp_0                                                                ; work         ;
+;       |OR_gate:or_10|                    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_comparator:alu_comp_0|OR_gate:or_10                                                  ; work         ;
+;       |register_1_bit:register_0|        ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_comparator:alu_comp_0|register_1_bit:register_0                                      ; work         ;
+;          |ms_jk_ff:ms_jk_ff_0|           ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_comparator:alu_comp_0|register_1_bit:register_0|ms_jk_ff:ms_jk_ff_0                  ; work         ;
+;             |NAND_gate:nand_1|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_comparator:alu_comp_0|register_1_bit:register_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1 ; work         ;
+;             |NAND_gate:nand_5|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_comparator:alu_comp_0|register_1_bit:register_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5 ; work         ;
+;    |alu_incrementer:alu_inc_0|           ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_incrementer:alu_inc_0                                                                ; work         ;
+;       |AND_gate:and_0|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_incrementer:alu_inc_0|AND_gate:and_0                                                 ; work         ;
+;       |AND_gate:and_10|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_incrementer:alu_inc_0|AND_gate:and_10                                                ; work         ;
+;       |AND_gate:and_2|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_incrementer:alu_inc_0|AND_gate:and_2                                                 ; work         ;
+;       |AND_gate:and_4|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_incrementer:alu_inc_0|AND_gate:and_4                                                 ; work         ;
+;       |AND_gate:and_7|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_incrementer:alu_inc_0|AND_gate:and_7                                                 ; work         ;
+;       |XOR_gate:xor_0|                   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_incrementer:alu_inc_0|XOR_gate:xor_0                                                 ; work         ;
+;          |NAND_gate:nand_3|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_incrementer:alu_inc_0|XOR_gate:xor_0|NAND_gate:nand_3                                ; work         ;
+;       |XOR_gate:xor_10|                  ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_incrementer:alu_inc_0|XOR_gate:xor_10                                                ; work         ;
+;          |NAND_gate:nand_3|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_incrementer:alu_inc_0|XOR_gate:xor_10|NAND_gate:nand_3                               ; work         ;
+;       |XOR_gate:xor_1|                   ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_incrementer:alu_inc_0|XOR_gate:xor_1                                                 ; work         ;
+;          |NAND_gate:nand_3|              ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_incrementer:alu_inc_0|XOR_gate:xor_1|NAND_gate:nand_3                                ; work         ;
+;       |XOR_gate:xor_2|                   ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_incrementer:alu_inc_0|XOR_gate:xor_2                                                 ; work         ;
+;          |NAND_gate:nand_3|              ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_incrementer:alu_inc_0|XOR_gate:xor_2|NAND_gate:nand_3                                ; work         ;
+;       |XOR_gate:xor_3|                   ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_incrementer:alu_inc_0|XOR_gate:xor_3                                                 ; work         ;
+;          |NAND_gate:nand_3|              ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_incrementer:alu_inc_0|XOR_gate:xor_3|NAND_gate:nand_3                                ; work         ;
+;       |XOR_gate:xor_4|                   ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_incrementer:alu_inc_0|XOR_gate:xor_4                                                 ; work         ;
+;          |NAND_gate:nand_3|              ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_incrementer:alu_inc_0|XOR_gate:xor_4|NAND_gate:nand_3                                ; work         ;
+;       |XOR_gate:xor_5|                   ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_incrementer:alu_inc_0|XOR_gate:xor_5                                                 ; work         ;
+;          |NAND_gate:nand_3|              ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_incrementer:alu_inc_0|XOR_gate:xor_5|NAND_gate:nand_3                                ; work         ;
+;       |XOR_gate:xor_6|                   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_incrementer:alu_inc_0|XOR_gate:xor_6                                                 ; work         ;
+;          |NAND_gate:nand_3|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_incrementer:alu_inc_0|XOR_gate:xor_6|NAND_gate:nand_3                                ; work         ;
+;       |XOR_gate:xor_7|                   ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_incrementer:alu_inc_0|XOR_gate:xor_7                                                 ; work         ;
+;          |NAND_gate:nand_3|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_incrementer:alu_inc_0|XOR_gate:xor_7|NAND_gate:nand_3                                ; work         ;
+;       |XOR_gate:xor_8|                   ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_incrementer:alu_inc_0|XOR_gate:xor_8                                                 ; work         ;
+;          |NAND_gate:nand_3|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_incrementer:alu_inc_0|XOR_gate:xor_8|NAND_gate:nand_3                                ; work         ;
+;       |XOR_gate:xor_9|                   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_incrementer:alu_inc_0|XOR_gate:xor_9                                                 ; work         ;
+;          |NAND_gate:nand_3|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_incrementer:alu_inc_0|XOR_gate:xor_9|NAND_gate:nand_3                                ; work         ;
+;    |alu_main:alu_main_0|                 ; 23 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_main:alu_main_0                                                                      ; work         ;
+;       |alu_add:alu_add_0|                ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_main:alu_main_0|alu_add:alu_add_0                                                    ; work         ;
+;          |nand_1_bit_full_adder:adder_1| ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_main:alu_main_0|alu_add:alu_add_0|nand_1_bit_full_adder:adder_1                      ; work         ;
+;             |NAND_gate:nand_7|           ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_main:alu_main_0|alu_add:alu_add_0|nand_1_bit_full_adder:adder_1|NAND_gate:nand_7     ; work         ;
+;       |alu_and:alu_and_0|                ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_main:alu_main_0|alu_and:alu_and_0                                                    ; work         ;
+;          |AND_gate:and_0|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_main:alu_main_0|alu_and:alu_and_0|AND_gate:and_0                                     ; work         ;
+;          |AND_gate:and_10|               ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_main:alu_main_0|alu_and:alu_and_0|AND_gate:and_10                                    ; work         ;
+;          |AND_gate:and_11|               ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_main:alu_main_0|alu_and:alu_and_0|AND_gate:and_11                                    ; work         ;
+;       |alu_or:alu_or_0|                  ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_main:alu_main_0|alu_or:alu_or_0                                                      ; work         ;
+;          |OR_gate:or_0|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_main:alu_main_0|alu_or:alu_or_0|OR_gate:or_0                                         ; work         ;
+;          |OR_gate:or_10|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_main:alu_main_0|alu_or:alu_or_0|OR_gate:or_10                                        ; work         ;
+;          |OR_gate:or_11|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_main:alu_main_0|alu_or:alu_or_0|OR_gate:or_11                                        ; work         ;
+;          |OR_gate:or_6|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_main:alu_main_0|alu_or:alu_or_0|OR_gate:or_6                                         ; work         ;
+;          |OR_gate:or_7|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_main:alu_main_0|alu_or:alu_or_0|OR_gate:or_7                                         ; work         ;
+;          |OR_gate:or_8|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_main:alu_main_0|alu_or:alu_or_0|OR_gate:or_8                                         ; work         ;
+;          |OR_gate:or_9|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_main:alu_main_0|alu_or:alu_or_0|OR_gate:or_9                                         ; work         ;
+;    |alu_mux:alu_out_mux|                 ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_mux:alu_out_mux                                                                      ; work         ;
+;    |alu_shifter:alu_rot_0|               ; 39 (1)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0                                                                    ; work         ;
+;       |AND_gate:and_11_0|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|AND_gate:and_11_0                                                  ; work         ;
+;       |AND_gate:and_11_1|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|AND_gate:and_11_1                                                  ; work         ;
+;       |AND_gate:and_11_2|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|AND_gate:and_11_2                                                  ; work         ;
+;       |AND_gate:and_1_0|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|AND_gate:and_1_0                                                   ; work         ;
+;       |AND_gate:and_2_0|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|AND_gate:and_2_0                                                   ; work         ;
+;       |AND_gate:and_2_2|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|AND_gate:and_2_2                                                   ; work         ;
+;       |AND_gate:and_3_1|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|AND_gate:and_3_1                                                   ; work         ;
+;       |AND_gate:and_3_2|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|AND_gate:and_3_2                                                   ; work         ;
+;       |AND_gate:and_5_0|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|AND_gate:and_5_0                                                   ; work         ;
+;       |AND_gate:and_5_1|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|AND_gate:and_5_1                                                   ; work         ;
+;       |AND_gate:and_5_2|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|AND_gate:and_5_2                                                   ; work         ;
+;       |AND_gate:and_6_0|                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|AND_gate:and_6_0                                                   ; work         ;
+;       |AND_gate:and_6_1|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|AND_gate:and_6_1                                                   ; work         ;
+;       |AND_gate:and_6_2|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|AND_gate:and_6_2                                                   ; work         ;
+;       |AND_gate:and_7_1|                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|AND_gate:and_7_1                                                   ; work         ;
+;       |AND_gate:and_8_2|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|AND_gate:and_8_2                                                   ; work         ;
+;       |AND_gate:and_9_1|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|AND_gate:and_9_1                                                   ; work         ;
+;       |AND_gate:and_9_2|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|AND_gate:and_9_2                                                   ; work         ;
+;       |AND_gate:and_link_0|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|AND_gate:and_link_0                                                ; work         ;
+;       |AND_gate:and_link_2|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|AND_gate:and_link_2                                                ; work         ;
+;       |OR_3_gate:or_3_0|                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|OR_3_gate:or_3_0                                                   ; work         ;
+;       |OR_3_gate:or_3_10|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|OR_3_gate:or_3_10                                                  ; work         ;
+;       |OR_3_gate:or_3_11|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|OR_3_gate:or_3_11                                                  ; work         ;
+;       |OR_3_gate:or_3_1|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|OR_3_gate:or_3_1                                                   ; work         ;
+;       |OR_3_gate:or_3_2|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|OR_3_gate:or_3_2                                                   ; work         ;
+;       |OR_3_gate:or_3_3|                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|OR_3_gate:or_3_3                                                   ; work         ;
+;       |OR_3_gate:or_3_4|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|OR_3_gate:or_3_4                                                   ; work         ;
+;       |OR_3_gate:or_3_5|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|OR_3_gate:or_3_5                                                   ; work         ;
+;       |OR_3_gate:or_3_6|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|OR_3_gate:or_3_6                                                   ; work         ;
+;       |OR_3_gate:or_3_7|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|OR_3_gate:or_3_7                                                   ; work         ;
+;       |OR_3_gate:or_3_8|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|OR_3_gate:or_3_8                                                   ; work         ;
+;       |OR_3_gate:or_3_9|                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|OR_3_gate:or_3_9                                                   ; work         ;
+;       |OR_3_gate:or_3_link|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_subsystem|alu_shifter:alu_rot_0|OR_3_gate:or_3_link                                                ; work         ;
++------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops                                                          ;
++---------------------------------------------------------------------------------------------------+---+
+; Logic Cell Name                                                                                   ;   ;
++---------------------------------------------------------------------------------------------------+---+
+; alu_comparator:alu_comp_0|register_1_bit:register_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~0 ;   ;
+; alu_comparator:alu_comp_0|register_1_bit:register_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~0 ;   ;
+; Number of logic cells representing combinational loops                                            ; 2 ;
++---------------------------------------------------------------------------------------------------+---+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; 7:1                ; 12 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |alu_subsystem|alu_mux:alu_out_mux|output[11] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_comparator:alu_comp_0|register_1_bit:register_0|ms_jk_ff:ms_jk_ff_0"             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; not_q ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_comparator:alu_comp_0|register_1_bit:register_0" ;
++------+-------+----------+-------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                               ;
++------+-------+----------+-------------------------------------------------------+
+; load ; Input ; Info     ; Stuck at VCC                                          ;
++------+-------+----------+-------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_main:alu_main_0|alu_add:alu_add_0|nand_1_bit_full_adder:adder_0" ;
++----------+-------+----------+-------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                           ;
++----------+-------+----------+-------------------------------------------------------------------+
+; carry_in ; Input ; Info     ; Stuck at GND                                                      ;
++----------+-------+----------+-------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Jan 15 21:01:13 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu_subsystem -c alu_subsystem
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file /home/sebsikora/altera/projects/pdp-8/12_bit_register/register_1_bit.vhd
+    Info (12022): Found design unit 1: register_1_bit-rtl
+    Info (12023): Found entity 1: register_1_bit
+Info (12021): Found 20 design units, including 10 entities, in source file /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd
+    Info (12022): Found design unit 1: NOT_gate-rtl
+    Info (12022): Found design unit 2: NAND_3_gate-rtl
+    Info (12022): Found design unit 3: NAND_gate-rtl
+    Info (12022): Found design unit 4: AND_gate-rtl
+    Info (12022): Found design unit 5: AND_3_gate-rtl
+    Info (12022): Found design unit 6: OR_5_gate-rtl
+    Info (12022): Found design unit 7: OR_4_gate-rtl
+    Info (12022): Found design unit 8: OR_3_gate-rtl
+    Info (12022): Found design unit 9: OR_gate-rtl
+    Info (12022): Found design unit 10: XOR_gate-rtl
+    Info (12023): Found entity 1: NOT_gate
+    Info (12023): Found entity 2: NAND_3_gate
+    Info (12023): Found entity 3: NAND_gate
+    Info (12023): Found entity 4: AND_gate
+    Info (12023): Found entity 5: AND_3_gate
+    Info (12023): Found entity 6: OR_5_gate
+    Info (12023): Found entity 7: OR_4_gate
+    Info (12023): Found entity 8: OR_3_gate
+    Info (12023): Found entity 9: OR_gate
+    Info (12023): Found entity 10: XOR_gate
+Info (12021): Found 2 design units, including 1 entities, in source file /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd
+    Info (12022): Found design unit 1: ms_jk_ff-gates
+    Info (12023): Found entity 1: ms_jk_ff
+Info (12021): Found 2 design units, including 1 entities, in source file /home/sebsikora/altera/projects/pdp-8/alu_xor/alu_xor.vhd
+    Info (12022): Found design unit 1: alu_xor-rtl
+    Info (12023): Found entity 1: alu_xor
+Info (12021): Found 2 design units, including 1 entities, in source file /home/sebsikora/altera/projects/pdp-8/alu_shifter/alu_shifter.vhd
+    Info (12022): Found design unit 1: alu_shifter-rtl
+    Info (12023): Found entity 1: alu_shifter
+Info (12021): Found 2 design units, including 1 entities, in source file /home/sebsikora/altera/projects/pdp-8/alu_output_mux/alu_output_mux.vhd
+    Info (12022): Found design unit 1: alu_output_mux-behavior
+    Info (12023): Found entity 1: alu_output_mux
+Info (12021): Found 2 design units, including 1 entities, in source file /home/sebsikora/altera/projects/pdp-8/alu_main/nand_1_bit_full_adder.vhd
+    Info (12022): Found design unit 1: nand_1_bit_full_adder-rtl
+    Info (12023): Found entity 1: nand_1_bit_full_adder
+Info (12021): Found 2 design units, including 1 entities, in source file /home/sebsikora/altera/projects/pdp-8/alu_main/alu_or.vhd
+    Info (12022): Found design unit 1: alu_or-rtl
+    Info (12023): Found entity 1: alu_or
+Info (12021): Found 2 design units, including 1 entities, in source file /home/sebsikora/altera/projects/pdp-8/alu_main/alu_mux.vhd
+    Info (12022): Found design unit 1: alu_mux-rtl
+    Info (12023): Found entity 1: alu_mux
+Info (12021): Found 2 design units, including 1 entities, in source file /home/sebsikora/altera/projects/pdp-8/alu_main/alu_main.vhd
+    Info (12022): Found design unit 1: alu_main-rtl
+    Info (12023): Found entity 1: alu_main
+Info (12021): Found 2 design units, including 1 entities, in source file /home/sebsikora/altera/projects/pdp-8/alu_main/alu_and.vhd
+    Info (12022): Found design unit 1: alu_and-rtl
+    Info (12023): Found entity 1: alu_and
+Info (12021): Found 2 design units, including 1 entities, in source file /home/sebsikora/altera/projects/pdp-8/alu_main/alu_add.vhd
+    Info (12022): Found design unit 1: alu_add-rtl
+    Info (12023): Found entity 1: alu_add
+Info (12021): Found 2 design units, including 1 entities, in source file /home/sebsikora/altera/projects/pdp-8/alu_inc/alu_inc.vhd
+    Info (12022): Found design unit 1: alu_incrementer-rtl
+    Info (12023): Found entity 1: alu_incrementer
+Info (12021): Found 2 design units, including 1 entities, in source file /home/sebsikora/altera/projects/pdp-8/alu_comparator/alu_comparator.vhd
+    Info (12022): Found design unit 1: alu_comparator-rtl
+    Info (12023): Found entity 1: alu_comparator
+Info (12021): Found 2 design units, including 1 entities, in source file /home/sebsikora/altera/projects/pdp-8/alu_clear/alu_clear.vhd
+    Info (12022): Found design unit 1: alu_clr-rtl
+    Info (12023): Found entity 1: alu_clr
+Info (12021): Found 2 design units, including 1 entities, in source file alu_subsystem.vhd
+    Info (12022): Found design unit 1: alu_subsystem-rtl
+    Info (12023): Found entity 1: alu_subsystem
+Info (12127): Elaborating entity "alu_subsystem" for the top level hierarchy
+Info (12128): Elaborating entity "alu_main" for hierarchy "alu_main:alu_main_0"
+Info (12128): Elaborating entity "alu_mux" for hierarchy "alu_main:alu_main_0|alu_mux:alu_mux_0"
+Info (12128): Elaborating entity "alu_and" for hierarchy "alu_main:alu_main_0|alu_and:alu_and_0"
+Info (12128): Elaborating entity "AND_gate" for hierarchy "alu_main:alu_main_0|alu_and:alu_and_0|AND_gate:and_0"
+Info (12128): Elaborating entity "alu_add" for hierarchy "alu_main:alu_main_0|alu_add:alu_add_0"
+Info (12128): Elaborating entity "nand_1_bit_full_adder" for hierarchy "alu_main:alu_main_0|alu_add:alu_add_0|nand_1_bit_full_adder:adder_0"
+Info (12128): Elaborating entity "NAND_gate" for hierarchy "alu_main:alu_main_0|alu_add:alu_add_0|nand_1_bit_full_adder:adder_0|NAND_gate:nand_0"
+Info (12128): Elaborating entity "alu_or" for hierarchy "alu_main:alu_main_0|alu_or:alu_or_0"
+Info (12128): Elaborating entity "OR_gate" for hierarchy "alu_main:alu_main_0|alu_or:alu_or_0|OR_gate:or_0"
+Info (12128): Elaborating entity "alu_clr" for hierarchy "alu_clr:alu_clr_0"
+Info (12128): Elaborating entity "alu_xor" for hierarchy "alu_xor:alu_xor_0"
+Info (12128): Elaborating entity "XOR_gate" for hierarchy "alu_xor:alu_xor_0|XOR_gate:xor_0"
+Info (12128): Elaborating entity "alu_incrementer" for hierarchy "alu_incrementer:alu_inc_0"
+Info (12128): Elaborating entity "alu_shifter" for hierarchy "alu_shifter:alu_rot_0"
+Info (12128): Elaborating entity "OR_3_gate" for hierarchy "alu_shifter:alu_rot_0|OR_3_gate:or_3_0"
+Info (12128): Elaborating entity "alu_comparator" for hierarchy "alu_comparator:alu_comp_0"
+Info (12128): Elaborating entity "register_1_bit" for hierarchy "alu_comparator:alu_comp_0|register_1_bit:register_0"
+Warning (10036): Verilog HDL or VHDL warning at register_1_bit.vhd(28): object "not_q" assigned a value but never read
+Info (12128): Elaborating entity "ms_jk_ff" for hierarchy "alu_comparator:alu_comp_0|register_1_bit:register_0|ms_jk_ff:ms_jk_ff_0"
+Info (12128): Elaborating entity "NAND_3_gate" for hierarchy "alu_comparator:alu_comp_0|register_1_bit:register_0|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_1"
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 26 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "ALU_input_A[0]"
+    Warning (15610): No output dependent on input pin "ALU_input_A[1]"
+    Warning (15610): No output dependent on input pin "ALU_input_A[2]"
+    Warning (15610): No output dependent on input pin "ALU_input_A[3]"
+    Warning (15610): No output dependent on input pin "ALU_input_A[4]"
+    Warning (15610): No output dependent on input pin "ALU_input_A[5]"
+    Warning (15610): No output dependent on input pin "ALU_input_A[6]"
+    Warning (15610): No output dependent on input pin "ALU_input_A[7]"
+    Warning (15610): No output dependent on input pin "ALU_input_A[8]"
+    Warning (15610): No output dependent on input pin "ALU_input_A[9]"
+    Warning (15610): No output dependent on input pin "ALU_input_A[10]"
+    Warning (15610): No output dependent on input pin "ALU_input_A[11]"
+    Warning (15610): No output dependent on input pin "ALU_input_B[0]"
+    Warning (15610): No output dependent on input pin "ALU_input_B[1]"
+    Warning (15610): No output dependent on input pin "ALU_input_B[2]"
+    Warning (15610): No output dependent on input pin "ALU_input_B[3]"
+    Warning (15610): No output dependent on input pin "ALU_input_B[4]"
+    Warning (15610): No output dependent on input pin "ALU_input_B[5]"
+    Warning (15610): No output dependent on input pin "ALU_input_B[6]"
+    Warning (15610): No output dependent on input pin "ALU_input_B[7]"
+    Warning (15610): No output dependent on input pin "ALU_input_B[8]"
+    Warning (15610): No output dependent on input pin "ALU_input_B[9]"
+    Warning (15610): No output dependent on input pin "ALU_input_B[10]"
+    Warning (15610): No output dependent on input pin "ALU_input_B[11]"
+    Warning (15610): No output dependent on input pin "LINK_OUT_SEL"
+    Warning (15610): No output dependent on input pin "LINK_COMP"
+Info (21057): Implemented 226 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 64 input pins
+    Info (21059): Implemented 18 output pins
+    Info (21061): Implemented 144 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 724 megabytes
+    Info: Processing ended: Sun Jan 15 21:01:16 2017
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:04
+
+

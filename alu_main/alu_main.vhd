@@ -2,7 +2,9 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity alu_main is
-	port ( alu_out_select:			in std_logic_vector(2 downto 0);
+	port ( ALU_FUNC_SEL_0:			in std_logic;
+			 ALU_FUNC_SEL_1:			in std_logic;
+			 ALU_FUNC_SEL_2:			in std_logic;
 			 inputA:						in std_logic_vector(11 downto 0);
 			 inputB:						in std_logic_vector(11 downto 0);
 			 output:						out std_logic_vector(11 downto 0);
@@ -12,7 +14,9 @@ end alu_main;
 
 architecture rtl of alu_main is
 	component alu_mux is
-		port ( alu_out_select:		in std_logic_vector(2 downto 0);
+		port ( ALU_OUT_SEL_0:		in std_logic;
+				 ALU_OUT_SEL_1:		in std_logic;
+				 ALU_OUT_SEL_2:   	in std_logic;
 				 inputA:					in std_logic_vector(11 downto 0);
 				 inputB:					in std_logic_vector(11 downto 0);
 				 inputC:					in std_logic_vector(11 downto 0);
@@ -45,7 +49,7 @@ architecture rtl of alu_main is
 	
 begin
 	
-	alu_mux_0:			alu_mux port map (alu_out_select => alu_out_select, inputA => alu_and_output, inputB => alu_add_output, inputC => alu_or_output, output => output);
+	alu_mux_0:			alu_mux port map (ALU_OUT_SEL_0 => ALU_FUNC_SEL_0, ALU_OUT_SEL_1 => ALU_FUNC_SEL_1, ALU_OUT_SEL_2 => ALU_FUNC_SEL_2, inputA => alu_and_output, inputB => alu_add_output, inputC => alu_or_output, output => output);
 	alu_and_0:			alu_and port map (inputA => inputA, inputB => inputB, output => alu_and_output);
 	alu_add_0:			alu_add port map (inputA => inputA, inputB => inputB, output => alu_add_output, carry_out => add_carry);
 	alu_or_0:			alu_or  port map (inputA => inputA, inputB => inputB, output => alu_or_output);

@@ -1,15 +1,15 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity alu_inc is
+entity alu_incrementer is
 	port ( input:				in std_logic_vector(11 downto 0);
 			 output:				out std_logic_vector(11 downto 0);
 			 alu_inc:			in std_logic;
 			 carry_out:			out std_logic
 	);
-end alu_inc;
+end alu_incrementer;
 
-architecture rtl of alu_inc is
+architecture rtl of alu_incrementer is
 component XOR_gate is
 	port ( inputA:			in std_logic;
 			 inputB:			in std_logic;
