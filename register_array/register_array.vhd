@@ -160,5 +160,6 @@ end component;
 		mem_addr_bus_out <= MA_register_output;
 		mem_data_bus_out <= MD_register_output;
 		
+		AC_output_bus <= AC_register_output;
 
 end rtl;

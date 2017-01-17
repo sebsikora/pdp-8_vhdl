@@ -11,7 +11,7 @@ end NOT_gate;
 
 architecture rtl of NOT_gate is
 begin
-	output <= not (input);
+	output <= not (input) after 5 ns;
 end rtl;
 
 -- 3 input NAND gate
@@ -29,7 +29,7 @@ end NAND_3_gate;
 
 architecture rtl of NAND_3_gate is
 begin
-	output <= not (inputA and inputB and inputC);
+	output <= not (inputA and inputB and inputC) after 5 ns;
 end rtl;
 
 
@@ -47,7 +47,7 @@ end NAND_gate;
 
 architecture rtl of NAND_gate is
 begin
-	output <= not (inputA and inputB);
+	output <= not (inputA and inputB) after 5 ns;
 end rtl;
 
 -- AND gate

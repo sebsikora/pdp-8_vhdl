@@ -8,7 +8,18 @@ entity top_level is
 			 not_reset:										in std_logic;
 			 clk_in:											in std_logic;
 			 START:											in std_logic;
-			 STEP:											in std_logic
+			 STEP:											in std_logic;
+			 NEXT_STATE:									in std_logic;
+			 END_STATE:										in std_logic;
+			 ASSERT_CONTROL:								in std_logic;
+			 FP_ADDR_LOAD:									in std_logic;
+			 FP_EXAMINE:									in std_logic;
+			 FP_DEPOSIT:									in std_logic;
+			 HRQ:												in std_logic;
+			 IRQ:												in std_logic;
+			 IRQ_ON:											in std_logic;
+			 HLT_indicator:								out std_logic;
+			 RUN_indicator:								out std_logic
 	);
 end top_level;
 
@@ -141,15 +152,6 @@ end component;
 		signal top_bus:									std_logic_vector(11 downto 0);
 		signal clk:											std_logic;
 		
-		signal NEXT_STATE:								std_logic;
-		signal END_STATE:									std_logic;
-		signal ASSERT_CONTROL:							std_logic;
-		signal FP_ADDR_LOAD:								std_logic;
-		signal FP_EXAMINE:								std_logic;
-		signal FP_DEPOSIT:								std_logic;
-		signal HRQ:											std_logic;
-		signal IRQ:											std_logic;
-		signal IRQ_ON:										std_logic;
 		signal ADD_CARRY:									std_logic;
 		signal INC_CARRY:									std_logic;
 		signal IS_ZERO_LAST:								std_logic;
@@ -157,8 +159,6 @@ end component;
 		signal IS_NEG:										std_logic;
 		signal IS_AUTO_INDEX:							std_logic;
 		signal LINK_VALUE:								std_logic;
-		signal HLT_indicator:							std_logic;
-		signal RUN_indicator:							std_logic;
 		signal PC_BUS_SEL:								std_logic;
 		signal PC_LOAD_HI:								std_logic;
 		signal PC_LOAD_LO:								std_logic;

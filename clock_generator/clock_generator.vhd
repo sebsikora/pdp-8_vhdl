@@ -8,7 +8,15 @@ entity clock_generator is
 			 END_STATE:			in std_logic;
 			 clk:					out std_logic;
 			 not_reset:			in std_logic;
+			 HLT_flag:			in std_logic;
+			 HLT_INDICATOR:	out std_logic;
 			 RUN_INDICATOR:	out std_logic
+			 --FP_ADDR_LOAD_in: in std_logic;
+			 --FP_ADDR_LOAD_out: out std_logic;
+			 --FP_EXAMINE_in: in std_logic;
+			 --FP_EXAMINE_out: out std_logic;
+			 --FP_DEPOSIT_in: in std_logic;
+			 --FP_DEPOSIT_out: out std_logic
 	);
 end clock_generator;
 
@@ -41,20 +49,36 @@ architecture rtl of clock_generator is
 			output:	out std_logic
 	);
 	end component;
-	signal step_and_output:		std_logic;
-	signal clk_and_output:		std_logic;
-	signal or_output:				std_logic;
-	signal jk_ff_output:			std_logic;
-	signal not_q:					std_logic;
+	
+	signal and_outputs:					std_logic_vector(2 downto 0);
+	signal or_outputs:					std_logic_vector(2 downto 0);
+	signal ff_output_0:					std_logic;
+	signal ff_not_output_0:				std_logic;
+	signal ff_output_1:					std_logic;
+	signal ff_not_output_1:				std_logic;
+	signal ff_output_2:					std_logic;
+	signal ff_not_output_2:				std_logic;
+	signal FP_CMD:							std_logic;
 	
 	begin
 	
-	and_0:				AND_3_gate port map (inputA => STEP, inputB => clk_and_output, inputC => END_STATE, output => step_and_output);
-	and_1:				AND_gate port map (inputA => jk_ff_output, inputB => clk_in, output => clk_and_output);
-	or_0:					OR_gate  port map (inputA => START, inputB => step_and_output, output => or_output);
-	ms_jk_ff_0:			ms_jk_ff port map ( j => '1', k => '1', clk => or_output, not_reset => not_reset, q => jk_ff_output, not_q => not_q);
+	FP_CMD <= '0';
 	
-	clk <= clk_and_output;
-	RUN_INDICATOR <= jk_ff_output;
+	clk <= and_outputs(1);
+	
+	and_0:				AND_3_gate port map (inputA => or_outputs(2), inputB => END_STATE, inputC => and_outputs(1), output => and_outputs(0));
+	and_1:				AND_gate port map (inputA => or_outputs(1), inputB => clk_in, output => and_outputs(1));
+	and_2:				AND_gate port map (inputA => END_STATE, inputB => ff_output_1, output => and_outputs(2));
+	
+	or_0:					OR_gate  port map (inputA => START, inputB => and_outputs(0), output => or_outputs(0));
+	or_1:					OR_gate  port map (inputA => ff_output_0, inputB => FP_CMD, output => or_outputs(1));
+	or_2:					OR_gate  port map (inputA => ff_output_1, inputB => STEP, output => or_outputs(2));
+	
+	ms_jk_ff_0:			ms_jk_ff port map ( j => '1', k => '1', clk => or_outputs(0), not_reset => not_reset, q => ff_output_0, not_q => ff_not_output_0);
+	ms_jk_ff_1:			ms_jk_ff port map ( j => HLT_flag, k => ff_output_2, clk => and_outputs(1), not_reset => not_reset, q => ff_output_1, not_q => ff_not_output_1);
+	ms_jk_ff_2:			ms_jk_ff port map ( j => and_outputs(2), k => ff_output_2, clk => and_outputs(1), not_reset => not_reset, q => ff_output_2, not_q => ff_not_output_2);
+		
+	HLT_INDICATOR <= ff_output_2;
+	RUN_INDICATOR <= ff_output_0;
 	
 end rtl;
