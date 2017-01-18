@@ -216,6 +216,13 @@
 # -- Loading package std_logic_1164
 # -- Compiling entity alu_main
 # -- Compiling architecture rtl of alu_main
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/address_comparator/address_comparator.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity address_comparator
+# -- Compiling architecture rtl of address_comparator
 # vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/register_output_mux/register_output_mux.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -267,12 +274,13 @@ vsim -voptargs=+acc work.top_level
 # Loading work.register_12_bit(rtl)
 # Loading work.register_1_bit(rtl)
 # Loading work.register_output_mux(behavior)
+# Loading work.address_comparator(rtl)
+# Loading work.or_gate(rtl)
+# Loading work.and_gate(rtl)
 # Loading work.control_subsystem(rtl)
 # Loading work.register_5_bit(rtl)
 # Loading work.clock_generator(rtl)
 # Loading work.and_3_gate(rtl)
-# Loading work.and_gate(rtl)
-# Loading work.or_gate(rtl)
 # Loading work.front_panel_latches(rtl)
 # Loading work.or_3_gate(rtl)
 # Loading work.state_generator(rtl)
@@ -295,7 +303,7 @@ vsim -voptargs=+acc work.top_level
 # Loading work.alu_incrementer(rtl)
 # Loading work.alu_shifter(rtl)
 # Loading work.alu_comparator(rtl)
-# ** Warning: Design size of 1087 instances exceeds ModelSim ALTERA recommended capacity.
+# ** Warning: Design size of 1097 instances exceeds ModelSim ALTERA recommended capacity.
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim Altera version. Expect performance to be adversely affected.
 do /home/sebsikora/altera/projects/pdp-8/top_level/simulation/modelsim/top_level_test_wave_2.do
@@ -303,3 +311,8 @@ do /home/sebsikora/altera/projects/pdp-8/top_level/simulation/modelsim/top_level
 # 1
 # 1
 run -all
+restart
+# ** Warning: Design size of 1058 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+quit

@@ -3,43 +3,43 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'ASSERT_CONTROL'
-Slack : -15.041
-TNS   : -47.988
+Slack : -24.158
+TNS   : -64.633
 
 Type  : Slow Model Hold 'ASSERT_CONTROL'
-Slack : -4.544
-TNS   : -11.668
+Slack : -8.748
+TNS   : -28.182
 
 Type  : Slow Model Recovery 'ASSERT_CONTROL'
-Slack : -17.001
-TNS   : -235.124
+Slack : -24.333
+TNS   : -265.675
 
 Type  : Slow Model Removal 'ASSERT_CONTROL'
-Slack : -4.669
-TNS   : -30.363
+Slack : -9.430
+TNS   : -54.197
 
 Type  : Slow Model Minimum Pulse Width 'ASSERT_CONTROL'
-Slack : -4.845
-TNS   : -764.201
+Slack : -9.274
+TNS   : -1040.893
 
 Type  : Fast Model Setup 'ASSERT_CONTROL'
-Slack : -4.750
-TNS   : -15.042
+Slack : -8.429
+TNS   : -21.427
 
 Type  : Fast Model Hold 'ASSERT_CONTROL'
-Slack : -1.836
-TNS   : -4.608
+Slack : -3.448
+TNS   : -10.725
 
 Type  : Fast Model Recovery 'ASSERT_CONTROL'
-Slack : -5.542
-TNS   : -77.755
+Slack : -8.384
+TNS   : -93.138
 
 Type  : Fast Model Removal 'ASSERT_CONTROL'
-Slack : -1.608
-TNS   : -10.025
+Slack : -3.374
+TNS   : -18.352
 
 Type  : Fast Model Minimum Pulse Width 'ASSERT_CONTROL'
-Slack : -1.250
-TNS   : -140.936
+Slack : -2.979
+TNS   : -289.612
 
 ------------------------------------------------------------

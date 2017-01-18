@@ -32,6 +32,7 @@ vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd
 vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd}
 vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/12_bit_register/register_1_bit.vhd}
 vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_main/alu_main.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/address_comparator/address_comparator.vhd}
 vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/register_output_mux/register_output_mux.vhd}
 vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/12_bit_register/register_12_bit_split.vhd}
 vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/12_bit_register/register_12_bit.vhd}

@@ -23,18 +23,18 @@ mem_data_bus_out[8] <= register_array:register_array_0.mem_data_bus_out[8]
 mem_data_bus_out[9] <= register_array:register_array_0.mem_data_bus_out[9]
 mem_data_bus_out[10] <= register_array:register_array_0.mem_data_bus_out[10]
 mem_data_bus_out[11] <= register_array:register_array_0.mem_data_bus_out[11]
-mem_addr_bus_out[0] <= register_array:register_array_0.mem_addr_bus_out[0]
-mem_addr_bus_out[1] <= register_array:register_array_0.mem_addr_bus_out[1]
-mem_addr_bus_out[2] <= register_array:register_array_0.mem_addr_bus_out[2]
-mem_addr_bus_out[3] <= register_array:register_array_0.mem_addr_bus_out[3]
-mem_addr_bus_out[4] <= register_array:register_array_0.mem_addr_bus_out[4]
-mem_addr_bus_out[5] <= register_array:register_array_0.mem_addr_bus_out[5]
-mem_addr_bus_out[6] <= register_array:register_array_0.mem_addr_bus_out[6]
-mem_addr_bus_out[7] <= register_array:register_array_0.mem_addr_bus_out[7]
-mem_addr_bus_out[8] <= register_array:register_array_0.mem_addr_bus_out[8]
-mem_addr_bus_out[9] <= register_array:register_array_0.mem_addr_bus_out[9]
-mem_addr_bus_out[10] <= register_array:register_array_0.mem_addr_bus_out[10]
-mem_addr_bus_out[11] <= register_array:register_array_0.mem_addr_bus_out[11]
+mem_addr_bus_out[0] <= address_comparator:address_comparator_0.output[0]
+mem_addr_bus_out[1] <= address_comparator:address_comparator_0.output[1]
+mem_addr_bus_out[2] <= address_comparator:address_comparator_0.output[2]
+mem_addr_bus_out[3] <= address_comparator:address_comparator_0.output[3]
+mem_addr_bus_out[4] <= address_comparator:address_comparator_0.output[4]
+mem_addr_bus_out[5] <= address_comparator:address_comparator_0.output[5]
+mem_addr_bus_out[6] <= address_comparator:address_comparator_0.output[6]
+mem_addr_bus_out[7] <= address_comparator:address_comparator_0.output[7]
+mem_addr_bus_out[8] <= address_comparator:address_comparator_0.output[8]
+mem_addr_bus_out[9] <= address_comparator:address_comparator_0.output[9]
+mem_addr_bus_out[10] <= address_comparator:address_comparator_0.output[10]
+mem_addr_bus_out[11] <= address_comparator:address_comparator_0.output[11]
 not_reset => register_array:register_array_0.not_reset
 not_reset => control_subsystem:control_subsystem_0.not_reset
 not_reset => alu_subsystem:alu_subsystem_0.not_reset
@@ -3847,6 +3847,91 @@ SR_BUS_SEL => output.OUTPUTSELECT
 SR_BUS_SEL => output.OUTPUTSELECT
 SR_BUS_SEL => output.OUTPUTSELECT
 SR_BUS_SEL => output.OUTPUTSELECT
+
+
+|top_level|address_comparator:address_comparator_0
+input[0] => output[0].DATAIN
+input[1] => output[1].DATAIN
+input[2] => output[2].DATAIN
+input[3] => AND_gate:and_0.inputB
+input[3] => output[3].DATAIN
+input[4] => OR_gate:or_0.inputA
+input[4] => output[4].DATAIN
+input[5] => OR_gate:or_0.inputB
+input[5] => output[5].DATAIN
+input[6] => OR_gate:or_1.inputB
+input[6] => output[6].DATAIN
+input[7] => OR_gate:or_2.inputB
+input[7] => output[7].DATAIN
+input[8] => OR_gate:or_3.inputB
+input[8] => output[8].DATAIN
+input[9] => OR_gate:or_4.inputB
+input[9] => output[9].DATAIN
+input[10] => OR_gate:or_5.inputB
+input[10] => output[10].DATAIN
+input[11] => OR_gate:or_6.inputB
+input[11] => output[11].DATAIN
+output[0] <= input[0].DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= input[1].DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= input[2].DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= input[3].DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= input[4].DB_MAX_OUTPUT_PORT_TYPE
+output[5] <= input[5].DB_MAX_OUTPUT_PORT_TYPE
+output[6] <= input[6].DB_MAX_OUTPUT_PORT_TYPE
+output[7] <= input[7].DB_MAX_OUTPUT_PORT_TYPE
+output[8] <= input[8].DB_MAX_OUTPUT_PORT_TYPE
+output[9] <= input[9].DB_MAX_OUTPUT_PORT_TYPE
+output[10] <= input[10].DB_MAX_OUTPUT_PORT_TYPE
+output[11] <= input[11].DB_MAX_OUTPUT_PORT_TYPE
+IS_AUTO_INDEX <= AND_gate:and_0.output
+
+
+|top_level|address_comparator:address_comparator_0|OR_gate:or_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level|address_comparator:address_comparator_0|OR_gate:or_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level|address_comparator:address_comparator_0|OR_gate:or_2
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level|address_comparator:address_comparator_0|OR_gate:or_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level|address_comparator:address_comparator_0|OR_gate:or_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level|address_comparator:address_comparator_0|OR_gate:or_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level|address_comparator:address_comparator_0|OR_gate:or_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level|address_comparator:address_comparator_0|AND_gate:and_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_level|control_subsystem:control_subsystem_0

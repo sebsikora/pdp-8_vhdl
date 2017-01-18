@@ -144,8 +144,15 @@ component  alu_subsystem is
 			 LINK_output:									out std_logic
 	);
 end component;
+component address_comparator is
+	port(  input:											in std_logic_vector(11 downto 0);
+			 output:											out std_logic_vector(11 downto 0);
+			 IS_AUTO_INDEX:								out std_logic
+	);
+end component;
 		
 		signal mem_data_bus:								std_logic_vector(11 downto 0);
+		signal mem_addr_bus:								std_logic_vector(11 downto 0);
 		signal ALU_link_output:							std_logic;
 		signal register_output_bus:					std_logic_vector(11 downto 0);
 		signal AC_output_bus:							std_logic_vector(11 downto 0);
@@ -200,7 +207,7 @@ end component;
 																	  AC_output_bus => AC_output_bus,
 																	  mem_data_bus_in => mem_data_bus_in,
 																	  mem_data_bus_out => mem_data_bus,
-																	  mem_addr_bus_out => mem_addr_bus_out,
+																	  mem_addr_bus_out => mem_addr_bus,
 																	  not_reset => not_reset,
 																	  clk => clk,
 																 	  LINK_VALUE => LINK_VALUE,
@@ -222,6 +229,8 @@ end component;
 																	  AC_LOAD => AC_LOAD,
 																	  LINK_LOAD => LINK_LOAD 
 									);
+		
+		address_comparator_0:	address_comparator port map ( input => mem_addr_bus, output => mem_addr_bus_out, IS_AUTO_INDEX => IS_AUTO_INDEX);
 		
 		control_subsystem_0:	control_subsystem port map (MD_BUS => mem_data_bus,
 																		 not_reset => not_reset,
