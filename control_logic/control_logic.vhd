@@ -155,8 +155,8 @@ begin
 	
 	NEXT_STATE_out <= NEXT_STATE_in or (NEXT_STATE and not_ASSERT_CONTROL);
 	END_STATE_out <= END_STATE_in or (END_STATE and not_ASSERT_CONTROL);
-	LOAD(0) <= (OPR_INS and IRQ and NEXT_STATE and not_ASSERT_CONTROL and not_END_STATE);
-	LOAD(1) <= ((OPR_INS and IRQ and NEXT_STATE and not_END_STATE) or (BASIC_INS and (not IR(3)) and NEXT_STATE and not_END_STATE)) and not_ASSERT_CONTROL;
+	LOAD(0) <= (OPR_INS and IRQ and NEXT_STATE and END_STATE and s_states(0) and not_ASSERT_CONTROL);
+	LOAD(1) <= ((OPR_INS and IRQ and NEXT_STATE and END_STATE and s_states(0)) or (BASIC_INS and (not IR(3)) and NEXT_STATE and not_END_STATE and s_states(0))) and not_ASSERT_CONTROL;
 	
 	IOT_INS <= IR(0) and IR(1) and (not IR(2));
 	OPR_INS <= IR(0) and IR(1) and IR(2);

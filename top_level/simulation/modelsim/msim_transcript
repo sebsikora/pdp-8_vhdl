@@ -306,7 +306,7 @@ vsim -voptargs=+acc work.top_level
 # ** Warning: Design size of 1097 instances exceeds ModelSim ALTERA recommended capacity.
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim Altera version. Expect performance to be adversely affected.
-do /home/sebsikora/altera/projects/pdp-8/top_level/simulation/modelsim/top_level_test_wave_2.do
+do /home/sebsikora/altera/projects/pdp-8/top_level/simulation/modelsim/top_level_test_wave_4.do
 # .main_pane.wave.interior.cs.body.pw.wf
 # 1
 # 1
@@ -315,4 +315,34 @@ restart
 # ** Warning: Design size of 1058 instances exceeds ModelSim ALTERA recommended capacity.
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim Altera version. Expect performance to be adversely affected.
-quit
+run -all
+restart
+# ** Warning: Design size of 1058 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+wave modify -driver freeze -pattern constant -value 1 -starttime 600ns -endtime 800ns Edit:/top_level/HRQ
+run -all
+restart
+# ** Warning: Design size of 1058 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+wave modify -driver freeze -pattern constant -value 0 -starttime 600ns -endtime 800ns Edit:/top_level/HRQ
+run -all
+wave modify -driver freeze -pattern constant -value 1 -starttime 0ns -endtime 4000ns Edit:/top_level/IRQ
+restart
+# ** Warning: Design size of 1058 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+run -all
+restart
+# ** Warning: Design size of 1058 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+wave modify -driver freeze -pattern constant -value 1 -starttime 2000ns -endtime 2200ns Edit:/top_level/HRQ
+run -all
+restart
+# ** Warning: Design size of 1058 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/top_level/simulation/modelsim/top_level_test_wave_5.do
+wave editwrite -file /home/sebsikora/altera/projects/pdp-8/top_level/simulation/modelsim/top_level_test_wave_5.do -append

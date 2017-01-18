@@ -5683,6 +5683,8 @@ output <= output.DB_MAX_OUTPUT_PORT_TYPE
 
 |top_level|control_subsystem:control_subsystem_0|control_logic:control_matrix
 s_states[0] => NEXT_STATE.IN0
+s_states[0] => LOAD.IN1
+s_states[0] => LOAD.IN1
 s_states[0] => PC_BUS_SEL.IN1
 s_states[0] => PC_BUS_SEL.IN0
 s_states[0] => PC_LOAD_HI.IN1

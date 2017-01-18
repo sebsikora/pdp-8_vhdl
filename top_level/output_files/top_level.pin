@@ -88,9 +88,9 @@ IRQ                          : 21        : input  : 3.3-V LVTTL       :         
 IRQ_ON                       : 22        : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : 23        : power  :                   : 3.3V    : 1         :                
 GND*                         : 24        :        :                   :         : 1         :                
-mem_addr_bus_out[4]          : 25        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 25        :        :                   :         : 1         :                
 GND*                         : 26        :        :                   :         : 1         :                
-mem_addr_bus_out[0]          : 27        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 27        :        :                   :         : 1         :                
 GND*                         : 28        :        :                   :         : 1         :                
 VCCIO1                       : 29        : power  :                   : 3.3V    : 1         :                
 GND*                         : 30        :        :                   :         : 1         :                
@@ -108,66 +108,66 @@ GND*                         : 41        :        :                   :         
 GND*                         : 42        :        :                   :         : 4         :                
 GND*                         : 43        :        :                   :         : 4         :                
 GND*                         : 44        :        :                   :         : 4         :                
-mem_addr_bus_out[1]          : 45        : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : 45        :        :                   :         : 4         :                
 VCCIO4                       : 46        : power  :                   : 3.3V    : 4         :                
-HLT_indicator                : 47        : output : 3.3-V LVTTL       :         : 4         : N              
-RUN_indicator                : 48        : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : 47        :        :                   :         : 4         :                
+GND*                         : 48        :        :                   :         : 4         :                
 GND                          : 49        : gnd    :                   :         :           :                
 VCCINT                       : 50        : power  :                   : 1.2V    :           :                
-FP_DEPOSIT                   : 51        : input  : 3.3-V LVTTL       :         : 4         : N              
-STEP                         : 52        : input  : 3.3-V LVTTL       :         : 4         : N              
-FP_EXAMINE                   : 53        : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : 51        :        :                   :         : 4         :                
+GND*                         : 52        :        :                   :         : 4         :                
+HLT_indicator                : 53        : output : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : 54        : power  :                   : 3.3V    : 4         :                
-mem_data_bus_out[0]          : 55        : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : 55        :        :                   :         : 4         :                
 GND                          : 56        : gnd    :                   :         :           :                
-not_reset                    : 57        : input  : 3.3-V LVTTL       :         : 4         : N              
-clk_in                       : 58        : input  : 3.3-V LVTTL       :         : 4         : N              
-FP_ADDR_LOAD                 : 59        : input  : 3.3-V LVTTL       :         : 4         : N              
-ASSERT_CONTROL               : 60        : input  : 3.3-V LVTTL       :         : 4         : N              
+mem_addr_bus_out[4]          : 57        : output : 3.3-V LVTTL       :         : 4         : N              
+mem_addr_bus_out[1]          : 58        : output : 3.3-V LVTTL       :         : 4         : N              
+mem_addr_bus_out[6]          : 59        : output : 3.3-V LVTTL       :         : 4         : N              
+mem_addr_bus_out[8]          : 60        : output : 3.3-V LVTTL       :         : 4         : N              
 GND                          : 61        : gnd    :                   :         :           :                
 VCCINT                       : 62        : power  :                   : 1.2V    :           :                
-mem_data_bus_out[10]         : 63        : output : 3.3-V LVTTL       :         : 4         : N              
-mem_data_bus_out[8]          : 64        : output : 3.3-V LVTTL       :         : 4         : N              
-mem_data_bus_out[11]         : 65        : output : 3.3-V LVTTL       :         : 4         : N              
+RUN_indicator                : 63        : output : 3.3-V LVTTL       :         : 4         : N              
+FP_EXAMINE                   : 64        : input  : 3.3-V LVTTL       :         : 4         : N              
+mem_data_bus_out[3]          : 65        : output : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : 66        : power  :                   : 3.3V    : 4         :                
-mem_data_bus_in[3]           : 67        : input  : 3.3-V LVTTL       :         : 4         : N              
+STEP                         : 67        : input  : 3.3-V LVTTL       :         : 4         : N              
 GND                          : 68        : gnd    :                   :         :           :                
-GND*                         : 69        :        :                   :         : 4         :                
-mem_addr_bus_out[6]          : 70        : output : 3.3-V LVTTL       :         : 4         : N              
-mem_data_bus_in[0]           : 71        : input  : 3.3-V LVTTL       :         : 4         : N              
-mem_data_bus_in[7]           : 72        : input  : 3.3-V LVTTL       :         : 4         : N              
-mem_data_bus_in[9]           : 73        : input  : 3.3-V LVTTL       :         : 3         : N              
-mem_addr_bus_out[10]         : 74        : output : 3.3-V LVTTL       :         : 3         : N              
-mem_data_bus_out[7]          : 75        : output : 3.3-V LVTTL       :         : 3         : N              
+mem_addr_bus_out[0]          : 69        : output : 3.3-V LVTTL       :         : 4         : N              
+FP_ADDR_LOAD                 : 70        : input  : 3.3-V LVTTL       :         : 4         : N              
+FP_DEPOSIT                   : 71        : input  : 3.3-V LVTTL       :         : 4         : N              
+mem_data_bus_out[0]          : 72        : output : 3.3-V LVTTL       :         : 4         : N              
+mem_addr_bus_out[3]          : 73        : output : 3.3-V LVTTL       :         : 3         : N              
+mem_data_bus_out[7]          : 74        : output : 3.3-V LVTTL       :         : 3         : N              
+mem_data_bus_in[0]           : 75        : input  : 3.3-V LVTTL       :         : 3         : N              
 ~LVDS41p/nCEO~               : 76        : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : 77        : power  :                   : 3.3V    : 3         :                
 GND                          : 78        : gnd    :                   :         :           :                
-mem_addr_bus_out[9]          : 79        : output : 3.3-V LVTTL       :         : 3         : N              
-mem_addr_bus_out[11]         : 80        : output : 3.3-V LVTTL       :         : 3         : N              
-mem_addr_bus_out[7]          : 81        : output : 3.3-V LVTTL       :         : 3         : N              
+mem_addr_bus_out[7]          : 79        : output : 3.3-V LVTTL       :         : 3         : N              
+mem_data_bus_out[2]          : 80        : output : 3.3-V LVTTL       :         : 3         : N              
+mem_addr_bus_out[2]          : 81        : output : 3.3-V LVTTL       :         : 3         : N              
 nSTATUS                      : 82        :        :                   :         : 3         :                
 CONF_DONE                    : 83        :        :                   :         : 3         :                
 MSEL1                        : 84        :        :                   :         : 3         :                
 MSEL0                        : 85        :        :                   :         : 3         :                
-mem_data_bus_out[9]          : 86        : output : 3.3-V LVTTL       :         : 3         : N              
-mem_data_bus_in[6]           : 87        : input  : 3.3-V LVTTL       :         : 3         : N              
+mem_data_bus_in[1]           : 86        : input  : 3.3-V LVTTL       :         : 3         : N              
+mem_data_bus_out[1]          : 87        : output : 3.3-V LVTTL       :         : 3         : N              
 mem_data_bus_in[10]          : 88        : input  : 3.3-V LVTTL       :         : 3         : N              
 mem_data_bus_in[11]          : 89        : input  : 3.3-V LVTTL       :         : 3         : N              
 NEXT_STATE                   : 90        : input  : 3.3-V LVTTL       :         : 3         : N              
 HRQ                          : 91        : input  : 3.3-V LVTTL       :         : 3         : N              
-mem_addr_bus_out[3]          : 92        : output : 3.3-V LVTTL       :         : 3         : N              
-mem_data_bus_out[6]          : 93        : output : 3.3-V LVTTL       :         : 3         : N              
-mem_data_bus_out[5]          : 94        : output : 3.3-V LVTTL       :         : 3         : N              
+mem_data_bus_in[3]           : 92        : input  : 3.3-V LVTTL       :         : 3         : N              
+mem_data_bus_in[2]           : 93        : input  : 3.3-V LVTTL       :         : 3         : N              
+mem_addr_bus_out[9]          : 94        : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : 95        : power  :                   : 3.3V    : 3         :                
-mem_data_bus_in[8]           : 96        : input  : 3.3-V LVTTL       :         : 3         : N              
-mem_data_bus_out[3]          : 97        : output : 3.3-V LVTTL       :         : 3         : N              
+ASSERT_CONTROL               : 96        : input  : 3.3-V LVTTL       :         : 3         : N              
+clk_in                       : 97        : input  : 3.3-V LVTTL       :         : 3         : N              
 GND                          : 98        : gnd    :                   :         :           :                
-GND*                         : 99        :        :                   :         : 3         :                
-GND*                         : 100       :        :                   :         : 3         :                
-GND*                         : 101       :        :                   :         : 3         :                
+mem_data_bus_in[7]           : 99        : input  : 3.3-V LVTTL       :         : 3         : N              
+mem_data_bus_in[4]           : 100       : input  : 3.3-V LVTTL       :         : 3         : N              
+mem_data_bus_in[6]           : 101       : input  : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : 102       : power  :                   : 3.3V    : 3         :                
-GND*                         : 103       :        :                   :         : 3         :                
-GND*                         : 104       :        :                   :         : 3         :                
+mem_data_bus_out[11]         : 103       : output : 3.3-V LVTTL       :         : 3         : N              
+mem_data_bus_out[5]          : 104       : output : 3.3-V LVTTL       :         : 3         : N              
 GND                          : 105       : gnd    :                   :         :           :                
 GND_PLL2                     : 106       : gnd    :                   :         :           :                
 VCCD_PLL2                    : 107       : power  :                   : 1.2V    :           :                
@@ -175,27 +175,27 @@ GND_PLL2                     : 108       : gnd    :                   :         
 VCCA_PLL2                    : 109       : power  :                   : 1.2V    :           :                
 GNDA_PLL2                    : 110       : gnd    :                   :         :           :                
 GND                          : 111       : gnd    :                   :         :           :                
-GND*                         : 112       :        :                   :         : 2         :                
-GND*                         : 113       :        :                   :         : 2         :                
-GND*                         : 114       :        :                   :         : 2         :                
-mem_data_bus_in[5]           : 115       : input  : 3.3-V LVTTL       :         : 2         : N              
+mem_data_bus_out[6]          : 112       : output : 3.3-V LVTTL       :         : 2         : N              
+mem_data_bus_in[9]           : 113       : input  : 3.3-V LVTTL       :         : 2         : N              
+mem_data_bus_in[5]           : 114       : input  : 3.3-V LVTTL       :         : 2         : N              
+mem_data_bus_out[10]         : 115       : output : 3.3-V LVTTL       :         : 2         : N              
 VCCIO2                       : 116       : power  :                   : 3.3V    : 2         :                
 GND                          : 117       : gnd    :                   :         :           :                
-mem_data_bus_out[2]          : 118       : output : 3.3-V LVTTL       :         : 2         : N              
-mem_addr_bus_out[2]          : 119       : output : 3.3-V LVTTL       :         : 2         : N              
-mem_data_bus_out[4]          : 120       : output : 3.3-V LVTTL       :         : 2         : N              
-mem_addr_bus_out[8]          : 121       : output : 3.3-V LVTTL       :         : 2         : N              
-mem_addr_bus_out[5]          : 122       : output : 3.3-V LVTTL       :         : 2         : N              
+mem_addr_bus_out[10]         : 118       : output : 3.3-V LVTTL       :         : 2         : N              
+mem_data_bus_out[4]          : 119       : output : 3.3-V LVTTL       :         : 2         : N              
+not_reset                    : 120       : input  : 3.3-V LVTTL       :         : 2         : N              
+mem_data_bus_out[9]          : 121       : output : 3.3-V LVTTL       :         : 2         : N              
+mem_data_bus_out[8]          : 122       : output : 3.3-V LVTTL       :         : 2         : N              
 GND                          : 123       : gnd    :                   :         :           :                
 VCCINT                       : 124       : power  :                   : 1.2V    :           :                
-mem_data_bus_in[2]           : 125       : input  : 3.3-V LVTTL       :         : 2         : N              
-mem_data_bus_in[4]           : 126       : input  : 3.3-V LVTTL       :         : 2         : N              
+mem_data_bus_in[8]           : 125       : input  : 3.3-V LVTTL       :         : 2         : N              
+mem_addr_bus_out[11]         : 126       : output : 3.3-V LVTTL       :         : 2         : N              
 VCCIO2                       : 127       : power  :                   : 3.3V    : 2         :                
 GND                          : 128       : gnd    :                   :         :           :                
-mem_data_bus_out[1]          : 129       : output : 3.3-V LVTTL       :         : 2         : N              
+mem_addr_bus_out[5]          : 129       : output : 3.3-V LVTTL       :         : 2         : N              
 GND                          : 130       : gnd    :                   :         :           :                
 VCCINT                       : 131       : power  :                   : 1.2V    :           :                
-mem_data_bus_in[1]           : 132       : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 132       :        :                   :         : 2         :                
 GND*                         : 133       :        :                   :         : 2         :                
 GND*                         : 134       :        :                   :         : 2         :                
 GND*                         : 135       :        :                   :         : 2         :                
