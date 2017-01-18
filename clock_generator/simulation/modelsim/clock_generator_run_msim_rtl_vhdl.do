@@ -7,5 +7,6 @@ vmap work rtl_work
 
 vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd}
 vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/clock_generator/front_panel_latches.vhd}
 vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/clock_generator/clock_generator.vhd}
 

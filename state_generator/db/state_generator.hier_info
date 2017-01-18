@@ -3,14 +3,12 @@ clk => s_state_generator:s_state_generator_0.clk
 clk => t_state_generator:t_state_generator_0.clk
 not_reset => s_state_generator:s_state_generator_0.not_reset
 not_reset => t_state_generator:t_state_generator_0.not_reset
-HLT_flag => s_state_generator:s_state_generator_0.HLT_flag
 NEXT_STATE => s_state_generator:s_state_generator_0.NEXT_STATE
 NEXT_STATE => t_state_generator:t_state_generator_0.NEXT_STATE
 END_STATE => s_state_generator:s_state_generator_0.END_STATE
 END_STATE => t_state_generator:t_state_generator_0.END_STATE
 LOAD[0] => s_state_generator:s_state_generator_0.LOAD[0]
 LOAD[1] => s_state_generator:s_state_generator_0.LOAD[1]
-HLT_indicator <= s_state_generator:s_state_generator_0.HLT_indicator
 s_states[0] <= s_state_generator:s_state_generator_0.s_states[0]
 s_states[1] <= s_state_generator:s_state_generator_0.s_states[1]
 s_states[2] <= s_state_generator:s_state_generator_0.s_states[2]
@@ -30,24 +28,16 @@ t_states[7] <= t_state_generator:t_state_generator_0.t_states[7]
 
 
 |state_generator|s_state_generator:s_state_generator_0
-clk => AND_gate:and_2.inputA
-clk => ms_jk_ff:ms_jk_ff_0.clk
-clk => ms_jk_ff:ms_jk_ff_1.clk
-not_reset => ms_jk_ff:ms_jk_ff_0.not_reset
-not_reset => ms_jk_ff:ms_jk_ff_1.not_reset
+clk => AND_gate:and_0.inputA
 not_reset => counter_3_bit_with_load:counter.not_reset
-NEXT_STATE => AND_gate:and_2.inputB
-NEXT_STATE => AND_gate:and_3.inputA
-END_STATE => AND_gate:and_0.inputA
-END_STATE => AND_gate:and_1.inputB
+NEXT_STATE => AND_gate:and_0.inputB
+NEXT_STATE => AND_3_gate:and_1.inputA
 END_STATE => counter_3_bit_with_load:counter.clr
-END_STATE => AND_gate:and_3.inputB
-LOAD[0] => counter_inputs[0].IN0
-LOAD[1] => counter_inputs[0].IN1
-LOAD[1] => counter_3_bit_with_load:counter.load
+END_STATE => AND_3_gate:and_1.inputB
+LOAD[0] => OR_gate:or_0.inputA
+LOAD[0] => counter_3_bit_with_load:counter.input[0]
+LOAD[1] => OR_gate:or_0.inputB
 LOAD[1] => counter_3_bit_with_load:counter.input[1]
-HLT_flag => ms_jk_ff:ms_jk_ff_0.j
-HLT_indicator <= ms_jk_ff:ms_jk_ff_1.q
 s_states[0] <= decoder_3_to_8:decoder.output[0]
 s_states[1] <= decoder_3_to_8:decoder.output[1]
 s_states[2] <= decoder_3_to_8:decoder.output[2]
@@ -64,145 +54,14 @@ inputB => output.IN1
 output <= output.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|state_generator|s_state_generator:s_state_generator_0|AND_gate:and_1
-inputA => output.IN0
-inputB => output.IN1
-output <= output.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|state_generator|s_state_generator:s_state_generator_0|AND_gate:and_2
-inputA => output.IN0
-inputB => output.IN1
-output <= output.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|state_generator|s_state_generator:s_state_generator_0|AND_gate:and_3
-inputA => output.IN0
-inputB => output.IN1
-output <= output.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|state_generator|s_state_generator:s_state_generator_0|ms_jk_ff:ms_jk_ff_0
-j => NAND_3_gate:nand_3_1.inputB
-k => NAND_3_gate:nand_3_2.inputB
-clk => NAND_3_gate:nand_3_1.inputC
-clk => NAND_3_gate:nand_3_2.inputA
-clk => NAND_gate:nand_3.inputB
-clk => NAND_gate:nand_4.inputA
-not_reset => NAND_3_gate:nand_3_3.inputC
-q <= NAND_gate:nand_5.output
-not_q <= NAND_gate:nand_6.output
-
-
-|state_generator|s_state_generator:s_state_generator_0|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_1
+|state_generator|s_state_generator:s_state_generator_0|AND_3_gate:and_1
 inputA => output.IN0
 inputB => output.IN1
 inputC => output.IN1
 output <= output.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|state_generator|s_state_generator:s_state_generator_0|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_2
-inputA => output.IN0
-inputB => output.IN1
-inputC => output.IN1
-output <= output.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|state_generator|s_state_generator:s_state_generator_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1
-inputA => output.IN0
-inputB => output.IN1
-output <= output.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|state_generator|s_state_generator:s_state_generator_0|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_3
-inputA => output.IN0
-inputB => output.IN1
-inputC => output.IN1
-output <= output.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|state_generator|s_state_generator:s_state_generator_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_3
-inputA => output.IN0
-inputB => output.IN1
-output <= output.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|state_generator|s_state_generator:s_state_generator_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_4
-inputA => output.IN0
-inputB => output.IN1
-output <= output.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|state_generator|s_state_generator:s_state_generator_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5
-inputA => output.IN0
-inputB => output.IN1
-output <= output.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|state_generator|s_state_generator:s_state_generator_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_6
-inputA => output.IN0
-inputB => output.IN1
-output <= output.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|state_generator|s_state_generator:s_state_generator_0|ms_jk_ff:ms_jk_ff_1
-j => NAND_3_gate:nand_3_1.inputB
-k => NAND_3_gate:nand_3_2.inputB
-clk => NAND_3_gate:nand_3_1.inputC
-clk => NAND_3_gate:nand_3_2.inputA
-clk => NAND_gate:nand_3.inputB
-clk => NAND_gate:nand_4.inputA
-not_reset => NAND_3_gate:nand_3_3.inputC
-q <= NAND_gate:nand_5.output
-not_q <= NAND_gate:nand_6.output
-
-
-|state_generator|s_state_generator:s_state_generator_0|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_1
-inputA => output.IN0
-inputB => output.IN1
-inputC => output.IN1
-output <= output.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|state_generator|s_state_generator:s_state_generator_0|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_2
-inputA => output.IN0
-inputB => output.IN1
-inputC => output.IN1
-output <= output.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|state_generator|s_state_generator:s_state_generator_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1
-inputA => output.IN0
-inputB => output.IN1
-output <= output.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|state_generator|s_state_generator:s_state_generator_0|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_3
-inputA => output.IN0
-inputB => output.IN1
-inputC => output.IN1
-output <= output.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|state_generator|s_state_generator:s_state_generator_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_3
-inputA => output.IN0
-inputB => output.IN1
-output <= output.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|state_generator|s_state_generator:s_state_generator_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_4
-inputA => output.IN0
-inputB => output.IN1
-output <= output.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|state_generator|s_state_generator:s_state_generator_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5
-inputA => output.IN0
-inputB => output.IN1
-output <= output.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|state_generator|s_state_generator:s_state_generator_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6
+|state_generator|s_state_generator:s_state_generator_0|OR_gate:or_0
 inputA => output.IN0
 inputB => output.IN1
 output <= output.DB_MAX_OUTPUT_PORT_TYPE

@@ -9,6 +9,13 @@
 # ** Warning: Copied /home/sebsikora/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/clock_generator/front_panel_latches.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity front_panel_latches
+# -- Compiling architecture rtl of front_panel_latches
 # vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_xor/alu_xor.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -266,10 +273,11 @@ vsim -voptargs=+acc work.top_level
 # Loading work.and_3_gate(rtl)
 # Loading work.and_gate(rtl)
 # Loading work.or_gate(rtl)
+# Loading work.front_panel_latches(rtl)
+# Loading work.or_3_gate(rtl)
 # Loading work.state_generator(rtl)
 # Loading work.s_state_generator(rtl)
 # Loading work.counter_3_bit_with_load(rtl)
-# Loading work.or_3_gate(rtl)
 # Loading work.decoder_3_to_8(rtl)
 # Loading work.t_state_generator(rtl)
 # Loading work.counter_3_bit(rtl)
@@ -287,91 +295,11 @@ vsim -voptargs=+acc work.top_level
 # Loading work.alu_incrementer(rtl)
 # Loading work.alu_shifter(rtl)
 # Loading work.alu_comparator(rtl)
-# ** Warning: Design size of 1050 instances exceeds ModelSim ALTERA recommended capacity.
+# ** Warning: Design size of 1087 instances exceeds ModelSim ALTERA recommended capacity.
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim Altera version. Expect performance to be adversely affected.
-do /home/sebsikora/altera/projects/pdp-8/top_level/simulation/modelsim/top_level_test_wave.do
+do /home/sebsikora/altera/projects/pdp-8/top_level/simulation/modelsim/top_level_test_wave_2.do
 # .main_pane.wave.interior.cs.body.pw.wf
 # 1
 # 1
-add wave  \
-sim:/top_level/RUN_indicator
-run
-restart
-# ** Warning: Design size of 1013 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
-wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 2000ns sim:/top_level/NEXT_STATE
-wave create -driver freeze -pattern constant -value 1 -starttime 0ns -endtime 2000ns sim:/top_level/IRQ_ON
-wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 2000ns sim:/top_level/IRQ
-wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 2000ns sim:/top_level/HRQ
-wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 2000ns sim:/top_level/FP_EXAMINE
-wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 2000ns sim:/top_level/FP_DEPOSIT
-wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 2000ns sim:/top_level/FP_ADDR_LOAD
-wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 2000ns sim:/top_level/END_STATE
-wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 2000ns sim:/top_level/ASSERT_CONTROL
-run
-add wave  \
-sim:/top_level/control_subsystem_0/s_state_signals \
-sim:/top_level/control_subsystem_0/t_state_signals
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-restart
-# ** Warning: Design size of 1013 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
-wave modify -driver freeze -pattern constant -value 1 -starttime 200ns -endtime 4000ns Edit:/top_level/not_reset
-wave modify -driver freeze -pattern constant -value 1 -starttime 0ns -endtime 4000ns Edit:/top_level/STEP
-wave modify -driver freeze -pattern clock -initialvalue 0 -period 200ns -dutycycle 50 -starttime 0ns -endtime 4000ns Edit:/top_level/clk_in
-wave modify -driver freeze -pattern constant -value 0 -starttime 2000ns -endtime 4000ns Edit:/top_level/START
-wave modify -driver freeze -pattern constant -value 101010110100 -range 11 0 -starttime 0ns -endtime 4000ns Edit:/top_level/mem_data_bus_in
-wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 4000ns Edit:/top_level/NEXT_STATE
-wave modify -driver freeze -pattern constant -value 1 -starttime 0ns -endtime 4000ns Edit:/top_level/IRQ_ON
-wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 4000ns Edit:/top_level/IRQ
-wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 4000ns Edit:/top_level/HRQ
-wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 4000ns Edit:/top_level/FP_EXAMINE
-wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 4000ns Edit:/top_level/FP_DEPOSIT
-wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 4000ns Edit:/top_level/FP_ADDR_LOAD
-wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 4000ns Edit:/top_level/END_STATE
-wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 4000ns Edit:/top_level/ASSERT_CONTROL
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-restart
-# ** Warning: Design size of 1013 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/top_level/simulation/modelsim/top_level_test_wave_2.do
-wave editwrite -file /home/sebsikora/altera/projects/pdp-8/top_level/simulation/modelsim/top_level_test_wave_2.do -append
+run -all

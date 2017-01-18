@@ -92,159 +92,88 @@ vsim -voptargs=+acc work.state_generator
 # Loading work.state_generator(rtl)
 # Loading work.s_state_generator(rtl)
 # Loading work.and_gate(rtl)
+# Loading work.and_3_gate(rtl)
+# Loading work.or_gate(rtl)
+# Loading work.counter_3_bit_with_load(rtl)
+# Loading work.or_3_gate(rtl)
 # Loading work.ms_jk_ff(gates)
 # Loading work.nand_3_gate(rtl)
 # Loading work.nand_gate(rtl)
-# Loading work.counter_3_bit_with_load(rtl)
-# Loading work.or_gate(rtl)
-# Loading work.or_3_gate(rtl)
 # Loading work.decoder_3_to_8(rtl)
-# Loading work.and_3_gate(rtl)
 # Loading work.t_state_generator(rtl)
 # Loading work.counter_3_bit(rtl)
-do /home/sebsikora/altera/projects/pdp-8/state_generator/simulation/modelsim/new_state_generator_test_wave.do
+do /home/sebsikora/altera/projects/pdp-8/state_generator/simulation/modelsim/new_state_generator_test_wave_2.do
+# ** Error: (vish-4014) No objects found matching '/state_generator/HLT_indicator'.
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/state_generator/simulation/modelsim/new_state_generator_test_wave_2.do line 5
+# ** Error: (vish-4014) No objects found matching '/state_generator/HLT_flag'.
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/state_generator/simulation/modelsim/new_state_generator_test_wave_2.do line 8
 # .main_pane.wave.interior.cs.body.pw.wf
 # 1
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/state_generator/simulation/modelsim/new_state_generator_test_wave_2.do line 49
 # 1
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-restart
-restart
-restart
-wave modify -driver freeze -pattern constant -value 10 -range 1 0 -starttime 5000ns -endtime 5200ns Edit:/state_generator/LOAD
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-restart
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-restart
-wave modify -driver freeze -pattern constant -value 11 -range 1 0 -starttime 4000ns -endtime 4200ns Edit:/state_generator/LOAD
-wave modify -driver freeze -pattern constant -value 00 -range 1 0 -starttime 4200ns -endtime 10000ns Edit:/state_generator/LOAD
-wave modify -driver freeze -pattern constant -value 1 -starttime 5000ns -endtime 5200ns Edit:/state_generator/END_STATE
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-restart
-add wave  \
-sim:/state_generator/HLT_indicator
 run -all
 restart
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/state_generator/simulation/modelsim/new_state_generator_test_wave_2.do
-wave editwrite -file /home/sebsikora/altera/projects/pdp-8/state_generator/simulation/modelsim/new_state_generator_test_wave_2.do -append
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/state_generator/simulation/modelsim/new_state_generator_test_wave_FINAL.do
+wave editwrite -file /home/sebsikora/altera/projects/pdp-8/state_generator/simulation/modelsim/new_state_generator_test_wave_FINAL.do -append

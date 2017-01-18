@@ -74,11 +74,9 @@ architecture rtl of control_subsystem is
 	component state_generator is
 		port ( clk:											in std_logic;
 				 not_reset:									in std_logic;
-				 HLT_flag:									in std_logic;
 				 NEXT_STATE:								in std_logic;
 				 END_STATE:									in std_logic;
 				 LOAD:										in std_logic_vector(1 downto 0);
-				 HLT_indicator:							out std_logic;
 				 s_states:									out std_logic_vector(7 downto 0);
 				 t_states:									out std_logic_vector(7 downto 0)
 		);
@@ -149,7 +147,15 @@ architecture rtl of control_subsystem is
 				 END_STATE:									in std_logic;
 				 clk:											out std_logic;
 				 not_reset:									in std_logic;
-				 RUN_INDICATOR:							out std_logic
+				 HLT_flag:									in std_logic;
+				 HLT_INDICATOR:							out std_logic;
+				 RUN_INDICATOR:							out std_logic;
+				 FP_ADDR_LOAD_in: 						in std_logic;
+				 FP_ADDR_LOAD_out: 						out std_logic;
+				 FP_EXAMINE_in: 							in std_logic;
+				 FP_EXAMINE_out: 							out std_logic;
+				 FP_DEPOSIT_in: 							in std_logic;
+				 FP_DEPOSIT_out: 							out std_logic
 		);
 	end component;
 	
@@ -165,13 +171,15 @@ architecture rtl of control_subsystem is
 	signal control_matrix_IR_input:		std_logic_vector(11 downto 0);
 	signal IRQ_signal:						std_logic;
 	signal clk_signal:						std_logic;
-	signal RUN_INDICATOR_signal:			std_logic;
+	signal FP_ADDR_LOAD_CMD:				std_logic;
+	signal FP_EXAMINE_CMD:					std_logic;
+	signal FP_DEPOSIT_CMD:					std_logic;
+	
 	begin
 		
 		IRQ_signal <= IRQ and IRQ_ON;
 		control_matrix_IR_input(4 downto 0) <= IR_reg_output;
 		control_matrix_IR_input(11 downto 5) <= MD_BUS(11 downto 5);
-		RUN_INDICATOR <= RUN_INDICATOR_signal;
 		clk <= clk_signal;
 		
 		register_5_bit_0:			register_5_bit  port map ( input => MD_BUS(4 downto 0),
@@ -187,16 +195,22 @@ architecture rtl of control_subsystem is
 																			END_STATE => END_STATE_flag,
 																			clk => clk_signal,
 																			not_reset => not_reset,
-																			RUN_INDICATOR => RUN_INDICATOR_signal
+																			HLT_flag => HLT_flag,
+																			HLT_INDICATOR => HLT_INDICATOR,
+																			RUN_INDICATOR => RUN_INDICATOR,
+																			FP_ADDR_LOAD_in => FP_ADDR_LOAD,
+																			FP_ADDR_LOAD_out => FP_ADDR_LOAD_CMD,
+																			FP_EXAMINE_in => FP_EXAMINE,
+																			FP_EXAMINE_out => FP_EXAMINE_CMD,
+																			FP_DEPOSIT_in => FP_DEPOSIT,
+																			FP_DEPOSIT_out => FP_DEPOSIT_CMD
 										);
 										
 		state_generator_0:		state_generator port map ( clk => clk_signal,
 																			not_reset => not_reset,
-																			HLT_flag => HLT_flag,
 																			NEXT_STATE => NEXT_STATE_flag,
 																			END_STATE => END_STATE_flag,
 																			LOAD => load_s_state,
-																			HLT_indicator => HLT_indicator,
 																			s_states => s_state_signals,
 																			t_states => t_state_signals
 										);
@@ -206,9 +220,9 @@ architecture rtl of control_subsystem is
 																		   NEXT_STATE_in => NEXT_STATE,
 																			END_STATE_in => END_STATE,
 																			ASSERT_CONTROL => ASSERT_CONTROL,
-																			FP_ADDR_LOAD => FP_ADDR_LOAD,
-																			FP_EXAMINE => FP_EXAMINE,
-																			FP_DEPOSIT => FP_DEPOSIT,
+																			FP_ADDR_LOAD => FP_ADDR_LOAD_CMD,
+																			FP_EXAMINE => FP_EXAMINE_CMD,
+																			FP_DEPOSIT => FP_DEPOSIT_CMD,
 																			HRQ => HRQ,
 																			IRQ => IRQ_signal,
 																		   IR => control_matrix_IR_input,

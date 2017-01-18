@@ -4,11 +4,9 @@ use ieee.std_logic_1164.all;
 entity state_generator is
 	port ( clk:										in std_logic;
 			 not_reset:								in std_logic;
-			 HLT_flag:								in std_logic;
 			 NEXT_STATE:							in std_logic;
 			 END_STATE:								in std_logic;
 			 LOAD:									in std_logic_vector(1 downto 0);
-			 HLT_indicator:						out std_logic;
 			 s_states:								out std_logic_vector(7 downto 0);
 			 t_states:								out std_logic_vector(7 downto 0)
 	);
@@ -21,8 +19,6 @@ architecture rtl of state_generator is
 				 NEXT_STATE:						in std_logic;
 				 END_STATE:							in std_logic;
 				 LOAD:								in std_logic_vector(1 downto 0);
-				 HLT_flag:							in std_logic;
-				 HLT_indicator:					out std_logic;
 				 s_states:							out std_logic_vector(7 downto 0)
 		);
 	end component;
@@ -51,8 +47,6 @@ architecture rtl of state_generator is
 																			  NEXT_STATE => NEXT_STATE_signal,
 																			  END_STATE => END_STATE_signal,
 																			  LOAD => LOAD,
-																			  HLT_flag => HLT_flag,
-																			  HLT_indicator => HLT_indicator,
 																			  s_states => s_state_signals
 										);
 		

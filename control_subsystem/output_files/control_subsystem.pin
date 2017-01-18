@@ -66,13 +66,13 @@ Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage 
 -------------------------------------------------------------------------------------------------------------
 ~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 1         : input  : 3.3-V LVTTL       :         : 1         : N              
 ~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 2         : input  : 3.3-V LVTTL       :         : 1         : N              
-LINK_LOAD                    : 3         : output : 3.3-V LVTTL       :         : 1         : N              
-AC_LOAD                      : 4         : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 3         :        :                   :         : 1         :                
+GND*                         : 4         :        :                   :         : 1         :                
 VCCIO1                       : 5         : power  :                   : 3.3V    : 1         :                
 GND                          : 6         : gnd    :                   :         :           :                
-MA_CLR_LO                    : 7         : output : 3.3-V LVTTL       :         : 1         : N              
-MD_BUS[11]                   : 8         : input  : 3.3-V LVTTL       :         : 1         : N              
-ALU_FUNC_SEL_1               : 9         : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 7         :        :                   :         : 1         :                
+GND*                         : 8         :        :                   :         : 1         :                
+GND*                         : 9         :        :                   :         : 1         :                
 TDO                          : 10        : output :                   :         : 1         :                
 TMS                          : 11        : input  :                   :         : 1         :                
 TCK                          : 12        : input  :                   :         : 1         :                
@@ -88,14 +88,14 @@ GND+                         : 21        :        :                   :         
 GND+                         : 22        :        :                   :         : 1         :                
 VCCIO1                       : 23        : power  :                   : 3.3V    : 1         :                
 ALU_OUT_SEL_1                : 24        : output : 3.3-V LVTTL       :         : 1         : N              
-IRQ_ON                       : 25        : input  : 3.3-V LVTTL       :         : 1         : N              
-ALU_FUNC_SEL_0               : 26        : output : 3.3-V LVTTL       :         : 1         : N              
-IRQ                          : 27        : input  : 3.3-V LVTTL       :         : 1         : N              
-RUN_indicator                : 28        : output : 3.3-V LVTTL       :         : 1         : N              
+MD_BUS[5]                    : 25        : input  : 3.3-V LVTTL       :         : 1         : N              
+MD_BUS[8]                    : 26        : input  : 3.3-V LVTTL       :         : 1         : N              
+MD_CLR                       : 27        : output : 3.3-V LVTTL       :         : 1         : N              
+MD_BUS[9]                    : 28        : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : 29        : power  :                   : 3.3V    : 1         :                
-ASSERT_CONTROL               : 30        : input  : 3.3-V LVTTL       :         : 1         : N              
-not_reset                    : 31        : input  : 3.3-V LVTTL       :         : 1         : N              
-HLT_indicator                : 32        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 30        :        :                   :         : 1         :                
+GND*                         : 31        :        :                   :         : 1         :                
+GND*                         : 32        :        :                   :         : 1         :                
 GND                          : 33        : gnd    :                   :         :           :                
 GND_PLL1                     : 34        : gnd    :                   :         :           :                
 VCCD_PLL1                    : 35        : power  :                   : 1.2V    :           :                
@@ -103,71 +103,71 @@ GND_PLL1                     : 36        : gnd    :                   :         
 VCCA_PLL1                    : 37        : power  :                   : 1.2V    :           :                
 GNDA_PLL1                    : 38        : gnd    :                   :         :           :                
 GND                          : 39        : gnd    :                   :         :           :                
-clk                          : 40        : output : 3.3-V LVTTL       :         : 4         : N              
-START                        : 41        : input  : 3.3-V LVTTL       :         : 4         : N              
-STEP                         : 42        : input  : 3.3-V LVTTL       :         : 4         : N              
-IS_AUTO_INDEX                : 43        : input  : 3.3-V LVTTL       :         : 4         : N              
-MA_CLR_HI                    : 44        : output : 3.3-V LVTTL       :         : 4         : N              
-MD_BUS_SEL                   : 45        : output : 3.3-V LVTTL       :         : 4         : N              
+MD_BUS[6]                    : 40        : input  : 3.3-V LVTTL       :         : 4         : N              
+ALU_ROT_2                    : 41        : output : 3.3-V LVTTL       :         : 4         : N              
+ALU_ROT_1                    : 42        : output : 3.3-V LVTTL       :         : 4         : N              
+ADD_CARRY                    : 43        : input  : 3.3-V LVTTL       :         : 4         : N              
+ALU_FUNC_SEL_0               : 44        : output : 3.3-V LVTTL       :         : 4         : N              
+ALU_FUNC_SEL_1               : 45        : output : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : 46        : power  :                   : 3.3V    : 4         :                
-MD_BUS[2]                    : 47        : input  : 3.3-V LVTTL       :         : 4         : N              
-clk_in                       : 48        : input  : 3.3-V LVTTL       :         : 4         : N              
+LINK_COMP                    : 47        : output : 3.3-V LVTTL       :         : 4         : N              
+LINK_OUT_SEL                 : 48        : output : 3.3-V LVTTL       :         : 4         : N              
 GND                          : 49        : gnd    :                   :         :           :                
 VCCINT                       : 50        : power  :                   : 1.2V    :           :                
-MEM_READ                     : 51        : output : 3.3-V LVTTL       :         : 4         : N              
-MD_IN_SEL                    : 52        : output : 3.3-V LVTTL       :         : 4         : N              
-MA_LOAD_LO                   : 53        : output : 3.3-V LVTTL       :         : 4         : N              
+INC_CARRY                    : 51        : input  : 3.3-V LVTTL       :         : 4         : N              
+ALU_COMP                     : 52        : output : 3.3-V LVTTL       :         : 4         : N              
+ALU_CLEAR                    : 53        : output : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : 54        : power  :                   : 3.3V    : 4         :                
-ALU_OUT_SEL_0                : 55        : output : 3.3-V LVTTL       :         : 4         : N              
+LINK_LOAD                    : 55        : output : 3.3-V LVTTL       :         : 4         : N              
 GND                          : 56        : gnd    :                   :         :           :                
-MD_BUS[1]                    : 57        : input  : 3.3-V LVTTL       :         : 4         : N              
-MD_BUS[0]                    : 58        : input  : 3.3-V LVTTL       :         : 4         : N              
-MD_LOAD                      : 59        : output : 3.3-V LVTTL       :         : 4         : N              
-PC_LOAD_HI                   : 60        : output : 3.3-V LVTTL       :         : 4         : N              
+MD_BUS[7]                    : 57        : input  : 3.3-V LVTTL       :         : 4         : N              
+MEM_WRITE                    : 58        : output : 3.3-V LVTTL       :         : 4         : N              
+ALU_OUT_SEL_0                : 59        : output : 3.3-V LVTTL       :         : 4         : N              
+PC_BUS_SEL                   : 60        : output : 3.3-V LVTTL       :         : 4         : N              
 GND                          : 61        : gnd    :                   :         :           :                
 VCCINT                       : 62        : power  :                   : 1.2V    :           :                
-MD_BUS[4]                    : 63        : input  : 3.3-V LVTTL       :         : 4         : N              
+MD_BUS_SEL                   : 63        : output : 3.3-V LVTTL       :         : 4         : N              
 PC_LOAD_LO                   : 64        : output : 3.3-V LVTTL       :         : 4         : N              
-MD_BUS[10]                   : 65        : input  : 3.3-V LVTTL       :         : 4         : N              
+IS_ZERO_LAST                 : 65        : input  : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : 66        : power  :                   : 3.3V    : 4         :                
-IS_ZERO_LAST                 : 67        : input  : 3.3-V LVTTL       :         : 4         : N              
+PC_CLR_HI                    : 67        : output : 3.3-V LVTTL       :         : 4         : N              
 GND                          : 68        : gnd    :                   :         :           :                
-MA_LOAD_HI                   : 69        : output : 3.3-V LVTTL       :         : 4         : N              
-ALU_INC                      : 70        : output : 3.3-V LVTTL       :         : 4         : N              
-PC_BUS_SEL                   : 71        : output : 3.3-V LVTTL       :         : 4         : N              
-MEM_WRITE                    : 72        : output : 3.3-V LVTTL       :         : 4         : N              
-FP_ADDR_LOAD                 : 73        : input  : 3.3-V LVTTL       :         : 3         : N              
-ALU_FUNC_SEL_2               : 74        : output : 3.3-V LVTTL       :         : 3         : N              
-END_STATE                    : 75        : input  : 3.3-V LVTTL       :         : 3         : N              
+MEM_READ                     : 69        : output : 3.3-V LVTTL       :         : 4         : N              
+PC_LOAD_HI                   : 70        : output : 3.3-V LVTTL       :         : 4         : N              
+MD_LOAD                      : 71        : output : 3.3-V LVTTL       :         : 4         : N              
+MD_BUS[10]                   : 72        : input  : 3.3-V LVTTL       :         : 4         : N              
+MA_LOAD_HI                   : 73        : output : 3.3-V LVTTL       :         : 3         : N              
+ALU_INC                      : 74        : output : 3.3-V LVTTL       :         : 3         : N              
+MD_BUS[0]                    : 75        : input  : 3.3-V LVTTL       :         : 3         : N              
 ~LVDS41p/nCEO~               : 76        : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : 77        : power  :                   : 3.3V    : 3         :                
 GND                          : 78        : gnd    :                   :         :           :                
-GND*                         : 79        :        :                   :         : 3         :                
-PC_CLR_HI                    : 80        : output : 3.3-V LVTTL       :         : 3         : N              
-MD_BUS[3]                    : 81        : input  : 3.3-V LVTTL       :         : 3         : N              
+MD_IN_SEL                    : 79        : output : 3.3-V LVTTL       :         : 3         : N              
+not_reset                    : 80        : input  : 3.3-V LVTTL       :         : 3         : N              
+MD_BUS[4]                    : 81        : input  : 3.3-V LVTTL       :         : 3         : N              
 nSTATUS                      : 82        :        :                   :         : 3         :                
 CONF_DONE                    : 83        :        :                   :         : 3         :                
 MSEL1                        : 84        :        :                   :         : 3         :                
 MSEL0                        : 85        :        :                   :         : 3         :                
-LINK_OUT_SEL                 : 86        : output : 3.3-V LVTTL       :         : 3         : N              
-MD_CLR                       : 87        : output : 3.3-V LVTTL       :         : 3         : N              
+NEXT_STATE                   : 86        : input  : 3.3-V LVTTL       :         : 3         : N              
+ASSERT_CONTROL               : 87        : input  : 3.3-V LVTTL       :         : 3         : N              
 HRQ                          : 88        : input  : 3.3-V LVTTL       :         : 3         : N              
 GND+                         : 89        :        :                   :         : 3         :                
 GND+                         : 90        :        :                   :         : 3         :                
 GND+                         : 91        :        :                   :         : 3         :                
-GND*                         : 92        :        :                   :         : 3         :                
-GND*                         : 93        :        :                   :         : 3         :                
-GND*                         : 94        :        :                   :         : 3         :                
+clk_in                       : 92        : input  : 3.3-V LVTTL       :         : 3         : N              
+clk                          : 93        : output : 3.3-V LVTTL       :         : 3         : N              
+START                        : 94        : input  : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : 95        : power  :                   : 3.3V    : 3         :                
-GND*                         : 96        :        :                   :         : 3         :                
-SR_BUS_SEL                   : 97        : output : 3.3-V LVTTL       :         : 3         : N              
+FP_ADDR_LOAD                 : 96        : input  : 3.3-V LVTTL       :         : 3         : N              
+RUN_indicator                : 97        : output : 3.3-V LVTTL       :         : 3         : N              
 GND                          : 98        : gnd    :                   :         :           :                
-MA_BUS_SEL                   : 99        : output : 3.3-V LVTTL       :         : 3         : N              
-GND*                         : 100       :        :                   :         : 3         :                
-GND*                         : 101       :        :                   :         : 3         :                
+END_STATE                    : 99        : input  : 3.3-V LVTTL       :         : 3         : N              
+STEP                         : 100       : input  : 3.3-V LVTTL       :         : 3         : N              
+HLT_indicator                : 101       : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : 102       : power  :                   : 3.3V    : 3         :                
-PC_CLR_LO                    : 103       : output : 3.3-V LVTTL       :         : 3         : N              
-GND*                         : 104       :        :                   :         : 3         :                
+MD_BUS[2]                    : 103       : input  : 3.3-V LVTTL       :         : 3         : N              
+MD_BUS[1]                    : 104       : input  : 3.3-V LVTTL       :         : 3         : N              
 GND                          : 105       : gnd    :                   :         :           :                
 GND_PLL2                     : 106       : gnd    :                   :         :           :                
 VCCD_PLL2                    : 107       : power  :                   : 1.2V    :           :                
@@ -175,36 +175,36 @@ GND_PLL2                     : 108       : gnd    :                   :         
 VCCA_PLL2                    : 109       : power  :                   : 1.2V    :           :                
 GNDA_PLL2                    : 110       : gnd    :                   :         :           :                
 GND                          : 111       : gnd    :                   :         :           :                
-LINK_VALUE                   : 112       : input  : 3.3-V LVTTL       :         : 2         : N              
-FP_EXAMINE                   : 113       : input  : 3.3-V LVTTL       :         : 2         : N              
-IS_NEG                       : 114       : input  : 3.3-V LVTTL       :         : 2         : N              
-GND*                         : 115       :        :                   :         : 2         :                
+FP_EXAMINE                   : 112       : input  : 3.3-V LVTTL       :         : 2         : N              
+ALU_FUNC_SEL_2               : 113       : output : 3.3-V LVTTL       :         : 2         : N              
+FP_DEPOSIT                   : 114       : input  : 3.3-V LVTTL       :         : 2         : N              
+MD_BUS[3]                    : 115       : input  : 3.3-V LVTTL       :         : 2         : N              
 VCCIO2                       : 116       : power  :                   : 3.3V    : 2         :                
 GND                          : 117       : gnd    :                   :         :           :                
-IS_ZERO                      : 118       : input  : 3.3-V LVTTL       :         : 2         : N              
-GND*                         : 119       :        :                   :         : 2         :                
-GND*                         : 120       :        :                   :         : 2         :                
-FP_DEPOSIT                   : 121       : input  : 3.3-V LVTTL       :         : 2         : N              
-GND*                         : 122       :        :                   :         : 2         :                
+IRQ                          : 118       : input  : 3.3-V LVTTL       :         : 2         : N              
+IRQ_ON                       : 119       : input  : 3.3-V LVTTL       :         : 2         : N              
+MA_CLR_LO                    : 120       : output : 3.3-V LVTTL       :         : 2         : N              
+MA_CLR_HI                    : 121       : output : 3.3-V LVTTL       :         : 2         : N              
+IS_AUTO_INDEX                : 122       : input  : 3.3-V LVTTL       :         : 2         : N              
 GND                          : 123       : gnd    :                   :         :           :                
 VCCINT                       : 124       : power  :                   : 1.2V    :           :                
-MD_BUS[6]                    : 125       : input  : 3.3-V LVTTL       :         : 2         : N              
-MD_BUS[9]                    : 126       : input  : 3.3-V LVTTL       :         : 2         : N              
+MA_LOAD_LO                   : 125       : output : 3.3-V LVTTL       :         : 2         : N              
+AC_LOAD                      : 126       : output : 3.3-V LVTTL       :         : 2         : N              
 VCCIO2                       : 127       : power  :                   : 3.3V    : 2         :                
 GND                          : 128       : gnd    :                   :         :           :                
-MD_BUS[5]                    : 129       : input  : 3.3-V LVTTL       :         : 2         : N              
+MD_BUS[11]                   : 129       : input  : 3.3-V LVTTL       :         : 2         : N              
 GND                          : 130       : gnd    :                   :         :           :                
 VCCINT                       : 131       : power  :                   : 1.2V    :           :                
-ALU_CLEAR                    : 132       : output : 3.3-V LVTTL       :         : 2         : N              
-ADD_CARRY                    : 133       : input  : 3.3-V LVTTL       :         : 2         : N              
-INC_CARRY                    : 134       : input  : 3.3-V LVTTL       :         : 2         : N              
-MD_BUS[8]                    : 135       : input  : 3.3-V LVTTL       :         : 2         : N              
-MD_BUS[7]                    : 136       : input  : 3.3-V LVTTL       :         : 2         : N              
-LINK_COMP                    : 137       : output : 3.3-V LVTTL       :         : 2         : N              
+ALU_OUT_SEL_2                : 132       : output : 3.3-V LVTTL       :         : 2         : N              
+LINK_VALUE                   : 133       : input  : 3.3-V LVTTL       :         : 2         : N              
+PC_CLR_LO                    : 134       : output : 3.3-V LVTTL       :         : 2         : N              
+SR_BUS_SEL                   : 135       : output : 3.3-V LVTTL       :         : 2         : N              
+MA_BUS_SEL                   : 136       : output : 3.3-V LVTTL       :         : 2         : N              
+IS_NEG                       : 137       : input  : 3.3-V LVTTL       :         : 2         : N              
 VCCIO2                       : 138       : power  :                   : 3.3V    : 2         :                
-ALU_ROT_1                    : 139       : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 139       :        :                   :         : 2         :                
 GND                          : 140       : gnd    :                   :         :           :                
-ALU_OUT_SEL_2                : 141       : output : 3.3-V LVTTL       :         : 2         : N              
-ALU_COMP                     : 142       : output : 3.3-V LVTTL       :         : 2         : N              
-NEXT_STATE                   : 143       : input  : 3.3-V LVTTL       :         : 2         : N              
-ALU_ROT_2                    : 144       : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 141       :        :                   :         : 2         :                
+IS_ZERO                      : 142       : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 143       :        :                   :         : 2         :                
+GND*                         : 144       :        :                   :         : 2         :                

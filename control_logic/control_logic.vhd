@@ -133,13 +133,28 @@ architecture rtl of control_logic is
 	
 begin
 	
+	-- Latest news in control_logic land...
+	--
+	-- What we would like, is output buffers for all of the control signals, so that they can all be disengaged
+	-- when an IO brings ASSERT_CONTROL high. As we can't have that down here in VHDL land, we will need a mux external
+	-- to the control subsystem, which can switch between using the outputs of the control subsystem or a set of control
+	-- signal inputs from each IO device. That sounds like a handful, and would need external drivers to multiplex
+	-- the IO devices, or many, many pins we can't spare on the dev board. Soooo, might not implement that functionality
+	-- in the FPGA.
+	
+	-- STILL TO DO --
+	--
+	-- Currently, logic is implemented in here, and in the clock_generator such that if you bring any of the FP_ inputs
+	-- high for one clock cycle when the RUN_INDICATOR is low, the control system will step through *the current instruction
+	-- offered up by the MD bus*. Need to implement logic to sequence appropriate micro-operations for each FP_ instruction.
+	
 	NEXT_STATE <= (s_states(0) and t_states(4) and (OPR_INS or BASIC_INS)) or (s_states(1) and t_states(3) and IND) or (s_states(2) and t_states(5) and BASIC_INS) or (s_states(3) and t_states(2) and IRQ);
 	END_STATE <= (s_states(0) and t_states(4) and (OPR_INS and (not IRQ))) or (s_states(2) and t_states(5) and BASIC_INS and (not IRQ)) or (s_states(3) and t_states(2) and IRQ);
 	not_END_STATE <= not END_STATE;
 	not_ASSERT_CONTROL <= not ASSERT_CONTROL;
 	
-	NEXT_STATE_out <= (NEXT_STATE or NEXT_STATE_in) and (not_ASSERT_CONTROL);
-	END_STATE_out <= (END_STATE or END_STATE_in) and (not_ASSERT_CONTROL);
+	NEXT_STATE_out <= NEXT_STATE_in or (NEXT_STATE and not_ASSERT_CONTROL);
+	END_STATE_out <= END_STATE_in or (END_STATE and not_ASSERT_CONTROL);
 	LOAD(0) <= (OPR_INS and IRQ and NEXT_STATE and not_ASSERT_CONTROL and not_END_STATE);
 	LOAD(1) <= ((OPR_INS and IRQ and NEXT_STATE and not_END_STATE) or (BASIC_INS and (not IR(3)) and NEXT_STATE and not_END_STATE)) and not_ASSERT_CONTROL;
 	
@@ -193,21 +208,6 @@ begin
 	ROTATE_TWICE <= RTR or RTL;
 	AC_MOD <= CLA_MASTER or CMA or IAC or OSR;
 	LINK_MOD <= CLL or CML;
-	
-	-- I think the use of 'ZERO', 'IS_ZERO' and 'Z_BIT' has got a bit confused below (and above, perhaps...).
-	-- 'IS_ZERO' should turn up in the OPR instructions that skip dependent on a zero value in ac or link bit, etc.
-	-- 'Z_BIT' should turn up in memory accessing instructions as it refers to whether or not the current operand address points
-	-- to the zero page or the current page.
-	-- In my paper notes in the section 'Bringing together the E state micro-ops', I use the label 'ZERO' to signal the zero page, ie,
-	-- the 'Z_BIT' here.
-	--
-	-- NEW NOTE --
-	-- I think I have fixed this issue below now, but need to check it over above again, and also pay EXTRA ATTENTION
-	-- to this bit as I finish off summing the control states below...!
-	--
-	-- NEWER NOTE --
-	-- I now need to go through and correct the IR() bit indices, as they have ended up the wrong way round seemingly...?!
-	-- They need to be numbered from [11............0], wheras currently they are numbered [0.............11].
 	
 	PC_BUS_SEL <= (s_states(0) and (t_states(0) or t_states(1))) or (s_states(0) and t_states(3) and SKIP_MASTER) or (s_states(2) and ((t_states(1) and JMS) or (t_states(5) and ISZ)));
 	PC_LOAD_HI <= (s_states(0) and (t_states(1) or (t_states(3) and SKIP_MASTER))) or (s_states(2) and ((t_states(0) and JMP and IND) or (t_states(3) and JMS) or (t_states(5) and ISZ and IS_ZERO_LAST))) or (s_states(3) and t_states(2) and IRQ);

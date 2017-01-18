@@ -52,6 +52,7 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulati
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VHDL_FILE ../clock_generator/front_panel_latches.vhd
 set_global_assignment -name VHDL_FILE ../alu_xor/alu_xor.vhd
 set_global_assignment -name VHDL_FILE ../alu_shifter/alu_shifter.vhd
 set_global_assignment -name VHDL_FILE ../alu_output_mux/alu_output_mux.vhd

@@ -17,4 +17,5 @@ vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/12_bit_register/regis
 vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/control_logic/control_logic.vhd}
 vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/state_generator.vhd}
 vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/control_subsystem/control_subsystem.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/clock_generator/front_panel_latches.vhd}
 

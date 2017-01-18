@@ -5,6 +5,7 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/clock_generator/front_panel_latches.vhd}
 vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_xor/alu_xor.vhd}
 vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_shifter/alu_shifter.vhd}
 vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_inc/alu_inc.vhd}

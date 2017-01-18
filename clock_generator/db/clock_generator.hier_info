@@ -4,13 +4,21 @@ STEP => OR_gate:or_2.inputB
 clk_in => AND_gate:and_1.inputB
 END_STATE => AND_3_gate:and_0.inputB
 END_STATE => AND_gate:and_2.inputA
+END_STATE => front_panel_latches:fp_latch_bank.END_STATE
 clk <= AND_gate:and_1.output
 not_reset => ms_jk_ff:ms_jk_ff_0.not_reset
 not_reset => ms_jk_ff:ms_jk_ff_1.not_reset
 not_reset => ms_jk_ff:ms_jk_ff_2.not_reset
+not_reset => front_panel_latches:fp_latch_bank.not_reset
 HLT_flag => ms_jk_ff:ms_jk_ff_1.j
 HLT_INDICATOR <= ms_jk_ff:ms_jk_ff_2.q
 RUN_INDICATOR <= ms_jk_ff:ms_jk_ff_0.q
+FP_ADDR_LOAD_in => front_panel_latches:fp_latch_bank.FP_ADDR_LOAD_momentary
+FP_ADDR_LOAD_out <= front_panel_latches:fp_latch_bank.FP_ADDR_LOAD_latched
+FP_EXAMINE_in => front_panel_latches:fp_latch_bank.FP_EXAMINE_momentary
+FP_EXAMINE_out <= front_panel_latches:fp_latch_bank.FP_EXAMINE_latched
+FP_DEPOSIT_in => front_panel_latches:fp_latch_bank.FP_DEPOST_momentary
+FP_DEPOSIT_out <= front_panel_latches:fp_latch_bank.FP_DEPOSIT_latched
 
 
 |clock_generator|AND_3_gate:and_0
@@ -234,6 +242,260 @@ output <= output.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |clock_generator|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank
+clk => AND_3_gate:and_3_0.inputB
+clk => AND_3_gate:and_3_1.inputB
+clk => AND_3_gate:and_3_2.inputB
+not_reset => ms_jk_ff:ms_jk_ff_0.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_1.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_2.not_reset
+END_STATE => AND_3_gate:and_3_0.inputA
+END_STATE => AND_3_gate:and_3_1.inputA
+END_STATE => AND_3_gate:and_3_2.inputA
+FP_CMD <= OR_3_gate:or_3_0.output
+FP_ADDR_LOAD_momentary => OR_gate:or_0.inputA
+FP_EXAMINE_momentary => OR_gate:or_1.inputA
+FP_DEPOST_momentary => OR_gate:or_2.inputA
+FP_ADDR_LOAD_latched <= ms_jk_ff:ms_jk_ff_0.q
+FP_EXAMINE_latched <= ms_jk_ff:ms_jk_ff_1.q
+FP_DEPOSIT_latched <= ms_jk_ff:ms_jk_ff_2.q
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|OR_gate:or_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|OR_gate:or_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|OR_gate:or_2
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|OR_3_gate:or_3_0
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|AND_3_gate:and_3_0
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|AND_3_gate:and_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|AND_3_gate:and_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_0
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_1
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_2
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_6
 inputA => output.IN0
 inputB => output.IN1
 output <= output.DB_MAX_OUTPUT_PORT_TYPE

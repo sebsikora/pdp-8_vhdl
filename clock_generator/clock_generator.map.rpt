@@ -1,5 +1,5 @@
 Analysis & Synthesis report for clock_generator
-Tue Jan 17 23:41:45 2017
+Wed Jan 18 16:12:50 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -15,12 +15,14 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Logic Cells Representing Combinational Loops
   9. General Register Statistics
- 10. Port Connectivity Checks: "ms_jk_ff:ms_jk_ff_2"
- 11. Port Connectivity Checks: "ms_jk_ff:ms_jk_ff_1"
- 12. Port Connectivity Checks: "ms_jk_ff:ms_jk_ff_0"
- 13. Port Connectivity Checks: "OR_gate:or_1"
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+ 10. Port Connectivity Checks: "front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_2"
+ 11. Port Connectivity Checks: "front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_1"
+ 12. Port Connectivity Checks: "front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_0"
+ 13. Port Connectivity Checks: "ms_jk_ff:ms_jk_ff_2"
+ 14. Port Connectivity Checks: "ms_jk_ff:ms_jk_ff_1"
+ 15. Port Connectivity Checks: "ms_jk_ff:ms_jk_ff_0"
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -46,16 +48,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jan 17 23:41:45 2017           ;
+; Analysis & Synthesis Status        ; Successful - Wed Jan 18 16:12:50 2017           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; clock_generator                                 ;
 ; Top-level Entity Name              ; clock_generator                                 ;
 ; Family                             ; Cyclone IV GX                                   ;
-; Total logic elements               ; 13                                              ;
-;     Total combinational functions  ; 13                                              ;
+; Total logic elements               ; 23                                              ;
+;     Total combinational functions  ; 23                                              ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 9                                               ;
+; Total pins                         ; 15                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -164,66 +166,83 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                     ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                              ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
-; ../ms_jk_ff/ms_jk_ff.vhd         ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd               ;         ;
-; ../ms_jk_ff/basic_gates.vhd      ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd            ;         ;
-; clock_generator.vhd              ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/clock_generator/clock_generator.vhd ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                  ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+---------+
+; ../ms_jk_ff/ms_jk_ff.vhd         ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd                   ;         ;
+; ../ms_jk_ff/basic_gates.vhd      ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd                ;         ;
+; front_panel_latches.vhd          ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/clock_generator/front_panel_latches.vhd ;         ;
+; clock_generator.vhd              ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/clock_generator/clock_generator.vhd     ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                              ;
-+--------------------------+-----------------------------------------------+
-; Resource                 ; Usage                                         ;
-+--------------------------+-----------------------------------------------+
-; I/O pins                 ; 9                                             ;
-; DSP block 9-bit elements ; 0                                             ;
-; Maximum fan-out node     ; ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~5 ;
-; Maximum fan-out          ; 7                                             ;
-; Total fan-out            ; 57                                            ;
-; Average fan-out          ; 1.84                                          ;
-+--------------------------+-----------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                              ;
++--------------------------+---------------------------------------------------------------+
+; Resource                 ; Usage                                                         ;
++--------------------------+---------------------------------------------------------------+
+; I/O pins                 ; 15                                                            ;
+; DSP block 9-bit elements ; 0                                                             ;
+; Maximum fan-out node     ; front_panel_latches:fp_latch_bank|AND_3_gate:and_3_0|output~0 ;
+; Maximum fan-out          ; 6                                                             ;
+; Total fan-out            ; 99                                                            ;
+; Average fan-out          ; 1.87                                                          ;
++--------------------------+---------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                             ;
-+------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------+--------------+
-; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                       ; Library Name ;
-+------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------+--------------+
-; |clock_generator             ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 9    ; 0            ; |clock_generator                                          ; work         ;
-;    |AND_3_gate:and_0|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|AND_3_gate:and_0                         ; work         ;
-;    |AND_gate:and_1|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|AND_gate:and_1                           ; work         ;
-;    |ms_jk_ff:ms_jk_ff_0|     ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|ms_jk_ff:ms_jk_ff_0                      ; work         ;
-;       |NAND_gate:nand_1|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1     ; work         ;
-;       |NAND_gate:nand_5|     ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5     ; work         ;
-;    |ms_jk_ff:ms_jk_ff_1|     ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|ms_jk_ff:ms_jk_ff_1                      ; work         ;
-;       |NAND_gate:nand_1|     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1     ; work         ;
-;       |NAND_gate:nand_5|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5     ; work         ;
-;    |ms_jk_ff:ms_jk_ff_2|     ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|ms_jk_ff:ms_jk_ff_2                      ; work         ;
-;       |NAND_3_gate:nand_3_1| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_1 ; work         ;
-;       |NAND_gate:nand_1|     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1     ; work         ;
-;       |NAND_gate:nand_5|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5     ; work         ;
-+------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                     ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                     ; Library Name ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------+--------------+
+; |clock_generator                       ; 23 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 15   ; 0            ; |clock_generator                                                                        ; work         ;
+;    |AND_gate:and_1|                    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|AND_gate:and_1                                                         ; work         ;
+;    |front_panel_latches:fp_latch_bank| ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|front_panel_latches:fp_latch_bank                                      ; work         ;
+;       |AND_3_gate:and_3_0|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|front_panel_latches:fp_latch_bank|AND_3_gate:and_3_0                   ; work         ;
+;       |ms_jk_ff:ms_jk_ff_0|            ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_0                  ; work         ;
+;          |NAND_gate:nand_1|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1 ; work         ;
+;          |NAND_gate:nand_5|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5 ; work         ;
+;       |ms_jk_ff:ms_jk_ff_1|            ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_1                  ; work         ;
+;          |NAND_gate:nand_1|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1 ; work         ;
+;          |NAND_gate:nand_5|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5 ; work         ;
+;       |ms_jk_ff:ms_jk_ff_2|            ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_2                  ; work         ;
+;          |NAND_gate:nand_1|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1 ; work         ;
+;          |NAND_gate:nand_5|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5 ; work         ;
+;    |ms_jk_ff:ms_jk_ff_0|               ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|ms_jk_ff:ms_jk_ff_0                                                    ; work         ;
+;       |NAND_gate:nand_1|               ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1                                   ; work         ;
+;       |NAND_gate:nand_5|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5                                   ; work         ;
+;    |ms_jk_ff:ms_jk_ff_1|               ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|ms_jk_ff:ms_jk_ff_1                                                    ; work         ;
+;       |NAND_gate:nand_1|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1                                   ; work         ;
+;       |NAND_gate:nand_5|               ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5                                   ; work         ;
+;    |ms_jk_ff:ms_jk_ff_2|               ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|ms_jk_ff:ms_jk_ff_2                                                    ; work         ;
+;       |NAND_3_gate:nand_3_1|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_1                               ; work         ;
+;       |NAND_gate:nand_1|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1                                   ; work         ;
+;       |NAND_gate:nand_5|               ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |clock_generator|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5                                   ; work         ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------+
-; Logic Cells Representing Combinational Loops               ;
-+--------------------------------------------------------+---+
-; Logic Cell Name                                        ;   ;
-+--------------------------------------------------------+---+
-; ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~0          ;   ;
-; ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~0          ;   ;
-; ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~0          ;   ;
-; ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~0          ;   ;
-; ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1|output~0          ;   ;
-; ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1|output~0          ;   ;
-; Number of logic cells representing combinational loops ; 6 ;
-+--------------------------------------------------------+---+
++--------------------------------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops                                         ;
++---------------------------------------------------------------------------------+----+
+; Logic Cell Name                                                                 ;    ;
++---------------------------------------------------------------------------------+----+
+; ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~0                                   ;    ;
+; front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~0 ;    ;
+; front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~0 ;    ;
+; front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~0 ;    ;
+; ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~0                                   ;    ;
+; ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~0                                   ;    ;
+; ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~0                                   ;    ;
+; front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~0 ;    ;
+; front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1|output~0 ;    ;
+; front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1|output~0 ;    ;
+; ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1|output~0                                   ;    ;
+; ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1|output~0                                   ;    ;
+; Number of logic cells representing combinational loops                          ; 12 ;
++---------------------------------------------------------------------------------+----+
 Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -240,6 +259,39 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_2"                               ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; j     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; k     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; not_q ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_1"                               ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; j     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; k     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; not_q ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "front_panel_latches:fp_latch_bank|ms_jk_ff:ms_jk_ff_0"                               ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; j     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; k     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; not_q ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------+
@@ -271,15 +323,6 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+------------------------------------------+
-; Port Connectivity Checks: "OR_gate:or_1" ;
-+--------+-------+----------+--------------+
-; Port   ; Type  ; Severity ; Details      ;
-+--------+-------+----------+--------------+
-; inputb ; Input ; Info     ; Stuck at GND ;
-+--------+-------+----------+--------------+
-
-
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -295,7 +338,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Jan 17 23:41:42 2017
+    Info: Processing started: Wed Jan 18 16:12:48 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off clock_generator -c clock_generator
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd
@@ -329,26 +372,29 @@ Info (12021): Found 2 design units, including 1 entities, in source file clock_g
     Info (12022): Found design unit 1: clock_generator-rtl
     Info (12023): Found entity 1: clock_generator
 Info (12127): Elaborating entity "clock_generator" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at clock_generator.vhd(56): object "ff_not_output_0" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at clock_generator.vhd(58): object "ff_not_output_1" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at clock_generator.vhd(60): object "ff_not_output_2" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at clock_generator.vhd(69): object "ff_not_output_0" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at clock_generator.vhd(71): object "ff_not_output_1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at clock_generator.vhd(73): object "ff_not_output_2" assigned a value but never read
 Info (12128): Elaborating entity "AND_3_gate" for hierarchy "AND_3_gate:and_0"
 Info (12128): Elaborating entity "AND_gate" for hierarchy "AND_gate:and_1"
 Info (12128): Elaborating entity "OR_gate" for hierarchy "OR_gate:or_0"
 Info (12128): Elaborating entity "ms_jk_ff" for hierarchy "ms_jk_ff:ms_jk_ff_0"
 Info (12128): Elaborating entity "NAND_3_gate" for hierarchy "ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_1"
 Info (12128): Elaborating entity "NAND_gate" for hierarchy "ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1"
+Info (12128): Elaborating entity "front_panel_latches" for hierarchy "front_panel_latches:fp_latch_bank"
+Warning (10036): Verilog HDL or VHDL warning at front_panel_latches.vhd(60): object "not_q" assigned a value but never read
+Info (12128): Elaborating entity "OR_3_gate" for hierarchy "front_panel_latches:fp_latch_bank|OR_3_gate:or_3_0"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 22 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 13 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 770 megabytes
-    Info: Processing ended: Tue Jan 17 23:41:45 2017
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+Info (21057): Implemented 38 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
+    Info (21059): Implemented 6 output pins
+    Info (21061): Implemented 23 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 787 megabytes
+    Info: Processing ended: Wed Jan 18 16:12:50 2017
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
