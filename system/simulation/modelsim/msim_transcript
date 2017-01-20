@@ -1,0 +1,446 @@
+# do system_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /home/sebsikora/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /home/sebsikora/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/t_state_generator.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity t_state_generator
+# -- Compiling architecture rtl of t_state_generator
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/state_generator.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity state_generator
+# -- Compiling architecture rtl of state_generator
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/s_state_generator.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity s_state_generator
+# -- Compiling architecture rtl of s_state_generator
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/decoder_3_to_8.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity decoder_3_to_8
+# -- Compiling architecture rtl of decoder_3_to_8
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/counter_3_bit_with_load.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity counter_3_bit_with_load
+# -- Compiling architecture rtl of counter_3_bit_with_load
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/counter_3_bit.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity counter_3_bit
+# -- Compiling architecture rtl of counter_3_bit
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/register_output_mux/register_output_mux.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity register_output_mux
+# -- Compiling architecture behavior of register_output_mux
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/control_subsystem/control_subsystem.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity control_subsystem
+# -- Compiling architecture rtl of control_subsystem
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/control_logic/control_logic.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity control_logic
+# -- Compiling architecture rtl of control_logic
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/clock_generator/front_panel_latches.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity front_panel_latches
+# -- Compiling architecture rtl of front_panel_latches
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/clock_generator/clock_generator.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity clock_generator
+# -- Compiling architecture rtl of clock_generator
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_xor/alu_xor.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_xor
+# -- Compiling architecture rtl of alu_xor
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_subsystem/alu_subsystem.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_subsystem
+# -- Compiling architecture rtl of alu_subsystem
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_shifter/alu_shifter.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_shifter
+# -- Compiling architecture rtl of alu_shifter
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_main/nand_1_bit_full_adder.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity nand_1_bit_full_adder
+# -- Compiling architecture rtl of nand_1_bit_full_adder
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_main/alu_or.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_or
+# -- Compiling architecture rtl of alu_or
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_main/alu_mux.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_mux
+# -- Compiling architecture rtl of alu_mux
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_main/alu_main.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_main
+# -- Compiling architecture rtl of alu_main
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_main/alu_and.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_and
+# -- Compiling architecture rtl of alu_and
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_main/alu_add.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_add
+# -- Compiling architecture rtl of alu_add
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_inc/alu_inc.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_incrementer
+# -- Compiling architecture rtl of alu_incrementer
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_comparator/alu_comparator.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_comparator
+# -- Compiling architecture rtl of alu_comparator
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_clear/alu_clear.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_clr
+# -- Compiling architecture rtl of alu_clr
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/address_comparator/address_comparator.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity address_comparator
+# -- Compiling architecture rtl of address_comparator
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/12_bit_register/register_12_bit_split.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity register_12_bit_split
+# -- Compiling architecture rtl of register_12_bit_split
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/12_bit_register/register_12_bit.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity register_12_bit
+# -- Compiling architecture rtl of register_12_bit
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/12_bit_register/register_5_bit.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity register_5_bit
+# -- Compiling architecture rtl of register_5_bit
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/12_bit_register/register_1_bit.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity register_1_bit
+# -- Compiling architecture rtl of register_1_bit
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/register_array/register_array.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity register_array
+# -- Compiling architecture rtl of register_array
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/register_array/md_input_mux.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity md_input_mux
+# -- Compiling architecture behavior of md_input_mux
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ms_jk_ff
+# -- Compiling architecture gates of ms_jk_ff
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity NOT_gate
+# -- Compiling architecture rtl of NOT_gate
+# -- Compiling entity NAND_3_gate
+# -- Compiling architecture rtl of NAND_3_gate
+# -- Compiling entity NAND_gate
+# -- Compiling architecture rtl of NAND_gate
+# -- Compiling entity AND_gate
+# -- Compiling architecture rtl of AND_gate
+# -- Compiling entity AND_3_gate
+# -- Compiling architecture rtl of AND_3_gate
+# -- Compiling entity OR_5_gate
+# -- Compiling architecture rtl of OR_5_gate
+# -- Compiling entity OR_4_gate
+# -- Compiling architecture rtl of OR_4_gate
+# -- Compiling entity OR_3_gate
+# -- Compiling architecture rtl of OR_3_gate
+# -- Compiling entity OR_gate
+# -- Compiling architecture rtl of OR_gate
+# -- Compiling entity XOR_gate
+# -- Compiling architecture rtl of XOR_gate
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/top_level/top_level.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity top_level
+# -- Compiling architecture rtl of top_level
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/memory_4k/memory_4k.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity memory_4k
+# -- Compiling architecture SYN of memory_4k
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/system/system.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity system
+# -- Compiling architecture rtl of system
+# 
+vsim -voptargs=+acc work.memory_4k
+# vsim -voptargs=+acc work.memory_4k 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.memory_4k(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+do /home/sebsikora/altera/projects/pdp-8/system/simulation/modelsim/mem_4k_testwave.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# 1
+# 1
+# 1
+wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 3000ns sim:/memory_4k/addressstall_a
+add wave  \
+sim:/memory_4k/q
+wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 200ns Edit:/memory_4k/clken
+wave modify -driver freeze -pattern constant -value 1 -starttime 200ns -endtime 400ns Edit:/memory_4k/clken
+wave modify -driver freeze -pattern constant -value 1 -starttime 200ns -endtime 400ns Edit:/memory_4k/addressstall_a
+wave modify -driver freeze -pattern clock -initialvalue 0 -period 200ns -dutycycle 50 -starttime 0ns -endtime 3000ns Edit:/memory_4k/clock
+run
+run
+run
+run
+wave modify -driver freeze -pattern constant -value 111111111111 -range 11 0 -starttime 800ns -endtime 1200ns Edit:/memory_4k/data
+run
+run
+run
+run
+run
+run
+wave modify -driver freeze -pattern constant -value 0 -starttime 1400ns -endtime 1800ns Edit:/memory_4k/clken
+wave modify -driver freeze -pattern constant -value 1 -starttime 1000ns -endtime 1200ns Edit:/memory_4k/addressstall_a
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+wave modify -driver freeze -pattern constant -value 0 -starttime 800ns -endtime 1000ns Edit:/memory_4k/clken
+wave modify -driver freeze -pattern constant -value 0 -starttime 800ns -endtime 1000ns Edit:/memory_4k/wren
+wave modify -driver freeze -pattern constant -value 1 -starttime 1000ns -endtime 1200ns Edit:/memory_4k/wren
+wave modify -driver freeze -pattern constant -value 1 -starttime 1000ns -endtime 1200ns Edit:/memory_4k/clken
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+wave modify -driver freeze -pattern constant -value 1 -starttime 800ns -endtime 1000ns Edit:/memory_4k/clken
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+wave modify -driver freeze -pattern constant -value 1 -starttime 0ns -endtime 200ns Edit:/memory_4k/clken
+run
+run
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+wave modify -driver freeze -pattern constant -value 1 -starttime 800ns -endtime 1000ns Edit:/memory_4k/wren
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+wave modify -driver freeze -pattern constant -value 0 -starttime 200ns -endtime 400ns Edit:/memory_4k/clken
+wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 400ns Edit:/memory_4k/addressstall_a
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+wave modify -driver freeze -pattern constant -value 0 -starttime 1000ns -endtime 1200ns Edit:/memory_4k/wren
+wave modify -driver freeze -pattern constant -value 0 -starttime 1000ns -endtime 1200ns Edit:/memory_4k/clken
+wave modify -driver freeze -pattern constant -value 0 -starttime 1000ns -endtime 1200ns Edit:/memory_4k/addressstall_a
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/system/simulation/modelsim/mem_4k_test_wave_4.do
+wave editwrite -file /home/sebsikora/altera/projects/pdp-8/system/simulation/modelsim/mem_4k_test_wave_4.do -append

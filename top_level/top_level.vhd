@@ -7,6 +7,7 @@ entity top_level is
 			 mem_addr_bus_out:							out std_logic_vector(11 downto 0);
 			 not_reset:										in std_logic;
 			 clk_in:											in std_logic;
+			 clk_out:										out std_logic;
 			 START:											in std_logic;
 			 STEP:											in std_logic;
 			 NEXT_STATE:									in std_logic;
@@ -200,6 +201,8 @@ end component;
 		signal MEM_WRITE:									std_logic;
 		
 	begin
+		
+		clk_out <= clk;
 		
 		register_array_0:		register_array port map ( top_bus => top_bus,
 																	  ALU_link_output => ALU_link_output,

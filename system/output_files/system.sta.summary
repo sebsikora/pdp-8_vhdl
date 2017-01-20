@@ -1,0 +1,117 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'clk_in'
+Slack : -20.604
+TNS   : -1160.578
+
+Type  : Slow Model Setup 'FP_EXAMINE'
+Slack : -8.262
+TNS   : -8.262
+
+Type  : Slow Model Setup 'FP_ADDR_LOAD'
+Slack : -7.987
+TNS   : -7.987
+
+Type  : Slow Model Setup 'FP_DEPOSIT'
+Slack : -7.665
+TNS   : -7.665
+
+Type  : Slow Model Hold 'clk_in'
+Slack : -0.748
+TNS   : -2.117
+
+Type  : Slow Model Hold 'FP_DEPOSIT'
+Slack : 0.973
+TNS   : 0.000
+
+Type  : Slow Model Hold 'FP_EXAMINE'
+Slack : 1.003
+TNS   : 0.000
+
+Type  : Slow Model Hold 'FP_ADDR_LOAD'
+Slack : 1.006
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'clk_in'
+Slack : -17.729
+TNS   : -26.991
+
+Type  : Slow Model Removal 'clk_in'
+Slack : -1.102
+TNS   : -2.040
+
+Type  : Slow Model Minimum Pulse Width 'clk_in'
+Slack : -2.064
+TNS   : -694.973
+
+Type  : Slow Model Minimum Pulse Width 'FP_ADDR_LOAD'
+Slack : -1.631
+TNS   : -1.631
+
+Type  : Slow Model Minimum Pulse Width 'FP_DEPOSIT'
+Slack : -1.631
+TNS   : -1.631
+
+Type  : Slow Model Minimum Pulse Width 'FP_EXAMINE'
+Slack : -1.631
+TNS   : -1.631
+
+Type  : Fast Model Setup 'clk_in'
+Slack : -6.217
+TNS   : -305.706
+
+Type  : Fast Model Setup 'FP_EXAMINE'
+Slack : -2.092
+TNS   : -2.092
+
+Type  : Fast Model Setup 'FP_ADDR_LOAD'
+Slack : -2.008
+TNS   : -2.008
+
+Type  : Fast Model Setup 'FP_DEPOSIT'
+Slack : -1.876
+TNS   : -1.876
+
+Type  : Fast Model Hold 'clk_in'
+Slack : -0.690
+TNS   : -10.684
+
+Type  : Fast Model Hold 'FP_DEPOSIT'
+Slack : 0.313
+TNS   : 0.000
+
+Type  : Fast Model Hold 'FP_ADDR_LOAD'
+Slack : 0.330
+TNS   : 0.000
+
+Type  : Fast Model Hold 'FP_EXAMINE'
+Slack : 0.331
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'clk_in'
+Slack : -5.556
+TNS   : -8.290
+
+Type  : Fast Model Removal 'clk_in'
+Slack : -0.373
+TNS   : -0.632
+
+Type  : Fast Model Minimum Pulse Width 'clk_in'
+Slack : -2.000
+TNS   : -673.222
+
+Type  : Fast Model Minimum Pulse Width 'FP_ADDR_LOAD'
+Slack : -1.380
+TNS   : -1.380
+
+Type  : Fast Model Minimum Pulse Width 'FP_DEPOSIT'
+Slack : -1.380
+TNS   : -1.380
+
+Type  : Fast Model Minimum Pulse Width 'FP_EXAMINE'
+Slack : -1.380
+TNS   : -1.380
+
+------------------------------------------------------------
