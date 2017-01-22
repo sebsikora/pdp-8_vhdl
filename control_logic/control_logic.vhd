@@ -134,21 +134,6 @@ architecture rtl of control_logic is
 	
 begin
 	
-	-- Latest news in control_logic land...
-	--
-	-- What we would like, is output buffers for all of the control signals, so that they can all be disengaged
-	-- when an IO brings ASSERT_CONTROL high. As we can't have that down here in VHDL land, we will need a mux external
-	-- to the control subsystem, which can switch between using the outputs of the control subsystem or a set of control
-	-- signal inputs from each IO device. That sounds like a handful, and would need external drivers to multiplex
-	-- the IO devices, or many, many pins we can't spare on the dev board. Soooo, might not implement that functionality
-	-- in the FPGA.
-	
-	-- STILL TO DO --
-	--
-	-- Currently, logic is implemented in here, and in the clock_generator such that if you bring any of the FP_ inputs
-	-- high for one clock cycle when the RUN_INDICATOR is low, the control system will step through *the current instruction
-	-- offered up by the MD bus*. Need to implement logic to sequence appropriate micro-operations for each FP_ instruction.
-	
 	FP_CMD <= FP_ADDR_LOAD or FP_EXAMINE or FP_DEPOSIT;
 	
 	NEXT_STATE <= (s_states(0) and ((t_states(2) and FP_CMD) or (t_states(4) and (OPR_INS or BASIC_INS)))) or (s_states(1) and t_states(3) and IND) or (s_states(2) and t_states(5) and BASIC_INS) or (s_states(3) and t_states(2) and IRQ);
@@ -236,7 +221,6 @@ begin
 	ALU_FUNC_SEL_0 <= s_states(2) and t_states(3) and ANDD;
 	ALU_FUNC_SEL_1 <= s_states(2) and t_states(3) and TAD;
 	ALU_FUNC_SEL_2 <= s_states(0) and t_states(3) and OSR;
-	--ALU_OUT_SEL_0 <= (s_states(0) and (t_states(0) or t_states(1) or t_states(2))) or (s_states(1) and (t_states(0) or (t_states(3) and IS_AUTO_INDEX))) or (s_states(2) and (t_states(0) or (t_states(1) and JMS) or (t_states(3) and (ANDD or TAD)) or (t_states(4) and ISZ) or (t_states(5) and ISZ and IS_ZERO_LAST))) or (s_states(3) and ((t_states(0) and IRQ) or (t_states(2) and IRQ)));
 	ALU_OUT_SEL_0 <= (s_states(0) and (t_states(0) or (t_states(1) and (not FP_EXAMINE)) or (t_states(2) and ((not FP_CMD) or FP_DEPOSIT)))) or (s_states(1) and (t_states(0) or (t_states(3) and IS_AUTO_INDEX))) or (s_states(2) and (t_states(0) or (t_states(1) and JMS) or (t_states(4) and ISZ) or (t_states(5) and ISZ and IS_ZERO_LAST))) or (s_states(3) and ((t_states(0) and IRQ) or (t_states(2) and IRQ)));
 	ALU_OUT_SEL_1 <= (s_states(0) and t_states(3) and OSR) or (s_states(2) and t_states(3) and (ANDD or TAD));
 	ALU_OUT_SEL_2 <= (s_states(0) and ((t_states(3) and (AC_MOD or ROTATE_MASTER)) or (t_states(4) and ROTATE_TWICE)));

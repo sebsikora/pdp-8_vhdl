@@ -1,5 +1,5 @@
 Assembler report for system
-Sun Jan 22 20:01:04 2017
+Sun Jan 22 22:16:53 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -38,11 +38,11 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Jan 22 20:01:04 2017 ;
+; Assembler Status      ; Successful - Sun Jan 22 22:16:53 2017 ;
 ; Revision Name         ; system                                ;
 ; Top-level Entity Name ; system                                ;
 ; Family                ; Cyclone II                            ;
-; Device                ; EP2C5AT144A7                          ;
+; Device                ; EP2C5T144C6                           ;
 +-----------------------+---------------------------------------+
 
 
@@ -93,9 +93,9 @@ applicable agreement for further details.
 +----------------+---------------------+
 ; Option         ; Setting             ;
 +----------------+---------------------+
-; Device         ; EP2C5AT144A7        ;
-; JTAG usercode  ; 0x000EFBAF          ;
-; Checksum       ; 0x000EFBAF          ;
+; Device         ; EP2C5T144C6         ;
+; JTAG usercode  ; 0x000ECBF4          ;
+; Checksum       ; 0x000ECBF4          ;
 +----------------+---------------------+
 
 
@@ -106,7 +106,7 @@ applicable agreement for further details.
 +--------------------+-----------------+
 ; Device             ; EPCS4           ;
 ; JTAG usercode      ; 0x00000000      ;
-; Checksum           ; 0x07467579      ;
+; Checksum           ; 0x0745CB06      ;
 ; Compression Ratio  ; 2               ;
 +--------------------+-----------------+
 
@@ -117,13 +117,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Jan 22 20:01:03 2017
+    Info: Processing started: Sun Jan 22 22:16:52 2017
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off system -c system
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 638 megabytes
-    Info: Processing ended: Sun Jan 22 20:01:04 2017
+    Info: Processing ended: Sun Jan 22 22:16:53 2017
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

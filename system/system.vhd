@@ -58,7 +58,6 @@ component memory_4k IS
 	port
 	(
 		address		: IN STD_LOGIC_VECTOR (11 DOWNTO 0);
-		--addressstall_a:	IN std_logic;
 		clock		: IN STD_LOGIC  := '1';
 		clken	: IN STD_LOGIC := '1';
 		data		: IN STD_LOGIC_VECTOR (11 DOWNTO 0);
@@ -75,7 +74,6 @@ signal MEM_READ:			std_logic;
 signal clk:					std_logic;
 signal clk_en:				std_logic;
 signal mem_clk:			std_logic;
---signal hold_address:		std_logic;
 
 begin
 	clk_en <= MEM_READ or MEM_WRITE;
@@ -83,7 +81,6 @@ begin
 	clk_out <= clk;
 	
 	memory_bank_0:		memory_4k port map ( address => address_bus,
-														--addressstall_a => hold_address,
 														clock  => mem_clk,
 														clken => clk_en,
 														data => data_cpu_to_mem_bus,

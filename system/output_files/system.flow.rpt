@@ -1,5 +1,5 @@
 Flow report for system
-Sun Jan 22 20:01:11 2017
+Sun Jan 22 22:16:59 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,12 +40,12 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sun Jan 22 20:01:11 2017           ;
+; Flow Status                        ; Successful - Sun Jan 22 22:16:59 2017           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; system                                          ;
 ; Top-level Entity Name              ; system                                          ;
 ; Family                             ; Cyclone II                                      ;
-; Device                             ; EP2C5AT144A7                                    ;
+; Device                             ; EP2C5T144C6                                     ;
 ; Timing Models                      ; Final                                           ;
 ; Total logic elements               ; 566 / 4,608 ( 12 % )                            ;
 ;     Total combinational functions  ; 566 / 4,608 ( 12 % )                            ;
@@ -64,32 +64,35 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/22/2017 20:00:43 ;
+; Start date & time ; 01/22/2017 22:16:32 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; system              ;
 +-------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                     ;
-+-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 90520735942130.148511524204857  ; --            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                            ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)          ; <None>        ; --          ; --             ;
-; IP_TOOL_NAME                        ; RAM: 1-PORT                     ; --            ; --          ; --             ;
-; IP_TOOL_VERSION                     ; 13.0                            ; --            ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 125                             ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; -40                             ; --            ; --          ; --             ;
-; MISC_FILE                           ; ../memory_4k/memory_4k.bsf      ; --            ; --          ; --             ;
-; MISC_FILE                           ; ../memory_4k/memory_4k_inst.vhd ; --            ; --          ; --             ;
-; MISC_FILE                           ; ../memory_4k/memory_4k.cmp      ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                        ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; --          ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --          ; --             ;
-+-------------------------------------+---------------------------------+---------------+-------------+----------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                           ;
++-------------------------------------+---------------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+---------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 90520735942130.148512339105362        ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
+; FITTER_EFFORT                       ; Standard Fit                          ; Auto Fit      ; --          ; --             ;
+; IP_TOOL_NAME                        ; RAM: 1-PORT                           ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                  ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --             ;
+; MISC_FILE                           ; ../memory_4k/memory_4k.bsf            ; --            ; --          ; --             ;
+; MISC_FILE                           ; ../memory_4k/memory_4k_inst.vhd       ; --            ; --          ; --             ;
+; MISC_FILE                           ; ../memory_4k/memory_4k.cmp            ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                              ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --          ; --             ;
++-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -97,12 +100,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:06     ; 1.0                     ; 739 MB              ; 00:00:06                           ;
-; Fitter                    ; 00:00:09     ; 1.0                     ; 734 MB              ; 00:00:09                           ;
+; Analysis & Synthesis      ; 00:00:06     ; 1.0                     ; 748 MB              ; 00:00:06                           ;
+; Fitter                    ; 00:00:09     ; 1.0                     ; 740 MB              ; 00:00:09                           ;
 ; Assembler                 ; 00:00:01     ; 1.0                     ; 638 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 598 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 602 MB              ; 00:00:01                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 790 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:18     ; --                      ; --                  ; 00:00:18                           ;
+; Total                     ; 00:00:19     ; --                      ; --                  ; 00:00:18                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
