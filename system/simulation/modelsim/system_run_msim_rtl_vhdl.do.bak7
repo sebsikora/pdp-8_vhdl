@@ -1,0 +1,43 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/t_state_generator.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/state_generator.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/s_state_generator.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/decoder_3_to_8.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/counter_3_bit_with_load.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/counter_3_bit.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/register_output_mux/register_output_mux.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/control_subsystem/control_subsystem.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/control_logic/control_logic.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/clock_generator/front_panel_latches.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/clock_generator/clock_generator.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_xor/alu_xor.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_subsystem/alu_subsystem.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_shifter/alu_shifter.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_main/nand_1_bit_full_adder.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_main/alu_or.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_main/alu_mux.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_main/alu_main.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_main/alu_and.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_main/alu_add.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_inc/alu_inc.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_comparator/alu_comparator.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/alu_clear/alu_clear.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/address_comparator/address_comparator.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/12_bit_register/register_12_bit_split.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/12_bit_register/register_12_bit.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/12_bit_register/register_5_bit.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/12_bit_register/register_1_bit.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/register_array/register_array.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/register_array/md_input_mux.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/top_level/top_level.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/memory_4k/memory_4k.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/system/system.vhd}
+

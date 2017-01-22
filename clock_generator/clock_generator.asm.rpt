@@ -1,5 +1,5 @@
 Assembler report for clock_generator
-Wed Jan 18 16:13:04 2017
+Sun Jan 22 14:41:18 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Jan 18 16:13:04 2017 ;
+; Assembler Status      ; Successful - Sun Jan 22 14:41:18 2017 ;
 ; Revision Name         ; clock_generator                       ;
 ; Top-level Entity Name ; clock_generator                       ;
 ; Family                ; Cyclone IV GX                         ;
@@ -92,8 +92,8 @@ applicable agreement for further details.
 ; Option         ; Setting                      ;
 +----------------+------------------------------+
 ; Device         ; EP4CGX15BF14C6               ;
-; JTAG usercode  ; 0x000BF761                   ;
-; Checksum       ; 0x000BF761                   ;
+; JTAG usercode  ; 0x000BF2D0                   ;
+; Checksum       ; 0x000BF2D0                   ;
 +----------------+------------------------------+
 
 
@@ -103,13 +103,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Jan 18 16:13:03 2017
+    Info: Processing started: Sun Jan 22 14:41:17 2017
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off clock_generator -c clock_generator
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 683 megabytes
-    Info: Processing ended: Wed Jan 18 16:13:04 2017
+    Info: Peak virtual memory: 679 megabytes
+    Info: Processing ended: Sun Jan 22 14:41:18 2017
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

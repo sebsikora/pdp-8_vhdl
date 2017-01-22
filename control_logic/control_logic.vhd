@@ -172,8 +172,8 @@ begin
 	MEM_INST <= BASIC_INS and (JMP or ANDD or TAD or DCA or JMS or ISZ);
 	
 	GROUP_1 <= OPR_INS and (not IR(3));
-	GROUP_2_AND <= OPR_INS and (IR(3) and IR(8) and (not IR(0)));
-	GROUP_2_OR <= OPR_INS and (IR(3) and (not IR(8)) and (not IR(0)));
+	GROUP_2_AND <= OPR_INS and (IR(3) and IR(8) and (not IR(11)));
+	GROUP_2_OR <= OPR_INS and (IR(3) and (not IR(8)) and (not IR(11)));
 	
 	CLA0 <= GROUP_1 and IR(4);
 	CLL <= GROUP_1 and IR(5);
@@ -233,7 +233,8 @@ begin
 	ALU_FUNC_SEL_0 <= s_states(2) and t_states(3) and ANDD;
 	ALU_FUNC_SEL_1 <= s_states(2) and t_states(3) and TAD;
 	ALU_FUNC_SEL_2 <= s_states(0) and t_states(3) and OSR;
-	ALU_OUT_SEL_0 <= (s_states(0) and (t_states(0) or t_states(1) or t_states(2))) or (s_states(1) and (t_states(0) or (t_states(3) and IS_AUTO_INDEX))) or (s_states(2) and ((t_states(1) and JMS) or (t_states(3) and (ANDD or TAD)) or (t_states(4) and ISZ) or (t_states(5) and ISZ and IS_ZERO_LAST))) or (s_states(3) and ((t_states(0) and IRQ) or (t_states(2) and IRQ)));
+	--ALU_OUT_SEL_0 <= (s_states(0) and (t_states(0) or t_states(1) or t_states(2))) or (s_states(1) and (t_states(0) or (t_states(3) and IS_AUTO_INDEX))) or (s_states(2) and (t_states(0) or (t_states(1) and JMS) or (t_states(3) and (ANDD or TAD)) or (t_states(4) and ISZ) or (t_states(5) and ISZ and IS_ZERO_LAST))) or (s_states(3) and ((t_states(0) and IRQ) or (t_states(2) and IRQ)));
+	ALU_OUT_SEL_0 <= (s_states(0) and (t_states(0) or t_states(1) or t_states(2))) or (s_states(1) and (t_states(0) or (t_states(3) and IS_AUTO_INDEX))) or (s_states(2) and (t_states(0) or (t_states(1) and JMS) or (t_states(4) and ISZ) or (t_states(5) and ISZ and IS_ZERO_LAST))) or (s_states(3) and ((t_states(0) and IRQ) or (t_states(2) and IRQ)));
 	ALU_OUT_SEL_1 <= (s_states(0) and t_states(3) and OSR) or (s_states(2) and t_states(3) and (ANDD or TAD));
 	ALU_OUT_SEL_2 <= (s_states(0) and ((t_states(3) and (AC_MOD or ROTATE_MASTER)) or (t_states(4) and ROTATE_TWICE)));
 	ALU_COMP <= (s_states(0) and t_states(3) and CMA);

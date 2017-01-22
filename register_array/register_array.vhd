@@ -17,6 +17,8 @@ entity register_array is
 			 PC_LOAD_LO:									in std_logic;
 			 PC_CLR_HI:										in std_logic;
 			 PC_CLR_LO:										in std_logic;
+			 FP_PC_OUTPUT:									out std_logic_vector(11 downto 0);
+			 FP_SR_INPUT:									in std_logic_vector(11 downto 0);
 			 MA_LOAD_HI:									in std_logic;
 			 MA_LOAD_LO:									in std_logic;
 			 MA_BUS_SEL:									in std_logic;
@@ -43,10 +45,10 @@ component register_1_bit is
 	);
 end component;
 component register_12_bit_split is
-	port ( input_hi:										in std_logic_vector(6 downto 0);
-			 input_lo:										in std_logic_vector(4 downto 0);
-			 output_hi:										out std_logic_vector(6 downto 0);
-			 output_lo:										out std_logic_vector(4 downto 0);
+	port ( input_hi:										in std_logic_vector(4 downto 0);
+			 input_lo:										in std_logic_vector(6 downto 0);
+			 output_hi:										out std_logic_vector(4 downto 0);
+			 output_lo:										out std_logic_vector(6 downto 0);
 			 load_hi:										in std_logic;
 			 load_lo:										in std_logic;
 			 clear_hi:										in std_logic;
@@ -93,10 +95,10 @@ end component;
 	
 	begin
 		
-		MA_register:	register_12_bit_split port map ( input_hi => top_bus(11 downto 5),
-  																	   input_lo => top_bus(4 downto 0),
-																	   output_hi => MA_register_output(11 downto 5),
-																	   output_lo => MA_register_output(4 downto 0),
+		MA_register:	register_12_bit_split port map ( input_hi => top_bus(4 downto 0),
+  																	   input_lo => top_bus(11 downto 5),
+																	   output_hi => MA_register_output(4 downto 0),
+																	   output_lo => MA_register_output(11 downto 5),
 																	   load_hi => MA_LOAD_HI,
 																	   load_lo => MA_LOAD_LO,
 																	   clear_hi => MA_CLR_HI,
@@ -119,10 +121,10 @@ end component;
 																	   not_reset => not_reset
 							);
 		
-		PC_register:	register_12_bit_split port map ( input_hi => top_bus(11 downto 5),
-  																	   input_lo => top_bus(4 downto 0),
-																	   output_hi => PC_register_output(11 downto 5),
-																	   output_lo => PC_register_output(4 downto 0),
+		PC_register:	register_12_bit_split port map ( input_hi => top_bus(4 downto 0),
+  																	   input_lo => top_bus(11 downto 5),
+																	   output_hi => PC_register_output(4 downto 0),
+																	   output_lo => PC_register_output(11 downto 5),
 																	   load_hi => PC_LOAD_HI,
 																	   load_lo => PC_LOAD_LO,
 																	   clear_hi => PC_CLR_HI,
@@ -161,5 +163,7 @@ end component;
 		mem_data_bus_out <= MD_register_output;
 		
 		AC_output_bus <= AC_register_output;
-
+		FP_PC_OUTPUT <= PC_register_output;
+		SR_register_output <= FP_SR_INPUT;
+		
 end rtl;

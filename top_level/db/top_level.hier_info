@@ -39,6 +39,7 @@ not_reset => register_array:register_array_0.not_reset
 not_reset => control_subsystem:control_subsystem_0.not_reset
 not_reset => alu_subsystem:alu_subsystem_0.not_reset
 clk_in => control_subsystem:control_subsystem_0.clk_in
+clk_out <= control_subsystem:control_subsystem_0.clk
 START => control_subsystem:control_subsystem_0.START
 STEP => control_subsystem:control_subsystem_0.STEP
 NEXT_STATE => control_subsystem:control_subsystem_0.NEXT_STATE
@@ -47,6 +48,45 @@ ASSERT_CONTROL => control_subsystem:control_subsystem_0.ASSERT_CONTROL
 FP_ADDR_LOAD => control_subsystem:control_subsystem_0.FP_ADDR_LOAD
 FP_EXAMINE => control_subsystem:control_subsystem_0.FP_EXAMINE
 FP_DEPOSIT => control_subsystem:control_subsystem_0.FP_DEPOSIT
+FP_PC_OUTPUT[0] <= register_array:register_array_0.FP_PC_OUTPUT[0]
+FP_PC_OUTPUT[1] <= register_array:register_array_0.FP_PC_OUTPUT[1]
+FP_PC_OUTPUT[2] <= register_array:register_array_0.FP_PC_OUTPUT[2]
+FP_PC_OUTPUT[3] <= register_array:register_array_0.FP_PC_OUTPUT[3]
+FP_PC_OUTPUT[4] <= register_array:register_array_0.FP_PC_OUTPUT[4]
+FP_PC_OUTPUT[5] <= register_array:register_array_0.FP_PC_OUTPUT[5]
+FP_PC_OUTPUT[6] <= register_array:register_array_0.FP_PC_OUTPUT[6]
+FP_PC_OUTPUT[7] <= register_array:register_array_0.FP_PC_OUTPUT[7]
+FP_PC_OUTPUT[8] <= register_array:register_array_0.FP_PC_OUTPUT[8]
+FP_PC_OUTPUT[9] <= register_array:register_array_0.FP_PC_OUTPUT[9]
+FP_PC_OUTPUT[10] <= register_array:register_array_0.FP_PC_OUTPUT[10]
+FP_PC_OUTPUT[11] <= register_array:register_array_0.FP_PC_OUTPUT[11]
+FP_DATA_OUTPUT[0] <= fp_output_mux:front_panel_display_mux.FP_OUTPUT[0]
+FP_DATA_OUTPUT[1] <= fp_output_mux:front_panel_display_mux.FP_OUTPUT[1]
+FP_DATA_OUTPUT[2] <= fp_output_mux:front_panel_display_mux.FP_OUTPUT[2]
+FP_DATA_OUTPUT[3] <= fp_output_mux:front_panel_display_mux.FP_OUTPUT[3]
+FP_DATA_OUTPUT[4] <= fp_output_mux:front_panel_display_mux.FP_OUTPUT[4]
+FP_DATA_OUTPUT[5] <= fp_output_mux:front_panel_display_mux.FP_OUTPUT[5]
+FP_DATA_OUTPUT[6] <= fp_output_mux:front_panel_display_mux.FP_OUTPUT[6]
+FP_DATA_OUTPUT[7] <= fp_output_mux:front_panel_display_mux.FP_OUTPUT[7]
+FP_DATA_OUTPUT[8] <= fp_output_mux:front_panel_display_mux.FP_OUTPUT[8]
+FP_DATA_OUTPUT[9] <= fp_output_mux:front_panel_display_mux.FP_OUTPUT[9]
+FP_DATA_OUTPUT[10] <= fp_output_mux:front_panel_display_mux.FP_OUTPUT[10]
+FP_DATA_OUTPUT[11] <= fp_output_mux:front_panel_display_mux.FP_OUTPUT[11]
+FP_DATA_SELECT[0] => fp_output_mux:front_panel_display_mux.FP_OUTPUT_SELECT[0]
+FP_DATA_SELECT[1] => fp_output_mux:front_panel_display_mux.FP_OUTPUT_SELECT[1]
+FP_DATA_SELECT[2] => fp_output_mux:front_panel_display_mux.FP_OUTPUT_SELECT[2]
+FP_SR_INPUT[0] => register_array:register_array_0.FP_SR_INPUT[0]
+FP_SR_INPUT[1] => register_array:register_array_0.FP_SR_INPUT[1]
+FP_SR_INPUT[2] => register_array:register_array_0.FP_SR_INPUT[2]
+FP_SR_INPUT[3] => register_array:register_array_0.FP_SR_INPUT[3]
+FP_SR_INPUT[4] => register_array:register_array_0.FP_SR_INPUT[4]
+FP_SR_INPUT[5] => register_array:register_array_0.FP_SR_INPUT[5]
+FP_SR_INPUT[6] => register_array:register_array_0.FP_SR_INPUT[6]
+FP_SR_INPUT[7] => register_array:register_array_0.FP_SR_INPUT[7]
+FP_SR_INPUT[8] => register_array:register_array_0.FP_SR_INPUT[8]
+FP_SR_INPUT[9] => register_array:register_array_0.FP_SR_INPUT[9]
+FP_SR_INPUT[10] => register_array:register_array_0.FP_SR_INPUT[10]
+FP_SR_INPUT[11] => register_array:register_array_0.FP_SR_INPUT[11]
 HRQ => control_subsystem:control_subsystem_0.HRQ
 IRQ => control_subsystem:control_subsystem_0.IRQ
 IRQ_ON => control_subsystem:control_subsystem_0.IRQ_ON
@@ -180,6 +220,30 @@ PC_LOAD_HI => register_12_bit_split:PC_register.load_hi
 PC_LOAD_LO => register_12_bit_split:PC_register.load_lo
 PC_CLR_HI => register_12_bit_split:PC_register.clear_hi
 PC_CLR_LO => register_12_bit_split:PC_register.clear_lo
+FP_PC_OUTPUT[0] <= register_12_bit_split:PC_register.output_lo[0]
+FP_PC_OUTPUT[1] <= register_12_bit_split:PC_register.output_lo[1]
+FP_PC_OUTPUT[2] <= register_12_bit_split:PC_register.output_lo[2]
+FP_PC_OUTPUT[3] <= register_12_bit_split:PC_register.output_lo[3]
+FP_PC_OUTPUT[4] <= register_12_bit_split:PC_register.output_lo[4]
+FP_PC_OUTPUT[5] <= register_12_bit_split:PC_register.output_hi[0]
+FP_PC_OUTPUT[6] <= register_12_bit_split:PC_register.output_hi[1]
+FP_PC_OUTPUT[7] <= register_12_bit_split:PC_register.output_hi[2]
+FP_PC_OUTPUT[8] <= register_12_bit_split:PC_register.output_hi[3]
+FP_PC_OUTPUT[9] <= register_12_bit_split:PC_register.output_hi[4]
+FP_PC_OUTPUT[10] <= register_12_bit_split:PC_register.output_hi[5]
+FP_PC_OUTPUT[11] <= register_12_bit_split:PC_register.output_hi[6]
+FP_SR_INPUT[0] => register_output_mux:output_mux.input_3[0]
+FP_SR_INPUT[1] => register_output_mux:output_mux.input_3[1]
+FP_SR_INPUT[2] => register_output_mux:output_mux.input_3[2]
+FP_SR_INPUT[3] => register_output_mux:output_mux.input_3[3]
+FP_SR_INPUT[4] => register_output_mux:output_mux.input_3[4]
+FP_SR_INPUT[5] => register_output_mux:output_mux.input_3[5]
+FP_SR_INPUT[6] => register_output_mux:output_mux.input_3[6]
+FP_SR_INPUT[7] => register_output_mux:output_mux.input_3[7]
+FP_SR_INPUT[8] => register_output_mux:output_mux.input_3[8]
+FP_SR_INPUT[9] => register_output_mux:output_mux.input_3[9]
+FP_SR_INPUT[10] => register_output_mux:output_mux.input_3[10]
+FP_SR_INPUT[11] => register_output_mux:output_mux.input_3[11]
 MA_LOAD_HI => register_12_bit_split:MA_register.load_hi
 MA_LOAD_LO => register_12_bit_split:MA_register.load_lo
 MA_BUS_SEL => register_output_mux:output_mux.MA_BUS_SEL
@@ -3849,6 +3913,66 @@ SR_BUS_SEL => output.OUTPUTSELECT
 SR_BUS_SEL => output.OUTPUTSELECT
 
 
+|top_level|fp_output_mux:front_panel_display_mux
+AC_FP_OUTPUT[0] => FP_OUTPUT.DATAB
+AC_FP_OUTPUT[1] => FP_OUTPUT.DATAB
+AC_FP_OUTPUT[2] => FP_OUTPUT.DATAB
+AC_FP_OUTPUT[3] => FP_OUTPUT.DATAB
+AC_FP_OUTPUT[4] => FP_OUTPUT.DATAB
+AC_FP_OUTPUT[5] => FP_OUTPUT.DATAB
+AC_FP_OUTPUT[6] => FP_OUTPUT.DATAB
+AC_FP_OUTPUT[7] => FP_OUTPUT.DATAB
+AC_FP_OUTPUT[8] => FP_OUTPUT.DATAB
+AC_FP_OUTPUT[9] => FP_OUTPUT.DATAB
+AC_FP_OUTPUT[10] => FP_OUTPUT.DATAB
+AC_FP_OUTPUT[11] => FP_OUTPUT.DATAB
+MD_FP_OUTPUT[0] => FP_OUTPUT.DATAB
+MD_FP_OUTPUT[1] => FP_OUTPUT.DATAB
+MD_FP_OUTPUT[2] => FP_OUTPUT.DATAB
+MD_FP_OUTPUT[3] => FP_OUTPUT.DATAB
+MD_FP_OUTPUT[4] => FP_OUTPUT.DATAB
+MD_FP_OUTPUT[5] => FP_OUTPUT.DATAB
+MD_FP_OUTPUT[6] => FP_OUTPUT.DATAB
+MD_FP_OUTPUT[7] => FP_OUTPUT.DATAB
+MD_FP_OUTPUT[8] => FP_OUTPUT.DATAB
+MD_FP_OUTPUT[9] => FP_OUTPUT.DATAB
+MD_FP_OUTPUT[10] => FP_OUTPUT.DATAB
+MD_FP_OUTPUT[11] => FP_OUTPUT.DATAB
+BUS_FP_OUTPUT[0] => FP_OUTPUT.DATAB
+BUS_FP_OUTPUT[1] => FP_OUTPUT.DATAB
+BUS_FP_OUTPUT[2] => FP_OUTPUT.DATAB
+BUS_FP_OUTPUT[3] => FP_OUTPUT.DATAB
+BUS_FP_OUTPUT[4] => FP_OUTPUT.DATAB
+BUS_FP_OUTPUT[5] => FP_OUTPUT.DATAB
+BUS_FP_OUTPUT[6] => FP_OUTPUT.DATAB
+BUS_FP_OUTPUT[7] => FP_OUTPUT.DATAB
+BUS_FP_OUTPUT[8] => FP_OUTPUT.DATAB
+BUS_FP_OUTPUT[9] => FP_OUTPUT.DATAB
+BUS_FP_OUTPUT[10] => FP_OUTPUT.DATAB
+BUS_FP_OUTPUT[11] => FP_OUTPUT.DATAB
+FP_OUTPUT_SELECT[0] => Equal0.IN2
+FP_OUTPUT_SELECT[0] => Equal1.IN1
+FP_OUTPUT_SELECT[0] => Equal2.IN1
+FP_OUTPUT_SELECT[1] => Equal0.IN1
+FP_OUTPUT_SELECT[1] => Equal1.IN2
+FP_OUTPUT_SELECT[1] => Equal2.IN0
+FP_OUTPUT_SELECT[2] => Equal0.IN0
+FP_OUTPUT_SELECT[2] => Equal1.IN0
+FP_OUTPUT_SELECT[2] => Equal2.IN2
+FP_OUTPUT[0] <= FP_OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+FP_OUTPUT[1] <= FP_OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+FP_OUTPUT[2] <= FP_OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+FP_OUTPUT[3] <= FP_OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+FP_OUTPUT[4] <= FP_OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+FP_OUTPUT[5] <= FP_OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+FP_OUTPUT[6] <= FP_OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+FP_OUTPUT[7] <= FP_OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+FP_OUTPUT[8] <= FP_OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+FP_OUTPUT[9] <= FP_OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+FP_OUTPUT[10] <= FP_OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+FP_OUTPUT[11] <= FP_OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |top_level|address_comparator:address_comparator_0
 input[0] => output[0].DATAIN
 input[1] => output[1].DATAIN
@@ -4367,14 +4491,16 @@ output <= output.DB_MAX_OUTPUT_PORT_TYPE
 |top_level|control_subsystem:control_subsystem_0|clock_generator:clock_generator_0
 START => OR_gate:or_0.inputA
 STEP => OR_gate:or_2.inputB
-clk_in => AND_gate:and_1.inputB
+clk_in => AND_3_gate:and_2.inputC
+clk_in => ms_jk_ff:ms_jk_ff_3.clk
 END_STATE => AND_3_gate:and_0.inputB
-END_STATE => AND_gate:and_2.inputA
+END_STATE => AND_gate:and_1.inputA
 END_STATE => front_panel_latches:fp_latch_bank.END_STATE
-clk <= AND_gate:and_1.output
+clk <= AND_3_gate:and_2.output
 not_reset => ms_jk_ff:ms_jk_ff_0.not_reset
 not_reset => ms_jk_ff:ms_jk_ff_1.not_reset
 not_reset => ms_jk_ff:ms_jk_ff_2.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_3.not_reset
 not_reset => front_panel_latches:fp_latch_bank.not_reset
 HLT_flag => ms_jk_ff:ms_jk_ff_1.j
 HLT_INDICATOR <= ms_jk_ff:ms_jk_ff_2.q
@@ -4400,9 +4526,10 @@ inputB => output.IN1
 output <= output.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top_level|control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|AND_gate:and_2
+|top_level|control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|AND_3_gate:and_2
 inputA => output.IN0
 inputB => output.IN1
+inputC => output.IN1
 output <= output.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -4608,6 +4735,69 @@ output <= output.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_level|control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level|control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_3
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|top_level|control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_3|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level|control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_3|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level|control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level|control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_3|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level|control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level|control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level|control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level|control_subsystem:control_subsystem_0|clock_generator:clock_generator_0|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_6
 inputA => output.IN0
 inputB => output.IN1
 output <= output.DB_MAX_OUTPUT_PORT_TYPE

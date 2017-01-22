@@ -1,0 +1,7 @@
+output_file = open("temp_output.txt", "w")
+
+for i in range(4096):
+	row = format(i, '012b')[::-1] + ' : 000000000000;\n'
+	output_file.write(row)
+output_file.close()
+

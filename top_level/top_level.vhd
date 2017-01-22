@@ -12,10 +12,16 @@ entity top_level is
 			 STEP:											in std_logic;
 			 NEXT_STATE:									in std_logic;
 			 END_STATE:										in std_logic;
+			 MEM_READ:										out std_logic;
+			 MEM_WRITE:										out std_logic;
 			 ASSERT_CONTROL:								in std_logic;
 			 FP_ADDR_LOAD:									in std_logic;
 			 FP_EXAMINE:									in std_logic;
 			 FP_DEPOSIT:									in std_logic;
+			 FP_PC_OUTPUT:									out std_logic_vector(11 downto 0);
+			 FP_DATA_OUTPUT:								out std_logic_vector(11 downto 0);
+			 FP_DATA_SELECT:								in std_logic_vector(2 downto 0);
+			 FP_SR_INPUT:									in std_logic_vector(11 downto 0);
 			 HRQ:												in std_logic;
 			 IRQ:												in std_logic;
 			 IRQ_ON:											in std_logic;
@@ -101,6 +107,8 @@ component register_array is
 			 PC_LOAD_LO:									in std_logic;
 			 PC_CLR_HI:										in std_logic;
 			 PC_CLR_LO:										in std_logic;
+			 FP_PC_OUTPUT:									out std_logic_vector(11 downto 0);
+			 FP_SR_INPUT:									in std_logic_vector(11 downto 0);
 			 MA_LOAD_HI:									in std_logic;
 			 MA_LOAD_LO:									in std_logic;
 			 MA_BUS_SEL:									in std_logic;
@@ -151,6 +159,14 @@ component address_comparator is
 			 IS_AUTO_INDEX:								out std_logic
 	);
 end component;
+component fp_output_mux is
+port ( AC_FP_OUTPUT:					in std_logic_vector(11 downto 0);
+			 MD_FP_OUTPUT:					in std_logic_vector(11 downto 0);
+			 BUS_FP_OUTPUT:				in std_logic_vector(11 downto 0);
+			 FP_OUTPUT_SELECT:			in std_logic_vector(2 downto 0);
+			 FP_OUTPUT:						out std_logic_vector(11 downto 0)
+	);
+end component;
 		
 		signal mem_data_bus:								std_logic_vector(11 downto 0);
 		signal mem_addr_bus:								std_logic_vector(11 downto 0);
@@ -197,8 +213,6 @@ end component;
 		signal ALU_CLEAR:									std_logic;
 		signal ALU_ROT_1:									std_logic;
 		signal ALU_ROT_2:									std_logic;
-		signal MEM_READ:									std_logic;
-		signal MEM_WRITE:									std_logic;
 		
 	begin
 		
@@ -219,6 +233,8 @@ end component;
 																	  PC_LOAD_LO => PC_LOAD_LO,
 																	  PC_CLR_HI => PC_CLR_HI,
 																	  PC_CLR_LO => PC_CLR_LO,
+																	  FP_PC_OUTPUT => FP_PC_OUTPUT,
+																	  FP_SR_INPUT => FP_SR_INPUT,
 																	  MA_LOAD_HI => MA_LOAD_HI,
 																	  MA_LOAD_LO => MA_LOAD_LO,
 																	  MA_BUS_SEL => MA_BUS_SEL,
@@ -232,10 +248,16 @@ end component;
 																	  AC_LOAD => AC_LOAD,
 																	  LINK_LOAD => LINK_LOAD 
 									);
+		front_panel_display_mux:	fp_output_mux port map ( AC_FP_OUTPUT => AC_output_bus,
+																			 MD_FP_OUTPUT => mem_data_bus,
+																			 BUS_FP_OUTPUT => top_bus,
+																			 FP_OUTPUT_SELECT => FP_DATA_SELECT,
+																			 FP_OUTPUT => FP_DATA_OUTPUT
+											);
 		
 		address_comparator_0:	address_comparator port map ( input => mem_addr_bus, output => mem_addr_bus_out, IS_AUTO_INDEX => IS_AUTO_INDEX);
 		
-		control_subsystem_0:	control_subsystem port map (MD_BUS => mem_data_bus,
+		control_subsystem_0:	control_subsystem port map (MD_BUS => mem_data_bus_in,
 																		 not_reset => not_reset,
 																		 clk_in => clk_in,
 																		 clk => clk,
@@ -323,5 +345,6 @@ end component;
 									);
 		
 		mem_data_bus_out <= mem_data_bus;
+		
 		
 end rtl;

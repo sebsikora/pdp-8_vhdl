@@ -9,6 +9,13 @@
 # ** Warning: Copied /home/sebsikora/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/top_level/fp_output_mux.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fp_output_mux
+# -- Compiling architecture rtl of fp_output_mux
 # vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/t_state_generator.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -273,174 +280,65 @@
 # -- Compiling entity system
 # -- Compiling architecture rtl of system
 # 
-vsim -voptargs=+acc work.memory_4k
-# vsim -voptargs=+acc work.memory_4k 
+vsim -voptargs=+acc work.system
+# vsim -voptargs=+acc work.system 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
+# Loading work.system(rtl)
 # Loading work.memory_4k(syn)
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
 # Loading altera_mf.altera_common_conversion(body)
 # Loading altera_mf.altera_device_families(body)
 # Loading altera_mf.altsyncram(translated)
-do /home/sebsikora/altera/projects/pdp-8/system/simulation/modelsim/mem_4k_testwave.do
+# Loading work.top_level(rtl)
+# Loading work.register_array(rtl)
+# Loading work.register_12_bit_split(rtl)
+# Loading work.ms_jk_ff(gates)
+# Loading work.nand_3_gate(rtl)
+# Loading work.nand_gate(rtl)
+# Loading work.md_input_mux(behavior)
+# Loading work.register_12_bit(rtl)
+# Loading work.register_1_bit(rtl)
+# Loading work.register_output_mux(behavior)
+# Loading work.fp_output_mux(rtl)
+# Loading work.address_comparator(rtl)
+# Loading work.or_gate(rtl)
+# Loading work.and_gate(rtl)
+# Loading work.control_subsystem(rtl)
+# Loading work.register_5_bit(rtl)
+# Loading work.clock_generator(rtl)
+# Loading work.and_3_gate(rtl)
+# Loading work.front_panel_latches(rtl)
+# Loading work.or_3_gate(rtl)
+# Loading work.state_generator(rtl)
+# Loading work.s_state_generator(rtl)
+# Loading work.counter_3_bit_with_load(rtl)
+# Loading work.decoder_3_to_8(rtl)
+# Loading work.t_state_generator(rtl)
+# Loading work.counter_3_bit(rtl)
+# Loading work.control_logic(rtl)
+# Loading work.alu_subsystem(rtl)
+# Loading work.alu_main(rtl)
+# Loading work.alu_mux(rtl)
+# Loading work.alu_and(rtl)
+# Loading work.alu_add(rtl)
+# Loading work.nand_1_bit_full_adder(rtl)
+# Loading work.alu_or(rtl)
+# Loading work.alu_clr(rtl)
+# Loading work.alu_xor(rtl)
+# Loading work.xor_gate(rtl)
+# Loading work.alu_incrementer(rtl)
+# Loading work.alu_shifter(rtl)
+# Loading work.alu_comparator(rtl)
+# ** Warning: Design size of 1112 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+do /home/sebsikora/altera/projects/pdp-8/system/simulation/modelsim/system_plus_mem_and_fp_test_wave_1.do
 # .main_pane.wave.interior.cs.body.pw.wf
 # 1
 # 1
 # 1
-wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 3000ns sim:/memory_4k/addressstall_a
-add wave  \
-sim:/memory_4k/q
-wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 200ns Edit:/memory_4k/clken
-wave modify -driver freeze -pattern constant -value 1 -starttime 200ns -endtime 400ns Edit:/memory_4k/clken
-wave modify -driver freeze -pattern constant -value 1 -starttime 200ns -endtime 400ns Edit:/memory_4k/addressstall_a
-wave modify -driver freeze -pattern clock -initialvalue 0 -period 200ns -dutycycle 50 -starttime 0ns -endtime 3000ns Edit:/memory_4k/clock
 run
-run
-run
-run
-wave modify -driver freeze -pattern constant -value 111111111111 -range 11 0 -starttime 800ns -endtime 1200ns Edit:/memory_4k/data
-run
-run
-run
-run
-run
-run
-wave modify -driver freeze -pattern constant -value 0 -starttime 1400ns -endtime 1800ns Edit:/memory_4k/clken
-wave modify -driver freeze -pattern constant -value 1 -starttime 1000ns -endtime 1200ns Edit:/memory_4k/addressstall_a
-restart
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-restart
-wave modify -driver freeze -pattern constant -value 0 -starttime 800ns -endtime 1000ns Edit:/memory_4k/clken
-wave modify -driver freeze -pattern constant -value 0 -starttime 800ns -endtime 1000ns Edit:/memory_4k/wren
-wave modify -driver freeze -pattern constant -value 1 -starttime 1000ns -endtime 1200ns Edit:/memory_4k/wren
-wave modify -driver freeze -pattern constant -value 1 -starttime 1000ns -endtime 1200ns Edit:/memory_4k/clken
-restart
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-restart
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-wave modify -driver freeze -pattern constant -value 1 -starttime 800ns -endtime 1000ns Edit:/memory_4k/clken
-restart
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-restart
-wave modify -driver freeze -pattern constant -value 1 -starttime 0ns -endtime 200ns Edit:/memory_4k/clken
-run
-run
-restart
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-wave modify -driver freeze -pattern constant -value 1 -starttime 800ns -endtime 1000ns Edit:/memory_4k/wren
-restart
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-wave modify -driver freeze -pattern constant -value 0 -starttime 200ns -endtime 400ns Edit:/memory_4k/clken
-wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 400ns Edit:/memory_4k/addressstall_a
-restart
-run
-run
-run
-run
-run
-run
-run
-run
-run
-restart
-wave modify -driver freeze -pattern constant -value 0 -starttime 1000ns -endtime 1200ns Edit:/memory_4k/wren
-wave modify -driver freeze -pattern constant -value 0 -starttime 1000ns -endtime 1200ns Edit:/memory_4k/clken
-wave modify -driver freeze -pattern constant -value 0 -starttime 1000ns -endtime 1200ns Edit:/memory_4k/addressstall_a
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-restart
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/system/simulation/modelsim/mem_4k_test_wave_4.do
-wave editwrite -file /home/sebsikora/altera/projects/pdp-8/system/simulation/modelsim/mem_4k_test_wave_4.do -append
+run -all
