@@ -76,6 +76,7 @@ architecture rtl of control_logic is
 	signal decoder_outputs:							std_logic_vector(7 downto 0);
 	signal decoder_inputs:							std_logic_vector(2 downto 0);
 	
+	signal FP_CMD:										std_logic;
 	signal NEXT_STATE:								std_logic;
 	signal END_STATE:									std_logic;
 	signal not_END_STATE:							std_logic;
@@ -148,19 +149,21 @@ begin
 	-- high for one clock cycle when the RUN_INDICATOR is low, the control system will step through *the current instruction
 	-- offered up by the MD bus*. Need to implement logic to sequence appropriate micro-operations for each FP_ instruction.
 	
-	NEXT_STATE <= (s_states(0) and t_states(4) and (OPR_INS or BASIC_INS)) or (s_states(1) and t_states(3) and IND) or (s_states(2) and t_states(5) and BASIC_INS) or (s_states(3) and t_states(2) and IRQ);
-	END_STATE <= (s_states(0) and t_states(4) and (OPR_INS and (not IRQ))) or (s_states(2) and t_states(5) and BASIC_INS and (not IRQ)) or (s_states(3) and t_states(2) and IRQ);
+	FP_CMD <= FP_ADDR_LOAD or FP_EXAMINE or FP_DEPOSIT;
+	
+	NEXT_STATE <= (s_states(0) and ((t_states(2) and FP_CMD) or (t_states(4) and (OPR_INS or BASIC_INS)))) or (s_states(1) and t_states(3) and IND) or (s_states(2) and t_states(5) and BASIC_INS) or (s_states(3) and t_states(2) and IRQ);
+	END_STATE <= (s_states(0) and ((t_states(2) and FP_CMD) or (t_states(4) and (OPR_INS and (not IRQ))))) or (s_states(2) and t_states(5) and BASIC_INS and (not IRQ)) or (s_states(3) and t_states(2) and IRQ);
 	not_END_STATE <= not END_STATE;
 	not_ASSERT_CONTROL <= not ASSERT_CONTROL;
 	
 	NEXT_STATE_out <= NEXT_STATE_in or (NEXT_STATE and not_ASSERT_CONTROL);
 	END_STATE_out <= END_STATE_in or (END_STATE and not_ASSERT_CONTROL);
-	LOAD(0) <= (OPR_INS and IRQ and NEXT_STATE and END_STATE and s_states(0) and not_ASSERT_CONTROL);
-	LOAD(1) <= ((OPR_INS and IRQ and NEXT_STATE and END_STATE and s_states(0)) or (BASIC_INS and (not IR(3)) and NEXT_STATE and not_END_STATE and s_states(0))) and not_ASSERT_CONTROL;
+	LOAD(0) <= (OPR_INS and IRQ and NEXT_STATE and END_STATE and s_states(0));
+	LOAD(1) <= ((OPR_INS and IRQ and NEXT_STATE and END_STATE and s_states(0)) or (BASIC_INS and (not IR(3)) and NEXT_STATE and not_END_STATE and s_states(0)));
 	
-	IOT_INS <= IR(0) and IR(1) and (not IR(2));
-	OPR_INS <= IR(0) and IR(1) and IR(2);
-	BASIC_INS <= not (IOT_INS or OPR_INS);
+	IOT_INS <= (IR(0) and IR(1) and (not IR(2))) and ((not FP_CMD) and (not ASSERT_CONTROL));
+	OPR_INS <= (IR(0) and IR(1) and IR(2)) and ((not FP_CMD) and (not ASSERT_CONTROL));
+	BASIC_INS <= (not (IOT_INS or OPR_INS)) and ((not FP_CMD) and (not ASSERT_CONTROL));
 	
 	Z_BIT <= BASIC_INS and IR(4);
 	IND <= BASIC_INS and IR(3);
@@ -209,23 +212,23 @@ begin
 	AC_MOD <= CLA_MASTER or CMA or IAC or OSR;
 	LINK_MOD <= CLL or CML;
 	
-	PC_BUS_SEL <= (s_states(0) and (t_states(0) or t_states(1))) or (s_states(0) and t_states(3) and SKIP_MASTER) or (s_states(2) and ((t_states(1) and JMS) or (t_states(5) and ISZ)));
-	PC_LOAD_HI <= (s_states(0) and (t_states(1) or (t_states(3) and SKIP_MASTER))) or (s_states(2) and ((t_states(0) and JMP and IND) or (t_states(3) and JMS) or (t_states(5) and ISZ and IS_ZERO_LAST))) or (s_states(3) and t_states(2) and IRQ);
-	PC_LOAD_LO <= (s_states(0) and (t_states(1) or (t_states(3) and SKIP_MASTER))) or (s_states(2) and ((t_states(0) and JMP) or (t_states(3) and JMS) or (t_states(5) and ISZ and IS_ZERO_LAST))) or (s_states(3) and t_states(2) and IRQ);
+	PC_BUS_SEL <= (s_states(0) and ((t_states(0) and ((not FP_CMD) or FP_EXAMINE)) or (t_states(1) and ((not FP_CMD) or FP_DEPOSIT or FP_ADDR_LOAD)) or (t_states(2) and FP_DEPOSIT))) or (s_states(0) and t_states(3) and SKIP_MASTER) or (s_states(2) and ((t_states(1) and JMS) or (t_states(5) and ISZ)));
+	PC_LOAD_HI <= (s_states(0) and ((t_states(0) and (FP_ADDR_LOAD or FP_EXAMINE)) or (t_states(1) and (not FP_CMD)) or (t_states(2) and FP_DEPOSIT) or (t_states(3) and SKIP_MASTER))) or (s_states(2) and ((t_states(0) and JMP and IND) or (t_states(3) and JMS) or (t_states(5) and ISZ and IS_ZERO_LAST))) or (s_states(3) and t_states(2) and IRQ);
+	PC_LOAD_LO <= (s_states(0) and ((t_states(0) and (FP_ADDR_LOAD or FP_EXAMINE)) or (t_states(1) and (not FP_CMD)) or (t_states(2) and FP_DEPOSIT) or (t_states(3) and SKIP_MASTER))) or (s_states(2) and ((t_states(0) and JMP) or (t_states(3) and JMS) or (t_states(5) and ISZ and IS_ZERO_LAST))) or (s_states(3) and t_states(2) and IRQ);
 	PC_CLR_HI <= s_states(2) and t_states(0) and JMP and Z_BIT;
 	PC_CLR_LO <= '0';
 	IR_LOAD <= s_states(0) and t_states(2);
 	IR_CLR <= '0';
-	MA_LOAD_HI <= (s_states(0) and t_states(0)) or (s_states(1) and t_states(0) and Z_BIT) or (s_states(2) and t_states(0) and IND and MEM_INST and not_JMP);
-	MA_LOAD_LO <= (s_states(0) and t_states(0)) or (s_states(1) and t_states(0)) or (s_states(2) and t_states(0) and MEM_INST and not_JMP);
+	MA_LOAD_HI <= (s_states(0) and ((t_states(0) and ((not FP_CMD) or FP_EXAMINE)) or (t_states(1) and (FP_ADDR_LOAD or FP_DEPOSIT)))) or (s_states(1) and t_states(0) and Z_BIT) or (s_states(2) and t_states(0) and IND and MEM_INST and not_JMP);
+	MA_LOAD_LO <= (s_states(0) and ((t_states(0) and ((not FP_CMD) or FP_EXAMINE)) or (t_states(1) and (FP_ADDR_LOAD or FP_DEPOSIT)))) or (s_states(1) and t_states(0)) or (s_states(2) and t_states(0) and MEM_INST and not_JMP);
 	MA_BUS_SEL <= '0';
 	MA_CLR_HI <= (s_states(1) and t_states(0) and not_Z_BIT) or (s_states(2) and t_states(0) and not_Z_BIT and MEM_INST and not_JMP) or (s_states(3) and t_states(0) and IRQ);
 	MA_CLR_LO <= s_states(3) and t_states(0) and IRQ;
-	MD_LOAD <= (s_states(0) and t_states(2)) or (s_states(1) and (t_states(2) or (t_states(3) and IS_AUTO_INDEX))) or (s_states(2) and ((t_states(1) and (DCA or JMS)) or (t_states(2) and (ANDD or TAD or ISZ)) or (t_states(3) and ISZ))) or (s_states(3) and t_states(0) and IRQ);
+	MD_LOAD <= (s_states(0) and ((t_states(0) and FP_DEPOSIT) or (t_states(1) and FP_EXAMINE) or (t_states(2) and (FP_ADDR_LOAD or (not FP_CMD))))) or (s_states(1) and (t_states(2) or (t_states(3) and IS_AUTO_INDEX))) or (s_states(2) and ((t_states(1) and (DCA or JMS)) or (t_states(2) and (ANDD or TAD or ISZ)) or (t_states(3) and ISZ))) or (s_states(3) and t_states(0) and IRQ);
 	MD_CLR <= '0';
-	MD_IN_SEL <= (s_states(0) and t_states(2)) or (s_states(1) and t_states(2)) or (s_states(2) and t_states(2) and (ANDD or TAD or ISZ));
-	MD_BUS_SEL <= (s_states(0) and t_states(2)) or (s_states(1) and (t_states(0) or (t_states(3) and IS_AUTO_INDEX))) or (s_states(2) and t_states(0) and MEM_INST) or (s_states(2) and t_states(3) and MEM_INST and not_DCA) or (s_states(2) and t_states(4) and ISZ) or (s_states(3) and t_states(2) and IRQ);
-	SR_BUS_SEL <= s_states(0) and t_states(3) and OSR;
+	MD_IN_SEL <= (s_states(0) and ((t_states(1) and FP_EXAMINE) or (t_states(2) and ((not FP_CMD) or FP_ADDR_LOAD)))) or (s_states(1) and t_states(2)) or (s_states(2) and t_states(2) and (ANDD or TAD or ISZ));
+	MD_BUS_SEL <= (s_states(0) and t_states(2) and (not FP_CMD)) or (s_states(1) and (t_states(0) or (t_states(3) and IS_AUTO_INDEX))) or (s_states(2) and t_states(0) and MEM_INST) or (s_states(2) and t_states(3) and MEM_INST and not_DCA) or (s_states(2) and t_states(4) and ISZ) or (s_states(3) and t_states(2) and IRQ);
+	SR_BUS_SEL <= s_states(0) and ((t_states(3) and OSR) or (t_states(0) and (FP_ADDR_LOAD or FP_DEPOSIT)));
 	AC_LOAD <= (s_states(0) and ((t_states(3) and (AC_MOD or ROTATE_MASTER)) or (t_states(4) and ROTATE_TWICE))) or (s_states(2) and t_states(3) and (ANDD or TAD or DCA));
 	LINK_LOAD <= (s_states(0) and ((t_states(3) and (LINK_MOD or IAC or ROTATE_MASTER)) or (t_states(4) and ROTATE_TWICE))) or (s_states(2) and t_states(3) and TAD);
 	LINK_OUT_SEL <= s_states(0) and t_states(3) and CLL;
@@ -234,15 +237,15 @@ begin
 	ALU_FUNC_SEL_1 <= s_states(2) and t_states(3) and TAD;
 	ALU_FUNC_SEL_2 <= s_states(0) and t_states(3) and OSR;
 	--ALU_OUT_SEL_0 <= (s_states(0) and (t_states(0) or t_states(1) or t_states(2))) or (s_states(1) and (t_states(0) or (t_states(3) and IS_AUTO_INDEX))) or (s_states(2) and (t_states(0) or (t_states(1) and JMS) or (t_states(3) and (ANDD or TAD)) or (t_states(4) and ISZ) or (t_states(5) and ISZ and IS_ZERO_LAST))) or (s_states(3) and ((t_states(0) and IRQ) or (t_states(2) and IRQ)));
-	ALU_OUT_SEL_0 <= (s_states(0) and (t_states(0) or t_states(1) or t_states(2))) or (s_states(1) and (t_states(0) or (t_states(3) and IS_AUTO_INDEX))) or (s_states(2) and (t_states(0) or (t_states(1) and JMS) or (t_states(4) and ISZ) or (t_states(5) and ISZ and IS_ZERO_LAST))) or (s_states(3) and ((t_states(0) and IRQ) or (t_states(2) and IRQ)));
+	ALU_OUT_SEL_0 <= (s_states(0) and (t_states(0) or (t_states(1) and (not FP_EXAMINE)) or (t_states(2) and ((not FP_CMD) or FP_DEPOSIT)))) or (s_states(1) and (t_states(0) or (t_states(3) and IS_AUTO_INDEX))) or (s_states(2) and (t_states(0) or (t_states(1) and JMS) or (t_states(4) and ISZ) or (t_states(5) and ISZ and IS_ZERO_LAST))) or (s_states(3) and ((t_states(0) and IRQ) or (t_states(2) and IRQ)));
 	ALU_OUT_SEL_1 <= (s_states(0) and t_states(3) and OSR) or (s_states(2) and t_states(3) and (ANDD or TAD));
 	ALU_OUT_SEL_2 <= (s_states(0) and ((t_states(3) and (AC_MOD or ROTATE_MASTER)) or (t_states(4) and ROTATE_TWICE)));
 	ALU_COMP <= (s_states(0) and t_states(3) and CMA);
-	ALU_INC <= (s_states(0) and (t_states(1) or (t_states(3) and IAC))) or (s_states(1) and t_states(3) and IS_AUTO_INDEX) or (s_states(2) and ((t_states(3) and JMS) or (t_states(5) and ISZ and IS_ZERO_LAST))) or (s_states(3) and t_states(2) and IRQ);
+	ALU_INC <= (s_states(0) and ((t_states(0) and FP_EXAMINE) or (t_states(1) and (not FP_CMD)) or (t_states(2) and FP_DEPOSIT) or (t_states(3) and IAC))) or (s_states(1) and t_states(3) and IS_AUTO_INDEX) or (s_states(2) and ((t_states(3) and JMS) or (t_states(5) and ISZ and IS_ZERO_LAST))) or (s_states(3) and t_states(2) and IRQ);
 	ALU_ROT_1 <= (s_states(0) and ((t_states(3) and ROTATE_R) or (t_states(4) and RTR)));
 	ALU_ROT_2 <= (s_states(0) and ((t_states(3) and ROTATE_L) or (t_states(4) and RTL)));
-	MEM_READ <= (s_states(0) and (t_states(1) or t_states(2))) or (s_states(1) and (t_states(1) or t_states(2))) or (s_states(2) and ((t_states(1) and (ANDD or TAD or ISZ)) or (t_states(2) and (ANDD or TAD or ISZ))));
-	MEM_WRITE <= (s_states(2) and ((t_states(2) and (DCA or JMS)) or (t_states(4) and ISZ))) or (s_states(3) and t_states(1) and IRQ);
+	MEM_READ <= (s_states(0) and ((t_states(1) and ((not FP_CMD) or FP_EXAMINE)) or (t_states(2) and ((not FP_CMD) or FP_ADDR_LOAD)))) or (s_states(1) and (t_states(1) or t_states(2))) or (s_states(2) and ((t_states(1) and (ANDD or TAD or ISZ)) or (t_states(2) and (ANDD or TAD or ISZ))));
+	MEM_WRITE <= (s_states(0) and t_states(2) and FP_DEPOSIT) or (s_states(2) and ((t_states(2) and (DCA or JMS)) or (t_states(4) and ISZ))) or (s_states(3) and t_states(1) and IRQ);
 	ALU_CLEAR <= (s_states(0) and t_states(3) and CLA_MASTER) or (s_states(2) and t_states(3) and DCA);
 	
 	

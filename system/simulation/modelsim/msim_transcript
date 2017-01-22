@@ -340,5 +340,30 @@ do /home/sebsikora/altera/projects/pdp-8/system/simulation/modelsim/system_plus_
 # 1
 # 1
 # 1
-run
 run -all
+restart
+# ** Warning: Design size of 1070 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+do /home/sebsikora/altera/projects/pdp-8/system/simulation/modelsim/system_plus_mem_and_fp_test_wave_FP_DEP_TEST.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# 1
+# 1
+# 1
+run -all
+restart
+# ** Warning: Design size of 1070 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+wave modify -driver freeze -pattern constant -value 0 -starttime 600ns -endtime 800ns Edit:/system/FP_DEPOSIT
+wave modify -driver freeze -pattern constant -value 1 -starttime 800ns -endtime 1000ns Edit:/system/FP_ADDR_LOAD
+wave modify -driver freeze -pattern constant -value 111100000000 -range 11 0 -starttime 600ns -endtime 2000ns Edit:/system/FP_SR_INPUT
+restart
+# ** Warning: Design size of 1070 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+run -all
+restart
+# ** Warning: Design size of 1070 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
