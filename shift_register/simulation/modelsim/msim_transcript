@@ -1,0 +1,188 @@
+# do shift_register_8_ps_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /home/sebsikora/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /home/sebsikora/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ms_jk_ff
+# -- Compiling architecture gates of ms_jk_ff
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity NOT_gate
+# -- Compiling architecture rtl of NOT_gate
+# -- Compiling entity NAND_3_gate
+# -- Compiling architecture rtl of NAND_3_gate
+# -- Compiling entity NAND_gate
+# -- Compiling architecture rtl of NAND_gate
+# -- Compiling entity AND_gate
+# -- Compiling architecture rtl of AND_gate
+# -- Compiling entity AND_3_gate
+# -- Compiling architecture rtl of AND_3_gate
+# -- Compiling entity OR_5_gate
+# -- Compiling architecture rtl of OR_5_gate
+# -- Compiling entity OR_4_gate
+# -- Compiling architecture rtl of OR_4_gate
+# -- Compiling entity OR_3_gate
+# -- Compiling architecture rtl of OR_3_gate
+# -- Compiling entity OR_gate
+# -- Compiling architecture rtl of OR_gate
+# -- Compiling entity XOR_gate
+# -- Compiling architecture rtl of XOR_gate
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/shift_register/shift_register_8_ps.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity shift_register_8_ps
+# -- Compiling architecture rtl of shift_register_8_ps
+# 
+vsim -voptargs=+acc work.shift_register_8_ps
+# vsim -voptargs=+acc work.shift_register_8_ps 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.shift_register_8_ps(rtl)
+# Loading work.and_gate(rtl)
+# Loading work.or_gate(rtl)
+# Loading work.ms_jk_ff(gates)
+# Loading work.nand_3_gate(rtl)
+# Loading work.nand_gate(rtl)
+wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 200ns sim:/shift_register_8_ps/not_reset
+wave modify -driver freeze -pattern constant -value 1 -starttime 200ns -endtime 4000ns Edit:/shift_register_8_ps/not_reset
+wave create -driver freeze -pattern clock -initialvalue 0 -period 200ns -dutycycle 50 -starttime 0ns -endtime 4000ns sim:/shift_register_8_ps/clk
+wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 200ns sim:/shift_register_8_ps/s_not_p
+wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 400ns Edit:/shift_register_8_ps/s_not_p
+wave modify -driver freeze -pattern constant -value 1 -starttime 400ns -endtime 4000ns Edit:/shift_register_8_ps/s_not_p
+wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 200ns Edit:/shift_register_8_ps/clk
+wave create -driver freeze -pattern constant -value 00000000 -range 7 0 -starttime 0ns -endtime 200ns sim:/shift_register_8_ps/p_in
+wave modify -driver freeze -pattern constant -value 01010101 -range 7 0 -starttime 200ns -endtime 400ns Edit:/shift_register_8_ps/p_in
+wave modify -driver freeze -pattern constant -value 00000000 -range 7 0 -starttime 400ns -endtime 4000ns Edit:/shift_register_8_ps/p_in
+add wave  \
+sim:/shift_register_8_ps/s_out
+wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 4000ns sim:/shift_register_8_ps/s_in
+add wave -position 4 -format Logic -height 16 -editable 2 Edit:/shift_register_8_ps/s_in
+run
+run
+run
+run
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+restart
+vcom -93 -work work -O0 /home/sebsikora/altera/projects/pdp-8/shift_register/shift_register_8_ps.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity shift_register_8_ps
+# -- Compiling architecture rtl of shift_register_8_ps
+restart
+# Loading work.shift_register_8_ps(rtl)
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+run
+run
+run
+run
+vcom -93 -work work -O0 /home/sebsikora/altera/projects/pdp-8/shift_register/shift_register_8_ps.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity shift_register_8_ps
+# -- Compiling architecture rtl of shift_register_8_ps
+restart
+# Loading work.shift_register_8_ps(rtl)
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+wave modify -driver freeze -pattern constant -value 10110011 -range 7 0 -starttime 2200ns -endtime 2400ns Edit:/shift_register_8_ps/p_in
+wave modify -driver freeze -pattern constant -value 0 -starttime 2200ns -endtime 2400ns Edit:/shift_register_8_ps/s_not_p
+restart
+run -all
+restart
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/shift_register/simulation/modelsim/shift_reg_8_p_to_s_test_wave.do
+wave editwrite -file /home/sebsikora/altera/projects/pdp-8/shift_register/simulation/modelsim/shift_reg_8_p_to_s_test_wave.do -append

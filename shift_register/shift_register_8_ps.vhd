@@ -1,0 +1,128 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity shift_register_8_ps is
+	port ( not_reset:					in std_logic;
+			 clk:							in std_logic;
+			 p_in:						in std_logic_vector(7 downto 0);
+			 s_in:						in std_logic;
+			 s_out:						out std_logic;
+			 s_not_p:					in std_logic
+	);
+end shift_register_8_ps;
+
+architecture rtl of shift_register_8_ps is
+	component ms_jk_ff is
+		port ( j:						in std_logic;
+				 k:						in std_logic;
+				 clk:						in std_logic;
+				 not_reset: 			in std_logic;
+				 q:						out std_logic;
+				 not_q:					out std_logic
+		);
+	end component;
+	component AND_gate is
+		port( inputA: 					in std_logic;
+				inputB:					in std_logic;
+				output:					out std_logic
+		);
+	end component;
+	component OR_gate is
+		port( inputA: 					in std_logic;
+				inputB:					in std_logic;
+				output:					out std_logic
+		);
+	end component;
+	
+	signal ff_outputs:				std_logic_vector(7 downto 0);
+	signal not_ff_outputs:			std_logic_vector(7 downto 0);
+	signal not_s_not_p:				std_logic;
+	signal and_0_0_output:			std_logic;
+	signal and_0_1_output:			std_logic;
+	signal or_0_0_output:			std_logic;
+	signal not_or_0_0_output:			std_logic;
+	signal and_1_0_output:			std_logic;
+	signal and_1_1_output:			std_logic;
+	signal or_1_0_output:			std_logic;
+	signal not_or_1_0_output:			std_logic;
+	signal and_2_0_output:			std_logic;
+	signal and_2_1_output:			std_logic;
+	signal or_2_0_output:			std_logic;
+	signal not_or_2_0_output:			std_logic;
+	signal and_3_0_output:			std_logic;
+	signal and_3_1_output:			std_logic;
+	signal or_3_0_output:			std_logic;
+	signal not_or_3_0_output:			std_logic;
+	signal and_4_0_output:			std_logic;
+	signal and_4_1_output:			std_logic;
+	signal or_4_0_output:			std_logic;
+	signal not_or_4_0_output:			std_logic;
+	signal and_5_0_output:			std_logic;
+	signal and_5_1_output:			std_logic;
+	signal or_5_0_output:			std_logic;
+	signal not_or_5_0_output:			std_logic;
+	signal and_6_0_output:			std_logic;
+	signal and_6_1_output:			std_logic;
+	signal or_6_0_output:			std_logic;
+	signal not_or_6_0_output:			std_logic;
+	signal and_7_0_output:			std_logic;
+	signal and_7_1_output:			std_logic;
+	signal or_7_0_output:			std_logic;
+	signal not_or_7_0_output:			std_logic;
+	
+	begin
+		
+		not_s_not_p <= not s_not_p;
+		
+		and_0_0:				AND_gate  port map (inputA => not_s_not_p, inputB => p_in(0), output => and_0_0_output);
+		and_0_1:				AND_gate  port map (inputA => s_not_p, inputB => s_in, output => and_0_1_output);
+		or_0_0:				OR_gate	 port map (inputA => and_0_0_output, inputB => and_0_1_output, output => or_0_0_output);
+		
+		and_1_0:				AND_gate  port map (inputA => not_s_not_p, inputB => p_in(1), output => and_1_0_output);
+		and_1_1:				AND_gate  port map (inputA => s_not_p, inputB => ff_outputs(0), output => and_1_1_output);
+		or_1_0:				OR_gate	 port map (inputA => and_1_0_output, inputB => and_1_1_output, output => or_1_0_output);
+		
+		and_2_0:				AND_gate  port map (inputA => not_s_not_p, inputB => p_in(2), output => and_2_0_output);
+		and_2_1:				AND_gate  port map (inputA => s_not_p, inputB => ff_outputs(1), output => and_2_1_output);
+		or_2_0:				OR_gate	 port map (inputA => and_2_0_output, inputB => and_2_1_output, output => or_2_0_output);
+		
+		and_3_0:				AND_gate  port map (inputA => not_s_not_p, inputB => p_in(3), output => and_3_0_output);
+		and_3_1:				AND_gate  port map (inputA => s_not_p, inputB => ff_outputs(2), output => and_3_1_output);
+		or_3_0:				OR_gate	 port map (inputA => and_3_0_output, inputB => and_3_1_output, output => or_3_0_output);
+		
+		and_4_0:				AND_gate  port map (inputA => not_s_not_p, inputB => p_in(4), output => and_4_0_output);
+		and_4_1:				AND_gate  port map (inputA => s_not_p, inputB => ff_outputs(3), output => and_4_1_output);
+		or_4_0:				OR_gate	 port map (inputA => and_4_0_output, inputB => and_4_1_output, output => or_4_0_output);
+		
+		and_5_0:				AND_gate  port map (inputA => not_s_not_p, inputB => p_in(5), output => and_5_0_output);
+		and_5_1:				AND_gate  port map (inputA => s_not_p, inputB => ff_outputs(4), output => and_5_1_output);
+		or_5_0:				OR_gate	 port map (inputA => and_5_0_output, inputB => and_5_1_output, output => or_5_0_output);
+		
+		and_6_0:				AND_gate  port map (inputA => not_s_not_p, inputB => p_in(6), output => and_6_0_output);
+		and_6_1:				AND_gate  port map (inputA => s_not_p, inputB => ff_outputs(5), output => and_6_1_output);
+		or_6_0:				OR_gate	 port map (inputA => and_6_0_output, inputB => and_6_1_output, output => or_6_0_output);
+		
+		and_7_0:				AND_gate  port map (inputA => not_s_not_p, inputB => p_in(7), output => and_7_0_output);
+		and_7_1:				AND_gate  port map (inputA => s_not_p, inputB => ff_outputs(6), output => and_7_1_output);
+		or_7_0:				OR_gate	 port map (inputA => and_7_0_output, inputB => and_7_1_output, output => or_7_0_output);
+		
+		not_or_0_0_output <= not or_0_0_output;
+		not_or_1_0_output <= not or_1_0_output;
+		not_or_2_0_output <= not or_2_0_output;
+		not_or_3_0_output <= not or_3_0_output;
+		not_or_4_0_output <= not or_4_0_output;
+		not_or_5_0_output <= not or_5_0_output;
+		not_or_6_0_output <= not or_6_0_output;
+		not_or_7_0_output <= not or_7_0_output;
+		
+		ms_jk_ff_0:			ms_jk_ff  port map (j => or_0_0_output, k => not_or_0_0_output, q => ff_outputs(0), not_q => not_ff_outputs(0), clk => clk, not_reset => not_reset);
+		ms_jk_ff_1:			ms_jk_ff  port map (j => or_1_0_output, k => not_or_1_0_output, q => ff_outputs(1), not_q => not_ff_outputs(1), clk => clk, not_reset => not_reset);
+		ms_jk_ff_2:			ms_jk_ff  port map (j => or_2_0_output, k => not_or_2_0_output, q => ff_outputs(2), not_q => not_ff_outputs(2), clk => clk, not_reset => not_reset);
+		ms_jk_ff_3:			ms_jk_ff  port map (j => or_3_0_output, k => not_or_3_0_output, q => ff_outputs(3), not_q => not_ff_outputs(3), clk => clk, not_reset => not_reset);
+		ms_jk_ff_4:			ms_jk_ff  port map (j => or_4_0_output, k => not_or_4_0_output, q => ff_outputs(4), not_q => not_ff_outputs(4), clk => clk, not_reset => not_reset);
+		ms_jk_ff_5:			ms_jk_ff  port map (j => or_5_0_output, k => not_or_5_0_output, q => ff_outputs(5), not_q => not_ff_outputs(5), clk => clk, not_reset => not_reset);
+		ms_jk_ff_6:			ms_jk_ff  port map (j => or_6_0_output, k => not_or_6_0_output, q => ff_outputs(6), not_q => not_ff_outputs(6), clk => clk, not_reset => not_reset);
+		ms_jk_ff_7:			ms_jk_ff  port map (j => or_7_0_output, k => not_or_7_0_output, q => ff_outputs(7), not_q => not_ff_outputs(7), clk => clk, not_reset => not_reset);
+		
+		s_out <= ff_outputs(7);
+end rtl;
