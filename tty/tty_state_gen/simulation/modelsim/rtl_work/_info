@@ -1,0 +1,495 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim
+Eand_3_gate
+Z1 w1485896445
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 d/home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim
+Z5 8/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd
+Z6 F/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd
+l0
+L75
+Vz6UPELG@T<D9^D:51cnV<0
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1485986375.222564
+Z9 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd|
+Z10 !s107 /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 mGbDVWo@OHH?D?>1fDUk33
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 10 and_3_gate 0 22 z6UPELG@T<D9^D:51cnV<0
+l84
+L83
+V:RTI@I3e3Z1ijfR?3bd<n1
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 IKHbed2K5MFzUT0O;X8j_3
+!i10b 1
+Eand_gate
+R1
+R2
+R3
+R4
+R5
+R6
+l0
+L58
+V1Z3_VKAzkUkN:;iI??:V31
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 [LN:8mN4G1fLQdh07dM1b1
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 8 and_gate 0 22 1Z3_VKAzkUkN:;iI??:V31
+l66
+L65
+VgF_Koo@f_>HeiKQ?dc<R_3
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 bmgA3QfRI>4GYz0aNI[P23
+!i10b 1
+Ecounter_4_bit
+Z13 w1485984421
+R2
+R3
+R4
+Z14 8/home/sebsikora/altera/projects/pdp-8/counters/counter_4_bit/counter_4_bit.vhd
+Z15 F/home/sebsikora/altera/projects/pdp-8/counters/counter_4_bit/counter_4_bit.vhd
+l0
+L4
+Vbe`LTiTF?;P6=iSCXQKaK0
+R7
+31
+Z16 !s108 1485986375.271592
+Z17 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/counters/counter_4_bit/counter_4_bit.vhd|
+Z18 !s107 /home/sebsikora/altera/projects/pdp-8/counters/counter_4_bit/counter_4_bit.vhd|
+R11
+R12
+!s100 FIV9>ALbgU]Pz6V:ee=6m2
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 13 counter_4_bit 0 22 be`LTiTF?;P6=iSCXQKaK0
+l61
+L12
+ViBPXc2>b_7hd4[Zl=52e63
+R7
+31
+R16
+R17
+R18
+R11
+R12
+!s100 `lPARfOSTEkPfHJ@ddOX10
+!i10b 1
+Ems_jk_ff
+Z19 w1483460033
+R2
+R3
+R4
+Z20 8/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd
+Z21 F/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd
+l0
+L5
+V]IeQOc`NS8zUgmDdNA0FN0
+R7
+31
+Z22 !s108 1485986375.191025
+Z23 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd|
+Z24 !s107 /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd|
+R11
+R12
+!s100 _T@d>kQcQ2d2TY@AYYDZ`2
+!i10b 1
+Agates
+R2
+R3
+DEx4 work 8 ms_jk_ff 0 22 ]IeQOc`NS8zUgmDdNA0FN0
+l42
+L15
+VXDYIG4Zm^TF=:9PP`B?6`1
+R7
+31
+R22
+R23
+R24
+R11
+R12
+!s100 c:L``LDONKL`SD=6IAB:72
+!i10b 1
+Enand_3_gate
+R1
+R2
+R3
+R4
+R5
+R6
+l0
+L22
+VhPLDeZMmigm5a_I>3bzSO2
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 l9fIG9iZ``HTOV7K:NgeN0
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 11 nand_3_gate 0 22 hPLDeZMmigm5a_I>3bzSO2
+l31
+L30
+V;;NU0NU5PmCiFRPf<6BmW1
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 TzUh?@Z]@M7mC>^g70@L_0
+!i10b 1
+Enand_gate
+R1
+R2
+R3
+R4
+R5
+R6
+l0
+L41
+VHfnD41a:TQ[MMH7PM@eDU1
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 N28i5jJ4Hzm>L1igQ=I<11
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 9 nand_gate 0 22 HfnD41a:TQ[MMH7PM@eDU1
+l49
+L48
+V_C6AhBJbHl24SJ:;]Glf31
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 ]X2UN493zg_3ffj5Fz1J;0
+!i10b 1
+Enor_4_gate
+R1
+R2
+R3
+R4
+R5
+R6
+l0
+L132
+VM_BMa]cgdVMQ]8Lk=cDae1
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 _Z:cbLaEOI=Q4gbg?KgaT0
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 10 nor_4_gate 0 22 M_BMa]cgdVMQ]8Lk=cDae1
+l142
+L141
+VTFzFMNdoOIf;k1@`MUYi:2
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 ZY16S`Y9l_[BaFalJ[:9Z3
+!i10b 1
+Enot_gate
+R1
+R2
+R3
+R4
+R5
+R6
+l0
+L6
+VAP385W9Pj59m][=A>?ZPJ1
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 h:>l<T>LlmHWA`G<54kD]1
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 8 not_gate 0 22 AP385W9Pj59m][=A>?ZPJ1
+l13
+L12
+V>Za`>^[S85MOHSPS0gA=D1
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 g@YC=kR9[nJ^H?ZDLM>e?2
+!i10b 1
+Eor_3_gate
+R1
+R2
+R3
+R4
+R5
+R6
+l0
+L152
+VFSU^:TLER?@<Ze2`cb?8h3
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 Kz@k@czz=DzjW=dBQ>a=j0
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 9 or_3_gate 0 22 FSU^:TLER?@<Ze2`cb?8h3
+l161
+L160
+V1a8Bkj[4meSJKlaLizefz2
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 N[<E_9A4]PDkhbXG@KzQQ1
+!i10b 1
+Eor_4_gate
+R1
+R2
+R3
+R4
+R5
+R6
+l0
+L113
+VMKEf7@;WzdHJO`LA28[Q72
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 33HSfF9h@]mD>0>^30dfU1
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 9 or_4_gate 0 22 MKEf7@;WzdHJO`LA28[Q72
+l123
+L122
+VGlg8a7e[6fXjRJcf7DEeX3
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 S93j1gNeSQ?oA^VJ:IAgo2
+!i10b 1
+Eor_5_gate
+R1
+R2
+R3
+R4
+R5
+R6
+l0
+L93
+VMnXa7Y9[deDRBL4JHff8b1
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 OeF?iXiz9FI9mhOV`E8Xz1
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 9 or_5_gate 0 22 MnXa7Y9[deDRBL4JHff8b1
+l104
+L103
+VKN?DfIXV:M`0nNVkQfJ4G3
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 >@mO4ef2k0Ogn0[N>XUgf2
+!i10b 1
+Eor_gate
+R1
+R2
+R3
+R4
+R5
+R6
+l0
+L170
+V0T>75[KV;F18cCiNhSeMK0
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 @c`o;2P80n_MJP4Kh34Nj2
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 7 or_gate 0 22 0T>75[KV;F18cCiNhSeMK0
+l178
+L177
+V;l8egWVWP?0zm3I=3GTie2
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 Ee`T44^m6PF0GUW?nm:N_3
+!i10b 1
+Etty_state_gen
+Z25 w1485986336
+R2
+R3
+R4
+Z26 8/home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/tty_state_gen.vhd
+Z27 F/home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/tty_state_gen.vhd
+l0
+L4
+Vo6:?PoKCNaUe?OC3I0aa11
+!s100 3VD[9::m;?;V?fMJBQFDE0
+R7
+31
+!i10b 1
+Z28 !s108 1485986375.300248
+Z29 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/tty_state_gen.vhd|
+Z30 !s107 /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/tty_state_gen.vhd|
+R11
+R12
+Artl
+R2
+R3
+DEx4 work 13 tty_state_gen 0 22 o6:?PoKCNaUe?OC3I0aa11
+l108
+L17
+V23n]]VW8QMiodNjFU8BeM3
+!s100 VTkOjB7:TJ5ZABG`gES582
+R7
+31
+!i10b 1
+R28
+R29
+R30
+R11
+R12
+Exor_gate
+R1
+R2
+R3
+R4
+R5
+R6
+l0
+L186
+VXY^nKQ3;cBa@_DAoJd4n:0
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 dzj@;WDbE1ZzTNk18ZSe62
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 8 xor_gate 0 22 XY^nKQ3;cBa@_DAoJd4n:0
+l205
+L193
+V6SfJY6?9bg`B;5D=UJ8TU0
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 ;9YUmK4>T]X1``i5c;4J72
+!i10b 1
