@@ -1,5 +1,5 @@
 EDA Netlist Writer report for tty_state_gen
-Wed Feb  1 21:59:16 2017
+Thu Feb  2 22:34:16 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Feb  1 21:59:16 2017 ;
+; EDA Netlist Writer Status ; Successful - Thu Feb  2 22:34:16 2017 ;
 ; Revision Name             ; tty_state_gen                         ;
 ; Top-level Entity Name     ; tty_state_gen                         ;
 ; Family                    ; Cyclone II                            ;
@@ -84,13 +84,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Feb  1 21:59:15 2017
+    Info: Processing started: Thu Feb  2 22:34:16 2017
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off tty_state_gen -c tty_state_gen
 Info (204026): Generated files "tty_state_gen.vho", "tty_state_gen_fast.vho", "tty_state_gen_vhd.sdo" and "tty_state_gen_vhd_fast.sdo" in directory "/home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 897 megabytes
-    Info: Processing ended: Wed Feb  1 21:59:16 2017
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Thu Feb  2 22:34:16 2017
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

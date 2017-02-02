@@ -1,5 +1,5 @@
 Analysis & Synthesis report for tty_state_gen
-Wed Feb  1 21:59:01 2017
+Thu Feb  2 22:34:02 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -48,7 +48,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Feb  1 21:59:01 2017           ;
+; Analysis & Synthesis Status        ; Successful - Thu Feb  2 22:34:02 2017           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; tty_state_gen                                   ;
 ; Top-level Entity Name              ; tty_state_gen                                   ;
@@ -57,7 +57,7 @@ applicable agreement for further details.
 ;     Total combinational functions  ; 39                                              ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 9                                               ;
+; Total pins                         ; 11                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -173,34 +173,34 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                           ;
-+---------------------------------------------+-------------------------+
-; Resource                                    ; Usage                   ;
-+---------------------------------------------+-------------------------+
-; Estimated Total logic elements              ; 39                      ;
-;                                             ;                         ;
-; Total combinational functions               ; 39                      ;
-; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 22                      ;
-;     -- 3 input functions                    ; 14                      ;
-;     -- <=2 input functions                  ; 3                       ;
-;                                             ;                         ;
-; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 39                      ;
-;     -- arithmetic mode                      ; 0                       ;
-;                                             ;                         ;
-; Total registers                             ; 0                       ;
-;     -- Dedicated logic registers            ; 0                       ;
-;     -- I/O registers                        ; 0                       ;
-;                                             ;                         ;
-; I/O pins                                    ; 9                       ;
-; Embedded Multiplier 9-bit elements          ; 0                       ;
-; Maximum fan-out node                        ; AND_3_gate:and_3|output ;
-; Maximum fan-out                             ; 12                      ;
-; Total fan-out                               ; 139                     ;
-; Average fan-out                             ; 2.90                    ;
-+---------------------------------------------+-------------------------+
++---------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                 ;
++---------------------------------------------+-----------------------------------------------+
+; Resource                                    ; Usage                                         ;
++---------------------------------------------+-----------------------------------------------+
+; Estimated Total logic elements              ; 39                                            ;
+;                                             ;                                               ;
+; Total combinational functions               ; 39                                            ;
+; Logic element usage by number of LUT inputs ;                                               ;
+;     -- 4 input functions                    ; 27                                            ;
+;     -- 3 input functions                    ; 6                                             ;
+;     -- <=2 input functions                  ; 6                                             ;
+;                                             ;                                               ;
+; Logic elements by mode                      ;                                               ;
+;     -- normal mode                          ; 39                                            ;
+;     -- arithmetic mode                      ; 0                                             ;
+;                                             ;                                               ;
+; Total registers                             ; 0                                             ;
+;     -- Dedicated logic registers            ; 0                                             ;
+;     -- I/O registers                        ; 0                                             ;
+;                                             ;                                               ;
+; I/O pins                                    ; 11                                            ;
+; Embedded Multiplier 9-bit elements          ; 0                                             ;
+; Maximum fan-out node                        ; ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1 ;
+; Maximum fan-out                             ; 13                                            ;
+; Total fan-out                               ; 143                                           ;
+; Average fan-out                             ; 2.86                                          ;
++---------------------------------------------+-----------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -208,15 +208,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node            ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                      ; Library Name ;
 +---------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
-; |tty_state_gen                        ; 39 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 9    ; 0            ; |tty_state_gen                                                                           ; work         ;
-;    |AND_3_gate:and_3|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|AND_3_gate:and_3                                                          ; work         ;
+; |tty_state_gen                        ; 39 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |tty_state_gen                                                                           ; work         ;
 ;    |AND_3_gate:and_4|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|AND_3_gate:and_4                                                          ; work         ;
 ;    |AND_gate:and_1|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|AND_gate:and_1                                                            ; work         ;
 ;    |AND_gate:and_2|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|AND_gate:and_2                                                            ; work         ;
-;    |NAND_gate:nand_0|                 ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|NAND_gate:nand_0                                                          ; work         ;
+;    |AND_gate:and_3|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|AND_gate:and_3                                                            ; work         ;
+;    |NAND_gate:nand_0|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|NAND_gate:nand_0                                                          ; work         ;
+;    |NOR_4_gate:nor_0|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|NOR_4_gate:nor_0                                                          ; work         ;
 ;    |OR_gate:or_2|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|OR_gate:or_2                                                              ; work         ;
 ;    |OR_gate:or_3|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|OR_gate:or_3                                                              ; work         ;
-;    |counter_4_bit:tty_output_counter| ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|counter_4_bit:tty_output_counter                                          ; work         ;
+;    |counter_4_bit:tty_output_counter| ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|counter_4_bit:tty_output_counter                                          ; work         ;
 ;       |ms_jk_ff:ms_jk_ff_0|           ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_0                      ; work         ;
 ;          |NAND_gate:nand_1|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1     ; work         ;
 ;          |NAND_gate:nand_5|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5     ; work         ;
@@ -225,21 +226,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |NAND_gate:nand_1|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1     ; work         ;
 ;          |NAND_gate:nand_5|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5     ; work         ;
 ;       |ms_jk_ff:ms_jk_ff_2|           ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_2                      ; work         ;
-;          |NAND_3_gate:nand_3_1|       ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_1 ; work         ;
-;          |NAND_3_gate:nand_3_2|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_2 ; work         ;
+;          |NAND_3_gate:nand_3_1|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_1 ; work         ;
+;          |NAND_3_gate:nand_3_3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_3 ; work         ;
 ;          |NAND_gate:nand_1|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1     ; work         ;
 ;          |NAND_gate:nand_5|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5     ; work         ;
-;          |NAND_gate:nand_6|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_6     ; work         ;
-;       |ms_jk_ff:ms_jk_ff_3|           ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_3                      ; work         ;
-;          |NAND_gate:nand_1|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_1     ; work         ;
+;       |ms_jk_ff:ms_jk_ff_3|           ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_3                      ; work         ;
+;          |NAND_gate:nand_1|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_1     ; work         ;
 ;          |NAND_gate:nand_5|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5     ; work         ;
-;    |ms_jk_ff:ms_jk_ff_0|              ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|ms_jk_ff:ms_jk_ff_0                                                       ; work         ;
-;       |NAND_3_gate:nand_3_3|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_3                                  ; work         ;
-;       |NAND_gate:nand_1|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1                                      ; work         ;
-;       |NAND_gate:nand_5|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5                                      ; work         ;
-;       |NAND_gate:nand_6|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_6                                      ; work         ;
-;    |ms_jk_ff:ms_jk_ff_1|              ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|ms_jk_ff:ms_jk_ff_1                                                       ; work         ;
-;       |NAND_3_gate:nand_3_2|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_2                                  ; work         ;
+;    |ms_jk_ff:ms_jk_ff_0|              ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|ms_jk_ff:ms_jk_ff_0                                                       ; work         ;
+;       |NAND_3_gate:nand_3_1|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_1                                  ; work         ;
+;       |NAND_3_gate:nand_3_3|          ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_3                                  ; work         ;
+;       |NAND_gate:nand_1|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1                                      ; work         ;
+;       |NAND_gate:nand_5|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5                                      ; work         ;
+;       |NAND_gate:nand_6|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_6                                      ; work         ;
+;    |ms_jk_ff:ms_jk_ff_1|              ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|ms_jk_ff:ms_jk_ff_1                                                       ; work         ;
 ;       |NAND_3_gate:nand_3_3|          ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_3                                  ; work         ;
 ;       |NAND_gate:nand_6|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6                                      ; work         ;
 ;    |ms_jk_ff:ms_jk_ff_2|              ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_state_gen|ms_jk_ff:ms_jk_ff_2                                                       ; work         ;
@@ -255,19 +255,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Logic Cell Name                                                                ;    ;
 +--------------------------------------------------------------------------------+----+
 ; ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~0                                  ;    ;
+; counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~0 ;    ;
+; counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5|output~0 ;    ;
 ; ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~0                                  ;    ;
 ; counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~0 ;    ;
-; counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~0 ;    ;
 ; counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~0 ;    ;
-; counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5|output~0 ;    ;
 ; ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~0                                  ;    ;
 ; ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_6|output~0                                  ;    ;
 ; ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~0                                  ;    ;
+; counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1|output~0 ;    ;
+; counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_1|output~0 ;    ;
 ; ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1|output~0                                  ;    ;
 ; counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~0 ;    ;
-; counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1|output~0 ;    ;
 ; counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1|output~0 ;    ;
-; counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_1|output~0 ;    ;
 ; ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_3|output~0                              ;    ;
 ; OR_gate:or_3|output~0                                                          ;    ;
 ; Number of logic cells representing combinational loops                         ; 16 ;
@@ -360,7 +360,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Feb  1 21:58:59 2017
+    Info: Processing started: Thu Feb  2 22:34:00 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tty_state_gen -c tty_state_gen
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd
@@ -396,8 +396,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file tty_sta
     Info (12022): Found design unit 1: tty_state_gen-rtl
     Info (12023): Found entity 1: tty_state_gen
 Info (12127): Elaborating entity "tty_state_gen" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at tty_state_gen.vhd(75): object "not_2_output" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at tty_state_gen.vhd(101): object "ms_jk_ff_2_not_q" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at tty_state_gen.vhd(77): object "not_2_output" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at tty_state_gen.vhd(103): object "ms_jk_ff_2_not_q" assigned a value but never read
 Info (12128): Elaborating entity "NOT_gate" for hierarchy "NOT_gate:not_0"
 Info (12128): Elaborating entity "OR_gate" for hierarchy "OR_gate:or_0"
 Info (12128): Elaborating entity "AND_gate" for hierarchy "AND_gate:and_0"
@@ -413,13 +413,13 @@ Info (12128): Elaborating entity "ms_jk_ff" for hierarchy "counter_4_bit:tty_out
 Info (12128): Elaborating entity "NAND_3_gate" for hierarchy "counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_1"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 48 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 50 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 3 output pins
+    Info (21059): Implemented 5 output pins
     Info (21061): Implemented 39 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 714 megabytes
-    Info: Processing ended: Wed Feb  1 21:59:01 2017
+    Info: Peak virtual memory: 733 megabytes
+    Info: Processing ended: Thu Feb  2 22:34:02 2017
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

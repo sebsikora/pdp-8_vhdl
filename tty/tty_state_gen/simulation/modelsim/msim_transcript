@@ -73,26 +73,40 @@ vsim -voptargs=+acc work.tty_state_gen
 # Loading work.and_3_gate(rtl)
 # Loading work.ms_jk_ff(gates)
 # Loading work.nand_3_gate(rtl)
-do /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave.do
+do /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_3.do
 # .main_pane.wave.interior.cs.body.pw.wf
 # 0
 run -all
-wave modify -driver freeze -pattern constant -value 0 -starttime 6000ns -endtime 6200ns Edit:/tty_state_gen/CLR_TX_FLAG
-wave modify -driver freeze -pattern constant -value 1 -starttime 5000ns -endtime 5200ns Edit:/tty_state_gen/CLR_TX_FLAG
+restart
+run
+run
+run
+restart
+run
+restart
+run
+run
+run
+restart
+run
+run
+run
+add wave  \
+sim:/tty_state_gen/counter_outputs
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
 restart
 run -all
-restart
-wave modify -driver freeze -pattern constant -value 1 -starttime 5400ns -endtime 5600ns Edit:/tty_state_gen/SEND
-run -all
-restart
-run -all
-restart
-wave modify -driver freeze -pattern constant -value 1 -starttime 200ns -endtime 400ns Edit:/tty_state_gen/CLR_TX_FLAG
-run -all
-wave modify -driver freeze -pattern constant -value 0 -starttime 200ns -endtime 400ns Edit:/tty_state_gen/CLR_TX_FLAG
-wave modify -driver freeze -pattern constant -value 1 -starttime 400ns -endtime 600ns Edit:/tty_state_gen/CLR_TX_FLAG
-restart
-run -all
-restart
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_2.do
-wave editwrite -file /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_2.do -append

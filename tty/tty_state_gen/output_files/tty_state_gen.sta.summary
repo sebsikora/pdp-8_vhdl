@@ -3,83 +3,43 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'SLOW_clk'
-Slack : -11.985
-TNS   : -60.429
-
-Type  : Slow Model Setup 'SEND'
-Slack : -7.848
-TNS   : -31.199
-
-Type  : Slow Model Hold 'SEND'
-Slack : -3.284
-TNS   : -11.066
+Slack : -26.156
+TNS   : -41.916
 
 Type  : Slow Model Hold 'SLOW_clk'
-Slack : 0.967
-TNS   : 0.000
+Slack : -9.711
+TNS   : -9.711
 
 Type  : Slow Model Recovery 'SLOW_clk'
-Slack : -10.470
-TNS   : -29.754
-
-Type  : Slow Model Recovery 'SEND'
-Slack : -7.319
-TNS   : -20.003
+Slack : -18.729
+TNS   : -37.127
 
 Type  : Slow Model Removal 'SLOW_clk'
-Slack : -7.598
-TNS   : -15.412
-
-Type  : Slow Model Removal 'SEND'
-Slack : -4.912
-TNS   : -13.555
+Slack : -10.045
+TNS   : -19.604
 
 Type  : Slow Model Minimum Pulse Width 'SLOW_clk'
-Slack : -4.008
-TNS   : -89.645
-
-Type  : Slow Model Minimum Pulse Width 'SEND'
-Slack : -1.631
-TNS   : -18.543
+Slack : -8.947
+TNS   : -317.189
 
 Type  : Fast Model Setup 'SLOW_clk'
-Slack : -3.341
-TNS   : -16.742
-
-Type  : Fast Model Setup 'SEND'
-Slack : -1.937
-TNS   : -7.486
-
-Type  : Fast Model Hold 'SEND'
-Slack : -1.142
-TNS   : -2.934
+Slack : -7.941
+TNS   : -12.411
 
 Type  : Fast Model Hold 'SLOW_clk'
-Slack : 0.307
-TNS   : 0.000
+Slack : -3.203
+TNS   : -3.203
 
 Type  : Fast Model Recovery 'SLOW_clk'
-Slack : -3.200
-TNS   : -9.027
-
-Type  : Fast Model Recovery 'SEND'
-Slack : -2.108
-TNS   : -5.660
+Slack : -5.995
+TNS   : -11.671
 
 Type  : Fast Model Removal 'SLOW_clk'
-Slack : -2.644
-TNS   : -5.365
-
-Type  : Fast Model Removal 'SEND'
-Slack : -1.690
-TNS   : -4.644
-
-Type  : Fast Model Minimum Pulse Width 'SEND'
-Slack : -1.380
-TNS   : -1.380
+Slack : -3.304
+TNS   : -6.455
 
 Type  : Fast Model Minimum Pulse Width 'SLOW_clk'
-Slack : -1.222
-TNS   : -25.202
+Slack : -2.619
+TNS   : -90.002
 
 ------------------------------------------------------------
