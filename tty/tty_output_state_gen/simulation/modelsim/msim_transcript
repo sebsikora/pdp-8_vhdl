@@ -1,0 +1,173 @@
+# do tty_output_state_gen_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /home/sebsikora/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /home/sebsikora/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ms_jk_ff
+# -- Compiling architecture gates of ms_jk_ff
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity NOT_gate
+# -- Compiling architecture rtl of NOT_gate
+# -- Compiling entity NAND_3_gate
+# -- Compiling architecture rtl of NAND_3_gate
+# -- Compiling entity NAND_gate
+# -- Compiling architecture rtl of NAND_gate
+# -- Compiling entity AND_gate
+# -- Compiling architecture rtl of AND_gate
+# -- Compiling entity AND_3_gate
+# -- Compiling architecture rtl of AND_3_gate
+# -- Compiling entity OR_5_gate
+# -- Compiling architecture rtl of OR_5_gate
+# -- Compiling entity OR_4_gate
+# -- Compiling architecture rtl of OR_4_gate
+# -- Compiling entity NOR_4_gate
+# -- Compiling architecture rtl of NOR_4_gate
+# -- Compiling entity OR_3_gate
+# -- Compiling architecture rtl of OR_3_gate
+# -- Compiling entity OR_gate
+# -- Compiling architecture rtl of OR_gate
+# -- Compiling entity XOR_gate
+# -- Compiling architecture rtl of XOR_gate
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/counters/counter_4_bit/counter_4_bit.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity counter_4_bit
+# -- Compiling architecture rtl of counter_4_bit
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/tty/tty_output_state_gen/tty_output_state_gen.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tty_output_state_gen
+# -- Compiling architecture rtl of tty_output_state_gen
+# 
+vsim -voptargs=+acc work.tty_output_state_gen
+# vsim -voptargs=+acc work.tty_output_state_gen 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tty_output_state_gen(rtl)
+# Loading work.not_gate(rtl)
+# Loading work.or_gate(rtl)
+# Loading work.and_gate(rtl)
+# Loading work.nand_gate(rtl)
+# Loading work.nor_4_gate(rtl)
+# Loading work.counter_4_bit(rtl)
+# Loading work.and_3_gate(rtl)
+# Loading work.ms_jk_ff(gates)
+# Loading work.nand_3_gate(rtl)
+do /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_4.do
+# ** Error: (vish-4014) No objects found matching '/tty_state_gen/ser_clk'.
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_4.do line 3
+# ** Error: (vish-4014) No objects found matching '/tty_state_gen/TX_FLAG'.
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_4.do line 4
+# ** Error: (vish-4014) No objects found matching '/tty_state_gen/TX'.
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_4.do line 5
+# ** Error: (vish-4014) No objects found matching '/tty_state_gen/SLOW_clk_RUN'.
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_4.do line 6
+# ** Error: (vish-4014) No objects found matching '/tty_state_gen/CLR_TX_FLAG'.
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_4.do line 7
+# ** Error: (vish-4014) No objects found matching '/tty_state_gen/not_reset'.
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_4.do line 8
+# ** Error: (vish-4014) No objects found matching '/tty_state_gen/ser_data_in'.
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_4.do line 9
+# ** Error: (vish-4014) No objects found matching '/tty_state_gen/clk'.
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_4.do line 10
+# ** Error: (vish-4014) No objects found matching '/tty_state_gen/SLOW_clk'.
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_4.do line 11
+# ** Error: (vish-4014) No objects found matching '/tty_state_gen/SEND'.
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_4.do line 12
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_4.do line 35
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern clock -initialvalue <value> -period <Time> -dutycycle <Time> -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_4.do line 38
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_4.do line 40
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern clock -initialvalue <value> -period <Time> -dutycycle <Time> -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_4.do line 41
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_4.do line 43
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_4.do line 44
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_4.do line 45
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_4.do line 46
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_4.do line 47
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_4.do line 48
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_4.do line 49
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_4.do line 50
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_4.do line 51
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern clock -initialvalue <value> -period <Time> -dutycycle <Time> -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_4.do line 52
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_4.do line 53
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_4.do line 54
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern clock -initialvalue <value> -period <Time> -dutycycle <Time> -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro /home/sebsikora/altera/projects/pdp-8/tty/tty_state_gen/simulation/modelsim/tty_stategen_test_wave_4.do line 55
+# 0
+wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 20000ns sim:/tty_output_state_gen/CLR_TX_FLAG
+wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 20000ns sim:/tty_output_state_gen/SEND
+wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 20000ns sim:/tty_output_state_gen/SLOW_clk
+wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 20000ns sim:/tty_output_state_gen/clk
+wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 20000ns sim:/tty_output_state_gen/not_reset
+wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 20000ns sim:/tty_output_state_gen/ser_data_in
+add wave  \
+sim:/tty_output_state_gen/ser_clk
+add wave  \
+sim:/tty_output_state_gen/TX_FLAG
+add wave  \
+sim:/tty_output_state_gen/TX
+add wave  \
+sim:/tty_output_state_gen/SLOW_clk_RUN
+wave modify -driver freeze -pattern constant -value 1 -starttime 0ns -endtime 20000ns Edit:/tty_output_state_gen/ser_data_in
+wave modify -driver freeze -pattern constant -value 1 -starttime 200ns -endtime 20000ns Edit:/tty_output_state_gen/not_reset
+wave modify -driver freeze -pattern clock -initialvalue 1 -period 200ns -dutycycle 50 -starttime 200ns -endtime 20000ns Edit:/tty_output_state_gen/clk
+wave modify -driver freeze -pattern constant -value 1 -starttime 200ns -endtime 400ns Edit:/tty_output_state_gen/CLR_TX_FLAG
+wave modify -driver freeze -pattern constant -value 1 -starttime 400ns -endtime 600ns Edit:/tty_output_state_gen/SEND
+wave modify -driver freeze -pattern clock -initialvalue 1 -period 730ns -dutycycle 50 -starttime 600ns -endtime 20000ns Edit:/tty_output_state_gen/SLOW_clk
+run -all
+restart
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/tty/tty_output_state_gen/simulation/modelsim/tty_output_stategen_test_wave.do
+wave editwrite -file /home/sebsikora/altera/projects/pdp-8/tty/tty_output_state_gen/simulation/modelsim/tty_output_stategen_test_wave.do -append
