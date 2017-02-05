@@ -1,0 +1,2934 @@
+|tty_subsystem_test
+clk => tty_subsystem:tty_subsystem_0.clk
+clk => tty_subsystem_test_logic:test_logic.clk
+not_reset => tty_subsystem:tty_subsystem_0.not_reset
+not_reset => tty_subsystem_test_logic:test_logic.not_reset
+RX => tty_subsystem:tty_subsystem_0.RX
+RX_FLAG <= tty_subsystem:tty_subsystem_0.RX_FLAG
+TX <= tty_subsystem:tty_subsystem_0.TX
+TX_FLAG <= tty_subsystem:tty_subsystem_0.TX_FLAG
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0
+clk => divide_by_n:input_clock_divider.clk
+clk => tty_input_state_gen:tti_state_gen.clk
+clk => divide_by_n:output_clock_divider.clk
+clk => tty_output_state_gen:tto_state_gen.clk
+not_reset => shift_register_8_sp:tti_register.not_reset
+not_reset => divide_by_n:input_clock_divider.not_reset
+not_reset => tty_input_state_gen:tti_state_gen.not_reset
+not_reset => shift_register_8_ps:tto_register.not_reset
+not_reset => divide_by_n:output_clock_divider.not_reset
+not_reset => tty_output_state_gen:tto_state_gen.not_reset
+AC_DATA_IN[0] => shift_register_8_ps:tto_register.p_in[0]
+AC_DATA_IN[1] => shift_register_8_ps:tto_register.p_in[1]
+AC_DATA_IN[2] => shift_register_8_ps:tto_register.p_in[2]
+AC_DATA_IN[3] => shift_register_8_ps:tto_register.p_in[3]
+AC_DATA_IN[4] => shift_register_8_ps:tto_register.p_in[4]
+AC_DATA_IN[5] => shift_register_8_ps:tto_register.p_in[5]
+AC_DATA_IN[6] => shift_register_8_ps:tto_register.p_in[6]
+AC_DATA_IN[7] => shift_register_8_ps:tto_register.p_in[7]
+AC_DATA_OUT[0] <= shift_register_8_sp:tti_register.p_out[0]
+AC_DATA_OUT[1] <= shift_register_8_sp:tti_register.p_out[1]
+AC_DATA_OUT[2] <= shift_register_8_sp:tti_register.p_out[2]
+AC_DATA_OUT[3] <= shift_register_8_sp:tti_register.p_out[3]
+AC_DATA_OUT[4] <= shift_register_8_sp:tti_register.p_out[4]
+AC_DATA_OUT[5] <= shift_register_8_sp:tti_register.p_out[5]
+AC_DATA_OUT[6] <= shift_register_8_sp:tti_register.p_out[6]
+AC_DATA_OUT[7] <= shift_register_8_sp:tti_register.p_out[7]
+SEND => tty_output_state_gen:tto_state_gen.SEND
+CLR_RX_FLAG => tty_input_state_gen:tti_state_gen.CLR_RX_FLAG
+RX_FLAG <= tty_input_state_gen:tti_state_gen.RX_FLAG
+RX => tty_input_state_gen:tti_state_gen.RX
+CLR_TX_FLAG => tty_output_state_gen:tto_state_gen.CLR_TX_FLAG
+TX_FLAG <= tty_output_state_gen:tto_state_gen.TX_FLAG
+TX_s_not_p => shift_register_8_ps:tto_register.s_not_p
+TX <= tty_output_state_gen:tto_state_gen.TX
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register
+not_reset => ms_jk_ff:ms_jk_ff_0.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_1.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_2.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_3.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_4.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_5.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_6.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_7.not_reset
+clk => ms_jk_ff:ms_jk_ff_0.clk
+clk => ms_jk_ff:ms_jk_ff_1.clk
+clk => ms_jk_ff:ms_jk_ff_2.clk
+clk => ms_jk_ff:ms_jk_ff_3.clk
+clk => ms_jk_ff:ms_jk_ff_4.clk
+clk => ms_jk_ff:ms_jk_ff_5.clk
+clk => ms_jk_ff:ms_jk_ff_6.clk
+clk => ms_jk_ff:ms_jk_ff_7.clk
+p_out[0] <= ms_jk_ff:ms_jk_ff_0.q
+p_out[1] <= ms_jk_ff:ms_jk_ff_1.q
+p_out[2] <= ms_jk_ff:ms_jk_ff_2.q
+p_out[3] <= ms_jk_ff:ms_jk_ff_3.q
+p_out[4] <= ms_jk_ff:ms_jk_ff_4.q
+p_out[5] <= ms_jk_ff:ms_jk_ff_5.q
+p_out[6] <= ms_jk_ff:ms_jk_ff_6.q
+p_out[7] <= ms_jk_ff:ms_jk_ff_7.q
+s_in => ms_jk_ff:ms_jk_ff_0.j
+s_in => ms_jk_ff:ms_jk_ff_0.k
+s_out <= ms_jk_ff:ms_jk_ff_7.q
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_0
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_1
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_2
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_3
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_3|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_3|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_3|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_4
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_4|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_4|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_4|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_5
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_5|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_5|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_5|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_6
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_6|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_6|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_6|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_7
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_7|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_7|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_7|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|divide_by_n:input_clock_divider
+clk => clk_out_int.CLK
+clk => count[0].CLK
+clk => count[1].CLK
+not_clear => clk_out_int.OUTPUTSELECT
+not_clear => count.OUTPUTSELECT
+not_clear => count.OUTPUTSELECT
+SLOW_clk <= clk_out_int.DB_MAX_OUTPUT_PORT_TYPE
+not_reset => clk_out_int.PRESET
+not_reset => count[0].ACLR
+not_reset => count[1].ACLR
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen
+clk => AND_gate:and_2.inputA
+clk => ms_jk_ff:ms_jk_ff_1.clk
+SLOW_clk => AND_3_gate:and_0.inputA
+SLOW_clk => AND_gate:and_1.inputA
+SLOW_clk => counter_4_bit:tty_input_counter.clk
+SLOW_clk_RUN <= ms_jk_ff:ms_jk_ff_0.q
+not_reset => AND_gate:and_5.inputA
+not_reset => ms_jk_ff:ms_jk_ff_0.not_reset
+not_reset => NOT_gate:not_3.input
+not_reset => counter_4_bit:tty_input_counter.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_1.not_reset
+ser_clk <= AND_3_gate:and_0.output
+CLR_RX_FLAG => ms_jk_ff:ms_jk_ff_1.k
+RX_FLAG <= ms_jk_ff:ms_jk_ff_1.q
+RX => NOT_gate:not_1.input
+RX => ser_data_in.DATAIN
+ser_data_in <= RX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|NOT_gate:not_0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|NOT_gate:not_2
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|AND_3_gate:and_0
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|AND_gate:and_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|AND_gate:and_2
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|AND_gate:and_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|OR_gate:or_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|NOT_gate:not_1
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|OR_gate:or_2
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|AND_gate:and_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_0
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|NOT_gate:not_3
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|OR_gate:or_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter
+clr => OR_gate:or_0_0.inputB
+clr => OR_gate:or_1_0.inputB
+clr => OR_gate:or_2_0.inputB
+clr => AND_gate:and_0_0.inputA
+clr => AND_gate:and_1_1.inputA
+clr => AND_gate:and_2_1.inputA
+clr => ms_jk_ff:ms_jk_ff_0.j
+not_reset => ms_jk_ff:ms_jk_ff_0.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_1.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_2.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_3.not_reset
+clk => ms_jk_ff:ms_jk_ff_0.clk
+clk => ms_jk_ff:ms_jk_ff_1.clk
+clk => ms_jk_ff:ms_jk_ff_2.clk
+clk => ms_jk_ff:ms_jk_ff_3.clk
+output[0] <= ms_jk_ff:ms_jk_ff_0.q
+output[1] <= ms_jk_ff:ms_jk_ff_1.q
+output[2] <= ms_jk_ff:ms_jk_ff_2.q
+output[3] <= ms_jk_ff:ms_jk_ff_3.q
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|AND_gate:and_0_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|OR_gate:or_0_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|AND_gate:and_1_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|AND_gate:and_1_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|OR_gate:or_1_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|AND_3_gate:and_2_0
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|AND_gate:and_2_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|OR_gate:or_2_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_0
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_1
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_2
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_3
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_3|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_3|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_3|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|NOR_4_gate:nor_0
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+inputD => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|AND_gate:and_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register
+not_reset => ms_jk_ff:ms_jk_ff_0.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_1.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_2.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_3.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_4.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_5.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_6.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_7.not_reset
+clk => ms_jk_ff:ms_jk_ff_0.clk
+clk => ms_jk_ff:ms_jk_ff_1.clk
+clk => ms_jk_ff:ms_jk_ff_2.clk
+clk => ms_jk_ff:ms_jk_ff_3.clk
+clk => ms_jk_ff:ms_jk_ff_4.clk
+clk => ms_jk_ff:ms_jk_ff_5.clk
+clk => ms_jk_ff:ms_jk_ff_6.clk
+clk => ms_jk_ff:ms_jk_ff_7.clk
+p_in[0] => AND_gate:and_0_0.inputB
+p_in[1] => AND_gate:and_1_0.inputB
+p_in[2] => AND_gate:and_2_0.inputB
+p_in[3] => AND_gate:and_3_0.inputB
+p_in[4] => AND_gate:and_4_0.inputB
+p_in[5] => AND_gate:and_5_0.inputB
+p_in[6] => AND_gate:and_6_0.inputB
+p_in[7] => AND_gate:and_7_0.inputB
+s_in => AND_gate:and_0_1.inputB
+s_out <= ms_jk_ff:ms_jk_ff_7.q
+s_not_p => AND_gate:and_0_1.inputA
+s_not_p => AND_gate:and_1_1.inputA
+s_not_p => AND_gate:and_2_1.inputA
+s_not_p => AND_gate:and_3_1.inputA
+s_not_p => AND_gate:and_4_1.inputA
+s_not_p => AND_gate:and_5_1.inputA
+s_not_p => AND_gate:and_6_1.inputA
+s_not_p => AND_gate:and_7_1.inputA
+s_not_p => AND_gate:and_0_0.inputA
+s_not_p => AND_gate:and_1_0.inputA
+s_not_p => AND_gate:and_2_0.inputA
+s_not_p => AND_gate:and_3_0.inputA
+s_not_p => AND_gate:and_4_0.inputA
+s_not_p => AND_gate:and_5_0.inputA
+s_not_p => AND_gate:and_6_0.inputA
+s_not_p => AND_gate:and_7_0.inputA
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|AND_gate:and_0_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|AND_gate:and_0_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|OR_gate:or_0_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|AND_gate:and_1_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|AND_gate:and_1_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|OR_gate:or_1_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|AND_gate:and_2_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|AND_gate:and_2_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|OR_gate:or_2_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|AND_gate:and_3_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|AND_gate:and_3_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|OR_gate:or_3_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|AND_gate:and_4_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|AND_gate:and_4_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|OR_gate:or_4_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|AND_gate:and_5_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|AND_gate:and_5_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|OR_gate:or_5_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|AND_gate:and_6_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|AND_gate:and_6_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|OR_gate:or_6_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|AND_gate:and_7_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|AND_gate:and_7_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|OR_gate:or_7_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_0
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_1
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_2
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_3
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_3|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_3|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_3|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_4
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_4|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_4|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_4|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_4|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_5
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_5|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_5|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_5|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_5|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_6
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_6|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_6|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_6|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_7
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_7|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_7|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_7|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|divide_by_n:output_clock_divider
+clk => clk_out_int.CLK
+clk => count[0].CLK
+clk => count[1].CLK
+not_clear => clk_out_int.OUTPUTSELECT
+not_clear => count.OUTPUTSELECT
+not_clear => count.OUTPUTSELECT
+SLOW_clk <= clk_out_int.DB_MAX_OUTPUT_PORT_TYPE
+not_reset => clk_out_int.PRESET
+not_reset => count[0].ACLR
+not_reset => count[1].ACLR
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen
+clk => AND_gate:and_5.inputA
+clk => AND_gate:and_7.inputA
+SLOW_clk => AND_gate:and_3.inputB
+SLOW_clk => AND_gate:and_12.inputB
+SLOW_clk_RUN <= ms_jk_ff:ms_jk_ff_0.q
+not_reset => NOT_gate:not_5.input
+not_reset => counter_4_bit:tty_output_counter.not_reset
+not_reset => AND_gate:and_10.inputA
+not_reset => ms_jk_ff:ms_jk_ff_0.not_reset
+not_reset => AND_gate:and_11.inputA
+not_reset => ms_jk_ff:ms_jk_ff_1.not_reset
+not_reset => AND_gate:and_12.inputA
+not_reset => ms_jk_ff:ms_jk_ff_2.not_reset
+ser_clk <= AND_3_gate:and_4.output
+ser_data_out => NOT_gate:not_0.input
+SEND => ms_jk_ff:ms_jk_ff_0.j
+CLR_TX_FLAG => ms_jk_ff:ms_jk_ff_1.j
+TX_FLAG <= ms_jk_ff:ms_jk_ff_1.not_q
+TX <= NAND_gate:nand_0.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|NOT_gate:not_0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|NOT_gate:not_1
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|OR_gate:or_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|OR_gate:or_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|AND_gate:and_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|AND_gate:and_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|NAND_gate:nand_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|NOR_4_gate:nor_0
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+inputD => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|NOT_gate:not_2
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|NOT_gate:not_5
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|OR_gate:or_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter
+clr => OR_gate:or_0_0.inputB
+clr => OR_gate:or_1_0.inputB
+clr => OR_gate:or_2_0.inputB
+clr => AND_gate:and_0_0.inputA
+clr => AND_gate:and_1_1.inputA
+clr => AND_gate:and_2_1.inputA
+clr => ms_jk_ff:ms_jk_ff_0.j
+not_reset => ms_jk_ff:ms_jk_ff_0.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_1.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_2.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_3.not_reset
+clk => ms_jk_ff:ms_jk_ff_0.clk
+clk => ms_jk_ff:ms_jk_ff_1.clk
+clk => ms_jk_ff:ms_jk_ff_2.clk
+clk => ms_jk_ff:ms_jk_ff_3.clk
+output[0] <= ms_jk_ff:ms_jk_ff_0.q
+output[1] <= ms_jk_ff:ms_jk_ff_1.q
+output[2] <= ms_jk_ff:ms_jk_ff_2.q
+output[3] <= ms_jk_ff:ms_jk_ff_3.q
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|AND_gate:and_0_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|OR_gate:or_0_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|AND_gate:and_1_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|AND_gate:and_1_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|OR_gate:or_1_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|AND_3_gate:and_2_0
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|AND_gate:and_2_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|OR_gate:or_2_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_0
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_1
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_2
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_3
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_3|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_3|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_3|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|AND_gate:and_2
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|AND_gate:and_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|AND_3_gate:and_4
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|NOT_gate:not_3
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|NOT_gate:not_4
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|AND_gate:and_10
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_0
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|OR_gate:or_2
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|AND_gate:and_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|AND_gate:and_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|AND_gate:and_11
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|OR_gate:or_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|AND_gate:and_7
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|AND_gate:and_8
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|AND_gate:and_12
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic
+TX_FLAG => AND_3_gate:and_0.inputA
+clk => AND_3_gate:and_0.inputC
+clk => ms_jk_ff:ms_jk_ff_0.clk
+not_reset => ms_jk_ff:ms_jk_ff_0.not_reset
+not_reset => counter_3_bit:counter_0.not_reset
+RX_FLAG => AND_gate:and_1.inputA
+s_not_p <= NAND_gate:and_2.output
+CLR_TX_FLAG <= decoder_3_to_6:decoder_0.output[1]
+CLR_RX_FLAG <= decoder_3_to_6:decoder_0.output[3]
+SEND <= decoder_3_to_6:decoder_0.output[2]
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|AND_3_gate:and_0
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|AND_gate:and_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|NAND_gate:and_2
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|ms_jk_ff:ms_jk_ff_0
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0
+clr => OR_gate:or_0_0.inputB
+clr => OR_gate:or_1_0.inputB
+clr => AND_gate:and_0_0.inputA
+clr => AND_gate:and_1_1.inputA
+clr => ms_jk_ff:ms_jk_ff_0.j
+not_reset => ms_jk_ff:ms_jk_ff_0.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_1.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_2.not_reset
+clk => ms_jk_ff:ms_jk_ff_0.clk
+clk => ms_jk_ff:ms_jk_ff_1.clk
+clk => ms_jk_ff:ms_jk_ff_2.clk
+output[0] <= ms_jk_ff:ms_jk_ff_0.q
+output[1] <= ms_jk_ff:ms_jk_ff_1.q
+output[2] <= ms_jk_ff:ms_jk_ff_2.q
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|AND_gate:and_0_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|OR_gate:or_0_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|AND_gate:and_1_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|AND_gate:and_1_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|OR_gate:or_1_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_0
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_1
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_2
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|decoder_3_to_6:decoder_0
+input[0] => AND_3_gate:and_3_1.inputA
+input[0] => AND_3_gate:and_3_3.inputA
+input[0] => AND_3_gate:and_3_5.inputA
+input[0] => AND_3_gate:and_3_0.inputA
+input[0] => AND_3_gate:and_3_2.inputA
+input[0] => AND_3_gate:and_3_4.inputA
+input[1] => AND_3_gate:and_3_2.inputB
+input[1] => AND_3_gate:and_3_3.inputB
+input[1] => AND_3_gate:and_3_0.inputB
+input[1] => AND_3_gate:and_3_1.inputB
+input[1] => AND_3_gate:and_3_4.inputB
+input[1] => AND_3_gate:and_3_5.inputB
+input[2] => AND_3_gate:and_3_4.inputC
+input[2] => AND_3_gate:and_3_5.inputC
+input[2] => AND_3_gate:and_3_0.inputC
+input[2] => AND_3_gate:and_3_1.inputC
+input[2] => AND_3_gate:and_3_2.inputC
+input[2] => AND_3_gate:and_3_3.inputC
+output[0] <= AND_3_gate:and_3_0.output
+output[1] <= AND_3_gate:and_3_1.output
+output[2] <= AND_3_gate:and_3_2.output
+output[3] <= AND_3_gate:and_3_3.output
+output[4] <= AND_3_gate:and_3_4.output
+output[5] <= AND_3_gate:and_3_5.output
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|decoder_3_to_6:decoder_0|AND_3_gate:and_3_0
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|decoder_3_to_6:decoder_0|AND_3_gate:and_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|decoder_3_to_6:decoder_0|AND_3_gate:and_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|decoder_3_to_6:decoder_0|AND_3_gate:and_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|decoder_3_to_6:decoder_0|AND_3_gate:and_3_4
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem_test_logic:test_logic|decoder_3_to_6:decoder_0|AND_3_gate:and_3_5
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+

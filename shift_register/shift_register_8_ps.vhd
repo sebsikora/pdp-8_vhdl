@@ -115,14 +115,14 @@ architecture rtl of shift_register_8_ps is
 		not_or_6_0_output <= not or_6_0_output;
 		not_or_7_0_output <= not or_7_0_output;
 		
-		ms_jk_ff_0:			ms_jk_ff  port map (j => or_0_0_output, k => not_or_0_0_output, q => ff_outputs(0), not_q => not_ff_outputs(0), clk => clk, not_reset => not_reset);
-		ms_jk_ff_1:			ms_jk_ff  port map (j => or_1_0_output, k => not_or_1_0_output, q => ff_outputs(1), not_q => not_ff_outputs(1), clk => clk, not_reset => not_reset);
-		ms_jk_ff_2:			ms_jk_ff  port map (j => or_2_0_output, k => not_or_2_0_output, q => ff_outputs(2), not_q => not_ff_outputs(2), clk => clk, not_reset => not_reset);
-		ms_jk_ff_3:			ms_jk_ff  port map (j => or_3_0_output, k => not_or_3_0_output, q => ff_outputs(3), not_q => not_ff_outputs(3), clk => clk, not_reset => not_reset);
-		ms_jk_ff_4:			ms_jk_ff  port map (j => or_4_0_output, k => not_or_4_0_output, q => ff_outputs(4), not_q => not_ff_outputs(4), clk => clk, not_reset => not_reset);
-		ms_jk_ff_5:			ms_jk_ff  port map (j => or_5_0_output, k => not_or_5_0_output, q => ff_outputs(5), not_q => not_ff_outputs(5), clk => clk, not_reset => not_reset);
-		ms_jk_ff_6:			ms_jk_ff  port map (j => or_6_0_output, k => not_or_6_0_output, q => ff_outputs(6), not_q => not_ff_outputs(6), clk => clk, not_reset => not_reset);
-		ms_jk_ff_7:			ms_jk_ff  port map (j => or_7_0_output, k => not_or_7_0_output, q => ff_outputs(7), not_q => not_ff_outputs(7), clk => clk, not_reset => not_reset);
+		ms_jk_ff_0:			ms_jk_ff  port map (j => or_0_0_output, k => not_or_0_0_output, clk => clk, not_reset => not_reset, q => ff_outputs(0), not_q => not_ff_outputs(0));
+		ms_jk_ff_1:			ms_jk_ff  port map (j => or_1_0_output, k => not_or_1_0_output, clk => clk, not_reset => not_reset, q => ff_outputs(1), not_q => not_ff_outputs(1));
+		ms_jk_ff_2:			ms_jk_ff  port map (j => or_2_0_output, k => not_or_2_0_output, clk => clk, not_reset => not_reset, q => ff_outputs(2), not_q => not_ff_outputs(2));
+		ms_jk_ff_3:			ms_jk_ff  port map (j => or_3_0_output, k => not_or_3_0_output, clk => clk, not_reset => not_reset, q => ff_outputs(3), not_q => not_ff_outputs(3));
+		ms_jk_ff_4:			ms_jk_ff  port map (j => or_4_0_output, k => not_or_4_0_output, clk => clk, not_reset => not_reset, q => ff_outputs(4), not_q => not_ff_outputs(4));
+		ms_jk_ff_5:			ms_jk_ff  port map (j => or_5_0_output, k => not_or_5_0_output, clk => clk, not_reset => not_reset, q => ff_outputs(5), not_q => not_ff_outputs(5));
+		ms_jk_ff_6:			ms_jk_ff  port map (j => or_6_0_output, k => not_or_6_0_output, clk => clk, not_reset => not_reset, q => ff_outputs(6), not_q => not_ff_outputs(6));
+		ms_jk_ff_7:			ms_jk_ff  port map (j => or_7_0_output, k => not_or_7_0_output, clk => clk, not_reset => not_reset, q => ff_outputs(7), not_q => not_ff_outputs(7));
 		
 		s_out <= ff_outputs(7);
 end rtl;

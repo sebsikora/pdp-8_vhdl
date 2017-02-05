@@ -1,0 +1,13 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity tty_subsystem_test is
+	port ( input:						in std_logic_vector(2 downto 0);
+			 output:						out std_logic_vector(5 downto 0)
+	);
+end tty_subsystem_test;
+
+architecture rtl of tty_subsystem_test is
+	begin
+		
+end rtl;

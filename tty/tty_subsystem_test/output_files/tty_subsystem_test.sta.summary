@@ -1,0 +1,109 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'clk'
+Slack : -13.582
+TNS   : -72.073
+
+Type  : Slow Model Setup 'tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1'
+Slack : -12.929
+TNS   : -56.715
+
+Type  : Slow Model Setup 'not_reset'
+Slack : -12.715
+TNS   : -52.201
+
+Type  : Slow Model Hold 'not_reset'
+Slack : -5.844
+TNS   : -19.664
+
+Type  : Slow Model Hold 'clk'
+Slack : -3.993
+TNS   : -11.603
+
+Type  : Slow Model Hold 'tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1'
+Slack : -3.772
+TNS   : -10.940
+
+Type  : Slow Model Recovery 'not_reset'
+Slack : -10.935
+TNS   : -10.935
+
+Type  : Slow Model Recovery 'tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1'
+Slack : -0.617
+TNS   : -0.617
+
+Type  : Slow Model Removal 'not_reset'
+Slack : -0.712
+TNS   : -0.712
+
+Type  : Slow Model Removal 'tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1'
+Slack : -0.359
+TNS   : -0.359
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -3.245
+TNS   : -47.061
+
+Type  : Slow Model Minimum Pulse Width 'not_reset'
+Slack : -2.759
+TNS   : -67.847
+
+Type  : Slow Model Minimum Pulse Width 'tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clk'
+Slack : -4.062
+TNS   : -21.202
+
+Type  : Fast Model Setup 'not_reset'
+Slack : -3.802
+TNS   : -13.995
+
+Type  : Fast Model Setup 'tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1'
+Slack : -3.694
+TNS   : -14.921
+
+Type  : Fast Model Hold 'not_reset'
+Slack : -1.905
+TNS   : -6.395
+
+Type  : Fast Model Hold 'clk'
+Slack : -1.288
+TNS   : -3.719
+
+Type  : Fast Model Hold 'tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1'
+Slack : -1.059
+TNS   : -3.032
+
+Type  : Fast Model Recovery 'not_reset'
+Slack : -3.075
+TNS   : -3.075
+
+Type  : Fast Model Recovery 'tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1'
+Slack : 0.214
+TNS   : 0.000
+
+Type  : Fast Model Removal 'not_reset'
+Slack : -0.443
+TNS   : -0.443
+
+Type  : Fast Model Removal 'tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1'
+Slack : -0.185
+TNS   : -0.185
+
+Type  : Fast Model Minimum Pulse Width 'not_reset'
+Slack : -1.380
+TNS   : -14.844
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -11.026
+
+Type  : Fast Model Minimum Pulse Width 'tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~1'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

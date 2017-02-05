@@ -1,0 +1,848 @@
+TimeQuest Timing Analyzer report for tty_subsystem
+Sun Feb  5 18:01:19 2017
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk'
+ 12. Slow Model Setup: 'CLR_TX_FLAG'
+ 13. Slow Model Hold: 'CLR_TX_FLAG'
+ 14. Slow Model Hold: 'clk'
+ 15. Slow Model Minimum Pulse Width: 'CLR_TX_FLAG'
+ 16. Slow Model Minimum Pulse Width: 'clk'
+ 17. Setup Times
+ 18. Hold Times
+ 19. Clock to Output Times
+ 20. Minimum Clock to Output Times
+ 21. Propagation Delay
+ 22. Minimum Propagation Delay
+ 23. Fast Model Setup Summary
+ 24. Fast Model Hold Summary
+ 25. Fast Model Recovery Summary
+ 26. Fast Model Removal Summary
+ 27. Fast Model Minimum Pulse Width Summary
+ 28. Fast Model Setup: 'clk'
+ 29. Fast Model Setup: 'CLR_TX_FLAG'
+ 30. Fast Model Hold: 'CLR_TX_FLAG'
+ 31. Fast Model Hold: 'clk'
+ 32. Fast Model Minimum Pulse Width: 'CLR_TX_FLAG'
+ 33. Fast Model Minimum Pulse Width: 'clk'
+ 34. Setup Times
+ 35. Hold Times
+ 36. Clock to Output Times
+ 37. Minimum Clock to Output Times
+ 38. Propagation Delay
+ 39. Minimum Propagation Delay
+ 40. Multicorner Timing Analysis Summary
+ 41. Setup Times
+ 42. Hold Times
+ 43. Clock to Output Times
+ 44. Minimum Clock to Output Times
+ 45. Progagation Delay
+ 46. Minimum Progagation Delay
+ 47. Setup Transfers
+ 48. Hold Transfers
+ 49. Report TCCS
+ 50. Report RSKM
+ 51. Unconstrained Paths
+ 52. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; tty_subsystem                                                     ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C5AT144A7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                   ;
++-------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------+
+; Clock Name  ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets         ;
++-------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------+
+; clk         ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }         ;
+; CLR_TX_FLAG ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLR_TX_FLAG } ;
++-------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------+
+
+
++---------------------------------------------------+
+; Slow Model Fmax Summary                           ;
++------------+-----------------+-------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name  ; Note ;
++------------+-----------------+-------------+------+
+; 151.1 MHz  ; 151.1 MHz       ; clk         ;      ;
+; 245.88 MHz ; 245.88 MHz      ; CLR_TX_FLAG ;      ;
++------------+-----------------+-------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------------+
+; Slow Model Setup Summary             ;
++-------------+--------+---------------+
+; Clock       ; Slack  ; End Point TNS ;
++-------------+--------+---------------+
+; clk         ; -9.793 ; -12.602       ;
+; CLR_TX_FLAG ; -3.067 ; -3.067        ;
++-------------+--------+---------------+
+
+
++--------------------------------------+
+; Slow Model Hold Summary              ;
++-------------+--------+---------------+
+; Clock       ; Slack  ; End Point TNS ;
++-------------+--------+---------------+
+; CLR_TX_FLAG ; -6.234 ; -6.234        ;
+; clk         ; 0.492  ; 0.000         ;
++-------------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------------+--------+-----------------+
+; Clock       ; Slack  ; End Point TNS   ;
++-------------+--------+-----------------+
+; CLR_TX_FLAG ; -1.469 ; -1.469          ;
+; clk         ; -1.469 ; -1.469          ;
++-------------+--------+-----------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                                                                                                                            ;
++--------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                        ; To Node                                                                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -9.793 ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; CLR_TX_FLAG  ; clk         ; 1.000        ; -6.726     ; 2.621      ;
+; -6.139 ; CLR_TX_FLAG                                                                      ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; CLR_TX_FLAG  ; clk         ; 0.500        ; 2.607      ; 7.800      ;
+; -5.639 ; CLR_TX_FLAG                                                                      ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; CLR_TX_FLAG  ; clk         ; 1.000        ; 2.607      ; 7.800      ;
+; -3.067 ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.621      ;
+; -2.809 ; clk                                                                              ; tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.500        ; 1.946      ; 3.933      ;
+; -2.309 ; clk                                                                              ; tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 1.946      ; 3.933      ;
+; -2.281 ; clk                                                                              ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; clk          ; clk         ; 0.500        ; 2.607      ; 3.942      ;
+; -2.010 ; tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.688      ;
+; -1.781 ; clk                                                                              ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; clk          ; clk         ; 1.000        ; 2.607      ; 3.942      ;
++--------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLR_TX_FLAG'                                                                                                                                                                                                                    ;
++--------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                        ; To Node                                                                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.067 ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; CLR_TX_FLAG  ; CLR_TX_FLAG ; 1.000        ; 0.000      ; 2.621      ;
+; 0.587  ; CLR_TX_FLAG                                                                      ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; CLR_TX_FLAG  ; CLR_TX_FLAG ; 0.500        ; 9.333      ; 7.800      ;
+; 1.087  ; CLR_TX_FLAG                                                                      ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; CLR_TX_FLAG  ; CLR_TX_FLAG ; 1.000        ; 9.333      ; 7.800      ;
+; 3.659  ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; clk          ; CLR_TX_FLAG ; 1.000        ; 6.726      ; 2.621      ;
+; 4.445  ; clk                                                                              ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; clk          ; CLR_TX_FLAG ; 0.500        ; 9.333      ; 3.942      ;
+; 4.945  ; clk                                                                              ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; clk          ; CLR_TX_FLAG ; 1.000        ; 9.333      ; 3.942      ;
++--------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLR_TX_FLAG'                                                                                                                                                                                                                     ;
++--------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                        ; To Node                                                                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -6.234 ; clk                                                                              ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; clk          ; CLR_TX_FLAG ; 0.000        ; 9.333      ; 3.099      ;
+; -5.734 ; clk                                                                              ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; clk          ; CLR_TX_FLAG ; -0.500       ; 9.333      ; 3.099      ;
+; -5.476 ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; clk          ; CLR_TX_FLAG ; 0.000        ; 6.726      ; 1.250      ;
+; -1.533 ; CLR_TX_FLAG                                                                      ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; CLR_TX_FLAG  ; CLR_TX_FLAG ; 0.000        ; 9.333      ; 7.800      ;
+; -1.033 ; CLR_TX_FLAG                                                                      ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; CLR_TX_FLAG  ; CLR_TX_FLAG ; -0.500       ; 9.333      ; 7.800      ;
+; 1.250  ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; CLR_TX_FLAG  ; CLR_TX_FLAG ; 0.000        ; 0.000      ; 1.250      ;
++--------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                                                                                                                            ;
++-------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                        ; To Node                                                                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.492 ; clk                                                                              ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; clk          ; clk         ; 0.000        ; 2.607      ; 3.099      ;
+; 0.992 ; clk                                                                              ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; clk          ; clk         ; -0.500       ; 2.607      ; 3.099      ;
+; 1.250 ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.250      ;
+; 1.334 ; clk                                                                              ; tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 1.946      ; 3.280      ;
+; 1.688 ; tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.688      ;
+; 1.834 ; clk                                                                              ; tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; clk          ; clk         ; -0.500       ; 1.946      ; 3.280      ;
+; 5.193 ; CLR_TX_FLAG                                                                      ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; CLR_TX_FLAG  ; clk         ; 0.000        ; 2.607      ; 7.800      ;
+; 5.693 ; CLR_TX_FLAG                                                                      ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; CLR_TX_FLAG  ; clk         ; -0.500       ; 2.607      ; 7.800      ;
+; 7.976 ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; CLR_TX_FLAG  ; clk         ; 0.000        ; -6.726     ; 1.250      ;
++-------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLR_TX_FLAG'                                                                                                                           ;
++--------+--------------+----------------+------------------+-------------+------------+----------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock       ; Clock Edge ; Target                                                                           ;
++--------+--------------+----------------+------------------+-------------+------------+----------------------------------------------------------------------------------+
+; -1.469 ; 1.000        ; 2.469          ; Port Rate        ; CLR_TX_FLAG ; Rise       ; CLR_TX_FLAG                                                                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLR_TX_FLAG ; Rise       ; CLR_TX_FLAG|combout                                                              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLR_TX_FLAG ; Rise       ; CLR_TX_FLAG|combout                                                              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLR_TX_FLAG ; Rise       ; tto_state_gen|ms_jk_ff_1|nand_3_3|output~1|datab                                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLR_TX_FLAG ; Rise       ; tto_state_gen|ms_jk_ff_1|nand_3_3|output~1|datab                                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLR_TX_FLAG ; Rise       ; tto_state_gen|ms_jk_ff_1|nand_6|output~1|datac                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLR_TX_FLAG ; Rise       ; tto_state_gen|ms_jk_ff_1|nand_6|output~1|datac                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLR_TX_FLAG ; Rise       ; tto_state_gen|or_3|output~1|combout                                              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLR_TX_FLAG ; Rise       ; tto_state_gen|or_3|output~1|combout                                              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLR_TX_FLAG ; Rise       ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLR_TX_FLAG ; Rise       ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ;
++--------+--------------+----------------+------------------+-------------+------------+----------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                                                                             ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                           ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------+
+; -1.469 ; 1.000        ; 2.469          ; Port Rate        ; clk   ; Rise       ; clk                                                                              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                                                                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                                                                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; tti_state_gen|ms_jk_ff_1|nand_5|output~1|datad                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; tti_state_gen|ms_jk_ff_1|nand_5|output~1|datad                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; tto_state_gen|ms_jk_ff_1|nand_6|output~1|datac                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; tto_state_gen|ms_jk_ff_1|nand_6|output~1|datac                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; tto_state_gen|or_3|output~1|combout                                              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; tto_state_gen|or_3|output~1|combout                                              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; tto_state_gen|or_3|output~1|datad                                                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; tto_state_gen|or_3|output~1|datad                                                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Setup Times                                                                ;
++-------------+-------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+-------------+--------+--------+------------+-----------------+
+; CLR_TX_FLAG ; CLR_TX_FLAG ; -0.087 ; -0.087 ; Rise       ; CLR_TX_FLAG     ;
+; clk         ; CLR_TX_FLAG ; -3.945 ; -3.945 ; Rise       ; CLR_TX_FLAG     ;
+; not_reset   ; CLR_TX_FLAG ; -0.477 ; -0.477 ; Rise       ; CLR_TX_FLAG     ;
+; CLR_RX_FLAG ; clk         ; 8.430  ; 8.430  ; Rise       ; clk             ;
+; CLR_TX_FLAG ; clk         ; 6.639  ; 6.639  ; Rise       ; clk             ;
+; clk         ; clk         ; 3.309  ; 3.309  ; Rise       ; clk             ;
+; not_reset   ; clk         ; 8.279  ; 8.279  ; Rise       ; clk             ;
++-------------+-------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Hold Times                                                                 ;
++-------------+-------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+-------------+--------+--------+------------+-----------------+
+; CLR_TX_FLAG ; CLR_TX_FLAG ; 1.533  ; 1.533  ; Rise       ; CLR_TX_FLAG     ;
+; clk         ; CLR_TX_FLAG ; 6.234  ; 6.234  ; Rise       ; CLR_TX_FLAG     ;
+; not_reset   ; CLR_TX_FLAG ; 1.923  ; 1.923  ; Rise       ; CLR_TX_FLAG     ;
+; CLR_RX_FLAG ; clk         ; -7.108 ; -7.108 ; Rise       ; clk             ;
+; CLR_TX_FLAG ; clk         ; -5.193 ; -5.193 ; Rise       ; clk             ;
+; clk         ; clk         ; -0.492 ; -0.492 ; Rise       ; clk             ;
+; not_reset   ; clk         ; -4.803 ; -4.803 ; Rise       ; clk             ;
++-------------+-------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++-----------+-------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+-------------+--------+--------+------------+-----------------+
+; TX_FLAG   ; CLR_TX_FLAG ; 13.476 ; 13.476 ; Rise       ; CLR_TX_FLAG     ;
+; RX_FLAG   ; clk         ; 6.122  ; 6.122  ; Rise       ; clk             ;
+; TX_FLAG   ; clk         ; 6.750  ; 6.750  ; Rise       ; clk             ;
++-----------+-------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++-----------+-------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+-------------+--------+--------+------------+-----------------+
+; TX_FLAG   ; CLR_TX_FLAG ; 13.476 ; 13.476 ; Rise       ; CLR_TX_FLAG     ;
+; RX_FLAG   ; clk         ; 6.122  ; 6.122  ; Rise       ; clk             ;
+; TX_FLAG   ; clk         ; 6.750  ; 6.750  ; Rise       ; clk             ;
++-----------+-------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------+
+; Propagation Delay                                       ;
++------------+----------------+--------+----+----+--------+
+; Input Port ; Output Port    ; RR     ; RF ; FR ; FF     ;
++------------+----------------+--------+----+----+--------+
+; not_reset  ; AC_DATA_OUT[0] ; 10.655 ;    ;    ; 10.655 ;
+; not_reset  ; AC_DATA_OUT[1] ; 10.082 ;    ;    ; 10.082 ;
+; not_reset  ; AC_DATA_OUT[2] ; 10.411 ;    ;    ; 10.411 ;
+; not_reset  ; AC_DATA_OUT[3] ; 10.007 ;    ;    ; 10.007 ;
+; not_reset  ; AC_DATA_OUT[4] ; 10.420 ;    ;    ; 10.420 ;
+; not_reset  ; AC_DATA_OUT[5] ; 10.409 ;    ;    ; 10.409 ;
+; not_reset  ; AC_DATA_OUT[6] ; 10.717 ;    ;    ; 10.717 ;
+; not_reset  ; AC_DATA_OUT[7] ; 10.078 ;    ;    ; 10.078 ;
++------------+----------------+--------+----+----+--------+
+
+
++---------------------------------------------------------+
+; Minimum Propagation Delay                               ;
++------------+----------------+--------+----+----+--------+
+; Input Port ; Output Port    ; RR     ; RF ; FR ; FF     ;
++------------+----------------+--------+----+----+--------+
+; not_reset  ; AC_DATA_OUT[0] ; 10.655 ;    ;    ; 10.655 ;
+; not_reset  ; AC_DATA_OUT[1] ; 10.082 ;    ;    ; 10.082 ;
+; not_reset  ; AC_DATA_OUT[2] ; 10.411 ;    ;    ; 10.411 ;
+; not_reset  ; AC_DATA_OUT[3] ; 10.007 ;    ;    ; 10.007 ;
+; not_reset  ; AC_DATA_OUT[4] ; 10.420 ;    ;    ; 10.420 ;
+; not_reset  ; AC_DATA_OUT[5] ; 10.409 ;    ;    ; 10.409 ;
+; not_reset  ; AC_DATA_OUT[6] ; 10.717 ;    ;    ; 10.717 ;
+; not_reset  ; AC_DATA_OUT[7] ; 10.078 ;    ;    ; 10.078 ;
++------------+----------------+--------+----+----+--------+
+
+
++--------------------------------------+
+; Fast Model Setup Summary             ;
++-------------+--------+---------------+
+; Clock       ; Slack  ; End Point TNS ;
++-------------+--------+---------------+
+; clk         ; -3.376 ; -3.964        ;
+; CLR_TX_FLAG ; -0.316 ; -0.316        ;
++-------------+--------+---------------+
+
+
++--------------------------------------+
+; Fast Model Hold Summary              ;
++-------------+--------+---------------+
+; Clock       ; Slack  ; End Point TNS ;
++-------------+--------+---------------+
+; CLR_TX_FLAG ; -2.903 ; -2.903        ;
+; clk         ; 0.157  ; 0.000         ;
++-------------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------------+--------+-----------------+
+; Clock       ; Slack  ; End Point TNS   ;
++-------------+--------+-----------------+
+; CLR_TX_FLAG ; -1.222 ; -1.222          ;
+; clk         ; -1.222 ; -1.222          ;
++-------------+--------+-----------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                                                                                                                            ;
++--------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                        ; To Node                                                                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.376 ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; CLR_TX_FLAG  ; clk         ; 1.000        ; -3.060     ; 0.856      ;
+; -2.529 ; CLR_TX_FLAG                                                                      ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; CLR_TX_FLAG  ; clk         ; 0.500        ; 1.073      ; 3.642      ;
+; -2.029 ; CLR_TX_FLAG                                                                      ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; CLR_TX_FLAG  ; clk         ; 1.000        ; 1.073      ; 3.642      ;
+; -0.588 ; clk                                                                              ; tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.500        ; 0.863      ; 1.526      ;
+; -0.388 ; clk                                                                              ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; clk          ; clk         ; 0.500        ; 1.073      ; 1.501      ;
+; -0.316 ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; clk          ; clk         ; 1.000        ; 0.000      ; 0.856      ;
+; -0.088 ; clk                                                                              ; tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 0.863      ; 1.526      ;
+; 0.028  ; tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.547      ;
+; 0.112  ; clk                                                                              ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; clk          ; clk         ; 1.000        ; 1.073      ; 1.501      ;
++--------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLR_TX_FLAG'                                                                                                                                                                                                                    ;
++--------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                        ; To Node                                                                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.316 ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; CLR_TX_FLAG  ; CLR_TX_FLAG ; 1.000        ; 0.000      ; 0.856      ;
+; 0.531  ; CLR_TX_FLAG                                                                      ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; CLR_TX_FLAG  ; CLR_TX_FLAG ; 0.500        ; 4.133      ; 3.642      ;
+; 1.031  ; CLR_TX_FLAG                                                                      ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; CLR_TX_FLAG  ; CLR_TX_FLAG ; 1.000        ; 4.133      ; 3.642      ;
+; 2.672  ; clk                                                                              ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; clk          ; CLR_TX_FLAG ; 0.500        ; 4.133      ; 1.501      ;
+; 2.744  ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; clk          ; CLR_TX_FLAG ; 1.000        ; 3.060      ; 0.856      ;
+; 3.172  ; clk                                                                              ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; clk          ; CLR_TX_FLAG ; 1.000        ; 4.133      ; 1.501      ;
++--------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLR_TX_FLAG'                                                                                                                                                                                                                     ;
++--------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                        ; To Node                                                                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.903 ; clk                                                                              ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; clk          ; CLR_TX_FLAG ; 0.000        ; 4.133      ; 1.230      ;
+; -2.656 ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; clk          ; CLR_TX_FLAG ; 0.000        ; 3.060      ; 0.404      ;
+; -2.403 ; clk                                                                              ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; clk          ; CLR_TX_FLAG ; -0.500       ; 4.133      ; 1.230      ;
+; -0.491 ; CLR_TX_FLAG                                                                      ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; CLR_TX_FLAG  ; CLR_TX_FLAG ; 0.000        ; 4.133      ; 3.642      ;
+; 0.009  ; CLR_TX_FLAG                                                                      ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; CLR_TX_FLAG  ; CLR_TX_FLAG ; -0.500       ; 4.133      ; 3.642      ;
+; 0.404  ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; CLR_TX_FLAG  ; CLR_TX_FLAG ; 0.000        ; 0.000      ; 0.404      ;
++--------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                                                                                                                            ;
++-------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                        ; To Node                                                                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.157 ; clk                                                                              ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; clk          ; clk         ; 0.000        ; 1.073      ; 1.230      ;
+; 0.404 ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.404      ;
+; 0.429 ; clk                                                                              ; tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 0.863      ; 1.292      ;
+; 0.547 ; tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.547      ;
+; 0.657 ; clk                                                                              ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; clk          ; clk         ; -0.500       ; 1.073      ; 1.230      ;
+; 0.929 ; clk                                                                              ; tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ; clk          ; clk         ; -0.500       ; 0.863      ; 1.292      ;
+; 2.569 ; CLR_TX_FLAG                                                                      ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; CLR_TX_FLAG  ; clk         ; 0.000        ; 1.073      ; 3.642      ;
+; 3.069 ; CLR_TX_FLAG                                                                      ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; CLR_TX_FLAG  ; clk         ; -0.500       ; 1.073      ; 3.642      ;
+; 3.464 ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ; CLR_TX_FLAG  ; clk         ; 0.000        ; -3.060     ; 0.404      ;
++-------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLR_TX_FLAG'                                                                                                                           ;
++--------+--------------+----------------+------------------+-------------+------------+----------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock       ; Clock Edge ; Target                                                                           ;
++--------+--------------+----------------+------------------+-------------+------------+----------------------------------------------------------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; CLR_TX_FLAG ; Rise       ; CLR_TX_FLAG                                                                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLR_TX_FLAG ; Rise       ; CLR_TX_FLAG|combout                                                              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLR_TX_FLAG ; Rise       ; CLR_TX_FLAG|combout                                                              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLR_TX_FLAG ; Rise       ; tto_state_gen|ms_jk_ff_1|nand_3_3|output~1|datab                                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLR_TX_FLAG ; Rise       ; tto_state_gen|ms_jk_ff_1|nand_3_3|output~1|datab                                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLR_TX_FLAG ; Rise       ; tto_state_gen|ms_jk_ff_1|nand_6|output~1|datac                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLR_TX_FLAG ; Rise       ; tto_state_gen|ms_jk_ff_1|nand_6|output~1|datac                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLR_TX_FLAG ; Rise       ; tto_state_gen|or_3|output~1|combout                                              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLR_TX_FLAG ; Rise       ; tto_state_gen|or_3|output~1|combout                                              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLR_TX_FLAG ; Rise       ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLR_TX_FLAG ; Rise       ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ;
++--------+--------------+----------------+------------------+-------------+------------+----------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                                                                             ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                           ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; clk   ; Rise       ; clk                                                                              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                                                                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                                                                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; tti_state_gen|ms_jk_ff_1|nand_5|output~1|datad                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; tti_state_gen|ms_jk_ff_1|nand_5|output~1|datad                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; tto_state_gen|ms_jk_ff_1|nand_6|output~1|datac                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; tto_state_gen|ms_jk_ff_1|nand_6|output~1|datac                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; tto_state_gen|or_3|output~1|combout                                              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; tto_state_gen|or_3|output~1|combout                                              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; tto_state_gen|or_3|output~1|datad                                                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; tto_state_gen|or_3|output~1|datad                                                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~1  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~1 ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Setup Times                                                                ;
++-------------+-------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+-------------+--------+--------+------------+-----------------+
+; CLR_TX_FLAG ; CLR_TX_FLAG ; -0.031 ; -0.031 ; Rise       ; CLR_TX_FLAG     ;
+; clk         ; CLR_TX_FLAG ; -2.172 ; -2.172 ; Rise       ; CLR_TX_FLAG     ;
+; not_reset   ; CLR_TX_FLAG ; -0.138 ; -0.138 ; Rise       ; CLR_TX_FLAG     ;
+; CLR_RX_FLAG ; clk         ; 3.705  ; 3.705  ; Rise       ; clk             ;
+; CLR_TX_FLAG ; clk         ; 3.029  ; 3.029  ; Rise       ; clk             ;
+; clk         ; clk         ; 1.088  ; 1.088  ; Rise       ; clk             ;
+; not_reset   ; clk         ; 3.603  ; 3.603  ; Rise       ; clk             ;
++-------------+-------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Hold Times                                                                 ;
++-------------+-------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+-------------+--------+--------+------------+-----------------+
+; CLR_TX_FLAG ; CLR_TX_FLAG ; 0.491  ; 0.491  ; Rise       ; CLR_TX_FLAG     ;
+; clk         ; CLR_TX_FLAG ; 2.903  ; 2.903  ; Rise       ; CLR_TX_FLAG     ;
+; not_reset   ; CLR_TX_FLAG ; 0.598  ; 0.598  ; Rise       ; CLR_TX_FLAG     ;
+; CLR_RX_FLAG ; clk         ; -3.280 ; -3.280 ; Rise       ; clk             ;
+; CLR_TX_FLAG ; clk         ; -2.569 ; -2.569 ; Rise       ; clk             ;
+; clk         ; clk         ; -0.157 ; -0.157 ; Rise       ; clk             ;
+; not_reset   ; clk         ; -2.462 ; -2.462 ; Rise       ; clk             ;
++-------------+-------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Clock to Output Times                                                  ;
++-----------+-------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port  ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-------------+-------+-------+------------+-----------------+
+; TX_FLAG   ; CLR_TX_FLAG ; 5.980 ; 5.980 ; Rise       ; CLR_TX_FLAG     ;
+; RX_FLAG   ; clk         ; 2.715 ; 2.715 ; Rise       ; clk             ;
+; TX_FLAG   ; clk         ; 2.920 ; 2.920 ; Rise       ; clk             ;
++-----------+-------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++-----------+-------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port  ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-------------+-------+-------+------------+-----------------+
+; TX_FLAG   ; CLR_TX_FLAG ; 5.980 ; 5.980 ; Rise       ; CLR_TX_FLAG     ;
+; RX_FLAG   ; clk         ; 2.715 ; 2.715 ; Rise       ; clk             ;
+; TX_FLAG   ; clk         ; 2.920 ; 2.920 ; Rise       ; clk             ;
++-----------+-------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------+
+; Propagation Delay                                     ;
++------------+----------------+-------+----+----+-------+
+; Input Port ; Output Port    ; RR    ; RF ; FR ; FF    ;
++------------+----------------+-------+----+----+-------+
+; not_reset  ; AC_DATA_OUT[0] ; 5.114 ;    ;    ; 5.114 ;
+; not_reset  ; AC_DATA_OUT[1] ; 4.849 ;    ;    ; 4.849 ;
+; not_reset  ; AC_DATA_OUT[2] ; 5.000 ;    ;    ; 5.000 ;
+; not_reset  ; AC_DATA_OUT[3] ; 4.829 ;    ;    ; 4.829 ;
+; not_reset  ; AC_DATA_OUT[4] ; 5.010 ;    ;    ; 5.010 ;
+; not_reset  ; AC_DATA_OUT[5] ; 4.999 ;    ;    ; 4.999 ;
+; not_reset  ; AC_DATA_OUT[6] ; 5.123 ;    ;    ; 5.123 ;
+; not_reset  ; AC_DATA_OUT[7] ; 4.839 ;    ;    ; 4.839 ;
++------------+----------------+-------+----+----+-------+
+
+
++-------------------------------------------------------+
+; Minimum Propagation Delay                             ;
++------------+----------------+-------+----+----+-------+
+; Input Port ; Output Port    ; RR    ; RF ; FR ; FF    ;
++------------+----------------+-------+----+----+-------+
+; not_reset  ; AC_DATA_OUT[0] ; 5.114 ;    ;    ; 5.114 ;
+; not_reset  ; AC_DATA_OUT[1] ; 4.849 ;    ;    ; 4.849 ;
+; not_reset  ; AC_DATA_OUT[2] ; 5.000 ;    ;    ; 5.000 ;
+; not_reset  ; AC_DATA_OUT[3] ; 4.829 ;    ;    ; 4.829 ;
+; not_reset  ; AC_DATA_OUT[4] ; 5.010 ;    ;    ; 5.010 ;
+; not_reset  ; AC_DATA_OUT[5] ; 4.999 ;    ;    ; 4.999 ;
+; not_reset  ; AC_DATA_OUT[6] ; 5.123 ;    ;    ; 5.123 ;
+; not_reset  ; AC_DATA_OUT[7] ; 4.839 ;    ;    ; 4.839 ;
++------------+----------------+-------+----+----+-------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+---------+--------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+--------+----------+---------+---------------------+
+; Worst-case Slack ; -9.793  ; -6.234 ; N/A      ; N/A     ; -1.469              ;
+;  CLR_TX_FLAG     ; -3.067  ; -6.234 ; N/A      ; N/A     ; -1.469              ;
+;  clk             ; -9.793  ; 0.157  ; N/A      ; N/A     ; -1.469              ;
+; Design-wide TNS  ; -15.669 ; -6.234 ; 0.0      ; 0.0     ; -2.938              ;
+;  CLR_TX_FLAG     ; -3.067  ; -6.234 ; N/A      ; N/A     ; -1.469              ;
+;  clk             ; -12.602 ; 0.000  ; N/A      ; N/A     ; -1.469              ;
++------------------+---------+--------+----------+---------+---------------------+
+
+
++----------------------------------------------------------------------------+
+; Setup Times                                                                ;
++-------------+-------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+-------------+--------+--------+------------+-----------------+
+; CLR_TX_FLAG ; CLR_TX_FLAG ; -0.031 ; -0.031 ; Rise       ; CLR_TX_FLAG     ;
+; clk         ; CLR_TX_FLAG ; -2.172 ; -2.172 ; Rise       ; CLR_TX_FLAG     ;
+; not_reset   ; CLR_TX_FLAG ; -0.138 ; -0.138 ; Rise       ; CLR_TX_FLAG     ;
+; CLR_RX_FLAG ; clk         ; 8.430  ; 8.430  ; Rise       ; clk             ;
+; CLR_TX_FLAG ; clk         ; 6.639  ; 6.639  ; Rise       ; clk             ;
+; clk         ; clk         ; 3.309  ; 3.309  ; Rise       ; clk             ;
+; not_reset   ; clk         ; 8.279  ; 8.279  ; Rise       ; clk             ;
++-------------+-------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Hold Times                                                                 ;
++-------------+-------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+-------------+--------+--------+------------+-----------------+
+; CLR_TX_FLAG ; CLR_TX_FLAG ; 1.533  ; 1.533  ; Rise       ; CLR_TX_FLAG     ;
+; clk         ; CLR_TX_FLAG ; 6.234  ; 6.234  ; Rise       ; CLR_TX_FLAG     ;
+; not_reset   ; CLR_TX_FLAG ; 1.923  ; 1.923  ; Rise       ; CLR_TX_FLAG     ;
+; CLR_RX_FLAG ; clk         ; -3.280 ; -3.280 ; Rise       ; clk             ;
+; CLR_TX_FLAG ; clk         ; -2.569 ; -2.569 ; Rise       ; clk             ;
+; clk         ; clk         ; -0.157 ; -0.157 ; Rise       ; clk             ;
+; not_reset   ; clk         ; -2.462 ; -2.462 ; Rise       ; clk             ;
++-------------+-------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++-----------+-------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+-------------+--------+--------+------------+-----------------+
+; TX_FLAG   ; CLR_TX_FLAG ; 13.476 ; 13.476 ; Rise       ; CLR_TX_FLAG     ;
+; RX_FLAG   ; clk         ; 6.122  ; 6.122  ; Rise       ; clk             ;
+; TX_FLAG   ; clk         ; 6.750  ; 6.750  ; Rise       ; clk             ;
++-----------+-------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++-----------+-------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port  ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-------------+-------+-------+------------+-----------------+
+; TX_FLAG   ; CLR_TX_FLAG ; 5.980 ; 5.980 ; Rise       ; CLR_TX_FLAG     ;
+; RX_FLAG   ; clk         ; 2.715 ; 2.715 ; Rise       ; clk             ;
+; TX_FLAG   ; clk         ; 2.920 ; 2.920 ; Rise       ; clk             ;
++-----------+-------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------+
+; Progagation Delay                                       ;
++------------+----------------+--------+----+----+--------+
+; Input Port ; Output Port    ; RR     ; RF ; FR ; FF     ;
++------------+----------------+--------+----+----+--------+
+; not_reset  ; AC_DATA_OUT[0] ; 10.655 ;    ;    ; 10.655 ;
+; not_reset  ; AC_DATA_OUT[1] ; 10.082 ;    ;    ; 10.082 ;
+; not_reset  ; AC_DATA_OUT[2] ; 10.411 ;    ;    ; 10.411 ;
+; not_reset  ; AC_DATA_OUT[3] ; 10.007 ;    ;    ; 10.007 ;
+; not_reset  ; AC_DATA_OUT[4] ; 10.420 ;    ;    ; 10.420 ;
+; not_reset  ; AC_DATA_OUT[5] ; 10.409 ;    ;    ; 10.409 ;
+; not_reset  ; AC_DATA_OUT[6] ; 10.717 ;    ;    ; 10.717 ;
+; not_reset  ; AC_DATA_OUT[7] ; 10.078 ;    ;    ; 10.078 ;
++------------+----------------+--------+----+----+--------+
+
+
++-------------------------------------------------------+
+; Minimum Progagation Delay                             ;
++------------+----------------+-------+----+----+-------+
+; Input Port ; Output Port    ; RR    ; RF ; FR ; FF    ;
++------------+----------------+-------+----+----+-------+
+; not_reset  ; AC_DATA_OUT[0] ; 5.114 ;    ;    ; 5.114 ;
+; not_reset  ; AC_DATA_OUT[1] ; 4.849 ;    ;    ; 4.849 ;
+; not_reset  ; AC_DATA_OUT[2] ; 5.000 ;    ;    ; 5.000 ;
+; not_reset  ; AC_DATA_OUT[3] ; 4.829 ;    ;    ; 4.829 ;
+; not_reset  ; AC_DATA_OUT[4] ; 5.010 ;    ;    ; 5.010 ;
+; not_reset  ; AC_DATA_OUT[5] ; 4.999 ;    ;    ; 4.999 ;
+; not_reset  ; AC_DATA_OUT[6] ; 5.123 ;    ;    ; 5.123 ;
+; not_reset  ; AC_DATA_OUT[7] ; 4.839 ;    ;    ; 4.839 ;
++------------+----------------+-------+----+----+-------+
+
+
++-----------------------------------------------------------------------+
+; Setup Transfers                                                       ;
++-------------+-------------+----------+----------+----------+----------+
+; From Clock  ; To Clock    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------+-------------+----------+----------+----------+----------+
+; clk         ; clk         ; 7        ; 3        ; 0        ; 0        ;
+; CLR_TX_FLAG ; clk         ; 4        ; 1        ; 0        ; 0        ;
+; clk         ; CLR_TX_FLAG ; 4        ; 1        ; 0        ; 0        ;
+; CLR_TX_FLAG ; CLR_TX_FLAG ; 4        ; 1        ; 0        ; 0        ;
++-------------+-------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------+
+; Hold Transfers                                                        ;
++-------------+-------------+----------+----------+----------+----------+
+; From Clock  ; To Clock    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------+-------------+----------+----------+----------+----------+
+; clk         ; clk         ; 7        ; 3        ; 0        ; 0        ;
+; CLR_TX_FLAG ; clk         ; 4        ; 1        ; 0        ; 0        ;
+; clk         ; CLR_TX_FLAG ; 4        ; 1        ; 0        ; 0        ;
+; CLR_TX_FLAG ; CLR_TX_FLAG ; 4        ; 1        ; 0        ; 0        ;
++-------------+-------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 11    ; 11   ;
+; Unconstrained Output Ports      ; 10    ; 10   ;
+; Unconstrained Output Port Paths ; 10    ; 10   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Feb  5 18:01:19 2017
+Info: Command: quartus_sta tty_subsystem -c tty_subsystem
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is -40 degrees C
+Info (21077): High junction temperature is 125 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 2 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'tty_subsystem.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLR_TX_FLAG CLR_TX_FLAG
+    Info (332105): create_clock -period 1.000 -name clk clk
+Warning (332125): Found combinational loop of 4 nodes
+    Warning (332126): Node "tti_state_gen|ms_jk_ff_1|nand_1|output~2|combout"
+    Warning (332126): Node "tti_state_gen|ms_jk_ff_1|nand_1|output~1|datac"
+    Warning (332126): Node "tti_state_gen|ms_jk_ff_1|nand_1|output~1|combout"
+    Warning (332126): Node "tti_state_gen|ms_jk_ff_1|nand_1|output~2|dataa"
+Warning (332125): Found combinational loop of 9 nodes
+    Warning (332126): Node "tto_state_gen|ms_jk_ff_1|nand_3_3|output~2|combout"
+    Warning (332126): Node "tto_state_gen|ms_jk_ff_1|nand_3_3|output~1|dataa"
+    Warning (332126): Node "tto_state_gen|ms_jk_ff_1|nand_3_3|output~1|combout"
+    Warning (332126): Node "tto_state_gen|ms_jk_ff_1|nand_3_3|output~2|datab"
+    Warning (332126): Node "tto_state_gen|or_3|output~1|datab"
+    Warning (332126): Node "tto_state_gen|or_3|output~1|combout"
+    Warning (332126): Node "tto_state_gen|ms_jk_ff_1|nand_3_3|output~1|datac"
+    Warning (332126): Node "tto_state_gen|or_3|output~1|dataa"
+    Warning (332126): Node "tto_state_gen|ms_jk_ff_1|nand_3_3|output~2|datac"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "tti_register|ms_jk_ff_7|nand_3_3|output~0|datab"
+    Warning (332126): Node "tti_register|ms_jk_ff_7|nand_3_3|output~0|combout"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "tti_register|ms_jk_ff_6|nand_3_3|output~0|datac"
+    Warning (332126): Node "tti_register|ms_jk_ff_6|nand_3_3|output~0|combout"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "tti_register|ms_jk_ff_5|nand_3_3|output~0|dataa"
+    Warning (332126): Node "tti_register|ms_jk_ff_5|nand_3_3|output~0|combout"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "tti_register|ms_jk_ff_4|nand_3_3|output~0|datab"
+    Warning (332126): Node "tti_register|ms_jk_ff_4|nand_3_3|output~0|combout"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "tti_register|ms_jk_ff_3|nand_3_3|output~0|datac"
+    Warning (332126): Node "tti_register|ms_jk_ff_3|nand_3_3|output~0|combout"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "tti_register|ms_jk_ff_2|nand_3_3|output~0|datab"
+    Warning (332126): Node "tti_register|ms_jk_ff_2|nand_3_3|output~0|combout"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "tti_register|ms_jk_ff_1|nand_3_3|output~0|datab"
+    Warning (332126): Node "tti_register|ms_jk_ff_1|nand_3_3|output~0|combout"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "tti_register|ms_jk_ff_0|nand_3_3|output~0|datab"
+    Warning (332126): Node "tti_register|ms_jk_ff_0|nand_3_3|output~0|combout"
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): From: tto_state_gen|or_3|output~1|datad  to: tto_state_gen|ms_jk_ff_1|nand_3_3|output~2|combout
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -9.793
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -9.793       -12.602 clk 
+    Info (332119):    -3.067        -3.067 CLR_TX_FLAG 
+Info (332146): Worst-case hold slack is -6.234
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -6.234        -6.234 CLR_TX_FLAG 
+    Info (332119):     0.492         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.469
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.469        -1.469 CLR_TX_FLAG 
+    Info (332119):    -1.469        -1.469 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): From: tto_state_gen|or_3|output~1|datad  to: tto_state_gen|ms_jk_ff_1|nand_3_3|output~2|combout
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -3.376
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.376        -3.964 clk 
+    Info (332119):    -0.316        -0.316 CLR_TX_FLAG 
+Info (332146): Worst-case hold slack is -2.903
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.903        -2.903 CLR_TX_FLAG 
+    Info (332119):     0.157         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222        -1.222 CLR_TX_FLAG 
+    Info (332119):    -1.222        -1.222 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 44 warnings
+    Info: Peak virtual memory: 587 megabytes
+    Info: Processing ended: Sun Feb  5 18:01:19 2017
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

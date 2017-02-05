@@ -15,7 +15,7 @@ L75
 Vz6UPELG@T<D9^D:51cnV<0
 Z7 OV;C;10.1d;51
 31
-Z8 !s108 1486305538.924142
+Z8 !s108 1486311744.180686
 Z9 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd|
 Z10 !s107 /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd|
 Z11 o-93 -work work -O0
@@ -85,7 +85,7 @@ L4
 Vbe`LTiTF?;P6=iSCXQKaK0
 R7
 31
-Z16 !s108 1486305538.866401
+Z16 !s108 1486311744.126746
 Z17 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/counters/counter_4_bit/counter_4_bit.vhd|
 Z18 !s107 /home/sebsikora/altera/projects/pdp-8/counters/counter_4_bit/counter_4_bit.vhd|
 R11
@@ -120,7 +120,7 @@ L5
 V]IeQOc`NS8zUgmDdNA0FN0
 R7
 31
-Z22 !s108 1486305538.893836
+Z22 !s108 1486311744.154858
 Z23 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd|
 Z24 !s107 /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd|
 R11
@@ -437,15 +437,15 @@ VWZ4Y=mfX6Z]iEX4JPb`:l2
 R7
 31
 !i10b 1
-Z28 !s108 1486305759.752408
-Z29 !s90 -reportprogress|300|-93|-work|work|-O0|/home/sebsikora/altera/projects/pdp-8/tty/tty_input_state_gen/tty_input_state_gen.vhd|
+Z28 !s108 1486311744.230381
+Z29 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/tty/tty_input_state_gen/tty_input_state_gen.vhd|
 Z30 !s107 /home/sebsikora/altera/projects/pdp-8/tty/tty_input_state_gen/tty_input_state_gen.vhd|
 R11
 R12
 Artl
 R2
 R3
-Z31 DEx4 work 19 tty_input_state_gen 0 22 WZ4Y=mfX6Z]iEX4JPb`:l2
+DEx4 work 19 tty_input_state_gen 0 22 WZ4Y=mfX6Z]iEX4JPb`:l2
 l93
 L16
 VoAE20C1=UQ8mX<iBGZfh=2

@@ -73,42 +73,8 @@ vsim -voptargs=+acc work.tty_input_state_gen
 # Loading work.nand_gate(rtl)
 # Loading work.counter_4_bit(rtl)
 # Loading work.nor_4_gate(rtl)
-do /home/sebsikora/altera/projects/pdp-8/tty/tty_input_state_gen/simulation/modelsim/tty_input_state_gen_test_wave.do
+do /home/sebsikora/altera/projects/pdp-8/tty/tty_input_state_gen/simulation/modelsim/tty_input_state_gen_test_wave_2.do
 # .main_pane.wave.interior.cs.body.pw.wf
 # 0
-add wave  \
-sim:/tty_input_state_gen/SLOW_clk_RUN
-add wave  \
-sim:/tty_input_state_gen/RX_FLAG
-add wave  \
-sim:/tty_input_state_gen/ser_clk
 run -all
-restart
-vcom -93 -work work -O0 /home/sebsikora/altera/projects/pdp-8/tty/tty_input_state_gen/tty_input_state_gen.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity tty_input_state_gen
-# -- Compiling architecture rtl of tty_input_state_gen
-restart
-# Loading work.tty_input_state_gen(rtl)
-run -all
-restart
-restart
-vcom -93 -work work -O0 /home/sebsikora/altera/projects/pdp-8/tty/tty_input_state_gen/tty_input_state_gen.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity tty_input_state_gen
-# -- Compiling architecture rtl of tty_input_state_gen
-restart
-# Loading work.tty_input_state_gen(rtl)
-run -all
-wave modify -driver freeze -pattern constant -value 0 -starttime 7990ns -endtime 20000ns Edit:/tty_input_state_gen/SLOW_clk
-restart
-run -all
-restart
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/tty/tty_input_state_gen/simulation/modelsim/tty_input_state_gen_test_wave_2.do
-wave editwrite -file /home/sebsikora/altera/projects/pdp-8/tty/tty_input_state_gen/simulation/modelsim/tty_input_state_gen_test_wave_2.do -append
+quit
