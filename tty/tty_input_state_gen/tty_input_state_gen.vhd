@@ -78,6 +78,8 @@ architecture rtl of tty_input_state_gen is
 	signal or_0_output:						std_logic;
 	signal or_1_output:						std_logic;
 	signal or_2_output:						std_logic;
+	signal or_3_output:						std_logic;
+	signal or_4_output:						std_logic;
 	
 	signal and_0_output:						std_logic;
 	signal and_1_output:						std_logic;
@@ -85,6 +87,10 @@ architecture rtl of tty_input_state_gen is
 	signal and_3_output:						std_logic;
 	signal and_4_output:						std_logic;
 	signal and_5_output:						std_logic;
+	signal and_6_output:						std_logic;
+	signal and_7_output:						std_logic;
+	signal and_8_output:						std_logic;
+	signal and_9_output:						std_logic;
 	
 	signal ms_jk_ff_0_q:						std_logic;
 	signal ms_jk_ff_0_not_q:				std_logic;
@@ -100,7 +106,7 @@ architecture rtl of tty_input_state_gen is
 		not_0:								NOT_gate port map (input => and_4_output, output => not_0_output);
 		not_2:								NOT_gate port map (input => nor_0_output, output => not_2_output);
 		and_0:								AND_3_gate port map (inputA => SLOW_clk, inputB => not_2_output, inputC => not_0_output, output => and_0_output);
-		and_1:								AND_gate port map (inputA => SLOW_clk, inputB => and_4_output, output => and_1_output);
+		and_1:								AND_gate port map (inputA => SLOW_clk, inputB => and_7_output, output => and_1_output);
 		
 		and_2:								AND_gate port map (inputA => clk, inputB => ms_jk_ff_0_not_q, output => and_2_output);
 		and_3:								AND_gate port map (inputA => and_1_output, inputB => ms_jk_ff_0_q, output => and_3_output);
@@ -111,12 +117,18 @@ architecture rtl of tty_input_state_gen is
 		ms_jk_ff_0:							ms_jk_ff port map (j => not_1_output, k => or_2_output, clk => and_5_output, not_reset => not_reset, q => ms_jk_ff_0_q, not_q => ms_jk_ff_0_not_q);
 		
 		not_3:								NOT_gate port map (input => not_reset, output => not_3_output);
-		or_1:									OR_gate port map (inputA => not_3_output, inputB => and_4_output, output => or_1_output);
-		tty_input_counter:				counter_4_bit port map ( clr => or_1_output, not_reset => not_reset, clk => SLOW_clk, output => counter_outputs);
+		or_1:									OR_gate port map (inputA => not_3_output, inputB => and_7_output, output => or_1_output);
+		and_6:								AND_gate port map (inputA => not_reset, inputB => SLOW_clk, output => and_6_output);
+		tty_input_counter:				counter_4_bit port map ( clr => or_1_output, not_reset => not_reset, clk => and_6_output, output => counter_outputs);
 		nor_0:								NOR_4_gate port map (inputA => counter_outputs(0), inputB => counter_outputs(1), inputC => counter_outputs(2), inputD => counter_outputs(3), output => nor_0_output);
-		and_4:								AND_gate port map (inputA => counter_outputs(3), inputB => counter_outputs(1), output => and_4_output);
+		or_3:									OR_gate port map (inputA => counter_outputs(0), inputB => counter_outputs(1), output => or_3_output);
+		and_4:								AND_gate port map (inputA => counter_outputs(3), inputB => or_3_output, output => and_4_output);
+		and_7:								AND_gate port map (inputA => counter_outputs(3), inputB => counter_outputs(1), output => and_7_output);
 		
-		ms_jk_ff_1:							ms_jk_ff port map ( j => or_1_output, k => CLR_RX_FLAG, clk => clk, not_reset => not_reset, q => ms_jk_ff_1_q, not_q => ms_jk_ff_1_not_q);
+		and_8:								AND_gate port map (inputA => and_7_output, inputB => SLOW_clk, output => and_8_output);
+		and_9:								AND_gate port map (inputA => not_reset, inputB => and_8_output, output => and_9_output);
+		ms_jk_ff_1:							ms_jk_ff port map (j => '1', k => '0', clk => and_9_output, not_reset => not_reset, q => ms_jk_ff_1_q, not_q => ms_jk_ff_1_not_q);
+		
 		
 		SLOW_clk_RUN <= ms_jk_ff_0_q;
 		ser_clk <= and_0_output;

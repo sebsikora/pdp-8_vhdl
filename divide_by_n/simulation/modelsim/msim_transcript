@@ -14,6 +14,132 @@
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
 # -- Compiling entity divide_by_n
 # -- Compiling architecture rtl of divide_by_n
 # 
+vsim -voptargs=+acc work.divide_by_n
+# vsim -voptargs=+acc work.divide_by_n 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.divide_by_n(rtl)
+do /home/sebsikora/altera/projects/pdp-8/divide_by_n/simulation/modelsim/divide_by_n_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/divide_by_n/divide_by_n.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity divide_by_n
+# -- Compiling architecture rtl of divide_by_n
+# 
+quit -sim
+vsim -voptargs=+acc work.divide_by_n
+# vsim -voptargs=+acc work.divide_by_n 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.divide_by_n(rtl)
+wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 10000ns sim:/divide_by_n/not_reset
+wave modify -driver freeze -pattern constant -value 1 -starttime 400ns -endtime 10000ns Edit:/divide_by_n/not_reset
+wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 400ns sim:/divide_by_n/clk
+wave modify -driver freeze -pattern clock -initialvalue 1 -period 200ns -dutycycle 50 -starttime 400ns -endtime 10000ns Edit:/divide_by_n/clk
+wave create -driver freeze -pattern constant -value 1 -starttime 0ns -endtime 10000ns sim:/divide_by_n/not_clear
+add wave  \
+sim:/divide_by_n/SLOW_clk
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+vcom -93 -work work -O0 /home/sebsikora/altera/projects/pdp-8/divide_by_n/divide_by_n.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity divide_by_n
+# -- Compiling architecture rtl of divide_by_n
+restart
+# Loading work.divide_by_n(rtl)
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+vcom -93 -work work -O0 /home/sebsikora/altera/projects/pdp-8/divide_by_n/divide_by_n.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity divide_by_n
+# -- Compiling architecture rtl of divide_by_n
+restart
+# Loading work.divide_by_n(rtl)
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/divide_by_n/simulation/modelsim/divide_by_n_test_wave.do
+wave editwrite -file /home/sebsikora/altera/projects/pdp-8/divide_by_n/simulation/modelsim/divide_by_n_test_wave.do -append

@@ -1,10 +1,17 @@
 |divide_by_n
+clk => prescaler[0].CLK
+clk => prescaler[1].CLK
 clk => clk_out_int.CLK
-clk => count[0].CLK
-clk => count[1].CLK
 not_clear => clk_out_int.OUTPUTSELECT
-not_clear => count.OUTPUTSELECT
-not_clear => count.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => clk_out_int.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
 SLOW_clk <= clk_out_int.DB_MAX_OUTPUT_PORT_TYPE
+not_reset => prescaler[0].ACLR
+not_reset => prescaler[1].ACLR
+not_reset => clk_out_int.PRESET
+not_reset => clk_out_int.ENA
 
 

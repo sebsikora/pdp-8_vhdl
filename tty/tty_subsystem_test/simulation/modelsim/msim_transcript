@@ -14,6 +14,7 @@
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
 # -- Compiling entity divide_by_n
 # -- Compiling architecture rtl of divide_by_n
 # vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/counter_3_bit.vhd}
@@ -128,16 +129,17 @@ vsim -voptargs=+acc work.tty_subsystem_test
 # Loading ieee.std_logic_1164(body)
 # Loading work.tty_subsystem_test(rtl)
 # Loading work.tty_subsystem(rtl)
+# Loading work.and_gate(rtl)
+# Loading work.or_gate(rtl)
 # Loading work.shift_register_8_sp(rtl)
 # Loading work.ms_jk_ff(gates)
 # Loading work.nand_3_gate(rtl)
 # Loading work.nand_gate(rtl)
+# Loading ieee.numeric_std(body)
 # Loading work.divide_by_n(rtl)
 # Loading work.tty_input_state_gen(rtl)
 # Loading work.not_gate(rtl)
 # Loading work.and_3_gate(rtl)
-# Loading work.and_gate(rtl)
-# Loading work.or_gate(rtl)
 # Loading work.counter_4_bit(rtl)
 # Loading work.nor_4_gate(rtl)
 # Loading work.shift_register_8_ps(rtl)
@@ -145,7 +147,155 @@ vsim -voptargs=+acc work.tty_subsystem_test
 # Loading work.tty_subsystem_test_logic(rtl)
 # Loading work.counter_3_bit(rtl)
 # Loading work.decoder_3_to_6(rtl)
-do /home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test/simulation/modelsim/tty_subsystem_test_wave.do
+do /home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test/simulation/modelsim/wave_3.do
 # .main_pane.wave.interior.cs.body.pw.wf
 # 0
+run
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
 run

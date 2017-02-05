@@ -1,8 +1,8 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity divide_by_n is
-	generic (ratio:		integer := 4);
 	port ( clk:				in std_logic;
 			 not_clear:		in std_logic;
 			 SLOW_clk:		out std_logic;
@@ -11,32 +11,33 @@ entity divide_by_n is
 end divide_by_n;
 
 architecture rtl of divide_by_n is
+signal prescaler:			unsigned(3 downto 0);
 signal clk_out_int:		std_logic;
 
 	begin
 	
 	process(clk, not_clear, not_reset)
-		variable count:			integer range 0 to (ratio - 1);
 		begin
 			if not_reset = '0' then
-				clk_out_int <= '1';
-				count := 0;
-			elsif rising_edge(clk) then
-				if not_clear = '0' then
-					clk_out_int <= '1';
-					count := 0;
-				else
-					if count = (ratio / 2) - 1 then
-						clk_out_int <= not clk_out_int;
-						count := count + 1;
-					elsif count = (ratio - 1) then
-						clk_out_int <= not clk_out_int;
-						count := 0;
+				clk_out_int <= '1' after 10 ns;
+				prescaler <= (others => '0') after 10 ns;
+			elsif not_reset = '1' then
+				if rising_edge(clk) then
+					if not_clear = '0' then
+						clk_out_int <= '1' after 10 ns;
+						prescaler <= (others => '0') after 10 ns;
+					elsif not_clear = '1' then
+						if prescaler = "1110" then
+							clk_out_int <= not clk_out_int after 10 ns;
+							prescaler <= (others => '0') after 10 ns;
+						else
+							prescaler <= prescaler + "1" after 10 ns;
+						end if;
 					end if;
 				end if;
 			end if;
 	end process;
 
-SLOW_clk <= clk_out_int;	
+SLOW_clk <= clk_out_int after 10 ns;	
 end rtl;
 	

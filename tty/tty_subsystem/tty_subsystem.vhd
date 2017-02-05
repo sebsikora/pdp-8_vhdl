@@ -62,11 +62,22 @@ architecture rtl of tty_subsystem is
 		);
 	end component;
 	component divide_by_n is
-		generic (ratio:							integer := 4);
 		port ( clk:									in std_logic;
 				 not_clear:							in std_logic;
 				 SLOW_clk:							out std_logic;
 				 not_reset:							in std_logic
+		);
+	end component;
+	component AND_gate is
+		port( inputA: 								in std_logic;
+				inputB:								in std_logic;
+				output:								out std_logic
+		);
+	end component;
+	component OR_gate is
+		port( inputA: 								in std_logic;
+				inputB:								in std_logic;
+				output:								out std_logic
 		);
 	end component;
 	
@@ -82,7 +93,17 @@ architecture rtl of tty_subsystem is
 	signal tto_ser_data:							std_logic;
 	signal tto_ser_data_overflow:				std_logic;
 	
+	signal and_0_output:							std_logic;
+	signal or_0_output:							std_logic;
+	signal not_TX_s_not_p:						std_logic;
+	signal tto_clk_line:							std_logic;
+	
 	begin
+		
+		not_TX_s_not_p <= not TX_s_not_p;
+		and_0:					AND_gate port map (inputA => clk, inputB => not_TX_s_not_p, output => and_0_output);
+		or_0:						OR_gate port map (inputA => and_0_output, inputB => tto_ser_clk, output => or_0_output);
+		tto_clk_line <= or_0_output;
 		
 		tti_register:			shift_register_8_sp port map (not_reset => not_reset,
 																			clk => tti_ser_clk,
@@ -105,7 +126,7 @@ architecture rtl of tty_subsystem is
 									);
 		
 		tto_register:			shift_register_8_ps port map (not_reset => not_reset,
-																			clk => tto_ser_clk,
+																			clk => tto_clk_line,
 																			p_in => AC_DATA_IN,
 																			s_in => '0',
 																			s_out => tto_ser_data,

@@ -10,6 +10,7 @@ TX_FLAG <= tty_subsystem:tty_subsystem_0.TX_FLAG
 
 
 |tty_subsystem_test|tty_subsystem:tty_subsystem_0
+clk => AND_gate:and_0.inputA
 clk => divide_by_n:input_clock_divider.clk
 clk => tty_input_state_gen:tti_state_gen.clk
 clk => divide_by_n:output_clock_divider.clk
@@ -43,7 +44,20 @@ RX => tty_input_state_gen:tti_state_gen.RX
 CLR_TX_FLAG => tty_output_state_gen:tto_state_gen.CLR_TX_FLAG
 TX_FLAG <= tty_output_state_gen:tto_state_gen.TX_FLAG
 TX_s_not_p => shift_register_8_ps:tto_register.s_not_p
+TX_s_not_p => AND_gate:and_0.inputB
 TX <= tty_output_state_gen:tto_state_gen.TX
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|AND_gate:and_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|OR_gate:or_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register
@@ -581,32 +595,46 @@ output <= output.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |tty_subsystem_test|tty_subsystem:tty_subsystem_0|divide_by_n:input_clock_divider
+clk => prescaler[0].CLK
+clk => prescaler[1].CLK
+clk => prescaler[2].CLK
+clk => prescaler[3].CLK
 clk => clk_out_int.CLK
-clk => count[0].CLK
-clk => count[1].CLK
 not_clear => clk_out_int.OUTPUTSELECT
-not_clear => count.OUTPUTSELECT
-not_clear => count.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => clk_out_int.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
 SLOW_clk <= clk_out_int.DB_MAX_OUTPUT_PORT_TYPE
+not_reset => prescaler[0].ACLR
+not_reset => prescaler[1].ACLR
+not_reset => prescaler[2].ACLR
+not_reset => prescaler[3].ACLR
 not_reset => clk_out_int.PRESET
-not_reset => count[0].ACLR
-not_reset => count[1].ACLR
+not_reset => clk_out_int.ENA
 
 
 |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen
 clk => AND_gate:and_2.inputA
-clk => ms_jk_ff:ms_jk_ff_1.clk
 SLOW_clk => AND_3_gate:and_0.inputA
 SLOW_clk => AND_gate:and_1.inputA
-SLOW_clk => counter_4_bit:tty_input_counter.clk
+SLOW_clk => AND_gate:and_6.inputB
+SLOW_clk => AND_gate:and_8.inputB
 SLOW_clk_RUN <= ms_jk_ff:ms_jk_ff_0.q
 not_reset => AND_gate:and_5.inputA
 not_reset => ms_jk_ff:ms_jk_ff_0.not_reset
 not_reset => NOT_gate:not_3.input
+not_reset => AND_gate:and_6.inputA
 not_reset => counter_4_bit:tty_input_counter.not_reset
+not_reset => AND_gate:and_9.inputA
 not_reset => ms_jk_ff:ms_jk_ff_1.not_reset
 ser_clk <= AND_3_gate:and_0.output
-CLR_RX_FLAG => ms_jk_ff:ms_jk_ff_1.k
+CLR_RX_FLAG => ~NO_FANOUT~
 RX_FLAG <= ms_jk_ff:ms_jk_ff_1.q
 RX => NOT_gate:not_1.input
 RX => ser_data_in.DATAIN
@@ -740,6 +768,12 @@ output <= input.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|OR_gate:or_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|AND_gate:and_6
 inputA => output.IN0
 inputB => output.IN1
 output <= output.DB_MAX_OUTPUT_PORT_TYPE
@@ -1076,7 +1110,31 @@ inputD => output.IN1
 output <= output.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|OR_gate:or_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|AND_gate:and_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|AND_gate:and_7
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|AND_gate:and_8
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|AND_gate:and_9
 inputA => output.IN0
 inputB => output.IN1
 output <= output.DB_MAX_OUTPUT_PORT_TYPE
@@ -1839,16 +1897,28 @@ output <= output.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |tty_subsystem_test|tty_subsystem:tty_subsystem_0|divide_by_n:output_clock_divider
+clk => prescaler[0].CLK
+clk => prescaler[1].CLK
+clk => prescaler[2].CLK
+clk => prescaler[3].CLK
 clk => clk_out_int.CLK
-clk => count[0].CLK
-clk => count[1].CLK
 not_clear => clk_out_int.OUTPUTSELECT
-not_clear => count.OUTPUTSELECT
-not_clear => count.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => clk_out_int.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
 SLOW_clk <= clk_out_int.DB_MAX_OUTPUT_PORT_TYPE
+not_reset => prescaler[0].ACLR
+not_reset => prescaler[1].ACLR
+not_reset => prescaler[2].ACLR
+not_reset => prescaler[3].ACLR
 not_reset => clk_out_int.PRESET
-not_reset => count[0].ACLR
-not_reset => count[1].ACLR
+not_reset => clk_out_int.ENA
 
 
 |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen
