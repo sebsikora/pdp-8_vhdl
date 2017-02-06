@@ -151,7 +151,11 @@ do /home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test/simulation/model
 # .main_pane.wave.interior.cs.body.pw.wf
 # 0
 run
-restart
+run
+run
+run
+run
+run
 run
 run
 run

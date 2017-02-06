@@ -1,5 +1,5 @@
 Flow report for tty_subsystem_test
-Sun Feb  5 23:39:28 2017
+Mon Feb  6 00:50:42 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sun Feb  5 23:39:28 2017           ;
+; Flow Status                        ; Successful - Mon Feb  6 00:50:42 2017           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; tty_subsystem_test                              ;
 ; Top-level Entity Name              ; tty_subsystem_test                              ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C5AT144A7                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 156 / 4,608 ( 3 % )                             ;
-;     Total combinational functions  ; 156 / 4,608 ( 3 % )                             ;
+; Total logic elements               ; 170 / 4,608 ( 4 % )                             ;
+;     Total combinational functions  ; 170 / 4,608 ( 4 % )                             ;
 ;     Dedicated logic registers      ; 10 / 4,608 ( < 1 % )                            ;
 ; Total registers                    ; 10                                              ;
 ; Total pins                         ; 6 / 89 ( 7 % )                                  ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/05/2017 23:39:07 ;
+; Start date & time ; 02/06/2017 00:50:21 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; tty_subsystem_test  ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+--------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                          ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+--------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 90520735942130.148633794707050 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 90520735942130.148634222102683 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                           ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)         ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 125                            ; --            ; --          ; --             ;
@@ -92,12 +92,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 704 MB              ; 00:00:03                           ;
-; Fitter                    ; 00:00:06     ; 1.0                     ; 734 MB              ; 00:00:06                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 693 MB              ; 00:00:03                           ;
+; Fitter                    ; 00:00:06     ; 1.0                     ; 738 MB              ; 00:00:06                           ;
 ; Assembler                 ; 00:00:01     ; 1.0                     ; 630 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 587 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 592 MB              ; 00:00:02                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 788 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:12     ; --                      ; --                  ; 00:00:12                           ;
+; Total                     ; 00:00:11     ; --                      ; --                  ; 00:00:13                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

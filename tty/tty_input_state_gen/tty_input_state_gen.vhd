@@ -91,6 +91,7 @@ architecture rtl of tty_input_state_gen is
 	signal and_7_output:						std_logic;
 	signal and_8_output:						std_logic;
 	signal and_9_output:						std_logic;
+	signal and_10_output:						std_logic;
 	
 	signal ms_jk_ff_0_q:						std_logic;
 	signal ms_jk_ff_0_not_q:				std_logic;
@@ -125,9 +126,11 @@ architecture rtl of tty_input_state_gen is
 		and_4:								AND_gate port map (inputA => counter_outputs(3), inputB => or_3_output, output => and_4_output);
 		and_7:								AND_gate port map (inputA => counter_outputs(3), inputB => counter_outputs(1), output => and_7_output);
 		
-		and_8:								AND_gate port map (inputA => and_7_output, inputB => SLOW_clk, output => and_8_output);
-		and_9:								AND_gate port map (inputA => not_reset, inputB => and_8_output, output => and_9_output);
-		ms_jk_ff_1:							ms_jk_ff port map (j => '1', k => '0', clk => and_9_output, not_reset => not_reset, q => ms_jk_ff_1_q, not_q => ms_jk_ff_1_not_q);
+		and_8:								AND_3_gate port map (inputA => and_7_output, inputB => SLOW_clk, inputC => ms_jk_ff_1_not_q, output => and_8_output);
+		and_10:								AND_gate port map (inputA => ms_jk_ff_1_q, inputB => clk, output => and_10_output);
+		or_4:									OR_gate port map (inputA => and_8_output, inputB => and_10_output, output => or_4_output);
+		and_9:								AND_gate port map (inputA => not_reset, inputB => or_4_output, output => and_9_output);
+		ms_jk_ff_1:							ms_jk_ff port map (j => and_7_output, k => CLR_RX_FLAG, clk => and_9_output, not_reset => not_reset, q => ms_jk_ff_1_q, not_q => ms_jk_ff_1_not_q);
 		
 		
 		SLOW_clk_RUN <= ms_jk_ff_0_q;

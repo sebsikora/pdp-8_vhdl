@@ -3,83 +3,123 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'clk'
-Slack : -36.481
-TNS   : -428.677
+Slack : -20.043
+TNS   : -333.854
+
+Type  : Slow Model Setup 'tty_subsystem:tty_subsystem_0|divide_by_n:output_clock_divider|clk_out_int'
+Slack : -19.708
+TNS   : -207.154
 
 Type  : Slow Model Setup 'not_reset'
-Slack : -35.651
-TNS   : -238.966
+Slack : -18.140
+TNS   : -306.527
 
 Type  : Slow Model Hold 'not_reset'
-Slack : -17.985
-TNS   : -89.706
+Slack : -16.305
+TNS   : -145.224
 
 Type  : Slow Model Hold 'clk'
-Slack : -4.925
-TNS   : -14.645
+Slack : -13.033
+TNS   : -112.167
+
+Type  : Slow Model Hold 'tty_subsystem:tty_subsystem_0|divide_by_n:output_clock_divider|clk_out_int'
+Slack : -9.759
+TNS   : -75.477
 
 Type  : Slow Model Recovery 'not_reset'
-Slack : -37.250
-TNS   : -81.301
+Slack : -11.795
+TNS   : -34.101
+
+Type  : Slow Model Recovery 'tty_subsystem:tty_subsystem_0|divide_by_n:output_clock_divider|clk_out_int'
+Slack : -8.729
+TNS   : -8.729
 
 Type  : Slow Model Recovery 'clk'
-Slack : -0.502
-TNS   : -3.496
+Slack : -0.120
+TNS   : -0.578
 
 Type  : Slow Model Removal 'not_reset'
-Slack : -15.381
-TNS   : -21.324
+Slack : -4.473
+TNS   : -8.688
 
 Type  : Slow Model Removal 'clk'
-Slack : 0.537
+Slack : -0.086
+TNS   : -0.086
+
+Type  : Slow Model Removal 'tty_subsystem:tty_subsystem_0|divide_by_n:output_clock_divider|clk_out_int'
+Slack : 0.180
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'not_reset'
-Slack : -16.577
-TNS   : -1197.351
+Slack : -11.575
+TNS   : -1513.381
 
 Type  : Slow Model Minimum Pulse Width 'clk'
-Slack : -4.536
-TNS   : -77.355
+Slack : -8.481
+TNS   : -553.783
+
+Type  : Slow Model Minimum Pulse Width 'tty_subsystem:tty_subsystem_0|divide_by_n:output_clock_divider|clk_out_int'
+Slack : -6.013
+TNS   : -293.456
 
 Type  : Fast Model Setup 'clk'
-Slack : -11.351
-TNS   : -132.003
+Slack : -6.328
+TNS   : -99.171
+
+Type  : Fast Model Setup 'tty_subsystem:tty_subsystem_0|divide_by_n:output_clock_divider|clk_out_int'
+Slack : -5.876
+TNS   : -63.561
 
 Type  : Fast Model Setup 'not_reset'
-Slack : -11.210
-TNS   : -72.390
+Slack : -5.275
+TNS   : -90.128
 
 Type  : Fast Model Hold 'not_reset'
-Slack : -5.823
-TNS   : -30.305
+Slack : -6.019
+TNS   : -54.437
 
 Type  : Fast Model Hold 'clk'
-Slack : -1.613
-TNS   : -4.794
+Slack : -4.939
+TNS   : -43.494
+
+Type  : Fast Model Hold 'tty_subsystem:tty_subsystem_0|divide_by_n:output_clock_divider|clk_out_int'
+Slack : -3.590
+TNS   : -27.767
 
 Type  : Fast Model Recovery 'not_reset'
-Slack : -11.637
-TNS   : -24.829
+Slack : -3.540
+TNS   : -10.253
+
+Type  : Fast Model Recovery 'tty_subsystem:tty_subsystem_0|divide_by_n:output_clock_divider|clk_out_int'
+Slack : -3.087
+TNS   : -3.087
 
 Type  : Fast Model Recovery 'clk'
-Slack : 0.125
+Slack : 0.393
 TNS   : 0.000
 
 Type  : Fast Model Removal 'not_reset'
-Slack : -4.999
-TNS   : -7.824
+Slack : -1.503
+TNS   : -2.915
 
 Type  : Fast Model Removal 'clk'
-Slack : 0.019
+Slack : -0.127
+TNS   : -0.585
+
+Type  : Fast Model Removal 'tty_subsystem:tty_subsystem_0|divide_by_n:output_clock_divider|clk_out_int'
+Slack : 0.052
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'not_reset'
-Slack : -5.024
-TNS   : -330.536
+Slack : -3.477
+TNS   : -409.188
 
 Type  : Fast Model Minimum Pulse Width 'clk'
-Slack : -1.380
-TNS   : -27.466
+Slack : -2.508
+TNS   : -154.302
+
+Type  : Fast Model Minimum Pulse Width 'tty_subsystem:tty_subsystem_0|divide_by_n:output_clock_divider|clk_out_int'
+Slack : -1.649
+TNS   : -66.406
 
 ------------------------------------------------------------

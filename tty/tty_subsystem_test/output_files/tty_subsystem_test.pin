@@ -87,10 +87,10 @@ nCONFIG                      : 20        :        :                   :         
 GND+                         : 21        :        :                   :         : 1         :                
 GND+                         : 22        :        :                   :         : 1         :                
 VCCIO1                       : 23        : power  :                   : 3.3V    : 1         :                
-RX_FLAG                      : 24        : output : 3.3-V LVTTL       :         : 1         : N              
-TX                           : 25        : output : 3.3-V LVTTL       :         : 1         : N              
-TX_FLAG                      : 26        : output : 3.3-V LVTTL       :         : 1         : N              
-not_reset                    : 27        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 24        :        :                   :         : 1         :                
+GND*                         : 25        :        :                   :         : 1         :                
+GND*                         : 26        :        :                   :         : 1         :                
+GND*                         : 27        :        :                   :         : 1         :                
 GND*                         : 28        :        :                   :         : 1         :                
 VCCIO1                       : 29        : power  :                   : 3.3V    : 1         :                
 GND*                         : 30        :        :                   :         : 1         :                
@@ -189,15 +189,15 @@ GND*                         : 122       :        :                   :         
 GND                          : 123       : gnd    :                   :         :           :                
 VCCINT                       : 124       : power  :                   : 1.2V    :           :                
 GND*                         : 125       :        :                   :         : 2         :                
-GND*                         : 126       :        :                   :         : 2         :                
+not_reset                    : 126       : input  : 3.3-V LVTTL       :         : 2         : N              
 VCCIO2                       : 127       : power  :                   : 3.3V    : 2         :                
 GND                          : 128       : gnd    :                   :         :           :                
-GND*                         : 129       :        :                   :         : 2         :                
+TX                           : 129       : output : 3.3-V LVTTL       :         : 2         : N              
 GND                          : 130       : gnd    :                   :         :           :                
 VCCINT                       : 131       : power  :                   : 1.2V    :           :                
-GND*                         : 132       :        :                   :         : 2         :                
+RX_FLAG                      : 132       : output : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : 133       :        :                   :         : 2         :                
-GND*                         : 134       :        :                   :         : 2         :                
+TX_FLAG                      : 134       : output : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : 135       :        :                   :         : 2         :                
 GND*                         : 136       :        :                   :         : 2         :                
 GND*                         : 137       :        :                   :         : 2         :                

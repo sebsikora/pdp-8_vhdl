@@ -621,10 +621,11 @@ not_reset => clk_out_int.ENA
 
 |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen
 clk => AND_gate:and_2.inputA
+clk => AND_gate:and_10.inputB
 SLOW_clk => AND_3_gate:and_0.inputA
 SLOW_clk => AND_gate:and_1.inputA
 SLOW_clk => AND_gate:and_6.inputB
-SLOW_clk => AND_gate:and_8.inputB
+SLOW_clk => AND_3_gate:and_8.inputB
 SLOW_clk_RUN <= ms_jk_ff:ms_jk_ff_0.q
 not_reset => AND_gate:and_5.inputA
 not_reset => ms_jk_ff:ms_jk_ff_0.not_reset
@@ -634,7 +635,7 @@ not_reset => counter_4_bit:tty_input_counter.not_reset
 not_reset => AND_gate:and_9.inputA
 not_reset => ms_jk_ff:ms_jk_ff_1.not_reset
 ser_clk <= AND_3_gate:and_0.output
-CLR_RX_FLAG => ~NO_FANOUT~
+CLR_RX_FLAG => ms_jk_ff:ms_jk_ff_1.k
 RX_FLAG <= ms_jk_ff:ms_jk_ff_1.q
 RX => NOT_gate:not_1.input
 RX => ser_data_in.DATAIN
@@ -1128,7 +1129,20 @@ inputB => output.IN1
 output <= output.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|AND_gate:and_8
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|AND_3_gate:and_8
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|AND_gate:and_10
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|OR_gate:or_4
 inputA => output.IN0
 inputB => output.IN1
 output <= output.DB_MAX_OUTPUT_PORT_TYPE
@@ -1925,7 +1939,8 @@ not_reset => clk_out_int.ENA
 clk => AND_gate:and_5.inputA
 clk => AND_gate:and_7.inputA
 SLOW_clk => AND_gate:and_3.inputB
-SLOW_clk => AND_gate:and_12.inputB
+SLOW_clk => AND_gate:and_6.inputA
+SLOW_clk => AND_3_gate:and_12.inputB
 SLOW_clk_RUN <= ms_jk_ff:ms_jk_ff_0.q
 not_reset => NOT_gate:not_5.input
 not_reset => counter_4_bit:tty_output_counter.not_reset
@@ -1933,7 +1948,7 @@ not_reset => AND_gate:and_10.inputA
 not_reset => ms_jk_ff:ms_jk_ff_0.not_reset
 not_reset => AND_gate:and_11.inputA
 not_reset => ms_jk_ff:ms_jk_ff_1.not_reset
-not_reset => AND_gate:and_12.inputA
+not_reset => AND_3_gate:and_12.inputA
 not_reset => ms_jk_ff:ms_jk_ff_2.not_reset
 ser_clk <= AND_3_gate:and_4.output
 ser_data_out => NOT_gate:not_0.input
@@ -2533,9 +2548,10 @@ inputB => output.IN1
 output <= output.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|AND_gate:and_12
+|tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|AND_3_gate:and_12
 inputA => output.IN0
 inputB => output.IN1
+inputC => output.IN1
 output <= output.DB_MAX_OUTPUT_PORT_TYPE
 
 

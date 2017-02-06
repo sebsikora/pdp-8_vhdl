@@ -1,5 +1,5 @@
 Analysis & Synthesis report for tty_subsystem_test
-Sun Feb  5 23:39:10 2017
+Mon Feb  6 00:50:24 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -21,26 +21,24 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  13. Port Connectivity Checks: "tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_2"
  14. Port Connectivity Checks: "tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_1"
  15. Port Connectivity Checks: "tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_0"
- 16. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2"
- 17. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|NOT_gate:not_2"
- 18. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_7"
- 19. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_6"
- 20. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_5"
- 21. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_4"
- 22. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_3"
- 23. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_2"
- 24. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_1"
- 25. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_0"
- 26. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register"
- 27. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1"
- 28. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_3"
- 29. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_2"
- 30. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_1"
- 31. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_0"
- 32. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_7"
- 33. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register"
- 34. Elapsed Time Per Partition
- 35. Analysis & Synthesis Messages
+ 16. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|NOT_gate:not_2"
+ 17. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_7"
+ 18. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_6"
+ 19. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_5"
+ 20. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_4"
+ 21. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_3"
+ 22. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_2"
+ 23. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_1"
+ 24. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_0"
+ 25. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register"
+ 26. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_3"
+ 27. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_2"
+ 28. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_1"
+ 29. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_0"
+ 30. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_7"
+ 31. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register"
+ 32. Elapsed Time Per Partition
+ 33. Analysis & Synthesis Messages
 
 
 
@@ -66,13 +64,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Feb  5 23:39:10 2017           ;
+; Analysis & Synthesis Status        ; Successful - Mon Feb  6 00:50:24 2017           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; tty_subsystem_test                              ;
 ; Top-level Entity Name              ; tty_subsystem_test                              ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 156                                             ;
-;     Total combinational functions  ; 156                                             ;
+; Total logic elements               ; 170                                             ;
+;     Total combinational functions  ; 170                                             ;
 ;     Dedicated logic registers      ; 10                                              ;
 ; Total registers                    ; 10                                              ;
 ; Total pins                         ; 6                                               ;
@@ -205,16 +203,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 156       ;
+; Estimated Total logic elements              ; 170       ;
 ;                                             ;           ;
-; Total combinational functions               ; 156       ;
+; Total combinational functions               ; 170       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 91        ;
-;     -- 3 input functions                    ; 44        ;
-;     -- <=2 input functions                  ; 21        ;
+;     -- 4 input functions                    ; 90        ;
+;     -- 3 input functions                    ; 56        ;
+;     -- <=2 input functions                  ; 24        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 156       ;
+;     -- normal mode                          ; 170       ;
 ;     -- arithmetic mode                      ; 0         ;
 ;                                             ;           ;
 ; Total registers                             ; 10        ;
@@ -224,9 +222,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; I/O pins                                    ; 6         ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; not_reset ;
-; Maximum fan-out                             ; 59        ;
-; Total fan-out                               ; 571       ;
-; Average fan-out                             ; 3.32      ;
+; Maximum fan-out                             ; 63        ;
+; Total fan-out                               ; 609       ;
+; Average fan-out                             ; 3.27      ;
 +---------------------------------------------+-----------+
 
 
@@ -235,22 +233,23 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                            ; Library Name ;
 +---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |tty_subsystem_test                         ; 156 (0)           ; 10 (0)       ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |tty_subsystem_test                                                                                                                                            ; work         ;
-;    |tty_subsystem:tty_subsystem_0|          ; 142 (0)           ; 10 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0                                                                                                              ; work         ;
-;       |AND_gate:and_0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|AND_gate:and_0                                                                                               ; work         ;
-;       |OR_gate:or_0|                        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|OR_gate:or_0                                                                                                 ; work         ;
+; |tty_subsystem_test                         ; 170 (0)           ; 10 (0)       ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |tty_subsystem_test                                                                                                                                            ; work         ;
+;    |tty_subsystem:tty_subsystem_0|          ; 156 (0)           ; 10 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0                                                                                                              ; work         ;
+;       |OR_gate:or_0|                        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|OR_gate:or_0                                                                                                 ; work         ;
 ;       |divide_by_n:input_clock_divider|     ; 8 (8)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|divide_by_n:input_clock_divider                                                                              ; work         ;
 ;       |divide_by_n:output_clock_divider|    ; 8 (8)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|divide_by_n:output_clock_divider                                                                             ; work         ;
-;       |shift_register_8_ps:tto_register|    ; 31 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register                                                                             ; work         ;
-;          |OR_gate:or_1_0|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|OR_gate:or_1_0                                                              ; work         ;
-;          |OR_gate:or_2_0|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|OR_gate:or_2_0                                                              ; work         ;
-;          |OR_gate:or_3_0|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|OR_gate:or_3_0                                                              ; work         ;
-;          |OR_gate:or_4_0|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|OR_gate:or_4_0                                                              ; work         ;
-;          |OR_gate:or_5_0|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|OR_gate:or_5_0                                                              ; work         ;
-;          |OR_gate:or_6_0|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|OR_gate:or_6_0                                                              ; work         ;
-;          |OR_gate:or_7_0|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|OR_gate:or_7_0                                                              ; work         ;
-;          |ms_jk_ff:ms_jk_ff_0|              ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_0                                                         ; work         ;
-;             |NAND_gate:nand_1|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1                                        ; work         ;
+;       |shift_register_8_ps:tto_register|    ; 39 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register                                                                             ; work         ;
+;          |OR_gate:or_1_0|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|OR_gate:or_1_0                                                              ; work         ;
+;          |OR_gate:or_2_0|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|OR_gate:or_2_0                                                              ; work         ;
+;          |OR_gate:or_3_0|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|OR_gate:or_3_0                                                              ; work         ;
+;          |OR_gate:or_4_0|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|OR_gate:or_4_0                                                              ; work         ;
+;          |OR_gate:or_5_0|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|OR_gate:or_5_0                                                              ; work         ;
+;          |OR_gate:or_6_0|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|OR_gate:or_6_0                                                              ; work         ;
+;          |OR_gate:or_7_0|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|OR_gate:or_7_0                                                              ; work         ;
+;          |ms_jk_ff:ms_jk_ff_0|              ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_0                                                         ; work         ;
+;             |NAND_3_gate:nand_3_1|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_1                                    ; work         ;
+;             |NAND_3_gate:nand_3_3|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_3                                    ; work         ;
+;             |NAND_gate:nand_1|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1                                        ; work         ;
 ;             |NAND_gate:nand_5|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5                                        ; work         ;
 ;          |ms_jk_ff:ms_jk_ff_1|              ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_1                                                         ; work         ;
 ;             |NAND_gate:nand_1|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1                                        ; work         ;
@@ -298,11 +297,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |ms_jk_ff:ms_jk_ff_7|              ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_7                                                         ; work         ;
 ;             |NAND_gate:nand_1|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_1                                        ; work         ;
 ;             |NAND_gate:nand_5|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_5                                        ; work         ;
-;       |tty_input_state_gen:tti_state_gen|   ; 31 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen                                                                            ; work         ;
+;       |tty_input_state_gen:tti_state_gen|   ; 37 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen                                                                            ; work         ;
 ;          |AND_3_gate:and_0|                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|AND_3_gate:and_0                                                           ; work         ;
-;          |AND_gate:and_3|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|AND_gate:and_3                                                             ; work         ;
-;          |AND_gate:and_8|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|AND_gate:and_8                                                             ; work         ;
-;          |OR_gate:or_0|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|OR_gate:or_0                                                               ; work         ;
+;          |AND_gate:and_1|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|AND_gate:and_1                                                             ; work         ;
+;          |AND_gate:and_5|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|AND_gate:and_5                                                             ; work         ;
+;          |AND_gate:and_9|                   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|AND_gate:and_9                                                             ; work         ;
 ;          |OR_gate:or_1|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|OR_gate:or_1                                                               ; work         ;
 ;          |counter_4_bit:tty_input_counter|  ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter                                            ; work         ;
 ;             |ms_jk_ff:ms_jk_ff_0|           ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_0                        ; work         ;
@@ -323,31 +322,30 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                |NAND_gate:nand_5|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5       ; work         ;
 ;                |NAND_gate:nand_6|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_6       ; work         ;
 ;          |ms_jk_ff:ms_jk_ff_0|              ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_0                                                        ; work         ;
-;             |NAND_3_gate:nand_3_2|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_2                                   ; work         ;
-;             |NAND_3_gate:nand_3_3|          ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_3                                   ; work         ;
+;             |NAND_3_gate:nand_3_3|          ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_3                                   ; work         ;
 ;             |NAND_gate:nand_5|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5                                       ; work         ;
 ;             |NAND_gate:nand_6|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_6                                       ; work         ;
-;          |ms_jk_ff:ms_jk_ff_1|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1                                                        ; work         ;
-;             |NAND_gate:nand_1|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1                                       ; work         ;
+;          |ms_jk_ff:ms_jk_ff_1|              ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1                                                        ; work         ;
+;             |NAND_3_gate:nand_3_2|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_2                                   ; work         ;
+;             |NAND_3_gate:nand_3_3|          ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_3                                   ; work         ;
 ;             |NAND_gate:nand_5|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5                                       ; work         ;
-;       |tty_output_state_gen:tto_state_gen|  ; 38 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen                                                                           ; work         ;
-;          |AND_3_gate:and_4|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|AND_3_gate:and_4                                                          ; work         ;
+;             |NAND_gate:nand_6|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6                                       ; work         ;
+;       |tty_output_state_gen:tto_state_gen|  ; 37 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen                                                                           ; work         ;
 ;          |AND_gate:and_10|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|AND_gate:and_10                                                           ; work         ;
-;          |AND_gate:and_11|                  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|AND_gate:and_11                                                           ; work         ;
-;          |AND_gate:and_1|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|AND_gate:and_1                                                            ; work         ;
+;          |AND_gate:and_11|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|AND_gate:and_11                                                           ; work         ;
 ;          |AND_gate:and_3|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|AND_gate:and_3                                                            ; work         ;
-;          |NAND_gate:nand_0|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|NAND_gate:nand_0                                                          ; work         ;
-;          |NOR_4_gate:nor_0|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|NOR_4_gate:nor_0                                                          ; work         ;
+;          |NAND_gate:nand_0|                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|NAND_gate:nand_0                                                          ; work         ;
 ;          |OR_gate:or_4|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|OR_gate:or_4                                                              ; work         ;
-;          |counter_4_bit:tty_output_counter| ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter                                          ; work         ;
+;          |counter_4_bit:tty_output_counter| ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter                                          ; work         ;
 ;             |ms_jk_ff:ms_jk_ff_0|           ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_0                      ; work         ;
 ;                |NAND_gate:nand_1|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1     ; work         ;
 ;                |NAND_gate:nand_5|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5     ; work         ;
-;             |ms_jk_ff:ms_jk_ff_1|           ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_1                      ; work         ;
-;                |NAND_gate:nand_1|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1     ; work         ;
+;             |ms_jk_ff:ms_jk_ff_1|           ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_1                      ; work         ;
+;                |NAND_3_gate:nand_3_3|       ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_3 ; work         ;
+;                |NAND_gate:nand_1|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1     ; work         ;
 ;                |NAND_gate:nand_5|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5     ; work         ;
-;             |ms_jk_ff:ms_jk_ff_2|           ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_2                      ; work         ;
-;                |NAND_gate:nand_1|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1     ; work         ;
+;             |ms_jk_ff:ms_jk_ff_2|           ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_2                      ; work         ;
+;                |NAND_gate:nand_1|           ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1     ; work         ;
 ;                |NAND_gate:nand_5|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5     ; work         ;
 ;             |ms_jk_ff:ms_jk_ff_3|           ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_3                      ; work         ;
 ;                |NAND_3_gate:nand_3_1|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_3|NAND_3_gate:nand_3_1 ; work         ;
@@ -363,27 +361,27 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |NAND_gate:nand_5|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5                                      ; work         ;
 ;             |NAND_gate:nand_6|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6                                      ; work         ;
 ;          |ms_jk_ff:ms_jk_ff_2|              ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2                                                       ; work         ;
-;             |NAND_gate:nand_1|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1                                      ; work         ;
+;             |NAND_3_gate:nand_3_3|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_3                                  ; work         ;
 ;             |NAND_gate:nand_5|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5                                      ; work         ;
+;             |NAND_gate:nand_6|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_6                                      ; work         ;
 ;    |tty_subsystem_test_logic:test_logic|    ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic                                                                                                        ; work         ;
 ;       |AND_3_gate:and_0|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|AND_3_gate:and_0                                                                                       ; work         ;
 ;       |NAND_gate:and_2|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|NAND_gate:and_2                                                                                        ; work         ;
-;       |counter_3_bit:counter_0|             ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0                                                                                ; work         ;
-;          |ms_jk_ff:ms_jk_ff_0|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_0                                                            ; work         ;
+;       |counter_3_bit:counter_0|             ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0                                                                                ; work         ;
+;          |ms_jk_ff:ms_jk_ff_0|              ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_0                                                            ; work         ;
+;             |NAND_3_gate:nand_3_3|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_3                                       ; work         ;
 ;             |NAND_gate:nand_1|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1                                           ; work         ;
 ;             |NAND_gate:nand_5|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5                                           ; work         ;
-;          |ms_jk_ff:ms_jk_ff_1|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_1                                                            ; work         ;
+;          |ms_jk_ff:ms_jk_ff_1|              ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_1                                                            ; work         ;
+;             |NAND_3_gate:nand_3_1|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_1                                       ; work         ;
 ;             |NAND_gate:nand_1|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1                                           ; work         ;
 ;             |NAND_gate:nand_5|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5                                           ; work         ;
-;          |ms_jk_ff:ms_jk_ff_2|              ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_2                                                            ; work         ;
-;             |NAND_3_gate:nand_3_1|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_1                                       ; work         ;
+;          |ms_jk_ff:ms_jk_ff_2|              ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_2                                                            ; work         ;
 ;             |NAND_gate:nand_1|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1                                           ; work         ;
 ;             |NAND_gate:nand_5|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5                                           ; work         ;
-;       |ms_jk_ff:ms_jk_ff_0|                 ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|ms_jk_ff:ms_jk_ff_0                                                                                    ; work         ;
-;          |NAND_3_gate:nand_3_2|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_2                                                               ; work         ;
-;          |NAND_3_gate:nand_3_3|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_3                                                               ; work         ;
-;          |NAND_gate:nand_1|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1                                                                   ; work         ;
-;          |NAND_gate:nand_5|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5                                                                   ; work         ;
+;       |ms_jk_ff:ms_jk_ff_0|                 ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|ms_jk_ff:ms_jk_ff_0                                                                                    ; work         ;
+;          |NAND_3_gate:nand_3_3|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_3                                                               ; work         ;
+;          |NAND_gate:nand_6|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_6                                                                   ; work         ;
 +---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -399,13 +397,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5|output~0 ;    ;
 ; tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_5|output~0                                    ;    ;
 ; tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~0 ;    ;
-; tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~0                                  ;    ;
+; tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_6|output~0                                  ;    ;
+; tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_3|output~0                              ;    ;
 ; tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|AND_gate:and_11|output~0                                                       ;    ;
 ; tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~0                                  ;    ;
 ; tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1|output~0                                  ;    ;
-; tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1|output~0                                   ;    ;
+; tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6|output~0                                   ;    ;
 ; tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~0   ;    ;
 ; tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5|output~0   ;    ;
+; tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_3|output~0                               ;    ;
 ; tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~0 ;    ;
 ; tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1|output~0 ;    ;
 ; tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_1|output~0 ;    ;
@@ -413,25 +413,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~0                                       ;    ;
 ; tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~0                                       ;    ;
 ; tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~0                                       ;    ;
-; tty_subsystem_test_logic:test_logic|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~0                                                               ;    ;
+; tty_subsystem_test_logic:test_logic|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_6|output~0                                                               ;    ;
+; tty_subsystem_test_logic:test_logic|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_3|output~0                                                           ;    ;
 ; tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|counter_4_bit:tty_output_counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1|output~0 ;    ;
-; tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1|output~0                                  ;    ;
+; tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~0                                  ;    ;
 ; tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~0                                   ;    ;
 ; tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1|output~0   ;    ;
 ; tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_1|output~0   ;    ;
-; tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~0                                  ;    ;
 ; tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_5|output~0                                    ;    ;
 ; tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_5|output~0                                    ;    ;
 ; tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1|output~0                                       ;    ;
 ; tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~0                                       ;    ;
 ; tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1|output~0                                       ;    ;
-; tty_subsystem_test_logic:test_logic|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~0                                                               ;    ;
+; tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_6|output~0                                  ;    ;
+; tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_3|output~0                              ;    ;
 ; tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_6|output~0                                   ;    ;
 ; tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_3|output~0                               ;    ;
 ; tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~0   ;    ;
 ; tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~0   ;    ;
-; tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_6|output~0                                  ;    ;
-; tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_3|output~0                              ;    ;
 ; tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_6|NAND_gate:nand_1|output~0                                    ;    ;
 ; tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_7|NAND_gate:nand_1|output~0                                    ;    ;
 ; tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~0   ;    ;
@@ -462,7 +461,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1|output~0                                    ;    ;
 ; tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~0                                    ;    ;
 ; tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~0                                    ;    ;
-; Number of logic cells representing combinational loops                                                                                          ; 69 ;
+; Number of logic cells representing combinational loops                                                                                          ; 70 ;
 +-------------------------------------------------------------------------------------------------------------------------------------------------+----+
 Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -487,8 +486,8 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------------------------------------+---------+
 ; Inverted Register                                                          ; Fan out ;
 +----------------------------------------------------------------------------+---------+
+; tty_subsystem:tty_subsystem_0|divide_by_n:output_clock_divider|clk_out_int ; 7       ;
 ; tty_subsystem:tty_subsystem_0|divide_by_n:input_clock_divider|clk_out_int  ; 14      ;
-; tty_subsystem:tty_subsystem_0|divide_by_n:output_clock_divider|clk_out_int ; 12      ;
 ; Total number of inverted registers = 2                                     ;         ;
 +----------------------------------------------------------------------------+---------+
 
@@ -498,8 +497,8 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|divide_by_n:input_clock_divider|prescaler[0]  ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|divide_by_n:output_clock_divider|prescaler[0] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|divide_by_n:input_clock_divider|prescaler[0]  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------+
 
 
@@ -538,15 +537,6 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; k     ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; not_q ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2" ;
-+-------+--------+----------+--------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                              ;
-+-------+--------+----------+--------------------------------------------------------------------------------------+
-; not_q ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.  ;
-+-------+--------+----------+--------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -639,17 +629,6 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +------+-------+----------+------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|ms_jk_ff:ms_jk_ff_1" ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; j     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; k     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; not_q ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_3" ;
 +-------+--------+----------+---------------------------------------------------------------------------------------------------------------------+
@@ -720,7 +699,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Feb  5 23:39:07 2017
+    Info: Processing started: Mon Feb  6 00:50:21 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tty_subsystem_test -c tty_subsystem_test
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /home/sebsikora/altera/projects/pdp-8/divide_by_n/divide_by_n.vhd
@@ -793,7 +772,6 @@ Info (12128): Elaborating entity "NAND_3_gate" for hierarchy "tty_subsystem:tty_
 Info (12128): Elaborating entity "NAND_gate" for hierarchy "tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1"
 Info (12128): Elaborating entity "divide_by_n" for hierarchy "tty_subsystem:tty_subsystem_0|divide_by_n:input_clock_divider"
 Info (12128): Elaborating entity "tty_input_state_gen" for hierarchy "tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen"
-Warning (10036): Verilog HDL or VHDL warning at tty_input_state_gen.vhd(98): object "ms_jk_ff_1_not_q" assigned a value but never read
 Info (12128): Elaborating entity "NOT_gate" for hierarchy "tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|NOT_gate:not_0"
 Info (12128): Elaborating entity "AND_3_gate" for hierarchy "tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|AND_3_gate:and_0"
 Info (12128): Elaborating entity "counter_4_bit" for hierarchy "tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter"
@@ -806,7 +784,6 @@ Info (12128): Elaborating entity "shift_register_8_ps" for hierarchy "tty_subsys
 Warning (10036): Verilog HDL or VHDL warning at shift_register_8_ps.vhd(38): object "not_ff_outputs" assigned a value but never read
 Info (12128): Elaborating entity "tty_output_state_gen" for hierarchy "tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen"
 Warning (10036): Verilog HDL or VHDL warning at tty_output_state_gen.vhd(76): object "not_2_output" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at tty_output_state_gen.vhd(106): object "ms_jk_ff_2_not_q" assigned a value but never read
 Info (12128): Elaborating entity "tty_subsystem_test_logic" for hierarchy "tty_subsystem_test_logic:test_logic"
 Info (12128): Elaborating entity "counter_3_bit" for hierarchy "tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0"
 Warning (10036): Verilog HDL or VHDL warning at counter_3_bit.vhd(36): object "not_q" assigned a value but never read
@@ -817,13 +794,13 @@ Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 162 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 176 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 156 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 739 megabytes
-    Info: Processing ended: Sun Feb  5 23:39:10 2017
+    Info (21061): Implemented 170 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 732 megabytes
+    Info: Processing ended: Mon Feb  6 00:50:24 2017
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 
