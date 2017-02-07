@@ -67,7 +67,7 @@ architecture rtl of tty_subsystem_test_logic is
 	
 	begin
 		
-		and_0:			AND_3_gate port map (inputA => TX_FLAG, inputB => ms_jk_ff_q, inputC => clk, output => and_output_0);
+		and_0:			AND_gate port map (inputA => TX_FLAG, inputB => clk, output => and_output_0);
 		and_1:			AND_gate port map (inputA => RX_FLAG, inputB => ms_jk_ff_not_q, output => and_output_1);
 		and_2:			NAND_gate port map (inputA => ms_jk_ff_q, inputB => decoder_outputs(0), output => and_output_2);
 		

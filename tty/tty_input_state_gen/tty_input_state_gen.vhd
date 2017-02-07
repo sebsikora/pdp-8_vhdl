@@ -48,6 +48,13 @@ architecture rtl of tty_input_state_gen is
 				output:							out std_logic
 		);
 	end component;
+	component OR_3_gate is
+		port( inputA: 							in std_logic;
+				inputB:							in std_logic;
+				inputC:							in std_logic;
+				output:							out std_logic
+		);
+	end component;
 	component ms_jk_ff is
 		port ( j:								in std_logic;
 				 k:								in std_logic;
@@ -122,9 +129,9 @@ architecture rtl of tty_input_state_gen is
 		and_6:								AND_gate port map (inputA => not_reset, inputB => SLOW_clk, output => and_6_output);
 		tty_input_counter:				counter_4_bit port map ( clr => or_1_output, not_reset => not_reset, clk => and_6_output, output => counter_outputs);
 		nor_0:								NOR_4_gate port map (inputA => counter_outputs(0), inputB => counter_outputs(1), inputC => counter_outputs(2), inputD => counter_outputs(3), output => nor_0_output);
-		or_3:									OR_gate port map (inputA => counter_outputs(0), inputB => counter_outputs(1), output => or_3_output);
+		or_3:									OR_3_gate port map (inputA => counter_outputs(0), inputB => counter_outputs(1), inputC => counter_outputs(2), output => or_3_output);
 		and_4:								AND_gate port map (inputA => counter_outputs(3), inputB => or_3_output, output => and_4_output);
-		and_7:								AND_gate port map (inputA => counter_outputs(3), inputB => counter_outputs(1), output => and_7_output);
+		and_7:								AND_gate port map (inputA => counter_outputs(3), inputB => counter_outputs(2), output => and_7_output);
 		
 		and_8:								AND_3_gate port map (inputA => and_7_output, inputB => SLOW_clk, inputC => ms_jk_ff_1_not_q, output => and_8_output);
 		and_10:								AND_gate port map (inputA => ms_jk_ff_1_q, inputB => clk, output => and_10_output);

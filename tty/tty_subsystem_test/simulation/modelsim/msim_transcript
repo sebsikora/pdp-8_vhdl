@@ -142,6 +142,37 @@ vsim -voptargs=+acc work.tty_subsystem_test
 # Loading work.and_3_gate(rtl)
 # Loading work.counter_4_bit(rtl)
 # Loading work.nor_4_gate(rtl)
+# Loading work.or_3_gate(rtl)
+# Loading work.shift_register_8_ps(rtl)
+# Loading work.tty_output_state_gen(rtl)
+# Loading work.tty_subsystem_test_logic(rtl)
+# Loading work.counter_3_bit(rtl)
+# Loading work.decoder_3_to_6(rtl)
+do /home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test/simulation/modelsim/wave_2.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# 0
+quit -sim
+vsim -voptargs=+acc work.tty_subsystem_test
+# vsim -voptargs=+acc work.tty_subsystem_test 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tty_subsystem_test(rtl)
+# Loading work.tty_subsystem(rtl)
+# Loading work.and_gate(rtl)
+# Loading work.or_gate(rtl)
+# Loading work.shift_register_8_sp(rtl)
+# Loading work.ms_jk_ff(gates)
+# Loading work.nand_3_gate(rtl)
+# Loading work.nand_gate(rtl)
+# Loading ieee.numeric_std(body)
+# Loading work.divide_by_n(rtl)
+# Loading work.tty_input_state_gen(rtl)
+# Loading work.not_gate(rtl)
+# Loading work.and_3_gate(rtl)
+# Loading work.counter_4_bit(rtl)
+# Loading work.nor_4_gate(rtl)
+# Loading work.or_3_gate(rtl)
 # Loading work.shift_register_8_ps(rtl)
 # Loading work.tty_output_state_gen(rtl)
 # Loading work.tty_subsystem_test_logic(rtl)
@@ -150,156 +181,14 @@ vsim -voptargs=+acc work.tty_subsystem_test
 do /home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test/simulation/modelsim/wave_3.do
 # .main_pane.wave.interior.cs.body.pw.wf
 # 0
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
+run -all
+restart
+add wave  \
+sim:/tty_subsystem_test/tty_subsystem_0/tto_SLOW_clk
+add wave  \
+sim:/tty_subsystem_test/tty_subsystem_0/tti_SLOW_clk
+add wave  \
+sim:/tty_subsystem_test/tty_subsystem_0/tto_SLOW_clk_run
+add wave  \
+sim:/tty_subsystem_test/tty_subsystem_0/tti_SLOW_clk_run
+run -all
