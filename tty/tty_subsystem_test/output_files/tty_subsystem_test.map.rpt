@@ -1,5 +1,5 @@
 Analysis & Synthesis report for tty_subsystem_test
-Tue Feb  7 22:15:49 2017
+Mon Feb 13 22:15:44 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -37,8 +37,9 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  29. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|tty_input_state_gen:tti_state_gen|counter_4_bit:tty_input_counter|ms_jk_ff:ms_jk_ff_0"
  30. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register|ms_jk_ff:ms_jk_ff_7"
  31. Port Connectivity Checks: "tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register"
- 32. Elapsed Time Per Partition
- 33. Analysis & Synthesis Messages
+ 32. Port Connectivity Checks: "divide_by_50M:heartbeat_divider"
+ 33. Elapsed Time Per Partition
+ 34. Analysis & Synthesis Messages
 
 
 
@@ -64,16 +65,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Feb  7 22:15:49 2017           ;
+; Analysis & Synthesis Status        ; Successful - Mon Feb 13 22:15:44 2017           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; tty_subsystem_test                              ;
 ; Top-level Entity Name              ; tty_subsystem_test                              ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 167                                             ;
-;     Total combinational functions  ; 167                                             ;
-;     Dedicated logic registers      ; 10                                              ;
-; Total registers                    ; 10                                              ;
-; Total pins                         ; 6                                               ;
+; Total logic elements               ; 234                                             ;
+;     Total combinational functions  ; 234                                             ;
+;     Dedicated logic registers      ; 53                                              ;
+; Total registers                    ; 53                                              ;
+; Total pins                         ; 9                                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -195,6 +196,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; ../tty_subsystem/tty_subsystem.vhd                       ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem/tty_subsystem.vhd                       ;         ;
 ; ../tty_subsystem_test_logic/tty_subsystem_test_logic.vhd ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test_logic/tty_subsystem_test_logic.vhd ;         ;
 ; tty_subsystem_test.vhd                                   ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test/tty_subsystem_test.vhd             ;         ;
+; ../../divide_by_n/divide_by_50M.vhd                      ; yes             ; User VHDL File  ; /home/sebsikora/altera/projects/pdp-8/divide_by_n/divide_by_50M.vhd                             ;         ;
 +----------------------------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------+---------+
 
 
@@ -203,28 +205,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 167       ;
+; Estimated Total logic elements              ; 234       ;
 ;                                             ;           ;
-; Total combinational functions               ; 167       ;
+; Total combinational functions               ; 234       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 95        ;
-;     -- 3 input functions                    ; 45        ;
-;     -- <=2 input functions                  ; 27        ;
+;     -- 4 input functions                    ; 107       ;
+;     -- 3 input functions                    ; 36        ;
+;     -- <=2 input functions                  ; 91        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 167       ;
-;     -- arithmetic mode                      ; 0         ;
+;     -- normal mode                          ; 187       ;
+;     -- arithmetic mode                      ; 47        ;
 ;                                             ;           ;
-; Total registers                             ; 10        ;
-;     -- Dedicated logic registers            ; 10        ;
+; Total registers                             ; 53        ;
+;     -- Dedicated logic registers            ; 53        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 6         ;
+; I/O pins                                    ; 9         ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; not_reset ;
-; Maximum fan-out                             ; 65        ;
-; Total fan-out                               ; 602       ;
-; Average fan-out                             ; 3.29      ;
+; Maximum fan-out                             ; 109       ;
+; Total fan-out                               ; 904       ;
+; Average fan-out                             ; 3.05      ;
 +---------------------------------------------+-----------+
 
 
@@ -233,11 +235,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                            ; Library Name ;
 +---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |tty_subsystem_test                         ; 167 (0)           ; 10 (0)       ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |tty_subsystem_test                                                                                                                                            ; work         ;
-;    |tty_subsystem:tty_subsystem_0|          ; 150 (0)           ; 10 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0                                                                                                              ; work         ;
+; |tty_subsystem_test                         ; 234 (0)           ; 53 (0)       ; 0           ; 0            ; 0       ; 0         ; 9    ; 0            ; |tty_subsystem_test                                                                                                                                            ; work         ;
+;    |divide_by_50M:heartbeat_divider|        ; 48 (48)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|divide_by_50M:heartbeat_divider                                                                                                            ; work         ;
+;    |tty_subsystem:tty_subsystem_0|          ; 170 (0)           ; 26 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0                                                                                                              ; work         ;
 ;       |OR_gate:or_0|                        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|OR_gate:or_0                                                                                                 ; work         ;
-;       |divide_by_n:input_clock_divider|     ; 8 (8)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|divide_by_n:input_clock_divider                                                                              ; work         ;
-;       |divide_by_n:output_clock_divider|    ; 8 (8)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|divide_by_n:output_clock_divider                                                                             ; work         ;
+;       |divide_by_n:input_clock_divider|     ; 18 (18)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|divide_by_n:input_clock_divider                                                                              ; work         ;
+;       |divide_by_n:output_clock_divider|    ; 18 (18)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|divide_by_n:output_clock_divider                                                                             ; work         ;
 ;       |shift_register_8_ps:tto_register|    ; 32 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register                                                                             ; work         ;
 ;          |OR_gate:or_1_0|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|OR_gate:or_1_0                                                              ; work         ;
 ;          |OR_gate:or_2_0|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|shift_register_8_ps:tto_register|OR_gate:or_2_0                                                              ; work         ;
@@ -368,17 +371,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |NAND_3_gate:nand_3_3|          ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_3                                  ; work         ;
 ;             |NAND_gate:nand_5|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5                                      ; work         ;
 ;             |NAND_gate:nand_6|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|tty_output_state_gen:tto_state_gen|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_6                                      ; work         ;
-;    |tty_subsystem_test_logic:test_logic|    ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic                                                                                                        ; work         ;
+;    |tty_subsystem_test_logic:test_logic|    ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic                                                                                                        ; work         ;
 ;       |NAND_gate:and_2|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|NAND_gate:and_2                                                                                        ; work         ;
-;       |counter_3_bit:counter_0|             ; 12 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0                                                                                ; work         ;
+;       |counter_3_bit:counter_0|             ; 11 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0                                                                                ; work         ;
 ;          |ms_jk_ff:ms_jk_ff_0|              ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_0                                                            ; work         ;
 ;             |NAND_gate:nand_1|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1                                           ; work         ;
 ;             |NAND_gate:nand_5|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5                                           ; work         ;
 ;          |ms_jk_ff:ms_jk_ff_1|              ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_1                                                            ; work         ;
 ;             |NAND_gate:nand_1|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1                                           ; work         ;
 ;             |NAND_gate:nand_5|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5                                           ; work         ;
-;          |ms_jk_ff:ms_jk_ff_2|              ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_2                                                            ; work         ;
-;             |NAND_3_gate:nand_3_1|          ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_1                                       ; work         ;
+;          |ms_jk_ff:ms_jk_ff_2|              ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_2                                                            ; work         ;
+;             |NAND_3_gate:nand_3_1|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_1                                       ; work         ;
 ;             |NAND_3_gate:nand_3_3|          ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_3                                       ; work         ;
 ;             |NAND_gate:nand_1|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1                                           ; work         ;
 ;             |NAND_gate:nand_5|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_subsystem_test|tty_subsystem_test_logic:test_logic|counter_3_bit:counter_0|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5                                           ; work         ;
@@ -474,10 +477,10 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 10    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 53    ;
+; Number of registers using Synchronous Clear  ; 24    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 10    ;
+; Number of registers using Asynchronous Clear ; 53    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -489,20 +492,20 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------------------------------------+---------+
 ; Inverted Register                                                          ; Fan out ;
 +----------------------------------------------------------------------------+---------+
-; tty_subsystem:tty_subsystem_0|divide_by_n:output_clock_divider|clk_out_int ; 8       ;
-; tty_subsystem:tty_subsystem_0|divide_by_n:input_clock_divider|clk_out_int  ; 24      ;
+; tty_subsystem:tty_subsystem_0|divide_by_n:output_clock_divider|clk_out_int ; 9       ;
+; tty_subsystem:tty_subsystem_0|divide_by_n:input_clock_divider|clk_out_int  ; 25      ;
 ; Total number of inverted registers = 2                                     ;         ;
 +----------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|divide_by_n:output_clock_divider|prescaler[0] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|divide_by_n:input_clock_divider|prescaler[0]  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------+
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|divide_by_n:output_clock_divider|prescaler[10] ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |tty_subsystem_test|tty_subsystem:tty_subsystem_0|divide_by_n:input_clock_divider|prescaler[3]   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------+
@@ -687,6 +690,15 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++-------------------------------------------------------------+
+; Port Connectivity Checks: "divide_by_50M:heartbeat_divider" ;
++-----------+-------+----------+------------------------------+
+; Port      ; Type  ; Severity ; Details                      ;
++-----------+-------+----------+------------------------------+
+; not_clear ; Input ; Info     ; Stuck at VCC                 ;
++-----------+-------+----------+------------------------------+
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -702,7 +714,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Feb  7 22:15:45 2017
+    Info: Processing started: Mon Feb 13 22:15:41 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tty_subsystem_test -c tty_subsystem_test
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /home/sebsikora/altera/projects/pdp-8/divide_by_n/divide_by_n.vhd
@@ -767,9 +779,13 @@ Info (12021): Found 2 design units, including 1 entities, in source file tty_sub
 Info (12021): Found 2 design units, including 1 entities, in source file /home/sebsikora/altera/projects/pdp-8/tty/tty_output_state_gen/tty_output_state_gen_2.vhd
     Info (12022): Found design unit 1: tty_output_state_gen_2-rtl
     Info (12023): Found entity 1: tty_output_state_gen_2
+Info (12021): Found 2 design units, including 1 entities, in source file /home/sebsikora/altera/projects/pdp-8/divide_by_n/divide_by_50M.vhd
+    Info (12022): Found design unit 1: divide_by_50M-rtl
+    Info (12023): Found entity 1: divide_by_50M
 Info (12127): Elaborating entity "tty_subsystem_test" for the top level hierarchy
+Info (12128): Elaborating entity "divide_by_50M" for hierarchy "divide_by_50M:heartbeat_divider"
 Info (12128): Elaborating entity "tty_subsystem" for hierarchy "tty_subsystem:tty_subsystem_0"
-Warning (10036): Verilog HDL or VHDL warning at tty_subsystem.vhd(88): object "tti_ser_data_overflow" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at tty_subsystem.vhd(90): object "tti_ser_data_overflow" assigned a value but never read
 Info (12128): Elaborating entity "AND_gate" for hierarchy "tty_subsystem:tty_subsystem_0|AND_gate:and_0"
 Info (12128): Elaborating entity "OR_gate" for hierarchy "tty_subsystem:tty_subsystem_0|OR_gate:or_0"
 Info (12128): Elaborating entity "shift_register_8_sp" for hierarchy "tty_subsystem:tty_subsystem_0|shift_register_8_sp:tti_register"
@@ -801,14 +817,14 @@ Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 173 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 243 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 167 logic cells
+    Info (21059): Implemented 6 output pins
+    Info (21061): Implemented 234 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 739 megabytes
-    Info: Processing ended: Tue Feb  7 22:15:49 2017
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 745 megabytes
+    Info: Processing ended: Mon Feb 13 22:15:44 2017
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 
 

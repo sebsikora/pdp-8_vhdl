@@ -18,4 +18,5 @@ vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/tty/tty_output_state_
 vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem/tty_subsystem.vhd}
 vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test_logic/tty_subsystem_test_logic.vhd}
 vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test/tty_subsystem_test.vhd}
+vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/divide_by_n/divide_by_50M.vhd}
 

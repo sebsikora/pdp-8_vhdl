@@ -15,7 +15,7 @@ L75
 Vz6UPELG@T<D9^D:51cnV<0
 Z7 OV;C;10.1d;51
 31
-Z8 !s108 1486505781.742688
+Z8 !s108 1487021990.400010
 Z9 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd|
 Z10 !s107 /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd|
 Z11 o-93 -work work -O0
@@ -85,7 +85,7 @@ L4
 V`0N>O>k?j_fKKPVz_F`gN0
 R7
 31
-Z16 !s108 1486505781.562244
+Z16 !s108 1487021990.194587
 Z17 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/state_generator/counter_3_bit.vhd|
 Z18 !s107 /home/sebsikora/altera/projects/pdp-8/state_generator/counter_3_bit.vhd|
 R11
@@ -120,7 +120,7 @@ L4
 Vbe`LTiTF?;P6=iSCXQKaK0
 R7
 31
-Z22 !s108 1486505781.619531
+Z22 !s108 1487021990.270434
 Z23 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/counters/counter_4_bit/counter_4_bit.vhd|
 Z24 !s107 /home/sebsikora/altera/projects/pdp-8/counters/counter_4_bit/counter_4_bit.vhd|
 R11
@@ -155,7 +155,7 @@ L4
 VmXH48DmN0b6?V1>n6B_4R0
 R7
 31
-Z28 !s108 1486505781.593337
+Z28 !s108 1487021990.235671
 Z29 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/state_generator/decoder_3_to_6.vhd|
 Z30 !s107 /home/sebsikora/altera/projects/pdp-8/state_generator/decoder_3_to_6.vhd|
 R11
@@ -178,22 +178,59 @@ R11
 R12
 !s100 =b81R4kW5mDAmi>cQRTL<2
 !i10b 1
-Edivide_by_n
-Z31 w1486333616
+Edivide_by_50m
+Z31 w1486942715
 Z32 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 R2
 R3
 R4
-Z33 8/home/sebsikora/altera/projects/pdp-8/divide_by_n/divide_by_n.vhd
-Z34 F/home/sebsikora/altera/projects/pdp-8/divide_by_n/divide_by_n.vhd
+Z33 8/home/sebsikora/altera/projects/pdp-8/divide_by_n/divide_by_50M.vhd
+Z34 F/home/sebsikora/altera/projects/pdp-8/divide_by_n/divide_by_50M.vhd
+l0
+L5
+Vkl;eEN]efJlYX7AIbgZo23
+!s100 Jg:OT?9MjSd8GdiTiHf3L0
+R7
+31
+!i10b 1
+Z35 !s108 1487021990.599994
+Z36 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/divide_by_n/divide_by_50M.vhd|
+Z37 !s107 /home/sebsikora/altera/projects/pdp-8/divide_by_n/divide_by_50M.vhd|
+R11
+R12
+Artl
+R32
+R2
+R3
+DEx4 work 13 divide_by_50m 0 22 kl;eEN]efJlYX7AIbgZo23
+l17
+L13
+VS8h9kPMS`1cMdge6E[h:]3
+!s100 VFdTFDe<4F_LYLFcz5;nh2
+R7
+31
+!i10b 1
+R35
+R36
+R37
+R11
+R12
+Edivide_by_n
+Z38 w1487021955
+R32
+R2
+R3
+R4
+Z39 8/home/sebsikora/altera/projects/pdp-8/divide_by_n/divide_by_n.vhd
+Z40 F/home/sebsikora/altera/projects/pdp-8/divide_by_n/divide_by_n.vhd
 l0
 L5
 VKlP=aVOjD5cl5B]YinD2U3
 R7
 31
-Z35 !s108 1486505781.522463
-Z36 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/divide_by_n/divide_by_n.vhd|
-Z37 !s107 /home/sebsikora/altera/projects/pdp-8/divide_by_n/divide_by_n.vhd|
+Z41 !s108 1487021990.159446
+Z42 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/divide_by_n/divide_by_n.vhd|
+Z43 !s107 /home/sebsikora/altera/projects/pdp-8/divide_by_n/divide_by_n.vhd|
 R11
 R12
 !s100 NR1zBMBI0eBzCocgW0ACV1
@@ -205,31 +242,31 @@ R3
 DEx4 work 11 divide_by_n 0 22 KlP=aVOjD5cl5B]YinD2U3
 l17
 L13
-V9l>_6F2[QS?Ok>`:]1z4T3
+V]QhmIYi<n<VoFg[l?XczF0
 R7
 31
-R35
-R36
-R37
+R41
+R42
+R43
 R11
 R12
-!s100 dL?E:bM;PeRhg<DZ>AITU3
+!s100 AaWPJAAHdR6Kl6M?W[fO>3
 !i10b 1
 Ems_jk_ff
-Z38 w1483460033
+Z44 w1483460033
 R2
 R3
 R4
-Z39 8/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd
-Z40 F/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd
+Z45 8/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd
+Z46 F/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd
 l0
 L5
 V]IeQOc`NS8zUgmDdNA0FN0
 R7
 31
-Z41 !s108 1486505781.702549
-Z42 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd|
-Z43 !s107 /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd|
+Z47 !s108 1487021990.372836
+Z48 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd|
+Z49 !s107 /home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd|
 R11
 R12
 !s100 _T@d>kQcQ2d2TY@AYYDZ`2
@@ -243,9 +280,9 @@ L15
 VXDYIG4Zm^TF=:9PP`B?6`1
 R7
 31
-R41
-R42
-R43
+R47
+R48
+R49
 R11
 R12
 !s100 c:L``LDONKL`SD=6IAB:72
@@ -531,20 +568,20 @@ R12
 !s100 Ee`T44^m6PF0GUW?nm:N_3
 !i10b 1
 Eshift_register_8_ps
-Z44 w1486337908
+Z50 w1486337908
 R2
 R3
 R4
-Z45 8/home/sebsikora/altera/projects/pdp-8/shift_register/shift_register_8_ps.vhd
-Z46 F/home/sebsikora/altera/projects/pdp-8/shift_register/shift_register_8_ps.vhd
+Z51 8/home/sebsikora/altera/projects/pdp-8/shift_register/shift_register_8_ps.vhd
+Z52 F/home/sebsikora/altera/projects/pdp-8/shift_register/shift_register_8_ps.vhd
 l0
 L4
 VJN]o[Yl4BF3LlFKk0M8F81
 R7
 31
-Z47 !s108 1486505781.647334
-Z48 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/shift_register/shift_register_8_ps.vhd|
-Z49 !s107 /home/sebsikora/altera/projects/pdp-8/shift_register/shift_register_8_ps.vhd|
+Z53 !s108 1487021990.301160
+Z54 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/shift_register/shift_register_8_ps.vhd|
+Z55 !s107 /home/sebsikora/altera/projects/pdp-8/shift_register/shift_register_8_ps.vhd|
 R11
 R12
 !s100 5RhD:j8No:JneLe1[dGa53
@@ -558,28 +595,28 @@ L14
 VA;9B]ie@gg73jUQCb73NH2
 R7
 31
-R47
-R48
-R49
+R53
+R54
+R55
 R11
 R12
 !s100 lnl>KPS@?FC?NN4@;5af91
 !i10b 1
 Eshift_register_8_sp
-Z50 w1486325939
+Z56 w1486325939
 R2
 R3
 R4
-Z51 8/home/sebsikora/altera/projects/pdp-8/shift_register_sp/shift_register_8_sp.vhd
-Z52 F/home/sebsikora/altera/projects/pdp-8/shift_register_sp/shift_register_8_sp.vhd
+Z57 8/home/sebsikora/altera/projects/pdp-8/shift_register_sp/shift_register_8_sp.vhd
+Z58 F/home/sebsikora/altera/projects/pdp-8/shift_register_sp/shift_register_8_sp.vhd
 l0
 L4
 Vm1:6VgH@aReGjOL25mc553
 R7
 31
-Z53 !s108 1486505781.676175
-Z54 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/shift_register_sp/shift_register_8_sp.vhd|
-Z55 !s107 /home/sebsikora/altera/projects/pdp-8/shift_register_sp/shift_register_8_sp.vhd|
+Z59 !s108 1487021990.345939
+Z60 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/shift_register_sp/shift_register_8_sp.vhd|
+Z61 !s107 /home/sebsikora/altera/projects/pdp-8/shift_register_sp/shift_register_8_sp.vhd|
 R11
 R12
 !s100 JFi`R@eY;=_TJGMhD_O;Y3
@@ -593,28 +630,28 @@ L13
 Vm6XMgUgddDEn=4WAYDhcP0
 R7
 31
-R53
-R54
-R55
+R59
+R60
+R61
 R11
 R12
 !s100 =J]W]TBo:3S=iF4ObhG]]1
 !i10b 1
 Etty_input_state_gen
-Z56 w1486505742
+Z62 w1486505742
 R2
 R3
 R4
-Z57 8/home/sebsikora/altera/projects/pdp-8/tty/tty_input_state_gen/tty_input_state_gen.vhd
-Z58 F/home/sebsikora/altera/projects/pdp-8/tty/tty_input_state_gen/tty_input_state_gen.vhd
+Z63 8/home/sebsikora/altera/projects/pdp-8/tty/tty_input_state_gen/tty_input_state_gen.vhd
+Z64 F/home/sebsikora/altera/projects/pdp-8/tty/tty_input_state_gen/tty_input_state_gen.vhd
 l0
 L4
 V0zTf00Ln[<PmhW@4XfA;13
 R7
 31
-Z59 !s108 1486505781.785672
-Z60 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/tty/tty_input_state_gen/tty_input_state_gen.vhd|
-Z61 !s107 /home/sebsikora/altera/projects/pdp-8/tty/tty_input_state_gen/tty_input_state_gen.vhd|
+Z65 !s108 1487021990.443098
+Z66 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/tty/tty_input_state_gen/tty_input_state_gen.vhd|
+Z67 !s107 /home/sebsikora/altera/projects/pdp-8/tty/tty_input_state_gen/tty_input_state_gen.vhd|
 R11
 R12
 !s100 J64J0FYDM94P]QNej=D^U3
@@ -628,28 +665,28 @@ L17
 VzOfh9Bn3FTFG;R4]j_?iz3
 R7
 31
-R59
-R60
-R61
+R65
+R66
+R67
 R11
 R12
 !s100 3^Oin`;KMAjcOZ0bg9ZKD3
 !i10b 1
 Etty_output_state_gen
-Z62 w1486504280
+Z68 w1486504280
 R2
 R3
 R4
-Z63 8/home/sebsikora/altera/projects/pdp-8/tty/tty_output_state_gen/tty_output_state_gen.vhd
-Z64 F/home/sebsikora/altera/projects/pdp-8/tty/tty_output_state_gen/tty_output_state_gen.vhd
+Z69 8/home/sebsikora/altera/projects/pdp-8/tty/tty_output_state_gen/tty_output_state_gen.vhd
+Z70 F/home/sebsikora/altera/projects/pdp-8/tty/tty_output_state_gen/tty_output_state_gen.vhd
 l0
 L4
 V<:WF@ofId:BnFRR48nbFR2
 R7
 31
-Z65 !s108 1486505781.819233
-Z66 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/tty/tty_output_state_gen/tty_output_state_gen.vhd|
-Z67 !s107 /home/sebsikora/altera/projects/pdp-8/tty/tty_output_state_gen/tty_output_state_gen.vhd|
+Z71 !s108 1487021990.472833
+Z72 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/tty/tty_output_state_gen/tty_output_state_gen.vhd|
+Z73 !s107 /home/sebsikora/altera/projects/pdp-8/tty/tty_output_state_gen/tty_output_state_gen.vhd|
 R11
 R12
 !s100 RR>9HaZj5c0kmOE0=bX7`0
@@ -663,98 +700,98 @@ L18
 Vij0m9a_5cKZGd6a=h[mCM0
 R7
 31
-R65
-R66
-R67
-R11
-R12
-!s100 KB0U8o6zCnA3m9QU3oYL10
-!i10b 1
-Etty_subsystem
-Z68 w1486502366
-R2
-R3
-R4
-Z69 8/home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem/tty_subsystem.vhd
-Z70 F/home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem/tty_subsystem.vhd
-l0
-L4
-V7LleaOIOcTkmOI=`TMeQb3
-R7
-31
-Z71 !s108 1486505781.854577
-Z72 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem/tty_subsystem.vhd|
-Z73 !s107 /home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem/tty_subsystem.vhd|
-R11
-R12
-!s100 >5YDlF[QgdR[]SFgaKKgK0
-!i10b 1
-Artl
-R2
-R3
-DEx4 work 13 tty_subsystem 0 22 7LleaOIOcTkmOI=`TMeQb3
-l101
-L20
-VQagJS7^Mj8Udf`]P84^oE3
-R7
-31
 R71
 R72
 R73
 R11
 R12
-!s100 WJJOVK_I9Aml2ImR1UF<e2
+!s100 KB0U8o6zCnA3m9QU3oYL10
 !i10b 1
-Etty_subsystem_test
-Z74 w1486331076
+Etty_subsystem
+Z74 w1487021024
 R2
 R3
 R4
-Z75 8/home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test/tty_subsystem_test.vhd
-Z76 F/home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test/tty_subsystem_test.vhd
+Z75 8/home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem/tty_subsystem.vhd
+Z76 F/home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem/tty_subsystem.vhd
 l0
 L4
-V8lfbl;=<z:?KShb=nQPHa0
-!s100 ^4O`h]Y@zIA>SmlUaF<c13
+VoD]4e9@FZeUa3d:X^LK__2
 R7
 31
-!i10b 1
-Z77 !s108 1486505781.915312
-Z78 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test/tty_subsystem_test.vhd|
-Z79 !s107 /home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test/tty_subsystem_test.vhd|
+Z77 !s108 1487021990.505753
+Z78 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem/tty_subsystem.vhd|
+Z79 !s107 /home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem/tty_subsystem.vhd|
 R11
 R12
+!s100 DQ2Z5K6azz_6dR6Ol^GR]3
+!i10b 1
 Artl
 R2
 R3
-DEx4 work 18 tty_subsystem_test 0 22 8lfbl;=<z:?KShb=nQPHa0
-l50
-L14
-VoBI^IhPoagFoLMV`T`2En3
-!s100 R;W=1URZNj[SYZ;JDjbj[0
+DEx4 work 13 tty_subsystem 0 22 oD]4e9@FZeUa3d:X^LK__2
+l103
+L22
+V][3P>Sg]VN3_5KO0iHkFU0
 R7
 31
-!i10b 1
 R77
 R78
 R79
 R11
 R12
-Etty_subsystem_test_logic
-Z80 w1486503158
+!s100 ]:<CPIUV2g]?PGGiG3eVj3
+!i10b 1
+Etty_subsystem_test
+R74
 R2
 R3
 R4
-Z81 8/home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test_logic/tty_subsystem_test_logic.vhd
-Z82 F/home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test_logic/tty_subsystem_test_logic.vhd
+Z80 8/home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test/tty_subsystem_test.vhd
+Z81 F/home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test/tty_subsystem_test.vhd
+l0
+L4
+VF?MYDBj01IY]i3a5igLoA0
+R7
+31
+Z82 !s108 1487021990.565238
+Z83 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test/tty_subsystem_test.vhd|
+Z84 !s107 /home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test/tty_subsystem_test.vhd|
+R11
+R12
+!s100 DFAUUPnc:aPQb8CH]^oi80
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 18 tty_subsystem_test 0 22 F?MYDBj01IY]i3a5igLoA0
+l62
+L17
+V^<bl6cJma=Jn=:FXj@WRS2
+R7
+31
+R82
+R83
+R84
+R11
+R12
+!s100 ];=dFBL@ANFRKnV0ceHJ`3
+!i10b 1
+Etty_subsystem_test_logic
+Z85 w1486503158
+R2
+R3
+R4
+Z86 8/home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test_logic/tty_subsystem_test_logic.vhd
+Z87 F/home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test_logic/tty_subsystem_test_logic.vhd
 l0
 L4
 VbZb2AP3;b1Q>YO7aKoP@d0
 R7
 31
-Z83 !s108 1486505781.886066
-Z84 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test_logic/tty_subsystem_test_logic.vhd|
-Z85 !s107 /home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test_logic/tty_subsystem_test_logic.vhd|
+Z88 !s108 1487021990.536832
+Z89 !s90 -reportprogress|300|-93|-work|work|/home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test_logic/tty_subsystem_test_logic.vhd|
+Z90 !s107 /home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test_logic/tty_subsystem_test_logic.vhd|
 R11
 R12
 !s100 A8g:BUYPEU0[ET3n1H6Dn2
@@ -768,9 +805,9 @@ L16
 VVEco7jG=A[=51T8oCM_NN2
 R7
 31
-R83
-R84
-R85
+R88
+R89
+R90
 R11
 R12
 !s100 =Qj7zKiG`NZ1Cg>STHm<U1

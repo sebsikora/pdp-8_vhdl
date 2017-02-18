@@ -13,7 +13,9 @@ entity tty_subsystem is
 			 CLR_TX_FLAG:						in std_logic;
 			 TX_FLAG:							out std_logic;
 			 TX_s_not_p:						in std_logic;
-			 TX:									out std_logic
+			 TX:									out std_logic;
+			 in_sample_clk:					out std_logic;
+			 out_sample_clk:					out std_logic
 	);
 end tty_subsystem;
 
@@ -147,4 +149,6 @@ architecture rtl of tty_subsystem is
 																			 TX => TX
 									);
 		
+		in_sample_clk <= tti_SLOW_clk;
+		out_sample_clk <= tto_SLOW_clk;
 end rtl;

@@ -7,7 +7,10 @@ entity tty_subsystem_test is
 			 RX:										in std_logic;
 			 RX_FLAG:								out std_logic;
 			 TX:										out std_logic;
-			 TX_FLAG:								out std_logic
+			 TX_FLAG:								out std_logic;
+			 in_sample_clk:						out std_logic;
+			 out_sample_clk:						out std_logic;
+			 heart_beat:							out std_logic
 	);
 end tty_subsystem_test;
 
@@ -23,6 +26,13 @@ architecture rtl of tty_subsystem_test is
 				 SEND:								out std_logic
 		);
 	end component;
+	component divide_by_50M is
+		port ( clk:				in std_logic;
+				 not_clear:		in std_logic;
+				 SLOW_clk:		out std_logic;
+				 not_reset:		in std_logic
+		);
+	end component;
 	component tty_subsystem is
 		port ( clk:									in std_logic;
 				 not_reset:							in std_logic;
@@ -35,7 +45,9 @@ architecture rtl of tty_subsystem_test is
 				 CLR_TX_FLAG:						in std_logic;
 				 TX_FLAG:							out std_logic;
 				 TX_s_not_p:						in std_logic;
-				 TX:									out std_logic
+				 TX:									out std_logic;
+				 in_sample_clk:					out std_logic;
+				 out_sample_clk:					out std_logic
 		);
 	end component;
 	
@@ -52,6 +64,8 @@ architecture rtl of tty_subsystem_test is
 		TX_FLAG <= TX_FLAG_i;
 		RX_FLAG <= RX_FLAG_i;
 		
+		heartbeat_divider:			divide_by_50M port map(clk => clk, not_clear => '1', SLOW_clk => heart_beat, not_reset => not_reset);
+		
 		tty_subsystem_0:				tty_subsystem port map (clk => clk,
 																			not_reset => not_reset,
 																			AC_DATA_IN => parallel_link,
@@ -63,7 +77,9 @@ architecture rtl of tty_subsystem_test is
 																			CLR_TX_FLAG => CLR_TX_FLAG,
 																			TX_FLAG => TX_FLAG_i,
 																			TX_s_not_p => s_not_p,
-																			TX => TX
+																			TX => TX,
+																			in_sample_clk => in_sample_clk,
+																			out_sample_clk => out_sample_clk
 											);
 		
 		test_logic:						tty_subsystem_test_logic port map (TX_FLAG => TX_FLAG_i,

@@ -3,83 +3,83 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'clk'
-Slack : -53.795
-TNS   : -851.510
+Slack : -69.468
+TNS   : -1646.955
 
 Type  : Slow Model Setup 'not_reset'
-Slack : -51.975
-TNS   : -652.081
+Slack : -68.441
+TNS   : -850.284
 
 Type  : Slow Model Hold 'not_reset'
-Slack : -30.798
-TNS   : -283.817
+Slack : -40.117
+TNS   : -359.838
 
 Type  : Slow Model Hold 'clk'
-Slack : -29.147
-TNS   : -265.321
+Slack : -36.139
+TNS   : -320.725
 
 Type  : Slow Model Recovery 'not_reset'
-Slack : -28.464
-TNS   : -72.158
+Slack : -35.819
+TNS   : -83.861
 
 Type  : Slow Model Recovery 'clk'
-Slack : -0.211
-TNS   : -0.965
+Slack : -0.145
+TNS   : -4.911
 
 Type  : Slow Model Removal 'not_reset'
-Slack : -9.796
-TNS   : -19.575
+Slack : -11.049
+TNS   : -21.572
 
 Type  : Slow Model Removal 'clk'
-Slack : -0.078
-TNS   : -0.078
+Slack : 0.233
+TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'not_reset'
-Slack : -27.036
-TNS   : -4194.829
+Slack : -36.407
+TNS   : -5669.399
 
 Type  : Slow Model Minimum Pulse Width 'clk'
-Slack : -25.343
-TNS   : -2857.399
+Slack : -31.817
+TNS   : -3922.345
 
 Type  : Fast Model Setup 'clk'
-Slack : -17.677
-TNS   : -271.436
+Slack : -24.453
+TNS   : -540.638
 
 Type  : Fast Model Setup 'not_reset'
-Slack : -16.769
-TNS   : -211.893
+Slack : -23.867
+TNS   : -296.680
 
 Type  : Fast Model Hold 'not_reset'
-Slack : -10.682
-TNS   : -97.996
+Slack : -14.604
+TNS   : -131.289
 
 Type  : Fast Model Hold 'clk'
-Slack : -10.075
-TNS   : -91.306
+Slack : -13.168
+TNS   : -117.119
 
 Type  : Fast Model Recovery 'not_reset'
-Slack : -9.244
-TNS   : -22.810
+Slack : -12.426
+TNS   : -27.192
 
 Type  : Fast Model Recovery 'clk'
-Slack : 0.359
+Slack : 0.312
 TNS   : 0.000
 
 Type  : Fast Model Removal 'not_reset'
-Slack : -3.217
-TNS   : -6.418
+Slack : -3.628
+TNS   : -7.043
 
 Type  : Fast Model Removal 'clk'
-Slack : -0.081
-TNS   : -0.558
+Slack : -0.063
+TNS   : -2.695
 
 Type  : Fast Model Minimum Pulse Width 'not_reset'
-Slack : -8.745
-TNS   : -1330.746
+Slack : -12.693
+TNS   : -1951.012
 
 Type  : Fast Model Minimum Pulse Width 'clk'
-Slack : -8.142
-TNS   : -914.430
+Slack : -11.078
+TNS   : -1399.336
 
 ------------------------------------------------------------

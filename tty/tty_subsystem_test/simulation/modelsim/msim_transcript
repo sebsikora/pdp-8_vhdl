@@ -1,194 +1,54 @@
-# do tty_subsystem_test_run_msim_rtl_vhdl.do 
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
+# do tty_subsystem_test_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
 # }
-# vlib rtl_work
-# vmap work rtl_work
+# vlib gate_work
+# vmap work gate_work
 # Copying /home/sebsikora/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # ** Warning: Copied /home/sebsikora/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/divide_by_n/divide_by_n.vhd}
+# vcom -93 -work work {tty_subsystem_test.vho}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity divide_by_n
-# -- Compiling architecture rtl of divide_by_n
-# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/counter_3_bit.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity counter_3_bit
-# -- Compiling architecture rtl of counter_3_bit
-# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/state_generator/decoder_3_to_6.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity decoder_3_to_6
-# -- Compiling architecture rtl of decoder_3_to_6
-# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/counters/counter_4_bit/counter_4_bit.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity counter_4_bit
-# -- Compiling architecture rtl of counter_4_bit
-# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/shift_register/shift_register_8_ps.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity shift_register_8_ps
-# -- Compiling architecture rtl of shift_register_8_ps
-# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/shift_register_sp/shift_register_8_sp.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity shift_register_8_sp
-# -- Compiling architecture rtl of shift_register_8_sp
-# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity ms_jk_ff
-# -- Compiling architecture gates of ms_jk_ff
-# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity NOT_gate
-# -- Compiling architecture rtl of NOT_gate
-# -- Compiling entity NAND_3_gate
-# -- Compiling architecture rtl of NAND_3_gate
-# -- Compiling entity NAND_gate
-# -- Compiling architecture rtl of NAND_gate
-# -- Compiling entity AND_gate
-# -- Compiling architecture rtl of AND_gate
-# -- Compiling entity AND_3_gate
-# -- Compiling architecture rtl of AND_3_gate
-# -- Compiling entity OR_5_gate
-# -- Compiling architecture rtl of OR_5_gate
-# -- Compiling entity OR_4_gate
-# -- Compiling architecture rtl of OR_4_gate
-# -- Compiling entity NOR_4_gate
-# -- Compiling architecture rtl of NOR_4_gate
-# -- Compiling entity OR_3_gate
-# -- Compiling architecture rtl of OR_3_gate
-# -- Compiling entity OR_gate
-# -- Compiling architecture rtl of OR_gate
-# -- Compiling entity XOR_gate
-# -- Compiling architecture rtl of XOR_gate
-# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/tty/tty_input_state_gen/tty_input_state_gen.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity tty_input_state_gen
-# -- Compiling architecture rtl of tty_input_state_gen
-# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/tty/tty_output_state_gen/tty_output_state_gen.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity tty_output_state_gen
-# -- Compiling architecture rtl of tty_output_state_gen
-# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem/tty_subsystem.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity tty_subsystem
-# -- Compiling architecture rtl of tty_subsystem
-# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test_logic/tty_subsystem_test_logic.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity tty_subsystem_test_logic
-# -- Compiling architecture rtl of tty_subsystem_test_logic
-# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test/tty_subsystem_test.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
 # -- Compiling entity tty_subsystem_test
-# -- Compiling architecture rtl of tty_subsystem_test
+# -- Compiling architecture structure of tty_subsystem_test
 # 
 vsim -voptargs=+acc work.tty_subsystem_test
 # vsim -voptargs=+acc work.tty_subsystem_test 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.tty_subsystem_test(rtl)
-# Loading work.tty_subsystem(rtl)
-# Loading work.and_gate(rtl)
-# Loading work.or_gate(rtl)
-# Loading work.shift_register_8_sp(rtl)
-# Loading work.ms_jk_ff(gates)
-# Loading work.nand_3_gate(rtl)
-# Loading work.nand_gate(rtl)
-# Loading ieee.numeric_std(body)
-# Loading work.divide_by_n(rtl)
-# Loading work.tty_input_state_gen(rtl)
-# Loading work.not_gate(rtl)
-# Loading work.and_3_gate(rtl)
-# Loading work.counter_4_bit(rtl)
-# Loading work.nor_4_gate(rtl)
-# Loading work.or_3_gate(rtl)
-# Loading work.shift_register_8_ps(rtl)
-# Loading work.tty_output_state_gen(rtl)
-# Loading work.tty_subsystem_test_logic(rtl)
-# Loading work.counter_3_bit(rtl)
-# Loading work.decoder_3_to_6(rtl)
-do /home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test/simulation/modelsim/wave_2.do
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.tty_subsystem_test(structure)
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
+# ** Warning: Design size of 2 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+do /home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test/simulation/modelsim/tty_test_wave_3.do
 # .main_pane.wave.interior.cs.body.pw.wf
 # 0
-quit -sim
-vsim -voptargs=+acc work.tty_subsystem_test
-# vsim -voptargs=+acc work.tty_subsystem_test 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.tty_subsystem_test(rtl)
-# Loading work.tty_subsystem(rtl)
-# Loading work.and_gate(rtl)
-# Loading work.or_gate(rtl)
-# Loading work.shift_register_8_sp(rtl)
-# Loading work.ms_jk_ff(gates)
-# Loading work.nand_3_gate(rtl)
-# Loading work.nand_gate(rtl)
-# Loading ieee.numeric_std(body)
-# Loading work.divide_by_n(rtl)
-# Loading work.tty_input_state_gen(rtl)
-# Loading work.not_gate(rtl)
-# Loading work.and_3_gate(rtl)
-# Loading work.counter_4_bit(rtl)
-# Loading work.nor_4_gate(rtl)
-# Loading work.or_3_gate(rtl)
-# Loading work.shift_register_8_ps(rtl)
-# Loading work.tty_output_state_gen(rtl)
-# Loading work.tty_subsystem_test_logic(rtl)
-# Loading work.counter_3_bit(rtl)
-# Loading work.decoder_3_to_6(rtl)
-do /home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test/simulation/modelsim/wave_3.do
-# .main_pane.wave.interior.cs.body.pw.wf
-# 0
+wave create -driver freeze -pattern clock -initialvalue 0 -period 400ns -dutycycle 50 -starttime 0ps -endtime 100000ps sim:/tty_subsystem_test/clk
+wave modify -driver freeze -pattern clock -initialvalue 0 -period 400ns -dutycycle 50 -starttime 0ns -endtime 100000ns Edit:/tty_subsystem_test/clk
 run -all
-restart
-add wave  \
-sim:/tty_subsystem_test/tty_subsystem_0/tto_SLOW_clk
-add wave  \
-sim:/tty_subsystem_test/tty_subsystem_0/tti_SLOW_clk
-add wave  \
-sim:/tty_subsystem_test/tty_subsystem_0/tto_SLOW_clk_run
-add wave  \
-sim:/tty_subsystem_test/tty_subsystem_0/tti_SLOW_clk_run
-run -all
+# ** Error: (vsim-3601) Iteration limit reached at time 10600 ns.
+wave editwrite -file /home/sebsikora/altera/projects/pdp-8/tty/tty_subsystem_test/simulation/modelsim/ewave.do
