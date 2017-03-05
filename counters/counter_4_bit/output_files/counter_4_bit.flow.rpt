@@ -1,5 +1,5 @@
 Flow report for counter_4_bit
-Tue Jan 31 18:13:05 2017
+Sat Feb 18 19:58:35 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Tue Jan 31 18:13:05 2017           ;
+; Flow Status                        ; Successful - Sat Feb 18 19:58:35 2017           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; counter_4_bit                                   ;
 ; Top-level Entity Name              ; counter_4_bit                                   ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/31/2017 18:12:49 ;
+; Start date & time ; 02/18/2017 19:58:19 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; counter_4_bit       ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+--------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                          ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+--------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 90520735942130.148588636904503 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 90520735942130.148744789907092 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                           ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)         ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 125                            ; --            ; --          ; --             ;
@@ -92,7 +92,7 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 692 MB              ; 00:00:02                           ;
+; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 698 MB              ; 00:00:02                           ;
 ; Fitter                    ; 00:00:03     ; 1.0                     ; 730 MB              ; 00:00:03                           ;
 ; Assembler                 ; 00:00:01     ; 1.0                     ; 630 MB              ; 00:00:01                           ;
 ; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 583 MB              ; 00:00:01                           ;

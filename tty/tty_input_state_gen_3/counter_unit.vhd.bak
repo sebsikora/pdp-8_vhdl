@@ -1,0 +1,15 @@
+entity counter_unit is
+	port ( j:		in std_logic;
+			 k:		in std_logic;
+			 clk:		in std_logic;
+			 not_reset: in std_logic;
+			 q:		out std_logic;
+			 not_q:	out std_logic
+	);
+end counter_unit;
+
+architecture gates of counter_unit is
+
+begin
+
+end gates;

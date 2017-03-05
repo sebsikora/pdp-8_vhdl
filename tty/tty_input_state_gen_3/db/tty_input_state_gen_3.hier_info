@@ -1,0 +1,1089 @@
+|tty_input_state_gen_3
+RX => latch_unit:latch_unit_0.RX
+clk => divide_by_n:clock_divider.clk
+clk => latch_unit:latch_unit_0.clk
+CLR_RX_FLAG => latch_unit:latch_unit_0.CLR_RX_FLAG
+not_reset => divide_by_n:clock_divider.not_reset
+not_reset => counter_unit:counter_unit_0.not_reset
+not_reset => latch_unit:latch_unit_0.not_reset
+SLOW_CLK <= divide_by_n:clock_divider.SLOW_clk
+SLOW_CLK_run <= latch_unit:latch_unit_0.SLOW_CLK_run
+RX_FLAG <= latch_unit:latch_unit_0.RX_FLAG
+SR_CLK <= logic_unit:logic_unit_0.SR_CLK
+clr_ctrl <= logic_unit:logic_unit_0.clr_ctrl
+tick_ctrl <= logic_unit:logic_unit_0.tick_ctrl
+half_tick_ctrl <= logic_unit:logic_unit_0.half_tick_ctrl
+end_ctrl <= logic_unit:logic_unit_0.end_ctrl
+
+
+|tty_input_state_gen_3|divide_by_n:clock_divider
+clk => prescaler[0].CLK
+clk => prescaler[1].CLK
+clk => prescaler[2].CLK
+clk => clk_out_int.CLK
+not_clear => clk_out_int.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => clk_out_int.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+SLOW_clk <= clk_out_int.DB_MAX_OUTPUT_PORT_TYPE
+not_reset => prescaler[0].ACLR
+not_reset => prescaler[1].ACLR
+not_reset => prescaler[2].ACLR
+not_reset => clk_out_int.ACLR
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0
+SLOW_CLK => AND_gate:and_0.inputA
+SLOW_CLK => counter_4_bit:sub_counter.clk
+clr_ctrl => counter_4_bit:sub_counter.clr
+tick_ctrl => AND_gate:and_0.inputB
+end_ctrl => counter_4_bit:counter.clr
+not_reset => counter_4_bit:sub_counter.not_reset
+not_reset => counter_4_bit:counter.not_reset
+sub_counter_out[0] <= counter_4_bit:sub_counter.output[0]
+sub_counter_out[1] <= counter_4_bit:sub_counter.output[1]
+sub_counter_out[2] <= counter_4_bit:sub_counter.output[2]
+sub_counter_out[3] <= counter_4_bit:sub_counter.output[3]
+counter_out[0] <= counter_4_bit:counter.output[0]
+counter_out[1] <= counter_4_bit:counter.output[1]
+counter_out[2] <= counter_4_bit:counter.output[2]
+counter_out[3] <= counter_4_bit:counter.output[3]
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|AND_gate:and_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter
+clr => OR_gate:or_0_0.inputB
+clr => OR_gate:or_1_0.inputB
+clr => OR_gate:or_2_0.inputB
+clr => AND_gate:and_0_0.inputA
+clr => AND_gate:and_1_1.inputA
+clr => AND_gate:and_2_1.inputA
+clr => ms_jk_ff:ms_jk_ff_0.j
+not_reset => ms_jk_ff:ms_jk_ff_0.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_1.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_2.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_3.not_reset
+clk => ms_jk_ff:ms_jk_ff_0.clk
+clk => ms_jk_ff:ms_jk_ff_1.clk
+clk => ms_jk_ff:ms_jk_ff_2.clk
+clk => ms_jk_ff:ms_jk_ff_3.clk
+output[0] <= ms_jk_ff:ms_jk_ff_0.q
+output[1] <= ms_jk_ff:ms_jk_ff_1.q
+output[2] <= ms_jk_ff:ms_jk_ff_2.q
+output[3] <= ms_jk_ff:ms_jk_ff_3.q
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|AND_gate:and_0_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|OR_gate:or_0_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|AND_gate:and_1_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|AND_gate:and_1_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|OR_gate:or_1_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|AND_3_gate:and_2_0
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|AND_gate:and_2_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|OR_gate:or_2_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_0
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_1
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_2
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_3
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_3|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_3|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_3|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter
+clr => OR_gate:or_0_0.inputB
+clr => OR_gate:or_1_0.inputB
+clr => OR_gate:or_2_0.inputB
+clr => AND_gate:and_0_0.inputA
+clr => AND_gate:and_1_1.inputA
+clr => AND_gate:and_2_1.inputA
+clr => ms_jk_ff:ms_jk_ff_0.j
+not_reset => ms_jk_ff:ms_jk_ff_0.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_1.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_2.not_reset
+not_reset => ms_jk_ff:ms_jk_ff_3.not_reset
+clk => ms_jk_ff:ms_jk_ff_0.clk
+clk => ms_jk_ff:ms_jk_ff_1.clk
+clk => ms_jk_ff:ms_jk_ff_2.clk
+clk => ms_jk_ff:ms_jk_ff_3.clk
+output[0] <= ms_jk_ff:ms_jk_ff_0.q
+output[1] <= ms_jk_ff:ms_jk_ff_1.q
+output[2] <= ms_jk_ff:ms_jk_ff_2.q
+output[3] <= ms_jk_ff:ms_jk_ff_3.q
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|AND_gate:and_0_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|OR_gate:or_0_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|AND_gate:and_1_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|AND_gate:and_1_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|OR_gate:or_1_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|AND_3_gate:and_2_0
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|AND_gate:and_2_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|OR_gate:or_2_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_0
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_0|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_1
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_2
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_2|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_3
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_3|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_3|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_3|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|logic_unit:logic_unit_0
+sub_counter_in[0] => AND_4_gate:and_0.inputA
+sub_counter_in[0] => AND_4_gate:and_2.inputA
+sub_counter_in[1] => AND_4_gate:and_0.inputB
+sub_counter_in[1] => AND_4_gate:and_2.inputB
+sub_counter_in[2] => AND_4_gate:and_0.inputC
+sub_counter_in[2] => AND_4_gate:and_2.inputC
+sub_counter_in[3] => NOT_gate:not_0.input
+sub_counter_in[3] => AND_4_gate:and_2.inputD
+counter_in[0] => AND_4_gate:and_3.inputA
+counter_in[1] => NOT_gate:not_1.input
+counter_in[2] => NOT_gate:not_2.input
+counter_in[3] => AND_4_gate:and_3.inputD
+counter_in[3] => NOT_gate:not_3.input
+SLOW_CLK => AND_3_gate:and_5.inputC
+SLOW_CLK_run => NOT_gate:not_4.input
+not_go => AND_gate:and_1.inputB
+clr_ctrl <= OR_3_gate:or_0.output
+half_tick_ctrl <= AND_4_gate:and_0.output
+SR_CLK <= AND_3_gate:and_5.output
+end_ctrl <= AND_gate:and_4.output
+tick_ctrl <= AND_4_gate:and_2.output
+
+
+|tty_input_state_gen_3|logic_unit:logic_unit_0|NOT_gate:not_4
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|logic_unit:logic_unit_0|OR_3_gate:or_0
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|logic_unit:logic_unit_0|AND_gate:and_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|logic_unit:logic_unit_0|NOT_gate:not_0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|logic_unit:logic_unit_0|AND_4_gate:and_0
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+inputD => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|logic_unit:logic_unit_0|AND_4_gate:and_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+inputD => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|logic_unit:logic_unit_0|NOT_gate:not_1
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|logic_unit:logic_unit_0|NOT_gate:not_2
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|logic_unit:logic_unit_0|AND_4_gate:and_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+inputD => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|logic_unit:logic_unit_0|NOT_gate:not_3
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|logic_unit:logic_unit_0|AND_gate:and_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|logic_unit:logic_unit_0|AND_3_gate:and_5
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0
+SLOW_CLK => AND_gate:and_2.inputA
+SLOW_CLK => ms_jk_ff:ms_jk_1.clk
+SLOW_CLK => AND_gate:and_6.inputA
+RX => NOT_gate:not_0.input
+RX => AND_gate:and_3.inputA
+RX => NOT_gate:not_1.input
+clk => AND_gate:and_1.inputA
+clk => AND_gate:and_5.inputA
+CLR_RX_FLAG => ms_jk_ff:ms_jk_2.k
+half_tick_ctrl => AND_3_gate:and_4.inputA
+end_ctrl => OR_gate:or_1.inputB
+end_ctrl => ms_jk_ff:ms_jk_1.k
+end_ctrl => ms_jk_ff:ms_jk_2.j
+not_reset => ms_jk_ff:ms_jk_0.not_reset
+not_reset => ms_jk_ff:ms_jk_1.not_reset
+not_reset => ms_jk_ff:ms_jk_2.not_reset
+SLOW_CLK_run <= ms_jk_ff:ms_jk_0.q
+RX_FLAG <= ms_jk_ff:ms_jk_2.q
+not_go <= ms_jk_ff:ms_jk_1.not_q
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|NOT_gate:not_0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|AND_gate:and_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|AND_gate:and_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|AND_gate:and_2
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|OR_gate:or_0
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_0
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_0|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_0|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_0|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_0|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_0|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_0|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_0|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_0|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|OR_gate:or_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|AND_gate:and_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|NOT_gate:not_1
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|AND_3_gate:and_4
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_1
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_1|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_1|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_1|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_1|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_1|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_1|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_1|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_1|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|AND_gate:and_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|AND_gate:and_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|OR_gate:or_2
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_2
+j => NAND_3_gate:nand_3_1.inputB
+k => NAND_3_gate:nand_3_2.inputB
+clk => NAND_3_gate:nand_3_1.inputC
+clk => NAND_3_gate:nand_3_2.inputA
+clk => NAND_gate:nand_3.inputB
+clk => NAND_gate:nand_4.inputA
+not_reset => NAND_3_gate:nand_3_3.inputC
+q <= NAND_gate:nand_5.output
+not_q <= NAND_gate:nand_6.output
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_2|NAND_3_gate:nand_3_1
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_2|NAND_3_gate:nand_3_2
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_2|NAND_gate:nand_1
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_2|NAND_3_gate:nand_3_3
+inputA => output.IN0
+inputB => output.IN1
+inputC => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_2|NAND_gate:nand_3
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_2|NAND_gate:nand_4
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_2|NAND_gate:nand_5
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_2|NAND_gate:nand_6
+inputA => output.IN0
+inputB => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+

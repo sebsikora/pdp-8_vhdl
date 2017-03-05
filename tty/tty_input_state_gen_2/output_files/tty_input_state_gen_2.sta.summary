@@ -3,64 +3,64 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'divide_by_n:input_clock_divider|clk_out_int'
-Slack : -18.063
-TNS   : -89.767
+Slack : -17.769
+TNS   : -91.402
 
 Type  : Slow Model Setup 'clk'
-Slack : -17.298
-TNS   : -170.332
+Slack : -16.600
+TNS   : -163.434
 
 Type  : Slow Model Hold 'divide_by_n:input_clock_divider|clk_out_int'
-Slack : -10.917
-TNS   : -14.139
+Slack : -12.098
+TNS   : -17.110
 
 Type  : Slow Model Hold 'clk'
-Slack : -0.707
-TNS   : -0.707
+Slack : -1.677
+TNS   : -5.588
 
 Type  : Slow Model Recovery 'divide_by_n:input_clock_divider|clk_out_int'
-Slack : -11.063
-TNS   : -11.063
+Slack : -12.497
+TNS   : -12.497
 
 Type  : Slow Model Removal 'divide_by_n:input_clock_divider|clk_out_int'
-Slack : -2.199
-TNS   : -2.199
+Slack : -1.991
+TNS   : -1.991
 
 Type  : Slow Model Minimum Pulse Width 'divide_by_n:input_clock_divider|clk_out_int'
-Slack : -9.312
-TNS   : -244.894
+Slack : -10.998
+TNS   : -227.542
 
 Type  : Slow Model Minimum Pulse Width 'clk'
 Slack : -1.631
 TNS   : -13.851
 
 Type  : Fast Model Setup 'divide_by_n:input_clock_divider|clk_out_int'
-Slack : -5.742
-TNS   : -27.341
+Slack : -5.169
+TNS   : -25.722
 
 Type  : Fast Model Setup 'clk'
-Slack : -5.310
-TNS   : -45.869
+Slack : -4.570
+TNS   : -44.563
 
 Type  : Fast Model Hold 'divide_by_n:input_clock_divider|clk_out_int'
-Slack : -3.648
-TNS   : -4.925
+Slack : -3.966
+TNS   : -5.797
 
 Type  : Fast Model Hold 'clk'
-Slack : -0.769
-TNS   : -3.631
+Slack : -1.132
+TNS   : -6.935
 
 Type  : Fast Model Recovery 'divide_by_n:input_clock_divider|clk_out_int'
-Slack : -3.319
-TNS   : -3.319
+Slack : -3.747
+TNS   : -3.747
 
 Type  : Fast Model Removal 'divide_by_n:input_clock_divider|clk_out_int'
-Slack : -0.736
-TNS   : -0.736
+Slack : -0.646
+TNS   : -0.646
 
 Type  : Fast Model Minimum Pulse Width 'divide_by_n:input_clock_divider|clk_out_int'
-Slack : -2.796
-TNS   : -61.514
+Slack : -3.277
+TNS   : -55.872
 
 Type  : Fast Model Minimum Pulse Width 'clk'
 Slack : -1.380

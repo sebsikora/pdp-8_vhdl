@@ -11,7 +11,7 @@ end NOT_gate;
 
 architecture rtl of NOT_gate is
 begin
-	output <= not (input) after 5 ns;
+	output <= not (input) after 1 ns;
 end rtl;
 
 -- 3 input NAND gate
@@ -29,7 +29,7 @@ end NAND_3_gate;
 
 architecture rtl of NAND_3_gate is
 begin
-	output <= not (inputA and inputB and inputC) after 5 ns;
+	output <= not (inputA and inputB and inputC) after 1 ns;
 end rtl;
 
 
@@ -47,7 +47,7 @@ end NAND_gate;
 
 architecture rtl of NAND_gate is
 begin
-	output <= not (inputA and inputB) after 5 ns;
+	output <= not (inputA and inputB) after 1 ns;
 end rtl;
 
 -- AND gate
@@ -64,7 +64,7 @@ end AND_gate;
 
 architecture rtl of AND_gate is
 begin
-	output <= (inputA and inputB);
+	output <= (inputA and inputB) after 1 ns;
 end rtl;
 
 -- AND 3 gate
@@ -82,7 +82,7 @@ end AND_3_gate;
 
 architecture rtl of AND_3_gate is
 begin
-	output <= (inputA and inputB and inputC);
+	output <= (inputA and inputB and inputC) after 1 ns;
 end rtl;
 
 -- OR 5 gate
@@ -102,7 +102,7 @@ end OR_5_gate;
 
 architecture rtl of OR_5_gate is
 begin
-	output <= (inputA or inputB or inputC or inputD or inputE);
+	output <= (inputA or inputB or inputC or inputD or inputE) after 1 ns;
 end rtl;
 
 -- OR 4 gate
@@ -121,8 +121,28 @@ end OR_4_gate;
 
 architecture rtl of OR_4_gate is
 begin
-	output <= (inputA or inputB or inputC or inputD);
+	output <= (inputA or inputB or inputC or inputD) after 1 ns;
 end rtl;
+
+-- AND 4 gate
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity AND_4_gate is
+	port( inputA: 	in std_logic;
+			inputB:	in std_logic;
+			inputC:	in std_logic;
+			inputD:	in std_logic;
+			output:	out std_logic
+	);
+end AND_4_gate;
+
+architecture rtl of AND_4_gate is
+begin
+	output <= (inputA and inputB and inputC and inputD) after 1 ns;
+end rtl;
+
 
 -- OR 4 gate
 
@@ -140,7 +160,7 @@ end NOR_4_gate;
 
 architecture rtl of NOR_4_gate is
 begin
-	output <= not (inputA or inputB or inputC or inputD);
+	output <= not (inputA or inputB or inputC or inputD) after 1 ns;
 end rtl;
 
 
@@ -159,7 +179,7 @@ end OR_3_gate;
 
 architecture rtl of OR_3_gate is
 begin
-	output <= (inputA or inputB or inputC);
+	output <= (inputA or inputB or inputC) after 1 ns;
 end rtl;
 
 -- OR gate
@@ -176,7 +196,7 @@ end OR_gate;
 
 architecture rtl of OR_gate is
 begin
-	output <= (inputA or inputB);
+	output <= (inputA or inputB) after 1 ns;
 end rtl;
 
 -- XOR gate

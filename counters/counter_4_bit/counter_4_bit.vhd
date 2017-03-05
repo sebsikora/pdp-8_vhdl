@@ -40,13 +40,9 @@ architecture rtl of counter_4_bit is
 	end component;
 	
 	signal not_clr:					std_logic;
-	signal not_q:						std_logic_vector(3 downto 0);
+	signal not_ff_outputs:			std_logic_vector(3 downto 0);
 	signal ff_outputs:				std_logic_vector(3 downto 0);
 	signal reset_signal:				std_logic;
-	
-	signal not_ff_output_0:			std_logic;
-	signal not_ff_output_1: 		std_logic;
-	signal not_ff_output_2: 		std_logic;
 	
 	signal and_0_0_output:			std_logic;
 	signal or_0_0_output:			std_logic;
@@ -57,14 +53,13 @@ architecture rtl of counter_4_bit is
 	signal and_2_1_output:			std_logic;
 	signal or_2_0_output:			std_logic;
 	
+	signal clear:						std_logic;
 	
 	begin
 		
+		clear <= '1';
 		not_clr <= not clr;
 		reset_signal <= not_reset;
-		not_ff_output_0 <= not ff_outputs(0);
-		not_ff_output_1 <= not ff_outputs(1);
-		not_ff_output_2 <= not ff_outputs(2);
 		
 		and_0_0:				AND_gate  port map (inputA => not_clr, inputB => ff_outputs(0), output => and_0_0_output);
 		or_0_0:				OR_gate	 port map (inputA => and_0_0_output, inputB => clr, output => or_0_0_output);
@@ -75,10 +70,10 @@ architecture rtl of counter_4_bit is
 		and_2_1:				AND_gate  port map (inputA => not_clr, inputB => and_2_0_output, output => and_2_1_output);
 		or_2_0:				OR_gate   port map (inputA => and_2_0_output, inputB => clr, output => or_2_0_output);
 		
-		ms_jk_ff_0:			ms_jk_ff  port map (j => not_clr, k => '1', q => ff_outputs(0), not_q => not_q(0), clk => clk, not_reset => reset_signal);
-		ms_jk_ff_1:			ms_jk_ff  port map (j => and_0_0_output, k => or_0_0_output, q => ff_outputs(1), not_q => not_q(1), clk => clk, not_reset => reset_signal);
-		ms_jk_ff_2:			ms_jk_ff  port map (j => and_1_1_output, k => or_1_0_output, q => ff_outputs(2), not_q => not_q(2), clk => clk, not_reset => reset_signal);
-		ms_jk_ff_3:			ms_jk_ff  port map (j => and_2_1_output, k => or_2_0_output, q => ff_outputs(3), not_q => not_q(3), clk => clk, not_reset => reset_signal);
+		ms_jk_ff_0:			ms_jk_ff  port map (j => not_clr, k => clear, clk => clk, not_reset => reset_signal, q => ff_outputs(0), not_q => not_ff_outputs(0));
+		ms_jk_ff_1:			ms_jk_ff  port map (j => and_0_0_output, k => or_0_0_output, clk => clk, not_reset => reset_signal, q => ff_outputs(1), not_q => not_ff_outputs(1));
+		ms_jk_ff_2:			ms_jk_ff  port map (j => and_1_1_output, k => or_1_0_output, clk => clk, not_reset => reset_signal, q => ff_outputs(2), not_q => not_ff_outputs(2));
+		ms_jk_ff_3:			ms_jk_ff  port map (j => and_2_1_output, k => or_2_0_output, clk => clk, not_reset => reset_signal, q => ff_outputs(3), not_q => not_ff_outputs(3));
 		
 		output(0) <= ff_outputs(0);
 		output(1) <= ff_outputs(1);

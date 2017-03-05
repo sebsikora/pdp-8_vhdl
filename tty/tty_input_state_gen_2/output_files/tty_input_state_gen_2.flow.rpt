@@ -1,5 +1,5 @@
 Flow report for tty_input_state_gen_2
-Sat Feb 18 16:35:36 2017
+Sat Feb 18 20:21:35 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sat Feb 18 16:35:36 2017           ;
+; Flow Status                        ; Successful - Sat Feb 18 20:21:35 2017           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; tty_input_state_gen_2                           ;
 ; Top-level Entity Name              ; tty_input_state_gen_2                           ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C5AT144A7                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 68 / 4,608 ( 1 % )                              ;
-;     Total combinational functions  ; 68 / 4,608 ( 1 % )                              ;
+; Total logic elements               ; 65 / 4,608 ( 1 % )                              ;
+;     Total combinational functions  ; 65 / 4,608 ( 1 % )                              ;
 ;     Dedicated logic registers      ; 10 / 4,608 ( < 1 % )                            ;
 ; Total registers                    ; 10                                              ;
-; Total pins                         ; 9 / 89 ( 10 % )                                 ;
+; Total pins                         ; 10 / 89 ( 11 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 119,808 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 26 ( 0 % )                                  ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+-----------------------+
 ; Option            ; Setting               ;
 +-------------------+-----------------------+
-; Start date & time ; 02/18/2017 16:35:19   ;
+; Start date & time ; 02/18/2017 20:21:17   ;
 ; Main task         ; Compilation           ;
 ; Revision Name     ; tty_input_state_gen_2 ;
 +-------------------+-----------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+--------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                          ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+--------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 90520735942130.148743571905495 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 90520735942130.148744927707424 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                           ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)         ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 125                            ; --            ; --          ; --             ;
@@ -92,10 +92,10 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 687 MB              ; 00:00:02                           ;
-; Fitter                    ; 00:00:03     ; 1.0                     ; 726 MB              ; 00:00:04                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 688 MB              ; 00:00:02                           ;
+; Fitter                    ; 00:00:03     ; 1.0                     ; 725 MB              ; 00:00:04                           ;
 ; Assembler                 ; 00:00:01     ; 1.0                     ; 636 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 598 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 588 MB              ; 00:00:01                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 788 MB              ; 00:00:01                           ;
 ; Total                     ; 00:00:08     ; --                      ; --                  ; 00:00:09                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
