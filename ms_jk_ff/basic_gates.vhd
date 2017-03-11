@@ -144,7 +144,7 @@ begin
 end rtl;
 
 
--- OR 4 gate
+-- NOR 4 gate
 
 library ieee;
 use ieee.std_logic_1164.all;

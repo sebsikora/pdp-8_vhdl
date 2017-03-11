@@ -86,10 +86,11 @@ begin
 	and_4:			AND_3_gate port map (inputA => half_tick_ctrl, inputB => not_1_output, inputC => jk_ff_1_not_q, output => and_4_output);
 	ms_jk_1:			ms_jk_ff port map (j => and_4_output, k => end_ctrl, clk => SLOW_CLK, not_reset => not_reset, q => jk_ff_1_q, not_q => jk_ff_1_not_q);
 	
-	and_5:			AND_gate port map (inputA => clk, inputB => jk_ff_2_q, output => and_5_output);
-	and_6:			AND_gate port map (inputA => SLOW_CLK, inputB => jk_ff_2_not_q, output => and_6_output);
-	or_2:				OR_gate port map (inputA => and_5_output, inputB => and_6_output, output => or_2_output);
-	ms_jk_2:			ms_jk_ff port map (j => end_ctrl, k => CLR_RX_FLAG, clk => or_2_output, not_reset => not_reset, q => jk_ff_2_q, not_q => jk_ff_2_not_q);
+	--and_5:			AND_gate port map (inputA => clk, inputB => jk_ff_2_q, output => and_5_output);
+	--and_6:			AND_gate port map (inputA => SLOW_CLK, inputB => jk_ff_2_not_q, output => and_6_output);
+	--or_2:				OR_gate port map (inputA => and_5_output, inputB => and_6_output, output => or_2_output);
+	--ms_jk_2:			ms_jk_ff port map (j => end_ctrl, k => CLR_RX_FLAG, clk => or_2_output, not_reset => not_reset, q => jk_ff_2_q, not_q => jk_ff_2_not_q);
+	ms_jk_2:			ms_jk_ff port map (j => end_ctrl, k => CLR_RX_FLAG, clk => clk, not_reset => not_reset, q => jk_ff_2_q, not_q => jk_ff_2_not_q);
 	
 	RX_FLAG <= jk_ff_2_q;
 	not_go <= jk_ff_1_not_q;

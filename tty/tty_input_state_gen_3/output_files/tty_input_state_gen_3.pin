@@ -80,22 +80,22 @@ TDI                          : 13        : input  :                   :         
 DATA0                        : 14        : input  :                   :         : 1         :                
 DCLK                         : 15        :        :                   :         : 1         :                
 nCE                          : 16        :        :                   :         : 1         :                
-clk                          : 17        : input  : 3.3-V LVTTL       :         : 1         : N              
+clk                          : 17        : input  : 3.3-V LVTTL       :         : 1         : Y              
 not_reset                    : 18        : input  : 3.3-V LVTTL       :         : 1         : N              
 GND                          : 19        : gnd    :                   :         :           :                
 nCONFIG                      : 20        :        :                   :         : 1         :                
-CLR_RX_FLAG                  : 21        : input  : 3.3-V LVTTL       :         : 1         : N              
-RX                           : 22        : input  : 3.3-V LVTTL       :         : 1         : N              
+RX                           : 21        : input  : 3.3-V LVTTL       :         : 1         : N              
+CLR_RX_FLAG                  : 22        : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : 23        : power  :                   : 3.3V    : 1         :                
-SR_CLK                       : 24        : output : 3.3-V LVTTL       :         : 1         : N              
+tick_ctrl                    : 24        : output : 3.3-V LVTTL       :         : 1         : N              
 SLOW_CLK                     : 25        : output : 3.3-V LVTTL       :         : 1         : N              
-RX_FLAG                      : 26        : output : 3.3-V LVTTL       :         : 1         : N              
-end_ctrl                     : 27        : output : 3.3-V LVTTL       :         : 1         : N              
-tick_ctrl                    : 28        : output : 3.3-V LVTTL       :         : 1         : N              
+SLOW_CLK_run                 : 26        : output : 3.3-V LVTTL       :         : 1         : N              
+SR_CLK                       : 27        : output : 3.3-V LVTTL       :         : 1         : N              
+end_ctrl                     : 28        : output : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : 29        : power  :                   : 3.3V    : 1         :                
-SLOW_CLK_run                 : 30        : output : 3.3-V LVTTL       :         : 1         : N              
-clr_ctrl                     : 31        : output : 3.3-V LVTTL       :         : 1         : N              
-half_tick_ctrl               : 32        : output : 3.3-V LVTTL       :         : 1         : N              
+half_tick_ctrl               : 30        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 31        :        :                   :         : 1         :                
+RX_FLAG                      : 32        : output : 3.3-V LVTTL       :         : 1         : N              
 GND                          : 33        : gnd    :                   :         :           :                
 GND_PLL1                     : 34        : gnd    :                   :         :           :                
 VCCD_PLL1                    : 35        : power  :                   : 1.2V    :           :                
@@ -110,7 +110,7 @@ GND*                         : 43        :        :                   :         
 GND*                         : 44        :        :                   :         : 4         :                
 GND*                         : 45        :        :                   :         : 4         :                
 VCCIO4                       : 46        : power  :                   : 3.3V    : 4         :                
-GND*                         : 47        :        :                   :         : 4         :                
+clr_ctrl                     : 47        : output : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : 48        :        :                   :         : 4         :                
 GND                          : 49        : gnd    :                   :         :           :                
 VCCINT                       : 50        : power  :                   : 1.2V    :           :                

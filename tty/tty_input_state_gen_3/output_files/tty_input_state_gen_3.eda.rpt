@@ -1,5 +1,5 @@
 EDA Netlist Writer report for tty_input_state_gen_3
-Sun Mar  5 13:58:46 2017
+Sat Mar 11 15:29:38 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sun Mar  5 13:58:46 2017 ;
+; EDA Netlist Writer Status ; Successful - Sat Mar 11 15:29:38 2017 ;
 ; Revision Name             ; tty_input_state_gen_3                 ;
 ; Top-level Entity Name     ; tty_input_state_gen_3                 ;
 ; Family                    ; Cyclone II                            ;
@@ -84,13 +84,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Mar  5 13:58:46 2017
+    Info: Processing started: Sat Mar 11 15:29:37 2017
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off tty_input_state_gen_3 -c tty_input_state_gen_3
 Info (204026): Generated files "tty_input_state_gen_3.vho", "tty_input_state_gen_3_fast.vho", "tty_input_state_gen_3_vhd.sdo" and "tty_input_state_gen_3_vhd_fast.sdo" in directory "/home/sebsikora/altera/projects/pdp-8/tty/tty_input_state_gen_3/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 897 megabytes
-    Info: Processing ended: Sun Mar  5 13:58:46 2017
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 892 megabytes
+    Info: Processing ended: Sat Mar 11 15:29:38 2017
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

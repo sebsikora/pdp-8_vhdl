@@ -9,6 +9,7 @@ entity counter_unit is
 			 not_reset:				in std_logic;
 			 sub_counter_out:		out std_logic_vector(3 downto 0);
 			 counter_out:			out std_logic_vector(3 downto 0)
+			 --end_cont_out:			out std_logic
 	);
 end counter_unit;
 
@@ -31,4 +32,5 @@ begin
 	and_0:				AND_gate port map (inputA => SLOW_CLK, inputB => tick_ctrl, output => tick);
 	sub_counter:		counter_4_bit port map (clr => clr_ctrl, not_reset => not_reset, clk => SLOW_CLK, output => sub_counter_out);
 	counter:				counter_4_bit port map (clr => end_ctrl, not_reset => not_reset, clk => tick, output => counter_out);
+	--end_cont_out <= end_ctrl;
 end rtl;

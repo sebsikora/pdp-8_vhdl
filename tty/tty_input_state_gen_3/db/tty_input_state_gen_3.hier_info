@@ -1,8 +1,8 @@
 |tty_input_state_gen_3
 RX => latch_unit:latch_unit_0.RX
-clk => divide_by_n:clock_divider.clk
-clk => latch_unit:latch_unit_0.clk
+clk => clk_signal.IN0
 CLR_RX_FLAG => latch_unit:latch_unit_0.CLR_RX_FLAG
+not_reset => clk_signal.IN1
 not_reset => divide_by_n:clock_divider.not_reset
 not_reset => counter_unit:counter_unit_0.not_reset
 not_reset => latch_unit:latch_unit_0.not_reset
@@ -20,12 +20,45 @@ end_ctrl <= logic_unit:logic_unit_0.end_ctrl
 clk => prescaler[0].CLK
 clk => prescaler[1].CLK
 clk => prescaler[2].CLK
+clk => prescaler[3].CLK
+clk => prescaler[4].CLK
+clk => prescaler[5].CLK
+clk => prescaler[6].CLK
+clk => prescaler[7].CLK
+clk => prescaler[8].CLK
+clk => prescaler[9].CLK
+clk => prescaler[10].CLK
+clk => prescaler[11].CLK
+clk => prescaler[12].CLK
+clk => prescaler[13].CLK
 clk => clk_out_int.CLK
 not_clear => clk_out_int.OUTPUTSELECT
 not_clear => prescaler.OUTPUTSELECT
 not_clear => prescaler.OUTPUTSELECT
 not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
 not_clear => clk_out_int.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
+not_clear => prescaler.OUTPUTSELECT
 not_clear => prescaler.OUTPUTSELECT
 not_clear => prescaler.OUTPUTSELECT
 not_clear => prescaler.OUTPUTSELECT
@@ -33,6 +66,17 @@ SLOW_clk <= clk_out_int.DB_MAX_OUTPUT_PORT_TYPE
 not_reset => prescaler[0].ACLR
 not_reset => prescaler[1].ACLR
 not_reset => prescaler[2].ACLR
+not_reset => prescaler[3].ACLR
+not_reset => prescaler[4].ACLR
+not_reset => prescaler[5].ACLR
+not_reset => prescaler[6].ACLR
+not_reset => prescaler[7].ACLR
+not_reset => prescaler[8].ACLR
+not_reset => prescaler[9].ACLR
+not_reset => prescaler[10].ACLR
+not_reset => prescaler[11].ACLR
+not_reset => prescaler[12].ACLR
+not_reset => prescaler[13].ACLR
 not_reset => clk_out_int.ACLR
 
 
@@ -808,12 +852,11 @@ output <= output.DB_MAX_OUTPUT_PORT_TYPE
 |tty_input_state_gen_3|latch_unit:latch_unit_0
 SLOW_CLK => AND_gate:and_2.inputA
 SLOW_CLK => ms_jk_ff:ms_jk_1.clk
-SLOW_CLK => AND_gate:and_6.inputA
 RX => NOT_gate:not_0.input
 RX => AND_gate:and_3.inputA
 RX => NOT_gate:not_1.input
 clk => AND_gate:and_1.inputA
-clk => AND_gate:and_5.inputA
+clk => ms_jk_ff:ms_jk_2.clk
 CLR_RX_FLAG => ms_jk_ff:ms_jk_2.k
 half_tick_ctrl => AND_3_gate:and_4.inputA
 end_ctrl => OR_gate:or_1.inputB
@@ -1001,24 +1044,6 @@ output <= output.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_1|NAND_gate:nand_6
-inputA => output.IN0
-inputB => output.IN1
-output <= output.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|tty_input_state_gen_3|latch_unit:latch_unit_0|AND_gate:and_5
-inputA => output.IN0
-inputB => output.IN1
-output <= output.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|tty_input_state_gen_3|latch_unit:latch_unit_0|AND_gate:and_6
-inputA => output.IN0
-inputB => output.IN1
-output <= output.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|tty_input_state_gen_3|latch_unit:latch_unit_0|OR_gate:or_2
 inputA => output.IN0
 inputB => output.IN1
 output <= output.DB_MAX_OUTPUT_PORT_TYPE

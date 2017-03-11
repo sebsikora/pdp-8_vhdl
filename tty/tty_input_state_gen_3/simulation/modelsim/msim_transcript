@@ -1,420 +1,60 @@
-# do tty_input_state_gen_3_run_msim_rtl_vhdl.do 
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
+# do tty_input_state_gen_3_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
 # }
-# vlib rtl_work
-# vmap work rtl_work
+# vlib gate_work
+# vmap work gate_work
 # Copying /home/sebsikora/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # ** Warning: Copied /home/sebsikora/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/divide_by_n/divide_by_n.vhd}
+# vcom -93 -work work {tty_input_state_gen_3.vho}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity divide_by_n
-# -- Compiling architecture rtl of divide_by_n
-# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/counters/counter_4_bit/counter_4_bit.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity counter_4_bit
-# -- Compiling architecture rtl of counter_4_bit
-# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/ms_jk_ff.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity ms_jk_ff
-# -- Compiling architecture gates of ms_jk_ff
-# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/ms_jk_ff/basic_gates.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity NOT_gate
-# -- Compiling architecture rtl of NOT_gate
-# -- Compiling entity NAND_3_gate
-# -- Compiling architecture rtl of NAND_3_gate
-# -- Compiling entity NAND_gate
-# -- Compiling architecture rtl of NAND_gate
-# -- Compiling entity AND_gate
-# -- Compiling architecture rtl of AND_gate
-# -- Compiling entity AND_3_gate
-# -- Compiling architecture rtl of AND_3_gate
-# -- Compiling entity OR_5_gate
-# -- Compiling architecture rtl of OR_5_gate
-# -- Compiling entity OR_4_gate
-# -- Compiling architecture rtl of OR_4_gate
-# -- Compiling entity AND_4_gate
-# -- Compiling architecture rtl of AND_4_gate
-# -- Compiling entity NOR_4_gate
-# -- Compiling architecture rtl of NOR_4_gate
-# -- Compiling entity OR_3_gate
-# -- Compiling architecture rtl of OR_3_gate
-# -- Compiling entity OR_gate
-# -- Compiling architecture rtl of OR_gate
-# -- Compiling entity XOR_gate
-# -- Compiling architecture rtl of XOR_gate
-# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/tty/tty_input_state_gen_3/counter_unit.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity counter_unit
-# -- Compiling architecture rtl of counter_unit
-# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/tty/tty_input_state_gen_3/logic_unit.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity logic_unit
-# -- Compiling architecture gates of logic_unit
-# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/tty/tty_input_state_gen_3/latch_unit.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity latch_unit
-# -- Compiling architecture gates of latch_unit
-# vcom -93 -work work {/home/sebsikora/altera/projects/pdp-8/tty/tty_input_state_gen_3/tty_input_state_gen_3.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
 # -- Compiling entity tty_input_state_gen_3
-# -- Compiling architecture rtl of tty_input_state_gen_3
+# -- Compiling architecture structure of tty_input_state_gen_3
 # 
 vsim -voptargs=+acc work.tty_input_state_gen_3
 # vsim -voptargs=+acc work.tty_input_state_gen_3 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.tty_input_state_gen_3(rtl)
-# Loading ieee.numeric_std(body)
-# Loading work.divide_by_n(rtl)
-# Loading work.counter_unit(rtl)
-# Loading work.and_gate(rtl)
-# Loading work.counter_4_bit(rtl)
-# Loading work.or_gate(rtl)
-# Loading work.and_3_gate(rtl)
-# Loading work.ms_jk_ff(gates)
-# Loading work.nand_3_gate(rtl)
-# Loading work.nand_gate(rtl)
-# Loading work.logic_unit(gates)
-# Loading work.not_gate(rtl)
-# Loading work.or_3_gate(rtl)
-# Loading work.and_4_gate(rtl)
-# Loading work.latch_unit(gates)
-do /home/sebsikora/altera/projects/pdp-8/tty/tty_input_state_gen_3/simulation/modelsim/test_wave_2.do
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.tty_input_state_gen_3(structure)
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
+# ** Warning: Design size of 2 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+do /home/sebsikora/altera/projects/pdp-8/tty/tty_input_state_gen_3/simulation/modelsim/test_wave_5.do
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# ** Error: Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: sebsikora  Hostname: localhost.localdomain  ProcessID: 11590
+#           Attempting to use alternate WLF file "./wlftbTwYtj".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftbTwYtj
 # .main_pane.wave.interior.cs.body.pw.wf
 # 0
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
 run -all
-run -all
-run -all
-restart
-run -all
-restart
-run -all
-restart
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run -all
-restart
-wave modify -driver freeze -pattern constant -value 1 -starttime 400ns -endtime 400000ns Edit:/tty_input_state_gen_3/not_reset
-wave modify -driver freeze -pattern clock -initialvalue 0 -period 200ns -dutycycle 50 -starttime 400ns -endtime 400000ns Edit:/tty_input_state_gen_3/clk
-wave modify -driver freeze -pattern constant -value 1 -starttime 30000ns -endtime 400000ns Edit:/tty_input_state_gen_3/RX
-wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 400000ns Edit:/tty_input_state_gen_3/CLR_RX_FLAG
-run -all
-restart
-run -all
-restart
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run -all
-restart
-run -all
-restart
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/sebsikora/altera/projects/pdp-8/tty/tty_input_state_gen_3/simulation/modelsim/test_wave_3.do
-wave editwrite -file /home/sebsikora/altera/projects/pdp-8/tty/tty_input_state_gen_3/simulation/modelsim/test_wave_3.do -append

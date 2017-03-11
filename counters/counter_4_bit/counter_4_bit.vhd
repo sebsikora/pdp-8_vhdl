@@ -58,7 +58,7 @@ architecture rtl of counter_4_bit is
 	begin
 		
 		clear <= '1';
-		not_clr <= not clr;
+		not_clr <= not clr after 1 ns;
 		reset_signal <= not_reset;
 		
 		and_0_0:				AND_gate  port map (inputA => not_clr, inputB => ff_outputs(0), output => and_0_0_output);

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for tty_input_state_gen_3
-Sun Mar  5 13:58:32 2017
+Sat Mar 11 15:29:14 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,9 +14,9 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Logic Cells Representing Combinational Loops
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Port Connectivity Checks: "latch_unit:latch_unit_0|ms_jk_ff:ms_jk_2"
  12. Port Connectivity Checks: "latch_unit:latch_unit_0|ms_jk_ff:ms_jk_1"
  13. Port Connectivity Checks: "counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_3"
  14. Port Connectivity Checks: "counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_2"
@@ -49,15 +49,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Mar  5 13:58:32 2017           ;
+; Analysis & Synthesis Status        ; Successful - Sat Mar 11 15:29:14 2017           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; tty_input_state_gen_3                           ;
 ; Top-level Entity Name              ; tty_input_state_gen_3                           ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 54                                              ;
-;     Total combinational functions  ; 54                                              ;
-;     Dedicated logic registers      ; 3                                               ;
-; Total registers                    ; 3                                               ;
+; Total logic elements               ; 69                                              ;
+;     Total combinational functions  ; 69                                              ;
+;     Dedicated logic registers      ; 15                                              ;
+; Total registers                    ; 15                                              ;
 ; Total pins                         ; 12                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -74,6 +74,7 @@ applicable agreement for further details.
 ; Device                                                                     ; EP2C5AT144A7          ;                       ;
 ; Top-level entity name                                                      ; tty_input_state_gen_3 ; tty_input_state_gen_3 ;
 ; Family name                                                                ; Cyclone II            ; Cyclone IV GX         ;
+; Timing-Driven Synthesis                                                    ; On                    ; Off                   ;
 ; Use smart compilation                                                      ; Off                   ; Off                   ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                    ; On                    ;
 ; Enable compact report table                                                ; Off                   ; Off                   ;
@@ -125,7 +126,6 @@ applicable agreement for further details.
 ; Allow Any Shift Register Size For Recognition                              ; Off                   ; Off                   ;
 ; Use LogicLock Constraints during Resource Balancing                        ; On                    ; On                    ;
 ; Ignore translate_off and synthesis_off directives                          ; Off                   ; Off                   ;
-; Timing-Driven Synthesis                                                    ; Off                   ; Off                   ;
 ; Report Parameter Settings                                                  ; On                    ; On                    ;
 ; Report Source Assignments                                                  ; On                    ; On                    ;
 ; Report Connectivity Checks                                                 ; On                    ; On                    ;
@@ -178,34 +178,34 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                         ;
-+---------------------------------------------+---------------------------------------+
-; Resource                                    ; Usage                                 ;
-+---------------------------------------------+---------------------------------------+
-; Estimated Total logic elements              ; 54                                    ;
-;                                             ;                                       ;
-; Total combinational functions               ; 54                                    ;
-; Logic element usage by number of LUT inputs ;                                       ;
-;     -- 4 input functions                    ; 36                                    ;
-;     -- 3 input functions                    ; 12                                    ;
-;     -- <=2 input functions                  ; 6                                     ;
-;                                             ;                                       ;
-; Logic elements by mode                      ;                                       ;
-;     -- normal mode                          ; 54                                    ;
-;     -- arithmetic mode                      ; 0                                     ;
-;                                             ;                                       ;
-; Total registers                             ; 3                                     ;
-;     -- Dedicated logic registers            ; 3                                     ;
-;     -- I/O registers                        ; 0                                     ;
-;                                             ;                                       ;
-; I/O pins                                    ; 12                                    ;
-; Embedded Multiplier 9-bit elements          ; 0                                     ;
-; Maximum fan-out node                        ; divide_by_n:clock_divider|clk_out_int ;
-; Maximum fan-out                             ; 25                                    ;
-; Total fan-out                               ; 209                                   ;
-; Average fan-out                             ; 3.03                                  ;
-+---------------------------------------------+---------------------------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 69        ;
+;                                             ;           ;
+; Total combinational functions               ; 69        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 37        ;
+;     -- 3 input functions                    ; 13        ;
+;     -- <=2 input functions                  ; 19        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 56        ;
+;     -- arithmetic mode                      ; 13        ;
+;                                             ;           ;
+; Total registers                             ; 15        ;
+;     -- Dedicated logic registers            ; 15        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 12        ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+; Maximum fan-out node                        ; not_reset ;
+; Maximum fan-out                             ; 27        ;
+; Total fan-out                               ; 291       ;
+; Average fan-out                             ; 3.03      ;
++---------------------------------------------+-----------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -213,23 +213,24 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                               ; Library Name ;
 +------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------+--------------+
-; |tty_input_state_gen_3             ; 54 (0)            ; 3 (0)        ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |tty_input_state_gen_3                                                                                            ; work         ;
-;    |counter_unit:counter_unit_0|   ; 29 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0                                                                ; work         ;
+; |tty_input_state_gen_3             ; 69 (1)            ; 15 (0)       ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |tty_input_state_gen_3                                                                                            ; work         ;
+;    |counter_unit:counter_unit_0|   ; 28 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0                                                                ; work         ;
 ;       |AND_gate:and_0|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0|AND_gate:and_0                                                 ; work         ;
-;       |counter_4_bit:counter|      ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter                                          ; work         ;
+;       |counter_4_bit:counter|      ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter                                          ; work         ;
 ;          |ms_jk_ff:ms_jk_ff_0|     ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_0                      ; work         ;
 ;             |NAND_gate:nand_1|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1     ; work         ;
 ;             |NAND_gate:nand_5|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5     ; work         ;
-;          |ms_jk_ff:ms_jk_ff_1|     ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_1                      ; work         ;
-;             |NAND_3_gate:nand_3_1| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_1 ; work         ;
+;          |ms_jk_ff:ms_jk_ff_1|     ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_1                      ; work         ;
+;             |NAND_3_gate:nand_3_1| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_1|NAND_3_gate:nand_3_1 ; work         ;
 ;             |NAND_gate:nand_1|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1     ; work         ;
 ;             |NAND_gate:nand_5|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5     ; work         ;
 ;          |ms_jk_ff:ms_jk_ff_2|     ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_2                      ; work         ;
 ;             |NAND_gate:nand_1|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1     ; work         ;
 ;             |NAND_gate:nand_5|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5     ; work         ;
 ;          |ms_jk_ff:ms_jk_ff_3|     ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_3                      ; work         ;
-;             |NAND_3_gate:nand_3_1| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_3|NAND_3_gate:nand_3_1 ; work         ;
-;             |NAND_gate:nand_1|     ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_1     ; work         ;
+;             |NAND_3_gate:nand_3_1| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_3|NAND_3_gate:nand_3_1 ; work         ;
+;             |NAND_3_gate:nand_3_3| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_3|NAND_3_gate:nand_3_3 ; work         ;
+;             |NAND_gate:nand_1|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_1     ; work         ;
 ;             |NAND_gate:nand_5|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5     ; work         ;
 ;       |counter_4_bit:sub_counter|  ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter                                      ; work         ;
 ;          |ms_jk_ff:ms_jk_ff_0|     ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_0                  ; work         ;
@@ -244,12 +245,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |ms_jk_ff:ms_jk_ff_3|     ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_3                  ; work         ;
 ;             |NAND_gate:nand_1|     ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_1 ; work         ;
 ;             |NAND_gate:nand_5|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_3|NAND_gate:nand_5 ; work         ;
-;    |divide_by_n:clock_divider|     ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|divide_by_n:clock_divider                                                                  ; work         ;
-;    |latch_unit:latch_unit_0|       ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|latch_unit:latch_unit_0                                                                    ; work         ;
+;    |divide_by_n:clock_divider|     ; 21 (21)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|divide_by_n:clock_divider                                                                  ; work         ;
+;    |latch_unit:latch_unit_0|       ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|latch_unit:latch_unit_0                                                                    ; work         ;
 ;       |OR_gate:or_0|               ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|latch_unit:latch_unit_0|OR_gate:or_0                                                       ; work         ;
-;       |OR_gate:or_2|               ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|latch_unit:latch_unit_0|OR_gate:or_2                                                       ; work         ;
-;       |ms_jk_ff:ms_jk_0|           ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_0                                                   ; work         ;
-;          |NAND_3_gate:nand_3_2|    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_0|NAND_3_gate:nand_3_2                              ; work         ;
+;       |ms_jk_ff:ms_jk_0|           ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_0                                                   ; work         ;
+;          |NAND_3_gate:nand_3_2|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_0|NAND_3_gate:nand_3_2                              ; work         ;
 ;          |NAND_3_gate:nand_3_3|    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_0|NAND_3_gate:nand_3_3                              ; work         ;
 ;          |NAND_gate:nand_5|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_0|NAND_gate:nand_5                                  ; work         ;
 ;          |NAND_gate:nand_6|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_0|NAND_gate:nand_6                                  ; work         ;
@@ -257,10 +257,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |NAND_3_gate:nand_3_2|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_1|NAND_3_gate:nand_3_2                              ; work         ;
 ;          |NAND_3_gate:nand_3_3|    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_1|NAND_3_gate:nand_3_3                              ; work         ;
 ;          |NAND_gate:nand_6|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_1|NAND_gate:nand_6                                  ; work         ;
-;       |ms_jk_ff:ms_jk_2|           ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_2                                                   ; work         ;
-;          |NAND_3_gate:nand_3_3|    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_2|NAND_3_gate:nand_3_3                              ; work         ;
+;       |ms_jk_ff:ms_jk_2|           ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_2                                                   ; work         ;
+;          |NAND_gate:nand_1|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_2|NAND_gate:nand_1                                  ; work         ;
 ;          |NAND_gate:nand_5|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_2|NAND_gate:nand_5                                  ; work         ;
-;          |NAND_gate:nand_6|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|latch_unit:latch_unit_0|ms_jk_ff:ms_jk_2|NAND_gate:nand_6                                  ; work         ;
 ;    |logic_unit:logic_unit_0|       ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|logic_unit:logic_unit_0                                                                    ; work         ;
 ;       |AND_3_gate:and_5|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|logic_unit:logic_unit_0|AND_3_gate:and_5                                                   ; work         ;
 ;       |AND_4_gate:and_0|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tty_input_state_gen_3|logic_unit:logic_unit_0|AND_4_gate:and_0                                                   ; work         ;
@@ -277,9 +276,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Logic Cell Name                                                                                     ;    ;
 +-----------------------------------------------------------------------------------------------------+----+
 ; latch_unit:latch_unit_0|ms_jk_ff:ms_jk_0|NAND_gate:nand_5|output~0                                  ;    ;
-; latch_unit:latch_unit_0|ms_jk_ff:ms_jk_2|NAND_gate:nand_6|output~0                                  ;    ;
-; latch_unit:latch_unit_0|OR_gate:or_2|output~0                                                       ;    ;
-; latch_unit:latch_unit_0|ms_jk_ff:ms_jk_2|NAND_3_gate:nand_3_3|output~0                              ;    ;
+; latch_unit:latch_unit_0|ms_jk_ff:ms_jk_2|NAND_gate:nand_5|output~0                                  ;    ;
 ; counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_5|output~0 ;    ;
 ; counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_5|output~0 ;    ;
 ; counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~0 ;    ;
@@ -291,6 +288,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_5|output~0     ;    ;
 ; latch_unit:latch_unit_0|ms_jk_ff:ms_jk_0|NAND_gate:nand_6|output~0                                  ;    ;
 ; latch_unit:latch_unit_0|ms_jk_ff:ms_jk_0|NAND_3_gate:nand_3_3|output~0                              ;    ;
+; latch_unit:latch_unit_0|ms_jk_ff:ms_jk_2|NAND_gate:nand_1|output~0                                  ;    ;
 ; counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~0 ;    ;
 ; counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1|output~0 ;    ;
 ; counter_unit:counter_unit_0|counter_4_bit:sub_counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1|output~0 ;    ;
@@ -300,19 +298,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_0|NAND_gate:nand_1|output~0     ;    ;
 ; counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_1|NAND_gate:nand_1|output~0     ;    ;
 ; counter_unit:counter_unit_0|counter_4_bit:counter|ms_jk_ff:ms_jk_ff_2|NAND_gate:nand_1|output~0     ;    ;
-; Number of logic cells representing combinational loops                                              ; 24 ;
+; Number of logic cells representing combinational loops                                              ; 23 ;
 +-----------------------------------------------------------------------------------------------------+----+
 Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; divide_by_n:clock_divider|prescaler[2] ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 1  ;                                        ;
-+----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -320,10 +308,10 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 3     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 15    ;
+; Number of registers using Synchronous Clear  ; 14    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 3     ;
+; Number of registers using Asynchronous Clear ; 15    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -335,8 +323,17 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |tty_input_state_gen_3|divide_by_n:clock_divider|prescaler[0] ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |tty_input_state_gen_3|divide_by_n:clock_divider|prescaler[0] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "latch_unit:latch_unit_0|ms_jk_ff:ms_jk_2"                                            ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; not_q ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -400,7 +397,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Mar  5 13:58:30 2017
+    Info: Processing started: Sat Mar 11 15:29:10 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tty_input_state_gen_3 -c tty_input_state_gen_3
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /home/sebsikora/altera/projects/pdp-8/divide_by_n/divide_by_n.vhd
@@ -466,16 +463,18 @@ Info (12128): Elaborating entity "OR_3_gate" for hierarchy "logic_unit:logic_uni
 Info (12128): Elaborating entity "AND_4_gate" for hierarchy "logic_unit:logic_unit_0|AND_4_gate:and_0"
 Info (12128): Elaborating entity "latch_unit" for hierarchy "latch_unit:latch_unit_0"
 Warning (10036): Verilog HDL or VHDL warning at latch_unit.vhd(66): object "jk_ff_1_q" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at latch_unit.vhd(69): object "jk_ff_2_not_q" assigned a value but never read
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 66 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 81 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 54 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 735 megabytes
-    Info: Processing ended: Sun Mar  5 13:58:32 2017
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info (21061): Implemented 69 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 721 megabytes
+    Info: Processing ended: Sat Mar 11 15:29:14 2017
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
 
 

@@ -41,7 +41,7 @@ architecture gates of ms_jk_ff is
 	
 	begin
 		
-		not_clk <= not clk;
+		not_clk <= not clk after 1 ns;
 		
 		nand_3_1:				NAND_3_gate port map (inputA => nand_6_output, inputB => j, inputC => clk, output => nand_3_1_output);
 		nand_3_2:				NAND_3_gate port map (inputA => clk, inputB => k, inputC => nand_5_output, output => nand_3_2_output);
